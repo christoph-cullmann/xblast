@@ -1,0 +1,58 @@
+[info]
+name=Walls or Not ?
+author=EPFL - disun : Yves Bresson
+hint=These walls are strange...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=speed
+
+[player]
+bombs=2
+range=2
+pos1= 4  3
+pos2=10  3
+pos3= 2  6
+pos4=12  6
+pos5= 4  9
+pos6=10  9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+
+[graphics]
+block00=sphere_half      #000000 #DA70D6 #9932CC
+block01=sphere_half_X    #000000 #DA70D6 #9932CC
+block02=sphere_light     #000000 #00FF00 #000000
+block03=sphere_light     #000000 #FF0000 #000000
+block04=sphere_light     #000000 #FFFF00 #FFFF00
+block05=sphere_light     #000000 #FFA500 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=sphere_light_O   #000000 #0000FF #4169E1
+
+[map]
+extraDistribution=all
+probBomb=46
+probRange=47
+row00=BBBBBBBBBBBBBBB
+row01=Bq___________qB
+row02=B___v__X__v___B
+row03=B__v_______v__B
+row04=B_v__v___v__v_B
+row05=B______v______B
+row06=B___X_vRv_X___B
+row07=B______v______B
+row08=B_v__v___v__v_B
+row09=B__v_______v__B
+row10=B___v__X__v___B
+row11=Bq___________qB
+row12=BBBBBBBBBBBBBBB
+

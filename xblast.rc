@@ -1,0 +1,11 @@
+/*
+ * resource file for xblast 
+ */
+
+xblast         ICON xblast.ico
+xblast_olli    ICON xblast-olli.ico
+xblast_norbert ICON xblast-norbert.ico
+xblast_rodi    ICON xblast-rodi.ico
+xblast_ted     ICON xblast-ted.ico
+xblast_alex    ICON xblast-alex.ico
+

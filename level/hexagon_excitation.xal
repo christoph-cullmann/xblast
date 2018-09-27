@@ -1,0 +1,57 @@
+[info]
+name=Hexagon Excitation
+author=Oliver Vogel
+hint=Get the kick bomb extra
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  3
+pos6= 7  9
+
+[bombs]
+
+[graphics]
+block00=hex              #000000 #2E8B57 #8A2BE2
+block01=hex_X            #000000 #2E8B57 #8A2BE2
+block02=hex_wall         #000000 #2E8B57 #000080
+block03=hex_extra        #000000 #2E8B57 #4169E1
+block04=hex_extra        #000000 #2E8B57 #00FF7F
+block05=hex_extra_O      #000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=50
+probVirus=6
+probSpecial=12
+row00=BBBBBBBBBBBBBBB
+row01=B___X_XXX_X___B
+row02=B_BXBXBXBXBXB_B
+row03=B_XXXB___BXXX_B
+row04=BXBXBXB_BXBXBXB
+row05=B_X_X_XXX_X_X_B
+row06=BBBXBXBXBXBXBBB
+row07=B_X_X_XXX_X_X_B
+row08=BXBXBXB_BXBXBXB
+row09=B_XXXB___BXXX_B
+row10=B_BXBXBXBXBXB_B
+row11=B___X_XXX_X___B
+row12=BBBBBBBBBBBBBBB
+

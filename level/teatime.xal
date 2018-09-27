@@ -1,0 +1,127 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Tea time
+author=Reinco
+hint=Enjoy the tea and pizzas, it's free!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.45
+numBlocks=44
+pos000=1 3
+pos001=1 4
+pos002=1 5
+pos003=1 6
+pos004=1 7
+pos005=1 8
+pos006=1 9
+pos007=1 10
+pos008=1 11
+pos009=2 9
+pos010=2 11
+pos011=3 7
+pos012=3 9
+pos013=3 10
+pos014=3 11
+pos015=4 7
+pos016=4 11
+pos017=5 1
+pos018=5 11
+pos019=6 1
+pos020=6 11
+pos021=7 1
+pos022=7 11
+pos023=8 1
+pos024=8 11
+pos025=9 1
+pos026=9 11
+pos027=10 7
+pos028=10 11
+pos029=11 7
+pos030=11 9
+pos031=11 10
+pos032=11 11
+pos033=12 9
+pos034=12 11
+pos035=13 3
+pos036=13 4
+pos037=13 5
+pos038=13 6
+pos039=13 7
+pos040=13 8
+pos041=13 9
+pos042=13 10
+pos043=13 11
+
+[scrambleDel]
+time=0.4
+numBlocks=10
+pos000=2 4
+pos001=3 4
+pos002=5 2
+pos003=6 5
+pos004=6 9
+pos005=8 5
+pos006=8 9
+pos007=9 2
+pos008=11 4
+pos009=12 4
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=1 1
+pos3=13 1
+pos4=13 1
+pos5=1 1
+pos6=13 1
+initVirus=reverse
+reviveVirus=reverse
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+
+[graphics]
+block00=hole_floor		#000000 #8A2BE2 #FFD700
+block01=hole_floor_X		#000000 #8A2BE2 #FFD700
+block02=jizz		#000000 #8A2BE2 #FFD700
+block03=hole_floor		#000000 #8A2BE2 #FFD700
+block04=hex_extra		#000000 #8A2BE2 #DAA520
+block05=hex_extra_O		#000000 #8A2BE2 #DAA520
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#000000 #808080 #FFFFFF
+
+[map]
+probVirus=75
+probSpecial=25
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B___XbbbbbX___B
+row02=BsBBBBBBBBBBBsB
+row03=B______q______B
+row04=BBBBBBBsBBBBBBB
+row05=BrrrrrB_BrrrrrB
+row06=BssrrrB_BrrrssB
+row07=BssXXXBqBXXXssB
+row08=B__q__B_B__q__B
+row09=BXXX__B_B__XXXB
+row10=B____XBsBX____B
+row11=Bq___________qB
+row12=BBBBBBBBBBBBBBB

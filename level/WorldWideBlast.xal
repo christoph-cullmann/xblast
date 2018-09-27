@@ -1,0 +1,67 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=World Wide Blast
+author=Glaset
+hint=The Walls are klicking
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+
+[func]
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=rebound
+wallClick=contact
+
+[graphics]
+block00=hole_floor		#000000 #8A2BE2 #FFD700
+block01=hole_floor		#000000 #8A2BE2 #FFD700
+block02=jizz		#000000 #FFD700 #8A2BE2
+block03=hole_floor		#000000 #FFD700 #8A2BE2
+block04=extra		#000000 #FFFF00 #FFFFFF
+block05=extra_O		#000000 #FFFF00 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #808080 #FFFFFF
+
+[map]
+probBomb=33
+probRange=33
+probVirus=33
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_________B_B
+row03=B___B_____B___B
+row04=B__XXXBXBXXX__B
+row05=B__BXXXXXXXB__B
+row06=B__XXXXBXXXX__B
+row07=B__BXXXXXXXB__B
+row08=B__XXXBXBXXX__B
+row09=B___B_____B___B
+row10=B_B_________B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

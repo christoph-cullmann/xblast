@@ -1,0 +1,60 @@
+[info]
+name=Speed track
+author=Tor Andræ
+hint=Don't lose your speed
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+[func]
+extra=mayhem
+
+[player]
+bombs=1
+range=3
+pos1= 2  2
+pos2=12 10
+pos3=12  2
+pos4= 2 10
+pos5= 6  2
+pos6= 6 10
+initVirus=run
+
+[bombs]
+hidden=grenade
+
+[graphics]
+block00=hex              #000000 #BEBEBE #1E90FF
+block01=hex_X            #000000 #BEBEBE #1E90FF
+block02=hex_wall         #000000 #BEBEBE #FF6347
+block03=hex_wall         #000000 #BEBEBE #FF6347
+block04=hex_extra        #000000 #BEBEBE #FFFF00
+block05=hex_extra_O      #000000 #BEBEBE #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+extraDistribution=single
+probBomb=39
+probRange=40
+probVirus=10
+probSpecial=4
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=BBXBXBXBXBXBXBB
+row02=BX___________XB
+row03=BB_BXBXBXBXB_BB
+row04=BX_Xs_s_s_sX_XB
+row05=BB_B_BXBXB_B_BB
+row06=BX_XsXqXqXsX_XB
+row07=BB_B_BXBXB_B_BB
+row08=BX_Xs_s_s_sX_XB
+row09=BB_BXBXBXBXB_BB
+row10=BX___________XB
+row11=BBXBXBXBXBXBXBB
+row12=BBBBBBBBBBBBBBB
+

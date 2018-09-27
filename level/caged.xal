@@ -1,0 +1,138 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Caged
+author=Koen
+hint=Get out of your cage
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=53
+pos000=1 1
+pos001=1 2
+pos002=1 4
+pos003=1 5
+pos004=1 6
+pos005=1 7
+pos006=1 8
+pos007=1 9
+pos008=1 10
+pos009=1 11
+pos010=2 1
+pos011=2 2
+pos012=2 10
+pos013=2 11
+pos014=4 1
+pos015=4 11
+pos016=5 1
+pos017=5 5
+pos018=5 6
+pos019=5 7
+pos020=5 11
+pos021=6 1
+pos022=6 5
+pos023=6 6
+pos024=6 7
+pos025=6 11
+pos026=7 1
+pos027=7 11
+pos028=8 1
+pos029=8 5
+pos030=8 6
+pos031=8 7
+pos032=8 11
+pos033=9 1
+pos034=9 5
+pos035=9 6
+pos036=9 7
+pos037=9 11
+pos038=10 1
+pos039=10 11
+pos040=12 1
+pos041=12 2
+pos042=12 10
+pos043=12 11
+pos044=13 1
+pos045=13 2
+pos046=13 4
+pos047=13 5
+pos048=13 6
+pos049=13 7
+pos050=13 8
+pos051=13 10
+pos052=13 11
+
+[scrambleDel]
+time=0.34
+numBlocks=11
+pos000=4 4
+pos001=4 5
+pos002=4 7
+pos003=4 8
+pos004=7 4
+pos005=7 6
+pos006=7 8
+pos007=10 4
+pos008=10 5
+pos009=10 7
+pos010=10 8
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=4
+range=10
+pos1=6 6
+pos2=8 6
+pos3=12 10
+pos4=2 2
+pos5=2 10
+pos6=12 2
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=thru
+
+[graphics]
+block00=iron_floor		#000000 #CD5C5C #FFFF00
+block01=iron_floor_X		#000000 #CD5C5C #FFFF00
+block02=bricks		#000000 #6A5ACD #00FFFF
+block03=bricks		#000000 #6A5ACD #00FFFF
+block04=bricks		#000000 #8B4513 #000000
+block05=brick_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=40
+probRange=40
+probSpecial=20
+row00=BBBBBBBBBBBBBBB
+row01=B__B_______B__B
+row02=B__X_______X__B
+row03=BBXX_______XXBB
+row04=B___BXXBXXB___B
+row05=B___B__X__B___B
+row06=B___X__B__X___B
+row07=B___B__X__B___B
+row08=B___BXXBXXB___B
+row09=BBXX_______XXBB
+row10=B__X_______X__B
+row11=B__B_______B__B
+row12=BBBBBBBBBBBBBBB

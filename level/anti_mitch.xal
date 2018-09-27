@@ -1,0 +1,59 @@
+[info]
+name=Anti-Mitch
+author=EPFL - cosun : Yves Bresson
+hint=Mitch ? What is it ??
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2=13  1
+pos3= 1 11
+pos4=13 11
+pos5= 2  6
+pos6=12  6
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+playerClick=thru
+
+[graphics]
+block00=button_floor     #8B0000 #EEE8AA #0000FF
+block01=button_floor_X   #8B0000 #EEE8AA #0000FF
+block02=dark_block       #FF0000 #228B22 #CCCCCC
+block03=dark_block_R     #FF0000 #00FF7F #FFFFFF
+block04=extra            #FFFF00 #B22222 #000000
+block05=extra_O          #FFFF00 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=all
+probRange=39
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBXBBBBBXBB_B
+row03=B_B___B_X___B_B
+row04=B_B___X_B___B_B
+row05=B_BXBBBXBBBXB_B
+row06=B_____________B
+row07=B_BBXBBXBBXBB_B
+row08=B_B___B_X___B_B
+row09=B_B___X_B___B_B
+row10=B_BXBBBBBBBXB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

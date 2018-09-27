@@ -1,0 +1,62 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Survivor
+author=Laurent Marsan
+hint=Just try to survive  it is hard enough
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+
+
+[func]
+
+[player]
+bombs=10
+range=10
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=chess_floor		#000000 #F5FFFA #000000
+block01=chess_floor		#000000 #F5FFFA #000000
+block02=book_shelf		#000000 #00FF7F #6A5ACD
+block03=book_shelf		#000000 #00FF7F #6A5ACD
+block04=chess_sphere		#000000 #F5FFFA #FA8072
+block05=chess_sphere_O		#000000 #F5FFFA #FA8072
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probHidden=63
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXXXXXXXXXB
+row02=BXXXXXXXXXXXXXB
+row03=BXXXXXXXXXXXXXB
+row04=BXXXX_____XXXXB
+row05=BXXXX_BBB_XXXXB
+row06=BXXXX_____XXXXB
+row07=BXXXX_BBB_XXXXB
+row08=BXXXX_____XXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

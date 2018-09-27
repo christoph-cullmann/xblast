@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Snookerpump
+author=Peter Riede
+hint=Pump the Snooker 
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=2
+range=2
+pos1=1 1
+pos2=1 11
+pos3=13 1
+pos4=6 6
+pos5=8 6
+pos6=13 11
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=thru
+
+[graphics]
+block00=ghost		#000000 #228B22 #000000
+block01=ghost		#000000 #228B22 #000000
+block02=ghost_sq		#000000 #228B22 #B22222
+block03=ghost_sq_R		#000000 #228B22 #B22222
+block04=ghost_ci		#000000 #228B22 #4169E1
+block05=ghost_ci_R		#000000 #228B22 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+extraDistribution=get
+probBomb=44
+probRange=44
+probSpecial=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___BXXXXXB___B
+row03=B_____________B
+row04=BXX___XXX___XXB
+row05=BXBX__XXX__XBXB
+row06=BXBX___B___XBXB
+row07=BXBX__XXX__XBXB
+row08=BXX___XXX___XXB
+row09=B_____________B
+row10=B___BXXXXXB___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

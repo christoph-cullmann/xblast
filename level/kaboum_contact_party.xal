@@ -1,0 +1,65 @@
+[info]
+name=Kaboum ! contact party
+author=EPFL - cosun : Yves Bresson & Miguel Alvarez
+hint=contact party
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=20
+range=13
+specialBombs=30
+pos1= 2  2
+pos2=12  2
+pos3= 6  6
+pos4= 8  6
+pos5= 2 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+special=napalm
+
+[graphics]
+block00=iron_floor       #000000 #EEE8AA #0000FF
+block01=iron_floor_X     #000000 #EEE8AA #0000FF
+block02=dark_block       #000000 #228B22 #CCCCCC
+block03=dark_block_R     #000000 #00FF7F #FFFFFF
+block04=extra            #000000 #B22222 #000000
+block05=extra            #000000 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=39
+probVirus=7
+probHidden=52
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___B_____B___B
+row03=B______B______B
+row04=B_B_________B_B
+row05=B_____________B
+row06=B___B__q__B___B
+row07=B_____________B
+row08=B_B_________B_B
+row09=B______B______B
+row10=B___B_____B___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

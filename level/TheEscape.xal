@@ -1,0 +1,71 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The escape
+author=Tobias Johansson
+hint=Move out
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+[scrambleDraw]
+time=0.45
+numBlocks=3
+pos000=6 6
+pos001=7 6
+pos002=8 6
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=1
+range=2
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=score_floor		#000000 #000000 #006400
+block01=score_floor		#000000 #000000 #006400
+block02=temple		#000000 #2F4F4F #006400
+block03=temple		#000000 #2F4F4F #006400
+block04=sphere_light		#000000 #006400 #000000
+block05=sphere_light_O		#000000 #006400 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=13
+probRange=11
+probSpecial=6
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXXXXXXXXXB
+row02=BXXXXXXXXXXXXXB
+row03=BXXXXXXXXXXXXXB
+row04=BXXXXXXXXXXXXXB
+row05=BXXXXX___XXXXXB
+row06=BXXXX_____XXXXB
+row07=BXXXXX___XXXXXB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

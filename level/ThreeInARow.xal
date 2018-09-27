@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Three in a Row
+author=Peter Riede
+hint=3 Snookers rebound clockwise
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=speed
+
+[player]
+bombs=2
+range=3
+pos1=1 11
+pos2=13 1
+pos3=13 11
+pos4=7 1
+pos5=1 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+playerClick=contact
+default=threebombs
+
+[graphics]
+block00=city_free		#000000 #377F50 #4682B4
+block01=city_free		#000000 #377F50 #4682B4
+block02=city_rip		#000000 #4682B4 #377F50
+block03=city_rip_R		#000000 #4682B4 #377F50
+block04=dark_house		#000000 #4682B4 #000000
+block05=dark_house		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=21
+probRange=19
+probVirus=21
+probSpecial=19
+probHidden=21
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__B_______B__B
+row04=B_B_B_____B_B_B
+row05=B______B______B
+row06=B_____BBB_____B
+row07=B______B______B
+row08=B_B_B_____B_B_B
+row09=B__B_______B__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

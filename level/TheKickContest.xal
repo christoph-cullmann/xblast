@@ -1,0 +1,62 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Kick Contest
+author=Tor Andræ
+hint=Just kick and hide
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=10
+range=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=1 6
+pos6=13 6
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=score_floor		#000000 #DA70D6 #9932CC
+block01=score_floor		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B____BBBBB____B
+row02=B______X______B
+row03=B____BBBBB____B
+row04=B____BBBBB____B
+row05=B____BBBBB____B
+row06=B____XXXXX____B
+row07=B____BBBBB____B
+row08=B____BBBBB____B
+row09=B____BBBBB____B
+row10=B______X______B
+row11=B____BBBBB____B
+row12=BBBBBBBBBBBBBBB

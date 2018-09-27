@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters Judgement Day
+author=Peter Riede
+hint=Kick & Remote Control!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=kick
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1=4 3
+pos2=10 3
+pos3=10 9
+pos4=4 9
+pos5=8 5
+pos6=6 7
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B___B__X__B___B
+row02=B__B__XXX__B__B
+row03=B_B_________B_B
+row04=BB__X__X__X__BB
+row05=B_X_________X_B
+row06=BXX_XB_X_BX_XXB
+row07=B_X_________X_B
+row08=BB__X__X__X__BB
+row09=B_B_________B_B
+row10=B__B__XXX__B__B
+row11=B___B__X__B___B
+row12=BBBBBBBBBBBBBBB

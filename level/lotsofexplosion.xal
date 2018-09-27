@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lots of Explosion
+author=LORIA : Marc Lejeune
+hint=There are lots of explosions
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=5
+specialBombs=30
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+special=fungus
+hidden=napalm
+
+[graphics]
+block00=ghost		#000000 #FFEFD5 #000000
+block01=ghost		#000000 #FFEFD5 #000000
+block02=pyramid		#000000 #FF0000 #FFFF00
+block03=pyramid_R		#000000 #FF0000 #FFFF00
+block04=chess_sphere		#000000 #A52A2A #FFFF00
+block05=chess_sphere_O		#000000 #A52A2A #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probHidden=100
+row00=BBBBBBBBBBBBBBB
+row01=B___XXB_BXX___B
+row02=B____BX_XB____B
+row03=B___X_____X___B
+row04=B__B_______B__B
+row05=B_XX_______XX_B
+row06=BXB__X_X_X__BXB
+row07=B_XX_______XX_B
+row08=B__B_______B__B
+row09=B___X_____X___B
+row10=B____BX_XB____B
+row11=B___XXB_BXX___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lucifer spiral
+author=LORIA : Pierre 'in your back' Laroche
+hint=Napalm the devil !
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=3
+range=5
+specialBombs=30
+pos1=2 7
+pos2=7 3
+pos3=2 3
+pos4=7 9
+pos5=2 11
+pos6=7 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+playerClick=contact
+special=napalm
+hidden=renovation
+
+[graphics]
+block00=chess_floor		#000000 #000000 #808080
+block01=chess_floor		#000000 #000000 #808080
+block02=wall		#000000 #000000 #FF0000
+block03=wall_R		#000000 #000000 #FF0000
+block04=chess_sphere		#000000 #000000 #FF0000
+block05=chess_sphere_O		#000000 #000000 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probBomb=24
+probRange=24
+probVirus=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B__XXXXXXXXX__B
+row02=B_BBBBBBBBBBB_B
+row03=B___________BXB
+row04=B__BBBB_BBB_BXB
+row05=B__B______B_BXB
+row06=B__B_BBBB_B_BXB
+row07=B__X______B_BXB
+row08=B__B_BBXBBB_BXB
+row09=B__B________BXB
+row10=B__BBBBBBBBBB_B
+row11=BB__XXXXXXXX__B
+row12=BBBBBBBBBBBBBBB

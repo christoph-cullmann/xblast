@@ -1,0 +1,142 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Arena 2
+author=Biel:Skywalker
+hint=Clockweise
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.33
+numBlocks=14
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=5 8
+pos004=6 5
+pos005=6 8
+pos006=7 5
+pos007=7 8
+pos008=8 5
+pos009=8 8
+pos010=9 5
+pos011=9 6
+pos012=9 7
+pos013=9 8
+
+[scrambleDel]
+time=0.67
+numBlocks=50
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 6
+pos013=2 11
+pos014=3 1
+pos015=3 11
+pos016=4 1
+pos017=4 11
+pos018=5 1
+pos019=5 7
+pos020=5 11
+pos021=6 1
+pos022=6 11
+pos023=7 1
+pos024=7 2
+pos025=7 10
+pos026=7 11
+pos027=8 1
+pos028=8 5
+pos029=8 11
+pos030=9 1
+pos031=9 11
+pos032=10 1
+pos033=10 11
+pos034=11 1
+pos035=11 11
+pos036=12 1
+pos037=12 6
+pos038=12 11
+pos039=13 1
+pos040=13 2
+pos041=13 3
+pos042=13 4
+pos043=13 5
+pos044=13 6
+pos045=13 7
+pos046=13 8
+pos047=13 9
+pos048=13 10
+pos049=13 11
+
+[func]
+extra=specialBomb
+key=rc
+
+[player]
+bombs=5
+range=2
+specialBombs=255
+pos1=7 8
+pos2=7 8
+pos3=7 8
+pos4=7 8
+pos5=7 8
+pos6=7 8
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick rc
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+special=lucky
+
+[graphics]
+block00=rock_floor		#000000 #000000 #000000
+block01=rock_floor_X		#000000 #000000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#000000 #000000 #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+probBomb=25
+probRange=25
+probVirus=6
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=BBBBB_____BBBBB
+row02=BBBB_______BBBB
+row03=BBB_________BBB
+row04=BB___________BB
+row05=BB___________BB
+row06=BB___________BB
+row07=BB___________BB
+row08=BB___________BB
+row09=BBB_________BBB
+row10=BBBB_______BBBB
+row11=BBBBB_____BBBBB
+row12=BBBBBBBBBBBBBBB

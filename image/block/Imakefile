@@ -1,0 +1,23 @@
+/* 
+ * Program XBLAST V2.5.5 
+ * 1993-1996 (C) by Oliver Vogel (e-mail: vogel@ikp.uni-koeln.de)
+ *
+ * File: image/block/Imakefile
+ * November 7th, 1996
+ * started August 1993
+ */
+
+/*
+ * common part 
+ */
+
+XBLASTDIR=$(LIBDIR)/xblast
+IMAGEDIR=$(XBLASTDIR)/image/block
+
+/*
+ * install rule	
+ */
+
+PPMFILES=*.ppm
+
+InstallMultiple($(PPMFILES),$(IMAGEDIR))

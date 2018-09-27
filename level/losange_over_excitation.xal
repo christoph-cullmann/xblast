@@ -1,0 +1,69 @@
+[info]
+name=Losange Over-excitation
+author=Joachim Kaltz
+hint=Getting kick bombs will help
+gameMode=R234--ST-L
+
+[shrink]
+type=spiralPlus
+
+[scrambleDel]
+time=0.7500
+numBlocks=8
+pos000=6 4
+pos001=5 5
+pos002=6 8
+pos003=5 7
+pos004=8 4
+pos005=9 5
+pos006=8 8
+pos007=9 7
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 7  1
+pos2=12  6
+pos3= 7 11
+pos4= 2  6
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=hex              #000000 #FF6347 #FF0000
+block01=hex_X            #000000 #FF6347 #FF0000
+block02=hex_wall         #000000 #FF6347 #FF4500
+block03=hex_extra        #000000 #FF6347 #FFA500
+block04=hex_extra        #000000 #FF6347 #FFFF00
+block05=hex_extra_O      #000000 #FF6347 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=hex              #000000 #FF6347 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probSpecial=12
+probHidden=31
+row00=vvvvvBBBBBvvvvv
+row01=vvvvBB___BBvvvv
+row02=vvvBBXX_XXBBvvv
+row03=vvBBXXXXXXXBBvv
+row04=vBBXXXBXBXXXBBv
+row05=vB_XXBBXBBXX_Bv
+row06=vB__XXXXXXX__Bv
+row07=vB_XXBBXBBXX_Bv
+row08=vBBXXXBXBXXXBBv
+row09=vvBBXXXXXXXBBvv
+row10=vvvBBXX_XXBBvvv
+row11=vvvvBB___BBvvvv
+row12=vvvvvBBBBBvvvvv
+

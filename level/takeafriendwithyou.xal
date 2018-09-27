@@ -1,0 +1,66 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Take a friend with you 2
+author=Skywalker
+hint=Nee reinco!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=3
+pos1=7 9
+pos2=7 3
+pos3=3 9
+pos4=11 3
+pos5=11 9
+pos6=3 3
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=threebombs
+hidden=short
+
+[graphics]
+block00=karo_light		#000000 #FFFFFF #808080
+block01=karo_light_X		#000000 #FFFFFF #808080
+block02=temple		#000000 #FFFFFF #808080
+block03=temple		#000000 #FFFFFF #808080
+block04=extra		#000000 #FFFFFF #808080
+block05=extra_O		#000000 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor
+
+[map]
+probSpecial=12
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B__X___X___X__B
+row02=B_XsX_XsX_XsX_B
+row03=BX___X___X___XB
+row04=B_XsX_XsX_XsX_B
+row05=B__X___X___X__B
+row06=BX___X___X___XB
+row07=B__X___X___X__B
+row08=B_XsX_XsX_XsX_B
+row09=BX___X___X___XB
+row10=B_XsX_XsX_XsX_B
+row11=B__X___X___X__B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,14 @@
+/* 
+ * Program XBLAST V2.5.6
+ * 1993-1996 (C) by Oliver Vogel (e-mail: vogel@ikp.uni-koeln.de)
+ *
+ * File: bitmap/Imakefile
+ * April 10th, 1997
+ * started August 1993
+ */
+
+
+#define IHaveSubdirs
+SUBDIRS=block explosion misc score sprite 
+
+

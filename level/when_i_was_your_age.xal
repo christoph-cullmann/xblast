@@ -1,0 +1,52 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=When I was Your Age
+author=Garth Denley (Adelaide)
+hint=Use the long fuses to set up traps
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+
+[player]
+bombs=7
+range=3
+pos1= 5  4
+pos2= 9  4
+pos3= 9  8
+pos4= 5  8
+pos5= 6  6
+pos6= 8  6
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=city_free        #000000 #A6A6A6 #666666
+block01=city_free_X      #000000 #A6A6A6 #666666
+block02=dark_house       #000000 #B22222 #DEB887
+block03=dark_house_R     #000000 #B22222 #DEB887
+block04=score_floor      #000000 #D2B48C #000000
+block05=bomb
+block06=range
+block07=trap
+block08=iron_floor       #000000 #404040 #FF4500
+block09=iron_floor       #000000 #404040 #FF4500
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=qqqqBXXXXXBqqqq
+row01=qqqqBXXXXXBqqqq
+row02=qqqBBBBBBBBBqqq
+row03=qqqB_______Bqqq
+row04=BBBB_______BBBB
+row05=XXXB__B_B__BXXX
+row06=XXXB_______BXXX
+row07=XXXB__B_B__BXXX
+row08=BBBB_______BBBB
+row09=qqqB_______Bqqq
+row10=qqqBBBBBBBBBqqq
+row11=qqqqBXXXXXBqqqq
+row12=qqqqBXXXXXBqqqq

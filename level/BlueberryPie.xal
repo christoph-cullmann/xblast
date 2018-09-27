@@ -1,0 +1,104 @@
+[info]
+name=Blueberry pie
+author=Tor Andræ
+hint=Take control over the central parts
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDel]
+time=0.2798
+numBlocks=39
+pos000=3 3
+pos001=3 6
+pos002=3 9
+pos003=4 3
+pos004=4 6
+pos005=4 9
+pos006=5 3
+pos007=5 4
+pos008=5 5
+pos009=5 6
+pos010=5 7
+pos011=5 8
+pos012=5 9
+pos013=6 3
+pos014=6 6
+pos015=6 9
+pos016=7 3
+pos017=7 4
+pos018=7 5
+pos019=7 6
+pos020=7 7
+pos021=7 8
+pos022=7 9
+pos023=8 3
+pos024=8 6
+pos025=8 9
+pos026=9 3
+pos027=9 4
+pos028=9 5
+pos029=9 6
+pos030=9 7
+pos031=9 8
+pos032=9 9
+pos033=10 3
+pos034=10 6
+pos035=10 9
+pos036=11 3
+pos037=11 6
+pos038=11 9
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=4
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=anticlockwise
+
+[graphics]
+block00=city_free        #000000 #000080 #FFFF00
+block01=city_free_X      #000000 #000080 #FFFF00
+block02=dark_block       #000000 #D2691E #D2691E
+block03=dark_block_R     #000000 #D2691E #D2691E
+block04=pumpkin          #000000 #0000FF #D2691E
+block05=pumpkin_O        #000000 #0000FF #D2691E
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+extraDistribution=single
+probBomb=9
+probRange=9
+probSpecial=80
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XBBBBXBBBBX_B
+row03=B_BBBBBBBBBBB_B
+row04=B_BXBBBBBBBXB_B
+row05=B_BBBBBBXBBBB_B
+row06=B_XBBBBBBBBBX_B
+row07=B_BBBBBBBBBBB_B
+row08=B_BXBBXBBBBXB_B
+row09=B_BBBBBBBBBBB_B
+row10=B_XBBBBXBBBBX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

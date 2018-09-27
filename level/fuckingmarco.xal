@@ -1,0 +1,60 @@
+[info]
+name=Fucking Marco
+author=antimiage : Choupette
+hint=Fuck Marco
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=igniteAll
+key=cloak
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=cloak
+reviveExtra=cloak
+
+[bombs]
+default=grenade
+special=grenade
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=book_shelf       #000000 #32CD32 #D2691E
+block03=book_shelf       #000000 #32CD32 #D2691E
+block04=chess_sphere     #000000 #FFEFD5 #6495ED
+block05=chess_sphere_O   #000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=23
+probRange=23
+probSpecial=24
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__r_b___r_e__B
+row03=B______e____b_B
+row04=Br_BBBBBBBBB__B
+row05=B_eXXvqqqvXX_rB
+row06=Be_XXvqqqvXX__B
+row07=Bb_XXvqqqvXX_bB
+row08=B__BBBBBBBBB__B
+row09=B__b_e_______eB
+row10=B_____rb______B
+row11=B_________r___B
+row12=BBBBBBBBBBBBBBB
+

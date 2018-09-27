@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Masquerade
+author=Stn
+hint=Guess who's who
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=swapcolor
+
+[player]
+bombs=3
+range=5
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=1 6
+pos6=13 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=karo_light		#000000 #696969 #000000
+block01=karo_light		#000000 #696969 #000000
+block02=pyramid		#000000 #D3D3D3 #191970
+block03=pyramid_R		#000000 #D3D3D3 #191970
+block04=extra		#000000 #000000 #FFFFFF
+block05=extra_O		#000000 #000000 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=swapcolor
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=8
+probRange=16
+probVirus=8
+probSpecial=48
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B___X_X_X_X___B
+row02=B___BX_B_XB___B
+row03=BXXBX_X_X_XBXXB
+row04=BXXX_B_X_B_XXXB
+row05=B__BX_X_X_XB__B
+row06=B__X_X_B_X_X__B
+row07=B__BX_X_X_XB__B
+row08=BXXX_B_X_B_XXXB
+row09=BXXBX_X_X_XBXXB
+row10=B___BX_B_XB___B
+row11=B___X_X_X_X___B
+row12=BBBBBBBBBBBBBBB

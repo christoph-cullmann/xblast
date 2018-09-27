@@ -1,0 +1,65 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Tora Bora
+author=Tobias Johansson
+hint=Just bomb them!
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+
+[func]
+key=air
+
+[player]
+bombs=3
+range=3
+pos1=1 1
+pos2=11 1
+pos3=13 1
+pos4=3 1
+pos5=8 1
+pos6=6 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+normal=grenade
+wallClick=contact
+
+[graphics]
+block00=score_floor		#8B4513 #DEB887 #DEB887
+block01=score_floor		#8B4513 #DEB887 #DEB887
+block02=pyramid		#000000 #B8860B #C0C0C0
+block03=pyramid_R		#8B4513 #B8860B #C0C0C0
+block04=bricks		#000000 #B8860B #C0C0C0
+block05=brick_O		#8B4513 #B8860B #C0C0C0
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#1E90FF #1E90FF #1E90FF
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B__XX_XX_X____B
+row06=BXBXBBXX_XXXX_B
+row07=B_XXX_BBXB_BXXB
+row08=B_XBXXXXXXXB_BB
+row09=BBXXBBBX_B_XX_B
+row10=BBB____XXXXBXBB
+row11=B__XXBX_BXBX__B
+row12=BBBBBBBBBBBBBBB

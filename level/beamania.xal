@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Beamania
+author=Oliver Vogel
+hint=Don't beam when the level shrinks
+gameMode=R23456ST-L
+
+[shrink]
+type=compound
+
+
+[scrambleDel]
+time=0.78
+numBlocks=1
+pos000=7 6
+
+[func]
+extra=igniteAll
+key=teleport
+
+[player]
+bombs=1
+range=2
+pos1=2 2
+pos2=12 2
+pos3=12 10
+pos4=2 10
+pos5=6 2
+pos6=8 10
+initExtra=teleport 
+reviveExtra=teleport 
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=mr_beam_free		#000000 #3CB371 #000000
+block01=mr_beam_free		#000000 #3CB371 #000000
+block02=book_shelf		#000000 #FF0000 #DEB887
+block03=book_shelf		#000000 #4169E1 #DEB887
+block04=mr_beam_bear		#000000 #3CB371 #FF4500
+block05=mr_beam_bear_O		#000000 #3CB371 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#191970 #191970 #191970
+
+[map]
+probBomb=38
+probVirus=19
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=BXXXBXXBXXBXXXB
+row02=BX_XBX_B_XBX_XB
+row03=BXXXBXXBXXBXXXB
+row04=BBBBBBBBBBBBBBB
+row05=BXXBXXXBXXXBXXB
+row06=B_XBX_XBX_XBX_B
+row07=BXXBXXXBXXXBXXB
+row08=BBBBBBBBBBBBBBB
+row09=BXXXBXXBXXBXXXB
+row10=BX_XBX_B_XBX_XB
+row11=BXXXBXXBXXBXXXB
+row12=BBBBBBBBBBBBBBB

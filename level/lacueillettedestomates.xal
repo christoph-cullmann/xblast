@@ -1,0 +1,60 @@
+[info]
+name=La cueillette des tomates
+author=Jose O'Mouann
+hint=Toooooomates
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+[func]
+extra=multiple
+key=air
+
+[player]
+bombs=1
+range=0
+pos1= 2  1
+pos2= 8  1
+pos3=13  2
+pos4= 1 10
+pos5= 6 11
+pos6=12 11
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+
+[graphics]
+block00=rock_floor       #000000 #7CFC00 #FFFFFF
+block01=rock_floor_X     #000000 #7CFC00 #FFFFFF
+block02=sphere_dark      #000000 #7CFC00 #00FF7F
+block03=sphere_dark      #000000 #7CFC00 #00FF7F
+block04=sphere_light     #000000 #FF6347 #FF6347
+block05=sphere_light_O   #000000 #FF6347 #FF6347
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+probBomb=32
+probSpecial=33
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=Br_XBXrr_XBXrrB
+row02=BrXXXXXXXXXXX_B
+row03=BXXBXBXBXBXBXXB
+row04=BBXXXXXXXXXBXBB
+row05=BXXBX_____XBXXB
+row06=BBXXX_BqB_XXXBB
+row07=BXXBX_____XBXXB
+row08=BBXXXXXXXXXXXBB
+row09=BXXBXBXBXBXBXXB
+row10=B_XXXXXXXXXXXrB
+row11=BrrXBX_rrXBX_rB
+row12=BBBBBBBBBBBBBBB
+

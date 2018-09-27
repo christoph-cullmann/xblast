@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Electrify Them
+author=EPFL - insun : Yves Bresson
+hint=GZZZZZ aouch!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=electrify
+key=electrify
+
+[player]
+bombs=2
+range=1
+pos1=4 3
+pos2=10 3
+pos3=3 4
+pos4=11 8
+pos5=4 9
+pos6=10 9
+
+[bombs]
+
+[graphics]
+block00=chess_floor		#000000 #000000 #000000
+block01=chess_floor		#000000 #000000 #000000
+block02=chess_sphere		#FF0000 #FF4500 #2E8B57
+block03=chess_sphere		#008000 #FF4500 #2E8B57
+block04=chess_sphere		#0000FF #000000 #FFD700
+block05=chess_sphere_O		#0000FF #000000 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=electrify
+block10=chess_sphere		#FFFF00 #000000 #FFD700
+
+[map]
+extraDistribution=get
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=32
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=BsBrsBXbBsrBXbB
+row02=BBvBBvBBvBBvBrB
+row03=BbB_________BsB
+row04=BXB_________vBB
+row05=BBv_________BXB
+row06=BrB____q____BbB
+row07=BsB_________vBB
+row08=BBv_________BrB
+row09=BrB_________BXB
+row10=BsBvBBvBBvBBvBB
+row11=BbXBrbBXbBsXBbB
+row12=BBBBBBBBBBBBBBB

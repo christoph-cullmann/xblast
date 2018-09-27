@@ -1,0 +1,72 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Ghost Garden
+author=Tobias Johansson
+hint=A haunted place...
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=4
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=grenade
+playerClick=contact
+haunt=slow
+
+[graphics]
+block00=ghost		#228B22 #000000 #006400
+block01=ghost		#228B22 #000000 #006400
+block02=ghost_sq		#228B22 #000000 #B22222
+block03=ghost_sq_R		#228B22 #000000 #B22222
+block04=ghost_ci		#228B22 #000000 #4169E1
+block05=ghost_ci_R		#228B22 #000000 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+probBomb=21
+probRange=19
+probVirus=41
+probSpecial=10
+probHidden=10
+row00=BBBBBBBBBBBBBBB
+row01=B__X_X___X_X__B
+row02=B_X_X_X_X_X_X_B
+row03=BX_XX_XXX_XX_XB
+row04=B_X__X_X_X__X_B
+row05=BX_XX_X_X_XX_XB
+row06=B_X__X_X_X__X_B
+row07=BX_XX_X_X_XX_XB
+row08=B_X__X_X_X__X_B
+row09=BX_XX_XXX_XX_XB
+row10=B_X_X_X_X_X_X_B
+row11=B__X_X___X_X__B
+row12=BBBBBBBBBBBBBBB

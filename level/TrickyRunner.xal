@@ -1,0 +1,101 @@
+[info]
+name=Tricky runner
+author=Tor Andræ
+hint=Be patient
+gameMode=R234--STDL
+
+[shrink]
+type=speedSpiral
+
+[scrambleDraw]
+time=0.0398
+numBlocks=31
+pos000=1 6
+pos001=2 5
+pos002=2 6
+pos003=2 7
+pos004=4 6
+pos005=4 7
+pos006=4 9
+pos007=5 2
+pos008=5 4
+pos009=5 5
+pos010=5 11
+pos011=6 1
+pos012=6 4
+pos013=6 8
+pos014=6 10
+pos015=7 3
+pos016=7 6
+pos017=7 8
+pos018=8 1
+pos019=8 5
+pos020=8 9
+pos021=8 11
+pos022=9 2
+pos023=9 7
+pos024=10 5
+pos025=10 7
+pos026=10 8
+pos027=10 10
+pos028=11 5
+pos029=12 6
+pos030=13 4
+
+[scrambleDel]
+time=0.0699
+numBlocks=4
+pos000=2 3
+pos001=2 9
+pos002=12 3
+pos003=12 9
+
+[func]
+key=specialBomb
+
+[player]
+bombs=4
+range=4
+specialBombs=12
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+special=construction
+
+[graphics]
+block00=button_floor     #000000 #0000CD #00FF7F
+block01=button_floor_X   #000000 #0000CD #00FF7F
+block02=pyramid          #000000 #006400 #00FF00
+block03=pyramid_R        #000000 #006400 #00FF00
+block04=extra            #000000 #FFFFFF #000080
+block05=extra_O          #000000 #FFFFFF #000080
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+probBomb=4
+probRange=6
+row00=BBBBBBBBBBBBBBB
+row01=B_rB_______Br_B
+row02=BbXB_______BXbB
+row03=BBBB_______BBBB
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=BBBB_______BBBB
+row10=BbXB_______BXbB
+row11=B_rB_______Br_B
+row12=BBBBBBBBBBBBBBB
+

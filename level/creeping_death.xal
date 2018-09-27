@@ -1,0 +1,61 @@
+[info]
+name=Creeping Death
+author=Daniel Schobben
+hint=Die by my hand...
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=7
+range=4
+pos1= 6  7
+pos2= 6  7
+pos3= 6  7
+pos4= 6  7
+pos5= 6  7
+pos6= 6  7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+fuseTime=long
+
+[graphics]
+block00=bomb_floor
+block01=bomb_floor
+block02=dark_block       #000000 #2E8B57 #000080
+block03=dark_block_R     #000000 #000080 #2E8B57
+block04=extra            #000000 #7F7F7F #FFFFFF
+block05=extra_O          #000000 #7F7F7F #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor      #000000 #7F7F7F #FFFFFF
+
+[map]
+extraDistribution=special
+probBomb=23
+probRange=23
+probSpecial=24
+probHidden=23
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B____B_q_B____B
+row03=B___B_____B___B
+row04=B__B___X___B__B
+row05=B_____XXX_____B
+row06=B_B___B_B___B_B
+row07=B_BB_B___B_BB_B
+row08=B_B___B_B___B_B
+row09=B___XB___BX___B
+row10=B__X__B_B__X__B
+row11=B___B_____B___B
+row12=BBBBBBBBBBBBBBB
+

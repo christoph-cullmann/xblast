@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fat, viscous and permanent
+author=LORIA : Jean 'MoulMan' Lieber
+hint=Will you please get down ?
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=3
+range=5
+pos1=1 1
+pos2=9 1
+pos3=13 1
+pos4=5 1
+pos5=11 1
+pos6=3 1
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+direction=down
+special=fungus
+haunt=slow
+
+[graphics]
+block00=karo_light		#000000 #90EE90 #808080
+block01=karo_light		#000000 #90EE90 #808080
+block02=temple		#000000 #008000 #808080
+block03=temple		#000000 #008000 #808080
+block04=bricks		#000000 #000000 #808080
+block05=brick_O		#000000 #000000 #808080
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=sphere_half		#000000 #A52A2A #00FF00
+
+[map]
+extraDistribution=single
+probVirus=33
+probSpecial=33
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=B_B_________B_B
+row02=B___X_____X___B
+row03=B__X__X_X__X__B
+row04=B_v_X_____X_v_B
+row05=B____X_v_X____B
+row06=B___X_____X___B
+row07=BX_X__B_B__X_XB
+row08=B___X_____X___B
+row09=B_B__X___X__B_B
+row10=B____________XB
+row11=Bq__v__q__v__qB
+row12=BBBBBBBBBBBBBBB

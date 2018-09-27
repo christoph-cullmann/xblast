@@ -1,0 +1,61 @@
+[info]
+name=Snapshot level
+author=EPFL - disun : Yves Bresson
+hint=This level was made to make snapshots
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1= 6  5
+pos2= 7  5
+pos3= 8  5
+pos4= 6  7
+pos5= 7  7
+pos6= 8  7
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+
+[graphics]
+block00=rock_floor       #FFFFFF #FFFFFF #FFFFFF
+block01=rock_floor_X     #FFFFFF #FFFFFF #FFFFFF
+block02=weight           #000000 #F0FFFF #FFD700
+block03=rock_floor       #FFFFFF #FFFFFF #FFFFFF
+block04=bricks           #000000 #6B8E23 #000000
+block05=brick_O          #000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=rock_floor       #FFC0CB #FFC0CB #FFC0CB
+
+[map]
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___BRRBRRB___B
+row03=B_B_________B_B
+row04=B_R_________R_B
+row05=B_R_________R_B
+row06=B_B_________B_B
+row07=B_R_________R_B
+row08=B_R_________R_B
+row09=B_B_________B_B
+row10=B___BRRBRRB___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

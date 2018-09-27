@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Swastika
+author=Ben Glazier (Adelaide)
+hint=The speed shrink IS merciless
+gameMode=R234--STDL
+
+[shrink]
+type=speedSpiral
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=3
+pos1= 6  5
+pos2= 8  5
+pos3= 8  7
+pos4= 6  7
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #F4A460 #000000
+block01=rock_floor_X     #000000 #F4A460 #000000
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #000000
+;block04=swastika        #000000 #A0522D #FFA500
+;block05=swastika_O      #000000 #A0522D #FFA500
+block04=bricks           #000000 #A0522D #FFA500
+block05=brick_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=51
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=BX_____BXXXXXXB
+row02=BX_____X______B
+row03=BX_____B______B
+row04=BX_____X______B
+row05=BX_____X______B
+row06=BBXXBXXBXXBXXBB
+row07=B______X_____XB
+row08=B______X_____XB
+row09=B______B_____XB
+row10=B______X_____XB
+row11=BXXXXXXB_____XB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,61 @@
+[info]
+name=free kick
+author=antimiage : Choupette
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=firecracker
+special=napalm
+
+[graphics]
+block00=lego_floor       #000000 #228B22 #228B22
+block01=lego_floor_X     #000000 #228B22 #228B22
+block02=lego_white       #000000 #0000FF #228B22
+block03=lego_white       #000000 #0000FF #228B22
+block04=lego_black       #000000 #000000 #228B22
+block05=lego_black_O     #000000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=lego_floor       #000000 #228B22 #BEBEBE
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=33
+probSpecial=33
+row00=BBBBBBBBBBBBBBB
+row01=B__XXX___XXX__B
+row02=BX__X__X__X__XB
+row03=B___XB___BX___B
+row04=B___X_v_v_X___B
+row05=BXB_XXqXqXX_BXB
+row06=BXXXXqXXXqXXXXB
+row07=BXB_XXqXqXX_BXB
+row08=B___X_v_v_X___B
+row09=B___XB___BX___B
+row10=BX__X__X__X__XB
+row11=B__XXX___XXX__B
+row12=BBBBBBBBBBBBBBB
+

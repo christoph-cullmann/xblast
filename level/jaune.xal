@@ -1,0 +1,67 @@
+[info]
+name=Jaune
+author=Jose O'Mouann
+hint=Comme c'est joli !
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+[func]
+extra=holyGrail
+key=air
+
+[player]
+bombs=3
+range=2
+pos1= 1 10
+pos2= 1 10
+pos3= 1 10
+pos4=13 10
+pos5=13 10
+pos6=13 10
+initVirus=run
+reviveVirus=run
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=snooker
+direction=down
+fuseTime=short
+special=construction
+haunt=slow
+
+[graphics]
+block00=chess_floor      #000000 #FFD700 #FFD700
+block01=chess_floor_X    #000000 #FFD700 #FFD700
+block02=dark_block       #000000 #FFD700 #FFD700
+block03=dark_block_R     #000000 #FFD700 #FFD700
+block04=chess_sphere     #000000 #FFD700 #FFD700
+block05=chess_sphere_O   #000000 #FFD700 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor      #000000 #FFD700 #FFD700
+
+[map]
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=Bq___________qB
+row02=BXXXXXXsXXXXXXB
+row03=Br__v______v_rB
+row04=Bs__s__X___s_sB
+row05=Br__v______v_rB
+row06=BXrXbXBsBXbXrXB
+row07=BBXbXrXsXrXbXBB
+row08=Br__v______v_rB
+row09=Bs__s__X___s_sB
+row10=B___v______v__B
+row11=BXsXXXXsXXXXsXB
+row12=BBBBBBBBBBBBBBB
+

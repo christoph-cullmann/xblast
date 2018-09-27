@@ -1,0 +1,85 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Run
+author=EPFL - insun : Yves Bresson
+hint=Ruuuuuun !!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+[scrambleDraw]
+time=0.3333333333333333
+numBlocks=1
+pos000=0 12
+
+[scrambleDel]
+time=0.5
+numBlocks=6
+pos000=7 9
+pos001=7 3
+pos002=9 6
+pos003=10 6
+pos004=5 7
+pos005=11 7
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=0
+range=0
+pos1=1 11
+pos2=1 11
+pos3=1 11
+pos4=1 11
+pos5=1 11
+pos6=1 11
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+default=search
+hidden=construction
+
+[graphics]
+block00=brick_O		#0000FF #0000FF #0000FF
+block01=brick_O		#0000FF #0000FF #0000FF
+block02=weight		#0000FF #FFFF00 #0000FF
+block03=weight_R		#0000FF #FFFF00 #FF0000
+block04=extra_O		#0000FF #FFD700 #0000FF
+block05=extra_O		#0000FF #FFD700 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=8
+probRange=8
+probVirus=8
+probSpecial=32
+probHidden=32
+row00=BBBBBBBBBBBBBBB
+row01=BBbB__sBss_BbrB
+row02=B__ssBs__B___BB
+row03=BsBBBBBBBBsBBBB
+row04=Bs__sBb_rBs__sB
+row05=BBrBss___BbBBsB
+row06=BbBBBs_q_BBB__B
+row07=B___sB___BrBsBB
+row08=B_BBsBr_bBbBs_B
+row09=B_B__BBBB__sB_B
+row10=B_B_B_ssB_BsBsB
+row11=B_Bss_B__sB__sB
+row12=BBBBBBBBBBBBBBB

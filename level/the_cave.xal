@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Cave
+author=Mark Black (Adelaide)
+hint=Co-operate to get into the cave early
+gameMode=R2-4--STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=1
+range=1
+pos1= 1 3
+pos2=13 3
+pos3=13 9
+pos4= 1 9
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #F5DEB3 #000000
+block01=rock_floor_X     #000000 #F5DEB3 #000000
+block02=dark_block       #000000 #696969 #696969
+block03=dark_block_R     #000000 #696969 #696969
+block04=extra            #000000 #DAA520 #F5DEB3
+block05=extra_O          #000000 #DAA520 #F5DEB3
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=38
+probRange=38
+probVirus=11
+row00=BBBBBBBBBBBBBBB
+row01=B_X_________X_B
+row02=B_BBBBBXBBBBB_B
+row03=B_B_________B_B
+row04=BB__BBBXBBB__BB
+row05=B__BXXXsXXXB__B
+row06=B_BrrbsXsbrrB_B
+row07=B__BrbXsXbrB__B
+row08=BB__BBBXBBB__BB
+row09=B_B_________B_B
+row10=B_BBBBBXBBBBB_B
+row11=B_X_________X_B
+row12=BBBBBBBBBBBBBBB

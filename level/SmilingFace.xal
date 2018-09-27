@@ -1,0 +1,84 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Smiling Face
+author=Peter Riede
+hint=There are two ways!
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+[scrambleDraw]
+time=0.17
+numBlocks=2
+pos000=2 6
+pos001=12 6
+
+[scrambleDel]
+time=0.3
+numBlocks=8
+pos000=4 3
+pos001=5 3
+pos002=6 3
+pos003=7 3
+pos004=7 6
+pos005=8 3
+pos006=9 3
+pos007=10 3
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=3
+pos1=12 9
+pos2=2 10
+pos3=2 9
+pos4=12 10
+pos5=12 11
+pos6=2 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=rock_floor		#D2691E #A0522D #B8860B
+block01=rock_floor_X		#D2691E #A0522D #B8860B
+block02=jizz		#8B4513 #CD853F #191970
+block03=hole_floor		#D2691E #CD853F #191970
+block04=ghost_ci		#D2691E #F4A460 #DEB887
+block05=ghost_ci_R		#D2691E #F4A460 #DEB887
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=karo_dark		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=single
+probBomb=45
+probRange=45
+probVirus=11
+row00=BBBBBBBBBBBBBBB
+row01=Brr_________rrB
+row02=Br___qqqqq___rB
+row03=Bq__BBBBBBB__qB
+row04=Bq_BBrrrrrBB_qB
+row05=Bq_BrrsrsrrB_qB
+row06=Bq_BrrrBrrrB_qB
+row07=Bq__rrrBrrr__qB
+row08=Bq__rbrrrbr__qB
+row09=Bq___rbbbr___qB
+row10=Bq___rrrrr___qB
+row11=Bq____qqq____qB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,106 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Big Banana
+author=Glaset
+hint=Yellow with klick'n walls
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.2
+numBlocks=36
+pos000=1 8
+pos001=1 10
+pos002=1 11
+pos003=2 8
+pos004=2 11
+pos005=3 3
+pos006=3 4
+pos007=3 8
+pos008=3 9
+pos009=3 10
+pos010=4 8
+pos011=4 9
+pos012=5 8
+pos013=5 10
+pos014=5 11
+pos015=6 8
+pos016=6 11
+pos017=7 8
+pos018=7 9
+pos019=7 10
+pos020=8 8
+pos021=8 9
+pos022=9 8
+pos023=9 10
+pos024=9 11
+pos025=10 8
+pos026=10 11
+pos027=11 8
+pos028=11 9
+pos029=11 10
+pos030=12 8
+pos031=12 9
+pos032=13 8
+pos033=13 9
+pos034=13 10
+pos035=13 11
+
+[func]
+
+[player]
+bombs=1
+range=8
+pos1=5 9
+pos2=9 9
+pos3=8 10
+pos4=2 9
+pos5=4 11
+pos6=12 10
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #808000 #000000
+block03=pyramid_R		#000000 #808000 #000000
+block04=extra		#000000 #FFFF00 #FFFF00
+block05=extra_O		#000000 #FFFF00 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#FF00FF #4169E1 #4169E1
+
+[map]
+probBomb=48
+probRange=46
+probVirus=6
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_BB__________B
+row04=B_XB_______X__B
+row05=B_XX______XX__B
+row06=B__XXXXXXXXX__B
+row07=B___XXXXXXX___B
+row08=BvvvvvvvvvvvvvB
+row09=B__vv__vv__vvvB
+row10=Bv_v_v_v_v_v_vB
+row11=Bvv__vv__vv__vB
+row12=BBBBBBBBBBBBBBB

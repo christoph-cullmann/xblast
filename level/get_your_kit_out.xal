@@ -1,0 +1,75 @@
+[info]
+name=Get Your Kit Out
+author=Keith Gillow and Mark Shepherd
+hint=Race to get a timer first
+gameMode=R234--ST-L
+
+[shrink]
+type=speedSpiral
+
+[scrambleDel]
+time=0.2500
+numBlocks=9
+pos000=3 5
+pos001=4 5
+pos002=6 5
+pos003=8 5
+pos004=3 7
+pos005=4 7
+pos006=5 7
+pos007=7 7
+pos008=9 7
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 1  2
+pos2= 1  5
+pos3= 1  7
+pos4= 1 10
+pos5= 0  0
+pos6= 0  0
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+haunt=slow
+
+[graphics]
+block00=city_free        #000000 #FFC125 #FFC0CB
+block01=city_free_X      #000000 #FFC125 #FFC0CB
+block02=dark_house       #000000 #00CED1 #FF82AB
+block03=dark_house_R     #000000 #00CED1 #FF82AB
+block04=box              #000000 #9370DB #FF82AB
+block05=box              #000000 #9370DB #FF82AB
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=28
+probRange=31
+probVirus=19
+probSpecial=1
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B____B___s_XrqB
+row02=B__X_X_X_X_BBBB
+row03=BB_B_X_X_X_BrqB
+row04=B__B___X___BXBB
+row05=B__BBBBBBB____B
+row06=BB_s_ss_s_rXBbB
+row07=B__BBBBBBB____B
+row08=B__B___X___BXBB
+row09=BB_B_X_X_X_BrqB
+row10=B__X_X_X_X_BBBB
+row11=B____B___s_XrqB
+row12=BBBBBBBBBBBBBBB
+

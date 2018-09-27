@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Summa cum laude
+author=Peter Riede
+hint=...oder nur "rite"?
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+
+[func]
+extra=mayhem
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 6
+pos2=4 4
+pos3=13 6
+pos4=10 8
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=ghost		#008000 #008000 #008000
+block01=ghost_X		#008000 #008000 #008000
+block02=wall		#FF0000 #808080 #000000
+block03=wall_R		#008000 #808080 #000000
+block04=ghost_ci		#008000 #008000 #DC143C
+block05=ghost_ci_R		#008000 #008000 #DC143C
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXX_XXXXXXB
+row02=BX___________XB
+row03=BX_XXXX_XXXX_XB
+row04=BX_B_______B_XB
+row05=BX_X_XB_BX_X_XB
+row06=B_____________B
+row07=BX_X_XB_BX_X_XB
+row08=BX_B_______B_XB
+row09=BX_XXXX_XXXX_XB
+row10=BX___________XB
+row11=BXXXXXX_XXXXXXB
+row12=BBBBBBBBBBBBBBB

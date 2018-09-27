@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fight Around the Cheese
+author=EPFL - insun : Yves Bresson
+hint=You are a little mouse :-)
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=5
+pos1=2 2
+pos2=12 3
+pos3=8 4
+pos4=6 8
+pos5=2 10
+pos6=12 10
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+wallClick=anticlockwise
+playerClick=contact
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor		#000000 #F4A460 #000000
+block02=cheese		#000000 #FFFF00 #000000
+block03=cheese		#000000 #FFFF00 #000000
+block04=cheese		#000000 #FFFF00 #000000
+block05=cheese		#000000 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B________B____B
+row02=BB_________B__B
+row03=B_____________B
+row04=B_B____B______B
+row05=B________B____B
+row06=B_____B_______B
+row07=B__B___B____B_B
+row08=B_________B_B_B
+row09=B______B______B
+row10=BB____________B
+row11=BB_______BB___B
+row12=BBBBBBBBBBBBBBB

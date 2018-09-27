@@ -1,0 +1,82 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Grenadier's Stew
+author=Jan Schrage
+hint=Uhm. Stay alive.
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[scrambleDraw]
+time=0.33
+numBlocks=2
+pos000=6 6
+pos001=9 6
+
+[scrambleDel]
+time=0.67
+numBlocks=1
+pos000=6 6
+
+[func]
+key=specialBomb
+
+[player]
+bombs=1
+range=5
+specialBombs=12
+pos1=5 3
+pos2=11 9
+pos3=11 3
+pos4=5 9
+pos5=6 4
+pos6=6 8
+initVirus=slow
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+default=grenade
+special=close
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex_X		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=25
+probRange=25
+probVirus=6
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBB__X______B
+row03=B_B___r_X_____B
+row04=B_B__b___X____B
+row05=B___X__X__X___B
+row06=B__XXXBXXB_XbrB
+row07=B___X__X__X___B
+row08=B_B__b___X____B
+row09=B_B___r_X_____B
+row10=B_BBB__X______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

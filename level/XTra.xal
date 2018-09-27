@@ -1,0 +1,87 @@
+[info]
+name=X-tra
+author=Tobias Johansson
+hint=Xpect the unexpectible
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[scrambleDraw]
+time=0.5000
+numBlocks=10
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=6 6
+pos004=7 5
+pos005=7 7
+pos006=8 6
+pos007=9 5
+pos008=9 6
+pos009=9 7
+
+[scrambleDel]
+time=0.5997
+numBlocks=10
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=6 6
+pos004=7 5
+pos005=7 7
+pos006=8 6
+pos007=9 5
+pos008=9 6
+pos009=9 7
+
+[func]
+extra=multiple
+key=specialBomb
+
+[player]
+bombs=2
+range=5
+specialBombs=30
+pos1= 1  5
+pos2=11  6
+pos3=13  5
+pos4= 1  7
+pos5= 3  6
+pos6=13  7
+
+[bombs]
+special=firecracker
+
+[graphics]
+block00=iron_floor       #000000 #2F4F4F #1D405E
+block01=iron_floor_X     #000000 #2F4F4F #9A0834
+block02=bricks           #000000 #87CEFA #00FFFF
+block03=bricks           #000000 #87CEFA #00FFFF
+block04=bricks           #000000 #FABF00 #000000
+block05=brick_O          #000000 #FABF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=12
+probRange=11
+probSpecial=73
+row00=BBBBBBBBBBBBBBB
+row01=B_q_________q_B
+row02=B__q_______q__B
+row03=B___qXXXXXq___B
+row04=B___XqrrrqX___B
+row05=B___XrqbqrX___B
+row06=B___XrbqbrX___B
+row07=B___XrqbqrX___B
+row08=B___XqrrrqX___B
+row09=B___qXXXXXq___B
+row10=B__q_______q__B
+row11=B_q_________q_B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Phoenix
+author=old EPFL : EPFL
+hint=Play with fire
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=revive
+
+[player]
+bombs=5
+range=5
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 3
+pos6=7 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+
+[graphics]
+block00=dark_way		#000000 #008000 #000000
+block01=dark_way		#000000 #008000 #000000
+block02=r_i_p		#000000 #000000 #008000
+block03=r_i_p_R		#000000 #000000 #008000
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=phoenix
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____qqq_____B
+row02=B_qBB_BBB_BBq_B
+row03=B_Bq_q___q_qB_B
+row04=B___Bq___qB___B
+row05=B___B_qqq_B___B
+row06=Bqqq__BBB__qqqB
+row07=B___B_qqq_B___B
+row08=B___Bq___qB___B
+row09=B_Bq_q___q_qB_B
+row10=B_qBB_BBB_BBq_B
+row11=B_____qqq_____B
+row12=BBBBBBBBBBBBBBB

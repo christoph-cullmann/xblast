@@ -1,0 +1,58 @@
+[info]
+name=Flames of Fury
+author=Tobias Johansson
+hint=Run for your lives
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+[func]
+extra=life
+key=specialBomb
+
+[player]
+bombs=4
+range=10
+specialBombs=30
+pos1= 6 11
+pos2= 4 11
+pos3=12 11
+pos4= 2 11
+pos5= 8 11
+pos6=10 11
+
+[bombs]
+bombClick=contact
+wallClick=contact
+fuseTime=short
+special=destruction
+
+[graphics]
+block00=rock_floor       #000000 #FFEFD5 #00FF7F
+block01=rock_floor_X     #000000 #FFEFD5 #00FF7F
+block02=city_rip         #000000 #00FFFF #FFEFD5
+block03=city_rip_R       #000000 #00FFFF #FFEFD5
+block04=extra            #000000 #FFFFFF #BEBEBE
+block05=extra_O          #000000 #FFFFFF #BEBEBE
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=rock_floor       #000000 #FF0000 #000000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqbqrqbqbqrqbqB
+row02=BvvvvvvBvvvvvvB
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

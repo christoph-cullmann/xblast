@@ -1,0 +1,55 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Hall of Snooker
+author=Garth Denley (Adelaide)
+hint=You can push chains of snooker bombs
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=10
+range=15
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  3
+pos6= 7  9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=iron_floor       #000000 #228B22 #FFD700
+block01=iron_floor_X     #000000 #228B22 #FFD700
+block02=dark_block       #000000 #228B22 #FF0000
+block03=dark_block_R     #000000 #228B22 #FF0000
+block04=extra            #000000 #FAEBD7 #8470FF
+block05=extra            #000000 #FAEBD7 #8470FF
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B____B___B____B
+row02=B_____________B
+row03=B____B___B____B
+row04=BBBB___B___BBBB
+row05=B____B___B____B
+row06=B____B___B____B
+row07=B____B___B____B
+row08=BBBB___B___BBBB
+row09=B____B___B____B
+row10=B_____________B
+row11=B____B___B____B
+row12=BBBBBBBBBBBBBBB

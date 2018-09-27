@@ -1,0 +1,233 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 17
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.13
+numBlocks=25
+pos000=1 5
+pos001=1 6
+pos002=1 8
+pos003=2 2
+pos004=2 5
+pos005=2 6
+pos006=3 10
+pos007=4 3
+pos008=4 4
+pos009=4 11
+pos010=5 8
+pos011=6 2
+pos012=6 9
+pos013=7 6
+pos014=8 5
+pos015=9 7
+pos016=10 2
+pos017=10 9
+pos018=10 10
+pos019=10 11
+pos020=11 2
+pos021=11 3
+pos022=11 4
+pos023=11 9
+pos024=13 5
+
+[scrambleDel]
+time=0.12
+numBlocks=133
+pos000=1 1
+pos001=1 3
+pos002=1 4
+pos003=1 5
+pos004=1 6
+pos005=1 7
+pos006=1 8
+pos007=1 9
+pos008=1 11
+pos009=2 2
+pos010=2 3
+pos011=2 4
+pos012=2 5
+pos013=2 6
+pos014=2 7
+pos015=2 8
+pos016=2 9
+pos017=2 10
+pos018=3 1
+pos019=3 2
+pos020=3 3
+pos021=3 4
+pos022=3 5
+pos023=3 6
+pos024=3 7
+pos025=3 8
+pos026=3 9
+pos027=3 10
+pos028=3 11
+pos029=4 1
+pos030=4 2
+pos031=4 3
+pos032=4 4
+pos033=4 5
+pos034=4 6
+pos035=4 7
+pos036=4 8
+pos037=4 9
+pos038=4 10
+pos039=4 11
+pos040=5 1
+pos041=5 2
+pos042=5 3
+pos043=5 4
+pos044=5 5
+pos045=5 6
+pos046=5 7
+pos047=5 8
+pos048=5 9
+pos049=5 10
+pos050=5 11
+pos051=6 1
+pos052=6 2
+pos053=6 3
+pos054=6 4
+pos055=6 5
+pos056=6 6
+pos057=6 7
+pos058=6 8
+pos059=6 9
+pos060=6 11
+pos061=7 2
+pos062=7 3
+pos063=7 4
+pos064=7 5
+pos065=7 6
+pos066=7 7
+pos067=7 8
+pos068=7 9
+pos069=7 10
+pos070=8 1
+pos071=8 3
+pos072=8 4
+pos073=8 5
+pos074=8 6
+pos075=8 7
+pos076=8 8
+pos077=8 9
+pos078=8 10
+pos079=8 11
+pos080=9 1
+pos081=9 2
+pos082=9 3
+pos083=9 4
+pos084=9 5
+pos085=9 6
+pos086=9 7
+pos087=9 8
+pos088=9 9
+pos089=9 10
+pos090=9 11
+pos091=10 1
+pos092=10 2
+pos093=10 3
+pos094=10 4
+pos095=10 5
+pos096=10 6
+pos097=10 7
+pos098=10 8
+pos099=10 9
+pos100=10 10
+pos101=10 11
+pos102=11 1
+pos103=11 2
+pos104=11 3
+pos105=11 4
+pos106=11 5
+pos107=11 6
+pos108=11 7
+pos109=11 8
+pos110=11 9
+pos111=11 10
+pos112=11 11
+pos113=12 2
+pos114=12 3
+pos115=12 4
+pos116=12 5
+pos117=12 6
+pos118=12 7
+pos119=12 8
+pos120=12 9
+pos121=12 10
+pos122=13 1
+pos123=13 2
+pos124=13 3
+pos125=13 4
+pos126=13 5
+pos127=13 6
+pos128=13 7
+pos129=13 8
+pos130=13 9
+pos131=13 10
+pos132=13 11
+
+[func]
+extra=junkie
+key=teleport
+
+[player]
+bombs=8
+range=50
+pos1=1 2
+pos2=13 10
+pos3=13 2
+pos4=1 10
+pos5=7 1
+pos6=7 11
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=rebound
+wallClick=contact
+playerClick=contact
+fuseTime=short
+hidden=blastnow
+
+[graphics]
+block00=hole_floor		#FF6347 #000000 #000000
+block01=hole_floor_X		#FF6347 #000000 #000000
+block02=weight		#000000 #FFFFFF #32CD32
+block03=weight_R		#FF6347 #FFFFFF #32CD32
+block04=sphere_light		#000000 #FFFF00 #000000
+block05=sphere_light_O		#FF6347 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=syringe
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=double
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B_qXXX___XXXq_B
+row02=B_qXXXqqqXXXq_B
+row03=B_qXXXXXXXqXq_B
+row04=BXXXXXXXXqqqXXB
+row05=BXXXXqqqqqXqqXB
+row06=BXqqqqqqqXXqqXB
+row07=BXXXXqqqqqXqqXB
+row08=BXXXXXXXXqqqXXB
+row09=B_qXXXXXXXqXq_B
+row10=B_qXXXqqqXXXq_B
+row11=B_qXXX___XXXq_B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,82 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Fungus Expert and the Dead
+author=MisterE
+hint=The Fungus Expert and the Dead
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.05
+numBlocks=1
+pos000=7 6
+
+[scrambleDel]
+time=0.67
+numBlocks=1
+pos000=7 6
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=6
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=fungus
+hidden=destruction
+bombClick=snooker
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=6
+probRange=6
+probVirus=6
+probSpecial=6
+probHidden=6
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____B_B_____B
+row02=B_BX__X_X__XB_B
+row03=B_XBX_____XBX_B
+row04=B__XBX_B_XBX__B
+row05=B___XBXXXBX___B
+row06=BBX__XBBBX__XBB
+row07=B___XBXXXBX___B
+row08=B__XBX_B_XBX__B
+row09=B_XBX_____XBX_B
+row10=B_BX__X_X__XB_B
+row11=B_____B_B_____B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,210 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Remotes Now
+author=Koen
+hint=Remotes are very good
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=99
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 6
+pos005=1 8
+pos006=1 9
+pos007=1 10
+pos008=1 11
+pos009=2 1
+pos010=2 2
+pos011=2 3
+pos012=2 9
+pos013=2 10
+pos014=2 11
+pos015=3 1
+pos016=3 3
+pos017=3 5
+pos018=3 6
+pos019=3 7
+pos020=3 9
+pos021=3 11
+pos022=4 1
+pos023=4 3
+pos024=4 4
+pos025=4 5
+pos026=4 6
+pos027=4 7
+pos028=4 8
+pos029=4 9
+pos030=4 11
+pos031=5 1
+pos032=5 3
+pos033=5 5
+pos034=5 7
+pos035=5 9
+pos036=5 11
+pos037=6 1
+pos038=6 2
+pos039=6 3
+pos040=6 5
+pos041=6 6
+pos042=6 7
+pos043=6 9
+pos044=6 10
+pos045=6 11
+pos046=7 1
+pos047=7 3
+pos048=7 5
+pos049=7 6
+pos050=7 7
+pos051=7 9
+pos052=7 11
+pos053=8 1
+pos054=8 2
+pos055=8 3
+pos056=8 5
+pos057=8 6
+pos058=8 7
+pos059=8 9
+pos060=8 10
+pos061=8 11
+pos062=9 1
+pos063=9 3
+pos064=9 5
+pos065=9 7
+pos066=9 9
+pos067=9 11
+pos068=10 1
+pos069=10 3
+pos070=10 4
+pos071=10 5
+pos072=10 6
+pos073=10 7
+pos074=10 8
+pos075=10 9
+pos076=10 11
+pos077=11 1
+pos078=11 3
+pos079=11 5
+pos080=11 6
+pos081=11 7
+pos082=11 9
+pos083=11 11
+pos084=12 1
+pos085=12 2
+pos086=12 3
+pos087=12 9
+pos088=12 10
+pos089=12 11
+pos090=13 1
+pos091=13 2
+pos092=13 3
+pos093=13 4
+pos094=13 6
+pos095=13 8
+pos096=13 9
+pos097=13 10
+pos098=13 11
+
+[scrambleDel]
+time=0.37
+numBlocks=41
+pos000=2 5
+pos001=2 7
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=4 3
+pos006=4 4
+pos007=4 5
+pos008=4 6
+pos009=4 7
+pos010=4 8
+pos011=4 9
+pos012=5 5
+pos013=5 7
+pos014=6 5
+pos015=6 6
+pos016=6 7
+pos017=7 3
+pos018=7 4
+pos019=7 5
+pos020=7 6
+pos021=7 7
+pos022=7 8
+pos023=7 9
+pos024=8 5
+pos025=8 6
+pos026=8 7
+pos027=9 5
+pos028=9 7
+pos029=10 3
+pos030=10 4
+pos031=10 5
+pos032=10 6
+pos033=10 7
+pos034=10 8
+pos035=10 9
+pos036=11 5
+pos037=11 6
+pos038=11 7
+pos039=12 5
+pos040=12 7
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=3 5
+pos2=11 7
+pos3=11 5
+pos4=3 7
+pos5=7 5
+pos6=7 7
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex_X		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=BbrrrrbbbrrrrbB
+row02=BbrBBBrqrBBBrbB
+row03=BbrX_XrrrX_XrbB
+row04=BXBB_BBBBB_BBXB
+row05=BqB_________BqB
+row06=B_B__B___B__B_B
+row07=BqB_________BqB
+row08=BXBB_BBBBB_BBXB
+row09=BbrX_XrrrX_XrbB
+row10=BbrBBBrqrBBBrbB
+row11=BbrrrrbbbrrrrbB
+row12=BBBBBBBBBBBBBBB

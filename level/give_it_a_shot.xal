@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Give It A Shot
+author=Chris Doherty & Mark Black (Adelaide)
+hint=Picking up a virus could win you the level
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  2
+pos6= 7 10
+
+[bombs]
+
+[graphics]
+block00=hex              #000000 #2E8B57 #8A2BE2
+block01=hex_X            #000000 #2E8B57 #8A2BE2
+block02=hex_wall         #000000 #2E8B57 #000000
+block03=hex_wall         #000000 #2E8B57 #4169E1
+block04=hex_extra        #000000 #2E8B57 #3CB371
+block05=hex_extra_O      #000000 #2E8B57 #3CB371
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=24
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B___X_X_X_X___B
+row02=B_XX_X___X_XX_B
+row03=B_XXX_XXX_XXX_B
+row04=BX_XBXBXBXBX_XB
+row05=B_X_X_X_X_X_X_B
+row06=BX_XBXBXBXBX_XB
+row07=B_X_X_X_X_X_X_B
+row08=BX_XBXBXBXBX_XB
+row09=B_XXX_XXX_XXX_B
+row10=B_XX_X___X_XX_B
+row11=B___X_X_X_X___B
+row12=BBBBBBBBBBBBBBB

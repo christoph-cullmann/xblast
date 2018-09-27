@@ -1,0 +1,65 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Group Of Death
+author=Glaset
+hint=Argentina, England, Nigeria & Sweden
+gameMode=R234--STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+
+[player]
+bombs=1
+range=1
+pos1=3 5
+pos2=3 3
+pos3=3 7
+pos4=3 9
+pos5=7 8
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+special=random
+bombClick=randomdir
+playerClick=randomdir
+wallClick=randomdir
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probVirus=75
+row00=BBBBBBBBBBBBBBB
+row01=BsrrrrrrrrrrrsB
+row02=BrXXXXXXXXXXXrB
+row03=BrX___XbXbXbXrB
+row04=BrX___XbXbXbXrB
+row05=BrX___XbXbXbXrB
+row06=BrXXXXXXXXXXXrB
+row07=BrX___XbXbXbXrB
+row08=BrX___XbXbXbXrB
+row09=BrX___XbXbXbXrB
+row10=BrXXXXXXXXXXXrB
+row11=BsrrrrrrrrrrrsB
+row12=BBBBBBBBBBBBBBB

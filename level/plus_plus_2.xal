@@ -1,0 +1,64 @@
+[info]
+name=Plus Plus 2
+author=EPFL - cosun : Yves Bresson
+hint=Plus Again
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=66
+pos1= 6  4
+pos2= 8  4
+pos3= 5  6
+pos4= 9  6
+pos5= 6  8
+pos6= 8  8
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+
+[graphics]
+block00=rock_floor       #000000 #F4A460 #000000
+block01=rock_floor_X     #000000 #F4A460 #000000
+block02=weight           #000000 #F0FFFF #FFD700
+block03=weight_R         #000000 #B0C4DE #000000
+block04=bricks           #000000 #6B8E23 #000000
+block05=brick_O          #000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_b_b_____b_b_B
+row02=Bb_BB__B__BB_bB
+row03=B_B____B____B_B
+row04=BbB_________BbB
+row05=B______B______B
+row06=B__BB_BBB_BB__B
+row07=B______B______B
+row08=BbB_________BbB
+row09=B_B____B____B_B
+row10=Bb_BB__B__BB_bB
+row11=B_b_b_____b_b_B
+row12=BBBBBBBBBBBBBBB
+

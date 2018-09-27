@@ -1,0 +1,56 @@
+[info]
+name=Seek'n Destroy
+author=Oliver Vogel
+hint=The classical one ...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #6A5ACD #4682B4
+block01=karo_light_X     #000000 #6A5ACD #4682B4
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #EEDD82
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=50
+probSpecial=18
+row00=BBBBBBBBBBBBBBB
+row01=B___X___X_X___B
+row02=B_BXBXB_BXBXB_B
+row03=B_X_X_X_X_X_X_B
+row04=BXBXBXBXBXBXBXB
+row05=B_X_X_X_X_X_X_B
+row06=BXBXBXBXBXBXBXB
+row07=B_X_X_X_X_X_X_B
+row08=BXBXBXBXBXBXBXB
+row09=B_X_X_X_X_X_X_B
+row10=B_BXBXB_BXBXB_B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB
+

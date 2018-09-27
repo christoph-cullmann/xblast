@@ -1,0 +1,232 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Know your place
+author=Reinco
+hint=Know your place
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.2
+numBlocks=93
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 3
+pos013=2 5
+pos014=2 7
+pos015=2 9
+pos016=2 11
+pos017=3 1
+pos018=3 2
+pos019=3 4
+pos020=3 6
+pos021=3 8
+pos022=3 10
+pos023=3 11
+pos024=4 1
+pos025=4 3
+pos026=4 5
+pos027=4 7
+pos028=4 9
+pos029=4 11
+pos030=5 1
+pos031=5 2
+pos032=5 4
+pos033=5 6
+pos034=5 8
+pos035=5 10
+pos036=5 11
+pos037=6 1
+pos038=6 3
+pos039=6 5
+pos040=6 7
+pos041=6 9
+pos042=6 11
+pos043=7 1
+pos044=7 2
+pos045=7 4
+pos046=7 6
+pos047=7 8
+pos048=7 10
+pos049=7 11
+pos050=8 1
+pos051=8 3
+pos052=8 5
+pos053=8 7
+pos054=8 9
+pos055=8 11
+pos056=9 1
+pos057=9 2
+pos058=9 4
+pos059=9 6
+pos060=9 8
+pos061=9 10
+pos062=9 11
+pos063=10 1
+pos064=10 3
+pos065=10 5
+pos066=10 7
+pos067=10 9
+pos068=10 11
+pos069=11 1
+pos070=11 2
+pos071=11 4
+pos072=11 6
+pos073=11 8
+pos074=11 10
+pos075=11 11
+pos076=12 1
+pos077=12 3
+pos078=12 5
+pos079=12 7
+pos080=12 9
+pos081=12 11
+pos082=13 1
+pos083=13 2
+pos084=13 3
+pos085=13 4
+pos086=13 5
+pos087=13 6
+pos088=13 7
+pos089=13 8
+pos090=13 9
+pos091=13 10
+pos092=13 11
+
+[scrambleDel]
+time=0.25
+numBlocks=65
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 7
+pos006=1 8
+pos007=1 9
+pos008=1 10
+pos009=1 11
+pos010=2 1
+pos011=2 7
+pos012=2 9
+pos013=2 11
+pos014=3 1
+pos015=3 2
+pos016=3 4
+pos017=3 8
+pos018=3 11
+pos019=4 1
+pos020=4 3
+pos021=4 7
+pos022=4 9
+pos023=4 11
+pos024=5 1
+pos025=5 2
+pos026=5 4
+pos027=5 8
+pos028=5 10
+pos029=5 11
+pos030=6 1
+pos031=6 7
+pos032=6 9
+pos033=6 11
+pos034=8 1
+pos035=8 3
+pos036=8 5
+pos037=8 11
+pos038=9 1
+pos039=9 2
+pos040=9 4
+pos041=9 8
+pos042=9 10
+pos043=9 11
+pos044=10 1
+pos045=10 3
+pos046=10 5
+pos047=10 9
+pos048=10 11
+pos049=11 1
+pos050=11 4
+pos051=11 8
+pos052=11 11
+pos053=12 1
+pos054=12 11
+pos055=13 1
+pos056=13 2
+pos057=13 3
+pos058=13 4
+pos059=13 5
+pos060=13 7
+pos061=13 8
+pos062=13 9
+pos063=13 10
+pos064=13 11
+
+[func]
+key=teleport
+
+[player]
+bombs=2
+range=1
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=contact
+wallClick=rebound
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=45
+probRange=45
+probVirus=11
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XsXbXrXsXrX_B
+row03=B_rXbXrXbXrXs_B
+row04=B_XsXrXsXrXsX_B
+row05=B_bXrXsXrXsXb_B
+row06=B_XrXsXbXsXbX_B
+row07=B_sXsXrXsXsXr_B
+row08=B_XbXbXsXbXrX_B
+row09=B_bXrXsXsXrXs_B
+row10=B_XrXbXbXrXsX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

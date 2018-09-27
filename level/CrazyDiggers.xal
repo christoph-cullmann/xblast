@@ -1,0 +1,156 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Crazy diggers
+author=Reinco
+hint=Don't screw up!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.47
+numBlocks=77
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 5
+pos015=2 7
+pos016=2 9
+pos017=2 10
+pos018=2 11
+pos019=3 1
+pos020=3 2
+pos021=3 3
+pos022=3 5
+pos023=3 7
+pos024=3 9
+pos025=3 10
+pos026=3 11
+pos027=4 1
+pos028=4 2
+pos029=4 3
+pos030=4 5
+pos031=4 7
+pos032=4 9
+pos033=4 10
+pos034=4 11
+pos035=5 1
+pos036=5 2
+pos037=5 3
+pos038=5 5
+pos039=5 7
+pos040=5 9
+pos041=5 10
+pos042=5 11
+pos043=6 1
+pos044=6 2
+pos045=6 3
+pos046=6 5
+pos047=6 7
+pos048=6 9
+pos049=6 10
+pos050=6 11
+pos051=7 1
+pos052=7 2
+pos053=7 3
+pos054=7 9
+pos055=7 10
+pos056=7 11
+pos057=8 1
+pos058=8 2
+pos059=8 3
+pos060=8 9
+pos061=8 10
+pos062=8 11
+pos063=9 1
+pos064=9 2
+pos065=9 3
+pos066=9 9
+pos067=9 10
+pos068=9 11
+pos069=10 1
+pos070=10 2
+pos071=10 3
+pos072=10 4
+pos073=10 8
+pos074=10 9
+pos075=10 10
+pos076=10 11
+
+[scrambleDel]
+time=0.45
+numBlocks=4
+pos000=6 2
+pos001=6 10
+pos002=7 2
+pos003=7 10
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=1 4
+pos2=1 9
+pos3=1 6
+pos4=1 6
+pos5=1 3
+pos6=1 8
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=construction
+bombClick=snooker
+direction=left
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=B____bXXXXXXXXB
+row02=B____bXX_____XB
+row03=B____bXX____eXB
+row04=B_BBBBBBBB___XB
+row05=B_XXXXXqXqB__XB
+row06=B_BBBBBqXqX__XB
+row07=B_XXXXXqXqB__XB
+row08=B_BBBBBBBB___XB
+row09=B____rXX____eXB
+row10=B____rXX_____XB
+row11=B____rXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

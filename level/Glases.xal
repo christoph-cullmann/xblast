@@ -1,0 +1,163 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Glases
+author=Glaset
+hint=Be in the glases or be dead
+gameMode=R234--STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.6
+numBlocks=94
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 8
+pos005=1 9
+pos006=1 10
+pos007=1 11
+pos008=2 1
+pos009=2 2
+pos010=2 3
+pos011=2 9
+pos012=2 10
+pos013=2 11
+pos014=3 1
+pos015=3 2
+pos016=3 10
+pos017=3 11
+pos018=4 1
+pos019=4 2
+pos020=4 3
+pos021=4 9
+pos022=4 10
+pos023=4 11
+pos024=5 1
+pos025=5 2
+pos026=5 3
+pos027=5 4
+pos028=5 8
+pos029=5 9
+pos030=5 10
+pos031=5 11
+pos032=6 1
+pos033=6 2
+pos034=6 3
+pos035=6 4
+pos036=6 5
+pos037=6 7
+pos038=6 8
+pos039=6 9
+pos040=6 10
+pos041=6 11
+pos042=7 1
+pos043=7 2
+pos044=7 3
+pos045=7 4
+pos046=7 5
+pos047=7 7
+pos048=7 8
+pos049=7 9
+pos050=7 10
+pos051=7 11
+pos052=8 1
+pos053=8 2
+pos054=8 3
+pos055=8 4
+pos056=8 5
+pos057=8 7
+pos058=8 8
+pos059=8 9
+pos060=8 10
+pos061=8 11
+pos062=9 1
+pos063=9 2
+pos064=9 3
+pos065=9 4
+pos066=9 8
+pos067=9 9
+pos068=9 10
+pos069=9 11
+pos070=10 1
+pos071=10 2
+pos072=10 3
+pos073=10 9
+pos074=10 10
+pos075=10 11
+pos076=11 1
+pos077=11 2
+pos078=11 10
+pos079=11 11
+pos080=12 1
+pos081=12 2
+pos082=12 3
+pos083=12 9
+pos084=12 10
+pos085=12 11
+pos086=13 1
+pos087=13 2
+pos088=13 3
+pos089=13 4
+pos090=13 8
+pos091=13 9
+pos092=13 10
+pos093=13 11
+
+
+[func]
+extra=speed
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=13 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=44
+probRange=44
+probSpecial=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__B_______B__B
+row04=B_BXB_____BXB_B
+row05=BBXXXB___BXXXBB
+row06=BXXXXXXXXXXXXXB
+row07=BBXXXB___BXXXBB
+row08=B_BXB_____BXB_B
+row09=B__B_______B__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

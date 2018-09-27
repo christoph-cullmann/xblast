@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Ho Chi Mayhem
+author=Chris Doherty (Adelaide)
+hint=Yee haa, a mayhem level with a result
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  1
+pos6= 7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #3CB371 #000000
+block01=chess_floor_X    #000000 #3CB371 #000000
+block02=book_shelf       #000000 #006400 #377F50
+block03=book_shelf       #000000 #FF4500 #377F50
+block04=chess_sphere     #000000 #3CB371 #FFA07A
+block05=chess_sphere_O   #000000 #3CB371 #8B0000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_X_X___X_X_X_B
+row02=BXRXRXR_RXRXRXB
+row03=B_X___X_X___X_B
+row04=BXR_XXRXRXX_RXB
+row05=B_X_XqXqXqX_X_B
+row06=BXRXRXRXRXRXRXB
+row07=B_X_XqXqXqX_X_B
+row08=BXR_XXRXRXX_RXB
+row09=B_X___X_X___X_B
+row10=BXRXRXR_RXRXRXB
+row11=B_X_X_X___X_X_B
+row12=BBBBBBBBBBBBBBB

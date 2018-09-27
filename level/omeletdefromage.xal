@@ -1,0 +1,184 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Omelet de fromage
+author=Reinco
+hint=How would you like your egg?
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=50
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=4 2
+pos008=4 3
+pos009=4 4
+pos010=4 8
+pos011=4 9
+pos012=4 10
+pos013=5 1
+pos014=5 2
+pos015=5 3
+pos016=5 9
+pos017=5 10
+pos018=5 11
+pos019=6 1
+pos020=6 2
+pos021=6 10
+pos022=6 11
+pos023=7 1
+pos024=7 2
+pos025=7 10
+pos026=7 11
+pos027=8 1
+pos028=8 2
+pos029=8 10
+pos030=8 11
+pos031=9 1
+pos032=9 2
+pos033=9 3
+pos034=9 9
+pos035=9 10
+pos036=9 11
+pos037=10 2
+pos038=10 3
+pos039=10 4
+pos040=10 8
+pos041=10 9
+pos042=10 10
+pos043=11 3
+pos044=11 4
+pos045=11 5
+pos046=11 6
+pos047=11 7
+pos048=11 8
+pos049=11 9
+
+[scrambleDel]
+time=0.34
+numBlocks=56
+pos000=3 2
+pos001=3 3
+pos002=3 4
+pos003=3 5
+pos004=3 6
+pos005=3 7
+pos006=3 8
+pos007=3 9
+pos008=3 10
+pos009=4 2
+pos010=4 3
+pos011=4 4
+pos012=4 6
+pos013=4 8
+pos014=4 9
+pos015=4 10
+pos016=5 1
+pos017=5 2
+pos018=5 3
+pos019=5 9
+pos020=5 10
+pos021=5 11
+pos022=6 1
+pos023=6 2
+pos024=6 10
+pos025=6 11
+pos026=7 1
+pos027=7 2
+pos028=7 3
+pos029=7 9
+pos030=7 10
+pos031=7 11
+pos032=8 1
+pos033=8 2
+pos034=8 10
+pos035=8 11
+pos036=9 1
+pos037=9 2
+pos038=9 3
+pos039=9 9
+pos040=9 10
+pos041=9 11
+pos042=10 2
+pos043=10 3
+pos044=10 4
+pos045=10 8
+pos046=10 9
+pos047=10 10
+pos048=11 3
+pos049=11 4
+pos050=11 5
+pos051=11 6
+pos052=11 7
+pos053=11 8
+pos054=11 9
+pos055=12 6
+
+[func]
+extra=invincible
+key=specialBomb
+
+[player]
+bombs=1
+range=0
+specialBombs=30
+pos1=3 1
+pos2=3 11
+pos3=3 1
+pos4=3 11
+pos5=3 1
+pos6=3 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=napalm
+special=construction
+hidden=firecracker
+wallClick=contact
+
+[graphics]
+block00=pyramid		#000000 #FFFF00 #FFFF00
+block01=pyramid		#000000 #FFFF00 #FFFF00
+block02=pyramid		#000000 #FFFF00 #FFFF00
+block03=pyramid_R		#000000 #FFFF00 #FFFF00
+block04=extra		#000000 #FFFF00 #FFFF00
+block05=extra_O		#000000 #FFFF00 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=75
+probSpecial=12
+probHidden=12
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=BrrrBrrrqrBrqrB
+row02=BrrBrqrrrrrXrrB
+row03=BrBrrrBBBrqrBqB
+row04=BrBrqBXXXBrrBrB
+row05=BrBrBXXXXXBrBqB
+row06=BrXqBXXXXXXqBrB
+row07=BrBrBXXXXXBrBqB
+row08=BrBrqBXXXBrrBrB
+row09=BrBrrrBBBrqrBrB
+row10=BrrBrrrqrrrXqrB
+row11=BrrrBqrrrrBrrrB
+row12=BBBBBBBBBBBBBBB

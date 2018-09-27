@@ -1,0 +1,67 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=All being equal
+author=Groningen : Koen
+hint=Choose one
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=4
+range=10
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+playerClick=contact
+wallClick=randomdir
+fuseTime=long
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor_X		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqBqB____BB___B
+row02=B_B_B_BB_Bq_B_B
+row03=B_B___B__BBBB_B
+row04=B_BBBBB_______B
+row05=B_B___B_BBBBBBB
+row06=B_B_B_____B___B
+row07=B___BBB_B___B_B
+row08=BBB_B___BBBB__B
+row09=BqB_B_BB___B_BB
+row10=B_B_B_B__BqB__B
+row11=B___B___BBBBBqB
+row12=BBBBBBBBBBBBBBB

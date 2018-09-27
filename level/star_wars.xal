@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Star Wars
+author=Chris Doherty (Adelaide)
+hint=Fart-and-hold is a key weapon here
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=air
+
+[player]
+bombs=7
+range=10
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  1
+pos6= 7 11
+initExtra=kick airpump
+reviveExtra=kick airpump
+
+[bombs]
+
+[graphics]
+block00=stars            #000000 #000000 #FFFFFF
+block01=stars            #000000 #000000 #FFFFFF
+;block00=score_floor     #000000 #B0C4DE #00FF7F
+;block01=score_floor     #000000 #B0C4DE #00FF7F
+block02=dark_block       #000000 #F08080 #CD5C5C
+block03=dark_block_R     #000000 #F08080 #CD5C5C
+block04=extra            #000000 #A0522D #000000
+block05=extra            #000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

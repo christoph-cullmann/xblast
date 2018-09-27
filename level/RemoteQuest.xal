@@ -1,0 +1,78 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Remote Quest 2
+author=Skywalker
+hint=Earn your remote controller
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[scrambleDraw]
+time=0.33
+numBlocks=6
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=9 5
+pos004=9 6
+pos005=9 7
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=2
+pos1=7 2
+pos2=3 3
+pos3=11 3
+pos4=3 9
+pos5=11 9
+pos6=7 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=threebombs
+
+[graphics]
+block00=lego_floor		#000000 #4169E1 #4169E1
+block01=lego_floor_X		#000000 #4169E1 #4169E1
+block02=lego_white		#000000 #FFFF00 #4169E1
+block03=lego_white		#000000 #FFFF00 #4169E1
+block04=lego_black		#FFFFFF #000000 #4169E1
+block05=lego_black_O		#000000 #000000 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor
+
+[map]
+extraDistribution=get
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=BXXX___X___XXXB
+row02=BXX_________XXB
+row03=BX__XXBBBXX__XB
+row04=B___XXXXXXX___B
+row05=B__XXXBXBXXX__B
+row06=BX_XXXBqBXXX_XB
+row07=B__XXXBXBXXX__B
+row08=B___XXXXXXX___B
+row09=BX__XXBBBXX__XB
+row10=BXX_________XXB
+row11=BXXX___X___XXXB
+row12=BBBBBBBBBBBBBBB

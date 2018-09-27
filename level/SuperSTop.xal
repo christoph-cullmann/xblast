@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Super STop
+author=Skywalker
+hint=Don't frog in the walls
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=stop
+key=stop
+
+[player]
+bombs=6
+range=3
+pos1=2 1
+pos2=12 1
+pos3=7 2
+pos4=7 10
+pos5=2 11
+pos6=12 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=karo_light		#000000 #90EE90 #008000
+block01=karo_light_X		#000000 #90EE90 #008000
+block02=pyramid		#000000 #DAA520 #008000
+block03=pyramid_R		#000000 #DAA520 #008000
+block04=extra		#000000 #90EE90 #008000
+block05=extra_O		#000000 #90EE90 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=EPFL_stop
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=50
+row00=BBBBBBBBBBBBBBB
+row01=BB___BX_XB___BB
+row02=B__X_B___B_X__B
+row03=B_X_X_XBXqX_X_B
+row04=Bq_X_B_B_BqX__B
+row05=B__X_B_B_B_X_qB
+row06=BBB_BB_XqBB_BBB
+row07=B__X_B_B_B_X__B
+row08=B_qX_B_B_B_X_qB
+row09=B_X_X_XBX_X_X_B
+row10=B__X_Bq__B_X__B
+row11=BB___BX_XB___BB
+row12=BBBBBBBBBBBBBBB

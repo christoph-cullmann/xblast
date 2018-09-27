@@ -1,0 +1,61 @@
+[info]
+name=Opportunisme
+author=Jose O'Mouann
+hint=Penser a consulter la notice
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=stunOthers
+key=rc
+
+[player]
+bombs=5
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+playerClick=rebound
+hidden=construction
+haunt=fast
+
+[graphics]
+block00=lego_floor       #000000 #F5F5F5 #FFD700
+block01=lego_floor_X     #000000 #F5F5F5 #FFD700
+block02=lego_white       #000000 #FF4500 #228B22
+block03=lego_white       #000000 #FF4500 #228B22
+block04=bricks           #000000 #FFFAFA #000000
+block05=brick_O          #000000 #FFFAFA #000000
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=lego_floor       #000000 #FF1493 #FFD700
+
+[map]
+extraDistribution=get
+probHidden=98
+row00=BBBBBBBBBBBBBBB
+row01=B__vB_________B
+row02=B________v_v__B
+row03=B_v__B_B_Bv___B
+row04=B__B_________BB
+row05=B_____BXv__B__B
+row06=BBrB__XqX__vr_B
+row07=Bv____vXB_____B
+row08=B___B_____B_BvB
+row09=B___v_____v___B
+row10=B_B_____B_____B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,59 @@
+[info]
+name=Blast O Snipe
+author=Fernando Benites
+hint=Be one with the bomb...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=snipe
+key=snipe
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=ghost            #000000 #8470FF #000000
+block01=ghost_X          #000000 #8470FF #000000
+block02=ghost_sq         #000000 #8470FF #000000
+block03=ghost_sq_R       #000000 #8470FF #000000
+block04=ghost_ci         #000000 #8470FF #7FFFD4
+block05=ghost_ci_R       #000000 #8470FF #7FFFD4
+block06=bomb
+block07=range
+block08=trap
+block09=snipe
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=18
+probRange=38
+probSpecial=37
+row00=BBBBBBBBBBBBBBB
+row01=B___X___X_X___B
+row02=B_BXBXB_BXBXB_B
+row03=B_B_X_B_B_X_B_B
+row04=BXBXBBBXBBBXBXB
+row05=B_X_X_X_X_X_X_B
+row06=BXBBBXBXBXBBBXB
+row07=B_X_X_X_X_X_X_B
+row08=BXBXBBBXBBBXBXB
+row09=B_B_X_B_B_X_B_B
+row10=B_BXBXB_BXBXB_B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB
+

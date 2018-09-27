@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Renovation Man
+author=Chris Doherty (Adelaide)
+hint=Use your special bombs to re-arrange the walls
+gameMode=R234--STDL
+
+[shrink]
+
+[func]
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+specialBombs=30
+pos1= 8  4
+pos2=10  6
+pos3= 6  8
+pos4= 4  6
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=clockwise
+wallClick=clockwise
+special=renovation
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #000000
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=43
+probRange=43
+probVirus=14
+row00=BBBBBBBBBBBBBBB
+row01=B________X____B
+row02=B__XXXX__B_XX_B
+row03=B__XXXX__X_XX_B
+row04=B________B_XX_B
+row05=BXBXBXBXBX_XX_B
+row06=B____B___B____B
+row07=B_XX_XBXBXBXBXB
+row08=B_XX_B________B
+row09=B_XX_X__XXXX__B
+row10=B_XX_B__XXXX__B
+row11=B____X________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,79 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters Omelet de fromage
+author=Peter Riede
+hint=How would you like your egg?
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.42
+numBlocks=7
+pos000=5 3
+pos001=5 9
+pos002=6 3
+pos003=6 9
+pos004=8 3
+pos005=8 9
+pos006=12 6
+
+[func]
+extra=invincible
+
+[player]
+bombs=1
+range=0
+pos1=8 1
+pos2=6 1
+pos3=8 11
+pos4=7 1
+pos5=6 11
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+hidden=napalm
+
+[graphics]
+block00=pyramid		#F5F5F5 #FFFF00 #FFFF00
+block01=pyramid		#F5F5F5 #FFFF00 #FFFF00
+block02=pyramid		#000000 #FFFF00 #FFFF00
+block03=pyramid_R		#F5F5F5 #FFFF00 #FFFF00
+block04=extra		#000000 #FFFF00 #FFFF00
+block05=extra_O		#F5F5F5 #FFFF00 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+extraDistribution=single
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=BXXXBX___XBXr_B
+row02=BXqXXXrrrXXqBrB
+row03=BXXXBBB_BXXrBrB
+row04=Brr_rrB_Brr_B_B
+row05=BrXrXrB_BrXrBqB
+row06=BrXrXq___qXrBXB
+row07=BrXrXrB_BrXrBqB
+row08=Brr_rrB_Brr_BrB
+row09=BXXXBBB_BXXrBrB
+row10=BXqXXXrrrXXqBrB
+row11=BXXXBX___XBXr_B
+row12=BBBBBBBBBBBBBBB

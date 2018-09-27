@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Mur cassant
+author=ENSERB : sun
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=mayhem
+key=specialBomb
+
+[player]
+bombs=7
+range=20
+specialBombs=30
+pos1=3 3
+pos2=7 7
+pos3=11 3
+pos4=3 9
+pos5=7 5
+pos6=11 9
+
+[bombs]
+playerClick=thru
+special=destruction
+hidden=random
+
+[graphics]
+block00=iron_floor		#000000 #CD5C5C #FFFF00
+block01=iron_floor		#000000 #CD5C5C #FFFF00
+block02=book_shelf		#000000 #6A5ACD #00FFFF
+block03=book_shelf		#000000 #6A5ACD #00FFFF
+block04=bricks		#000000 #8B4513 #000000
+block05=brick_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probSpecial=33
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=B_BB_____B____B
+row02=B___B_XX_B__XXB
+row03=BXX_B_XX_B__XXB
+row04=BXX_B____B____B
+row05=B____BB__B____B
+row06=BBBBBBBBBBBBBBB
+row07=B____B__BB____B
+row08=B____B____B_XXB
+row09=BXX__B_XX_B_XXB
+row10=BXX__B_XX_B___B
+row11=B____B_____BB_B
+row12=BBBBBBBBBBBBBBB

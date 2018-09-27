@@ -1,0 +1,90 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dual Fights
+author=ISTY : Mickael Verdier
+hint=A simple one: stay clear of the explosions
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.25
+numBlocks=24
+pos000=1 4
+pos001=2 4
+pos002=3 4
+pos003=4 4
+pos004=5 4
+pos005=6 4
+pos006=8 4
+pos007=9 4
+pos008=10 4
+pos009=11 4
+pos010=12 4
+pos011=13 4
+pos012=1 8
+pos013=2 8
+pos014=3 8
+pos015=4 8
+pos016=5 8
+pos017=6 8
+pos018=8 8
+pos019=9 8
+pos020=10 8
+pos021=11 8
+pos022=12 8
+pos023=13 8
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=6
+pos1=2 6
+pos2=12 6
+pos3=2 2
+pos4=12 2
+pos5=2 10
+pos6=12 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #B0C4DE #00FF7F
+block01=iron_floor		#000000 #B0C4DE #00FF7F
+block02=dark_block		#000000 #F08080 #CD5C5C
+block03=dark_block_R		#000000 #F08080 #CD5C5C
+block04=extra		#000000 #A0522D #000000
+block05=extra		#000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probSpecial=100
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=BBBBBBBXBBBBBBB
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=BBBBBBBXBBBBBBB
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

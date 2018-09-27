@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Plus Plus 5
+author=EPFL - insun : Yves Bresson
+hint=There is no escape...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=15
+pos1=6 4
+pos2=8 4
+pos3=5 6
+pos4=9 6
+pos5=6 8
+pos6=8 8
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+default=search
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight		#000000 #B0C4DE #FFFF00
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__B___B___B__B
+row03=B_B____B____B_B
+row04=B_____________B
+row05=B______B______B
+row06=B__BB_BBB_BB__B
+row07=B______B______B
+row08=B_____________B
+row09=B_B____B____B_B
+row10=B__B___B___B__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

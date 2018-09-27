@@ -1,0 +1,58 @@
+[info]
+name=Hell diver
+author=mariu
+hint=Do as you would not be done by
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+[func]
+extra=invincible
+
+[player]
+bombs=1
+range=1
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=hex              #000000 #FF6347 #FF0000
+block01=hex_X            #000000 #FF6347 #FF0000
+block02=hex_wall         #000000 #FF6347 #FF4500
+block03=hex_extra        #000000 #FF6347 #FFA500
+block04=hex_extra        #000000 #FF6347 #FFFF00
+block05=hex_extra_O      #000000 #FF6347 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=hex              #000000 #FF6347 #4169E1
+
+[map]
+probBomb=7
+probRange=10
+probVirus=61
+probSpecial=7
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=BqsssssssssssqB
+row02=BXsssssssssssXB
+row03=BrsssssssssssbB
+row04=BbsssssssssssrB
+row05=BXsssss_sssssXB
+row06=B_ssss___ssss_B
+row07=BXsssss_sssssXB
+row08=BrsssssssssssbB
+row09=BbsssssssssssrB
+row10=BXsssssssssssXB
+row11=BqsssssssssssqB
+row12=BBBBBBBBBBBBBBB
+

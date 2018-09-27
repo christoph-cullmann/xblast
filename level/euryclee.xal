@@ -1,0 +1,80 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Euryclee
+author=Fred Lagrange
+hint=Gee... I know this place!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.75
+numBlocks=8
+pos000=3 3
+pos001=3 9
+pos002=11 3
+pos003=11 9
+pos004=4 3
+pos005=4 9
+pos006=10 3
+pos007=10 9
+
+[scrambleDel]
+time=0.75
+numBlocks=2
+pos000=7 6
+pos001=6 6
+
+[func]
+
+[player]
+bombs=3
+range=5
+pos1=8 11
+pos2=8 11
+pos3=8 11
+pos4=8 11
+pos5=8 11
+pos6=8 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #000000 #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=79
+probVirus=-79
+row00=BBBBBBBBBBBBBBB
+row01=BXXXX_BB______B
+row02=BX____BB______B
+row03=BX____BB_BBBBBB
+row04=BX____BB_BBBBBB
+row05=BX__B_BB______B
+row06=BX____BB______B
+row07=BBBB__BB______B
+row08=BBBB__BB_BBBBBB
+row09=B_____BB_BBBBBB
+row10=B_____________B
+row11=BBBBBB________B
+row12=BBBBBBBBBBBBBBB

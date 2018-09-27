@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hallways
+author=Rob Hite
+hint=This level needs a description
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=4
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=1 6
+pos6=13 6
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=karo_light		#000000 #32CD32 #ADFF2F
+block01=karo_light		#000000 #32CD32 #ADFF2F
+block02=pyramid		#000000 #CD5C5C #000000
+block03=temple		#000000 #D2B48C #FAEBD7
+block04=extra		#000000 #6A5ACD #FF4500
+block05=extra_O		#000000 #6A5ACD #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=24
+probVirus=8
+probSpecial=32
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=B_____XbX_____B
+row02=B_BBBBBXBBBXB_B
+row03=B____rXqXb____B
+row04=BXBBBBBXBBBXBXB
+row05=B____bXqXr____B
+row06=B_BBBBBXBBBXB_B
+row07=B____rXqXb____B
+row08=BXBBBBBXBBBXBXB
+row09=B____bXqXr____B
+row10=B_BBBBBXBBBXB_B
+row11=B_____XrX_____B
+row12=BBBBBBBBBBBBBBB

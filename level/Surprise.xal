@@ -1,0 +1,66 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Surprise
+author=Tobias Johansson
+hint=Beware of hidden bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+
+[player]
+bombs=5
+range=8
+pos1=1 1
+pos2=13 1
+pos3=1 11
+pos4=13 11
+pos5=5 6
+pos6=9 6
+initVirus=mini
+reviveVirus=mini
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=firecracker
+bombClick=contact
+wallClick=contact
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #000000 #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probHidden=100
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_X_B_X_B_X_B_B
+row03=B_____________B
+row04=B_B_X_B_X_B_X_B
+row05=B_____________B
+row06=B_X_B_X_B_X_B_B
+row07=B_____________B
+row08=B_B_X_B_X_B_X_B
+row09=B_____________B
+row10=B_X_B_X_B_X_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

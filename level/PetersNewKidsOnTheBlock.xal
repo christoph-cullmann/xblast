@@ -1,0 +1,109 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters New Kids on the Block
+author=Peter Riede
+hint=Wait for the Extras
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+[scrambleDel]
+time=0.3
+numBlocks=36
+pos000=2 2
+pos001=2 3
+pos002=2 5
+pos003=2 7
+pos004=2 9
+pos005=2 10
+pos006=4 2
+pos007=4 10
+pos008=5 5
+pos009=5 7
+pos010=6 2
+pos011=6 4
+pos012=6 5
+pos013=6 6
+pos014=6 7
+pos015=6 8
+pos016=6 10
+pos017=7 5
+pos018=7 7
+pos019=8 2
+pos020=8 4
+pos021=8 5
+pos022=8 6
+pos023=8 7
+pos024=8 8
+pos025=8 10
+pos026=9 5
+pos027=9 7
+pos028=10 2
+pos029=10 10
+pos030=12 2
+pos031=12 3
+pos032=12 5
+pos033=12 7
+pos034=12 9
+pos035=12 10
+
+[func]
+extra=specialBomb
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=13 11
+pos2=1 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=7 1
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=contact
+playerClick=contact
+special=napalm
+
+[graphics]
+block00=rock_floor		#6A5ACD #A0522D #B8860B
+block01=rock_floor_X		#6A5ACD #A0522D #B8860B
+block02=jizz		#000000 #696969 #000000
+block03=hole_floor		#6A5ACD #696969 #000000
+block04=ghost_ci		#000000 #696969 #000000
+block05=ghost_ci_R		#6A5ACD #696969 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=karo_dark		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=single
+probBomb=45
+probRange=45
+probSpecial=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B____BBBBB____B
+row05=B____BBBBB____B
+row06=B____BBBBB____B
+row07=B____BBBBB____B
+row08=B____BBBBB____B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

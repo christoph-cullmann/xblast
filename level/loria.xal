@@ -1,0 +1,80 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=loria
+author=LORIA : Marc Lejeune
+hint=Mais si il y a plein de poste, il y en a 5 !
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+[scrambleDraw]
+time=0.5
+numBlocks=8
+pos000=2 6
+pos001=11 6
+pos002=4 3
+pos003=10 3
+pos004=12 3
+pos005=2 9
+pos006=3 9
+pos007=9 9
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=randomdir
+
+[graphics]
+block00=iron_floor		#000000 #B0C4DE #00FF7F
+block01=iron_floor		#000000 #B0C4DE #00FF7F
+block02=dark_block		#000000 #F08080 #CD5C5C
+block03=dark_block_R		#000000 #F08080 #CD5C5C
+block04=extra		#000000 #EE82EE #000000
+block05=extra_O		#000000 #EE82EE #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=19
+probRange=19
+probVirus=19
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=B__XXX___XrX__B
+row02=B_BXXBBBsXsX__B
+row03=BXBrbBqBXX_XXXB
+row04=BXBX_BqBb____bB
+row05=BsBB_BBBssXXs_B
+row06=Bb___ssqssXXbrB
+row07=B_XbBBBsB_bBr_B
+row08=Br_rBqBsBrBqBXB
+row09=BXXXBB_XB_BBBXB
+row10=B__XBrB_B_BXB_B
+row11=B__X_X___XXX__B
+row12=BBBBBBBBBBBBBBB

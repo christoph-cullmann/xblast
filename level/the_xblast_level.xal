@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The XBlast Level
+author=Chris Doherty & Mark Black (Adelaide)
+hint=This is an XBlast level... or fish
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=specialBomb
+
+[player]
+bombs=10
+range=10
+specialBombs=30
+pos1= 5  5
+pos2= 9  5
+pos3= 9  7
+pos4= 5  7
+pos5= 7  4
+pos6= 7  8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+special=fungus
+
+[graphics]
+block00=iron_floor       #000000 #D3D3D3 #00FA9A
+block01=iron_floor_X     #000000 #D3D3D3 #00FA9A
+block02=dark_block       #191970 #191970 #000000
+block03=dark_block_R     #191970 #191970 #FFFFFF
+block04=extra            #000000 #8B4513 #000000
+block05=extra            #000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BB____B_B____BB
+row02=BB___B_B_B___BB
+row03=BB___________BB
+row04=BB_B_______B_BB
+row05=BBB_________BBB
+row06=BB_B_______B_BB
+row07=BBB_________BBB
+row08=BB_B_______B_BB
+row09=BB___________BB
+row10=BB___B_B_B___BB
+row11=BB____B_B____BB
+row12=BBBBBBBBBBBBBBB

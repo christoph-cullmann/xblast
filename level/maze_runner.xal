@@ -1,0 +1,64 @@
+[info]
+name=Maze Runner
+author=Peel & Killer
+hint=Don't try to hide
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=2
+specialBombs=30
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 1  3
+pos6=13  9
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+special=pyro
+
+[graphics]
+block00=hex              #000000 #FF0000 #FFFFFF
+block01=hex_X            #000000 #FF0000 #FFFFFF
+block02=hex_wall         #000000 #FF0000 #00CED1
+block03=hex_wall         #000000 #FF0000 #00CED1
+block04=hex_extra        #000000 #FF0000 #CCCCCC
+block05=hex_extra_O      #000000 #FF0000 #CCCCCC
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #FF0000 #FF0000 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B________B____B
+row02=BBBBBBBB_BBBB_B
+row03=B_B____B______B
+row04=B___B__BB_BBB_B
+row05=BBB_________B_B
+row06=B_B__B___B__B_B
+row07=B_B_________BBB
+row08=B_BBB_BB__B___B
+row09=B______B____B_B
+row10=B_BBBB_BBBBBBBB
+row11=B____B________B
+row12=BBBBBBBBBBBBBBB
+

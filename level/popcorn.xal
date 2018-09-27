@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Popcorn
+author=Garth Denley
+hint=Pepper your opponents with bombs
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=invincible
+
+[player]
+bombs=2
+range=1
+pos1=2 2
+pos2=12 2
+pos3=12 10
+pos4=2 10
+pos5=7 4
+pos6=7 8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+
+[graphics]
+block00=lego_floor		#000000 #000000 #00FF7F
+block01=lego_floor		#000000 #000000 #00FF7F
+block02=lego_white		#000000 #FFD700 #3CB371
+block03=lego_white		#000000 #FFFFE0 #3CB371
+block04=lego_black		#B0C4DE #000000 #3CB371
+block05=lego_black_O		#B0C4DE #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=63
+probSpecial=16
+row00=BBBBBBBBBBBBBBB
+row01=BX_X_______X_XB
+row02=B___BBX_XBB___B
+row03=B_X_________X_B
+row04=B_B_XB___BX_B_B
+row05=BXB_XX_X_XX_BXB
+row06=BX____XXX____XB
+row07=BXB_XX_X_XX_BXB
+row08=B_B_XB___BX_B_B
+row09=B_X_________X_B
+row10=B___BBX_XBB___B
+row11=BX_X_______X_XB
+row12=BBBBBBBBBBBBBBB

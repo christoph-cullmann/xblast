@@ -1,0 +1,61 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters Void Hazard
+author=Peter Riede
+hint=Remember the void blocks
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=air
+
+[player]
+bombs=5
+range=12
+pos1=3 2
+pos2=11 10
+pos3=11 2
+pos4=3 10
+pos5=7 4
+pos6=7 8
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #006400 #8B0000
+block01=iron_floor_X		#000000 #006400 #8B0000
+block02=dark_block		#000000 #800000 #800000
+block03=dark_block_R		#000000 #800000 #800000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=iron_floor		#000000 #006400 #8B0000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBBBBBBBBB
+row02=BBB_________BBB
+row03=BBB_v_v_v_v_BBB
+row04=BBB_________BBB
+row05=BBB_v_v_v_v_BBB
+row06=BBB_________BBB
+row07=BBB_v_v_v_v_BBB
+row08=BBB_________BBB
+row09=BBB_v_v_v_v_BBB
+row10=BBB_________BBB
+row11=BBBBBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB

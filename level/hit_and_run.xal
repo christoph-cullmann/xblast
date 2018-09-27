@@ -1,0 +1,58 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Hit And Run
+author=Dave Siow & Chris Doherty (Adelaide)
+hint=Just do what the name says
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 6  1
+pos6= 8 11
+initVirus=run
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=book_shelf       #000000 #32CD32 #D2691E
+block03=book_shelf       #000000 #000000 #D2691E
+block04=chess_sphere     #000000 #FFEFD5 #6495ED
+block05=chess_sphere_O   #000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B___X__B__X___B
+row02=B__XBX_X_XBX__B
+row03=B_X___X_X___X_B
+row04=BXB__X_B_X__BXB
+row05=B_X_X_____X_X_B
+row06=BXBX___B___XBXB
+row07=B_X_X_____X_X_B
+row08=BXB__X_B_X__BXB
+row09=B_X___X_X___X_B
+row10=B__XBX_X_XBX__B
+row11=B___X__B__X___B
+row12=BBBBBBBBBBBBBBB

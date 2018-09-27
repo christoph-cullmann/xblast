@@ -1,0 +1,82 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Gravité à la manque
+author=LORIA : Pierre 'in your back' Laroche
+hint=Gare à tes fesses, ça shrink zarb !
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+[scrambleDraw]
+time=0.5
+numBlocks=6
+pos000=1 7
+pos001=3 7
+pos002=6 7
+pos003=8 7
+pos004=11 7
+pos005=13 7
+
+[scrambleDel]
+time=0.8333333333333334
+numBlocks=4
+pos000=4 10
+pos001=5 10
+pos002=9 10
+pos003=10 10
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=6
+range=6
+pos1=1 1
+pos2=6 1
+pos3=13 1
+pos4=3 1
+pos5=11 1
+pos6=8 1
+
+[bombs]
+playerClick=thru
+direction=down
+fuseTime=short
+
+[graphics]
+block00=hex		#000000 #FF0000 #8A2BE2
+block01=hex		#000000 #FF0000 #8A2BE2
+block02=hex_wall		#000000 #A52A2A #FF0000
+block03=hex_wall		#000000 #A52A2A #FF0000
+block04=pumpkin		#000000 #377F50 #FF6347
+block05=pumpkin_O		#000000 #377F50 #FF6347
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probSpecial=51
+probHidden=49
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=BqXqBBqXqBBqXqB
+row03=B_____________B
+row04=B_B_XX_B_XX_B_B
+row05=Bq_q__q_q__q_qB
+row06=B_X_BB_X_BB_X_B
+row07=Bq_q__q_q__q_qB
+row08=B_B_XX_B_XX_B_B
+row09=Bq_q__q_q__q_qB
+row10=B_X_BB_X_BB_X_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

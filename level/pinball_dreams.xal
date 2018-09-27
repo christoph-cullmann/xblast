@@ -1,0 +1,56 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Pinball Dreams
+author=Chris Doherty & Lachlan Cameron Smith (Adelaide)
+hint=Kick a shitload of bombs and RUN!
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=kick
+
+[player]
+bombs=6
+range=3
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  4
+pos6= 7  8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+
+[graphics]
+block00=hex              #000000 #6A5ACD #4682B4
+block01=hex_X            #000000 #6A5ACD #4682B4
+block02=jizz             #000000 #6A5ACD #DAA520
+block03=hole_floor       #000000 #6A5ACD #DAA520
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

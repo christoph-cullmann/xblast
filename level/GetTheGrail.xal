@@ -1,0 +1,82 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Get the Grail!
+author=Peter Riede
+hint=Get the Grail, but dont get killed!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.35
+numBlocks=10
+pos000=4 4
+pos001=4 8
+pos002=5 3
+pos003=5 9
+pos004=7 4
+pos005=7 8
+pos006=9 3
+pos007=9 9
+pos008=10 4
+pos009=10 8
+
+[func]
+extra=holyGrail
+key=rc
+
+[player]
+bombs=3
+range=5
+pos1=7 1
+pos2=7 1
+pos3=7 11
+pos4=7 1
+pos5=7 5
+pos6=7 7
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=thru
+hidden=grenade
+
+[graphics]
+block00=hex		#000000 #87CEEB #FFFFFF
+block01=hex_X		#000000 #87CEEB #FFFFFF
+block02=hex_wall		#000000 #87CEEB #800080
+block03=hex_wall		#000000 #87CEEB #800080
+block04=hex_extra		#000000 #87CEEB #FFFF00
+block05=hex_extra_O		#000000 #87CEEB #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBBBBXBBBBB_B
+row03=B_X__qXXXq__X_B
+row04=B_BBBBBBBBBBB_B
+row05=B_____________B
+row06=B__XXX___XXX__B
+row07=B_____________B
+row08=B_BBBBBBBBBBB_B
+row09=B_X__qXXXq__X_B
+row10=B_BBBBBXBBBBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

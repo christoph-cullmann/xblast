@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Curtain
+author=Stn
+hint=The Curtain Closes On You
+gameMode=R23456STDL
+
+[shrink]
+type=diag
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+specialBombs=12
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+
+[bombs]
+special=diagional
+
+[graphics]
+block00=ghost		#000000 #FFDAB9 #191970
+block01=ghost_X		#000000 #FFDAB9 #191970
+block02=karo_light		#000000 #00FF00 #FF0000
+block03=ghost_sq_R		#000000 #00FF00 #FF0000
+block04=bricks		#000000 #1E90FF #000000
+block05=brick_O		#000000 #1E90FF #000000
+block06=bomb
+block07=range
+block08=trap
+block09=triangle_bomb
+block10=ghost		#000000 #FFDAB9 #191970
+
+[map]
+extraDistribution=all
+probBomb=40
+probRange=40
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B______X______B
+row02=B_XX__X_X__B__B
+row03=B____XB__X____B
+row04=BXB_X_X___X__XB
+row05=B_XX_____B_XX_B
+row06=B_XX__X_X__XX_B
+row07=BX__X_____X__XB
+row08=B__B_X_X_X____B
+row09=B_X___X_X_X_B_B
+row10=B_XX___XB__X__B
+row11=B__X__X_X_____B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,59 @@
+[info]
+name=chips et cahuetes
+author=antimiage : Choupette
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=random
+
+[graphics]
+block00=karo_dark        #000000 #2E8B57 #8FBC8F
+block01=karo_dark_X      #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #B22222 #000000
+block03=wall_R           #000000 #B22222 #000000
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+probBomb=32
+probRange=33
+probSpecial=33
+row00=BBBBBBBBBBBBBBB
+row01=B___XX____XX__B
+row02=B_BB_B_B_BXB__B
+row03=B_v__BvB_BqB__B
+row04=B_BB_B_B_BvB_XB
+row05=BX__________XXB
+row06=BXB_B_XXX__BXXB
+row07=B_Bqv_XXX__B_XB
+row08=B_BBB_X____B__B
+row09=B_____________B
+row10=B_XXXXXXXX_B__B
+row11=B___XX____XX__B
+row12=BBBBBBBBBBBBBBB
+

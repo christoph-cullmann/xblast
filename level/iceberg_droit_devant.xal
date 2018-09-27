@@ -1,0 +1,62 @@
+[info]
+name=Iceberg droit devant !
+author=EPFL - cosun : Yves Bresson
+hint=Les femmes et les enfants d'abord
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1= 1  7
+pos2= 2  7
+pos3= 3  7
+pos4= 4  7
+pos5= 5  7
+pos6= 6  7
+initVirus=slow
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+playerClick=thru
+fuseTime=short
+hidden=construction
+
+[graphics]
+block00=kick_bomb        #6495ED #6495ED #6495ED
+block01=kick_bomb       #6495ED #6495ED #6495ED
+block02=holygrail        #20B2AA #ADD8E6 #20B2AA
+block03=button_floor     #000000 #BEBEBE #CCCCCC
+block04=holygrail        #2E8B57 #0000FF #2E8B57
+block05=kick_bomb        #FFFFFF #ADD8E6 #20B2AA
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+extraDistribution=get
+probHidden=82
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_________X___B
+row04=RR________X___B
+row05=R_________XX__B
+row06=R________XXX__B
+row07=R______R_XXX__B
+row08=RRRRRRR_XX_XX_B
+row09=RRRRRRR_XX_XX_B
+row10=RRRRRR_XX___XXB
+row11=RRRRR_XXX_q_XXB
+row12=BBBBBBBBBBBBBBB
+

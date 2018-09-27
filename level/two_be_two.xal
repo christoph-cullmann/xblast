@@ -1,0 +1,62 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Two Be Two
+author=Garth Denley (Adelaide)
+hint=Get away from the edges, but watch the middle
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=napalm
+
+[graphics]
+block00=karo_dark        #000000 #FFDAB9 #FF7F50
+block01=karo_dark_X      #000000 #FFDAB9 #FF7F50
+block02=wall             #000000 #2E8B57 #000000
+block03=wall_R           #000000 #2E8B57 #000000
+block04=chest            #000000 #BC8F8F #B0C4DE
+block05=chest_O          #000000 #BC8F8F #B0C4DE
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=special
+probBomb=46
+probRange=21
+probVirus=5
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B__X_XBXBX_X__B
+row02=B__B__X_X__B__B
+row03=BXBBBBBXBBBBBXB
+row04=B__BX_B_B_XB__B
+row05=BX_B__XXX__B_XB
+row06=BBXBBB___BBBXBB
+row07=BX_B__XXX__B_XB
+row08=B__BX_B_B_XB__B
+row09=BXBBBBBXBBBBBXB
+row10=B__B__X_X__B__B
+row11=B__X_XBXBX_X__B
+row12=BBBBBBBBBBBBBBB

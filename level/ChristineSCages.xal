@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Christine's cages
+author=LORIA : Jose O'mouann
+hint=Où t'es ?
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=20
+range=0
+pos1=1 1
+pos2=7 3
+pos3=11 9
+pos4=3 5
+pos5=5 11
+pos6=13 7
+initVirus=teleport
+reviveVirus=teleport
+initExtra=teleport 
+reviveExtra=teleport 
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=rock_floor		#000000 #FFFFFF #FFFFFF
+block01=rock_floor		#000000 #FFFFFF #FFFFFF
+block02=wall		#000000 #32CD32 #D2691E
+block03=wall_R		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_BqBBBBBrBqBBB
+row02=BBBBBBBBBBBBBBB
+row03=BBBrBqB_BqBBBBB
+row04=BBBBBBBBBBBBBBB
+row05=BrB_BBBrBBBBBrB
+row06=BBBBBBBBBBBBBBB
+row07=BqBBBBBBBqBBB_B
+row08=BBBBBBBrBBBBBBB
+row09=BrBqBBBBBBB_BBB
+row10=BBBBBBBBBBBBBBB
+row11=BBBBB_BrBBBBBBB
+row12=BBBBBBBBBBBBBBB

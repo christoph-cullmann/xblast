@@ -1,0 +1,95 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Happy Face
+author=Glaset
+hint=Bomb it uper
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.2
+numBlocks=25
+pos000=2 2
+pos001=2 3
+pos002=2 9
+pos003=2 10
+pos004=3 1
+pos005=3 2
+pos006=3 3
+pos007=3 9
+pos008=3 10
+pos009=3 11
+pos010=6 3
+pos011=6 9
+pos012=7 6
+pos013=8 3
+pos014=8 9
+pos015=11 1
+pos016=11 2
+pos017=11 3
+pos018=11 9
+pos019=11 10
+pos020=11 11
+pos021=12 2
+pos022=12 3
+pos023=12 9
+pos024=12 10
+
+
+[func]
+
+[player]
+bombs=3
+range=10
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=random
+bombClick=contact
+playerClick=contact
+wallClick=contact
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#FF0000 #FF0000 #FF0000
+block01=iron_floor		#FF0000 #FF0000 #FF0000
+block02=bricks		#000000 #FFFF00 #000000
+block03=bricks		#FF0000 #FFFF00 #000000
+block04=bricks		#000000 #00FF00 #000000
+block05=brick_O		#FF0000 #00FF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#FF0000 #FF0000 #FF0000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__v_______v__B
+row02=B_vv_______vv_B
+row03=BXvv__v_v__vvXB
+row04=B_____________B
+row05=B_____________B
+row06=BB_____v_____BB
+row07=B___X_____X___B
+row08=B____X___X____B
+row09=BXvv__v_v__vvXB
+row10=B_vv___X___vv_B
+row11=B__v_______v__B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,115 @@
+[info]
+name=Level Sue
+author=mariu
+hint=...
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5000
+numBlocks=19
+pos000=7 2
+pos001=4 3
+pos002=5 3
+pos003=6 3
+pos004=7 3
+pos005=8 3
+pos006=9 3
+pos007=10 3
+pos008=9 4
+pos009=8 5
+pos010=7 6
+pos011=6 7
+pos012=5 8
+pos013=4 9
+pos014=4 10
+pos015=7 8
+pos016=8 9
+pos017=9 10
+pos018=10 10
+
+[scrambleDel]
+time=0.4581
+numBlocks=22
+pos000=3 3
+pos001=4 3
+pos002=5 3
+pos003=6 3
+pos004=7 3
+pos005=8 3
+pos006=9 3
+pos007=10 3
+pos008=11 3
+pos009=8 2
+pos010=8 4
+pos011=8 5
+pos012=8 6
+pos013=8 7
+pos014=7 7
+pos015=6 7
+pos016=6 6
+pos017=6 5
+pos018=7 5
+pos019=8 8
+pos020=8 9
+pos021=7 10
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=5
+range=30
+specialBombs=30
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=randomdir
+playerClick=thru
+special=pyro
+hidden=pyro
+
+[graphics]
+block00=iron_floor       #000000 #FFD700 #FFFF00
+block01=iron_floor_X     #000000 #FFD700 #FFFF00
+block02=dark_block       #000000 #68228B #BA55D3
+block03=dark_block_R     #000000 #68228B #D15FEE
+block04=extra            #000000 #32CD32 #000000
+block05=extra_O          #000000 #32CD32 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=firecracker
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+probBomb=31
+probVirus=31
+probSpecial=16
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=B_X_________X_B
+row02=B_______B_____B
+row03=B__BBBBBBBBB__B
+row04=BX______B____XB
+row05=B__X__BBB__X__B
+row06=B_XX__BqB__XX_B
+row07=B__X__BBB__X__B
+row08=BX_XX___B_XX_XB
+row09=B___X___B_X___B
+row10=B_X____B____X_B
+row11=B_X_X_____X_X_B
+row12=BBBBBBBBBBBBBBB
+

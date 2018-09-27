@@ -1,0 +1,163 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=La Mine
+author=EPFL - disun : Yves Bresson
+hint=Ca s'effondre !!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.1
+numBlocks=92
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 11
+pos012=2 1
+pos013=3 1
+pos014=4 1
+pos015=5 1
+pos016=6 1
+pos017=7 1
+pos018=8 1
+pos019=9 1
+pos020=10 1
+pos021=11 1
+pos022=12 1
+pos023=13 1
+pos024=13 2
+pos025=13 3
+pos026=13 4
+pos027=13 5
+pos028=13 6
+pos029=13 8
+pos030=13 7
+pos031=13 9
+pos032=13 10
+pos033=13 11
+pos034=12 11
+pos035=11 11
+pos036=10 11
+pos037=9 11
+pos038=8 11
+pos039=7 11
+pos040=6 11
+pos041=5 11
+pos042=4 11
+pos043=3 11
+pos044=2 10
+pos045=2 9
+pos046=3 10
+pos047=2 2
+pos048=2 3
+pos049=3 2
+pos050=11 2
+pos051=12 2
+pos052=12 3
+pos053=12 9
+pos054=12 10
+pos055=11 10
+pos056=10 10
+pos057=11 9
+pos058=12 8
+pos059=12 4
+pos060=11 3
+pos061=10 2
+pos062=4 2
+pos063=3 3
+pos064=2 4
+pos065=2 8
+pos066=3 9
+pos067=4 10
+pos068=5 10
+pos069=4 9
+pos070=3 8
+pos071=2 7
+pos072=2 5
+pos073=3 4
+pos074=4 3
+pos075=5 2
+pos076=9 2
+pos077=10 3
+pos078=11 4
+pos079=12 5
+pos080=12 7
+pos081=11 8
+pos082=10 9
+pos083=9 10
+pos084=2 6
+pos085=12 6
+pos086=6 2
+pos087=7 2
+pos088=8 2
+pos089=6 10
+pos090=7 10
+pos091=8 10
+
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=4 1
+pos2=10 1
+pos3=1 5
+pos4=13 7
+pos5=4 11
+pos6=10 11
+initExtra=rc
+reviveExtra=rc
+
+[bombs]
+hidden=construction
+
+[graphics]
+block00=button_floor		#CD853F #CD853F #000000
+block01=button_floor		#CD853F #CD853F #000000
+block02=dark_block		#8B4513 #8B4513 #000000
+block03=dark_block_R		#8B4513 #8B4513 #000000
+block04=extra		#DAA520 #000000 #000000
+block05=extra_O		#DAA520 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=8
+probRange=8
+probHidden=63
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XXXXXXXXXXX_B
+row03=B_XXXXXXXXXXX_B
+row04=B_XXXXXXXXXXX_B
+row05=B_XXXXXXXXXXX_B
+row06=B_XXXXXqXXXXX_B
+row07=B_XXXXXXXXXXX_B
+row08=B_XXXXXXXXXXX_B
+row09=B_XXXXXXXXXXX_B
+row10=B_XXXXXXXXXXX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

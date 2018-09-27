@@ -1,0 +1,113 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=BOEM
+author=Vulpes Incendium
+hint=
+gameMode=R23456STD-
+
+[shrink]
+type=spiral3
+
+[scrambleDraw]
+time=0.1
+numBlocks=12
+pos000=2 1
+pos001=2 2
+pos002=2 10
+pos003=2 11
+pos004=7 1
+pos005=7 2
+pos006=7 10
+pos007=7 11
+pos008=12 1
+pos009=12 2
+pos010=12 10
+pos011=12 11
+
+[scrambleDel]
+time=0.5
+numBlocks=24
+pos000=1 1
+pos001=1 2
+pos002=1 10
+pos003=1 11
+pos004=3 1
+pos005=3 2
+pos006=3 10
+pos007=3 11
+pos008=6 1
+pos009=6 2
+pos010=6 10
+pos011=6 11
+pos012=8 1
+pos013=8 2
+pos014=8 10
+pos015=8 11
+pos016=11 1
+pos017=11 2
+pos018=11 10
+pos019=11 11
+pos020=13 1
+pos021=13 2
+pos022=13 10
+pos023=13 11
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=6
+specialBombs=12
+pos1=2 1
+pos2=12 11
+pos3=12 1
+pos4=2 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+
+[bombs]
+normal=firecracker
+special=pyro2
+bombClick=contact
+playerClick=rebound
+fuseTime=long
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor_X		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #FF0000
+block05=chess_sphere_O		#000000 #FFEFD5 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#FF0000 #4169E1 #4169E1
+
+[map]
+probSpecial=75
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=BB_BeeB_BeeB_BB
+row02=BB_B__B_B__B_BB
+row03=Bes_e__s__e_seB
+row04=B_B__eXBXe__B_B
+row05=B_XBXBeeeBXBX_B
+row06=BeeeeeeeeeeeeeB
+row07=B_XBXBeeeBXBX_B
+row08=B_B__eXBXe__B_B
+row09=Bes_e__s__e_seB
+row10=BB_B__B_B__B_BB
+row11=BB_BeeB_BeeB_BB
+row12=BBBBBBBBBBBBBBB

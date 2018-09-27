@@ -1,0 +1,55 @@
+[info]
+name=Ring of Death
+author=Tobias Johansson
+hint=Beware!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+[func]
+extra=poison
+
+[player]
+bombs=1
+range=1
+pos1= 5  5
+pos2= 7  5
+pos3= 9  5
+pos4= 5  7
+pos5= 7  7
+pos6= 9  7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #D2691E #D2691E
+block01=chess_floor_X    #000000 #D2691E #D2691E
+block02=city_rip         #000000 #32CD32 #D2691E
+block03=city_rip_R       #000000 #32CD32 #D2691E
+block04=chess_sphere     #000000 #D2691E #D2691E
+block05=chess_sphere_O   #000000 #D2691E #D2691E
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+probSpecial=98
+row00=BBBBBBBBBBBBBBB
+row01=BrrrrrrrrrrrrrB
+row02=BrqqqqqqqqqqqrB
+row03=BrqrrrrrrrrrqrB
+row04=BrqrXXXXXXXrqrB
+row05=BrqrX_____XrqrB
+row06=BrqrX_____XrqrB
+row07=BrqrX_____XrqrB
+row08=BrqrXXXXXXXrqrB
+row09=BrqrrrrrrrrrqrB
+row10=BrqqqqqqqqqqqrB
+row11=BrrrrrrrrrrrrrB
+row12=BBBBBBBBBBBBBBB
+

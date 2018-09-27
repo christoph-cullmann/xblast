@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Marc Victim's
+author=Belgium : Jp & Vincent
+hint=Kill Marcounet
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=invincible
+
+[player]
+bombs=1
+range=1
+pos1=6 5
+pos2=8 7
+pos3=8 5
+pos4=6 6
+pos5=6 7
+pos6=8 6
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=randomdir
+wallClick=clockwise
+playerClick=anticlockwise
+fuseTime=long
+default=firecracker
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=hole_floor		#000000 #8A2BE2 #FFD700
+block01=hole_floor		#000000 #8A2BE2 #FFD700
+block02=jizz		#000000 #8A2BE2 #FFD700
+block03=jizz		#000000 #8A2BE2 #FFD700
+block04=extra		#000000 #FFFF00 #FFFFFF
+block05=extra_O		#000000 #FFFF00 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#000000 #808080 #FFFFFF
+
+[map]
+extraDistribution=all
+probVirus=33
+probSpecial=33
+row00=BBBBBBBBBBBBBBB
+row01=BB____________B
+row02=B____________BB
+row03=B__B_s___s____B
+row04=B___sqXXXqsB__B
+row05=B____B___X____B
+row06=B____X___B____B
+row07=B___BX___X____B
+row08=B___sqXXXqB___B
+row09=B_B__s___s____B
+row10=B___________B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,57 @@
+[info]
+name=Spider Web
+author=Stn
+hint=The Best Is In The Middle
+gameMode=R234--STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=4
+pos1= 1  6
+pos2=13  6
+pos3= 7  1
+pos4= 7 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=karo_light       #000000 #6A5ACD #4682B4
+block01=karo_light_X     #000000 #6A5ACD #4682B4
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #EEDD82
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=1
+probRange=53
+probVirus=19
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBX___XBBBBB
+row02=BBBX_XB_BX_XBBB
+row03=BB_XBB_X_BBX_BB
+row04=BXXB__XXX__BXXB
+row05=B_B_XBB_BBX_B_B
+row06=B__X_X_q_X_X__B
+row07=B_B_XBB_BBX_B_B
+row08=BXXB__XXX__BXXB
+row09=BB_XBB_X_BBX_BB
+row10=BBBX_XB_BX_XBBB
+row11=BBBBBX___XBBBBB
+row12=BBBBBBBBBBBBBBB
+

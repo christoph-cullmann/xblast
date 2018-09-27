@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Bowl
+author=Stn
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=4 3
+pos6=9 8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #D2B48C
+block01=lego_floor		#000000 #228B22 #D2B48C
+block02=lego_white		#000000 #D2B48C #228B22
+block03=lego_floor		#000000 #228B22 #D2B48C
+block04=lego_black		#8FBC8F #000000 #228B22
+block05=lego_black_O		#8FBC8F #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=lego_floor_S		#000000 #228B22 #000000
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=48
+probVirus=16
+row00=BBBBBBBBBBBBBBB
+row01=B___XX___XX___B
+row02=B__BBBBBBBBB__B
+row03=B_XX___B___XX_B
+row04=BXBX__XXX__XBXB
+row05=B_B__BXXXB__B_B
+row06=B__BX_XXX_XB__B
+row07=B__B___X___B__B
+row08=BXXXX_____XXXXB
+row09=B_X_BB___BB_X_B
+row10=B__BXXBBBXXB__B
+row11=B___XX_X_XX___B
+row12=BBBBBBBBBBBBBBB

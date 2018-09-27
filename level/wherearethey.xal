@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Where are they ?
+author=ISTY : Jean-Christophe PUPIN
+hint=Time your bombs... no-one will come to you
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=3
+range=3
+pos1=13 1
+pos2=1 1
+pos3=9 4
+pos4=5 8
+pos5=1 11
+pos6=13 11
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+bombClick=randomdir
+wallClick=randomdir
+playerClick=contact
+
+[graphics]
+block00=iron_floor		#000000 #000000 #00FF7F
+block01=iron_floor		#000000 #000000 #00FF7F
+block02=dark_block		#191970 #4169E1 #000000
+block03=dark_block_R		#4169E1 #FFFFFF #FFFFFF
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=21
+probRange=22
+probVirus=21
+probHidden=37
+row00=BBBBBBBBBBBBBBB
+row01=B__X___X___X__B
+row02=B_BBXBBBBXBBB_B
+row03=BXB______X__BXB
+row04=B_X_BXBBB_B_X_B
+row05=B_B_X__X__B_B_B
+row06=BXB_BXBXBXB_BXB
+row07=B_X_B_XXXXXXB_B
+row08=B_B_B__XBBX_X_B
+row09=BXX__XB_____BXB
+row10=B_BBXBBBBXBBB_B
+row11=B__X___X___X__B
+row12=BBBBBBBBBBBBBBB

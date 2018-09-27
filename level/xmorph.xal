@@ -1,0 +1,115 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=X-Morph
+author=LORIA : Pierre 'in your back' Laroche
+hint=Use the escalator
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.6666666666666666
+numBlocks=40
+pos000=1 1
+pos001=2 1
+pos002=2 2
+pos003=3 2
+pos004=3 3
+pos005=4 3
+pos006=4 4
+pos007=5 4
+pos008=5 5
+pos009=9 5
+pos010=9 4
+pos011=10 4
+pos012=10 3
+pos013=11 3
+pos014=11 2
+pos015=12 2
+pos016=12 1
+pos017=13 1
+pos018=13 11
+pos019=12 11
+pos020=12 10
+pos021=11 10
+pos022=11 9
+pos023=10 9
+pos024=10 8
+pos025=9 8
+pos026=9 7
+pos027=5 7
+pos028=5 8
+pos029=4 8
+pos030=4 9
+pos031=3 9
+pos032=3 10
+pos033=2 10
+pos034=2 11
+pos035=1 11
+pos036=1 6
+pos037=13 6
+pos038=7 1
+pos039=7 11
+
+[scrambleDel]
+time=0.6666666666666666
+numBlocks=2
+pos000=5 6
+pos001=9 6
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=5
+range=20
+pos1=1 1
+pos2=12 11
+pos3=6 7
+pos4=1 11
+pos5=7 5
+pos6=12 1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=city_free		#000000 #D2691E #000000
+block01=city_free		#000000 #D2691E #000000
+block02=sphere_dark		#000000 #D2691E #D2691E
+block03=sphere_dark		#000000 #D2691E #D2691E
+block04=lego_black		#000000 #D2691E #000000
+block05=lego_black_O		#000000 #D2691E #000000
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=14
+probSpecial=70
+row00=BBBBBBBBBBBBBBB
+row01=B__BXXXXXXXB__B
+row02=BB_XBXXXXXBX_BB
+row03=B_BXXBXXXBXXB_B
+row04=B__B__B_B__B__B
+row05=B___B_____B___B
+row06=B____BXXXB____B
+row07=B___B_____B___B
+row08=B__B__B_B__B__B
+row09=B_BXXBXXXBXXB_B
+row10=BB_XBXXXXXBX_BB
+row11=B__BXXXXXXXB__B
+row12=BBBBBBBBBBBBBBB

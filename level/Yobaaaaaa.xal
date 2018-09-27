@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Yobaaaaaa!
+author=EPFL - disun : Flavio Ferri
+hint=y a du röschti pour tous le monde
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=teleport
+
+[player]
+bombs=2
+range=2
+pos1=6 2
+pos2=8 2
+pos3=3 3
+pos4=4 3
+pos5=10 3
+pos6=11 3
+initVirus=bomb
+reviveVirus=run
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+fuseTime=short
+hidden=firecracker
+
+[graphics]
+block00=kick_bomb		#6495ED #6495ED #6495ED
+block01=kick_bomb		#6495ED #6495ED #6495ED
+block02=holygrail		#20B2AA #ADD8E6 #20B2AA
+block03=button_floor		#000000 #808080 #000000
+block04=holygrail		#2E8B57 #0000FF #2E8B57
+block05=kick_bomb		#FFFFFF #ADD8E6 #20B2AA
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+extraDistribution=get
+probBomb=8
+probRange=8
+probVirus=24
+probHidden=44
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____B_B_____B
+row04=B__BB_____BB__B
+row05=B______X______B
+row06=B_____XXX_____B
+row07=BX___XX_XX___XB
+row08=BXX_XX_X_XX_XXB
+row09=B_XBB_XXX_BBX_B
+row10=BX_X_XBXBX_X_XB
+row11=BXX_XXXXXXX_XXB
+row12=BBBBBBBBBBBBBBB

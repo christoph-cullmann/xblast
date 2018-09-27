@@ -1,0 +1,70 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Sky Show
+author=Garth Denley (Adelaide)
+hint=Block pyro bombs with normal ones
+gameMode=R234--STDL
+
+[shrink]
+type=lazyCompoundF
+
+[scrambleDel]
+time=0.5
+numBlocks=3
+pos000=7 5
+pos001=7 6
+pos002=7 7
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=rebound
+special=pyro
+
+[graphics]
+block00=ghost            #000000 #FFDAB9 #191970
+block01=ghost_X          #000000 #FFDAB9 #191970
+block02=ghost_sq         #000000 #FFDAB9 #FFFF00
+block03=ghost_sq_R       #000000 #FFDAB9 #FFFF00
+block04=ghost_ci         #000000 #FFDAB9 #FF1493
+block05=ghost_ci_R       #000000 #FFDAB9 #FF1493
+block06=bomb
+block07=range
+block08=trap
+block09=firecracker
+block10=ghost            #000000 #FFDAB9 #191970
+
+[map]
+extraDistribution=special
+probBomb=32
+probRange=16
+probVirus=21
+probSpecial=27
+row00=BBBBBBBBBBBBBBB
+row01=B____BX_XB____B
+row02=B__X_B_X_B_X__B
+row03=B____BBXBB____B
+row04=BBBBXX_X_XXBBXB
+row05=BX_BXX_B_XXB_XB
+row06=B_XXXBXBXBXXX_B
+row07=BX_BXX_B_XXB_XB
+row08=BBBBXX_X_XXBBXB
+row09=B____BBXBB____B
+row10=B__X_B_X_B_X__B
+row11=B____BX_XB____B
+row12=BBBBBBBBBBBBBBB

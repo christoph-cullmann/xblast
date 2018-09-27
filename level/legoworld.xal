@@ -1,0 +1,137 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lego World
+author=ISTY : Olivier GLADIN
+hint=Go crazy
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=70
+pos000=1 1
+pos001=2 1
+pos002=3 1
+pos003=4 1
+pos004=5 1
+pos005=6 1
+pos006=8 1
+pos007=9 1
+pos008=10 1
+pos009=11 1
+pos010=12 1
+pos011=13 1
+pos012=1 2
+pos013=3 2
+pos014=5 2
+pos015=9 2
+pos016=11 2
+pos017=13 2
+pos018=1 3
+pos019=2 3
+pos020=3 3
+pos021=4 3
+pos022=10 3
+pos023=11 3
+pos024=12 3
+pos025=13 3
+pos026=1 4
+pos027=3 4
+pos028=11 4
+pos029=13 4
+pos030=1 5
+pos031=2 5
+pos032=12 5
+pos033=13 5
+pos034=1 6
+pos035=13 6
+pos036=1 7
+pos037=2 7
+pos038=12 7
+pos039=13 7
+pos040=1 8
+pos041=3 8
+pos042=11 8
+pos043=13 8
+pos044=1 9
+pos045=2 9
+pos046=3 9
+pos047=4 9
+pos048=10 9
+pos049=11 9
+pos050=12 9
+pos051=13 9
+pos052=1 10
+pos053=3 10
+pos054=5 10
+pos055=9 10
+pos056=11 10
+pos057=13 10
+pos058=1 11
+pos059=2 11
+pos060=3 11
+pos061=4 11
+pos062=5 11
+pos063=6 11
+pos064=8 11
+pos065=9 11
+pos066=10 11
+pos067=11 11
+pos068=12 11
+pos069=13 11
+
+
+[func]
+
+[player]
+bombs=25
+range=5
+pos1=1 1
+pos2=13 1
+pos3=7 3
+pos4=7 9
+pos5=1 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=long
+special=napalm
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #228B22
+block03=lego_floor		#000000 #228B22 #000000
+block04=lego_black		#FF0000 #000000 #228B22
+block05=lego_black_O		#FF0000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=lego_floor_S		#000000 #228B22 #000000
+
+[map]
+probRange=48
+probVirus=32
+row00=BBBBBBBBBBBBBBB
+row01=B_____X_X_____B
+row02=B_B_BXB_BXB_B_B
+row03=B___X_____X___B
+row04=B_BXB_BXB_BXB_B
+row05=B_X___X_X___X_B
+row06=BXB_BXBXBXB_BXB
+row07=B_X___X_X___X_B
+row08=B_BXB_BXB_BXB_B
+row09=B___X_____X___B
+row10=B_B_BXB_BXB_B_B
+row11=B_____X_X_____B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,55 @@
+[info]
+name=Losange Losange
+author=EPFL - cosun : Yves Bresson
+hint=Losange ?
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=6
+pos1= 2  2
+pos2=12  2
+pos3= 7  3
+pos4= 7  9
+pos5= 2 10
+pos6=12 10
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #98FB98 #000000
+block01=rock_floor_X     #000000 #98FB98 #000000
+block02=weight           #000000 #228B22 #000000
+block03=weight_R         #000000 #228B22 #000000
+block04=weight           #000000 #9ACD32 #000000
+block05=weight_R         #000000 #9ACD32 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=31
+probRange=31
+row00=BBBBBBBBBBBBBBB
+row01=B___X_____X___B
+row02=B__B___B___B__B
+row03=B_B___B_B___B_B
+row04=BX___X___X___XB
+row05=B___B__X__B___B
+row06=B__B__XXX__B__B
+row07=B___B__X__B___B
+row08=BX___X___X___XB
+row09=B_B___B_B___B_B
+row10=B__B___B___B__B
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB
+

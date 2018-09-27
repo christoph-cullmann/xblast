@@ -1,0 +1,71 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Snapshot level 2
+author=Skywalker
+hint=This level was made to make snapshots
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=6 5
+pos2=7 5
+pos3=8 5
+pos4=6 7
+pos5=7 7
+pos6=8 7
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+special=threebombs
+
+[graphics]
+block00=rock_floor		#FFFFFF #FFFFFF #FFFFFF
+block01=rock_floor_X		#FFFFFF #FFFFFF #FFFFFF
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#FFFFFF #F0FFFF #FFD700
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#FFFFFF #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=rock_floor
+
+[map]
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___BBBBBBB___B
+row03=B_BXXX___XXXB_B
+row04=B_BXXX___XXXB_B
+row05=B_BXXX___XXXB_B
+row06=B_BXXXXXXXXXB_B
+row07=B_BXXX___XXXB_B
+row08=B_BXXX___XXXB_B
+row09=B_BXXX___XXXB_B
+row10=B___BBBBBBB___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

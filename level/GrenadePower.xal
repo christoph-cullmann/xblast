@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Grenade Power
+author=Peter Riede
+hint=Increase your grenade power!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=3
+range=3
+specialBombs=30
+pos1=4 9
+pos2=7 11
+pos3=10 9
+pos4=7 1
+pos5=10 3
+pos6=4 3
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+
+[graphics]
+block00=chess_floor		#696969 #DC143C #8B4513
+block01=chess_floor_X		#696969 #DC143C #8B4513
+block02=temple		#006400 #FF69B4 #FF69B4
+block03=temple		#696969 #FF69B4 #FF69B4
+block04=chess_sphere		#696969 #DC143C #00FF00
+block05=chess_sphere_O		#696969 #DC143C #00FF00
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=chess_floor		#FFC0CB #DC143C #FFFFFF
+
+[map]
+extraDistribution=get
+probBomb=6
+probRange=25
+probVirus=25
+probSpecial=6
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XX_B___B_XX_B
+row03=B_Xv___v___vX_B
+row04=B_B__v___v__B_B
+row05=B______X______B
+row06=B_BXvXXBXXvXB_B
+row07=B______X______B
+row08=B_B__v___v__B_B
+row09=B_Xv___v___vX_B
+row10=B_XX_B___B_XX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

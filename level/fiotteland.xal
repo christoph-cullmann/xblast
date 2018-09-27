@@ -1,0 +1,163 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fiotte Land
+author=LORIA : Pierre 'in your back' Laroche
+hint=Center is life, once again !
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+[scrambleDraw]
+time=0.625
+numBlocks=47
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=13 1
+pos012=13 2
+pos013=13 3
+pos014=13 4
+pos015=13 5
+pos016=13 6
+pos017=13 7
+pos018=13 8
+pos019=13 9
+pos020=13 10
+pos021=13 11
+pos022=2 1
+pos023=3 1
+pos024=4 1
+pos025=5 1
+pos026=6 1
+pos027=7 1
+pos028=8 1
+pos029=9 1
+pos030=10 1
+pos031=11 1
+pos032=12 1
+pos033=2 11
+pos034=3 11
+pos035=4 11
+pos036=5 11
+pos037=6 11
+pos038=7 11
+pos039=8 11
+pos040=9 11
+pos041=10 11
+pos042=11 11
+pos043=12 11
+pos044=7 6
+pos045=2 6
+pos046=12 6
+
+[scrambleDel]
+time=0.5
+numBlocks=40
+pos000=5 7
+pos001=6 7
+pos002=7 7
+pos003=8 7
+pos004=9 7
+pos005=5 5
+pos006=6 5
+pos007=7 5
+pos008=8 5
+pos009=9 5
+pos010=5 6
+pos011=9 6
+pos012=4 7
+pos013=10 7
+pos014=4 6
+pos015=10 6
+pos016=4 5
+pos017=10 5
+pos018=6 8
+pos019=7 8
+pos020=8 8
+pos021=6 4
+pos022=7 4
+pos023=8 4
+pos024=6 9
+pos025=7 9
+pos026=8 9
+pos027=6 3
+pos028=7 3
+pos029=8 3
+pos030=7 2
+pos031=7 10
+pos032=2 6
+pos033=3 6
+pos034=12 6
+pos035=11 6
+pos036=5 8
+pos037=9 8
+pos038=5 4
+pos039=9 4
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=3
+range=2
+pos1=1 3
+pos2=7 1
+pos3=13 3
+pos4=1 9
+pos5=7 11
+pos6=13 9
+
+[bombs]
+default=grenade
+hidden=renovation
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=hex		#000000 #000000 #6495ED
+block01=hex		#000000 #000000 #6495ED
+block02=jizz		#000000 #6495ED #000000
+block03=jizz		#000000 #6495ED #000000
+block04=chest		#000000 #000000 #6495ED
+block05=chest_O		#000000 #000000 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=16
+probVirus=32
+probSpecial=32
+probHidden=21
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__XBXBXBXBX__B
+row04=B__X_______X__B
+row05=B__B_______B__B
+row06=B__X__XXX__X__B
+row07=B__B_______B__B
+row08=B__X_______X__B
+row09=B__XBXBXBXBX__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

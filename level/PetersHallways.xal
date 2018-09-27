@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters Hallways
+author=Peter Riede
+hint=90 Degrees turned!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=4
+pos1=1 1
+pos2=13 1
+pos3=7 11
+pos4=1 11
+pos5=7 1
+pos6=13 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=karo_light		#000000 #32CD32 #ADFF2F
+block01=karo_light_X		#000000 #32CD32 #ADFF2F
+block02=pyramid		#000000 #CD5C5C #000000
+block03=pyramid_R		#000000 #CD5C5C #000000
+block04=extra		#000000 #6A5ACD #FF4500
+block05=extra_O		#000000 #6A5ACD #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=25
+probVirus=6
+probSpecial=25
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B___X_____X___B
+row02=B_B_B_B_B_B_B_B
+row03=B_BbBrBbBrBbB_B
+row04=BXBXBXBXBXBXBXB
+row05=BbXqXqXqXqXqXrB
+row06=BXBXBXBXBXBXBXB
+row07=B_BrBbBrBbBrB_B
+row08=B_B_B_B_X_X_X_B
+row09=B_B_B_B_B_B_B_B
+row10=B_B_B_B_B_B_B_B
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB

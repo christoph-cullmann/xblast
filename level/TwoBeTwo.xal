@@ -1,0 +1,71 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Two Be Two two
+author=Skywalker
+hint=Get away from the edges  but watch the middle
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+special=napalm
+hidden=renovation
+
+[graphics]
+block00=karo_dark		#000000 #FFDAB9 #377F50
+block01=karo_dark_X		#000000 #FFDAB9 #377F50
+block02=wall		#000000 #2E8B57 #000000
+block03=wall_R		#000000 #2E8B57 #000000
+block04=chest		#000000 #BC8F8F #B0C4DE
+block05=chest_O		#000000 #BC8F8F #B0C4DE
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor
+
+[map]
+extraDistribution=special
+probBomb=24
+probRange=12
+probVirus=3
+probSpecial=24
+probHidden=36
+row00=BBBBBBBBBBBBBBB
+row01=B__XXXBXBXXX__B
+row02=B__BXXX_XXXB__B
+row03=BXBBBBBXBBBBBXB
+row04=B__BX_B_B_XB__B
+row05=BX_B__XXX__B_XB
+row06=BBXBBB___BBBXBB
+row07=BX_B__XXX__B_XB
+row08=B__BX_B_B_XB__B
+row09=BXBBBBBXBBBBBXB
+row10=B__BXXX_XXXB__B
+row11=B__XXXBXBXXX__B
+row12=BBBBBBBBBBBBBBB

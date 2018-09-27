@@ -1,0 +1,59 @@
+[info]
+name=Spider world
+author=Glaset
+hint=Try to get the specials
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=3
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+special=construction
+
+[graphics]
+block00=mr_beam_free     #000000 #0000CD #944034
+block01=mr_beam_free_X   #000000 #0000CD #9A0834
+block02=mr_beam_tv       #000000 #00FFFF #9A0834
+block03=mr_beam_tv       #000000 #00FFFF #9A0834
+block04=mr_beam_bear     #000000 #AFEEEE #9A0834
+block05=mr_beam_bear_O   #000000 #AFEEEE #9A0834
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #7FFF00 #DA70D6 #FFFFFF
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__bB_____Bb__B
+row02=B_BBB_____BBB_B
+row03=B_sss_____sss_B
+row04=BvBBBBB_BBBBBvB
+row05=BqrrXss_ssXrrqB
+row06=BvBBBBB_BBBBBvB
+row07=BqrrXss_ssXrrqB
+row08=BvBBBBB_BBBBBvB
+row09=B_sss_____sss_B
+row10=B_BBB_____BBB_B
+row11=B__bB_____Bb__B
+row12=BBBBBBBBBBBBBBB
+

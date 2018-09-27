@@ -1,0 +1,61 @@
+[info]
+name=break and blast
+author=antimiage : Choupette
+hint=dance machine
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=cloak
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initVirus=reverse
+reviveVirus=reverse
+initExtra=kick cloak
+reviveExtra=kick cloak
+
+[bombs]
+special=random
+
+[graphics]
+block00=button_floor     #000000 #BEBEBE #000000
+block01=button_floor_X   #000000 #BEBEBE #000000
+block02=dark_block       #000000 #ADD8E6 #00FF7F
+block03=dark_block_R     #000000 #ADD8E6 #00FF7F
+block04=box              #000000 #ADD8E6 #FF0000
+block05=box              #000000 #ADD8E6 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor      #000000 #FF0000 #4169E1
+
+[map]
+probBomb=18
+probRange=19
+probVirus=19
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B__XX_____XX__B
+row02=B__Xb_____bX__B
+row03=B___B_____B___B
+row04=Bs___Xr_rX___sB
+row05=BXeX__B_B__XeXB
+row06=BXeX___X___XeXB
+row07=BXeX__B_B__XeXB
+row08=Bs___Xr_rX___sB
+row09=B___B_____B___B
+row10=B__Xb_____bX__B
+row11=B__XX_____XX__B
+row12=BBBBBBBBBBBBBBB
+

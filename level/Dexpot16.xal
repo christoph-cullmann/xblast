@@ -1,0 +1,103 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 16
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=14
+pos000=5 4
+pos001=6 3
+pos002=6 4
+pos003=6 5
+pos004=6 6
+pos005=7 4
+pos006=7 5
+pos007=7 6
+pos008=7 7
+pos009=8 3
+pos010=8 4
+pos011=8 5
+pos012=8 6
+pos013=9 4
+
+[scrambleDel]
+time=0.5
+numBlocks=14
+pos000=5 4
+pos001=6 3
+pos002=6 4
+pos003=6 5
+pos004=6 6
+pos005=7 4
+pos006=7 5
+pos007=7 6
+pos008=7 7
+pos009=8 3
+pos010=8 4
+pos011=8 5
+pos012=8 6
+pos013=9 4
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=1
+range=2
+pos1=2 6
+pos2=11 9
+pos3=12 6
+pos4=3 9
+pos5=7 4
+pos6=7 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+hidden=firecracker
+
+[graphics]
+block00=karo_light		#000000 #20B2AA #FFD700
+block01=karo_light_X		#000000 #20B2AA #FFD700
+block02=pyramid		#000000 #D2B48C #000000
+block03=pyramid_R		#000000 #D2B48C #000000
+block04=dark_block		#D3D3D3 #000000 #000000
+block05=dark_block		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=36
+probRange=36
+probSpecial=18
+probHidden=9
+row00=BBBBBBBBBBBBBBB
+row01=BXXX_______XXXB
+row02=BX___BB_BB___XB
+row03=BX__BB___BB__XB
+row04=BX__B_____B__XB
+row05=BX__BB___BB__XB
+row06=BX___________XB
+row07=BX___BB_BB___XB
+row08=BX____B_B____XB
+row09=BX___________XB
+row10=BXX_________XXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

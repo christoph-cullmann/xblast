@@ -1,0 +1,72 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hide'n Seek 2
+author=Skywalker
+hint=Just hide, don't worry about the seek.
+gameMode=R23456----
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=3 6
+pos6=11 6
+initVirus=invisible
+reviveVirus=invisible
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+special=search
+hidden=grenade
+
+[graphics]
+block00=karo_light		#000000 #1E90FF #87CEFA
+block01=karo_light_X		#000000 #1E90FF #87CEFA
+block02=pyramid		#000000 #D2691E #FFFFFF
+block03=pyramid_R		#000000 #D2691E #FFFFFF
+block04=extra		#000000 #228B22 #7FFFD4
+block05=extra_O		#000000 #228B22 #7FFFD4
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=check
+
+[map]
+extraDistribution=all
+probBomb=15
+probRange=31
+probVirus=46
+probHidden=7
+row00=BBBBBBBBBBBBBBB
+row01=B___X__X__X___B
+row02=B_BXBXBXBXBXB_B
+row03=B_XX__XXX__XX_B
+row04=BXB_BXB_BXB_BXB
+row05=B_X_X_X_X_X_X_B
+row06=BXB_BX_X_XB_BXB
+row07=B_X_X_X_X_X_X_B
+row08=BXB_BXB_BXB_BXB
+row09=B_XX__XXX__XX_B
+row10=B_BXBXBXBXBXB_B
+row11=B___X__X__X___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,105 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Pi
+author=Peter Riede
+hint=Use the Teleport
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+[scrambleDel]
+time=0.13
+numBlocks=33
+pos000=2 5
+pos001=3 4
+pos002=4 6
+pos003=4 9
+pos004=5 4
+pos005=6 4
+pos006=7 6
+pos007=7 9
+pos008=8 4
+pos009=9 2
+pos010=9 3
+pos011=10 6
+pos012=10 7
+pos013=10 8
+pos014=10 9
+pos015=11 1
+pos016=11 2
+pos017=11 3
+pos018=11 4
+pos019=11 5
+pos020=11 8
+pos021=11 10
+pos022=11 11
+pos023=12 2
+pos024=12 4
+pos025=12 6
+pos026=12 8
+pos027=12 10
+pos028=13 2
+pos029=13 4
+pos030=13 6
+pos031=13 8
+pos032=13 10
+
+[func]
+extra=mayhem
+key=teleport
+
+[player]
+bombs=3
+range=5
+pos1=3 5
+pos2=1 11
+pos3=1 1
+pos4=10 5
+pos5=8 3
+pos6=9 11
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+
+[graphics]
+block00=ghost		#008000 #008000 #008000
+block01=ghost_X		#008000 #008000 #008000
+block02=wall		#FF0000 #808080 #000000
+block03=wall_R		#008000 #808080 #000000
+block04=ghost_ci		#008000 #008000 #DC143C
+block05=ghost_ci_R		#008000 #008000 #DC143C
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor		#008000 #00FF00 #00FF00
+
+[map]
+extraDistribution=all
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=B__________vqrB
+row02=B________v_vvvB
+row03=B________v_vbrB
+row04=B__vvvvvv__vvvB
+row05=B_v_v__v___vbbB
+row06=B___v__v__vrvvB
+row07=B___v__v__vqbrB
+row08=B___v__v__vvvvB
+row09=B___v__v__vrqrB
+row10=B__________vvvB
+row11=B__________vbbB
+row12=BBBBBBBBBBBBBBB

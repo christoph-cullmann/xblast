@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Renovation Kill
+author=old EPFL : Eric Biderbost
+hint=Can you run faster than walls ?
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=10
+specialBombs=30
+pos1=6 5
+pos2=8 5
+pos3=8 7
+pos4=6 7
+pos5=7 5
+pos6=7 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+special=construction
+
+[graphics]
+block00=city_free		#000000 #000000 #000000
+block01=city_free		#000000 #000000 #000000
+block02=dark_house		#000000 #B22222 #A0522D
+block03=dark_house_R		#000000 #B22222 #A0522D
+block04=light_house		#000000 #32CD32 #F4A460
+block05=light_house_O		#000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

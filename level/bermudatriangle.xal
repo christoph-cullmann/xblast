@@ -1,0 +1,50 @@
+[info]
+name=Bermuda Triangle
+author=Hugo Meinedo -> INESC
+hint=Watchout for the triangle move...
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+
+[player]
+bombs=5
+range=5
+pos1= 5  4
+pos2= 7  4
+pos3= 9  4
+pos4= 5  8
+pos5= 7  8
+pos6= 9  8
+
+[bombs]
+
+[graphics]
+block00=lego_floor       #333333 #228B22 #228B22
+block01=lego_floor       #333333 #228B22 #228B22
+block02=lego_white       #333333 #0000FF #228B22
+block03=lego_white       #333333 #FFFF00 #228B22
+block04=lego_black       #FF0000 #333333 #228B22
+block05=lego_white       #333333 #FF0000 #228B22
+block06=lego_white       #333333 #FFA500 #228B22
+block07=lego_white       #333333 #00FF00 #228B22
+block08=lego_white       #333333 #FFFFFF #228B22
+block09=lego_white       #333333 #A52A2A #228B22
+block10=lego_white       #333333 #999999 #228B22
+
+[map]
+row00=XBrrBbBXqXvRqbb
+row01=RXqbqqXbBsBXvvR
+row02=rBXBBBRRBRBRXr_
+row03=vRrB_______BBvX
+row04=RXvRB_B_R_BRBRs
+row05=RbbR_______R_bs
+row06=srvBB_R_B_RBBRb
+row07=RsXB_______RbrX
+row08=qqvBR_B_B_RBbsb
+row09=vvRR_______RXRR
+row10=brRRRBRBRBRRXqX
+row11=sbqsvBRbXqvqbqB
+row12=svbrBRrsvbsXvsb
+

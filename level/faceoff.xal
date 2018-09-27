@@ -1,0 +1,86 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Face off
+author=Koen
+hint=Don't blink
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+
+[scrambleDel]
+time=0.03
+numBlocks=21
+pos000=2 4
+pos001=2 6
+pos002=2 8
+pos003=3 3
+pos004=3 5
+pos005=3 7
+pos006=3 9
+pos007=5 3
+pos008=5 5
+pos009=5 7
+pos010=5 9
+pos011=9 3
+pos012=9 5
+pos013=9 7
+pos014=9 9
+pos015=11 3
+pos016=11 5
+pos017=11 7
+pos018=11 9
+pos019=12 4
+pos020=12 8
+
+[func]
+
+[player]
+bombs=1
+range=6
+pos1=11 6
+pos2=11 8
+pos3=3 8
+pos4=3 6
+pos5=11 4
+pos6=3 4
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=button_floor		#000000 #7CFC00 #00FF7F
+block01=button_floor_X		#000000 #7CFC00 #00FF7F
+block02=dark_block		#000000 #7CFC00 #FF1493
+block03=dark_block_R		#000000 #7CFC00 #FF1493
+block04=extra		#000000 #DEB887 #7CFC00
+block05=extra_O		#000000 #DEB887 #7CFC00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=pumpkin		#000000 #00FF7F #7FFFD4
+
+[map]
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=BX_X_X_X_X_X_XB
+row02=B_____________B
+row03=B_BBBBB_BBBBB_B
+row04=B_B_________B_B
+row05=B_BBBBB_BBBBB_B
+row06=BXB_________BXB
+row07=B_BBBBB_BBBBB_B
+row08=B_B_________B_B
+row09=B_BBBBB_BBBBB_B
+row10=B_____________B
+row11=BX_X_X_X_X_X_XB
+row12=BBBBBBBBBBBBBBB

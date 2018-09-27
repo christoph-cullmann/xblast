@@ -1,0 +1,149 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Crimson Horizon
+author=Tobias Johansson
+hint=Seek the walls
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.33
+numBlocks=63
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=4 3
+pos008=4 4
+pos009=4 5
+pos010=4 6
+pos011=4 7
+pos012=4 8
+pos013=4 9
+pos014=5 3
+pos015=5 4
+pos016=5 5
+pos017=5 6
+pos018=5 7
+pos019=5 8
+pos020=5 9
+pos021=6 3
+pos022=6 4
+pos023=6 5
+pos024=6 6
+pos025=6 7
+pos026=6 8
+pos027=6 9
+pos028=7 3
+pos029=7 4
+pos030=7 5
+pos031=7 6
+pos032=7 7
+pos033=7 8
+pos034=7 9
+pos035=8 3
+pos036=8 4
+pos037=8 5
+pos038=8 6
+pos039=8 7
+pos040=8 8
+pos041=8 9
+pos042=9 3
+pos043=9 4
+pos044=9 5
+pos045=9 6
+pos046=9 7
+pos047=9 8
+pos048=9 9
+pos049=10 3
+pos050=10 4
+pos051=10 5
+pos052=10 6
+pos053=10 7
+pos054=10 8
+pos055=10 9
+pos056=11 3
+pos057=11 4
+pos058=11 5
+pos059=11 6
+pos060=11 7
+pos061=11 8
+pos062=11 9
+
+[scrambleDel]
+time=0.2
+numBlocks=12
+pos000=2 5
+pos001=2 6
+pos002=2 7
+pos003=6 2
+pos004=6 10
+pos005=7 2
+pos006=7 10
+pos007=8 2
+pos008=8 10
+pos009=12 5
+pos010=12 6
+pos011=12 7
+
+[func]
+
+[player]
+bombs=2
+range=7
+pos1=3 3
+pos2=11 9
+pos3=11 3
+pos4=3 9
+pos5=7 3
+pos6=7 9
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=button_floor		#000000 #808080 #000000
+block01=button_floor		#000000 #808080 #000000
+block02=dark_block		#000000 #DC143C #DC143C
+block03=dark_block_R		#000000 #DC143C #DC143C
+block04=box		#000000 #ADD8E6 #DC143C
+block05=box		#000000 #ADD8E6 #DC143C
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#FF0000 #FF0000 #4169E1
+
+[map]
+probBomb=18
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=B______X______B
+row02=B_BBBBBBBBBBB_B
+row03=B_B_________B_B
+row04=B_B_________B_B
+row05=B_B_________B_B
+row06=BXBrrXrXrXrrBXB
+row07=B_B_________B_B
+row08=B_B_________B_B
+row09=B_B_________B_B
+row10=B_BBBBBBBBBBB_B
+row11=B______X______B
+row12=BBBBBBBBBBBBBBB

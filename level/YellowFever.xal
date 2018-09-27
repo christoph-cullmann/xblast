@@ -1,0 +1,68 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Yellow Fever
+author=Tobias Johansson
+hint=Keep your head cool
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=10
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+
+[graphics]
+block00=hex		#000000 #FFFF00 #FFFF00
+block01=hex		#000000 #FFFF00 #FFFF00
+block02=weight		#000000 #FFFF00 #FFFF00
+block03=weight_R		#000000 #FFFF00 #FFFF00
+block04=ghost_ci		#000000 #DC143C #FFFF00
+block05=ghost_ci_R		#000000 #DC143C #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=ghost_ci		#000000 #FFFF00 #FFFF00
+
+[map]
+probVirus=75
+probSpecial=13
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_vvXvvXvvXvv_B
+row03=B_vXXX___XXXv_B
+row04=B_XXvvv_vvvXX_B
+row05=B_vXv_XXX_vXv_B
+row06=B_X__vv_vv__X_B
+row07=B_vXv_XXX_vXv_B
+row08=B_XXvvv_vvvXX_B
+row09=B_vXXX___XXXv_B
+row10=B_vvXvXvXvXvv_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

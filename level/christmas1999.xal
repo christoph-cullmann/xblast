@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Christmas 1999
+author=EPFL - insun : Yves Bresson
+hint=Christmas 1999
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=2
+range=2
+pos1=8 1
+pos2=2 3
+pos3=10 3
+pos4=4 6
+pos5=12 8
+pos6=2 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=ghost		#000000 #FFFFFF #000000
+block01=ghost		#000000 #FFFFFF #000000
+block02=ghost_ci		#000000 #FFFFFF #000000
+block03=ghost_sq		#A52A2A #FFFFFF #000000
+block04=ghost_ci_R		#FFFFFF #8B0000 #000000
+block05=ghost_sq_R		#8B0000 #FF0000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=ghost_sq_R		#006400 #FFFFFF #000000
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=BqXX________XqB
+row02=BX_____X_____XB
+row03=B______v_____XB
+row04=BX___XvvvX____B
+row05=BqX__v_v_v___XB
+row06=BX____XvX___XqB
+row07=B____vvvvv___XB
+row08=B____X_vX_____B
+row09=B___Xvvvv_X___B
+row10=BX__v__v_vv__XB
+row11=BqX___BBB__XXqB
+row12=BBBBBBBBBBBBBBB

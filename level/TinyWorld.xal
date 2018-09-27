@@ -1,0 +1,82 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Tiny World
+author=Glaset
+hint=Get Holy Grails 
+gameMode=R234--STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.33
+numBlocks=12
+pos000=2 1
+pos001=2 11
+pos002=3 1
+pos003=3 11
+pos004=4 6
+pos005=7 3
+pos006=7 9
+pos007=10 6
+pos008=11 1
+pos009=11 11
+pos010=12 1
+pos011=12 11
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=1
+range=2
+pos1=8 6
+pos2=7 7
+pos3=7 5
+pos4=6 6
+pos5=1 11
+pos6=6 7
+initVirus=healthy
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+bombClick=anticlockwise
+playerClick=randomdir
+wallClick=clockwise
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=BbBBBBBBBBBBBbB
+row02=BbBrrrrrrrrrBbB
+row03=BbBrBBBBBBBrBbB
+row04=BbBrB_____BrBbB
+row05=BbBrB_B_B_BrBbB
+row06=BqBrB__B__BrBqB
+row07=BbBrB_B_B_BrBbB
+row08=BbBrB_____BrBbB
+row09=BbBrBBBBBBBrBbB
+row10=BbBrrrrrrrrrBbB
+row11=B_BBBBBBBBBBBbB
+row12=BBBBBBBBBBBBBBB

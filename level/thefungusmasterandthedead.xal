@@ -1,0 +1,89 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Fungus Master and the Dead
+author=MisterE
+hint=The Fungus Master and the Dead
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.2
+numBlocks=12
+pos000=3 5
+pos001=3 7
+pos002=4 4
+pos003=4 8
+pos004=5 3
+pos005=5 9
+pos006=9 3
+pos007=9 9
+pos008=10 4
+pos009=10 8
+pos010=11 5
+pos011=11 7
+
+
+[func]
+extra=longStunned
+
+[player]
+bombs=3
+range=5
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+normal=construction
+special=fungus
+hidden=fungus
+bombClick=snooker
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=ghost		#000000 #228B22 #000000
+block01=ghost_X		#000000 #228B22 #000000
+block02=ghost_sq		#000000 #228B22 #B22222
+block03=ghost_sq_R		#000000 #228B22 #B22222
+block04=ghost_ci		#000000 #228B22 #4169E1
+block05=ghost_ci_R		#000000 #228B22 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+probBomb=5
+probRange=5
+probVirus=45
+probHidden=45
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B____B___B____B
+row02=B_____________B
+row03=BB___________BB
+row04=B___BXXXXXB___B
+row05=B___XXBXBXX___B
+row06=B___XXXqXXX___B
+row07=B___XXBXBXX___B
+row08=B___BXXXXXB___B
+row09=BB___________BB
+row10=B_____________B
+row11=B____B___B____B
+row12=BBBBBBBBBBBBBBB

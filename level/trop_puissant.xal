@@ -1,0 +1,58 @@
+[info]
+name=Trop Puissant !!
+author=EPFL - cosun : Yves Bresson
+hint=Just too much
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=cloak
+
+[player]
+bombs=3
+range=9
+pos1= 4  2
+pos2=10  2
+pos3= 1  6
+pos4=13  6
+pos5= 4 10
+pos6=10 10
+initExtra=kick cloak
+reviveExtra=kick cloak
+
+[bombs]
+playerClick=thru
+default=napalm
+
+[graphics]
+block00=dark_way         #000000 #00FF7F #FF6347
+block01=dark_way_X       #000000 #00FF7F #FF6347
+block02=r_i_p            #000000 #EEDD82 #00FF7F
+block03=r_i_p_R          #000000 #EEDD82 #00FF7F
+block04=pumpkin          #000000 #EEDD82 #00FF7F
+block05=pumpkin_O        #000000 #EEDD82 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+extraDistribution=all
+probRange=31
+probVirus=-31
+row00=BBBBBBBBBBBBBBB
+row01=BX_____X_____XB
+row02=B_X__X_X_X__X_B
+row03=B__X_XXXXX_X__B
+row04=B___X_____X___B
+row05=B__X_______X__B
+row06=B___X_____X___B
+row07=B__X_______X__B
+row08=B___X_____X___B
+row09=B__X_XXXXX_X__B
+row10=B_X__X_X_X__X_B
+row11=BX_____X_____XB
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Experimental Area
+author=old EPFL : RBwaBD
+hint=Be rich and healthy
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=igniteAll
+key=specialBomb
+
+[player]
+bombs=3
+range=6
+specialBombs=30
+pos1=3 3
+pos2=11 3
+pos3=11 9
+pos4=3 9
+pos5=7 5
+pos6=7 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=random
+special=threebombs
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #000000
+block03=lego_floor		#000000 #228B22 #000000
+block04=lego_black		#FF0000 #FF0000 #000000
+block05=lego_black_O		#FF0000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=lego_floor_S		#000000 #228B22 #000000
+
+[map]
+extraDistribution=get
+probBomb=29
+probRange=43
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B______B_____qB
+row02=Bq_B_______B__B
+row03=B____q_B_q____B
+row04=B__q________B_B
+row05=B____B________B
+row06=B_q__________BB
+row07=B________B_q__B
+row08=B_B______q____B
+row09=B__q__B_______B
+row10=B______q___B_qB
+row11=B____B________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Triangle and Rows
+author=LORIA : Pierre 'in your back' Laroche
+hint=Rows + Triangles = no mercy.
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=12
+range=4
+pos1=10 7
+pos2=6 5
+pos3=10 7
+pos4=6 5
+pos5=10 7
+pos6=6 5
+
+[bombs]
+bombClick=contact
+default=threebombs
+special=trianglebombs
+
+[graphics]
+block00=city_free		#000000 #FFD700 #B22222
+block01=city_free		#000000 #FFD700 #B22222
+block02=book_shelf		#000000 #FFD700 #B22222
+block03=book_shelf		#000000 #FFD700 #B22222
+block04=box		#000000 #FFD700 #B22222
+block05=box		#000000 #FFD700 #B22222
+block06=bomb
+block07=range
+block08=trap
+block09=triangle_bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probRange=32
+probVirus=17
+probSpecial=49
+row00=BBBBBBBBBBBBBBB
+row01=BB___X_B_____BB
+row02=B__BXX_X_B____B
+row03=B____BXX_X_B__B
+row04=BB_____BXX_X_BB
+row05=B__B_____BXX_XB
+row06=B__X_B_____BXXB
+row07=BBXX_X_B_____BB
+row08=B__BXX_X_B____B
+row09=B____BXX_X_B__B
+row10=BB_____BXX_X_BB
+row11=B__B_____BXX__B
+row12=BBBBBBBBBBBBBBB

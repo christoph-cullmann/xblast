@@ -1,0 +1,87 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=CROM-À-CHIER
+author=old EPFL : Romano Christian
+hint=This is not a gay Level !!
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+[scrambleDraw]
+time=0.5
+numBlocks=4
+pos000=7 4
+pos001=7 8
+pos002=9 6
+pos003=5 6
+
+[scrambleDel]
+time=0.5
+numBlocks=4
+pos000=7 5
+pos001=7 7
+pos002=6 6
+pos003=8 6
+
+[func]
+extra=kick
+key=rc
+
+[player]
+bombs=5
+range=4
+pos1=2 2
+pos2=2 10
+pos3=12 2
+pos4=12 10
+pos5=7 2
+pos6=7 10
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+playerClick=rebound
+special=napalm
+
+[graphics]
+block00=iron_floor		#008000 #0000FF #4682B4
+block01=iron_floor		#008000 #0000FF #4682B4
+block02=r_i_p		#000000 #DAA520 #DAA520
+block03=wall_R		#000000 #DAA520 #000000
+block04=extra		#000000 #DAA520 #000000
+block05=extra_O		#000000 #DAA520 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=iron_floor		#008000 #0000FF #4682B4
+
+[map]
+probBomb=37
+probRange=17
+probSpecial=-35
+probHidden=35
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__BB__B__BB__B
+row04=B_____________B
+row05=B______B______B
+row06=B__BB_BBB_BB__B
+row07=B______B______B
+row08=B_____________B
+row09=B__BB__B__BB__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

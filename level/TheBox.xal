@@ -1,0 +1,66 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Box
+author=Tor Andræ
+hint=Just play your game
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=5
+range=3
+pos1=4 4
+pos2=5 4
+pos3=4 5
+pos4=4 6
+pos5=5 5
+pos6=5 6
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#000000 #B0C4DE #800000
+block01=karo_dark		#000000 #B0C4DE #800000
+block02=dark_way		#000000 #778899 #000000
+block03=dark_way_S		#000000 #778899 #000000
+block04=chess_sphere		#000000 #A0522D #000000
+block05=chess_sphere_O		#000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=sphere_half		#000000 #DC143C #4169E1
+
+[map]
+probBomb=19
+probRange=19
+probVirus=19
+probSpecial=19
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_rbbbXXXXXXX_B
+row03=B_rvvvv_____X_B
+row04=B_rv__v_____X_B
+row05=B_rv__X_XXX_X_B
+row06=B_rv__X_XXX_X_B
+row07=B_rv__v_____X_B
+row08=B_rvvvv_____X_B
+row09=B_rqbbXXXXXXX_B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

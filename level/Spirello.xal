@@ -1,0 +1,67 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Spirello
+author=Tor Andræ
+hint=Be careful with the kick
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=5
+range=5
+pos1=1 11
+pos2=1 11
+pos3=1 11
+pos4=1 11
+pos5=1 11
+pos6=1 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+
+[graphics]
+block00=button_floor		#000000 #D3D3D3 #808080
+block01=button_floor		#000000 #D3D3D3 #808080
+block02=dark_block		#000000 #00FF00 #00FF00
+block03=dark_block_R		#000000 #00FF00 #00FF00
+block04=ghost_ci		#000000 #0000FF #FF0000
+block05=ghost_ci_R		#000000 #0000FF #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=lego_floor		#000000 #4682B4 #4169E1
+
+[map]
+probBomb=24
+probRange=24
+probVirus=24
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B___________X_B
+row02=BXBBBBBBBBBBB_B
+row03=B_B_______X_B_B
+row04=B_BXBBBBBBB_B_B
+row05=B_B_B___X_B_B_B
+row06=B_B_BXBBB_B_B_B
+row07=B_B_B_BqqXB_B_B
+row08=B_B_B_BBBBBXB_B
+row09=B_B_B_X_____B_B
+row10=B_B_BBBBBBBBBXB
+row11=B_B_X_________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Get the Napalm
+author=Peter Riede
+hint=Get the napalm extra!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=7
+pos1=1 1
+pos2=13 11
+pos3=13 11
+pos4=1 1
+pos5=13 1
+pos6=1 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+playerClick=thru
+fuseTime=short
+special=napalm
+hidden=threebombs
+
+[graphics]
+block00=hex		#696969 #0000CD #D2691E
+block01=hex_X		#696969 #0000CD #D2691E
+block02=hex_wall		#696969 #0000CD #800000
+block03=hex_wall		#696969 #0000CD #800000
+block04=hex_extra		#000000 #0000CD #0000CD
+block05=hex_extra_O		#696969 #0000CD #0000CD
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B_____v_______B
+row02=B_s___s_B_____B
+row03=B_s_svs_B_vssvB
+row04=B_s___s_B_____B
+row05=B_s___________B
+row06=B_BBss_q_ssBB_B
+row07=B___________s_B
+row08=B_____B_s___s_B
+row09=Bvssv_B_svs_s_B
+row10=B_____B_s___s_B
+row11=B_______v_____B
+row12=BBBBBBBBBBBBBBB

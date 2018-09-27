@@ -1,0 +1,72 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Closet Psycho 2
+author=Skywalker
+hint=Remember that the pump works around corners
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=1
+range=2
+pos1=2 2
+pos2=12 2
+pos3=12 10
+pos4=2 10
+pos5=7 5
+pos6=7 7
+
+[bombs]
+bombClick=split
+wallClick=rebound
+default=napalm
+special=trianglebombs
+hidden=mine
+
+[graphics]
+block00=chess_floor		#000000 #FA8072 #000000
+block01=chess_floor_X		#000000 #FA8072 #000000
+block02=book_shelf		#000000 #191970 #DEB887
+block03=book_shelf		#000000 #191970 #DEB887
+block04=chess_sphere		#000000 #FA8072 #2E8B57
+block05=chess_sphere_O		#000000 #FA8072 #2E8B57
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=16
+probVirus=4
+probSpecial=16
+probHidden=48
+row00=BBBBBBBBBBBBBBB
+row01=BBXBXXB_BXXBXBB
+row02=BX_X__X_X__X_XB
+row03=BB_BXBBBBBXB_BB
+row04=B____XXXXX____B
+row05=BXBBB_____BBBXB
+row06=B_X_X_BXB_X_X_B
+row07=BXBBB_____BBBXB
+row08=B____XXXXX____B
+row09=BB_BXBBBBBXB_BB
+row10=BX_X__X_X__X_XB
+row11=BBXBXXB_BXXBXBB
+row12=BBBBBBBBBBBBBBB

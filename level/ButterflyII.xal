@@ -1,0 +1,75 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Butterfly II
+author=Stn
+hint=Watch The Flying Bombs
+gameMode=-234--STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.75
+numBlocks=5
+pos000=7 6
+pos001=6 4
+pos002=10 5
+pos003=4 7
+pos004=8 8
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=1
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+special=firecracker
+
+[graphics]
+block00=iron_floor		#000000 #6495ED #FF4500
+block01=iron_floor		#000000 #6495ED #FF4500
+block02=dark_block		#000000 #000000 #FF00FF
+block03=dark_block_R		#000000 #000000 #008000
+block04=extra		#000000 #000000 #000000
+block05=extra		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=firecracker
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=35
+probSpecial=22
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B___sXBBBXs___B
+row02=B_XXB_XBX_BXX_B
+row03=BsB_XB_X_BX_BsB
+row04=BX_B_XBXBX_B_XB
+row05=BBX_B__X__B_XBB
+row06=BBBXXXBBBXXXBBB
+row07=BBX_B__X__B_XBB
+row08=BX_B_XBXBX_B_XB
+row09=BsB_XB_X_BX_BsB
+row10=B_XXB_XBX_BXX_B
+row11=B___sXBBBXs___B
+row12=BBBBBBBBBBBBBBB

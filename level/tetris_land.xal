@@ -1,0 +1,56 @@
+[info]
+name=Tetris Land
+author=Olivier Gladin
+hint=The master is here... You're dead
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=3
+pos1= 1  1
+pos2=13  1
+pos3= 5  3
+pos4= 9  9
+pos5= 1 11
+pos6=13 11
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=button_floor     #000000 #BFBFBF #000000
+block01=button_floor_X   #000000 #BFBFBF #000000
+block02=dark_block       #000000 #ADD8E6 #00FF7F
+block03=dark_block_R     #000000 #ADD8E6 #00FF7F
+block04=box              #000000 #ADD8E6 #FF0000
+block05=box              #000000 #FF69B4 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #FF0000 #FF0000 #4169E1
+
+[map]
+probRange=154
+probVirus=-154
+row00=BBBBBBBBBBBBBBB
+row01=B__X_X___X_X__B
+row02=B__BXXBBBBXB__B
+row03=BXBBB__X___BBXB
+row04=B_X_X__BBB_XB_B
+row05=BXXBBXXB__XX__B
+row06=B__BB_____BB__B
+row07=B__XX__BXXBBXXB
+row08=B_BX_BBB__X_X_B
+row09=BXBB___X__BBBXB
+row10=B__BXBBBBXXB__B
+row11=B__X_____X_X__B
+row12=BBBBBBBBBBBBBBB
+

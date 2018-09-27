@@ -1,0 +1,59 @@
+[info]
+name=Open Warfare
+author=Keith Gillow
+hint=You've got plenty of time to run and hide
+gameMode=R234--STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=6
+range=9
+specialBombs=30
+pos1= 1  6
+pos2= 7  1
+pos3=13  6
+pos4= 7 11
+pos5= 0  0
+pos6= 0  0
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+fuseTime=long
+default=napalm
+special=pyro
+
+[graphics]
+block00=dark_way         #000000 #00FF7F #FF6347
+block01=dark_way_X       #000000 #00FF7F #FF6347
+block02=r_i_p            #000000 #FF3030 #00FF7F
+block03=r_i_p_R          #000000 #FF3030 #00FF7F
+block04=pumpkin          #000000 #EEDD82 #00FF7F
+block05=pumpkin_O        #000000 #EEDD82 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BX___________XB
+row02=B_X_________X_B
+row03=B__X_BXXXB_X__B
+row04=B___X_____X___B
+row05=B__B_X___X_B__B
+row06=B__X__XBX__X__B
+row07=B__B_X___X_B__B
+row08=B___X_____X___B
+row09=B__X_BXXXB_X__B
+row10=B_X_________X_B
+row11=BX___________XB
+row12=BBBBBBBBBBBBBBB
+

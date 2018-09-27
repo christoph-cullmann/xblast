@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Invisible Shots
+author=Peter Riede
+hint=Bombs explode on walls
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=4
+range=6
+pos1=1 1
+pos2=7 8
+pos3=13 1
+pos4=13 11
+pos5=1 11
+pos6=7 4
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+
+[graphics]
+block00=karo_dark		#2E8B57 #ADFF2F #ADFF2F
+block01=karo_dark_X		#2E8B57 #ADFF2F #ADFF2F
+block02=jizz		#1E90FF #7FFFD4 #228B22
+block03=hole_floor		#2E8B57 #7FFFD4 #228B22
+block04=chest		#7FFFD4 #00FA9A #20B2AA
+block05=chest_O		#2E8B57 #00FA9A #20B2AA
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor		#7FFF00 #48D1CC #00FFFF
+
+[map]
+extraDistribution=single
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=50
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____BXB_____B
+row03=B_B____B____B_B
+row04=B_XBB_____BBX_B
+row05=B_____________B
+row06=B__X__XBX__X__B
+row07=B_____________B
+row08=B_XBB_____BBX_B
+row09=B_B____B____B_B
+row10=B_____BXB_____B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

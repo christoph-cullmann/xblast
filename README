@@ -1,0 +1,75 @@
+			XBlast TNT
+
+XBlast TNT was created by Oliver Vogel under the GNU General Public
+License.
+
+0. This Mod
+1. Install
+2. Community
+3. Bugs
+4. Central
+
+
+0. This Mod
+
+This is a Modification by Koen and Skywalker. 
+It has a central server for the scores and game search.
+It features almost the whole epfl features plus some new.
+
+
+1. Install
+To install read the INSTALL. (tststs why i wrote it for :) )
+
+
+2. Community
+
+See www.xblast-center.com, xbresse has now a serious job (*g*)
+but i'll try to warn him if something important is out there :),
+Thx bresse for the good page!
+
+Join the irc channel!
+http://irc.xblast-center.com!
+or with chatzilla or other irc client:
+irc.freenode.net for example, channel #xblast
+or
+irc.europe.net #xblast
+
+There is also a mailinglist look for it  in
+www.xblast-center.com, and xblast.sf.net
+
+
+3. Bugs
+
+Got a bug, send it to:
+iskywalker@gmx.de
+or 
+xblast-devel@lists.sourceforge.net
+I will put in my buglist :)
+
+3.1 No Sound
+If you are in Linux:
+ PATH=.:$PATH ./xblast
+xblast starts xbsndsrv normally when not installed (make install) from
+./ so it should be in your PATH. Export it (export PATH=$PATH:.; put it in your
+.bashrc or .profile for not more needing it) if you want only ./xblast.
+
+
+4. Central
+
+Atm there is no webpage to check central games...
+but if you want to play a central game:
+1. step(optinal):
+Register your player!
+In options, player, your player!
+Your registration number is saved under 
+.xblast_tnt/config/player.cfg . Keep it if you change
+the account, computer, harddisk.  
+2. step:
+Join network game, join central game.
+Maybe you should open your firewall to play central games.
+
+To host a game:
+open your firewall, if you got one.
+create network game, rated game option (yes)(optional), then click continue,
+then visible in central (server options). and then in the next
+step wait for people(bots) to join your server.

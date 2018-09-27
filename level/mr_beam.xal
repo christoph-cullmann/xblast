@@ -1,0 +1,59 @@
+[info]
+name=Mr. Beam
+author=Patrick Durish
+hint=Lay a trap and beam away
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=5
+range=10
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=mr_beam_free     #000000 #FFFACD #000000
+block01=mr_beam_free_X   #000000 #FFFACD #000000
+block02=mr_beam_tv       #000000 #FFFACD #D2B48C
+block03=mr_beam_free     #000000 #FFFACD #000000
+block04=mr_beam_bear     #000000 #FFFACD #CD853F
+block05=mr_beam_bear_O   #000000 #FFFACD #CD853F
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=q3a_beam
+
+[map]
+probBomb=23
+probRange=25
+probVirus=25
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B__XXXXBXXXX__B
+row02=B_XXXXXBXXXXX_B
+row03=BXXXXXXXXXXXXXB
+row04=BXXXXXXBXXXXXXB
+row05=BXXXXXXBXXXXXXB
+row06=BBBXBBBBBBBXBBB
+row07=BXXXXXXBXXXXXXB
+row08=BXXXXXXBXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=B_XXXXXBXXXXX_B
+row11=B__XXXXBXXXX__B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,68 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Mac Donald's 2
+author=Skywalker
+hint=Ronald ???
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=speed2
+key=air
+
+[player]
+bombs=4
+range=2
+pos1=1 1
+pos2=13 1
+pos3=7 3
+pos4=7 8
+pos5=1 11
+pos6=13 11
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=rock_floor		#000000 #8B0000 #000000
+block01=rock_floor_X		#000000 #8B0000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#000000 #000000 #000000
+block04=bricks		#FFFF00 #FFFF00 #000000
+block05=brick_O		#000000 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor
+
+[map]
+extraDistribution=all
+probBomb=11
+probRange=11
+probVirus=11
+probSpecial=68
+row00=BBBBBBBBBBBBBBB
+row01=B___XX___XX___B
+row02=B_XXXX___XXXX_B
+row03=B_XXXXX_XXXXX_B
+row04=B_XXXXXXXXXXX_B
+row05=B_XXXXXXXXXXX_B
+row06=B_XXX_XXX_XXX_B
+row07=B_XXX_____XXX_B
+row08=B_XXX_____XXX_B
+row09=B_XXX_____XXX_B
+row10=B_XXX_____XXX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

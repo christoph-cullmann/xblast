@@ -1,0 +1,68 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Ice Runner
+author=Tor Andræ
+hint=Take it cool
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=3
+pos1=12 10
+pos2=12 10
+pos3=12 10
+pos4=12 10
+pos5=12 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=rock_floor		#000000 #F8F8FF #87CEFA
+block01=rock_floor		#000000 #F8F8FF #87CEFA
+block02=pyramid		#000000 #1E90FF #F0F8FF
+block03=pyramid_R		#000000 #1E90FF #F0F8FF
+block04=bricks		#000000 #87CEFA #E0FFFF
+block05=brick_O		#000000 #87CEFA #E0FFFF
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #4682B4 #4169E1
+
+[map]
+probBomb=19
+probRange=19
+probVirus=19
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBBBBBBBBB
+row02=BB____BqB____BB
+row03=BB____BXB____BB
+row04=BB_XX_BsB____BB
+row05=BB_XX_B_B_B__BB
+row06=BB____s_s__XXBB
+row07=BB____B_B__BBBB
+row08=BBXBBB___BBBXBB
+row09=BBXBb______rbBB
+row10=BBqBb______r_BB
+row11=BBBBBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB

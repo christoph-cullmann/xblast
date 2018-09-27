@@ -1,0 +1,117 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=A Three By Three Hell
+author=Groningen : Koen
+hint=Be very careful
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.05
+numBlocks=48
+pos000=2 3
+pos001=2 4
+pos002=2 5
+pos003=2 7
+pos004=2 8
+pos005=2 9
+pos006=3 3
+pos007=3 5
+pos008=3 7
+pos009=3 9
+pos010=4 3
+pos011=4 4
+pos012=4 5
+pos013=4 7
+pos014=4 8
+pos015=4 9
+pos016=6 3
+pos017=6 4
+pos018=6 5
+pos019=6 7
+pos020=6 8
+pos021=6 9
+pos022=7 3
+pos023=7 5
+pos024=7 7
+pos025=7 9
+pos026=8 3
+pos027=8 4
+pos028=8 5
+pos029=8 7
+pos030=8 8
+pos031=8 9
+pos032=10 3
+pos033=10 4
+pos034=10 5
+pos035=10 7
+pos036=10 8
+pos037=10 9
+pos038=11 3
+pos039=11 5
+pos040=11 7
+pos041=11 9
+pos042=12 3
+pos043=12 4
+pos044=12 5
+pos045=12 7
+pos046=12 8
+pos047=12 9
+
+[func]
+extra=poison
+key=rc
+
+[player]
+bombs=10
+range=0
+pos1=3 4
+pos2=11 8
+pos3=11 4
+pos4=3 8
+pos5=7 4
+pos6=7 8
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=randomdir
+playerClick=contact
+wallClick=randomdir
+
+[graphics]
+block00=rock_floor		#000000 #32CD32 #228B22
+block01=rock_floor_X		#000000 #32CD32 #228B22
+block02=dark_block		#000000 #0000FF #0000FF
+block03=dark_block_R		#000000 #0000FF #0000FF
+block04=dark_block		#000000 #0000FF #0000FF
+block05=dark_block		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqBBBqBBBqBBBqB
+row02=BqqqqqqqqqqqqqB
+row03=BqBBBqBBBqBBBqB
+row04=BqB_BqB_BqB_BqB
+row05=BqBBBqBBBqBBBqB
+row06=BqqqqqqqqqqqqqB
+row07=BqBBBqBBBqBBBqB
+row08=BqB_BqB_BqB_BqB
+row09=BqBBBqBBBqBBBqB
+row10=BqqqqqqqqqqqqqB
+row11=BqBBBqBBBqBBBqB
+row12=BBBBBBBBBBBBBBB

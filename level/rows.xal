@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Rows
+author=The Adelaide Group
+hint=Don't get too smart with your cloak.
+gameMode=R234------
+
+[shrink]
+
+
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=3
+range=5
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=lego_floor		#000000 #FFFFFF #000000
+block01=lego_floor		#000000 #FFFFFF #000000
+block02=lego_white		#000000 #000000 #FFFFFF
+block03=lego_floor		#000000 #000000 #FFFFFF
+block04=lego_black		#FFFFFF #000000 #FFFFFF
+block05=lego_black_O		#000000 #FFFFFF #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=check		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probBomb=14
+probRange=6
+probVirus=11
+probSpecial=56
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=B____BX_XB____B
+row02=BBBXBXBXBXBXBBB
+row03=B_X_________X_B
+row04=BBBXBXBXBXBXBBB
+row05=B_____________B
+row06=BXXXXXBXBXXXXXB
+row07=B_____________B
+row08=BBBXBXBXBXBXBBB
+row09=B_X_________X_B
+row10=BBBXBXBXBXBXBBB
+row11=B____BX_XB____B
+row12=BBBBBBBBBBBBBBB

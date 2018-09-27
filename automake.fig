@@ -1,0 +1,8 @@
+QUITONERROR
+
+FILES=*.c
+COMPILE=@fcc -c -g %fi
+
+LINK=@fcc -g -o %ex @%rf
+TARGET=Target.exe
+

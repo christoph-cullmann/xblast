@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=X-B Classical
+author=ISTY : Cyril MAESTRAGGI
+hint=Go crazy
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=3
+range=3
+specialBombs=30
+pos1=4 2
+pos2=12 2
+pos3=9 4
+pos4=9 8
+pos5=4 10
+pos6=12 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=randomdir
+playerClick=rebound
+default=grenade
+special=napalm
+
+[graphics]
+block00=iron_floor		#000000 #000000 #00FF7F
+block01=iron_floor		#000000 #000000 #00FF7F
+block02=dark_block		#191970 #4169E1 #000000
+block03=dark_block_R		#4169E1 #FFFFFF #FFFFFF
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B___B_BBB___B
+row03=B_B___B____B__B
+row04=B__B_B_____B__B
+row05=B__B_B__BBB___B
+row06=B___B______B__B
+row07=B__B_B______B_B
+row08=B__B_B______B_B
+row09=B_B___B____B__B
+row10=B_B___B_BBB___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

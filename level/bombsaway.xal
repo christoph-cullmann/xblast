@@ -1,0 +1,73 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Bombs away
+author=Reinco
+hint=Watch out for the bombs
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+
+[scrambleDel]
+time=0.02
+numBlocks=2
+pos000=7 2
+pos001=7 10
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=3
+pos1=6 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=8 11
+pos6=1 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=45
+probRange=45
+probVirus=11
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__e_e_____e__B
+row02=B__e__eBe__e__B
+row03=Be_e_______e_eB
+row04=B__e_BBXBB_e__B
+row05=B____BqXqB____B
+row06=Be_e_XXXXX_e_eB
+row07=B____BqXqB____B
+row08=Be_e_BBXBB_e_eB
+row09=B_____________B
+row10=Bee___eBe___eeB
+row11=B________e____B
+row12=BBBBBBBBBBBBBBB

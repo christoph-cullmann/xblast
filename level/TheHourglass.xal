@@ -1,0 +1,63 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Hourglass
+author=Tobias Johansson
+hint=Time is running short...
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+
+
+[func]
+
+[player]
+bombs=3
+range=1
+pos1=6 1
+pos2=7 1
+pos3=8 1
+pos4=6 2
+pos5=7 2
+pos6=8 2
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+direction=down
+fuseTime=short
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=dark_block		#000000 #006400 #D2691E
+block03=dark_block_R		#000000 #006400 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #FFFFF0
+block05=chess_sphere_O		#000000 #FFEFD5 #FFFFF0
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probHidden=49
+row00=BBBBBBBBBBBBBBB
+row01=BB___________BB
+row02=BvBB_______BBvB
+row03=BvvvB_____BvvvB
+row04=BvvvvBX_XBvvvvB
+row05=BvvvvvBXBvvvvvB
+row06=BvvvvvBXBvvvvvB
+row07=BvvvvvBXBvvvvvB
+row08=BvvvvB_X_BvvvvB
+row09=BvvvB__X__BvvvB
+row10=BvBBXXXXXXXBBvB
+row11=BBXXXXXXXXXXXBB
+row12=BBBBBBBBBBBBBBB

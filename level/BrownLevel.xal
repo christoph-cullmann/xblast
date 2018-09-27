@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Brown Level
+author=Peter Riede
+hint=Remote Control And Kick !!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=4 11
+pos2=9 1
+pos3=10 1
+pos4=11 1
+pos5=5 11
+pos6=3 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=karo_light		#D2691E #A0522D #B8860B
+block01=karo_light_X		#D2691E #A0522D #B8860B
+block02=book_shelf		#8B4513 #008000 #191970
+block03=book_shelf		#D2691E #008000 #191970
+block04=sphere_light		#D2691E #F4A460 #DEB887
+block05=sphere_light_O		#D2691E #F4A460 #DEB887
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=get
+probBomb=45
+probRange=45
+probVirus=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____B_______B
+row03=B_______X_____B
+row04=B_______X_____B
+row05=BrrrrrB_BrrrrrB
+row06=BsXsXs_s_sXsXsB
+row07=BrrrrrB_BrrrrrB
+row08=B_____X_______B
+row09=B_____X_______B
+row10=B_______B_____B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Mayhem
+author=The Adelaide Group
+hint=Use the mayhem to waste those who don't have it.
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+extra=mayhem
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 3
+pos6=7 9
+
+[bombs]
+
+[graphics]
+block00=chess_floor		#000000 #7FFFD4 #000000
+block01=chess_floor		#000000 #7FFFD4 #000000
+block02=book_shelf		#000000 #D2B48C #4169E1
+block03=book_shelf		#000000 #D2B48C #2E8B57
+block04=chess_sphere		#000000 #7FFFD4 #FF0000
+block05=chess_sphere_O		#000000 #7FFFD4 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____XXX_____B
+row02=B_BXBXB_BXBXB_B
+row03=B_XX_______XX_B
+row04=BXB_BXBXBXB_BXB
+row05=B_X_X_X_X_X_X_B
+row06=BXBXBXBXBXBXBXB
+row07=B_X_X_X_X_X_X_B
+row08=BXB_BXBXBXB_BXB
+row09=B_XX_______XX_B
+row10=B_BXBXB_BXBXB_B
+row11=B_____XXX_____B
+row12=BBBBBBBBBBBBBBB

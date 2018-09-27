@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Toutencarton
+author=Laurent Marsan
+hint=Getting the Remote Control is imperative
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#191970 #00FF7F #00FFFF
+block01=karo_dark		#191970 #00FF7F #00FFFF
+block02=wall		#000000 #228B22 #000000
+block03=wall_R		#000000 #228B22 #000000
+block04=chest		#000000 #4169E1 #000000
+block05=chest_O		#000000 #4169E1 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=40
+probRange=40
+probVirus=21
+probSpecial=-100
+row00=BBBBBBBBBBBBBBB
+row01=B__XrbrbrbrX__B
+row02=B_BBBBBXBBBBB_B
+row03=BXB___XsX___BXB
+row04=BrB_BBBXBBB_BrB
+row05=BbBXBsssssBXBbB
+row06=BrXsXsBqBsXsXrB
+row07=BbBXBsssssBXBbB
+row08=BrB_BBBXBBB_BrB
+row09=BXB___XsX___BXB
+row10=B_BBBBBXBBBBB_B
+row11=B__XrbrbrbrX__B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=NoSymmie
+author=Peel & Killer
+hint=Where the f... is the Symmetry ??
+gameMode=R23456STDL
+
+[shrink]
+type=compound2F
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=13 1
+pos3=1 11
+pos4=13 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+playerClick=rebound
+haunt=fast
+
+[graphics]
+block00=chess_floor		#000000 #00FFFF #FF4500
+block01=chess_floor		#000000 #00FFFF #FF4500
+block02=temple		#000000 #FF00FF #87CEFA
+block03=dark_block_R		#000000 #FFFF00 #FF0000
+block04=pumpkin		#228B22 #FFFF00 #228B22
+block05=pumpkin_O		#228B22 #FFFF00 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=40
+probRange=40
+probVirus=13
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B_q__Xq___B_q_B
+row02=BXX__X_BX___XXB
+row03=B_BB___B_X____B
+row04=B_X_B_q___XX_XB
+row05=B_q__B_BB__q__B
+row06=BXXq__BB___X_XB
+row07=B______B_B____B
+row08=B__X_XX___B___B
+row09=BX___q_B___BB_B
+row10=BXX___BB_X__XXB
+row11=B_q_____qX__q_B
+row12=BBBBBBBBBBBBBBB

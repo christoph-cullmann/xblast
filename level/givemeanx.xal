@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=give me an X!
+author=Bocal : naoko
+hint=you're in vietnam war.
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=4
+range=7
+pos1=7 4
+pos2=7 8
+pos3=4 6
+pos4=10 6
+pos5=7 4
+pos6=7 8
+
+[bombs]
+wallClick=rebound
+fuseTime=long
+default=random
+special=napalm
+
+[graphics]
+block00=chess_floor		#000000 #000000 #BDB76B
+block01=chess_floor		#000000 #000000 #BDB76B
+block02=pyramid		#000000 #000000 #C71585
+block03=pyramid		#000000 #C71585 #000000
+block04=chest		#000000 #000000 #000000
+block05=chest_O		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=karo_light		#000000 #000000 #000000
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=14
+probVirus=16
+probSpecial=21
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=BXX_________XXB
+row02=BXXX_______XXXB
+row03=B_XXX_____XXX_B
+row04=B__XXX___XXX__B
+row05=B___XXXXXXX___B
+row06=B____XBBBX____B
+row07=B___XXXXXXX___B
+row08=B__XXX___XXX__B
+row09=B_XXX_____XXX_B
+row10=BXXX_______XXXB
+row11=BXX_________XXB
+row12=BBBBBBBBBBBBBBB

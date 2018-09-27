@@ -1,0 +1,69 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Traffic
+author=Glaset
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=10
+range=10
+pos1=1 1
+pos2=9 1
+pos3=13 1
+pos4=3 1
+pos5=5 1
+pos6=11 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+direction=down
+fuseTime=short
+
+[graphics]
+block00=karo_dark		#000000 #2E8B57 #8FBC8F
+block01=karo_dark		#000000 #2E8B57 #8FBC8F
+block02=wall		#000000 #B22222 #000000
+block03=wall_R		#000000 #B22222 #000000
+block04=chest		#000000 #8B4513 #FFD700
+block05=chest_O		#000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probVirus=24
+probSpecial=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_X_X_X_X_X_X_B
+row03=B_X_X_X_X_X_X_B
+row04=B_X_X_X_X_X_X_B
+row05=B_X_X_X_X_X_X_B
+row06=B_X_X_X_X_X_X_B
+row07=B_X_X_X_X_X_X_B
+row08=BXXXXXXXXXXXXXB
+row09=B_____________B
+row10=BXXXXXXXXXXXXXB
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,89 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hammer
+author=Thomas Cornet
+hint=Pay attention to the shrink
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=18
+pos000=6 4
+pos001=8 4
+pos002=4 6
+pos003=10 6
+pos004=6 8
+pos005=8 8
+pos006=5 5
+pos007=6 5
+pos008=7 5
+pos009=8 5
+pos010=9 5
+pos011=5 6
+pos012=9 6
+pos013=5 7
+pos014=6 7
+pos015=7 7
+pos016=8 7
+pos017=9 7
+
+[scrambleDel]
+time=0.5
+numBlocks=4
+pos000=4 2
+pos001=10 2
+pos002=4 10
+pos003=10 10
+
+[func]
+
+[player]
+bombs=5
+range=6
+pos1=1 1
+pos2=13 1
+pos3=4 6
+pos4=10 6
+pos5=1 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=fungus
+
+[graphics]
+block00=iron_floor		#000000 #6495ED #FF4500
+block01=iron_floor		#000000 #6495ED #FF4500
+block02=dark_block		#000000 #000000 #FF00FF
+block03=dark_block_R		#000000 #000000 #008000
+block04=extra		#000000 #000000 #000000
+block05=extra		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBBBB_BBBBB_B
+row03=B_B_________B_B
+row04=B_B_BB_B_BB_B_B
+row05=B___B_____B___B
+row06=B_B___BBB___B_B
+row07=B___B_____B___B
+row08=B_B_BB_B_BB_B_B
+row09=B_B_________B_B
+row10=B_BBBBB_BBBBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

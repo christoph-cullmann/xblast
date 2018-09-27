@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Tall Poppy
+author=Chris Doherty (Adelaide)
+hint=Remember, only ONE life
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=poison
+
+[player]
+reclives=2
+bombs=0
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=hole_floor       #000000 #6A5ACD #4682B4
+block01=hole_floor_X     #000000 #6A5ACD #4682B4
+block02=jizz             #000000 #6A5ACD #DAA520
+block03=hole_floor       #000000 #6A5ACD #DAA520
+block04=jizz_extra       #000000 #6A5ACD #DAA520
+block05=jizz_extra_O     #000000 #6A5ACD #DAA520
+;block04=hex_extra       #000000 #6A5ACD #6A5ACD
+;block05=hex_extra_O     #000000 #6A5ACD #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=51
+row00=BBBBBBBBBBBBBBB
+row01=BqXbX_XBX_XbXqB
+row02=BbBX_XBXBX_XBbB
+row03=BXb__XXXXX__bXB
+row04=BXBXBXBXBXBXBXB
+row05=B_XXXsssssXXX_B
+row06=BXBXBssBssBXBXB
+row07=B_XXXsssssXXX_B
+row08=BXBXBXBXBXBXBXB
+row09=BXb__XXXXX__bXB
+row10=BbBX_XBXBX_XBbB
+row11=BqXbX_XBX_XbXqB
+row12=BBBBBBBBBBBBBBB

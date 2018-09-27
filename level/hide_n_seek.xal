@@ -1,0 +1,60 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Hide'n Seek
+author=Chris Doherty (Adelaide)
+hint=Just hide, don't worry about the seek
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 3  6
+pos6=11  6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #1E90FF #87CEFA
+block01=karo_light_X     #000000 #1E90FF #87CEFA
+block02=pyramid          #000000 #D2691E #FFFFFF
+block03=pyramid_R        #000000 #D2691E #A0522D
+block04=extra            #000000 #228B22 #7FFFD4
+block05=extra_O          #000000 #228B22 #7FFFD4
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=check            #000000 #FFFFFF #808080
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B___X__X__X___B
+row02=B_BXBXBXBXBXB_B
+row03=B_XX__XXX__XX_B
+row04=BXB_BXB_BXB_BXB
+row05=B_X_X_X_X_X_X_B
+row06=BXB_BX_X_XB_BXB
+row07=B_X_X_X_X_X_X_B
+row08=BXB_BXB_BXB_BXB
+row09=B_XX__XXX__XX_B
+row10=B_BXBXBXBXBXB_B
+row11=B___X__X__X___B
+row12=BBBBBBBBBBBBBBB

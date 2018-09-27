@@ -1,0 +1,70 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Eraser II
+author=Stn
+hint=Don't get erased
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1=3 3
+pos2=11 3
+pos3=11 9
+pos4=3 9
+pos5=7 3
+pos6=7 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=trianglebombs
+
+[graphics]
+block00=city_free		#000000 #FF7F50 #4682B4
+block01=city_free_X		#000000 #FF7F50 #4682B4
+block02=city_rip		#000000 #4682B4 #FF7F50
+block03=city_rip_R		#000000 #B0C4DE #FF7F50
+block04=light_house		#000000 #4682B4 #000000
+block05=light_house_O		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=triangle_bomb
+block10=score_floor		#4169FF #4169FF #4169FF
+
+[map]
+extraDistribution=special
+probBomb=28
+probRange=31
+probVirus=16
+probSpecial=22
+probHidden=3
+row00=BBBBBBBBBBBBBBB
+row01=BX__X__X__X__XB
+row02=B_XXBXB_BXBXX_B
+row03=B___X_____X___B
+row04=BXBXBBXXXBBXBXB
+row05=B_X_B__X__B_X_B
+row06=BXXXXXXXXXXXXXB
+row07=B_X_B__X__B_X_B
+row08=BXBXBBXXXBBXBXB
+row09=B___X_____X___B
+row10=B_XXBXB_BXBXX_B
+row11=BX__X__X__X__XB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,79 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Pump and Run away
+author=Peter Riede
+hint=Pump or Kick and RUN!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral23
+
+
+[scrambleDel]
+time=0.39
+numBlocks=8
+pos000=4 4
+pos001=4 5
+pos002=4 6
+pos003=4 8
+pos004=8 4
+pos005=8 5
+pos006=8 8
+pos007=10 8
+
+[func]
+key=air
+
+[player]
+bombs=3
+range=5
+pos1=1 3
+pos2=8 9
+pos3=11 2
+pos4=12 7
+pos5=3 9
+pos6=6 5
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=contact
+wallClick=randomdir
+playerClick=contact
+fuseTime=long
+
+[graphics]
+block00=karo_light		#7B68EE #708090 #2E8B57
+block01=karo_light_X		#7B68EE #708090 #2E8B57
+block02=book_shelf		#2F4F4F #2F4F4F #FF0000
+block03=book_shelf		#7B68EE #2F4F4F #FF0000
+block04=sphere_light		#9ACD32 #000080 #B0E0E6
+block05=sphere_light_O		#7B68EE #000080 #B0E0E6
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#ADFF2F #32CD32 #7B68EE
+
+[map]
+extraDistribution=get
+probBomb=75
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBB_BBB_B___B
+row03=B_________B_BBB
+row04=B_B_B_BBB___B_B
+row05=B_B_B___B_B___B
+row06=B___BBB_B_BBB_B
+row07=B_B_____B_B___B
+row08=B_B_BBB_B_B_BBB
+row09=B___________B_B
+row10=B_BBB_BB_BB_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

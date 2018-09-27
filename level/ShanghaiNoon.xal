@@ -1,0 +1,64 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Shanghai Noon
+author=Tobias Johansson
+hint=Speed = Survival
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=speed
+
+[player]
+bombs=1
+range=4
+pos1=3 6
+pos2=3 6
+pos3=3 6
+pos4=11 6
+pos5=11 6
+pos6=11 6
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=hex		#000000 #32CD32 #32CD32
+block01=hex		#000000 #32CD32 #32CD32
+block02=hex_wall		#000000 #32CD32 #800000
+block03=hex_wall		#000000 #32CD32 #800000
+block04=hex_extra		#000000 #32CD32 #6495ED
+block05=hex_extra_O		#000000 #32CD32 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probHidden=75
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_____XXX_____B
+row02=B_____XXX_____B
+row03=B__XrrrbrrrX__B
+row04=B_qXbrrbrrbXq_B
+row05=B_BBBBBBBBBBB_B
+row06=BX___________XB
+row07=B_BBBBBBBBBBB_B
+row08=B_qXbrrbrrbXq_B
+row09=B__XrrrbrrrX__B
+row10=B_____XXX_____B
+row11=B_____XXX_____B
+row12=BBBBBBBBBBBBBBB

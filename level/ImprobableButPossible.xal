@@ -1,0 +1,74 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Improbable...But Possible
+author=Bremen : Miru
+hint=For a little thrill on opening blastables
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=1 11
+pos3=13 1
+pos4=13 11
+pos5=7 1
+pos6=7 11
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+wallClick=rebound
+playerClick=rebound
+fuseTime=short
+special=trianglebombs
+hidden=nuclear
+
+[graphics]
+block00=karo_dark		#556B2F #90EE90 #A0522D
+block01=karo_dark		#556B2F #90EE90 #A0522D
+block02=wall		#A0522D #556B2F #32CD32
+block03=wall_R		#A0522D #556B2F #32CD32
+block04=chest		#800000 #800000 #C0C0C0
+block05=chest_O		#800000 #800000 #C0C0C0
+block06=bomb
+block07=range
+block08=trap
+block09=triangle_bomb
+block10=score_floor		#800000 #800000 #800000
+
+[map]
+extraDistribution=all
+probBomb=29
+probRange=29
+probVirus=10
+probSpecial=29
+probHidden=2
+row00=BBBBBBBBBBBBBBB
+row01=B__BXX___XXB__B
+row02=B__X_BB_BB_X__B
+row03=BBXBXX_X_XXBXBB
+row04=BX_X_BXBXB_X_XB
+row05=BXBXB_____BXBXB
+row06=B_X_X_____X_X_B
+row07=BXBXB_____BXBXB
+row08=BX_X_BXBXB_X_XB
+row09=BBXBXX_X_XXBXBB
+row10=B__X_BB_BB_X__B
+row11=B__BXX___XXB__B
+row12=BBBBBBBBBBBBBBB

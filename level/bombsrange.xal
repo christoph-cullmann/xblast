@@ -1,0 +1,76 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Bombs & Range
+author=Wuerzburg : Bernd Wenisch
+hint=Give It A Try...
+gameMode=R23456STDL
+
+[shrink]
+type=compoundF
+
+
+
+[func]
+extra=speed
+key=rc
+
+[player]
+bombs=4
+range=5
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 5
+pos6=7 7
+initVirus=run
+reviveVirus=run
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+wallClick=rebound
+playerClick=thru
+hidden=threebombs
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=rock_floor		#000000 #FFEFD5 #000000
+block01=rock_floor		#000000 #FFEFD5 #000000
+block02=jizz		#000000 #7FFFD4 #D2691E
+block03=jizz		#000000 #7FFFD4 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #FFFFF0
+block05=chess_sphere_O		#000000 #FFEFD5 #FFFFF0
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=19
+probRange=19
+probVirus=19
+probSpecial=19
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=B__X_sssss_X__B
+row02=B__X_vvvvv_X__B
+row03=B_bX_______Xb_B
+row04=B_XX_______XX_B
+row05=BrXqXrX_XbXqXrB
+row06=BXsXsXsXsXsX_XB
+row07=BrXqXbX_XrXqXrB
+row08=B_XX_______XX_B
+row09=B_bX_______Xb_B
+row10=B__X_vvvvv_X__B
+row11=B__X_sssss_X__B
+row12=BBBBBBBBBBBBBBB

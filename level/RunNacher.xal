@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=RunNacher
+author=Peter Riede
+hint=Run for the Postdoc of the Year
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=25
+probVirus=5
+probSpecial=13
+row00=BBBBBBBBBBBBBBB
+row01=B_____B__XXX__B
+row02=B_X_X_B____XX_B
+row03=B__XX_B___X_X_B
+row04=B_XXX__XXX__X_B
+row05=B_______X_X___B
+row06=BBBB___X___BBBB
+row07=B___X_X_______B
+row08=B_X__XXX__XXX_B
+row09=B_X_X___B_XX__B
+row10=B_XX____B_X_X_B
+row11=B__XXX__B_____B
+row12=BBBBBBBBBBBBBBB

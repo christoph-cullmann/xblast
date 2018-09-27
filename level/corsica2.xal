@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Corsica2
+author=ENSERB : LeChuck'
+hint=Ici on aime les bombes
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=6
+range=14
+specialBombs=30
+pos1=2 6
+pos2=6 6
+pos3=12 6
+pos4=7 2
+pos5=7 10
+pos6=8 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=napalm
+
+[graphics]
+block00=dark_way		#000000 #32CD32 #228B22
+block01=dark_way		#000000 #32CD32 #228B22
+block02=wall		#000000 #808080 #FF0000
+block03=wall_R		#000000 #808080 #FF0000
+block04=bricks		#000000 #0000FF #0000FF
+block05=brick_O		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=ghost		#000000 #00FFFF #00FFFF
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=BBBB__v____BBBB
+row02=BB___________BB
+row03=B______B______B
+row04=B______v______B
+row05=B____________vB
+row06=B__Bvv_v_vvB__B
+row07=Bv____________B
+row08=B______v______B
+row09=B______B______B
+row10=BB___________BB
+row11=BBBB____v__BBBB
+row12=BBBBBBBBBBBBBBB

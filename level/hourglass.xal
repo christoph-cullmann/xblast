@@ -1,0 +1,131 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Hourglass
+author=Reinco
+hint=Time is ticking...
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.6
+numBlocks=64
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 3
+pos023=3 4
+pos024=3 5
+pos025=3 6
+pos026=3 7
+pos027=3 8
+pos028=3 9
+pos029=4 5
+pos030=4 6
+pos031=4 7
+pos032=10 5
+pos033=10 6
+pos034=10 7
+pos035=11 3
+pos036=11 4
+pos037=11 5
+pos038=11 6
+pos039=11 7
+pos040=11 8
+pos041=11 9
+pos042=12 1
+pos043=12 2
+pos044=12 3
+pos045=12 4
+pos046=12 5
+pos047=12 6
+pos048=12 7
+pos049=12 8
+pos050=12 9
+pos051=12 10
+pos052=12 11
+pos053=13 1
+pos054=13 2
+pos055=13 3
+pos056=13 4
+pos057=13 5
+pos058=13 6
+pos059=13 7
+pos060=13 8
+pos061=13 9
+pos062=13 10
+pos063=13 11
+
+
+[func]
+extra=mayhem
+
+[player]
+bombs=0
+range=1
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initVirus=slow
+reviveVirus=slow
+
+[bombs]
+wallClick=contact
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=extra		#000000 #FFD700 #FF4500
+
+[map]
+probBomb=12
+probRange=50
+probSpecial=6
+row00=BBBBBBBBBBBBBBB
+row01=BssXvqXXXqvXssB
+row02=BssXvXXXXXvXssB
+row03=BsssXXXvXXXsssB
+row04=BsssXXXXXXXsssB
+row05=BssssXXbXXssssB
+row06=BssssXbsbXssssB
+row07=BssssXXbXXssssB
+row08=BsssXXXXXXXsssB
+row09=BsssXXXvXXXsssB
+row10=BssXvXXXXXvXssB
+row11=BssXvqXXXqvXssB
+row12=BBBBBBBBBBBBBBB

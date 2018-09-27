@@ -1,0 +1,65 @@
+[info]
+name=G Force
+author=EPFL - cosun : Yves Bresson
+hint=Feel the power blast
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=specialBomb
+
+[player]
+bombs=3
+range=7
+specialBombs=12
+pos1= 2  2
+pos2=12  2
+pos3= 7  5
+pos4= 7  7
+pos5= 2 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+fuseTime=long
+special=grenade
+
+[graphics]
+block00=ghost            #000000 #90EE90 #000000
+block01=ghost_X          #000000 #90EE90 #000000
+block02=ghost_sq         #000000 #90EE90 #000000
+block03=ghost_ci         #000000 #90EE90 #000000
+block04=ghost_sq_R       #000000 #90EE90 #000000
+block05=ghost_sq_R       #000000 #90EE90 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+extraDistribution=all
+probBomb=15
+probRange=16
+probVirus=15
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__X_______X__B
+row03=B_XB_______BX_B
+row04=B_____RRR_____B
+row05=B____R________B
+row06=B____R_RR_____B
+row07=B____R__R_____B
+row08=B_____RRR_____B
+row09=B_XB_______BX_B
+row10=B__X_______X__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

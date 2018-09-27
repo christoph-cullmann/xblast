@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Butterfly
+author=LORIA : Jean 'MoulMan' Lieber
+hint=Don't sleep !
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=7 3
+pos3=13 1
+pos4=1 11
+pos5=7 9
+pos6=13 11
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=randomdir
+playerClick=thru
+fuseTime=short
+special=pyro
+
+[graphics]
+block00=sphere_half		#000000 #FF8C00 #87CEEB
+block01=sphere_half		#000000 #FF8C00 #87CEEB
+block02=sphere_dark		#000000 #2E8B57 #00FFFF
+block03=sphere_dark		#000000 #2E8B57 #00FFFF
+block04=sphere_light		#000000 #00FFFF #FFB6C1
+block05=sphere_light_O		#000000 #00FFFF #FFB6C1
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=33
+probSpecial=33
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=B_XbB__v__BbX_B
+row02=BXXr__rXr__rXXB
+row03=Bbrb_rX_Xr_brbB
+row04=BB____rXr____BB
+row05=B______X______B
+row06=BvsXsvXqXvsXsvB
+row07=B______X______B
+row08=BB____rXr____BB
+row09=Bbrb_rX_Xr_brbB
+row10=BXXr__rXr__rXXB
+row11=B_XbB__v__BbX_B
+row12=BBBBBBBBBBBBBBB

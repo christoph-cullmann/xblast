@@ -1,0 +1,72 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Morphissimo
+author=Space Protector
+hint=morph as you are
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=reverse
+reviveVirus=reverse
+initExtra=kick revive
+reviveExtra=kick revive
+
+[bombs]
+bombClick=randomdir
+wallClick=randomdir
+playerClick=randomdir
+
+[graphics]
+block00=city_free		#000000 #377F50 #4682B4
+block01=city_free		#000000 #377F50 #4682B4
+block02=city_rip		#000000 #4682B4 #377F50
+block03=city_rip_R		#000000 #4682B4 #377F50
+block04=dark_house		#000000 #4682B4 #000000
+block05=dark_house		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=special
+probRange=6
+probVirus=6
+probSpecial=11
+row00=BBBBBBBBBBBBBBB
+row01=B_q_____q___q_B
+row02=B_____________B
+row03=B_B_B_B___B_B_B
+row04=B_______B_____B
+row05=B__B______B___B
+row06=B_____Bs____B_B
+row07=BB__B____B____B
+row08=B_____________B
+row09=B___B____B____B
+row10=BqB___B_____BqB
+row11=B_____q__B____B
+row12=BBBBBBBBBBBBBBB

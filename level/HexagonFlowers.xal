@@ -1,0 +1,76 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hexagon Flowers 2
+author=Skywalker
+hint=Once more, RC showtime !
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=2
+range=3
+pos1=12 2
+pos2=3 3
+pos3=8 3
+pos4=12 5
+pos5=9 9
+pos6=3 10
+initVirus=run
+reviveVirus=run
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+bombClick=split
+wallClick=anticlockwise
+fuseTime=short
+default=search
+special=threebombs
+
+[graphics]
+block00=hex		#000000 #F4A460 #000000
+block01=hex_X		#000000 #F4A460 #000000
+block02=hex_wall		#000000 #F4A460 #FFD700
+block03=hex_wall		#000000 #F4A460 #FFD700
+block04=hex_extra		#000000 #F4A460 #000000
+block05=hex_extra_O		#000000 #F4A460 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+extraDistribution=get
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=_B_____B_____B_
+row01=BBBBBBBBBBBBBBB
+row02=_B____BBB____B_
+row03=_B_____B___B_B_
+row04=_B__B_____BBBB_
+row05=_B_BBB_____B_B_
+row06=BB__B________BB
+row07=_B______B____B_
+row08=_BB____BBB___B_
+row09=_B______B___BB_
+row10=_B___B_____BBB_
+row11=BBBBBBBBBBBBBBB
+row12=_B_____B_____B_

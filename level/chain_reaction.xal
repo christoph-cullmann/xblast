@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Chain Reaction
+author=Garth Denley (Adelaide)
+hint=Drop a bomb and STAND CLEAR!
+gameMode=R234--STDL
+
+[shrink]
+type=compoundExtra
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=1
+range=7
+pos1= 2  2
+pos2=12  2
+pos3=12 10
+pos4= 2 10
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=dark_way         #000000 #6A5ACD #00FF7F
+block01=dark_way_X       #000000 #6A5ACD #00FF7F
+block02=r_i_p            #000000 #2E8B57 #6A5ACD
+block03=r_i_p_R          #000000 #2E8B57 #6A5ACD
+block04=pumpkin          #000000 #FF4500 #6A5ACD
+block05=pumpkin_O        #000000 #FF4500 #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=19
+probRange=2
+probVirus=2
+probSpecial=5
+probHidden=68
+row00=BBBBBBBBBBBBBBB
+row01=B__XX_XBX_XX__B
+row02=B__XXBXXXBXX__B
+row03=BXXXXXXBXXXXXXB
+row04=BXXXBX_X_XBXXXB
+row05=BB_XXXBXBXXX_BB
+row06=BXXB_XX_XX_BXXB
+row07=BB_XXXBXBXXX_BB
+row08=BXXXBX_X_XBXXXB
+row09=BXXXXXXBXXXXXXB
+row10=B__XXBXXXBXX__B
+row11=B__XX_XBX_XX__B
+row12=BBBBBBBBBBBBBBB

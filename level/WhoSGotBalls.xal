@@ -1,0 +1,81 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Who's got balls
+author=Groningen : Koen
+hint=Balls = Remote
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.04
+numBlocks=6
+pos000=1 2
+pos001=1 10
+pos002=6 1
+pos003=8 11
+pos004=13 2
+pos005=13 10
+
+[scrambleDel]
+time=0.04
+numBlocks=6
+pos000=3 4
+pos001=3 8
+pos002=7 4
+pos003=7 8
+pos004=11 4
+pos005=11 8
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=8
+pos1=3 4
+pos2=11 8
+pos3=11 4
+pos4=3 8
+pos5=7 4
+pos6=7 8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____q_______B
+row02=Bq___e___e___qB
+row03=B__e___e___e__B
+row04=B_eBe_eBe_eBe_B
+row05=B__e___e___e__B
+row06=Be___e___e___eB
+row07=B__e___e___e__B
+row08=B_eBe_eBe_eBe_B
+row09=B__e___e___e__B
+row10=Bq___e___e___qB
+row11=B_______q_____B
+row12=BBBBBBBBBBBBBBB

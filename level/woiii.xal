@@ -1,0 +1,116 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=WO III
+author=Reinco
+hint=Do you life by the book?
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.4
+numBlocks=24
+pos000=3 3
+pos001=3 9
+pos002=4 3
+pos003=4 8
+pos004=4 9
+pos005=5 3
+pos006=5 6
+pos007=5 9
+pos008=6 9
+pos009=7 3
+pos010=7 6
+pos011=7 9
+pos012=8 3
+pos013=8 4
+pos014=8 5
+pos015=8 7
+pos016=9 3
+pos017=9 9
+pos018=10 3
+pos019=10 4
+pos020=10 8
+pos021=10 9
+pos022=11 3
+pos023=11 9
+
+[scrambleDel]
+time=0.4
+numBlocks=14
+pos000=3 3
+pos001=3 9
+pos002=5 4
+pos003=5 8
+pos004=6 3
+pos005=6 5
+pos006=6 7
+pos007=8 4
+pos008=8 6
+pos009=8 9
+pos010=9 4
+pos011=9 8
+pos012=11 3
+pos013=11 9
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=firecracker2
+hidden=firecracker
+bombClick=snooker
+playerClick=thru
+wallClick=randomdir
+nastyGentle=2
+nastyRange=2
+
+[graphics]
+block00=iron_floor		#000000 #000000 #006400
+block01=iron_floor_X		#000000 #000000 #006400
+block02=downarrow		#000000 #006400 #8A2BE2
+block03=downarrow		#000000 #006400 #8A2BE2
+block04=extra		#000000 #2F4F4F #FF4500
+block05=extra_O		#000000 #2F4F4F #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=iron_floor		#000000 #000000 #006400
+
+[map]
+probHidden=75
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_s_v_s_s_v_s_B
+row02=Bsv____v__s_vsB
+row03=B___sv__sv_s__B
+row04=B_s_BBX_BBXv__B
+row05=Bsv_rqB_rqB__sB
+row06=B_s_Bsq_Bsq_vsB
+row07=Bv__BsB_BsB___B
+row08=Bs_vXBX_XBXv_vB
+row09=B___svs__v_s__B
+row10=Bsv____v__s_vsB
+row11=B_s_v_s_sv__s_B
+row12=BBBBBBBBBBBBBBB

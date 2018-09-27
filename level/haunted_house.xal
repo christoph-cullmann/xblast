@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Haunted House
+author=Garth Denley (Adelaide)
+hint=Keep 2 steps away from haunted bombs
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 1  3
+pos2=13  3
+pos3=13  9
+pos4= 1  9
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+haunt=slow
+
+[graphics]
+block00=city_free        #000000 #D2B48C #A0522D
+block01=city_free_X      #000000 #D2B48C #A0522D
+block02=city_rip         #000000 #F5FFFA #D2B48C
+block03=city_rip_R       #000000 #F5FFFA #D2B48C
+block04=light_house      #000000 #4D4D4D #8470FF
+block05=light_house_O    #000000 #4D4D4D #8470FF
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=21
+probVirus=10
+probSpecial=10
+probHidden=32
+row00=BBBBBBBBBBBBBBB
+row01=B___B_XXX_B___B
+row02=B_B_XXBBBXX_B_B
+row03=B___B__X__B___B
+row04=BBXXBXBXBXBXXBB
+row05=BX__X_BXB_X__XB
+row06=BXBBXBBqBBXBBXB
+row07=BX__X_BXB_X__XB
+row08=BBXXBXBXBXBXXBB
+row09=B___B__X__B___B
+row10=B_B_XXBBBXX_B_B
+row11=B___B_XXX_B___B
+row12=BBBBBBBBBBBBBBB

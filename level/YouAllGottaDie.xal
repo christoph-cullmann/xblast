@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=You all gotta die
+author=ENSERB : Ben
+hint=Blast !!!!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+extra=swapposition
+key=specialBomb
+
+[player]
+bombs=1
+range=5
+specialBombs=30
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=4 3
+pos6=10 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=napalm
+
+[graphics]
+block00=karo_dark		#000000 #A0522D #BDB76B
+block01=karo_dark		#000000 #A0522D #BDB76B
+block02=wall		#000000 #000000 #000000
+block03=wall_R		#000000 #000000 #000000
+block04=chest		#000000 #228B22 #B0C4DE
+block05=chest_O		#000000 #228B22 #B0C4DE
+block06=bomb
+block07=range
+block08=trap
+block09=swapposition
+block10=score_floor		#4169E1 #000000 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probSpecial=41
+probHidden=27
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BXXXB____X__B
+row03=B_B___X_BBBX__B
+row04=B_B___X__BXXX_B
+row05=B_BXXXB_______B
+row06=B_____________B
+row07=B_______BXXXB_B
+row08=B___X___X___B_B
+row09=B_XBXX__X___B_B
+row10=B___X___BBXBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

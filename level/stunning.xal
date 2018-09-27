@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Stunning
+author=Oliver Vogel
+hint=Stun them, trap them, blast them
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=stunOthers
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=mr_beam_free		#000000 #BDB76B #000000
+block01=mr_beam_free		#000000 #BDB76B #000000
+block02=weight		#000000 #FF0000 #4169E1
+block03=weight_R		#000000 #FF0000 #4169E1
+block04=mr_beam_bear		#000000 #BDB76B #00FF7F
+block05=mr_beam_bear_O		#000000 #BDB76B #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=51
+probRange=6
+probSpecial=25
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BXBBXBXBBXB_B
+row03=B_B__X_B__X_B_B
+row04=B_XXBBXXXBBXX_B
+row05=B_B__X_B__X_B_B
+row06=B_XXBBXXXBBXX_B
+row07=B_B__X_B__X_B_B
+row08=B_XXBBXXXBBXX_B
+row09=B_B__X_B__X_B_B
+row10=B_BXBBXBXBBXB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

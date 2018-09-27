@@ -1,0 +1,53 @@
+[info]
+name=Shrinking World
+author=Oliver Vogel
+hint=Just get to the center  quick!
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+
+[graphics]
+block00=button_floor     #000000 #BFBFBF #000000
+block01=button_floor_X   #000000 #BFBFBF #000000
+block02=dark_block       #000000 #ADD8E6 #00FF7F
+block03=dark_block_R     #000000 #ADD8E6 #00FF7F
+block04=box              #000000 #ADD8E6 #FF0000
+block05=box              #000000 #FF69B4 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #FF0000 #FF0000 #4169E1
+
+[map]
+probBomb=25
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=B___X___X_X___B
+row02=B_BXBXB_BXBXB_B
+row03=B_X_X_X_X_X_X_B
+row04=BXBXBXBXBXBXBXB
+row05=B_X_X_X_X_X_X_B
+row06=BXBXBXBXBXBXBXB
+row07=B_X_X_X_X_X_X_B
+row08=BXBXBXBXBXBXBXB
+row09=B_X_X_X_X_X_X_B
+row10=B_BXBXB_BXBXB_B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB
+

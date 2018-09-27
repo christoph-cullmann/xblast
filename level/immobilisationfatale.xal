@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Immobilisation fatale
+author=LORIA : Pierre 'in your back' Laroche
+hint=Immobilisé ? Enseveli !
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=stunOthers
+key=specialBomb
+
+[player]
+bombs=4
+range=3
+specialBombs=30
+pos1=1 1
+pos2=1 1
+pos3=1 1
+pos4=1 1
+pos5=1 1
+pos6=1 1
+
+[bombs]
+direction=left
+special=renovation
+
+[graphics]
+block00=check		#000000 #FFA500 #FFFAFA
+block01=check		#000000 #FFA500 #FFFAFA
+block02=wall		#000000 #FF8C00 #D2691E
+block03=wall_R		#000000 #FF8C00 #D2691E
+block04=bricks		#000000 #D2691E #FFFAFA
+block05=brick_O		#000000 #D2691E #FFFAFA
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=24
+probSpecial=52
+row00=BBBBBBBBBBBBBBB
+row01=B_B__X_B______B
+row02=B_B_X__X___B__B
+row03=B_BXXXXBX__B__B
+row04=B_B_X__X___B__B
+row05=B_B__X_B___B__B
+row06=B_B____X___B__B
+row07=B_B__X_B___B__B
+row08=B_B_X__X___BqqB
+row09=B_BXXXXBX__BqqB
+row10=B_B_X__X___BqqB
+row11=B____X_B___BqqB
+row12=BBBBBBBBBBBBBBB

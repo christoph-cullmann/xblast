@@ -1,0 +1,80 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Spider Web 2
+author=SKywalker
+hint=The Best Is In The Middle
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.6
+numBlocks=8
+pos000=3 4
+pos001=3 8
+pos002=4 3
+pos003=4 9
+pos004=10 3
+pos005=10 9
+pos006=11 4
+pos007=11 8
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=4
+pos1=1 6
+pos2=13 6
+pos3=7 1
+pos4=7 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+fuseTime=long
+special=threebombs
+hidden=firecracker2
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #4682B4
+block01=karo_light_X		#000000 #6A5ACD #4682B4
+block02=pyramid		#000000 #DAA520 #DAA520
+block03=pyramid_R		#000000 #DAA520 #DAA520
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor
+
+[map]
+extraDistribution=all
+probRange=18
+probVirus=9
+probSpecial=18
+probHidden=55
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBX___XBBBBB
+row02=BBBX_XB_BX_XBBB
+row03=BB_XBB_X_BBX_BB
+row04=BXXB__XXX__BXXB
+row05=B_B_XBB_BBX_B_B
+row06=B__X_X_q_X_X__B
+row07=B_B_XBB_BBX_B_B
+row08=BXXB__XXX__BXXB
+row09=BB_XBB_X_BBX_BB
+row10=BBBX_XB_BX_XBBB
+row11=BBBBBX___XBBBBB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fast Boum
+author=EPFL - cosun : Yves Bresson
+hint=Drop, Kick, Boum
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=4
+range=80
+specialBombs=12
+pos1=7 3
+pos2=4 4
+pos3=10 4
+pos4=4 8
+pos5=10 8
+pos6=7 9
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+fuseTime=short
+special=fungus
+hidden=napalm
+
+[graphics]
+block00=hex		#000000 #8B0000 #000000
+block01=hex		#000000 #8B0000 #000000
+block02=hex_wall		#000000 #8B0000 #FFFF00
+block03=hole_floor		#000000 #8B0000 #000000
+block04=hex_extra		#000000 #8B0000 #FFD700
+block05=hex_extra_O		#000000 #8B0000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probSpecial=48
+row00=BBBBBBBBBBBBBBB
+row01=BBX____B____XBB
+row02=BX__X__X__X__XB
+row03=B__X_______X__B
+row04=B_X__X___X__X_B
+row05=B______X______B
+row06=BBX_X_XXX_X_XBB
+row07=B______X______B
+row08=B_X__X___X__X_B
+row09=B__X_______X__B
+row10=BX__X__X__X__XB
+row11=BBX____B____XBB
+row12=BBBBBBBBBBBBBBB

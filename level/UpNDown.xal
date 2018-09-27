@@ -1,0 +1,59 @@
+[info]
+name=Up'n'down
+author=Tobias Johansson
+hint=It's bouncing...
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=25
+pos1= 2  2
+pos2=12 10
+pos3=12  2
+pos4= 2 10
+pos5= 7  2
+pos6= 7 10
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+playerClick=thru
+direction=down
+fuseTime=long
+special=napalm
+
+[graphics]
+block00=check            #000000 #006400 #BEBEBE
+block01=check_X          #000000 #006400 #BEBEBE
+block02=uparrow          #000000 #00FFFF #FFFF00
+block03=uparrow          #000000 #00FFFF #FFFF00
+block04=box              #000000 #FFFFFF #BEBEBE
+block05=box              #000000 #FFFFFF #BEBEBE
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=downarrow        #000000 #FF0000 #BEBEBE
+
+[map]
+probSpecial=73
+row00=BBBBBBBBBBBBBBB
+row01=BvvvvvvvvvvvvvB
+row02=Bv___________vB
+row03=Bv___________vB
+row04=Bv_vBvBvBvB__vB
+row05=Bv_X______X__vB
+row06=Bv_X______X__vB
+row07=Bv_X______X__vB
+row08=Bv_BvBvBvBv__vB
+row09=Bv___________vB
+row10=Bv___________vB
+row11=BvvvvvvvvvvvvvB
+row12=BBBBBBBBBBBBBBB
+

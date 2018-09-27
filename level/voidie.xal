@@ -1,0 +1,91 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Voidie
+author=Gert Jan Kamstra
+hint=Voids and moore
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.2
+numBlocks=24
+pos000=1 4
+pos001=1 8
+pos002=3 4
+pos003=3 8
+pos004=4 1
+pos005=4 3
+pos006=4 6
+pos007=4 9
+pos008=4 11
+pos009=5 4
+pos010=5 8
+pos011=7 4
+pos012=7 8
+pos013=9 4
+pos014=9 8
+pos015=10 1
+pos016=10 3
+pos017=10 6
+pos018=10 9
+pos019=10 11
+pos020=11 4
+pos021=11 8
+pos022=13 4
+pos023=13 8
+
+[func]
+
+[player]
+bombs=3
+range=28
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=rebound
+wallClick=rebound
+
+[graphics]
+block00=mr_beam_free		#000000 #FFFACD #000000
+block01=mr_beam_free_X		#000000 #FFFACD #000000
+block02=mr_beam_tv		#000000 #FFFACD #D2B48C
+block03=mr_beam_tv		#000000 #FFFACD #D2B48C
+block04=mr_beam_bear		#000000 #FFFACD #CD853F
+block05=mr_beam_bear_O		#000000 #FFFACD #CD853F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #DA70D6 #FFFFFF
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B___v_____v___B
+row02=B___v_____v___B
+row03=B___v_____v___B
+row04=BvvvvvvvvvvvvvB
+row05=B___v_____v___B
+row06=B___v_____v___B
+row07=B___v_____v___B
+row08=BvvvvvvvvvvvvvB
+row09=B___v_____v___B
+row10=B___v_____v___B
+row11=B___v_____v___B
+row12=BBBBBBBBBBBBBBB

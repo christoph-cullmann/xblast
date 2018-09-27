@@ -1,0 +1,54 @@
+[info]
+name=Check Mate
+author=Hugo Meinedo -> INESC
+hint=Prove you're a Chess Master
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=air
+
+[player]
+bombs=3
+range=10
+pos1= 4  4
+pos2= 7  3
+pos3=10  4
+pos4= 4  8
+pos5= 7  9
+pos6=10  8
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=button_floor     #000000 #000000 #BEBEBE
+block01=button_floor     #000000 #000000 #BEBEBE
+block02=button_floor     #000000 #000000 #BEBEBE
+block03=button_floor     #A9A9A9 #D3D3D3 #A9A9A9
+block04=button_floor     #A9A9A9 #D3D3D3 #A9A9A9
+block05=extra_O          #A9A9A9 #FFFAFA #FFFAFA
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=dark_block       #000000 #000000 #000000
+
+[map]
+row00=BRBRBRBRBRBRBRB
+row01=R_X_X_X_X_X_X_R
+row02=BX_XvX_X_XvX_XB
+row03=R_X_X_X_X_X_X_R
+row04=BXvX_XvXvX_XvXB
+row05=R_X_X_X_X_X_X_R
+row06=BX_X_X_X_X_X_XB
+row07=R_X_X_X_X_X_X_R
+row08=BXvX_XvXvX_XvXB
+row09=R_X_X_X_X_X_X_R
+row10=BX_XvX_X_XvX_XB
+row11=R_X_X_X_X_X_X_R
+row12=BRBRBRBRBRBRBRB
+

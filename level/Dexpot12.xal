@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 12
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=invincible
+
+[player]
+bombs=10
+range=80
+pos1=3 2
+pos2=11 10
+pos3=11 2
+pos4=3 10
+pos5=7 3
+pos6=7 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+direction=down
+fuseTime=long
+
+[graphics]
+block00=check		#191970 #FFFFFF #000000
+block01=check_X		#191970 #FFFFFF #000000
+block02=uparrow		#000000 #006400 #FF0000
+block03=uparrow		#191970 #006400 #FF0000
+block04=chess_sphere		#000000 #FFFFFF #808080
+block05=chess_sphere_O		#191970 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=check		#483D8B #FFFFFF #808080
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B____________BB
+row02=BB____________B
+row03=B__________B__B
+row04=B__B__________B
+row05=B____B_vv_B___B
+row06=Bq_____vv_____B
+row07=Bq____________B
+row08=B___B_____B___B
+row09=B___________B_B
+row10=B_B___________B
+row11=B____qq__B__q_B
+row12=BBBBBBBBBBBBBBB

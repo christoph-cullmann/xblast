@@ -1,0 +1,65 @@
+[info]
+name=Stunning Renovation
+author=EPFL - disun : Yves Bresson
+hint=Stun them, trap them, blast them
+gameMode=R23456STDL
+
+[shrink]
+type=compound2F
+
+[func]
+extra=stunOthers
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+specialBombs=30
+pos1= 2  2
+pos2= 9  3
+pos3= 1  5
+pos4= 1  7
+pos5= 9  9
+pos6= 2 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+playerClick=thru
+special=renovation
+
+[graphics]
+block00=mr_beam_free     #000000 #BDB76B #000000
+block01=mr_beam_free_X   #000000 #BDB76B #000000
+block02=weight           #000000 #FF0000 #4169E1
+block03=weight_R         #000000 #FF0000 #4169E1
+block04=mr_beam_bear     #000000 #BDB76B #00FF7F
+block05=mr_beam_bear_O   #000000 #BDB76B #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=50
+probRange=6
+probSpecial=25
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B____________qB
+row02=B_____B_BB____B
+row03=B______B__B___B
+row04=B_______B_B___B
+row05=B___BBB__BB___B
+row06=B__Bq_______BqB
+row07=B___BBB__BB___B
+row08=B_______B_B___B
+row09=B______B__B___B
+row10=B_____B_BB____B
+row11=B____________qB
+row12=BBBBBBBBBBBBBBB
+

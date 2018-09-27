@@ -1,0 +1,63 @@
+[info]
+name=Anti-personnal mines
+author=EPFL - cosun : Yves Bresson
+hint=The eye can't see everything
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1= 1  4
+pos2= 1  5
+pos3= 1  6
+pos4= 1  7
+pos5= 1  8
+pos6= 1  9
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+wallClick=rebound
+playerClick=rebound
+fuseTime=short
+hidden=firecracker
+
+[graphics]
+block00=button_floor     #000000 #8B0000 #8B0000
+block01=button_floor_X   #000000 #8B0000 #8B0000
+block02=pyramid          #000000 #8B0000 #8B0000
+block03=uparrow          #000000 #00FF7F #FFFFFF
+block04=button_floor     #000000 #8B0000 #8B0000
+block05=extra_O          #FFFF00 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+probSpecial=23
+probHidden=31
+row00=BBBBBBBBBBBBBBB
+row01=B______X_____XB
+row02=B_X__X_____X__B
+row03=BX_______X____B
+row04=B___X______X__B
+row05=B____X_X_____XB
+row06=B_X_______X_XqB
+row07=B_____X_X____XB
+row08=B__X_______X__B
+row09=B____X___X__X_B
+row10=B__X___X______B
+row11=BX_____X___X__B
+row12=BBBBBBBBBBBBBBB
+

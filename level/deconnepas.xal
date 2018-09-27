@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Deconne Pas!
+author=Fred Lagrange
+hint=Trust your foe
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=4
+pos1=1 4
+pos2=11 4
+pos3=1 6
+pos4=11 6
+pos5=1 8
+pos6=11 8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=rock_floor		#000000 #8B0000 #000000
+block01=rock_floor		#000000 #8B0000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#FFFF00 #FFFF00 #000000
+block04=bricks		#FFFF00 #FFFF00 #000000
+block05=brick_O		#FFFF00 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#FFFF00 #FFFF00 #4169E1
+
+[map]
+extraDistribution=all
+probRange=102
+probVirus=-102
+row00=BBBBBBBBBBBBBBB
+row01=B_____qqq_____B
+row02=B______q______B
+row03=BBBBBBBXBBBBBBB
+row04=B_____________B
+row05=BBBBBBBXBBBBBBB
+row06=B_____________B
+row07=BBBBBBBXBBBBBBB
+row08=B_____________B
+row09=BBBBBBBXBBBBBBB
+row10=B______q______B
+row11=B_____qqq_____B
+row12=BBBBBBBBBBBBBBB

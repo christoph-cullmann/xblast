@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Disease
+author=Stn
+hint=Get sick!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=8 1
+pos2=9 2
+pos3=10 3
+pos4=11 4
+pos5=12 5
+pos6=13 6
+initVirus=empty
+reviveVirus=empty
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+direction=right
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #4682B4
+block01=karo_light		#000000 #6A5ACD #4682B4
+block02=pyramid		#000000 #DAA520 #DAA520
+block03=pyramid_R		#000000 #DAA520 #000000
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=16
+probVirus=79
+row00=BBBBBBBBBBBBBBB
+row01=BX____Xs_XssssB
+row02=BBX__X_Bs_BsssB
+row03=B__B_XssXs_XssB
+row04=BX__BssssBs_BsB
+row05=B_BssXXXX_Bs_XB
+row06=B__XssXBXssXs_B
+row07=BXssBsXXXX__BsB
+row08=BsBssBsss_B__XB
+row09=BssXssXssX_B__B
+row10=BsssBs_B_X__XBB
+row11=BssssX__X____XB
+row12=BBBBBBBBBBBBBBB

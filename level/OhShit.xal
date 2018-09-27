@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Oh Shit
+author=old : Matt & Gerrit
+hint=Old Style
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=1
+pos1=1 1
+pos2=13 1
+pos3=1 11
+pos4=13 11
+pos5=0 0
+pos6=0 0
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=chess_floor		#000000 #FFFFFF #000000
+block01=chess_floor		#000000 #FFFFFF #000000
+block02=book_shelf		#000000 #FFFFFF #000000
+block03=chess_sphere		#000000 #FFFFFF #000000
+block04=chess_sphere		#000000 #FFFFFF #000000
+block05=chess_sphere_O		#000000 #FFFFFF #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=32
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_X_BBB_BXBXX_B
+row03=B_X_B_B_BBB_X_B
+row04=B_X_BBB_BXB_X_B
+row05=B__X_______X__B
+row06=B_BB_BXBXB_BBBB
+row07=B_BX_BXBXB_XBXB
+row08=B_BB_BBBXB_XBXB
+row09=B_XB_BXBXB_XBXB
+row10=B_BB_BXBXB_XB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

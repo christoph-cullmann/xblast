@@ -1,0 +1,63 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Mask
+author=Glaset
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compoundF
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=20
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+
+[graphics]
+block00=city_free		#000000 #808080 #D2B48C
+block01=city_free		#000000 #808080 #D2B48C
+block02=dark_house		#000000 #B22222 #A0522D
+block03=dark_house_R		#000000 #B22222 #A0522D
+block04=dark_house		#000000 #32CD32 #F4A460
+block05=dark_house		#000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__vvvv_vvvv__B
+row03=B_____________B
+row04=B_v__vvvvv__v_B
+row05=B_v_rr___rr_v_B
+row06=B_v____v____v_B
+row07=B______v______B
+row08=B_v____v____v_B
+row09=B_v_________v_B
+row10=B_v_vvv_vvv_v_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

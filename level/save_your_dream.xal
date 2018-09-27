@@ -1,0 +1,63 @@
+[info]
+name=Save your dream
+author=mariu
+hint=Where there's a will, there's a way
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=9
+range=5
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+default=construction
+special=grenade
+nastyGentle=4
+nastyRange=3
+
+[graphics]
+block00=hex              #000000 #2E8B57 #8A2BE2
+block01=hex_X            #000000 #2E8B57 #8A2BE2
+block02=hex_wall         #000000 #2E8B57 #000080
+block03=hex_extra        #000000 #2E8B57 #4169E1
+block04=hex_extra        #000000 #2E8B57 #00FF7F
+block05=hex_extra_O      #000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probVirus=31
+probSpecial=31
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__q___B___q__B
+row03=B_____________B
+row04=B___B_X_X_B___B
+row05=B_____________B
+row06=B_q__X___X__q_B
+row07=B_____________B
+row08=B___B_X_X_B___B
+row09=B_____________B
+row10=B__q___B___q__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

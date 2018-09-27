@@ -1,0 +1,70 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Teddybear Chamber
+author=Tobias Johansson
+hint=Blast the bears!!
+gameMode=R23456STDL
+
+[shrink]
+type=spiralLego
+
+
+
+[func]
+extra=multiple
+
+[player]
+bombs=2
+range=4
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+hidden=pyro
+bombClick=randomdir
+playerClick=contact
+wallClick=randomdir
+
+[graphics]
+block00=mr_beam_free		#000000 #90EE90 #000000
+block01=mr_beam_free		#000000 #90EE90 #000000
+block02=mr_beam_tv		#000000 #90EE90 #708090
+block03=mr_beam_tv		#000000 #90EE90 #708090
+block04=mr_beam_bear		#000000 #90EE90 #8B4513
+block05=mr_beam_bear_O		#000000 #90EE90 #8B4513
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=mr_beam_bear		#808080 #90EE90 #FFFFFF
+
+[map]
+probBomb=11
+probRange=11
+probVirus=5
+probSpecial=68
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=B___X____XX___B
+row02=B__X__X____XX_B
+row03=B_X__X___X____B
+row04=B__X___X__X___B
+row05=BX_X__XXX__XXXB
+row06=B___X_XvXXX__XB
+row07=B_X__XXXXX____B
+row08=BX__X__X____X_B
+row09=B_X_____X_X__XB
+row10=B_X__X___XXX__B
+row11=B___XX___X____B
+row12=BBBBBBBBBBBBBBB

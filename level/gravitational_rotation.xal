@@ -1,0 +1,57 @@
+[info]
+name=Gravitational Rotation
+author=Stn
+hint=Fallen Bombgs Will Not Stay Down
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+
+[player]
+bombs=5
+range=25
+pos1= 1  1
+pos2= 1  3
+pos3= 1  5
+pos4= 1  7
+pos5= 1  9
+pos6= 1 11
+
+[bombs]
+wallClick=anticlockwise
+direction=down
+fuseTime=long
+
+[graphics]
+block00=karo_light       #000000 #6A5ACD #4682B4
+block01=karo_light_X     #000000 #6A5ACD #4682B4
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #EEDD82
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=karo_light       #000000 #6A5ACD #4682B4
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=50
+probSpecial=18
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B__B__B_B_B
+row03=B_____________B
+row04=B_B_B__B__B_B_B
+row05=B_____________B
+row06=B_B_B__B__B_B_B
+row07=B_____________B
+row08=B_B_B__B__B_B_B
+row09=B_____________B
+row10=B_B_B__B__B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

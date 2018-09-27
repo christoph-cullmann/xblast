@@ -1,0 +1,68 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Triangle Traffic
+author=Glaset
+hint=Bombas
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=1
+pos1=7 1
+pos2=7 1
+pos3=7 1
+pos4=7 1
+pos5=7 1
+pos6=7 1
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+special=construction
+playerClick=thru
+direction=down
+
+[graphics]
+block00=karo_light		#000000 #FFFFFF #808080
+block01=karo_light		#000000 #FFFFFF #808080
+block02=temple		#000000 #FFFFFF #808080
+block03=temple		#000000 #FFFFFF #808080
+block04=extra		#000000 #FFFFFF #808080
+block05=extra_O		#000000 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=40
+probRange=41
+probSpecial=10
+probHidden=10
+row00=BBBBBBBBBBBBBBB
+row01=BX___________XB
+row02=BXX_________XXB
+row03=BXXX_______XXXB
+row04=BXXXX_____XXXXB
+row05=BXXXXX___XXXXXB
+row06=BXXXXXX_XXXXXXB
+row07=BXXXXXXXXXXXXXB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

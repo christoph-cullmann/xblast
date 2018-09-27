@@ -1,0 +1,62 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Watch The Birdie
+author=Koen
+hint=It's magic
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+
+[player]
+bombs=5
+range=13
+pos1=2 6
+pos2=9 6
+pos3=12 6
+pos4=6 7
+pos5=8 7
+pos6=5 6
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+wallClick=contact
+direction=up
+
+[graphics]
+block00=bomb_floor		#000000 #000000 #808080
+block01=bomb_floor_X		#000000 #000000 #808080
+block02=downarrow		#000000 #FF0000 #0000FF
+block03=downarrow		#000000 #FF0000 #0000FF
+block04=chess_sphere		#000000 #696969 #808080
+block05=chess_sphere_O		#000000 #696969 #808080
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=check		#000000 #00FFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__B__B_B__B__B
+row04=B_____________B
+row05=B_____________B
+row06=B__B__B_B__B__B
+row07=B_____________B
+row08=B_____________B
+row09=B__B__B_B__B__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

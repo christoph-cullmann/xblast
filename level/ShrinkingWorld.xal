@@ -1,0 +1,70 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Shrinking World 2
+author=Skywalker
+hint=Just get to the center  quick!
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[scrambleDraw]
+time=0.33
+numBlocks=1
+pos000=10 6
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+hidden=blastnow
+
+[graphics]
+block00=button_floor		#000000 #000000 #000000
+block01=button_floor_X		#000000 #000000 #000000
+block02=dark_block		#000000 #ADD8E6 #00FF7F
+block03=dark_block_R		#000000 #ADD8E6 #00FF7F
+block04=box		#000000 #ADD8E6 #FF0000
+block05=box		#000000 #ADD8E6 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+probBomb=14
+probRange=29
+probSpecial=14
+probHidden=43
+row00=BBBBBBBBBBBBBBB
+row01=B___X___X_X___B
+row02=B_BXBXB_BXBXB_B
+row03=B_XXXXXXXXXXX_B
+row04=BXBXBXBXBXBXBXB
+row05=B_XXXXXXXXXXX_B
+row06=BXBXBXBXBXBXBXB
+row07=B_XXXXXXXXXXX_B
+row08=BXBXBXBXBXBXBXB
+row09=B_XXXXXXXXXXX_B
+row10=B_BXBXB_BXBXB_B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB

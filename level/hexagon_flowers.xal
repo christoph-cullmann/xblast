@@ -1,0 +1,63 @@
+[info]
+name=Hexagon Flowers
+author=EPFL - cosun : Yves Bresson
+hint=Once more, RC showtime !
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1=12  2
+pos2= 3  3
+pos3= 8  3
+pos4=12  5
+pos5= 9  9
+pos6= 3 10
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+wallClick=anticlockwise
+
+[graphics]
+block00=hex              #000000 #F4A460 #000000
+block01=hex_X            #000000 #F4A460 #000000
+block02=hex_wall         #000000 #F4A460 #FFD700
+block03=hole_floor       #000000 #F4A460 #000000
+block04=hex_extra        #000000 #F4A460 #000000
+block05=hex_extra_O      #000000 #F4A460 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=_R_____R_____R_
+row01=RBBBBBBBBBBBBBR
+row02=_B____BRB____B_
+row03=_B_____B___B_B_
+row04=_B__B_____BRBB_
+row05=_B_BRB_____B_B_
+row06=RB__B________BR
+row07=_B______B____B_
+row08=_BB____BRB___B_
+row09=_B______B___BB_
+row10=_B___B_____BRB_
+row11=RBBBBBBBBBBBBBR
+row12=_R_____R_____R_
+

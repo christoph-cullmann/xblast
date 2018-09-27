@@ -1,0 +1,58 @@
+[info]
+name=Choupa Choups
+author=antimiage : Choupette
+hint=Attrape la sucette
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+
+[bombs]
+special=random
+
+[graphics]
+block00=city_free        #000000 #FF7F50 #4682B4
+block01=city_free_X      #000000 #FF7F50 #4682B4
+block02=city_rip         #000000 #4682B4 #FF7F50
+block03=city_rip_R       #000000 #4682B4 #FF7F50
+block04=light_house      #000000 #4682B4 #000000
+block05=light_house_O    #000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=23
+probRange=23
+probSpecial=24
+row00=BBBBBBBBBBBBBBB
+row01=B_X_b_X_X_b_X_B
+row02=B_X_B_X_X_B_X_B
+row03=B_X___X_X___X_B
+row04=BXXB_eXXX__BXXB
+row05=B___B__B__B___B
+row06=Bv__s_BqB____vB
+row07=B___B__B__Bs__B
+row08=BXXB__XXX__BXXB
+row09=B_X__sX_Xe__X_B
+row10=B_X_B_X_X_B_X_B
+row11=B_X_b_X_X_b_X_B
+row12=BBBBBBBBBBBBBBB
+

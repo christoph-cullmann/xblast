@@ -1,0 +1,101 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Out of the Frying Pan 2
+author=Skywalker
+hint=Don't forget about the wall
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+[scrambleDraw]
+time=0.33
+numBlocks=15
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=6 5
+pos004=6 6
+pos005=6 7
+pos006=7 5
+pos007=7 6
+pos008=7 7
+pos009=8 5
+pos010=8 6
+pos011=8 7
+pos012=9 5
+pos013=9 6
+pos014=9 7
+
+[scrambleDel]
+time=0.59
+numBlocks=7
+pos000=5 6
+pos001=6 6
+pos002=7 5
+pos003=7 6
+pos004=7 7
+pos005=8 6
+pos006=9 6
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1=5 5
+pos2=9 5
+pos3=9 7
+pos4=5 7
+pos5=6 6
+pos6=8 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+special=napalm
+hidden=threebombs
+nastyGentle=2
+nastyRange=2
+
+[graphics]
+block00=sphere_half		#000000 #000000 #FF4500
+block01=sphere_half_X		#000000 #000000 #FF4500
+block02=sphere_dark		#000000 #FF4500 #000000
+block03=sphere_dark		#000000 #FF4500 #000000
+block04=sphere_light		#000000 #FF0000 #000000
+block05=sphere_light_O		#000000 #FF0000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor
+
+[map]
+extraDistribution=special
+probBomb=25
+probRange=25
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXX_XXXXXXB
+row02=BXXXXXX_XXXXXXB
+row03=BXXXXXXXXXXXXXB
+row04=BXXXXXXXXXXXXXB
+row05=BXXXX_____XXXXB
+row06=B__XX_____XX__B
+row07=BXXXX_____XXX_B
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXX_XXXXXXB
+row11=BXXXXXX_XXXXXXB
+row12=BBBBBBBBBBBBBBB

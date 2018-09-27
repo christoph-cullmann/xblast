@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters InsideOutside
+author=Peter Riede
+hint=The Walls launch bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=kick
+key=teleport
+
+[player]
+bombs=2
+range=6
+pos1=8 7
+pos2=8 5
+pos3=6 6
+pos4=6 7
+pos5=6 5
+pos6=8 6
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+fuseTime=short
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=rock_floor		#000000 #32CD32 #228B22
+block01=rock_floor_X		#000000 #32CD32 #228B22
+block02=dark_block		#000000 #0000FF #0000FF
+block03=dark_block_R		#000000 #0000FF #0000FF
+block04=dark_house		#000000 #0000FF #0000FF
+block05=dark_house		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__v_______v__B
+row03=B____B_BB_____B
+row04=B___B____B____B
+row05=B_________B___B
+row06=B_q_B_______q_B
+row07=B_________B___B
+row08=B____B________B
+row09=B_____BB_B____B
+row10=B__v_______v__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

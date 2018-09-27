@@ -1,0 +1,79 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The River
+author=Tor Andræ
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compound2F
+
+
+[scrambleDel]
+time=0.3
+numBlocks=10
+pos000=2 4
+pos001=3 5
+pos002=3 6
+pos003=4 7
+pos004=9 6
+pos005=10 4
+pos006=10 5
+pos007=11 2
+pos008=11 4
+pos009=12 1
+
+[func]
+extra=kick
+
+[player]
+bombs=3
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 8
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=rock_floor		#000000 #228B22 #00FF7F
+block01=rock_floor		#000000 #228B22 #00FF7F
+block02=sphere_dark		#000000 #228B22 #F0FFF0
+block03=sphere_dark		#000000 #228B22 #F0FFF0
+block04=pumpkin		#000000 #FFFF00 #00FF7F
+block05=pumpkin_O		#000000 #FFFF00 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=ghost		#0000CD #0000CD #4169E1
+
+[map]
+probBomb=37
+probRange=37
+probVirus=10
+probSpecial=17
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B________X_XvXB
+row02=B___X______vv_B
+row03=BX_____X___vvXB
+row04=Bvv_______vvX_B
+row05=BvvvX____Xvv__B
+row06=BX_vvvX_Xvvv__B
+row07=B__XvvvXXvvX__B
+row08=B____XvX__X___B
+row09=B_____________B
+row10=B__X_______X__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

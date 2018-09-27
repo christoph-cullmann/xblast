@@ -1,0 +1,54 @@
+[info]
+name=Anti Gravity 2
+author=Fernando Benites
+hint=Do you know this Level.
+gameMode=R234--STDL
+
+[shrink]
+type=compound
+
+[func]
+
+[player]
+bombs=5
+range=10
+pos1= 1  1
+pos2= 5  1
+pos3= 9  1
+pos4=13  1
+pos5= 3  1
+pos6=11  1
+
+[bombs]
+playerClick=initial
+default=changedirectionathalf
+
+[graphics]
+block00=check            #000000 #0000FF #7F7F7F
+block01=check_X          #000000 #0000FF #7F7F7F
+block02=uparrow          #000000 #00FFFF #FFFF00
+block03=uparrow          #000000 #00FFFF #FFFF00
+block04=chess_sphere     #000000 #FFFFFF #7F7F7F
+block05=chess_sphere_O   #000000 #FFFFFF #7F7F7F
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=check            #000000 #FF0000 #7F7F7F
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B_B_B_B_B_B
+row03=B_____________B
+row04=B_B_B_B_B_B_B_B
+row05=B_____________B
+row06=B_B_B_B_B_B_B_B
+row07=B_____________B
+row08=B_B_B_B_B_B_B_B
+row09=B_____________B
+row10=B_B_B_B_B_B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

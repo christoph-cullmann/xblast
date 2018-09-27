@@ -1,0 +1,89 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Cross Of Doom 2
+author=Skywalker
+hint=Choose The Right Direction For Your Bombs
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.75
+numBlocks=8
+pos000=3 3
+pos001=3 9
+pos002=4 3
+pos003=4 9
+pos004=10 3
+pos005=10 9
+pos006=11 3
+pos007=11 9
+
+[scrambleDel]
+time=0.6
+numBlocks=4
+pos000=6 6
+pos001=7 5
+pos002=7 7
+pos003=8 6
+
+[func]
+extra=jump
+key=jump
+
+[player]
+bombs=5
+range=1
+pos1=1 3
+pos2=4 11
+pos3=10 1
+pos4=13 9
+pos5=7 1
+pos6=7 11
+initExtra=kick jump
+reviveExtra=kick jump
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+
+[graphics]
+block00=chess_floor		#000000 #ADD8E6 #4169E1
+block01=chess_floor_X		#000000 #ADD8E6 #4169E1
+block02=book_shelf		#000000 #ADD8E6 #6495ED
+block03=book_shelf		#000000 #ADD8E6 #6495ED
+block04=chess_sphere		#000000 #ADD8E6 #FF4500
+block05=chess_sphere_O		#000000 #ADD8E6 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=check
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=24
+probVirus=6
+probSpecial=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B__XrBXXXB____B
+row02=B__XXBXBXXs_XXB
+row03=B_s__BXXXB__XrB
+row04=BBXBBBrXrBBBBBB
+row05=BXXXXrXBXrXXXXB
+row06=BXBXXXBBBXXXBXB
+row07=BXXXXrXBXrXXXXB
+row08=BBBBBBrXrBBBXBB
+row09=BrX__BXXXB__s_B
+row10=BXX_sXXBXBXX__B
+row11=B____BXXXBrX__B
+row12=BBBBBBBBBBBBBBB

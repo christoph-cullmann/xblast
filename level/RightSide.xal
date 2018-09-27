@@ -1,0 +1,170 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Right Side
+author=Peter Riede
+hint=Leava left Side ! Go to the Right!
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+[scrambleDraw]
+time=0.14
+numBlocks=40
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 7
+pos006=1 8
+pos007=1 9
+pos008=1 10
+pos009=1 11
+pos010=2 1
+pos011=2 3
+pos012=2 4
+pos013=2 5
+pos014=2 6
+pos015=2 7
+pos016=2 8
+pos017=2 9
+pos018=2 10
+pos019=2 11
+pos020=3 1
+pos021=3 2
+pos022=3 3
+pos023=3 5
+pos024=3 6
+pos025=3 7
+pos026=3 9
+pos027=3 10
+pos028=3 11
+pos029=4 1
+pos030=4 2
+pos031=4 3
+pos032=4 4
+pos033=4 5
+pos034=4 6
+pos035=4 7
+pos036=4 8
+pos037=4 9
+pos038=4 10
+pos039=4 11
+
+[scrambleDel]
+time=0.25
+numBlocks=56
+pos000=8 1
+pos001=8 2
+pos002=8 3
+pos003=8 9
+pos004=8 10
+pos005=8 11
+pos006=9 1
+pos007=9 2
+pos008=9 3
+pos009=9 9
+pos010=9 10
+pos011=9 11
+pos012=10 1
+pos013=10 2
+pos014=10 3
+pos015=10 4
+pos016=10 5
+pos017=10 6
+pos018=10 7
+pos019=10 8
+pos020=10 9
+pos021=10 10
+pos022=10 11
+pos023=11 1
+pos024=11 2
+pos025=11 3
+pos026=11 4
+pos027=11 5
+pos028=11 6
+pos029=11 7
+pos030=11 8
+pos031=11 9
+pos032=11 10
+pos033=11 11
+pos034=12 1
+pos035=12 2
+pos036=12 3
+pos037=12 4
+pos038=12 5
+pos039=12 6
+pos040=12 7
+pos041=12 8
+pos042=12 9
+pos043=12 10
+pos044=12 11
+pos045=13 1
+pos046=13 2
+pos047=13 3
+pos048=13 4
+pos049=13 5
+pos050=13 6
+pos051=13 7
+pos052=13 8
+pos053=13 9
+pos054=13 10
+pos055=13 11
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=1 7
+pos3=1 9
+pos4=1 11
+pos5=1 3
+pos6=1 5
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #4682B4
+block01=karo_light_X		#000000 #6A5ACD #4682B4
+block02=pyramid		#000000 #DAA520 #DAA520
+block03=pyramid_R		#000000 #DAA520 #DAA520
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=B____BBBBBBBBBB
+row02=B_B__BXXXXBBBBB
+row03=B____BXBXX___BB
+row04=B__B_XXXXXBB_BB
+row05=B____XXXXXBB_BB
+row06=BB__BXXBXXBq_qB
+row07=B____XXXXXBB_BB
+row08=B__B_XXXXXBB_BB
+row09=B____BXBXX___BB
+row10=B_B__BXXXXBBBBB
+row11=B____BBBBBBBBBB
+row12=BBBBBBBBBBBBBBB

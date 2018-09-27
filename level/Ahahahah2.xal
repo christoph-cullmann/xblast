@@ -1,0 +1,73 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Ahahahah ^2
+author=Biel: Skywalker
+hint=comment
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=10
+range=3
+specialBombs=12
+pos1=5 4
+pos2=9 4
+pos3=7 5
+pos4=7 7
+pos5=5 8
+pos6=9 8
+initVirus=mini
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+special=napalm
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor_X		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #F0FFFF #FFD700
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bricks
+block10=score_floor
+
+[map]
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=Br____BbB____bB
+row02=Br_Br_____rB_bB
+row03=BB_rB_____Br_BB
+row04=Bb___________rB
+row05=BbB_________BrB
+row06=Bbb____B____brB
+row07=BbB_________BrB
+row08=Bb___________rB
+row09=BB_rB_____Br_BB
+row10=Bb_Br_____rB_rB
+row11=Bb____BrB____rB
+row12=BBBBBBBBBBBBBBB

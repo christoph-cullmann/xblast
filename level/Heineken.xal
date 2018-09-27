@@ -1,0 +1,72 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Heineken
+author=Glaset
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1=6 1
+pos2=9 1
+pos3=10 1
+pos4=5 1
+pos5=7 1
+pos6=8 1
+initVirus=run
+reviveVirus=run
+
+[bombs]
+normal=random
+special=construction
+playerClick=contact
+wallClick=contact
+direction=down
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=13
+probRange=11
+probVirus=13
+probSpecial=11
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B______X______B
+row03=B_____XXX_____B
+row04=B____XXXXX____B
+row05=B___XXXXXXX___B
+row06=B__XXXXXXXXX__B
+row07=B_XXXXXXXXXXX_B
+row08=BXXXXXXXXXXXXXB
+row09=B_XXXXXXXXXXX_B
+row10=B__XXXXXXXXX__B
+row11=B___XXXXXXX___B
+row12=BBBBBBBBBBBBBBB

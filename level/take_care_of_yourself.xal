@@ -1,0 +1,66 @@
+[info]
+name=Take care of yourself
+author=mariu
+hint=He laughs best who laughs last.
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=randomdir
+playerClick=thru
+fuseTime=short
+special=construction
+hidden=construction
+
+[graphics]
+block00=lego_floor       #000000 #191970 #CCCCCC
+block01=lego_floor_X     #000000 #191970 #CCCCCC
+block02=lego_white       #000000 #FF69B4 #000000
+block03=lego_white       #FF1493 #FFC0CB #000000
+block04=lego_black       #00FF7F #00FF7F #000000
+block05=lego_black_O     #00FF7F #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=39
+probRange=1
+probVirus=16
+probSpecial=6
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=B_XXXXX_XXXXX_B
+row02=BXXXXXXXXXXXXXB
+row03=BXXXXXXBXXXXXXB
+row04=BXXXXXXXXXXXXXB
+row05=BXXXXXBXBXXXXXB
+row06=BXXXXXXsXXXXXXB
+row07=BXXXXXBXBXXXXXB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXBXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=B_XXXXX_XXXXX_B
+row12=BBBBBBBBBBBBBBB
+

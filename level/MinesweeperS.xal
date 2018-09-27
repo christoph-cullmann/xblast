@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Minesweeper S
+author=Stuttgart : Thommes Volz
+hint=Attention on mines (invisible death)
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=poison
+
+[player]
+bombs=1
+range=3
+pos1=6 1
+pos2=8 1
+pos3=4 1
+pos4=10 1
+pos5=2 1
+pos6=12 1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=mines		#000000 #000000 #000000
+block01=mines		#000000 #000000 #000000
+block02=mines		#000000 #000000 #000000
+block03=mines		#000000 #000000 #000000
+block04=mines_b		#000000 #000000 #000000
+block05=mines_b		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=24
+probSpecial=38
+probHidden=38
+row00=BBBBBBBBBBBBBBB
+row01=BX_X_X_X_X_X_XB
+row02=B_____________B
+row03=BX_X_X_X_X_X_XB
+row04=B_____________B
+row05=BX_X_X_X_X_X_XB
+row06=B_____________B
+row07=BX_X_X_X_X_X_XB
+row08=B_____________B
+row09=BX_X_X_X_X_X_XB
+row10=B_____________B
+row11=BX_X_X_X_X_X_XB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,63 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Flower Power (1)
+author=Unknown (Adelaide)
+hint=Hey, I thought hippies didn't like war
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 2  2
+pos2=12  2
+pos3=12 10
+pos4= 2 10
+pos5= 7  2
+pos6= 7 10
+
+[bombs]
+
+[graphics]
+block00=flowers         #ff0000 #C0C0C0 #FFFF00
+block01=flowers         #ff0000 #C0C0C0 #FFFF00
+block02=peace           #000000 #C0C0C0 #228B22
+block03=wall_R          #000000 #C0C0C0 #228B22
+block04=smiley          #00ffff #C0C0C0 #FFFF00
+block05=smiley_O        #00ffff #C0C0C0 #FFFF00
+;block00=hex              #000000 #C0C0C0 #FFFF00
+;block01=hex_X            #000000 #C0C0C0 #FFFF00
+;block02=jizz             #000000 #C0C0C0 #228B22
+;block03=hole_floor       #000000 #C0C0C0 #228B22
+;block04=hex_extra        #000000 #C0C0C0 #FFFF00
+;block05=hex_extra_O      #000000 #C0C0C0 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=BBXBXBXBXBXBXBB
+row02=BX__XX___XX__XB
+row03=BB_BXB_B_BXB_BB
+row04=BXXX_XX_XX_XXXB
+row05=BBXBXBXBXBXBXBB
+row06=BX_X_X_X_X_X_XB
+row07=BBXBXBXBXBXBXBB
+row08=BXXX_XX_XX_XXXB
+row09=BB_BXB_B_BXB_BB
+row10=BX__XX___XX__XB
+row11=BBXBXBXBXBXBXBB
+row12=BBBBBBBBBBBBBBB

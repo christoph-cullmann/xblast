@@ -1,0 +1,119 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=The Holy Grail 2
+author=Skywalker
+hint=Run like shit to get the grail.
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.68
+numBlocks=51
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=4 3
+pos008=4 5
+pos009=4 6
+pos010=4 7
+pos011=4 8
+pos012=4 9
+pos013=5 3
+pos014=5 4
+pos015=5 5
+pos016=5 6
+pos017=5 8
+pos018=6 3
+pos019=6 4
+pos020=6 5
+pos021=6 8
+pos022=6 9
+pos023=7 3
+pos024=7 4
+pos025=7 8
+pos026=7 9
+pos027=8 3
+pos028=8 4
+pos029=8 5
+pos030=8 8
+pos031=8 9
+pos032=9 3
+pos033=9 4
+pos034=9 5
+pos035=9 6
+pos036=9 8
+pos037=9 9
+pos038=10 3
+pos039=10 5
+pos040=10 6
+pos041=10 7
+pos042=10 8
+pos043=10 9
+pos044=11 3
+pos045=11 4
+pos046=11 5
+pos047=11 6
+pos048=11 7
+pos049=11 8
+pos050=11 9
+
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=1
+range=1
+pos1=2 1
+pos2=12 1
+pos3=12 11
+pos4=2 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+hidden=fungus
+
+[graphics]
+block00=karo_dark		#000000 #FF4500 #FFFF00
+block01=karo_dark_X		#000000 #FF4500 #FFFF00
+block02=wall		#000000 #32CD32 #228B22
+block03=wall_R		#000000 #32CD32 #228B22
+block04=chest		#000000 #6A5ACD #FFD700
+block05=chest_O		#000000 #6A5ACD #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor
+
+[map]
+extraDistribution=get
+probBomb=25
+probRange=12
+probHidden=50
+row00=BBBBBBBBBBBBBBB
+row01=BX__XXXXXXX__XB
+row02=BXBBXBBXBBXBBXB
+row03=B_XXXBXXXBXXX_B
+row04=BXBXBXBXBXBXBXB
+row05=BBBXXXXXXXXXBBB
+row06=B_XXBXBqBXBXX_B
+row07=BBBXXXXXXXXXBBB
+row08=BXBXBXBXBXBXBXB
+row09=B_XXXBXXXBXXXXB
+row10=BXBBXBBXBBXBBXB
+row11=BX__XXXXXXX__XB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,94 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Light Sky Blue
+author=Tobias Johansson
+hint=Forza Malmö!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.5
+numBlocks=16
+pos000=4 4
+pos001=4 9
+pos002=5 4
+pos003=5 8
+pos004=5 9
+pos005=6 4
+pos006=6 7
+pos007=6 9
+pos008=7 4
+pos009=7 6
+pos010=7 9
+pos011=8 4
+pos012=8 5
+pos013=8 9
+pos014=9 4
+pos015=9 9
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+normal=napalm
+special=firecracker
+hidden=construction
+bombClick=snooker
+playerClick=contact
+wallClick=rebound
+fuseTime=long
+
+[graphics]
+block00=score_floor		#87CEFA #87CEFA #87CEFA
+block01=score_floor		#87CEFA #87CEFA #87CEFA
+block02=sphere_dark		#87CEFA #00BFFF #FFF0F5
+block03=sphere_dark		#87CEFA #00BFFF #FFF0F5
+block04=sphere_light		#87CEFA #FFF0F5 #FFF0F5
+block05=sphere_light_O		#87CEFA #FFF0F5 #FFF0F5
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+probBomb=13
+probRange=11
+probVirus=13
+probSpecial=49
+probHidden=13
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B________XXX__B
+row02=B____XXX__XXX_B
+row03=B__XXXXX___XX_B
+row04=B___XXXX______B
+row05=B____X_____X__B
+row06=B________XXXX_B
+row07=B__X___XXXXX__B
+row08=B_XXXX____X___B
+row09=BXXXXXX_______B
+row10=B__XXXX____XX_B
+row11=B_________XX__B
+row12=BBBBBBBBBBBBBBB

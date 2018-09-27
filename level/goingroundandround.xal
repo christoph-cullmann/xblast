@@ -1,0 +1,80 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Going Round and Round
+author=MisterE
+hint=Getting Dizzy already?
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=12
+pos000=1 1
+pos001=1 2
+pos002=1 10
+pos003=1 11
+pos004=2 1
+pos005=2 11
+pos006=12 1
+pos007=12 11
+pos008=13 1
+pos009=13 2
+pos010=13 10
+pos011=13 11
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=5
+specialBombs=30
+pos1=1 1
+pos2=11 6
+pos3=13 1
+pos4=1 11
+pos5=13 11
+pos6=3 6
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+
+[bombs]
+special=destruction
+wallClick=clockwise
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B___XB___BX___B
+row02=B__XB_____BX__B
+row03=B_XBXB___BXBX_B
+row04=BXBX_XB_BX_XBXB
+row05=BBX___XBX___XBB
+row06=BX___XB_BX___XB
+row07=BBX_XB___BX_XBB
+row08=BXBXB_____BXBXB
+row09=B_XB__B_B__BX_B
+row10=B__XB__B__BX__B
+row11=B___XB___BX___B
+row12=BBBBBBBBBBBBBBB

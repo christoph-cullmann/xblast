@@ -1,0 +1,69 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Playground
+author=Tobias Johansson
+hint=Let's have fun!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=3
+pos1=7 1
+pos2=7 11
+pos3=7 1
+pos4=7 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=firecracker
+
+[graphics]
+block00=button_floor		#000000 #32CD32 #228B22
+block01=button_floor		#000000 #32CD32 #228B22
+block02=dark_block		#000000 #0000FF #0000FF
+block03=dark_block_R		#000000 #0000FF #0000FF
+block04=dark_block		#000000 #4682B4 #4682B4
+block05=dark_block		#000000 #4682B4 #4682B4
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4682B4 #4682B4 #4682B4
+
+[map]
+probBomb=13
+probRange=11
+probVirus=13
+probSpecial=11
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B_____v_v_____B
+row02=BXXXX_v_v_XXXXB
+row03=B_____v_v_____B
+row04=BXXXX_v_v_XXXXB
+row05=B_____________B
+row06=B_B_B_B_B_B_B_B
+row07=B_____________B
+row08=BXXXX_v_v_XXXXB
+row09=B_____v_v_____B
+row10=BXXXX_v_v_XXXXB
+row11=B_____v_v_____B
+row12=BBBBBBBBBBBBBBB

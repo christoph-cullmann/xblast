@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fucking Sebastian
+author=Peter Riede
+hint=Fuck Sebastian!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+
+[bombs]
+default=grenade
+special=fungus
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor_X		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=B___v_____v___B
+row02=Bss_v_sXs_v_ssB
+row03=BX__X__s__X__XB
+row04=BX_BBB___BBB_XB
+row05=BXXXvXXXXXvXXXB
+row06=BXXXvXXqXXvXXXB
+row07=BXXXvXXXXXvXXXB
+row08=BX_BBB___BBB_XB
+row09=BX__X__s__X__XB
+row10=Bss_v_sXs_v_ssB
+row11=B___v_____v___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=The Great Escape
+author=The Adelaide Group
+hint=Go on the attack or it WILL be a draw. Use the speed.
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=speed
+
+[player]
+bombs=3
+range=2
+pos1=2 4
+pos2=10 2
+pos3=12 8
+pos4=4 10
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #E6E6FA #40E0D0
+block01=iron_floor		#000000 #E6E6FA #40E0D0
+block02=dark_block		#000000 #2E8B57 #3CB371
+block03=dark_block_R		#000000 #2E8B57 #3CB371
+block04=extra		#000000 #4682B4 #00BFFF
+block05=extra_O		#000000 #4682B4 #00BFFF
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probVirus=11
+probSpecial=14
+row00=BBBBBBBBBBBBBBB
+row01=BXBXB_XXX__XXXB
+row02=BXB_B_BBBB_BBBB
+row03=BXBX__B___B___B
+row04=B__B_BX_B_B_BXB
+row05=B_B____X_X__BXB
+row06=BXBXB_B_B_BXBXB
+row07=BXB__X_X____B_B
+row08=BXB_B_B_XB_B__B
+row09=B___B___B__XBXB
+row10=BBBB_BBBB_B_BXB
+row11=BXXX__XXX_BXBXB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,76 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Quick And The Dead
+author=MisterE
+hint=The Quick And The Dead
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=10
+range=10
+pos1=5 11
+pos2=13 6
+pos3=9 1
+pos4=1 6
+pos5=5 1
+pos6=9 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+special=threebombs
+hidden=construction
+bombClick=rebound
+playerClick=rebound
+wallClick=rebound
+fuseTime=short
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex_X		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=6
+probRange=6
+probVirus=75
+probSpecial=6
+probHidden=6
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=BBBB__B_B__BBBB
+row02=BBB__q_B_q__BBB
+row03=BB___________BB
+row04=B___XXX_XXX___B
+row05=BB___________BB
+row06=B_qX_X_X_X_Xq_B
+row07=BB___________BB
+row08=B___XXX_XXX___B
+row09=BB___________BB
+row10=BBB__q_B_q__BBB
+row11=BBBB__B_B__BBBB
+row12=BBBBBBBBBBBBBBB

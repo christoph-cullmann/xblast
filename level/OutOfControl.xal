@@ -1,0 +1,74 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Out of Control 2
+author=Skywalker
+hint=There can only be one Master
+gameMode=R234--STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=4
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=mini
+reviveVirus=mini
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=randomdir
+wallClick=split
+playerClick=thru
+special=threebombs
+
+[graphics]
+block00=iron_floor		#000000 #FF0000 #FFFFFF
+block01=iron_floor_X		#000000 #FF0000 #FFFFFF
+block02=dark_block		#000000 #FFFF00 #00CED1
+block03=dark_block_R		#000000 #FFFF00 #00CED1
+block04=bricks		#000000 #FF0000 #000000
+block05=brick_O		#000000 #FF0000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=BssssXbrbXssssB
+row02=BsXBBBBXBBBBXsB
+row03=BsBsssssssssBsB
+row04=BXBsBssBssBsBXB
+row05=BbBssssXssssBbB
+row06=BrXssBXqXBssXrB
+row07=BbBssssXssssBbB
+row08=BXBsBssBssBsBXB
+row09=BsBsssssssssBsB
+row10=BsXBBBBXBBBBXsB
+row11=BssssXbrbXssssB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,60 @@
+[info]
+name=Born To Be Killed
+author=Laurent Marsan
+hint=Be very careful at the start
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=15
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #FF7F50 #FA8072
+block01=karo_light_X     #000000 #FF7F50 #FA8072
+block02=pyramid          #000000 #6A5ACD #000000
+block03=pyramid_R        #000000 #8470FF #000000
+block04=extra            #000000 #4682B4 #FF4500
+block05=extra_O          #000000 #B0C4DE #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=50
+probSpecial=18
+probHidden=-6
+row00=BBBBBBBBBBBBBBB
+row01=BqXs_______sXqB
+row02=BXBBbB_B_BbBBXB
+row03=BsBbBb___bBbBsB
+row04=B_XXXXBXBXXXX_B
+row05=B___bBsssBb___B
+row06=B_BB_Xs_sX_BB_B
+row07=B___bBsssBb___B
+row08=B_XXXXBXBXXXX_B
+row09=BsBbBb___bBbBsB
+row10=BXBBbB_B_BbBBXB
+row11=BqXs_______sXqB
+row12=BBBBBBBBBBBBBBB
+

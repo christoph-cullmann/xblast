@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Demolition Man
+author=Chris Doherty (Adelaide)
+hint=Cut a path of destruction to your opponents and kill them
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=specialBomb
+
+[player]
+bombs=9
+range=9
+specialBombs=30
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=destruction
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=dark_block       #000000 #CD5C5C #CD5C5C
+block03=dark_block_R     #000000 #CD5C5C #CD5C5C
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__BBB___BBB__B
+row02=B__BBBBBBBBB__B
+row03=BBBBBBBBBBBBBBB
+row04=BBBBBBBBBBBBBBB
+row05=BBBBBBBBBBBBBBB
+row06=BBBBBBBBBBBBBBB
+row07=BBBBBBBBBBBBBBB
+row08=BBBBBBBBBBBBBBB
+row09=BBBBBBBBBBBBBBB
+row10=B__BBBBBBBBB__B
+row11=B__BBB___BBB__B
+row12=BBBBBBBBBBBBBBB

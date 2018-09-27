@@ -1,0 +1,94 @@
+; XBlast TNT level - edited with BlastEd 
+; BlastEd is (C) 1998-99 by Yves Bresson 
+; my email  :  xbresse@xblast-center.com
+; and the website : http://get.to/xblast 
+
+[info]
+name=Human Bombs
+author=EPFL - disun : Yves Bresson
+hint=What the f.. they turn into BOMBS !!
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+[scrambleDraw]
+time=0.25
+numBlocks=1
+pos000=7 6
+
+[scrambleDel]
+time=0.25
+numBlocks=16
+pos000=4 3
+pos001=5 4
+pos002=5 6
+pos003=5 7
+pos004=5 8
+pos005=6 5
+pos006=6 8
+pos007=6 9
+pos008=7 4
+pos009=7 9
+pos010=8 4
+pos011=8 9
+pos012=9 5
+pos013=9 6
+pos014=9 7
+pos015=9 8
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=2
+range=6
+pos1=7 1
+pos2=12 2
+pos3=3 3
+pos4=11 9
+pos5=2 10
+pos6=7 11
+
+[bombs]
+fuseTime=long
+hidden=parasol
+bombClick=contact
+playerClick=contact
+
+[graphics]
+block00=button_floor		#40E0D0 #FFFF00 #000000
+block01=button_floor_X		#40E0D0 #FFFF00 #000000
+block02=dark_block		#40E0D0 #7FFFD4 #000000
+block03=dark_block_R		#40E0D0 #7FFFD4 #000000
+block04=extra		#20B2AA #00FF00 #000000
+block05=extra_O		#40E0D0 #00FF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=7
+probRange=7
+probSkull=7
+probSpecial=55
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=B________X____B
+row02=B_XX__X____X__B
+row03=B_X_R______XX_B
+row04=B____R_RR_____B
+row05=B_X___RXXR__X_B
+row06=B____RXXXR____B
+row07=B__X_RXXXR_X__B
+row08=B____RRXXR____B
+row09=B_XX__RRR___X_B
+row10=B__X_X_____XX_B
+row11=B________X____B
+row12=BBBBBBBBBBBBBBB
+
+; end of file 

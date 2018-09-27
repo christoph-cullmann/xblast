@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Suicide
+author=Mike Schneider
+hint=Drop bombs while you're still invincible
+gameMode=R234--ST-L
+
+[shrink]
+type=compound
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=iron_floor		#FF0000 #000000 #FFFF00
+block01=iron_floor		#FF0000 #000000 #FFFF00
+block02=dark_block		#000000 #6A5ACD #000000
+block03=dark_block_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #228B22 #00FF7F
+block05=extra_O		#000000 #228B22 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#8A2BE2 #8A2BE2 #8A2BE2
+
+[map]
+probBomb=38
+probRange=38
+probVirus=13
+row00=BBBBBBBBBBBBBBB
+row01=B_X____X____X_B
+row02=BXBXBBBBBBBXBXB
+row03=B_X____X____X_B
+row04=B_B_BBBXBBB_B_B
+row05=B_B_BX___XB_B_B
+row06=BXBXX__B__XXBXB
+row07=B_B_BX___XB_B_B
+row08=B_B_BBBXBBB_B_B
+row09=B_X____X____X_B
+row10=BXBXBBBBBBBXBXB
+row11=B_X____X____X_B
+row12=BBBBBBBBBBBBBBB

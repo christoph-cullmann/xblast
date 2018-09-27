@@ -1,0 +1,57 @@
+[info]
+name=Tous aux abris !
+author=Thomas CORNET
+hint=Rapidite et maitrise.
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1= 1  1
+pos2=13  1
+pos3= 1 11
+pos4=13 11
+pos5= 5  7
+pos6= 9  5
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=dark_way         #000000 #00FF00 #CCCCCC
+block01=dark_way_X       #000000 #00FF00 #CCCCCC
+block02=r_i_p            #000000 #999999 #00FF00
+block03=r_i_p_R          #000000 #999999 #00FF00
+block04=pumpkin          #000000 #DAA520 #00FF00
+block05=pumpkin_O        #000000 #DAA520 #00FF00
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B_B_B_B_B_B
+row03=B_____________B
+row04=B_B_B_B_B_B_B_B
+row05=B_____________B
+row06=B_B_B_B_B_B_B_B
+row07=B_____________B
+row08=B_B_B_B_B_B_B_B
+row09=B_____________B
+row10=B_B_B_B_B_B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

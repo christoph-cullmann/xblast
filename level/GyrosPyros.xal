@@ -1,0 +1,86 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Gyros Pyros
+author=Peter Riede
+hint=Kick the Pyros and make Gyros
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.5
+numBlocks=16
+pos000=2 3
+pos001=2 9
+pos002=3 2
+pos003=3 3
+pos004=3 9
+pos005=3 10
+pos006=5 2
+pos007=5 10
+pos008=9 2
+pos009=9 10
+pos010=11 2
+pos011=11 3
+pos012=11 9
+pos013=11 10
+pos014=12 3
+pos015=12 9
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=7 9
+pos2=1 1
+pos3=7 3
+pos4=13 1
+pos5=13 11
+pos6=1 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=contact
+default=pyro
+
+[graphics]
+block00=rock_floor		#D2691E #A0522D #B8860B
+block01=rock_floor_X		#D2691E #A0522D #B8860B
+block02=jizz		#8B4513 #CD853F #191970
+block03=hole_floor		#D2691E #CD853F #191970
+block04=ghost_ci		#D2691E #F4A460 #DEB887
+block05=ghost_ci_R		#D2691E #F4A460 #DEB887
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=karo_dark		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=get
+probBomb=45
+probRange=45
+probVirus=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__B_B_B_B_B__B
+row03=B_BB_BB_BB_BB_B
+row04=B_____________B
+row05=B_BB_BB_BB_BB_B
+row06=B_____________B
+row07=B_BB_BB_BB_BB_B
+row08=B_____________B
+row09=B_BB_BB_BB_BB_B
+row10=B__B_B_B_B_B__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

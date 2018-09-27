@@ -1,0 +1,140 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Tigers
+author=Glaset
+hint=Tigers are playing...
+gameMode=R23456S--L
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=78
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 9
+pos004=1 10
+pos005=1 11
+pos006=2 1
+pos007=2 2
+pos008=2 3
+pos009=2 9
+pos010=2 10
+pos011=2 11
+pos012=3 1
+pos013=3 2
+pos014=3 3
+pos015=3 9
+pos016=3 10
+pos017=3 11
+pos018=4 1
+pos019=4 2
+pos020=4 3
+pos021=4 9
+pos022=4 10
+pos023=4 11
+pos024=5 1
+pos025=5 2
+pos026=5 3
+pos027=5 9
+pos028=5 10
+pos029=5 11
+pos030=6 1
+pos031=6 2
+pos032=6 3
+pos033=6 9
+pos034=6 10
+pos035=6 11
+pos036=7 1
+pos037=7 2
+pos038=7 3
+pos039=7 9
+pos040=7 10
+pos041=7 11
+pos042=8 1
+pos043=8 2
+pos044=8 3
+pos045=8 9
+pos046=8 10
+pos047=8 11
+pos048=9 1
+pos049=9 2
+pos050=9 3
+pos051=9 9
+pos052=9 10
+pos053=9 11
+pos054=10 1
+pos055=10 2
+pos056=10 3
+pos057=10 9
+pos058=10 10
+pos059=10 11
+pos060=11 1
+pos061=11 2
+pos062=11 3
+pos063=11 9
+pos064=11 10
+pos065=11 11
+pos066=12 1
+pos067=12 2
+pos068=12 3
+pos069=12 9
+pos070=12 10
+pos071=12 11
+pos072=13 1
+pos073=13 2
+pos074=13 3
+pos075=13 9
+pos076=13 10
+pos077=13 11
+
+
+[func]
+
+[player]
+bombs=5
+range=15
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_vvv_vvv_v_vvB
+row05=B__v__v_v_v_v_B
+row06=B__v__vvv_v_vvB
+row07=B__v__v_v_v_v_B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

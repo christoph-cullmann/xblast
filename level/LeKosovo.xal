@@ -1,0 +1,72 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Le Kosovo
+author=EPFL - insun : Yves Bresson
+hint=-no comment-
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+specialBombs=12
+pos1=13 1
+pos2=1 2
+pos3=4 5
+pos4=10 7
+pos5=1 11
+pos6=13 11
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=contact
+wallClick=randomdir
+playerClick=thru
+default=mine
+special=construction
+
+[graphics]
+block00=rock_floor		#000000 #A52A2A #000000
+block01=rock_floor		#000000 #A52A2A #000000
+block02=pyramid_R		#000000 #A52A2A #000000
+block03=pyramid		#000000 #F4A460 #000000
+block04=dark_block		#000000 #A52A2A #000000
+block05=dark_block		#000000 #A52A2A #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=16
+probVirus=16
+row00=BBBBBBBBBBBBBBB
+row01=BB____________B
+row02=B_______XB____B
+row03=B__XX___XX____B
+row04=B__XB_________B
+row05=B__________BX_B
+row06=B______XX__XX_B
+row07=B______BX_____B
+row08=B__XX_________B
+row09=B__BX______XX_B
+row10=B__________XB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

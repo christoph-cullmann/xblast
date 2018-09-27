@@ -1,0 +1,62 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=It'll Grow On You
+author=Chris Doherty (Adelaide)
+hint=Use the fungus bombs to crowd the middle
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=fungus
+
+[graphics]
+block00=lego_floor       #000000 #228B22 #228B22
+block01=lego_floor_X     #000000 #228B22 #228B22
+block02=wall             #000000 #B22222 #000000
+block03=wall             #000000 #800000 #2E8B57
+block04=extra            #000000 #808080 #C0C0C0
+block05=extra_O          #000000 #808080 #C0C0C0
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probVirus=25
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B___X_X_X_X___B
+row02=B__XBXBXBXBX__B
+row03=B_XB__X_X__BX_B
+row04=BXBXXBBXBBXXBXB
+row05=B_X_X_____X_X_B
+row06=BXBX_XXXXX_XBXB
+row07=B_X_X_____X_X_B
+row08=BXBXXBBXBBXXBXB
+row09=B_XB__X_X__BX_B
+row10=B__XBXBXBXBX__B
+row11=B___X_X_X_X___B
+row12=BBBBBBBBBBBBBBB

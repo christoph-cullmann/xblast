@@ -1,0 +1,62 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=When I was Your Age 2
+author=Skywalker
+hint=Use the long fuses to set up traps
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=7
+range=3
+pos1=5 4
+pos2=9 4
+pos3=9 8
+pos4=5 8
+pos5=6 6
+pos6=8 6
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=thru
+fuseTime=long
+
+[graphics]
+block00=city_free		#000000 #000000 #000000
+block01=city_free_X		#000000 #000000 #000000
+block02=dark_house		#000000 #000000 #000000
+block03=dark_house_R		#000000 #000000 #000000
+block04=score_floor		#000000 #D2B48C #000000
+block05=score_floor		#000000 #D2B48C #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=qqqqBXXXXXBqqqq
+row01=qqqqBXXXXXBqqqq
+row02=qqqBBBBBBBBBqqq
+row03=qqqB_______Bqqq
+row04=BBBB_______BBBB
+row05=XXXB__B_B__BXXX
+row06=XXXB_______BXXX
+row07=XXXB__B_B__BXXX
+row08=BBBB_______BBBB
+row09=qqqB_______Bqqq
+row10=qqqBBBBBBBBBqqq
+row11=qqqqBXXXXXBqqqq
+row12=qqqqBXXXXXBqqqq

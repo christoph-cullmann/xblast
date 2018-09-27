@@ -1,0 +1,91 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fourfold
+author=Stn
+hint=Slow Motion
+gameMode=-2-4--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.75
+numBlocks=2
+pos000=7 4
+pos001=7 8
+
+[scrambleDel]
+time=0.25
+numBlocks=14
+pos000=7 1
+pos001=7 11
+pos002=2 6
+pos003=12 6
+pos004=7 2
+pos005=7 10
+pos006=3 6
+pos007=11 6
+pos008=4 6
+pos009=10 6
+pos010=6 6
+pos011=8 6
+pos012=7 5
+pos013=7 7
+
+[func]
+extra=kick
+key=rc
+
+[player]
+bombs=1
+range=35
+pos1=3 3
+pos2=11 9
+pos3=11 3
+pos4=3 9
+pos5=7 1
+pos6=7 11
+initVirus=slow
+reviveVirus=slow
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#000000 #FF4500 #00008B
+block01=karo_dark		#000000 #FF4500 #00008B
+block02=wall		#000000 #32CD32 #228B22
+block03=wall_R		#000000 #32CD32 #FFFF00
+block04=chest		#000000 #FFD700 #6A5ACD
+block05=chest_O		#000000 #FFD700 #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probBomb=32
+probVirus=32
+probSpecial=13
+row00=BBBBBBBBBBBBBBB
+row01=BBX____B____XBB
+row02=BB_XssXBXssX_BB
+row03=BB__XXBBBXX__BB
+row04=BB_sXX_B_XXs_BB
+row05=BB__B_XBX_B__BB
+row06=BBBBBBBBBBBBBBB
+row07=BB__B_XBX_B__BB
+row08=BB_sXX_B_XXs_BB
+row09=BB__XXBBBXX__BB
+row10=BB_XssXBX__X_BB
+row11=BBX____B____XBB
+row12=BBBBBBBBBBBBBBB

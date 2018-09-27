@@ -1,0 +1,84 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Jedi Power 7
+author=Skywalker
+hint=Peace & Love ? Let me laugh !
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.66
+numBlocks=16
+pos000=5 4
+pos001=5 8
+pos002=6 4
+pos003=6 5
+pos004=6 6
+pos005=6 7
+pos006=6 8
+pos007=7 4
+pos008=7 8
+pos009=8 4
+pos010=8 5
+pos011=8 6
+pos012=8 7
+pos013=8 8
+pos014=9 4
+pos015=9 8
+
+[func]
+key=teleport
+
+[player]
+bombs=5
+range=5
+pos1=2 2
+pos2=12 2
+pos3=4 6
+pos4=10 6
+pos5=2 10
+pos6=12 10
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=snooker
+default=fungus
+
+[graphics]
+block00=city_free		#FF8C00 #FFA500 #0000FF
+block01=city_free_X		#FF8C00 #FFA500 #0000FF
+block02=dark_house		#FF8C00 #FFA500 #000000
+block03=dark_house_R		#FF8C00 #FFA500 #000000
+block04=light_house		#FF8C00 #FFA500 #000000
+block05=light_house_O		#FF8C00 #FFA500 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____X_______B
+row03=BXX_XXX_______B
+row04=BBXXXXXXXBBXBBB
+row05=BXBX__XXBXB_BXB
+row06=BXXXXXXXXXX_XXB
+row07=B__XBXBXXXB_BXB
+row08=B___XBXXXBBXBBB
+row09=B_____X_______B
+row10=B____XXX______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

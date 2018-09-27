@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Blind
+author=Stn
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=igniteAll
+key=cloak
+
+[player]
+bombs=2
+range=4
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=2 7
+pos6=7 8
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+bombClick=clockwise
+wallClick=anticlockwise
+
+[graphics]
+block00=dark_way		#000000 #6A5ACD #00FF7F
+block01=dark_way		#000000 #6A5ACD #00FF7F
+block02=r_i_p		#000000 #2E8B57 #6A5ACD
+block03=r_i_p_R		#000000 #2E8B57 #6A5ACD
+block04=pumpkin		#000000 #000000 #6A5ACD
+block05=pumpkin_O		#000000 #000000 #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=24
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B__X_X__X_X___B
+row02=B__X_X__X_X___B
+row03=B__X_X__X_XBXXB
+row04=BXBXXXBXX__XXXB
+row05=B________XBX__B
+row06=BXBXXXXBX__X__B
+row07=B___X___X__B__B
+row08=B___X___X__XXXB
+row09=BXXXXXXXXXXBXXB
+row10=B___B_X___X___B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB

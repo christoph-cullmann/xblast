@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=La Corniche
+author=EPFL - insun : Yves Bresson
+hint=Don't Fall Down !
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=4
+pos1=9 1
+pos2=5 2
+pos3=13 6
+pos4=1 7
+pos5=2 11
+pos6=9 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=thru
+
+[graphics]
+block00=score_right_up		#000000 #DEB887 #00FF7F
+block01=score_right_up		#000000 #DEB887 #00FF7F
+block02=ghost		#000000 #4169E1 #4169E1
+block03=score_right_down		#000000 #000000 #000000
+block04=bomb_floor		#000000 #000000 #3CB371
+block05=score_right_up		#000000 #DEB887 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_right_down		#000000 #000000 #000000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBX____BB_BB
+row02=BB____vvv___X_B
+row03=BBv_vvBBB_vv_vB
+row04=BBB_BBB_B_BB_BB
+row05=B__X___B_X___BB
+row06=B_vvv_vvv_vv__B
+row07=B_BBB_BBB_BBvvB
+row08=BvB__X___X_BBBB
+row09=BBBvv_v_vv___BB
+row10=BBBBB_BvBB_vvBB
+row11=BB_____BB__BBBB
+row12=BBBBBBBBBBBBBBB

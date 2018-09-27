@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Illusion
+author=EPFL - cosun : Yves Bresson
+hint=Don't trust your eyes
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+
+[player]
+bombs=3
+range=3
+pos1=6 5
+pos2=7 5
+pos3=8 5
+pos4=6 7
+pos5=7 7
+pos6=8 7
+
+[bombs]
+
+[graphics]
+block00=score_floor		#000000 #000000 #000000
+block01=score_floor		#000000 #000000 #000000
+block02=sphere_dark		#000000 #000000 #000000
+block03=score_floor		#000000 #000000 #000000
+block04=score_floor		#000000 #000000 #000000
+block05=score_floor		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=-48
+probHidden=63
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B_B_B_B_B_B
+row03=B__brb___brb__B
+row04=B_BrBXBXBXBrB_B
+row05=B__bX_____X___B
+row06=B_B_B__B__B_B_B
+row07=B___X_____X___B
+row08=B_BrBXBXBXBbB_B
+row09=B__brb___rbr__B
+row10=B_B_B_B_B_B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

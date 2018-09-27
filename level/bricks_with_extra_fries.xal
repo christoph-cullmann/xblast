@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Bricks with extra fries
+author=Garth Denley (Adelaide)
+hint=Use construction bombs to control the other bombs
+gameMode=R234--STDL
+
+[shrink]
+
+[func]
+key=specialBomb
+
+[player]
+bombs=7
+range=9
+specialBombs=30
+pos1= 2  5
+pos2= 8  1
+pos3=12  7
+pos4= 6 11
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=randomdir
+wallClick=randomdir
+playerClick=thru
+special=construction
+
+[graphics]
+block00=iron_floor       #000000 #DEB887 #00FF7F
+block01=iron_floor_X     #000000 #DEB887 #00FF7F
+block02=dark_block       #000000 #00FF7F #4682B4
+block03=dark_block_R     #000000 #00FF7F #4682B4
+block04=bricks           #000000 #FF3030 #000000
+block05=brick_O          #000000 #FF3030 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BB___BBBBB___BB
+row01=B_B_BB___BB_B_B
+row02=B____B___B____B
+row03=__B__B___B__B__
+row04=_BBBBB___BBBBB_
+row05=_B___________B_
+row06=_B_____R_____B_
+row07=_B___________B_
+row08=_BBBBB___BBBBB_
+row09=__B__B___B__B__
+row10=B____B___B____B
+row11=B_B_BB___BB_B_B
+row12=BB___BBBBB___BB

@@ -1,0 +1,70 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Blast Away
+author=Glaset
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=13
+probRange=11
+probVirus=13
+probSpecial=11
+probHidden=13
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__XX_X__rXX__B
+row02=B__Xb_X_X__X__B
+row03=BX___XX_XXb__XB
+row04=B_XX_X___XXX__B
+row05=B_r__brXb__rb_B
+row06=B_X_XX_XX_X_XXB
+row07=BXX_XX_XX_X_bXB
+row08=BrX_b__XX_b___B
+row09=B_brXXr__rXXX_B
+row10=B_XXbXbXXXbXX_B
+row11=B___rX____r___B
+row12=BBBBBBBBBBBBBBB

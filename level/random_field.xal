@@ -1,0 +1,62 @@
+[info]
+name=Random Field
+author=mariu
+hint=The battle field is the random field
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+
+[graphics]
+block00=dark_way         #000000 #00FF00 #CCCCCC
+block01=dark_way_X       #000000 #00FF00 #CCCCCC
+block02=r_i_p            #000000 #999999 #00FF00
+block03=r_i_p_R          #000000 #999999 #00FF00
+block04=pumpkin          #000000 #DAA520 #00FF00
+block05=pumpkin_O        #000000 #DAA520 #00FF00
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probVirus=25
+probSpecial=18
+row00=BBBBBBBBBBBBBBB
+row01=B_rXsXs_XrXsq_B
+row02=BBqbbBbqBsrrbsB
+row03=BsXrBsXrbqXbsbB
+row04=BqBsXrqXrbBsbqB
+row05=BXbrrqbqsXXrsbB
+row06=BbsBsbBBbBrBbsB
+row07=BsqXssXrsrsqrBB
+row08=BBbXbbrXBsbXsXB
+row09=BXrsqqrbsbXsqbB
+row10=BbrsXBBXbqXBrXB
+row11=B_XqBsX_rrBrb_B
+row12=BBBBBBBBBBBBBBB
+

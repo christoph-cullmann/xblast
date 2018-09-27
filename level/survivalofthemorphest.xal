@@ -1,0 +1,110 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Survival of the Morphest
+author=EPFL - insun : Yves Bresson
+hint=Mooooooorrph !!!!!!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.025
+numBlocks=26
+pos000=2 3
+pos001=2 9
+pos002=5 11
+pos003=9 11
+pos004=12 9
+pos005=12 3
+pos006=9 1
+pos007=5 1
+pos008=2 2
+pos009=2 4
+pos010=3 3
+pos011=2 8
+pos012=2 10
+pos013=3 9
+pos014=12 2
+pos015=12 4
+pos016=11 3
+pos017=12 8
+pos018=12 10
+pos019=11 9
+pos020=7 4
+pos021=7 8
+pos022=9 5
+pos023=9 7
+pos024=5 7
+pos025=5 5
+
+[scrambleDel]
+time=0.029411764705882353
+numBlocks=10
+pos000=3 7
+pos001=3 5
+pos002=11 5
+pos003=11 7
+pos004=5 5
+pos005=5 7
+pos006=7 8
+pos007=9 7
+pos008=9 5
+pos009=7 4
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=1
+range=1
+pos1=7 4
+pos2=5 5
+pos3=9 5
+pos4=5 7
+pos5=9 7
+pos6=7 8
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=iron_floor		#000000 #483D8B #FFA500
+block01=iron_floor		#000000 #483D8B #FFA500
+block02=dark_block		#8B0000 #FF4500 #FF4500
+block03=dark_block_R		#FF4500 #FF4500 #FF4500
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B____q_B_q____B
+row02=B____B___B____B
+row03=BBq_________qBB
+row04=B_____________B
+row05=B__B_______B__B
+row06=B______B______B
+row07=B__B_______B__B
+row08=B_____________B
+row09=BBq_________qBB
+row10=B____B___B____B
+row11=B____q_B_q____B
+row12=BBBBBBBBBBBBBBB

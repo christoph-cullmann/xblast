@@ -1,0 +1,57 @@
+[info]
+name=Blasters in da Hood
+author=Tobias Johansson
+hint=Tell no tales
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=check            #000000 #008B8B #00FF7F
+block01=check_X          #000000 #008B8B #00FF7F
+block02=dark_house       #000000 #B8860B #9A0834
+block03=dark_house_R     #000000 #B8860B #9A0834
+block04=hex_extra        #000000 #00FF7F #FF6347
+block05=hex_extra_O      #000000 #00FF7F #FF6347
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BB_B_B_BB_B_B
+row03=B____B_B______B
+row04=B_BB_____BB_B_B
+row05=B_BB_B_B_BB_B_B
+row06=B_____________B
+row07=B_BB_B_B_B_BB_B
+row08=B_BB_____B_BB_B
+row09=B____B_B______B
+row10=B_B_BB_B_BB_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

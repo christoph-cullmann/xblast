@@ -1,0 +1,66 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Toxic
+author=Tobias Johansson
+hint=Mind your step
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+
+
+[func]
+extra=poison
+key=rc
+
+[player]
+bombs=0
+range=7
+pos1=4 11
+pos2=6 11
+pos3=10 11
+pos4=2 11
+pos5=8 11
+pos6=12 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=button_floor		#000000 #32CD32 #D2B48C
+block01=button_floor		#000000 #32CD32 #D2B48C
+block02=r_i_p		#000000 #FFFAFA #32CD32
+block03=r_i_p_R		#000000 #FFFAFA #32CD32
+block04=chest		#000000 #32CD32 #DC143C
+block05=chest_O		#000000 #32CD32 #DC143C
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor		#000000 #32CD32 #4169E1
+
+[map]
+probVirus=49
+probSpecial=49
+row00=BBBBBBBBBBBBBBB
+row01=BbrsrbrsrbrsrbB
+row02=BX___________XB
+row03=BX_sX_s_s_Xs_XB
+row04=BX___________XB
+row05=BqqqqqqqqqqqqqB
+row06=B_____________B
+row07=B_____________B
+row08=BbbbbbbbbbbbbbB
+row09=BqqqqqqqqqqqqqB
+row10=BqqqqqqqqqqqqqB
+row11=Bq_q_q_q_q_q_qB
+row12=BBBBBBBBBBBBBBB

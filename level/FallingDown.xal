@@ -1,0 +1,77 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Falling Down
+author=Wuerzburg : Bernd Wenisch
+hint=Down & Stunned
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+
+[func]
+extra=stunOthers
+key=specialBomb
+
+[player]
+bombs=1
+range=10
+specialBombs=30
+pos1=6 1
+pos2=8 1
+pos3=4 1
+pos4=10 1
+pos5=2 1
+pos6=12 1
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+direction=down
+default=random
+special=random
+hidden=random
+
+[graphics]
+block00=rock_floor		#000000 #FFEFD5 #000000
+block01=rock_floor		#000000 #FFEFD5 #000000
+block02=downarrow		#000000 #32CD32 #D2691E
+block03=downarrow		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=19
+probRange=19
+probVirus=19
+probSpecial=19
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=B______B______B
+row03=B______B______B
+row04=B______B______B
+row05=BXXXXXXXXXXXXXB
+row06=BsssssssssssssB
+row07=Bq_____q_____qB
+row08=B______X______B
+row09=BX____XrX____XB
+row10=BbX__XbBbX__XbB
+row11=BbbXXrbrbrXXbbB
+row12=BBBBBBBBBBBBBBB

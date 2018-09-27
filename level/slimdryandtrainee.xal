@@ -1,0 +1,59 @@
+[info]
+name=Slim, Dry and Trainee
+author=Pierre `in your back' Laroche
+hint=Hidden bombs are dangerous
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[func]
+extra=mayhem
+
+[player]
+bombs=5
+range=10
+pos1= 3  4
+pos2= 7  4
+pos3=11  4
+pos4= 3  8
+pos5= 7  8
+pos6=11  8
+
+[bombs]
+bombClick=snooker
+fuseTime=short
+default=fungus
+hidden=napalm
+
+[graphics]
+block00=rock_floor       #000000 #D2691E #D2691E
+block01=rock_floor_X     #000000 #D2691E #D2691E
+block02=downarrow        #000000 #DAA520 #006400
+block03=downarrow        #000000 #DAA520 #006400
+block04=box              #000000 #FFEFD5 #FF4500
+block05=box              #000000 #FFEFD5 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probSpecial=48
+probHidden=48
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_X_X_X_X_X_X_B
+row03=B__X_X_X_X_X__B
+row04=B_X_X_X_X_X_X_B
+row05=B__X_X_X_X_X__B
+row06=B_X_XqX_XqX_X_B
+row07=B__X_X_X_X_X__B
+row08=B_X_X_X_X_X_X_B
+row09=B__X_X_X_X_X__B
+row10=B_X_X_X_X_X_X_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

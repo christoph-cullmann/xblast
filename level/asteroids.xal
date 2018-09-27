@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Asteroids
+author=EPFL - cosun : Yves Bresson
+hint=Hide in your base
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=2 10
+pos2=4 10
+pos3=6 10
+pos4=8 10
+pos5=10 10
+pos6=12 10
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=contact
+direction=up
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=lego_floor		#000000 #000000 #000000
+block01=lego_floor		#000000 #000000 #000000
+block02=lego_white		#000000 #FF0000 #FFFFE0
+block03=lego_white		#000000 #FFC0CB #FFFFE0
+block04=lego_black		#FFFFFF #000000 #FFFFE0
+block05=lego_black_O		#FFFFFF #000000 #FFFFE0
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=lego_white		#000000 #FF0000 #FFFFE0
+
+[map]
+extraDistribution=all
+probBomb=8
+probRange=8
+row00=BBBBBBBBBBBBBBB
+row01=BX___________XB
+row02=BX___________XB
+row03=BX___________XB
+row04=BX___________XB
+row05=BX___________XB
+row06=BX___________XB
+row07=BX___X___X___XB
+row08=BXX_XXX_XXX_XXB
+row09=BX__X_X_X_X__XB
+row10=BX___________XB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

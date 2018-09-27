@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Ban The Bonuses
+author=Fred Lagrange
+hint=Are you sure you wanna take *another* bonus ??
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=multiple
+
+[player]
+bombs=0
+range=4
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=8 1
+pos6=8 11
+initVirus=bomb
+reviveVirus=bomb
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+fuseTime=long
+
+[graphics]
+block00=karo_light		#000000 #87CEFA #4169E1
+block01=karo_light		#000000 #87CEFA #4169E1
+block02=pyramid		#000000 #6A5ACD #FFFFFF
+block03=pyramid_R		#000000 #6A5ACD #FFFFFF
+block04=extra		#000000 #FF4500 #FFD700
+block05=extra_O		#000000 #FF4500 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=score_floor		#000000 #000000 #FFFFFF
+
+[map]
+extraDistribution=all
+probBomb=13
+probRange=13
+probSpecial=30
+probHidden=44
+row00=BBBBBBBBBBBBBBB
+row01=B__r_______r__B
+row02=B_bbbbb_bbbbb_B
+row03=B_bbbbb_bbbbb_B
+row04=B_bbbbb_bbbbb_B
+row05=B_bbbbb_bbbbb_B
+row06=Brbbbbb_bbbbbrB
+row07=B_bbbbb_bbbbb_B
+row08=B_bbbbb_bbbbb_B
+row09=B_bbbbb_bbbbb_B
+row10=B_bbbbb_bbbbb_B
+row11=B__r_______r__B
+row12=BBBBBBBBBBBBBBB

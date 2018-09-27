@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Would ya' likes t'be some Junkie?
+author=Garth Denley (Adelaide)
+hint=If you want that power you'll have to become a junkie
+gameMode=R234--STDL
+
+[shrink]
+type=compound2F
+
+[scrambleDel]
+time=0.25
+numBlocks=4
+pos000=1 2
+pos001=1 10
+pos002=13 2
+pos003=13 10
+
+[func]
+extra=junkie
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=lego_floor       #000000 #CCCCCC #87CEEB
+block01=lego_floor_X     #000000 #CCCCCC #87CEEB
+block02=lego_white       #000000 #FFC0CB #CCCCCC
+block03=lego_black       #FF69B4 #FF1493 #CCCCCC
+block04=lego_black       #00FF7F #000000 #CCCCCC
+block05=lego_black_O     #00FF7F #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=syringe
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=BB__BqBBBqB__BB
+row03=BbBBqbqBqbqBBbB
+row04=BbbbbBbbbBbbbbB
+row05=BbBbrbbbbbrbBbB
+row06=BrssrbBsBbrssrB
+row07=BbBbrbbbbbrbBbB
+row08=BbbbbBbbbBbbbbB
+row09=BbBBqbqBqbqBBbB
+row10=BB__BqBBBqB__BB
+row11=B______B______B
+row12=BBBBBBBBBBBBBBB

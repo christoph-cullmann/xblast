@@ -1,0 +1,240 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Bomb eaters
+author=Reinco
+hint=Jum jum, pizzas
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.3
+numBlocks=141
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 1
+pos023=3 2
+pos024=3 3
+pos025=3 4
+pos026=3 5
+pos027=3 6
+pos028=3 7
+pos029=3 8
+pos030=3 9
+pos031=3 10
+pos032=3 11
+pos033=4 1
+pos034=4 2
+pos035=4 3
+pos036=4 4
+pos037=4 5
+pos038=4 7
+pos039=4 8
+pos040=4 9
+pos041=4 10
+pos042=4 11
+pos043=5 1
+pos044=5 2
+pos045=5 3
+pos046=5 4
+pos047=5 5
+pos048=5 6
+pos049=5 7
+pos050=5 8
+pos051=5 9
+pos052=5 10
+pos053=5 11
+pos054=6 1
+pos055=6 2
+pos056=6 3
+pos057=6 4
+pos058=6 5
+pos059=6 6
+pos060=6 7
+pos061=6 8
+pos062=6 9
+pos063=6 10
+pos064=6 11
+pos065=7 1
+pos066=7 2
+pos067=7 3
+pos068=7 4
+pos069=7 5
+pos070=7 6
+pos071=7 7
+pos072=7 8
+pos073=7 9
+pos074=7 10
+pos075=7 11
+pos076=8 1
+pos077=8 2
+pos078=8 3
+pos079=8 4
+pos080=8 5
+pos081=8 6
+pos082=8 7
+pos083=8 8
+pos084=8 9
+pos085=8 10
+pos086=8 11
+pos087=9 1
+pos088=9 2
+pos089=9 3
+pos090=9 4
+pos091=9 5
+pos092=9 6
+pos093=9 7
+pos094=9 8
+pos095=9 9
+pos096=9 10
+pos097=9 11
+pos098=10 1
+pos099=10 2
+pos100=10 3
+pos101=10 4
+pos102=10 5
+pos103=10 7
+pos104=10 8
+pos105=10 9
+pos106=10 10
+pos107=10 11
+pos108=11 1
+pos109=11 2
+pos110=11 3
+pos111=11 4
+pos112=11 5
+pos113=11 6
+pos114=11 7
+pos115=11 8
+pos116=11 9
+pos117=11 10
+pos118=11 11
+pos119=12 1
+pos120=12 2
+pos121=12 3
+pos122=12 4
+pos123=12 5
+pos124=12 6
+pos125=12 7
+pos126=12 8
+pos127=12 9
+pos128=12 10
+pos129=12 11
+pos130=13 1
+pos131=13 2
+pos132=13 3
+pos133=13 4
+pos134=13 5
+pos135=13 6
+pos136=13 7
+pos137=13 8
+pos138=13 9
+pos139=13 10
+pos140=13 11
+
+[scrambleDel]
+time=0.39
+numBlocks=31
+pos000=4 5
+pos001=4 7
+pos002=5 5
+pos003=5 6
+pos004=5 7
+pos005=6 3
+pos006=6 4
+pos007=6 5
+pos008=6 6
+pos009=6 7
+pos010=6 8
+pos011=6 9
+pos012=7 3
+pos013=7 4
+pos014=7 5
+pos015=7 6
+pos016=7 7
+pos017=7 8
+pos018=7 9
+pos019=8 3
+pos020=8 4
+pos021=8 5
+pos022=8 6
+pos023=8 7
+pos024=8 8
+pos025=8 9
+pos026=9 5
+pos027=9 6
+pos028=9 7
+pos029=10 5
+pos030=10 7
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BsqsrsqsqsrsqsB
+row02=BqsqbqsqsqbqsqB
+row03=BsqsrsqsqsrsqsB
+row04=BqsqbqsqsqbqsqB
+row05=BqqsrsqsqsrsqsB
+row06=BrbrbrbrbrbrbrB
+row07=BsqsrsqsqsrsqsB
+row08=BqsqbqsqsqbqsqB
+row09=BsqsrsqsqsrsqsB
+row10=BqsqbqsqsqbqsqB
+row11=BsqsrsqsqsrsqsB
+row12=BBBBBBBBBBBBBBB

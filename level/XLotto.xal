@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=X-lotto
+author=The Adelaide Group
+hint=Your number's up
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=6
+range=5
+pos1=4 4
+pos2=10 4
+pos3=10 8
+pos4=4 8
+pos5=7 5
+pos6=7 7
+initVirus=bomb
+reviveVirus=bomb
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+haunt=slow
+
+[graphics]
+block00=button_floor		#000000 #FFFFFF #2F4F4F
+block01=button_floor		#000000 #FFFFFF #2F4F4F
+block02=dark_block		#000000 #000000 #FFFFFF
+block03=dark_block_R		#000000 #000000 #FFFFFF
+block04=extra		#000000 #000000 #FFFFFF
+block05=extra_O		#000000 #000000 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #FFFFFF
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_B_B_B_B_B_B_B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B______B______B
+row12=BBBBBBBBBBBBBBB

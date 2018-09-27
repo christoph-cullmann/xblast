@@ -1,0 +1,118 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Mayhem Mania
+author=Tobias Johansson
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+[scrambleDel]
+time=0.25
+numBlocks=48
+pos000=2 3
+pos001=2 4
+pos002=2 5
+pos003=2 6
+pos004=3 3
+pos005=3 6
+pos006=4 3
+pos007=4 6
+pos008=4 7
+pos009=4 8
+pos010=4 9
+pos011=4 10
+pos012=5 3
+pos013=5 4
+pos014=5 5
+pos015=5 6
+pos016=5 7
+pos017=5 10
+pos018=6 7
+pos019=6 10
+pos020=7 2
+pos021=7 3
+pos022=7 4
+pos023=7 5
+pos024=7 7
+pos025=7 8
+pos026=7 9
+pos027=7 10
+pos028=8 2
+pos029=8 5
+pos030=8 6
+pos031=8 7
+pos032=8 8
+pos033=8 9
+pos034=9 2
+pos035=9 5
+pos036=9 6
+pos037=9 9
+pos038=10 2
+pos039=10 3
+pos040=10 4
+pos041=10 5
+pos042=10 6
+pos043=10 9
+pos044=11 6
+pos045=11 7
+pos046=11 8
+pos047=11 9
+
+[func]
+extra=mayhem
+key=specialBomb
+
+[player]
+bombs=3
+range=4
+specialBombs=30
+pos1=2 7
+pos2=8 10
+pos3=13 11
+pos4=1 11
+pos5=3 10
+pos6=12 8
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=ghost		#FF0000 #000000 #FF0000
+block01=ghost		#FF0000 #000000 #FF0000
+block02=pyramid		#000000 #C0C0C0 #0000CD
+block03=pyramid_R		#FF0000 #C0C0C0 #0000CD
+block04=chest		#000000 #FFD700 #FFFF00
+block05=chest_O		#FF0000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=25
+probRange=25
+probSpecial=50
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B______BBBB___B
+row03=B_BBBB_BXXB___B
+row04=B_BXXB_BXXB___B
+row05=B_BXXB_BBBB___B
+row06=B_BBBB_qBBBB__B
+row07=B___BBBBBXXB__B
+row08=B___BXXBBXXB__B
+row09=B___BXXBBBBB__B
+row10=B___BBBB______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

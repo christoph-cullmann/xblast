@@ -1,0 +1,70 @@
+[info]
+name=Labyrinth Blast
+author=EPFL - cosun : Yves Bresson
+hint=Find your Way...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.7500
+numBlocks=1
+pos000=3 3
+
+[scrambleDel]
+time=1.0003
+numBlocks=0
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+hidden=grenade
+
+[graphics]
+block00=iron_floor       #000000 #E0FFFF #000000
+block01=iron_floor_X     #000000 #E0FFFF #000000
+block02=bricks           #000000 #A0522D #000000
+block03=brick_O          #000000 #FFFF00 #000000
+block04=extra            #000000 #228B22 #000000
+block05=extra            #000000 #00FF7F #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #FA8072 #FA8072 #FA8072
+
+[map]
+probBomb=23
+probRange=23
+probVirus=24
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=B_____B___B___B
+row02=BBBXBXXBB_X_B_B
+row03=B_BXBB___BXB__B
+row04=B_BBXX_B_B_BXBB
+row05=B____B_B___BX_B
+row06=BBBBB__BX_BBB_B
+row07=B_XX__BXXB____B
+row08=B_BX_BBB___B_BB
+row09=B_B_B_XXXBXB__B
+row10=B_B_B_B_BBX_BBB
+row11=B_B___B___B___B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,83 @@
+GETTING XBLAST
+
+ use the Download links on http://xblast.sf.net
+
+ o  get source package xblast, if you want to compile yourself
+
+ o  for win you can alternatively get a pre-compiled binary
+
+ o  get data packages images, levels, models
+
+ o  optionally get sound packages sounds and musics
+
+
+PREPARING SOURCES
+
+ o  extract the packages in some temporary directory
+
+ o  create xblast directory if necessary
+
+ o  place win binary in xblast, if you downloaded it
+
+ o  move images dir to xblast/image
+
+ o  move levels dir to xblast/level
+
+ o  move models dir to xblast/image/sprite
+
+ o  move sounds dir to xblast/sounds, if you have it
+
+ o  move content of musics dir to xblast/sounds, if you have it
+
+
+COMPILING THE BINARY
+
+ Linux/Cygwin
+
+ o change into xblast dir
+
+ o run 'autogen.sh' to create config.h
+
+ o run 'configure' with appropriate options
+
+    o for public installation (requires root)
+
+      --prefix=/usr/share/games --with-otherdatadir=/usr/share/games
+
+    o for sound
+
+      --enable-sound
+
+    o for half-sized window
+
+      --enable-mini
+
+    o for 16-player support
+
+      --enable-SMPF
+
+ o run 'make' to create the binary
+
+ o run 'make install' for public install (requires root)
+
+ o move xblast dir where you want it, for private install
+
+
+ Cygwin (alternative)
+
+ o change into xblast dir
+
+ o uncomment CYGWIN vars for binary independent of cygwin1.dll (requires mingw)
+
+ o run 'make -f Makefile.windows' to create the binary
+
+ o move xblast dir where you want it
+
+
+ MSVC-Compiler
+
+ for details on compilation with msvc, contact devs
+
+for more informations read README or pass by:
+http://irc.xblast-center.com
+http://xblast.sf.net

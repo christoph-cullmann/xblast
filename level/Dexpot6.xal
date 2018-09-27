@@ -1,0 +1,113 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 6
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.4
+numBlocks=44
+pos000=1 3
+pos001=1 9
+pos002=2 3
+pos003=2 9
+pos004=3 1
+pos005=3 2
+pos006=3 3
+pos007=3 4
+pos008=3 5
+pos009=3 6
+pos010=3 7
+pos011=3 8
+pos012=3 9
+pos013=3 10
+pos014=3 11
+pos015=5 1
+pos016=5 2
+pos017=5 10
+pos018=5 11
+pos019=6 3
+pos020=6 9
+pos021=7 3
+pos022=7 9
+pos023=8 3
+pos024=8 9
+pos025=9 1
+pos026=9 2
+pos027=9 10
+pos028=9 11
+pos029=11 1
+pos030=11 2
+pos031=11 3
+pos032=11 4
+pos033=11 5
+pos034=11 6
+pos035=11 7
+pos036=11 8
+pos037=11 9
+pos038=11 10
+pos039=11 11
+pos040=12 3
+pos041=12 9
+pos042=13 3
+pos043=13 9
+
+[func]
+extra=multiple
+key=air
+
+[player]
+bombs=10
+range=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=airpump 
+reviveExtra=airpump 
+
+[bombs]
+
+[graphics]
+block00=lego_floor		#000000 #006400 #FFFF00
+block01=lego_floor_X		#000000 #006400 #FFFF00
+block02=lego_white		#000000 #000000 #696969
+block03=lego_white		#000000 #000000 #696969
+block04=lego_black		#000000 #000000 #696969
+block05=lego_black_O		#000000 #000000 #696969
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=lego_white		#000000 #000000 #696969
+
+[map]
+probVirus=25
+probSpecial=50
+row00=BBBBBBBBBBBBBBB
+row01=B__X_X___X_X__B
+row02=B__X_X___X_X__B
+row03=BXXX_XXXXX_XXXB
+row04=B__v_v_q_v_v__B
+row05=B__v_B_q_B_v__B
+row06=B__B_v_q_v_B__B
+row07=B__v_B_q_B_v__B
+row08=B__v_v_q_v_v__B
+row09=BXXX_XXXXX_XXXB
+row10=B__X_X___X_X__B
+row11=B__X_X___X_X__B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,62 @@
+[info]
+name=Plus Plus 3
+author=EPFL - cosun : Yves Bresson
+hint=Plus Again and Again
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=33
+pos1= 5  3
+pos2= 9  3
+pos3= 4  6
+pos4=10  6
+pos5= 5  9
+pos6= 9  9
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+
+[graphics]
+block00=rock_floor       #000000 #F4A460 #000000
+block01=rock_floor_X     #000000 #F4A460 #000000
+block02=weight           #000000 #F0FFFF #FFD700
+block03=weight_R         #000000 #B0C4DE #000000
+block04=weight           #000000 #F0FFFF #BEBEBE
+block05=weight           #000000 #F0FFFF #BEBEBE
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probHidden=78
+row00=BBBBBBBBBBBBBBB
+row01=BB_____q_____BB
+row02=B__BB__B__BB__B
+row03=B_BB_______BB_B
+row04=B_B____B____B_B
+row05=B______X______B
+row06=B_qB_BXXXB_Bq_B
+row07=B______X______B
+row08=B_B____B____B_B
+row09=B_BB_______BB_B
+row10=B__BB__B__BB__B
+row11=BB_____q_____BB
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,55 @@
+[info]
+name=Tic Tac Toe
+author=Laurent Marsan
+hint=Be lucky
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1= 2  1
+pos2=12  1
+pos3=12 11
+pos4= 2 11
+pos5= 2  6
+pos6=12  6
+
+[bombs]
+fuseTime=short
+haunt=slow
+
+[graphics]
+block00=iron_floor       #000000 #FFFFE0 #0000FF
+block01=iron_floor_X     #000000 #FFFFE0 #0000FF
+block02=dark_block       #000000 #FA8072 #00FF7F
+block03=dark_block_R     #000000 #00FF00 #FF0000
+block04=bricks           #000000 #87CEEB #000000
+block05=brick_O          #000000 #87CEFA #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+probBomb=46
+probRange=47
+row00=vBBBBBBBBBBBBBv
+row01=vB___B___B___Bv
+row02=vB_B_X_B_X_B_Bv
+row03=vB___B___B___Bv
+row04=vBBXBBBXBBBXBBv
+row05=vB___B___B___Bv
+row06=vB_B_X_B_X_B_Bv
+row07=vB___B___B___Bv
+row08=vBBXBBBXBBBXBBv
+row09=vB___B___B___Bv
+row10=vB_B_X_B_X_B_Bv
+row11=vB___B___B___Bv
+row12=vBBBBBBBBBBBBBv
+

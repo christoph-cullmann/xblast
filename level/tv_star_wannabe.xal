@@ -1,0 +1,63 @@
+[info]
+name=TV Star Wannabe
+author=EPFL - cosun : Yves Bresson
+hint=Hit the Screen, baby
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=3
+specialBombs=12
+pos1= 5  1
+pos2= 9  1
+pos3= 1  6
+pos4=13  6
+pos5= 5 11
+pos6= 9 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=blastnow
+hidden=fungus
+haunt=slow
+
+[graphics]
+block00=mr_beam_free     #000000 #ADD8E6 #000000
+block01=mr_beam_free_X   #000000 #ADD8E6 #000000
+block02=pyramid_R        #000000 #00008B #000000
+block03=mr_beam_tv       #000000 #ADD8E6 #FF0000
+block04=mr_beam_bear     #000000 #ADD8E6 #CCCCCC
+block05=mr_beam_bear_O   #8B0000 #ADD8E6 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probVirus=15
+probSpecial=16
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=BX_____X_____XB
+row02=B_X____X____X_B
+row03=B__X___X___X__B
+row04=B___X__X__X___B
+row05=B____X_R_X____B
+row06=B_____RRR_____B
+row07=B____X_R_X____B
+row08=B___X__X__X___B
+row09=B__X___X___X__B
+row10=B_X____X____X_B
+row11=BX_____X_____XB
+row12=BBBBBBBBBBBBBBB
+

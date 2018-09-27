@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Colored Teleportation
+author=LORIA : Pierre 'in your back' Laroche
+hint=Who's who ?
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=swapcolor
+key=rc
+
+[player]
+bombs=5
+range=2
+pos1=5 4
+pos2=7 4
+pos3=9 4
+pos4=5 8
+pos5=7 8
+pos6=9 8
+initVirus=teleport
+reviveVirus=teleport
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=ghost		#000000 #F4A460 #000000
+block01=ghost		#000000 #F4A460 #000000
+block02=pyramid_R		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #B0C4DE #000000
+block04=chest_O		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=swapcolor
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=16
+probSpecial=56
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBBBBBBBBB
+row02=BB_s_qB_Bq_s_BB
+row03=BBsqq_BXB_qqsBB
+row04=BBq___B_____qBB
+row05=BBBBBB_s_BBBBBB
+row06=BB_X_X____X_XBB
+row07=BBBBBB_s_BBBBBB
+row08=BBq___B_B___qBB
+row09=BBsqq_BXB_qqsBB
+row10=BB_s_qB_Bq_s_BB
+row11=BBBBBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB

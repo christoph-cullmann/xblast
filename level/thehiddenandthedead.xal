@@ -1,0 +1,70 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Hidden and the Dead
+author=MisterE
+hint=The Hidden and the Dead
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=10
+range=30
+pos1=1 1
+pos2=7 1
+pos3=13 11
+pos4=1 11
+pos5=13 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+hidden=destruction
+bombClick=contact
+playerClick=thru
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex_X		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_q_X_____X___B
+row02=B___X__q__X__qB
+row03=B___X_____X___B
+row04=B___X_____X___B
+row05=B___X_____X___B
+row06=BXXXXXXXXXXXXXB
+row07=B___X_____X___B
+row08=B___X_____X___B
+row09=B___X_____X___B
+row10=Bq__X__q__X__qB
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB

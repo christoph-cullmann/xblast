@@ -1,0 +1,129 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Lamer
+author=Reinco
+hint=Patience
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.4
+numBlocks=37
+pos000=1 2
+pos001=1 6
+pos002=1 7
+pos003=1 8
+pos004=2 3
+pos005=2 8
+pos006=2 11
+pos007=3 4
+pos008=3 8
+pos009=3 10
+pos010=4 5
+pos011=4 10
+pos012=5 1
+pos013=5 6
+pos014=5 9
+pos015=6 2
+pos016=6 3
+pos017=6 7
+pos018=7 2
+pos019=7 3
+pos020=8 1
+pos021=8 5
+pos022=9 4
+pos023=10 3
+pos024=11 2
+pos025=11 6
+pos026=11 9
+pos027=11 10
+pos028=11 11
+pos029=12 1
+pos030=12 5
+pos031=12 6
+pos032=12 9
+pos033=12 10
+pos034=13 3
+pos035=13 4
+pos036=13 6
+
+[scrambleDel]
+time=0.2
+numBlocks=19
+pos000=4 8
+pos001=5 8
+pos002=6 8
+pos003=7 4
+pos004=7 5
+pos005=7 6
+pos006=7 7
+pos007=7 8
+pos008=7 9
+pos009=7 10
+pos010=8 8
+pos011=9 8
+pos012=10 8
+pos013=11 8
+pos014=12 8
+pos015=13 7
+pos016=13 8
+pos017=13 9
+pos018=13 10
+
+[func]
+extra=junkie
+key=rc
+
+[player]
+bombs=0
+range=0
+specialBombs=12
+pos1=7 1
+pos2=7 1
+pos3=7 1
+pos4=7 1
+pos5=7 1
+pos6=7 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+special=renovation
+bombClick=snooker
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light_X		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=syringe
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=Bsssq____qqsqsB
+row02=Bqqsqq__qqsqqbB
+row03=Bsqssq__qsqqsrB
+row04=BsqqsqqqssqssrB
+row05=BrsqsssqsqqsrrB
+row06=BbsqqqssqqsrrrB
+row07=BbsssqqqqssqqqB
+row08=BbbbsqqqssssssB
+row09=BbssqqsqqqsrrrB
+row10=BsqqqssssqsrrqB
+row11=BsqsrbbbbqsrqbB
+row12=BBBBBBBBBBBBBBB

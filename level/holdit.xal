@@ -1,0 +1,65 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Hold it, Hold it
+author=Vulpes Incendium
+hint=HOLD IT DON'T MOVE
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+
+[player]
+bombs=3
+range=30
+pos1=4 5
+pos2=12 5
+pos3=10 5
+pos4=6 5
+pos5=2 5
+pos6=8 5
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=thru
+wallClick=anticlockwise
+
+[graphics]
+block00=rock_floor		#000000 #D2691E #000000
+block01=rock_floor_X		#000000 #D2691E #000000
+block02=wall		#000000 #8B4513 #800000
+block03=wall_R		#000000 #8B4513 #800000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBeBeBeBeBeBeBB
+row02=Be_e_e_e_e_e_eB
+row03=B_B_B_B_B_B_B_B
+row04=Be___________eB
+row05=BB_B_B_B_B_B_BB
+row06=Be___________eB
+row07=BeBeBeBeBeBeBeB
+row08=Be___________eB
+row09=BB_B_B_B_B_B_BB
+row10=Bee_e_e_e_e_eeB
+row11=BeBeBeBeBeBeBeB
+row12=BBBBBBBBBBBBBBB

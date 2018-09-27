@@ -1,0 +1,68 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Cave-in 2
+author=Skywalker
+hint=Blast your way to the center
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=swapposition
+key=air
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 2
+pos6=7 10
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#000000 #A0522D #BDB76B
+block01=karo_dark_X		#000000 #A0522D #BDB76B
+block02=wall		#000000 #000000 #000000
+block03=wall_R		#000000 #000000 #000000
+block04=chest		#000000 #228B22 #B0C4DE
+block05=chest_O		#000000 #228B22 #B0C4DE
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+probBomb=25
+probRange=25
+probVirus=6
+probSpecial=25
+probHidden=6
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__XXXX_XXXX__B
+row03=B_XXXXXXXXXXX_B
+row04=B_XXXXXXXXXXX_B
+row05=B_XXXXXXXXXXX_B
+row06=B_XXXXXXXXXXX_B
+row07=B_XXXXXXXXXXX_B
+row08=B_XXXXXXXXXXX_B
+row09=B_XXXXXXXXXXX_B
+row10=B__XXXX_XXXX__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

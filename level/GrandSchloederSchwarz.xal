@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Grand Schloeder Schwarz
+author=Peter Riede
+hint=Remote Control after first Death
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=5 5
+pos2=9 7
+pos3=9 5
+pos4=5 7
+pos5=7 5
+pos6=7 7
+initVirus=run
+initExtra=kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=contact
+wallClick=clockwise
+playerClick=contact
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=BX___X___X___XB
+row02=B_B__X_X_X__B_B
+row03=B__B_X___X_B__B
+row04=B____XX_XX____B
+row05=B_X___B_B___X_B
+row06=BXXXXBBBBBXXXXB
+row07=B_X___B_B___X_B
+row08=B____XX_XX____B
+row09=B__B_X___X_B__B
+row10=B_B__X_X_X__B_B
+row11=BX___X___X___XB
+row12=BBBBBBBBBBBBBBB

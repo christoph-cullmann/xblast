@@ -1,0 +1,66 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Jedi Power 6
+author=Skywalker
+hint=You need the force
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=teleport
+
+[player]
+bombs=20
+range=10
+pos1=2 2
+pos2=12 2
+pos3=7 10
+pos4=7 2
+pos5=2 10
+pos6=12 10
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=city_free		#FF8C00 #FFA500 #0000FF
+block01=city_free_X		#FF8C00 #FFA500 #0000FF
+block02=dark_house		#FF8C00 #FFA500 #000000
+block03=dark_house_R		#FF8C00 #FFA500 #000000
+block04=light_house		#FF8C00 #FFA500 #000000
+block05=light_house_O		#FF8C00 #FFA500 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+extraDistribution=get
+probBomb=47
+probVirus=6
+probHidden=47
+row00=BBBBBBBBBBBBBBB
+row01=B___BB___BB___B
+row02=B___BB___BB___B
+row03=B___BB___BB___B
+row04=B___BB___BB___B
+row05=B___BB___BB___B
+row06=B___BB___BB___B
+row07=B___BB___BB___B
+row08=B___BB___BB___B
+row09=B___BB___BB___B
+row10=B___BB___BB___B
+row11=B___BB___BB___B
+row12=BBBBBBBBBBBBBBB

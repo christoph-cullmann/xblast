@@ -1,0 +1,75 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Pizza
+author=Koen
+hint=Ready, Steady, Pizza
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.01
+numBlocks=6
+pos000=1 8
+pos001=3 2
+pos002=4 11
+pos003=10 1
+pos004=11 10
+pos005=13 4
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=0
+range=10
+pos1=12 4
+pos2=3 11
+pos3=2 8
+pos4=3 1
+pos5=11 1
+pos6=11 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=rebound
+playerClick=contact
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=75
+probRange=12
+row00=BBBBBBBBBBBBBBB
+row01=BXe_XeeXe_B_eXB
+row02=BXeB___X__eXXXB
+row03=BXXXee_e_XeXeeB
+row04=BeeeX__X__XX_BB
+row05=B___e_e_e_eeX_B
+row06=B_e____q____e_B
+row07=B_Xee_e_e_e___B
+row08=BB_XX__X__XeeeB
+row09=BeeXeX_e_eeXXXB
+row10=BXXXe__X___BeXB
+row11=BXe_B_eXeeX_eXB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,61 @@
+[info]
+name=J'ai froid aux pieds
+author=EPFL - cosun : Yves Bresson
+hint=Bouger pour ne pas mourir de froid
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[func]
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2= 1  3
+pos3= 1  5
+pos4= 1  7
+pos5= 1  9
+pos6= 1 11
+initVirus=slow
+reviveVirus=run
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=rebound
+direction=right
+hidden=blastnow
+
+[graphics]
+block00=kick_bomb        #6495ED #6495ED #6495ED
+block01=kick_bomb       #6495ED #6495ED #6495ED
+block02=holygrail        #2E8B57 #0000FF #2E8B57
+block03=holygrail        #20B2AA #ADD8E6 #20B2AA
+block04=holygrail        #20B2AA #ADD8E6 #20B2AA
+block05=kick_bomb        #FFFFFF #ADD8E6 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+probBomb=46
+probRange=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B____X___B___XB
+row02=B___BBB__X___XB
+row03=B_B____B___B_XB
+row04=B__BB____BB__XB
+row05=B_____X_____BXB
+row06=B___BB__BB___XB
+row07=B_BB______B__XB
+row08=B_____B_X___BXB
+row09=B___BB___B___XB
+row10=B___X__BB____XB
+row11=B____B___X_BBXB
+row12=BBBBBBBBBBBBBBB
+

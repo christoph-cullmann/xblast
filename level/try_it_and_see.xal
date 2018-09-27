@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Try It And See
+author=Chris Doherty (Adelaide)
+hint=Multiple pickups - they're a bit of a gamble
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=multiple
+key=air
+
+[player]
+bombs=3
+range=4
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #87CEFA #4169E1
+block01=karo_light_X     #000000 #87CEFA #4169E1
+block02=pyramid          #000000 #6A5ACD #FFFFFF
+block03=pyramid_R        #000000 #6A5ACD #FFFFFF
+block04=extra            #000000 #FF4500 #FFD700
+block05=extra_O          #000000 #FF4500 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=score_floor      #000000 #808080 #FFFFFF
+
+[map]
+extraDistribution=all
+probBomb=13
+probRange=13
+probSpecial=30
+probHidden=44
+row00=BBBBBBBBBBBBBBB
+row01=B_BqXqX_XqXqB_B
+row02=B_BB_X___X_BB_B
+row03=B___X_X_X_X___B
+row04=BX_XBXBXBXBX_XB
+row05=BqX_XqXqXqX_XqB
+row06=BBBXBXBXBXBXBBB
+row07=BqX_XqXqXqX_XqB
+row08=BX_XBXBXBXBX_XB
+row09=B___X_X_X_X___B
+row10=B_BB_X___X_BB_B
+row11=B_BqXqX_XqXqB_B
+row12=BBBBBBBBBBBBBBB

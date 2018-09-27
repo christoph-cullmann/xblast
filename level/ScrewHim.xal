@@ -1,0 +1,62 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Screw Him!
+author=NL : A.J. v. Leest (A.J.v.Leest@ele.tue.nl)
+hint=Shag him!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=5
+range=2
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #000000 #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBBBB_____BBBBB
+row02=BBBBB_____BBBBB
+row03=BBBBB_____B___B
+row04=BBBBBBBBB_B___B
+row05=B_________B___B
+row06=B___B_____B___B
+row07=B___B_________B
+row08=B___B_BBBBBBBBB
+row09=B___B_____BBBBB
+row10=BBBBB_____BBBBB
+row11=BBBBB_____BBBBB
+row12=BBBBBBBBBBBBBBB

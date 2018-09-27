@@ -1,0 +1,91 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Four Courners
+author=Glaset
+hint=Don´t be in the corners
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.33
+numBlocks=16
+pos000=1 1
+pos001=1 2
+pos002=1 10
+pos003=1 11
+pos004=2 1
+pos005=2 2
+pos006=2 10
+pos007=2 11
+pos008=12 1
+pos009=12 2
+pos010=12 10
+pos011=12 11
+pos012=13 1
+pos013=13 2
+pos014=13 10
+pos015=13 11
+
+
+[func]
+extra=speed
+
+[player]
+bombs=3
+range=5
+pos1=1 11
+pos2=1 11
+pos3=1 11
+pos4=1 11
+pos5=1 11
+pos6=1 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=contact
+fuseTime=long
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=13
+probRange=11
+probVirus=13
+probSpecial=11
+probHidden=13
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=Bqr_________rqB
+row02=Brr_________rrB
+row03=BXXXXXXXXXXX__B
+row04=B___r___r__X__B
+row05=B___b______X__B
+row06=BXXXXXXXX__X__B
+row07=Br______XrbX__B
+row08=B___brr_X__X__B
+row09=BXXXX___X__X__B
+row10=B___X_brX__XrrB
+row11=B___X___Xb_XrqB
+row12=BBBBBBBBBBBBBBB

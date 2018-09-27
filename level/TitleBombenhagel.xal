@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=title: Bombenhagel
+author=Cpt. Proton
+hint=ZUBOMBEN!!!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=20
+range=12
+pos1=13 1
+pos2=6 2
+pos3=6 6
+pos4=11 9
+pos5=6 10
+pos6=1 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=none
+default=grenade
+
+[graphics]
+block00=bomb_floor		#000000 #F4A460 #000000
+block01=bomb_floor		#000000 #F4A460 #000000
+block02=evilgrail		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #B0C4DE #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B______e______B
+row04=B_____________B
+row05=B____e___e____B
+row06=B_____________B
+row07=B____e___e____B
+row08=B_____________B
+row09=B______e______B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

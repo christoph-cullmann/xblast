@@ -1,0 +1,132 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=See the pattern
+author=Koen
+hint=It was getting late... sorry!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=60
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 8
+pos015=2 10
+pos016=2 11
+pos017=3 1
+pos018=3 2
+pos019=3 3
+pos020=3 4
+pos021=3 11
+pos022=4 11
+pos023=5 1
+pos024=5 11
+pos025=6 1
+pos026=6 2
+pos027=6 11
+pos028=7 1
+pos029=7 2
+pos030=7 10
+pos031=7 11
+pos032=8 1
+pos033=8 2
+pos034=8 10
+pos035=8 11
+pos036=9 1
+pos037=9 2
+pos038=9 11
+pos039=10 1
+pos040=10 10
+pos041=10 11
+pos042=11 1
+pos043=11 10
+pos044=11 11
+pos045=12 1
+pos046=12 2
+pos047=12 3
+pos048=12 10
+pos049=12 11
+pos050=13 1
+pos051=13 2
+pos052=13 3
+pos053=13 4
+pos054=13 5
+pos055=13 6
+pos056=13 7
+pos057=13 9
+pos058=13 10
+pos059=13 11
+
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=5
+range=30
+specialBombs=30
+pos1=1 1
+pos2=11 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=short
+fuseTime=long
+
+[graphics]
+block00=button_floor		#000000 #7CFC00 #00FF7F
+block01=button_floor_X		#000000 #7CFC00 #00FF7F
+block02=jizz		#000000 #7CFC00 #FF1493
+block03=hole_floor		#000000 #7CFC00 #FF1493
+block04=pumpkin		#000000 #DEB887 #7CFC00
+block05=pumpkin_O		#000000 #DEB887 #7CFC00
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=pumpkin		#000000 #00FF7F #7FFFD4
+
+[map]
+probBomb=25
+probRange=6
+probSpecial=50
+row00=BBBBBBBBBBBBBBB
+row01=B___B_____B___B
+row02=B_X_BB____BBX_B
+row03=B_XXB_XXXX_BXXB
+row04=B_BX____BB__X_B
+row05=B_B__B__BB_BB_B
+row06=B_B_BBB____BB_B
+row07=BXB______B____B
+row08=BXX__XB__B__BBB
+row09=BXBB_XBB_B_BB_B
+row10=B__BBXB__BXX__B
+row11=B____X___XX___B
+row12=BBBBBBBBBBBBBBB

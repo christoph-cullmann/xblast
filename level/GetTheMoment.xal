@@ -1,0 +1,129 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Get the moment
+author=Peter Riede
+hint=TIMING!!! Leave right Side!!!
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.53
+numBlocks=25
+pos000=8 3
+pos001=8 4
+pos002=8 5
+pos003=8 6
+pos004=8 7
+pos005=8 8
+pos006=8 9
+pos007=9 4
+pos008=9 5
+pos009=9 6
+pos010=9 7
+pos011=9 8
+pos012=10 3
+pos013=10 4
+pos014=10 5
+pos015=10 7
+pos016=10 8
+pos017=10 9
+pos018=11 3
+pos019=11 4
+pos020=11 5
+pos021=11 6
+pos022=11 7
+pos023=11 8
+pos024=11 9
+
+[scrambleDel]
+time=0.38
+numBlocks=29
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 7
+pos004=3 8
+pos005=3 9
+pos006=4 3
+pos007=4 4
+pos008=4 5
+pos009=4 7
+pos010=4 8
+pos011=4 9
+pos012=5 2
+pos013=5 3
+pos014=5 4
+pos015=5 5
+pos016=5 6
+pos017=5 7
+pos018=5 8
+pos019=5 9
+pos020=5 10
+pos021=6 2
+pos022=6 4
+pos023=6 5
+pos024=6 7
+pos025=6 8
+pos026=6 10
+pos027=7 2
+pos028=7 10
+
+[func]
+extra=life
+
+[player]
+bombs=3
+range=3
+pos1=8 1
+pos2=9 6
+pos3=8 11
+pos4=11 6
+pos5=13 3
+pos6=13 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+hidden=threebombs
+
+[graphics]
+block00=hex		#800000 #000000 #8B0000
+block01=hex_X		#800000 #000000 #8B0000
+block02=hex_wall		#800000 #000000 #00008B
+block03=hex_wall		#800000 #000000 #00008B
+block04=hex_extra		#800000 #000000 #00FF7F
+block05=hex_extra_O		#800000 #000000 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBB______B
+row02=BBBBBqqv____B_B
+row03=BBBqqqBB_B____B
+row04=BBBqqqqB______B
+row05=BBBqqqqB_____BB
+row06=BBBqBqqB__B__BB
+row07=BBBqqqqB_____BB
+row08=BBBqqqqB______B
+row09=BBBqqqBB_B____B
+row10=BBBBBqqv____B_B
+row11=BBBBBBBB______B
+row12=BBBBBBBBBBBBBBB

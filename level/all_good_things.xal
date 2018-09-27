@@ -1,0 +1,70 @@
+[info]
+name=All Good Things
+author=Keith Gillow and Mark Shepherd
+hint=Find a timer before everyone gets one
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDel]
+time=0.3750
+numBlocks=4
+pos000=2 2
+pos001=2 10
+pos002=12 2
+pos003=12 10
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 2  6
+pos2= 7  1
+pos3=12  6
+pos4= 7 11
+pos5= 0  0
+pos6= 0  0
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=chess_floor      #000000 #2E8B57 #8FBC8F
+block01=chess_floor_X    #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #FF3030 #000000
+block03=wall_R           #000000 #FF3030 #2E8B57
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=31
+probRange=31
+probVirus=11
+probSpecial=5
+probHidden=9
+row00=BBBBBBBBBBBBBBB
+row01=BqrBXB___BXBrqB
+row02=BbBX_BB_BB_XBbB
+row03=BBXX_______XXBB
+row04=BX__BB___BB__XB
+row05=BB___XBXBX___BB
+row06=B__B__XXX__B__B
+row07=BB___XBXBX___BB
+row08=BX__BB___BB__XB
+row09=BBXX_______XXBB
+row10=BbBX_BB_BB_XBbB
+row11=BqrBXB___BXBrqB
+row12=BBBBBBBBBBBBBBB
+

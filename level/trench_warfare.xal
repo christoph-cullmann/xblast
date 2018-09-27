@@ -1,0 +1,55 @@
+[info]
+name=Trench Warfare
+author=The Adelaide Group
+hint=Don't think you're having all the fun.
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=8
+range=10
+pos1= 1  2
+pos2=13  2
+pos3=13 10
+pos4= 1 10
+pos5= 7  3
+pos6= 7  9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #B0C4DE #7F7F7F
+block01=chess_floor_X    #000000 #B0C4DE #7F7F7F
+block02=book_shelf       #000000 #006400 #4682B4
+block03=book_shelf       #000000 #B22222 #4682B4
+block04=chess_sphere     #000000 #D2B48C #6B8E23
+block05=chess_sphere_O   #000000 #D2B48C #6B8E23
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=check            #000000 #FFFFFF #7F7F7F
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBBBBBBBBB
+row02=B_____________B
+row03=B__RRRR_RRRR__B
+row04=B__R_B___B_R__B
+row05=B__RB_B_B_BR__B
+row06=B_____________B
+row07=B__RB_B_B_BR__B
+row08=B__R_B___B_R__B
+row09=B__RRRR_RRRR__B
+row10=B_____________B
+row11=BBBBBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB
+

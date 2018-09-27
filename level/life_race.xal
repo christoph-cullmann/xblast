@@ -1,0 +1,106 @@
+[info]
+name=Life Race
+author=EPFL - cosun : Yves Bresson
+hint=Run for your Life !
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.5000
+numBlocks=20
+pos000=3 3
+pos001=4 3
+pos002=3 4
+pos003=4 4
+pos004=6 3
+pos005=7 3
+pos006=11 3
+pos007=3 9
+pos008=6 8
+pos009=7 8
+pos010=8 8
+pos011=5 9
+pos012=6 9
+pos013=7 9
+pos014=8 9
+pos015=9 9
+pos016=9 7
+pos017=10 7
+pos018=10 8
+pos019=11 9
+
+[scrambleDel]
+time=0.5997
+numBlocks=14
+pos000=3 5
+pos001=3 4
+pos002=3 3
+pos003=4 3
+pos004=5 3
+pos005=5 4
+pos006=8 7
+pos007=8 8
+pos008=8 9
+pos009=9 9
+pos010=10 9
+pos011=11 9
+pos012=11 8
+pos013=11 7
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1= 1  2
+pos2= 7  3
+pos3=13  3
+pos4= 7  8
+pos5= 1  9
+pos6=12  9
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=hex              #000000 #F4A460 #000000
+block01=hex_X            #000000 #F4A460 #000000
+block02=hex_wall         #000000 #F4A460 #FFD700
+block03=hole_floor       #000000 #F4A460 #000000
+block04=hex_extra        #000000 #F4A460 #000000
+block05=hex_extra_O      #000000 #F4A460 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_BRB_B_____BRB
+row02=B__B_____B___BB
+row03=BB___B__BBB___B
+row04=B____BBBB__B__B
+row05=B_BBB_B______BB
+row06=B___B__q_BB___B
+row07=B_____BBBRRB__B
+row08=BB_B_B___BRBB_B
+row09=B___B_____B___B
+row10=BB_____B_____BB
+row11=BRB___BBB___BRB
+row12=BBBBBBBBBBBBBBB
+

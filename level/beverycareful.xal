@@ -1,0 +1,220 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Be very careful
+author=Koen
+hint=Stop
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.1
+numBlocks=122
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 1
+pos023=3 2
+pos024=3 3
+pos025=3 4
+pos026=3 5
+pos027=3 6
+pos028=3 7
+pos029=3 8
+pos030=3 9
+pos031=3 10
+pos032=3 11
+pos033=4 1
+pos034=4 2
+pos035=4 3
+pos036=4 4
+pos037=4 5
+pos038=4 6
+pos039=4 7
+pos040=4 8
+pos041=4 9
+pos042=4 10
+pos043=4 11
+pos044=5 1
+pos045=5 2
+pos046=5 3
+pos047=5 4
+pos048=5 8
+pos049=5 9
+pos050=5 10
+pos051=5 11
+pos052=6 1
+pos053=6 2
+pos054=6 3
+pos055=6 9
+pos056=6 10
+pos057=6 11
+pos058=7 1
+pos059=7 2
+pos060=7 3
+pos061=7 9
+pos062=7 10
+pos063=7 11
+pos064=8 1
+pos065=8 2
+pos066=8 3
+pos067=8 9
+pos068=8 10
+pos069=8 11
+pos070=9 1
+pos071=9 2
+pos072=9 3
+pos073=9 4
+pos074=9 8
+pos075=9 9
+pos076=9 10
+pos077=9 11
+pos078=10 1
+pos079=10 2
+pos080=10 3
+pos081=10 4
+pos082=10 5
+pos083=10 6
+pos084=10 7
+pos085=10 8
+pos086=10 9
+pos087=10 10
+pos088=10 11
+pos089=11 1
+pos090=11 2
+pos091=11 3
+pos092=11 4
+pos093=11 5
+pos094=11 6
+pos095=11 7
+pos096=11 8
+pos097=11 9
+pos098=11 10
+pos099=11 11
+pos100=12 1
+pos101=12 2
+pos102=12 3
+pos103=12 4
+pos104=12 5
+pos105=12 6
+pos106=12 7
+pos107=12 8
+pos108=12 9
+pos109=12 10
+pos110=12 11
+pos111=13 1
+pos112=13 2
+pos113=13 3
+pos114=13 4
+pos115=13 5
+pos116=13 6
+pos117=13 7
+pos118=13 8
+pos119=13 9
+pos120=13 10
+pos121=13 11
+
+[scrambleDel]
+time=0.12
+numBlocks=28
+pos000=4 3
+pos001=4 4
+pos002=4 5
+pos003=4 6
+pos004=4 7
+pos005=4 8
+pos006=4 9
+pos007=5 3
+pos008=5 4
+pos009=5 8
+pos010=5 9
+pos011=6 3
+pos012=6 9
+pos013=7 3
+pos014=7 9
+pos015=8 3
+pos016=8 9
+pos017=9 3
+pos018=9 4
+pos019=9 8
+pos020=9 9
+pos021=10 3
+pos022=10 4
+pos023=10 5
+pos024=10 6
+pos025=10 7
+pos026=10 8
+pos027=10 9
+
+[func]
+extra=poison
+
+[player]
+bombs=10
+range=33
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=sphere_half		#000000 #377F50 #4682B4
+block01=sphere_half_X		#000000 #377F50 #4682B4
+block02=sphere_dark		#000000 #4682B4 #000000
+block03=sphere_dark		#000000 #4682B4 #000000
+block04=sphere_light		#000000 #4682B4 #000000
+block05=sphere_light_O		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B___q_____q___B
+row02=Bq__qq_q_qq__qB
+row03=B__qq__q__qq__B
+row04=B_qq__q_q__qq_B
+row05=B____qq_qq____B
+row06=B_qq_______qq_B
+row07=B____qq_qq____B
+row08=B_qq__q_q__qq_B
+row09=B__qq__q__qq__B
+row10=Bq__qq_q_qq__qB
+row11=B___q_____q___B
+row12=BBBBBBBBBBBBBBB

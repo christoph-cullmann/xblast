@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Steal
+author=Belgium : ?
+hint=Run like shit to get the grail.
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=steal
+
+[player]
+bombs=1
+range=1
+pos1=2 1
+pos2=12 1
+pos3=12 11
+pos4=2 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#000000 #FF4500 #FFFF00
+block01=karo_dark		#000000 #FF4500 #FFFF00
+block02=wall		#000000 #32CD32 #228B22
+block03=wall_R		#000000 #32CD32 #FFFF00
+block04=chest		#000000 #6A5ACD #FFD700
+block05=chest_O		#000000 #6A5ACD #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=steal
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=get
+probBomb=51
+probRange=25
+row00=BBBBBBBBBBBBBBB
+row01=BX___X_X_X___XB
+row02=BXBBXBBXBBXBBXB
+row03=B_XXXB_X_BXXX_B
+row04=BXBXBXBXBXBXBXB
+row05=BBB_X_XXX_X_BBB
+row06=B_X_B_BqB_B_X_B
+row07=BBB_X_XXX_X_BBB
+row08=BXBXBXBXBXBXBXB
+row09=B_XXXB_X_BXXX_B
+row10=BXBBXBBXBBXBBXB
+row11=BX___X_X_X___XB
+row12=BBBBBBBBBBBBBBB

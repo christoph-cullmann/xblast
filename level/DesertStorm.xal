@@ -1,0 +1,156 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Desert Storm 2
+author=Skywalker
+hint=Make'em believe !
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.48
+numBlocks=53
+pos000=2 2
+pos001=2 3
+pos002=2 4
+pos003=2 5
+pos004=2 6
+pos005=2 7
+pos006=2 8
+pos007=2 9
+pos008=2 10
+pos009=3 2
+pos010=3 3
+pos011=3 9
+pos012=3 10
+pos013=4 2
+pos014=4 4
+pos015=4 8
+pos016=4 10
+pos017=5 2
+pos018=5 4
+pos019=5 5
+pos020=5 7
+pos021=5 8
+pos022=5 10
+pos023=6 2
+pos024=6 5
+pos025=6 7
+pos026=6 10
+pos027=7 2
+pos028=7 10
+pos029=8 2
+pos030=8 5
+pos031=8 8
+pos032=8 10
+pos033=9 2
+pos034=9 4
+pos035=9 5
+pos036=9 8
+pos037=9 9
+pos038=9 10
+pos039=10 2
+pos040=10 3
+pos041=10 4
+pos042=10 9
+pos043=10 10
+pos044=11 2
+pos045=11 3
+pos046=11 4
+pos047=11 5
+pos048=11 6
+pos049=11 7
+pos050=11 8
+pos051=11 9
+pos052=11 10
+
+[scrambleDel]
+time=0.3
+numBlocks=28
+pos000=1 1
+pos001=1 6
+pos002=1 11
+pos003=2 2
+pos004=2 3
+pos005=2 4
+pos006=2 5
+pos007=2 6
+pos008=2 10
+pos009=3 3
+pos010=3 9
+pos011=5 3
+pos012=5 6
+pos013=5 9
+pos014=7 1
+pos015=7 4
+pos016=7 8
+pos017=7 11
+pos018=9 3
+pos019=9 6
+pos020=9 9
+pos021=11 3
+pos022=11 9
+pos023=12 2
+pos024=12 10
+pos025=13 1
+pos026=13 6
+pos027=13 11
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=5 1
+pos2=9 1
+pos3=3 6
+pos4=11 6
+pos5=5 11
+pos6=9 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+special=threebombs
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor_X		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #F0FFFF #FFD700
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=BB_____B_____BB
+row02=B_Brr_rXr_rrB_B
+row03=B__BXBXXXBXB__B
+row04=B___rX_B_Xr___B
+row05=B___rXbbbXr___B
+row06=BB___BbbbB___BB
+row07=B___rXbbbXr___B
+row08=B___rX_B_Xr___B
+row09=B__BXBXXXBXB__B
+row10=B_Brr_rXr_rrB_B
+row11=BB_____B_____BB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters When I was Your Age with Kick
+author=Peter Riede
+hint=Now with Kick!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=4
+range=3
+pos1=5 4
+pos2=9 4
+pos3=9 8
+pos4=5 8
+pos5=6 6
+pos6=8 6
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=check		#696969 #FA8072 #000000
+block01=check_X		#696969 #FA8072 #000000
+block02=dark_house		#000000 #000000 #000000
+block03=dark_house_R		#696969 #000000 #000000
+block04=score_floor		#000000 #D2B48C #000000
+block05=score_floor		#696969 #D2B48C #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=qqqqBXXXXXBqqqq
+row01=qBBBBBBBBBBBBBq
+row02=qBBBBBBBBBBBBBq
+row03=qBBB_______BBBq
+row04=BBBB_______BBBB
+row05=XBBB__B_B__BBBX
+row06=XBBB_______BBBX
+row07=XBBB__B_B__BBBX
+row08=BBBB_______BBBB
+row09=qBBB_______BBBq
+row10=qBBBBBBBBBBBBBq
+row11=qBBBBBBBBBBBBBq
+row12=qqqqBXXXXXBqqqq

@@ -1,0 +1,80 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Castle
+author=Stn
+hint=Every Castle Has A Secret Corridor
+gameMode=-234--STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.5714285714285714
+numBlocks=13
+pos000=5 3
+pos001=9 3
+pos002=4 5
+pos003=10 5
+pos004=4 7
+pos005=10 7
+pos006=3 4
+pos007=4 4
+pos008=6 4
+pos009=7 4
+pos010=8 4
+pos011=10 4
+pos012=11 4
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=2
+pos1=4 3
+pos2=10 3
+pos3=6 3
+pos4=8 3
+pos5=7 1
+pos6=7 11
+
+[bombs]
+
+[graphics]
+block00=city_free		#000000 #377F50 #4682B4
+block01=city_free		#000000 #377F50 #4682B4
+block02=city_rip		#000000 #4682B4 #377F50
+block03=city_rip_R		#000000 #B0C4DE #377F50
+block04=light_house		#000000 #4682B4 #000000
+block05=light_house_O		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+row00=BBBBBBBBBBBBBBB
+row01=B__X___X___X__B
+row02=BX_X_X_X_X_X_XB
+row03=BX_B_B_B_B_B_XB
+row04=B_XBBBBBBBBBX_B
+row05=B___B_XqX_B___B
+row06=B_B_BsBBBsB_B_B
+row07=BXsXBXXsXXBXsXB
+row08=BsBsBB_X_BBsBsB
+row09=B__X_X_B_X_X__B
+row10=B__B_sBBBs_B__B
+row11=B_XsX_sXs_XsX_B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,63 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Powerups in the Middle
+author=Gert Jan Kamstra
+hint=Get those powerups
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XXXXXXXXXXX_B
+row03=B_XbbbbbbbbbX_B
+row04=B_XbXXXXXXXbX_B
+row05=B_XbXrrrrrXbX_B
+row06=B_XbXrrrrrXbX_B
+row07=B_XbXrrrrrXbX_B
+row08=B_XbXXXXXXXbX_B
+row09=B_XbbbbbbbbbX_B
+row10=B_XXXXXXXXXXX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

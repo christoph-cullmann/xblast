@@ -1,0 +1,73 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=G Force 2
+author=Skywalker
+hint=Feel the power blast
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=7
+specialBombs=255
+pos1=2 2
+pos2=12 2
+pos3=7 5
+pos4=7 7
+pos5=2 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+fuseTime=long
+special=lucky
+
+[graphics]
+block00=ghost		#000000 #90EE90 #000000
+block01=ghost		#000000 #90EE90 #000000
+block02=ghost_sq		#000000 #90EE90 #000000
+block03=ghost_ci		#000000 #90EE90 #000000
+block04=ghost_sq_R		#000000 #90EE90 #000000
+block05=ghost_sq_R		#000000 #90EE90 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=16
+probVirus=16
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__X_______X__B
+row03=B_XB_______BX_B
+row04=B_____BBB_____B
+row05=B____B________B
+row06=B____B_BB_____B
+row07=B____B__B_____B
+row08=B_____BBB_____B
+row09=B_XB_______BX_B
+row10=B__X_______X__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

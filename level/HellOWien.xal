@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hell o' Wien
+author=xblasat : Gerfried Fuchs
+hint=Try to survive the beginning!!!
+gameMode=R23456S---
+
+[shrink]
+type=void
+
+
+
+[func]
+extra=igniteAll
+key=air
+
+[player]
+bombs=3
+range=2
+pos1=5 5
+pos2=5 7
+pos3=7 5
+pos4=7 7
+pos5=9 5
+pos6=9 7
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=rebound
+playerClick=randomdir
+
+[graphics]
+block00=dark_way		#000000 #6A5ACD #00FF7F
+block01=dark_way		#000000 #6A5ACD #00FF7F
+block02=r_i_p		#000000 #2E8B57 #6A5ACD
+block03=r_i_p_R		#000000 #2E8B57 #6A5ACD
+block04=pumpkin		#000000 #FF4500 #6A5ACD
+block05=pumpkin_O		#000000 #FF4500 #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=5
+probRange=5
+probVirus=6
+probSpecial=11
+probHidden=68
+row00=vvvvvvvvvvvvvvv
+row01=vvvvvvvvvvvvvvv
+row02=vvvvvvvvvvvvvvv
+row03=vvvBBBBBBBBBvvv
+row04=vvvBXXXXXXXBvvv
+row05=vvvBB_B_B_BBvvv
+row06=vvvB_______Bvvv
+row07=vvvBB_B_B_BBvvv
+row08=vvvBXXXXXXXBvvv
+row09=vvvBBBBBBBBBvvv
+row10=vvvvvvvvvvvvvvv
+row11=vvvvvvvvvvvvvvv
+row12=vvvvvvvvvvvvvvv

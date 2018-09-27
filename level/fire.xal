@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fire
+author=Stn
+hint=Watch What You Drop
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=5
+range=10
+specialBombs=30
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+default=firecracker
+
+[graphics]
+block00=hex		#000000 #FF4500 #FAFAD2
+block01=hex		#000000 #FF4500 #FAFAD2
+block02=hex_wall		#000000 #FF4500 #FF8C00
+block03=hex_extra		#000000 #FF4500 #FF8C00
+block04=hex_extra		#000000 #FF4500 #00FF7F
+block05=hex_extra_O		#000000 #FF4500 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B___B___B___B_B
+row02=B_B___B___B___B
+row03=B__B_B__B__B_BB
+row04=BB_______B____B
+row05=B_BB_B_B___BB_B
+row06=B______B_B__B_B
+row07=BB_B_B__B_____B
+row08=B___B_____B_B_B
+row09=B_B___BB__BB__B
+row10=B___B___B___B_B
+row11=B_B__B____B___B
+row12=BBBBBBBBBBBBBBB

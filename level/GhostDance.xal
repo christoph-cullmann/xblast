@@ -1,0 +1,116 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Ghost Dance
+author=Tobias Johansson
+hint=The spirits are uneasy
+gameMode=R23456STDL
+
+[shrink]
+type=spiralLego
+
+[scrambleDraw]
+time=0.78
+numBlocks=4
+pos000=5 7
+pos001=6 5
+pos002=8 7
+pos003=9 5
+
+[scrambleDel]
+time=0.78
+numBlocks=32
+pos000=2 2
+pos001=2 3
+pos002=2 6
+pos003=2 9
+pos004=2 10
+pos005=3 2
+pos006=3 3
+pos007=3 4
+pos008=3 6
+pos009=3 8
+pos010=3 9
+pos011=3 10
+pos012=4 3
+pos013=4 9
+pos014=7 2
+pos015=7 3
+pos016=7 9
+pos017=7 10
+pos018=10 3
+pos019=10 9
+pos020=11 2
+pos021=11 3
+pos022=11 4
+pos023=11 6
+pos024=11 8
+pos025=11 9
+pos026=11 10
+pos027=12 2
+pos028=12 3
+pos029=12 6
+pos030=12 9
+pos031=12 10
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=3
+range=6
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+playerClick=contact
+wallClick=contact
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=ghost		#000000 #1E90FF #5F9EA0
+block01=ghost		#000000 #1E90FF #5F9EA0
+block02=dark_block		#000000 #228B22 #20B2AA
+block03=dark_block_R		#000000 #228B22 #20B2AA
+block04=extra		#1E90FF #1E90FF #1E90FF
+block05=extra_O		#000000 #1E90FF #1E90FF
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=ghost		#FF0000 #1E90FF #5F9EA0
+
+[map]
+probBomb=25
+probRange=25
+probVirus=11
+probSpecial=13
+probHidden=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XXXXB_BXXXX_B
+row03=B_XBBBB_BBBBX_B
+row04=B_XB_______BX_B
+row05=B_BB_______BB_B
+row06=B_____________B
+row07=B_BB_______BB_B
+row08=B_XB_______BX_B
+row09=B_XBBBB_BBBBX_B
+row10=B_XXXXB_BXXXX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

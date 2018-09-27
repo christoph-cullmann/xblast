@@ -1,0 +1,64 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Lego Classic
+author=Tor Andræ
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+extra=stunOthers
+
+[player]
+bombs=2
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #228B22
+block03=lego_white		#000000 #0000FF #228B22
+block04=lego_black		#FF0000 #000000 #228B22
+block05=lego_black_O		#000000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=lego_floor		#000000 #228B22 #808080
+
+[map]
+probBomb=25
+probRange=25
+probSpecial=11
+row00=BBBBBBBBBBBBBBB
+row01=B____X___X____B
+row02=B_B_B_B_B_B_B_B
+row03=B___X_____X___B
+row04=B_BXBXBXBXBXB_B
+row05=BX____X_X____XB
+row06=B_BXB_BXB_BXB_B
+row07=BX____X_X____XB
+row08=B_BXBXBXBXBXB_B
+row09=B___X_____X___B
+row10=B_B_B_B_B_B_B_B
+row11=B____X___X____B
+row12=BBBBBBBBBBBBBBB

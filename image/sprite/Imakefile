@@ -1,0 +1,26 @@
+/* 
+ * Program XBLAST V2.5.6
+ * 1993-1997 (C) by Oliver Vogel (e-mail: vogel@ikp.uni-koeln.de)
+ *
+ * File: image/sprite/Imakefile
+ * April 10th, 1997
+ * started August 1993
+ */
+
+/*
+ * common part 
+ */
+
+XBLASTDIR=/wing6/home/csg/csg8003/xblast
+IMAGEDIR=$(XBLASTDIR)/image/sprite
+
+/*
+ * install rule	
+ */
+
+EPMFILES=*.epm
+PPMFILES=*.ppm
+PBMFILES=*.pbm
+ALLFILES=$(EPMFILES) $(PPMFILES) $(PBMFILES)
+
+InstallMultiple($(ALLFILES),$(IMAGEDIR))

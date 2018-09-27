@@ -1,0 +1,72 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Super Frog
+author=EPFL - disun : Yves Bresson
+hint=Don't frog in the walls
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=frogger
+key=frogger
+
+[player]
+bombs=6
+range=3
+pos1=2 1
+pos2=12 1
+pos3=7 2
+pos4=7 10
+pos5=2 11
+pos6=12 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=karo_light		#000000 #90EE90 #008000
+block01=karo_light		#000000 #90EE90 #008000
+block02=pyramid		#000000 #DAA520 #008000
+block03=pyramid_R		#000000 #DAA520 #008000
+block04=extra		#000000 #90EE90 #008000
+block05=extra_O		#000000 #90EE90 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=frogger
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=48
+probHidden=3
+row00=BBBBBBBBBBBBBBB
+row01=BB___BX_XB___BB
+row02=B__X_B___B_X__B
+row03=B_X_X_XBX_X_X_B
+row04=B__X_B_B_B_X__B
+row05=B__X_B_B_B_X__B
+row06=BBB_BB_X_BB_BBB
+row07=B__X_B_B_B_X__B
+row08=B__X_B_B_B_X__B
+row09=B_X_X_XBX_X_X_B
+row10=B__X_B___B_X__B
+row11=BB___BX_XB___BB
+row12=BBBBBBBBBBBBBBB

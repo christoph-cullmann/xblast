@@ -1,0 +1,66 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Ambush 2
+author=Biel: Skywalker
+hint="Old" Style
+gameMode=R234--STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=2
+pos1=1 1
+pos2=13 1
+pos3=1 11
+pos4=13 11
+pos5=0 0
+pos6=0 0
+initVirus=run
+reviveVirus=run
+
+[bombs]
+default=random
+
+[graphics]
+block00=chess_floor		#000000 #FFFFFF #000000
+block01=chess_floor_X		#000000 #FFFFFF #000000
+block02=book_shelf		#000000 #FFFFFF #000000
+block03=book_shelf		#000000 #FFFFFF #000000
+block04=chess_sphere		#000000 #FFFFFF #000000
+block05=chess_sphere_O		#000000 #FFFFFF #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor
+
+[map]
+probBomb=25
+probRange=25
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B_X___XXXXBB__B
+row02=BXBBBX__B____XB
+row03=BXBX____BXBXBXB
+row04=BXX_XBBXBXBBB_B
+row05=B_BB_______X__B
+row06=B_X__X_XXBBB__B
+row07=BXXB_B_____X__B
+row08=B_X_XBXX_B_X__B
+row09=B_B__B___BXXBXB
+row10=BBXXXB_BBBX_BXB
+row11=B_____XBBX____B
+row12=BBBBBBBBBBBBBBB

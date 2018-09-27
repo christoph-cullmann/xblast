@@ -1,0 +1,83 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=TeleShrink
+author=Vargusz
+hint=Be careful using teleport at shrinktime
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[scrambleDraw]
+time=0.5
+numBlocks=2
+pos000=5 6
+pos001=9 6
+
+[scrambleDel]
+time=0.55
+numBlocks=2
+pos000=6 8
+pos001=8 4
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=1
+range=3
+specialBombs=12
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=9 4
+pos6=5 8
+initExtra=airpump 
+reviveExtra=airpump 
+
+[bombs]
+playerClick=randomdir
+special=napalm
+hidden=renovation
+
+[graphics]
+block00=karo_dark		#000000 #483D8B #FF4500
+block01=karo_dark_X		#000000 #483D8B #FF4500
+block02=weight		#708090 #000000 #708090
+block03=weight_R		#000000 #000000 #708090
+block04=extra		#000000 #8B4513 #000000
+block05=extra_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=karo_dark		#000000 #E0FFFF #FF4500
+
+[map]
+extraDistribution=single
+probBomb=6
+probRange=12
+probVirus=6
+probSpecial=50
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B____Xvqv_X___B
+row02=B___X_BXB__X__B
+row03=B__XB_X_X__BX_B
+row04=B_X___B_B____XB
+row05=BvBBXBBXBBBXBvB
+row06=BqX___XqX___XqB
+row07=BvBXBBBXBBXBBvB
+row08=BX____B_B___X_B
+row09=B_XB__X_X_BX__B
+row10=B__X__BXB_X___B
+row11=B___X_vqvX____B
+row12=BBBBBBBBBBBBBBB

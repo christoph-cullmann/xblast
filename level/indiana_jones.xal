@@ -1,0 +1,70 @@
+[info]
+name=Indiana Jones
+author=Rob Hite
+hint=Make sure you get those easy flames
+gameMode=R234--ST-L
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.7500
+numBlocks=8
+pos000=3 3
+pos001=3 9
+pos002=11 3
+pos003=11 9
+pos004=4 3
+pos005=4 9
+pos006=10 3
+pos007=10 9
+
+[scrambleDel]
+time=0.7500
+numBlocks=1
+pos000=7 6
+
+[func]
+
+[player]
+bombs=3
+range=2
+pos1= 1  2
+pos2=13  2
+pos3=13 10
+pos4= 1 10
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #DA70D6 #9932CC
+block01=karo_light_X     #000000 #DA70D6 #9932CC
+block02=pyramid          #000000 #6A5ACD #000000
+block03=pyramid_R        #000000 #8470FF #000000
+block04=extra            #000000 #FFD700 #FFFF00
+block05=extra_O          #000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probVirus=7
+probHidden=91
+row00=BBBBBBBBBBBBBBB
+row01=BXrrrr_X_rrrrXB
+row02=B_BXBB_B_BBXB_B
+row03=B_X_bB_B_Bb_X_B
+row04=B__BB__B__BB__B
+row05=BX____X_X____XB
+row06=BrBBrXBBBXrBBrB
+row07=BX____X_X____XB
+row08=B__BB__B__BB__B
+row09=B_X_bB_X_Bb_X_B
+row10=B_BXBB_B_BBXB_B
+row11=BXrrrr_B_rrrrXB
+row12=BBBBBBBBBBBBBBB
+

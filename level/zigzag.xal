@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=ZigZag
+author=Belgium : vvl
+hint=Recherche du + court chemin
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=dark_way		#000000 #008000 #808080
+block01=dark_way		#000000 #008000 #808080
+block02=r_i_p		#000000 #808080 #008000
+block03=r_i_p_R		#000000 #808080 #008000
+block04=pumpkin		#000000 #DAA520 #008000
+block05=pumpkin_O		#000000 #DAA520 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=33
+probRange=33
+probVirus=33
+row00=BBBBBBBBBBBBBBB
+row01=B__X__X__B__B_B
+row02=B_B_rB__B_rB__B
+row03=BXbXB_XBX_XbX_B
+row04=B__B__bXbB__B_B
+row05=B_XqXBXrBX_B_XB
+row06=BB_XBqrXrqBX_BB
+row07=BX_B_XBrXBXqX_B
+row08=B_B__BbXb__B__B
+row09=B_XbX_XBX_BXbXB
+row10=B__Br_B__Br_B_B
+row11=B_B__B__X__X__B
+row12=BBBBBBBBBBBBBBB

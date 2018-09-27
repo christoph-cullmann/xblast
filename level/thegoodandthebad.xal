@@ -1,0 +1,111 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=The Good And The Bad
+author=LORIA : Pierre 'in your back' Laroche
+hint=Vos automatismes vous trahiront...
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.3333333333333333
+numBlocks=16
+pos000=3 4
+pos001=4 4
+pos002=5 4
+pos003=6 4
+pos004=8 4
+pos005=9 4
+pos006=10 4
+pos007=11 4
+pos008=11 8
+pos009=10 8
+pos010=9 8
+pos011=8 8
+pos012=6 8
+pos013=5 8
+pos014=4 8
+pos015=3 8
+
+[scrambleDel]
+time=0.6666666666666666
+numBlocks=22
+pos000=3 4
+pos001=4 4
+pos002=5 4
+pos003=6 4
+pos004=7 4
+pos005=8 4
+pos006=9 4
+pos007=10 4
+pos008=11 4
+pos009=11 5
+pos010=11 7
+pos011=11 8
+pos012=10 8
+pos013=9 8
+pos014=8 8
+pos015=7 8
+pos016=6 8
+pos017=5 8
+pos018=4 8
+pos019=3 8
+pos020=3 7
+pos021=3 5
+
+[func]
+extra=invincible
+
+[player]
+bombs=3
+range=2
+pos1=10 7
+pos2=10 5
+pos3=7 5
+pos4=4 7
+pos5=7 7
+pos6=4 5
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+
+[graphics]
+block00=rock_floor		#000000 #FFEFD5 #000000
+block01=rock_floor		#000000 #FFEFD5 #000000
+block02=mr_beam_tv		#000000 #FFEFD5 #6495ED
+block03=mr_beam_tv		#000000 #FFEFD5 #6495ED
+block04=hex_extra		#000000 #FFEFD5 #6495ED
+block05=hex_extra_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=33
+probRange=49
+probSpecial=17
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBBBBBBBBBB_B
+row03=B_B__X___X__B_B
+row04=B__qqXsBqXqq__B
+row05=B__B_Xs_qX_B__B
+row06=B__ssX_B_Xss__B
+row07=B__B_Xq_sX_B__B
+row08=B__qqXqBsXqq__B
+row09=B_B__X___X__B_B
+row10=B_BBBBBBBBBBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

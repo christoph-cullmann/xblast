@@ -1,0 +1,58 @@
+[info]
+name=Clockwise... but you walk wrong
+author=EPFL - cosun : Yves Bresson
+hint=Clockwise... but you walk wrong
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=4
+pos1= 5  2
+pos2= 9  4
+pos3= 1  6
+pos4=13  6
+pos5= 9  9
+pos6= 4 10
+initVirus=reverse
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+playerClick=thru
+
+[graphics]
+block00=button_floor     #000000 #EEE8AA #CCCCCC
+block01=button_floor_X   #000000 #EEE8AA #CCCCCC
+block02=weight           #000000 #EEE8AA #CCCCCC
+block03=uparrow          #000000 #00FF7F #FFFFFF
+block04=extra            #FFFF00 #B22222 #000000
+block05=extra_O          #FFFF00 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BB___B____B_B
+row03=B___________B_B
+row04=B___BB____B___B
+row05=B_B_______B___B
+row06=B_____B_B_____B
+row07=B___B_________B
+row08=B___B____BB_B_B
+row09=B_B___________B
+row10=B_B___B____BB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

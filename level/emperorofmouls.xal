@@ -1,0 +1,74 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Emperor of Mouls
+author=LORIA : Jean 'MoulMan' Lieber
+hint=Try to live more than 10 seconds !
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=5
+range=9
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=randomdir
+playerClick=randomdir
+default=random
+hidden=napalm
+
+[graphics]
+block00=city_free		#000000 #808080 #D2B48C
+block01=city_free		#000000 #808080 #D2B48C
+block02=sphere_dark		#000000 #7FFF00 #A0522D
+block03=sphere_dark		#000000 #7FFF00 #A0522D
+block04=light_house		#000000 #32CD32 #F4A460
+block05=light_house_O		#000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=24
+probRange=24
+probSpecial=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B_s___s_s___s_B
+row02=Bss___sss___ssB
+row03=B______X______B
+row04=B___s__B__s___B
+row05=B______X______B
+row06=BXXXBXXqXXBXXXB
+row07=B______X______B
+row08=B___s__B__s___B
+row09=B______X______B
+row10=Bss___sss___ssB
+row11=B_s___s_s___s_B
+row12=BBBBBBBBBBBBBBB

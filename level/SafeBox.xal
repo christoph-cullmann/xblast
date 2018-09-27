@@ -1,0 +1,60 @@
+[info]
+name="Safe" box
+author=Tor Andræ
+hint=Try if you dare
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=8
+range=6
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+playerClick=thru
+direction=right
+nastyGentle=4
+nastyRange=3
+
+[graphics]
+block00=button_floor     #000000 #8A2BE2 #00FF7F
+block01=button_floor_X   #000000 #8A2BE2 #00FF7F
+block02=wall             #000000 #00FF7F #7FFFD4
+block03=wall_R           #000000 #00FF7F #7FFFD4
+block04=extra            #000000 #FFD700 #FF4500
+block05=extra_O          #000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__rrrrrrrrr__B
+row02=B__bbbbbbbbb__B
+row03=B__BBBBBBBBB__B
+row04=B__B_______B__B
+row05=B__B_______B__B
+row06=B____B___B____B
+row07=B__B_______B__B
+row08=B__B_______B__B
+row09=B__BBBBBBBBB__B
+row10=B______q______B
+row11=B_____qqq_____B
+row12=BBBBBBBBBBBBBBB
+

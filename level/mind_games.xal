@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Mind Games
+author=Garth Denley (Adelaide)
+hint=Keep well away from the bombs
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1= 6  5
+pos2= 8  5
+pos3= 8  7
+pos4= 6  7
+pos5= 7  2
+pos6= 7 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+haunt=fast
+
+[graphics]
+block00=city_free        #000000 #DA70D6 #FFC0CB
+block01=city_free_X      #000000 #DA70D6 #FFC0CB
+block02=dark_house       #000000 #00FF7F #F0FFFF
+block03=dark_house_R     #000000 #00FF7F #F0FFFF
+block04=box              #000000 #00FFFF #FFA500
+block05=box              #000000 #00FFFF #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=29
+probRange=32
+probVirus=11
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=BX__B_____B__XB
+row02=BBX___X_X___XBB
+row03=BX___XBXBX___XB
+row04=B__X__X_X__X__B
+row05=B_XBX__X__XBX_B
+row06=B__X__XBX__X__B
+row07=B_XBX__X__XBX_B
+row08=B__X__X_X__X__B
+row09=BX___XBXBX___XB
+row10=BBX___X_X___XBB
+row11=BX__B_____B__XB
+row12=BBBBBBBBBBBBBBB

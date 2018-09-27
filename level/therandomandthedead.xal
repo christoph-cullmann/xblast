@@ -1,0 +1,76 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Random and the Dead
+author=MisterE
+hint=The Random and the Dead
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=life
+key=specialBomb
+
+[player]
+bombs=10
+range=9
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+normal=construction
+special=random
+hidden=random
+bombClick=snooker
+playerClick=thru
+fuseTime=short
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex_X		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=6
+probRange=6
+probVirus=6
+probSpecial=6
+probHidden=6
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B___q_____q___B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=Bq___________qB
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B___q_____q___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,81 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Air Rebounds
+author=LORIA : Pierre 'in your back' Laroche
+hint=You'll have to push rebounds.
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=2
+pos000=7 5
+pos001=7 7
+
+[scrambleDel]
+time=0.5
+numBlocks=7
+pos000=3 1
+pos001=3 5
+pos002=3 9
+pos003=7 9
+pos004=11 1
+pos005=11 5
+pos006=11 9
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=5
+range=5
+pos1=2 3
+pos2=12 7
+pos3=12 3
+pos4=5 10
+pos5=2 7
+pos6=9 10
+
+[bombs]
+bombClick=clockwise
+wallClick=anticlockwise
+playerClick=thru
+
+[graphics]
+block00=karo_dark		#000000 #FFEFD5 #4682B4
+block01=karo_dark		#000000 #FFEFD5 #4682B4
+block02=pyramid		#000000 #87CEFA #4682B4
+block03=pyramid_R		#000000 #87CEFA #4682B4
+block04=box		#000000 #FFEFD5 #6495ED
+block05=box		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probSpecial=40
+probHidden=59
+row00=BBBBBBBBBBBBBBB
+row01=B__B___B___B__B
+row02=B_B_B_BXB_B_B_B
+row03=BB___B_X_B___BB
+row04=B_B____X____B_B
+row05=B__BXXXXXXXB__B
+row06=B_B___XXX___B_B
+row07=BB___X_X_X___BB
+row08=B_B_X__X__X_B_B
+row09=B__B___B___B__B
+row10=B___B_B_B_B___B
+row11=B____B___B____B
+row12=BBBBBBBBBBBBBBB

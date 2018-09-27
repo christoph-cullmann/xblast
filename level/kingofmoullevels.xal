@@ -1,0 +1,95 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=King of Moul Levels
+author=LORIA : Pierre 'in your back' Laroche
+hint=Take YOUR chance, MoulMan !
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+[scrambleDraw]
+time=0.5
+numBlocks=16
+pos000=5 4
+pos001=6 4
+pos002=7 4
+pos003=8 4
+pos004=9 4
+pos005=9 5
+pos006=9 6
+pos007=9 7
+pos008=9 8
+pos009=8 8
+pos010=7 8
+pos011=6 8
+pos012=5 8
+pos013=5 7
+pos014=5 6
+pos015=5 5
+
+[scrambleDel]
+time=0.6666666666666666
+numBlocks=4
+pos000=6 4
+pos001=8 4
+pos002=6 8
+pos003=8 8
+
+[func]
+extra=life
+
+[player]
+bombs=3
+range=5
+pos1=2 2
+pos2=7 2
+pos3=12 2
+pos4=2 10
+pos5=7 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=sphere_half		#000000 #FFEFD5 #000000
+block01=sphere_half		#000000 #FFEFD5 #000000
+block02=pyramid		#000000 #006400 #D2691E
+block03=pyramid_R		#000000 #006400 #D2691E
+block04=bricks		#000000 #2E8B57 #000000
+block05=brick_O		#000000 #2E8B57 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#000000 #006400 #4169E1
+
+[map]
+probVirus=51
+probSpecial=49
+row00=BBBBBBBBBBBBBBB
+row01=B_X____X____X_B
+row02=BX_X__X_X__X_XB
+row03=B_X____X____X_B
+row04=B_____________B
+row05=B______B______B
+row06=B_B___BvB___B_B
+row07=B______B______B
+row08=B_____________B
+row09=B_X____X____X_B
+row10=BX_X__X_X__X_XB
+row11=B_X____X____X_B
+row12=BBBBBBBBBBBBBBB

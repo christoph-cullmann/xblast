@@ -1,0 +1,72 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Kriss Kross
+author=Glaset
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=3
+range=3
+pos1=6 3
+pos2=6 5
+pos3=8 5
+pos4=8 3
+pos5=8 7
+pos6=6 7
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=pyro
+bombClick=snooker
+playerClick=thru
+fuseTime=short
+
+[graphics]
+block00=city_free		#000000 #FFB6C1 #000000
+block01=city_free		#000000 #FFB6C1 #000000
+block02=wall		#000000 #EE82EE #D2691E
+block03=wall_R		#000000 #EE82EE #D2691E
+block04=extra		#000000 #FF0000 #7CFC00
+block05=extra_O		#000000 #FF0000 #7CFC00
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probBomb=33
+probRange=33
+probSpecial=33
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_sXrrrsrrrXs_B
+row02=B_BsBBXBBBBsB_B
+row03=B______X______B
+row04=B_BsBBBBXBBsB_B
+row05=B______X______B
+row06=B_BsBBXBBBBsB_B
+row07=B______X______B
+row08=B_BsBBBBXBBsB_B
+row09=B___rsrrrsr___B
+row10=BsBXbbbsbbbXBsB
+row11=BXXXBBBBBBBXXXB
+row12=BBBBBBBBBBBBBBB

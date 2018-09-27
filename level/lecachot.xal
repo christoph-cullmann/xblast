@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Le Cachot
+author=ISTY : Olivier GLADIN
+hint=Go crazy
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=5
+range=3
+specialBombs=30
+pos1=1 1
+pos2=1 11
+pos3=13 1
+pos4=13 11
+pos5=1 5
+pos6=13 5
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=renovation
+
+[graphics]
+block00=iron_floor		#000000 #000000 #00FF7F
+block01=iron_floor		#000000 #000000 #00FF7F
+block02=dark_block		#191970 #4169E1 #000000
+block03=dark_block_R		#4169E1 #FFFFFF #FFFFFF
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B___B_____B___B
+row02=B___B_____B___B
+row03=B___B_____B___B
+row04=BBBB_______BBBB
+row05=B___B_____B___B
+row06=B___B_____B___B
+row07=B___B_____B___B
+row08=BBBB_______BBBB
+row09=B___B_____B___B
+row10=B___B_____B___B
+row11=B___B_____B___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,76 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Pyromania
+author=Chris Doherty (Adelaide)
+hint=Pyros are usually not as devastating if they are near a wall
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDel]
+time=0.61
+numBlocks=10
+pos000=5 2
+pos001=6 2
+pos002=7 2
+pos003=8 2
+pos004=9 2
+pos005=5 10
+pos006=6 10
+pos007=7 10
+pos008=8 10
+pos009=9 10
+
+[func]
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+specialBombs=30
+pos1= 4  4
+pos2=10  4
+pos3=10  8
+pos4= 4  8
+pos5= 5  6
+pos6= 9  6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+special=pyro
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #000000
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=firecracker
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=35
+probRange=44
+probVirus=16
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=BXX_________XXB
+row02=BX____XXX____XB
+row03=B__BBX___XBB__B
+row04=B__X__XXX__X__B
+row05=B_X_X_X_X_X_X_B
+row06=B_X_X_____X_X_B
+row07=B_X_X_X_X_X_X_B
+row08=B__X__XXX__X__B
+row09=B__BBX___XBB__B
+row10=BX____XXX____XB
+row11=BXX_________XXB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,139 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 4
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+
+[scrambleDel]
+time=0.5
+numBlocks=69
+pos000=2 5
+pos001=2 6
+pos002=2 7
+pos003=3 3
+pos004=3 4
+pos005=3 5
+pos006=3 6
+pos007=3 7
+pos008=3 8
+pos009=3 9
+pos010=4 3
+pos011=4 4
+pos012=4 5
+pos013=4 6
+pos014=4 7
+pos015=4 8
+pos016=4 9
+pos017=5 2
+pos018=5 3
+pos019=5 4
+pos020=5 6
+pos021=5 8
+pos022=5 9
+pos023=5 10
+pos024=6 2
+pos025=6 3
+pos026=6 4
+pos027=6 8
+pos028=6 9
+pos029=6 10
+pos030=7 2
+pos031=7 3
+pos032=7 4
+pos033=7 5
+pos034=7 6
+pos035=7 7
+pos036=7 8
+pos037=7 9
+pos038=7 10
+pos039=8 2
+pos040=8 3
+pos041=8 4
+pos042=8 8
+pos043=8 9
+pos044=8 10
+pos045=9 2
+pos046=9 3
+pos047=9 4
+pos048=9 6
+pos049=9 8
+pos050=9 9
+pos051=9 10
+pos052=10 3
+pos053=10 4
+pos054=10 5
+pos055=10 6
+pos056=10 7
+pos057=10 8
+pos058=10 9
+pos059=11 3
+pos060=11 4
+pos061=11 5
+pos062=11 6
+pos063=11 7
+pos064=11 8
+pos065=11 9
+pos066=12 5
+pos067=12 6
+pos068=12 7
+
+[func]
+key=cloak
+
+[player]
+bombs=1
+range=2
+pos1=1 2
+pos2=13 10
+pos3=12 1
+pos4=2 11
+pos5=7 2
+pos6=7 10
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+bombClick=rebound
+wallClick=contact
+playerClick=contact
+
+[graphics]
+block00=rock_floor		#000000 #FFD700 #000000
+block01=rock_floor_X		#000000 #FFD700 #000000
+block02=dark_block		#8B0000 #000000 #696969
+block03=dark_block_R		#000000 #000000 #696969
+block04=dark_block		#000000 #0000FF #0000FF
+block05=dark_block		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBX_____XBB_B
+row03=B_BBXXXXXXXBB_B
+row04=B_XXBBbBrBBXX_B
+row05=B_rXBBXBXBBXb_B
+row06=B__XBBXXXBBX__B
+row07=B_bXBBXBXBBXr_B
+row08=B_XXBBrBbBBXX_B
+row09=B_BBXXXXXXXBB_B
+row10=B_BBX_____XBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

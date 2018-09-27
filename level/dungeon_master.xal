@@ -1,0 +1,65 @@
+;BUG GY
+
+[info]
+name=Dungeon Master
+author=mariu
+hint=If you want the trasures, you must be the dungeon master
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=1
+pos1=13 11
+pos2=13 11
+pos3=13 11
+pos4=13 11
+pos5=13 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=randomdir
+playerClick=thru
+hidden=firecracker
+
+[graphics]
+block00=karo_dark        #000000 #2E8B57 #8FBC8F
+block01=karo_dark_X      #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #FF3030 #000000
+block03=wall_R           #000000 #FF3030 #2E8B57
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=1
+probRange=2
+probVirus=47
+probSpecial=1
+probHidden=2
+row00=BBBBBBBBBBBBBBB
+row01=BrbqXrqbX_X___B
+row02=BbsbBqsqBXB_s_B
+row03=BqbrBbqrB_B___B
+row04=BXBBBBXBB_BBBXB
+row05=BqrbBX_XBXB___B
+row06=BrsrX_B_B_X_s_B
+row07=BbrqBXBX_XB___B
+row08=BXBBB_BBXBBBBXB
+row09=B___B_B___B___B
+row10=B_s_BXB_s_B_s_B
+row11=B___X_X___X___B
+row12=BBBBBBBBBBBBBBB
+

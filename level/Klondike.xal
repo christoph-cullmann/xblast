@@ -1,0 +1,125 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Klondike
+author=Tobias Johansson
+hint=Don't panic
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+
+[scrambleDel]
+time=0.02
+numBlocks=56
+pos000=1 3
+pos001=1 4
+pos002=1 8
+pos003=1 9
+pos004=2 4
+pos005=2 5
+pos006=2 7
+pos007=2 8
+pos008=3 1
+pos009=3 11
+pos010=4 1
+pos011=4 3
+pos012=4 4
+pos013=4 5
+pos014=4 6
+pos015=4 7
+pos016=4 8
+pos017=4 9
+pos018=4 11
+pos019=5 3
+pos020=5 6
+pos021=5 9
+pos022=6 3
+pos023=6 6
+pos024=6 9
+pos025=7 3
+pos026=7 4
+pos027=7 5
+pos028=7 7
+pos029=7 8
+pos030=7 9
+pos031=8 3
+pos032=8 6
+pos033=8 9
+pos034=9 3
+pos035=9 6
+pos036=9 9
+pos037=10 1
+pos038=10 3
+pos039=10 4
+pos040=10 5
+pos041=10 6
+pos042=10 7
+pos043=10 8
+pos044=10 9
+pos045=10 11
+pos046=11 1
+pos047=11 11
+pos048=12 4
+pos049=12 5
+pos050=12 7
+pos051=12 8
+pos052=13 3
+pos053=13 4
+pos054=13 8
+pos055=13 9
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=5
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #C0C0C0 #F5F5F5
+block01=iron_floor		#000000 #C0C0C0 #F5F5F5
+block02=dark_block		#000000 #FFD700 #B8860B
+block03=dark_block_R		#000000 #FFD700 #B8860B
+block04=extra		#000000 #D2691E #CD853F
+block05=extra_O		#000000 #D2691E #CD853F
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probBomb=25
+probRange=25
+probVirus=5
+probSpecial=25
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=BXXBBXBBBXBBXXB
+row02=BXBBBXBBBXBBBXB
+row03=BBBBBBBBBBBBBBB
+row04=BBBBBBBBBBBBBBB
+row05=BBBBBBBBBBBBBBB
+row06=BBXXBBB_BBBXXBB
+row07=BBBBBBBBBBBBBBB
+row08=BBBBBBBBBBBBBBB
+row09=BBBBBBBBBBBBBBB
+row10=BXBBBXBBBXBBBXB
+row11=BXXBBXBBBXBBXXB
+row12=BBBBBBBBBBBBBBB

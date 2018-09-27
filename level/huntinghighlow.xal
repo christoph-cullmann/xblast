@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hunting High & Low
+author=NL : The Master Himself
+hint=Happy Hunting!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=15
+range=5
+specialBombs=30
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+special=napalm
+hidden=napalm
+
+[graphics]
+block00=city_free		#000000 #000000 #000000
+block01=city_free		#000000 #000000 #000000
+block02=dark_house		#000000 #B22222 #A0522D
+block03=dark_house_R		#000000 #B22222 #A0522D
+block04=light_house		#000000 #32CD32 #F4A460
+block05=light_house_O		#000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+extraDistribution=all
+probHidden=100
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__B___B___B__B
+row04=B____B___B____B
+row05=B___BqB_BqB___B
+row06=B__X__B_B__X__B
+row07=B___BqB_BqB___B
+row08=B____B___B____B
+row09=B__B___B___B__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

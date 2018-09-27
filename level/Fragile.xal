@@ -1,0 +1,73 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Fragile
+author=Tobias Johansson
+hint=Don't touch the bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=4
+range=8
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=malfunction
+reviveVirus=malfunction
+
+[bombs]
+normal=napalm
+hidden=firecracker
+bombClick=randomdir
+playerClick=contact
+wallClick=randomdir
+direction=left
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #AFEEEE #377F50
+block01=iron_floor		#000000 #AFEEEE #377F50
+block02=bricks		#000000 #696969 #00FFFF
+block03=bricks		#000000 #696969 #00FFFF
+block04=chest		#000000 #800080 #FFFFFF
+block05=chest_O		#000000 #800080 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=13
+probRange=11
+probSpecial=6
+probHidden=6
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__B__________B
+row02=B_X___X____X__B
+row03=B____X_B_X__B_B
+row04=BB_X_X____B___B
+row05=B__X__B_______B
+row06=B_B_X__X_B_XB_B
+row07=B_____________B
+row08=B__X__B__X__X_B
+row09=BB__B___BXB___B
+row10=B___________B_B
+row11=B__B_X__B_____B
+row12=BBBBBBBBBBBBBBB

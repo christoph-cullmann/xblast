@@ -1,0 +1,58 @@
+[info]
+name=Running Man II
+author=The Adelaide Group
+hint=Use the cloak wisely, don't waste it.
+gameMode=R234--STD-
+
+[shrink]
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 0  0
+pos6= 0  0
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #7F7F7F
+block01=chess_floor_X    #000000 #FFEFD5 #7F7F7F
+block02=book_shelf       #000000 #7FFFD4 #6495ED
+block03=book_shelf       #000000 #B03060 #6495ED
+block04=chess_sphere     #000000 #FFEFD5 #FF4500
+block05=chess_sphere_O   #000000 #FFEFD5 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=check            #000000 #FFFFFF #7F7F7F
+
+[map]
+extraDistribution=all
+probBomb=31
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____X_X_____B
+row02=B_RXRXRXRXRXR_B
+row03=B_X___X_X___X_B
+row04=BXR_RXRXRXR_RXB
+row05=B_X_X_____X_X_B
+row06=BXRXRXRXRXRXRXB
+row07=B_X_X_____X_X_B
+row08=BXR_RXRXRXR_RXB
+row09=B_X___X_X___X_B
+row10=B_RXRXRXRXRXR_B
+row11=B_____X_X_____B
+row12=BBBBBBBBBBBBBBB
+

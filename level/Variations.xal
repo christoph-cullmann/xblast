@@ -1,0 +1,74 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Variations
+author=Tobias Johansson
+hint=Mind the rebounds
+gameMode=R23456STDL
+
+[shrink]
+type=spiralPlus
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+bombClick=anticlockwise
+playerClick=randomdir
+wallClick=clockwise
+fuseTime=short
+
+[graphics]
+block00=karo_light		#000000 #191970 #4169E1
+block01=karo_light		#000000 #191970 #4169E1
+block02=pyramid		#000000 #0000CD #000000
+block03=pyramid_R		#000000 #0000CD #000000
+block04=extra		#000000 #FFFF00 #FF0000
+block05=extra_O		#000000 #FFFF00 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=24
+probRange=24
+probVirus=5
+probSpecial=48
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B____XXBXX____B
+row04=B____Xb_bX____B
+row05=B_X__BrbrB__X_B
+row06=B_B__XXBXX__B_B
+row07=B_X__BrbrB__X_B
+row08=B____Xb_bX____B
+row09=B____XXBXX____B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

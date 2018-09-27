@@ -1,0 +1,66 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Running Man 4
+author=Skywalker
+hint=Use the cloak wisely, don't waste it.
+gameMode=R234------
+
+[shrink]
+type=void
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+special=search
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor_X		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #7FFFD4 #6495ED
+block03=book_shelf		#000000 #7FFFD4 #6495ED
+block04=chess_sphere		#000000 #FFEFD5 #FF4500
+block05=chess_sphere_O		#000000 #FFEFD5 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=check
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B__XXXXXXXXX__B
+row02=B_BXBXBXBXBXB_B
+row03=BXXXXXXXXXXXXXB
+row04=BXBXBXBXBXBXBXB
+row05=BXXXXXXXXXXXXXB
+row06=BXBXBXBXBXXXBXB
+row07=BXXXXXXXXXXXXXB
+row08=BXBXBXBXBXBXBXB
+row09=BXXXXXXXXXXXXXB
+row10=B_BXBXBXBXBXB_B
+row11=B__XXXXXXXXX__B
+row12=BBBBBBBBBBBBBBB

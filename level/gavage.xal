@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Gavage
+author=ISTY : Jean Christophe PUPIN
+hint=Go crazy
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=7 4
+pos2=7 4
+pos3=7 4
+pos4=7 8
+pos5=7 8
+pos6=7 8
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=mr_beam_free		#000000 #FFFACD #000000
+block01=mr_beam_free		#000000 #FFFACD #000000
+block02=mr_beam_tv		#000000 #FFFACD #D2B48C
+block03=mr_beam_free		#000000 #FFFACD #000000
+block04=mr_beam_bear		#000000 #FFFACD #CD853F
+block05=mr_beam_bear_O		#000000 #FFFACD #CD853F
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+probBomb=22
+probRange=24
+probVirus=24
+probSpecial=63
+probHidden=-133
+row00=BBBBBBBBBBBBBBB
+row01=BbbbbbbbbbbbbbB
+row02=BBBXBBBXBBBXBBB
+row03=BBrbrBsssBbrbBB
+row04=BXbrbXs_sXrbrXB
+row05=BBrbrBsssBbrbBB
+row06=BBBXBBBXBBBXBBB
+row07=BBbrbBsssBrbrBB
+row08=BXrbrXs_sXbrbXB
+row09=BBbrbBsssBrbrBB
+row10=BBBXBBBXBBBXBBB
+row11=BbbbbbbbbbbbbbB
+row12=BBBBBBBBBBBBBBB

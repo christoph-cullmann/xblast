@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Cooperation
+author=Belgium : vvl
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=life
+
+[player]
+bombs=2
+range=2
+pos1=1 1
+pos2=1 3
+pos3=1 5
+pos4=1 7
+pos5=1 9
+pos6=1 11
+
+[bombs]
+hidden=renovation
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=24
+probRange=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B___B_XssssXXqB
+row02=BsBX__BssssXrXB
+row03=B___B_X_BBBBbrB
+row04=BsBX__BBX__BrbB
+row05=B___BXXrbB_BbrB
+row06=BBBBbsB_XB_XrbB
+row07=B___BXXrbB_BbrB
+row08=BsBX__BBX__BrbB
+row09=B___B_X_BBBBbrB
+row10=BsBX__BssssXrXB
+row11=B___B_XssssXXqB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Kick
+author=Stn
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=3
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+hidden=construction
+
+[graphics]
+block00=chess_floor		#000000 #006400 #556B2F
+block01=chess_floor		#000000 #006400 #556B2F
+block02=book_shelf		#000000 #000000 #000000
+block03=book_shelf		#000000 #000000 #000000
+block04=chess_sphere		#000000 #006400 #FFA500
+block05=chess_sphere_O		#000000 #006400 #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=32
+probVirus=24
+row00=BBBBBBBBBBBBBBB
+row01=B___X_____X___B
+row02=B_BX_XX_XX_XB_B
+row03=B_X_X__B__X_X_B
+row04=BX_X_X_X_X_X_XB
+row05=B_X__BXXXB__X_B
+row06=BX_BXXXqXXXB_XB
+row07=B_X__BXXXB__X_B
+row08=BX_X_X_X_X_X_XB
+row09=B_X_X__B__X_X_B
+row10=B_BX_XX_XX_XB_B
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB

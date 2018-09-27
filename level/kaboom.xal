@@ -1,0 +1,77 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Ka Boom
+author=Fred Lagrange
+hint=Don't believe what you see
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.75
+numBlocks=4
+pos000=5 3
+pos001=5 9
+pos002=9 3
+pos003=9 9
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=2 2
+pos2=12 2
+pos3=12 10
+pos4=2 10
+pos5=4 6
+pos6=10 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+haunt=slow
+
+[graphics]
+block00=chess_floor		#000000 #000000 #000000
+block01=chess_floor		#000000 #000000 #000000
+block02=book_shelf		#000000 #FF4500 #2E8B57
+block03=book_shelf		#FFFFFF #FF4500 #2E8B57
+block04=chess_sphere		#000000 #000000 #FFD700
+block05=chess_sphere_O		#000000 #000000 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=27
+probVirus=44
+probSpecial=-71
+probHidden=63
+row00=BBBBBBBBBBBBBBB
+row01=BX__XXXBXXX__XB
+row02=B___XXX_XXX___B
+row03=BXBXBXB_BXBXBXB
+row04=BX___B___B___XB
+row05=B__X_B_B_B_X__B
+row06=BBBB_______BBBB
+row07=B__X_B_B_B_X__B
+row08=BX___B___B___XB
+row09=BXBXBXB_BXBXBXB
+row10=B___XXX_XXX___B
+row11=BX__XXXBXXX__XB
+row12=BBBBBBBBBBBBBBB

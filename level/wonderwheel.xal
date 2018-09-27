@@ -1,0 +1,213 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Wonder wheel
+author=Reinco
+hint=You'd better watch out
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+[scrambleDraw]
+time=0.75
+numBlocks=75
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 1
+pos023=3 2
+pos024=3 10
+pos025=3 11
+pos026=4 1
+pos027=4 2
+pos028=4 10
+pos029=4 11
+pos030=5 1
+pos031=5 2
+pos032=5 10
+pos033=5 11
+pos034=6 1
+pos035=6 2
+pos036=6 10
+pos037=6 11
+pos038=7 1
+pos039=7 2
+pos040=7 10
+pos041=7 11
+pos042=8 1
+pos043=8 2
+pos044=8 11
+pos045=9 1
+pos046=9 2
+pos047=9 11
+pos048=10 1
+pos049=10 11
+pos050=11 1
+pos051=11 2
+pos052=11 10
+pos053=11 11
+pos054=12 1
+pos055=12 3
+pos056=12 4
+pos057=12 5
+pos058=12 6
+pos059=12 7
+pos060=12 8
+pos061=12 9
+pos062=12 10
+pos063=12 11
+pos064=13 1
+pos065=13 2
+pos066=13 3
+pos067=13 4
+pos068=13 5
+pos069=13 6
+pos070=13 7
+pos071=13 8
+pos072=13 9
+pos073=13 10
+pos074=13 11
+
+[scrambleDel]
+time=0.43
+numBlocks=66
+pos000=1 2
+pos001=1 10
+pos002=2 1
+pos003=2 3
+pos004=2 6
+pos005=2 9
+pos006=2 11
+pos007=3 2
+pos008=3 3
+pos009=3 4
+pos010=3 5
+pos011=3 6
+pos012=3 7
+pos013=3 8
+pos014=3 9
+pos015=3 10
+pos016=4 3
+pos017=4 6
+pos018=4 9
+pos019=5 2
+pos020=5 3
+pos021=5 4
+pos022=5 5
+pos023=5 6
+pos024=5 7
+pos025=5 8
+pos026=5 9
+pos027=6 3
+pos028=6 9
+pos029=7 2
+pos030=7 3
+pos031=7 4
+pos032=7 5
+pos033=7 7
+pos034=7 8
+pos035=7 9
+pos036=7 10
+pos037=8 3
+pos038=8 9
+pos039=9 2
+pos040=9 3
+pos041=9 4
+pos042=9 5
+pos043=9 6
+pos044=9 7
+pos045=9 8
+pos046=9 9
+pos047=10 3
+pos048=10 6
+pos049=10 9
+pos050=11 2
+pos051=11 3
+pos052=11 4
+pos053=11 5
+pos054=11 6
+pos055=11 7
+pos056=11 8
+pos057=11 9
+pos058=11 10
+pos059=12 1
+pos060=12 3
+pos061=12 6
+pos062=12 9
+pos063=12 11
+pos064=13 2
+pos065=13 10
+
+[func]
+extra=longStunned
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=4 1
+pos2=11 11
+pos3=11 1
+pos4=3 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+hidden=firecracker
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=BXBq__q__q__BXB
+row02=BBq_____q____BB
+row03=B___q__qbq_q_qB
+row04=Bq____qrrr_q__B
+row05=BqrqrqrrrqbrqbB
+row06=BbqbbrrqrrqrrqB
+row07=BrrqrqrrrrrqrrB
+row08=Bq__q__bqb__qbB
+row09=B__q__qq_q___qB
+row10=BB____q____q_BB
+row11=BXB_q____q__BXB
+row12=BBBBBBBBBBBBBBB

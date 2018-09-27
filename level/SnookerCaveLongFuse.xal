@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Snooker Cave Long Fuse
+author=Sebastian Sager
+hint=Think twice where to put your bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=7
+range=99
+pos1=4 4
+pos2=10 8
+pos3=8 3
+pos4=8 8
+pos5=7 7
+pos6=6 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #B0C4DE #00FF7F
+block01=iron_floor_X		#000000 #B0C4DE #00FF7F
+block02=dark_block		#000000 #F08080 #CD5C5C
+block03=dark_block_R		#000000 #F08080 #CD5C5C
+block04=extra		#000000 #A0522D #000000
+block05=extra_O		#000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBBBBBBBBBBB
+row02=BBBBBB_B___BBBB
+row03=BBBBB____B_BBBB
+row04=BBBB_________BB
+row05=BBBB__B____B_BB
+row06=BBB__________BB
+row07=BBBB_____B_B_BB
+row08=BBBBBB_____B_BB
+row09=BBBBB_____BB_BB
+row10=BBBBBBBB_BBB_BB
+row11=BBBBBBBB_____BB
+row12=BBBBBBBBBBBBBBB

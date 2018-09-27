@@ -1,0 +1,58 @@
+[info]
+name=Running Man
+author=Oliver Vogel
+hint=Drop - Run - Ignition
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  5
+pos6= 7  7
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=book_shelf       #000000 #32CD32 #D2691E
+block03=book_shelf       #000000 #CD2626 #D2691E
+block04=chess_sphere     #000000 #FFEFD5 #6495ED
+block05=chess_sphere_O   #000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=31
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____X_X_____B
+row02=B_BXBXBXBXBXB_B
+row03=B_X___X_X___X_B
+row04=BXB_RXRXRXR_BXB
+row05=B_X_X_____X_X_B
+row06=BXBXRXB_BXRXBXB
+row07=B_X_X_____X_X_B
+row08=BXB_RXRXRXR_BXB
+row09=B_X___X_X___X_B
+row10=B_BXBXBXBXBXB_B
+row11=B_____X_X_____B
+row12=BBBBBBBBBBBBBBB
+

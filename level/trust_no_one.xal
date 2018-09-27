@@ -1,0 +1,58 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Trust No One
+author=Dave Hille (Adelaide)
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=5
+range=10
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=bomb_floor_black
+block01=bomb_floor_black_X
+;block00=bomb_floor      #000000 #000000 #000000
+;block01=bomb_floor_X    #000000 #000000 #000000
+;block02=x_files         #000000 #696969 #32CD32
+;block03=x_files_R       #000000 #696969 #32CD32
+block02=dark_block       #000000 #696969 #32CD32
+block03=dark_block_R     #000000 #696969 #32CD32
+block04=extra            #000000 #A0522D #000000
+block05=extra            #000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BBB_B_B_BBB_B
+row03=B_B_________B_B
+row04=B_B___B_B___B_B
+row05=B_____________B
+row06=B_B_B__B__B_B_B
+row07=B_____________B
+row08=B_B___B_B___B_B
+row09=B_B_________B_B
+row10=B_BBB_B_B_BBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

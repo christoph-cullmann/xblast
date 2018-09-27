@@ -1,0 +1,65 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Now you die
+author=Koen
+hint=Fake tits
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=8
+range=66
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=threebombs
+
+[graphics]
+block00=hole_floor		#000000 #8A2BE2 #FFD700
+block01=hole_floor_X		#000000 #8A2BE2 #FFD700
+block02=jizz		#000000 #8A2BE2 #FFD700
+block03=hole_floor		#000000 #8A2BE2 #FFD700
+block04=extra		#000000 #FFFF00 #FFFFFF
+block05=extra_O		#000000 #FFFF00 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=jizz		#000000 #8A2BE2 #FFFFFF
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B___B_________B
+row02=B_______v_____B
+row03=B_v____B___B__B
+row04=B____v___v____B
+row05=B_B_________v_B
+row06=B_______B_v___B
+row07=Bv_B__v_______B
+row08=B_______v___B_B
+row09=B_____________B
+row10=B__v_B__B_v___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

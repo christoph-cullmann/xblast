@@ -1,0 +1,70 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Gravitational Rotation 2
+author=Skywalker
+hint=Fallen Bombgs Will Not Stay Down
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=5
+range=9
+pos1=1 1
+pos2=3 1
+pos3=6 1
+pos4=8 1
+pos5=11 1
+pos6=13 1
+specialBombs=255
+
+[bombs]
+wallClick=anticlockwise
+direction=down
+fuseTime=long
+special=grenade
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #4682B4
+block01=karo_light_X		#000000 #6A5ACD #4682B4
+block02=pyramid		#000000 #DAA520 #DAA520
+block03=pyramid_R		#000000 #DAA520 #DAA520
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=karo_light
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=50
+probSpecial=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B__B__B_B_B
+row03=B_____________B
+row04=B_B_B__B__BBB_B
+row05=B_____________B
+row06=B_B_B__BBBB_B_B
+row07=B___________B_B
+row08=B_B_BBBB__B_B_B
+row09=B_________B_B_B
+row10=B_BBB__B__B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

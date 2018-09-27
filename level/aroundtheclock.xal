@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Around The Clock
+author=ENSERB : PLANTET Didier
+hint=Don't wait too much
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=5
+range=50
+pos1=3 6
+pos2=11 6
+pos3=6 5
+pos4=8 7
+pos5=8 5
+pos6=6 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=clockwise
+wallClick=clockwise
+playerClick=thru
+direction=left
+fuseTime=long
+
+[graphics]
+block00=rock_floor		#000000 #000000 #000000
+block01=rock_floor		#000000 #000000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#000000 #000000 #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=B_B__B___B__B_B
+row03=B_____________B
+row04=B__B___B___B__B
+row05=B_____________B
+row06=BB___B___B___BB
+row07=B_____________B
+row08=B__B___B___B__B
+row09=B_____________B
+row10=B_B__B___B__B_B
+row11=B______B______B
+row12=BBBBBBBBBBBBBBB

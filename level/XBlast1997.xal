@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=XBlast 1997
+author=old EPFL : RBwaBD
+hint=Kill
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=invincible
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=3 3
+pos2=11 3
+pos3=11 9
+pos4=3 9
+pos5=7 3
+pos6=7 9
+initVirus=reverse
+reviveVirus=reverse
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+wallClick=randomdir
+
+[graphics]
+block00=sphere_half		#000000 #377F50 #4682B4
+block01=sphere_half		#000000 #377F50 #4682B4
+block02=sphere_dark		#000000 #4682B4 #000000
+block03=sphere_light		#000000 #B0C4DE #000000
+block04=sphere_light		#000000 #4682B4 #000000
+block05=sphere_light_O		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=30
+probRange=32
+probVirus=4
+probSpecial=9
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXXXXXXXXXB
+row02=BX___________XB
+row03=BX___________XB
+row04=BX___________XB
+row05=BX____B_B____XB
+row06=BX___________XB
+row07=BX____B_B____XB
+row08=BX___________XB
+row09=BX___________XB
+row10=BX___________XB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,58 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Mega Bomberman Level
+author=Chris Doherty (Adelaide)
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+
+[graphics]
+block00=score_floor      #FF0000 #FF0000 #4169E1
+block01=score_floor      #FF0000 #FF0000 #4169E1
+block02=button_floor     #000000 #696969 #000000
+block03=button_floor     #000000 #696969 #000000
+block04=bricks           #000000 #A0522D #000000
+block05=brick_O          #000000 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=13
+probRange=13
+probVirus=13
+probSpecial=13
+row00=BBBBBBBBBBBBBBB
+row01=B___XX___XX___B
+row02=B_BXBXB_BXBXB_B
+row03=B_XXXXXXXXXXX_B
+row04=BXBXBXBXBXBXBXB
+row05=BXXXXXX_XXXXXXB
+row06=BXBXBXB_BXBXBXB
+row07=BXXXXXX_XXXXXXB
+row08=BXBXBXBXBXBXBXB
+row09=B_XXXXXXXXXXX_B
+row10=B_BXBXB_BXBXB_B
+row11=B___XX___XX___B
+row12=BBBBBBBBBBBBBBB

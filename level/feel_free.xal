@@ -1,0 +1,58 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Feel Free
+author=Chris Doherty & Mark Black (Adelaide)
+hint=Feel free to have a crap commment that means nothing
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+
+[graphics]
+block00=karo_dark        #000000 #2E8B57 #8FBC8F
+block01=karo_dark_X      #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #B22222 #000000
+block03=wall_R           #000000 #B22222 #2E8B57
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=22
+probVirus=16
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B___XX___XX___B
+row02=B_BXBXB_BXBXB_B
+row03=B_XXB_BXB_BXX_B
+row04=BXBX___X___XBXB
+row05=B_X_________X_B
+row06=BXBB_X___X_BBXB
+row07=B_X_________X_B
+row08=BXBX___X___XBXB
+row09=B_XXB_BXB_BXX_B
+row10=B_BXBXB_BXBXB_B
+row11=B___XX___XX___B
+row12=BBBBBBBBBBBBBBB

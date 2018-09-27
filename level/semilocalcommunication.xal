@@ -1,0 +1,152 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Semi-local Communication
+author=LORIA : Pierre `in your back' Laroche
+hint=Remember: you're part of a multi-agents system.
+gameMode=-23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.25
+numBlocks=4
+pos000=7 6
+pos001=7 7
+pos002=8 7
+pos003=8 6
+
+[scrambleDel]
+time=0.25
+numBlocks=76
+pos000=2 1
+pos001=2 2
+pos002=2 3
+pos003=2 4
+pos004=2 5
+pos005=2 6
+pos006=2 7
+pos007=2 8
+pos008=2 9
+pos009=2 10
+pos010=2 11
+pos011=3 11
+pos012=3 10
+pos013=3 9
+pos014=3 8
+pos015=3 7
+pos016=3 6
+pos017=3 5
+pos018=3 4
+pos019=3 3
+pos020=3 2
+pos021=3 1
+pos022=4 4
+pos023=5 4
+pos024=4 5
+pos025=5 5
+pos026=4 8
+pos027=5 8
+pos028=4 9
+pos029=5 9
+pos030=6 9
+pos031=6 8
+pos032=9 8
+pos033=9 9
+pos034=10 9
+pos035=11 9
+pos036=11 8
+pos037=10 8
+pos038=10 5
+pos039=11 5
+pos040=10 4
+pos041=11 4
+pos042=12 2
+pos043=13 2
+pos044=12 1
+pos045=13 1
+pos046=4 1
+pos047=5 1
+pos048=6 1
+pos049=7 1
+pos050=8 1
+pos051=9 1
+pos052=10 1
+pos053=11 1
+pos054=12 3
+pos055=13 3
+pos056=12 4
+pos057=13 4
+pos058=13 5
+pos059=12 5
+pos060=12 6
+pos061=13 6
+pos062=13 7
+pos063=12 7
+pos064=12 8
+pos065=13 8
+pos066=12 9
+pos067=13 9
+pos068=13 10
+pos069=13 11
+pos070=12 11
+pos071=12 10
+pos072=6 4
+pos073=6 5
+pos074=9 4
+pos075=9 5
+
+[func]
+extra=life
+key=specialBomb
+
+[player]
+bombs=5
+range=4
+specialBombs=30
+pos1=4 3
+pos2=11 3
+pos3=4 7
+pos4=11 7
+pos5=4 11
+pos6=11 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+default=napalm
+special=renovation
+
+[graphics]
+block00=mr_beam_free		#0000FF #98FB98 #0000FF
+block01=mr_beam_free		#0000FF #98FB98 #0000FF
+block02=temple		#000000 #006400 #0000FF
+block03=temple		#000000 #006400 #0000FF
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqBBBBBBBBBBBBB
+row02=BrBB__B__B__BBB
+row03=BbBB__B__B__BBB
+row04=BsBBBBBqqBBBBBB
+row05=BbBBBBBrrBBBBBB
+row06=BrBB__B__B__BBB
+row07=BbBB__B__B__BBB
+row08=BsBBBBBrrBBBBBB
+row09=BbBBBBBqqBBBBBB
+row10=BrBB__B__B__BBB
+row11=BqBB__B__B__BBB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,88 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Firecracker-Geschubse
+author=Peter Riede
+hint=Crack and Kick
+gameMode=R23456STDL
+
+[shrink]
+type=spiralPlus
+
+
+[scrambleDel]
+time=0.5
+numBlocks=17
+pos000=3 3
+pos001=3 5
+pos002=3 7
+pos003=3 9
+pos004=5 3
+pos005=5 9
+pos006=6 3
+pos007=6 9
+pos008=8 3
+pos009=8 9
+pos010=9 3
+pos011=9 9
+pos012=11 3
+pos013=11 5
+pos014=11 6
+pos015=11 7
+pos016=11 9
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=7 9
+pos2=1 1
+pos3=7 3
+pos4=13 1
+pos5=13 11
+pos6=1 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=contact
+default=firecracker
+
+[graphics]
+block00=rock_floor		#000000 #A0522D #B8860B
+block01=rock_floor_X		#000000 #A0522D #B8860B
+block02=book_shelf		#A0522D #696969 #B8860B
+block03=book_shelf		#000000 #696969 #B8860B
+block04=sphere_light		#D2691E #F4A460 #DEB887
+block05=sphere_light_O		#000000 #F4A460 #DEB887
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=get
+probBomb=45
+probRange=45
+probVirus=11
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__B_B_B_B_B__B
+row03=B_B___B_B___B_B
+row04=B_____________B
+row05=B_B__BB_BB__B_B
+row06=B__B___B___B__B
+row07=B_B__BB_BB__B_B
+row08=B_____________B
+row09=B_B___B_B___B_B
+row10=B__B_B_B_B_B__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

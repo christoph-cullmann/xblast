@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Round
+author=Stn
+hint=Find the blastables
+gameMode=R23456STDL
+
+[shrink]
+type=spiralPlus
+
+
+
+[func]
+
+[player]
+bombs=3
+range=4
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+fuseTime=long
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #000000 #000000
+block04=pyramid		#000000 #6A5ACD #000000
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=32
+probVirus=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_____X____XB_B
+row02=BB____XX___X__B
+row03=B_XXXB__X__X__B
+row04=B__X____XXXX__B
+row05=B___XXX_X__B__B
+row06=BXXX___B___XXXB
+row07=B__B__X_XXX___B
+row08=B__XXXX____X__B
+row09=B__X__X__BXXX_B
+row10=B__X___XX____BB
+row11=B_BX____X_____B
+row12=BBBBBBBBBBBBBBB

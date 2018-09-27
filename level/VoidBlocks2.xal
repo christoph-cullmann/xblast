@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Void Blocks 2
+author=Peter Riede
+hint=Explosions go through walls!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=teleport
+key=rc
+
+[player]
+bombs=4
+range=6
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=check		#000000 #808080 #D2B48C
+block01=check_X		#000000 #808080 #D2B48C
+block02=book_shelf		#000000 #B22222 #A0522D
+block03=book_shelf		#000000 #B22222 #A0522D
+block04=lego_black		#000000 #32CD32 #F4A460
+block05=lego_black_O		#000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=chess_floor		#008B8B #000000 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B____v___v____B
+row02=B_____________B
+row03=B____v___v____B
+row04=Bvv_vv___vv_vvB
+row05=B_____________B
+row06=B____v_v_v____B
+row07=B_____________B
+row08=Bvv_vv___vv_vvB
+row09=B____v___v____B
+row10=B_____________B
+row11=B____v___v____B
+row12=BBBBBBBBBBBBBBB

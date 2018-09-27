@@ -1,0 +1,65 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Go Rigth!
+author=Koen
+hint=Wanna Remote Hu?
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=4
+pos1=2 1
+pos2=2 7
+pos3=2 5
+pos4=2 11
+pos5=2 3
+pos6=2 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=blastnow
+
+[graphics]
+block00=karo_light		#000000 #DA70D6 #9932CC
+block01=karo_light_X		#000000 #DA70D6 #9932CC
+block02=pyramid		#000000 #6A5ACD #000000
+block03=pyramid_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #FFD700 #FFFF00
+block05=extra_O		#000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probSpecial=25
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=Be____________B
+row02=BXXXXXXXXXXXX_B
+row03=Be____________B
+row04=BXXXXXXXXXXXX_B
+row05=Be____________B
+row06=BXXXXXXXXXXXX_B
+row07=Be____________B
+row08=BXXXXXXXXXXXX_B
+row09=Be____________B
+row10=BXXXXXXXXXXXX_B
+row11=Be____________B
+row12=BBBBBBBBBBBBBBB

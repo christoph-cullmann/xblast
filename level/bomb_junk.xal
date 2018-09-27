@@ -1,0 +1,62 @@
+[info]
+name=Bomb junk
+author=mariu
+hint=Junk box of bombs
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+[func]
+extra=invincible
+key=specialBomb
+
+[player]
+bombs=10
+range=2
+specialBombs=30
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initVirus=malfunction
+reviveVirus=malfunction
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=thru
+fuseTime=short
+special=threebombs
+
+[graphics]
+block00=iron_floor       #000000 #EEE8AA #0000FF
+block01=iron_floor_X     #000000 #EEE8AA #0000FF
+block02=dark_block       #000000 #228B22 #CCCCCC
+block03=dark_block_R     #000000 #00FF7F #FFFFFF
+block04=extra            #000000 #B22222 #000000
+block05=extra_O          #000000 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=Bq___________qB
+row02=B_BBBBBsBBBBB_B
+row03=B_B__s___s__B_B
+row04=B_Bs___s___sB_B
+row05=B_B__s___s__B_B
+row06=B_s____s____s_B
+row07=B_B__s___s__B_B
+row08=B_Bs___s___sB_B
+row09=B_B__s______B_B
+row10=B_BBBBBsBBBBB_B
+row11=Bq___________qB
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,58 @@
+[info]
+name=Virus
+author=mariu
+hint=Virus
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=10
+range=49
+specialBombs=30
+pos1= 7  6
+pos2= 7  6
+pos3= 7  6
+pos4= 7  6
+pos5= 7  6
+pos6= 7  6
+initVirus=run
+reviveVirus=run
+
+[bombs]
+fuseTime=long
+default=fungus
+
+[graphics]
+block00=city_free        #000000 #A6A6A6 #D2B48C
+block01=city_free_X      #000000 #A6A6A6 #D2B48C
+block02=dark_house       #000000 #B22222 #A0522D
+block03=dark_house_R     #000000 #B22222 #A0522D
+block04=light_house      #000000 #32CD32 #F4A460
+block05=light_house_O    #000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B___B_____B___B
+row04=B__BBB___BBB__B
+row05=B___B_____B___B
+row06=B______s______B
+row07=B___B_____B___B
+row08=B__BBB___BBB__B
+row09=B___B_____B___B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

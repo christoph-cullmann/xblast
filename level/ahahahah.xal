@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Ahahahah
+author=EPFL - disun : Alexandre HAUSER
+hint=comment
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=10
+range=10
+pos1=5 4
+pos2=9 4
+pos3=7 5
+pos4=7 7
+pos5=5 8
+pos6=9 8
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+special=napalm
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #B0C4DE #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=BB____B_B____BB
+row02=BB_B_______B_BB
+row03=BB__B_____B__BB
+row04=BB___________BB
+row05=BBB_________BBB
+row06=BB_____B_____BB
+row07=BBB_________BBB
+row08=BB___________BB
+row09=BB__B_____B__BB
+row10=BB_B_______B_BB
+row11=BB____B_B____BB
+row12=BBBBBBBBBBBBBBB

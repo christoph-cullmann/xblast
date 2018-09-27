@@ -1,0 +1,61 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Four Corners III
+author=ENSERB : Seb
+hint=Now walls are moving ...
+gameMode=R234--STDL
+
+[shrink]
+type=savageCompound
+
+
+
+[func]
+
+[player]
+bombs=10
+range=15
+pos1=3 3
+pos2=11 3
+pos3=11 9
+pos4=3 9
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #228B22 #FFFF00
+block01=iron_floor		#000000 #228B22 #FFFF00
+block02=dark_block		#000000 #FF0000 #FFDAB9
+block03=dark_block_R		#000000 #FF0000 #000000
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=B______B______B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=BBBB___B___BBBB
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B______B______B
+row11=B______B______B
+row12=BBBBBBBBBBBBBBB

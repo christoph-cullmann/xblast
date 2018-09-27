@@ -1,0 +1,58 @@
+[info]
+name=INESC
+author=Hugo Meinedo -> INESC
+hint=Don't get trapped in the INESC logo
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=rc
+
+[player]
+bombs=5
+range=5
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+
+[graphics]
+block00=button_floor     #000000 #000080 #000080
+block01=button_floor_S   #000000 #000080 #000080
+block02=dark_block       #000000 #00FA9A #00FF00
+block03=dark_block_R     #000000 #000080 #000080
+block04=extra            #000000 #00FA9A #00FF00
+block05=extra_O          #000000 #00FF00 #00FA9A
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=50
+probRange=50
+row00=RRRRRRRRRRRRRRR
+row01=R_____________R
+row02=R_B_____B_____R
+row03=R_B_B__B______R
+row04=R_X_BB_B___B__R
+row05=R_B_B_XX__B___R
+row06=R_B_B__B_B__B_R
+row07=R_B_X_B__X_B__R
+row08=R___B_BB_B_X__R
+row09=R__B__B__B_B__R
+row10=R_B____XB___B_R
+row11=R_____________R
+row12=RRRRRRRRRRRRRRR
+

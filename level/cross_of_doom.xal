@@ -1,0 +1,59 @@
+[info]
+name=Cross Of Doom
+author=Stn
+hint=Choose The Right Direction For Your Bombs
+gameMode=R234--STDL
+
+[shrink]
+
+[func]
+
+[player]
+bombs=5
+range=1
+pos1= 1  3
+pos2= 4 11
+pos3=10  1
+pos4=13  9
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+
+[graphics]
+block00=iron_floor       #000000 #DEB887 #00FF7F
+block01=iron_floor_X     #000000 #DEB887 #00FF7F
+block02=dark_block       #000000 #00FF7F #4682B4
+block03=dark_block_R     #000000 #00FF7F #4682B4
+block04=bricks           #000000 #FF3030 #000000
+block05=brick_O          #000000 #FF3030 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=1
+probRange=2
+probVirus=61
+probHidden=3
+row00=BBBBBBBBBBBBBBB
+row01=B__XrB___B____B
+row02=B__XXB_B_Xs_XXB
+row03=B_s__B___B__XrB
+row04=BBXBBB___BBBBBB
+row05=B_____XBX_____B
+row06=B_B___BBB___B_B
+row07=B_____XBX_____B
+row08=BBBBBB___BBBXBB
+row09=BrX__B___B__s_B
+row10=BXX_sX_B_BXX__B
+row11=B____B___BrX__B
+row12=BBBBBBBBBBBBBBB
+

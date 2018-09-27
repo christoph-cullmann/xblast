@@ -1,0 +1,71 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Bomb Boxes
+author=Tobias Johansson
+hint=Have a look inside, if you dare
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=1
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+normal=napalm
+hidden=firecracker
+bombClick=contact
+playerClick=contact
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=button_floor		#000000 #006400 #00FF7F
+block01=button_floor		#000000 #006400 #00FF7F
+block02=dark_block		#000000 #00FF7F #00CED1
+block03=dark_block_R		#000000 #00FF7F #00CED1
+block04=box		#000000 #DC143C #FFFF00
+block05=box		#000000 #DC143C #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__X______XX__B
+row03=B_____X_______B
+row04=B_X_____X_X___B
+row05=B___X_X_______B
+row06=B_______X_X___B
+row07=B_X__X_X____X_B
+row08=B__X___X______B
+row09=B____X____X___B
+row10=B________X____B
+row11=B__X__________B
+row12=BBBBBBBBBBBBBBB

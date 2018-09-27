@@ -1,0 +1,158 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Invertability
+author=Gert Jan Kamstra
+hint=It gets inverted!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.45
+numBlocks=44
+pos000=1 2
+pos001=1 4
+pos002=1 6
+pos003=1 8
+pos004=1 10
+pos005=2 1
+pos006=2 11
+pos007=3 3
+pos008=3 4
+pos009=3 6
+pos010=3 8
+pos011=3 9
+pos012=4 1
+pos013=4 11
+pos014=5 3
+pos015=5 5
+pos016=5 7
+pos017=5 9
+pos018=6 1
+pos019=6 11
+pos020=7 3
+pos021=7 5
+pos022=7 7
+pos023=7 9
+pos024=8 1
+pos025=8 11
+pos026=9 3
+pos027=9 5
+pos028=9 7
+pos029=9 9
+pos030=10 1
+pos031=10 11
+pos032=11 3
+pos033=11 4
+pos034=11 6
+pos035=11 8
+pos036=11 9
+pos037=12 1
+pos038=12 11
+pos039=13 2
+pos040=13 4
+pos041=13 6
+pos042=13 8
+pos043=13 10
+
+[scrambleDel]
+time=0.55
+numBlocks=43
+pos000=1 1
+pos001=1 3
+pos002=1 5
+pos003=1 7
+pos004=1 9
+pos005=1 11
+pos006=3 1
+pos007=3 5
+pos008=3 7
+pos009=3 11
+pos010=4 3
+pos011=4 9
+pos012=5 1
+pos013=5 6
+pos014=5 11
+pos015=6 3
+pos016=6 5
+pos017=6 6
+pos018=6 7
+pos019=6 9
+pos020=7 1
+pos021=7 6
+pos022=7 11
+pos023=8 3
+pos024=8 5
+pos025=8 6
+pos026=8 7
+pos027=8 9
+pos028=9 1
+pos029=9 6
+pos030=9 11
+pos031=10 3
+pos032=10 9
+pos033=11 1
+pos034=11 5
+pos035=11 7
+pos036=11 11
+pos037=13 1
+pos038=13 3
+pos039=13 5
+pos040=13 7
+pos041=13 9
+pos042=13 11
+
+[func]
+
+[player]
+bombs=3
+range=4
+pos1=5 5
+pos2=9 7
+pos3=9 5
+pos4=5 7
+pos5=7 5
+pos6=7 7
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+playerClick=rebound
+wallClick=rebound
+fuseTime=short
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BB_B_B_B_B_B_BB
+row02=B_____________B
+row03=BB__B_B_B_B__BB
+row04=B_____________B
+row05=BB_B__B_B__B_BB
+row06=B____BBBBB____B
+row07=BB_B__B_B__B_BB
+row08=B_____________B
+row09=BB__B_B_B_B__BB
+row10=B_____________B
+row11=BB_B_B_B_B_B_BB
+row12=BBBBBBBBBBBBBBB

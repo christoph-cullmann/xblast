@@ -1,0 +1,67 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Walls or Not ? 2
+author=Skywalker
+hint=These walls are strange...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=speed2
+key=cloak
+
+[player]
+bombs=2
+range=3
+pos1=4 3
+pos2=10 3
+pos3=2 6
+pos4=12 6
+pos5=4 9
+pos6=10 9
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+wallClick=contact
+
+[graphics]
+block00=sphere_half		#000000 #DA70D6 #9932CC
+block01=sphere_half_X		#000000 #DA70D6 #9932CC
+block02=sphere_light		#000000 #008000 #000000
+block03=sphere_light		#000000 #008000 #000000
+block04=sphere_light		#000000 #FFFF00 #FFFF00
+block05=sphere_light_O		#000000 #FFFF00 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor
+
+[map]
+extraDistribution=all
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=Bq__XXXXXXX__qB
+row02=B___v__X__v___B
+row03=B__v_______v__B
+row04=BXv__v___v__vXB
+row05=BX_____v_____XB
+row06=BX__X_vBv_X__XB
+row07=BX_____v_____XB
+row08=BXv__v___v__vXB
+row09=B__v_______v__B
+row10=B___v__X__v___B
+row11=Bq__XXXXXXX__qB
+row12=BBBBBBBBBBBBBBB

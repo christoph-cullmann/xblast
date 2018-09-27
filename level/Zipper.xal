@@ -1,0 +1,107 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Zipper
+author=Tobias Johansson
+hint=Don't get caught
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+[scrambleDraw]
+time=0.33
+numBlocks=13
+pos000=1 7
+pos001=2 5
+pos002=3 7
+pos003=4 5
+pos004=5 7
+pos005=6 5
+pos006=7 7
+pos007=8 5
+pos008=9 7
+pos009=10 5
+pos010=11 7
+pos011=12 5
+pos012=13 7
+
+[scrambleDel]
+time=0.33
+numBlocks=13
+pos000=1 5
+pos001=2 7
+pos002=3 5
+pos003=4 7
+pos004=5 5
+pos005=6 7
+pos006=7 5
+pos007=8 7
+pos008=9 5
+pos009=10 7
+pos010=11 5
+pos011=12 7
+pos012=13 5
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+bombClick=rebound
+playerClick=thru
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=city_free		#000000 #FFFF00 #4682B4
+block01=city_free		#000000 #FFFF00 #4682B4
+block02=pyramid		#000000 #4682B4 #377F50
+block03=pyramid_R		#000000 #4682B4 #377F50
+block04=dark_block		#66CDAA #4682B4 #000000
+block05=dark_block		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=pyramid		#F5F5F5 #4682B4 #377F50
+
+[map]
+probBomb=19
+probRange=19
+probVirus=19
+probSpecial=39
+probHidden=5
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_X_X_X_X_X_X_B
+row05=BB_B_B_B_B_B_BB
+row06=B_____________B
+row07=B_B_B_B_B_B_B_B
+row08=BX_X_X_X_X_X_XB
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

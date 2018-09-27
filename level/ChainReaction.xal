@@ -1,0 +1,66 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Chain Reaction 2
+author=Skywalker
+hint=Drop a bomb and STAND CLEAR!
+gameMode=R234--STDL
+
+[shrink]
+type=compoundExtra
+
+
+
+[func]
+extra=igniteAll
+key=teleport
+
+[player]
+bombs=1
+range=7
+pos1=2 2
+pos2=12 2
+pos3=12 10
+pos4=2 10
+pos5=-1 -1
+pos6=-1 -1
+initExtra=teleport
+reviveExtra=teleport
+
+[bombs]
+
+[graphics]
+block00=dark_way		#000000 #6A5ACD #00FF7F
+block01=dark_way_X		#000000 #6A5ACD #00FF7F
+block02=r_i_p		#000000 #2E8B57 #6A5ACD
+block03=r_i_p_R		#000000 #2E8B57 #6A5ACD
+block04=pumpkin		#000000 #FF4500 #6A5ACD
+block05=pumpkin_O		#000000 #FF4500 #6A5ACD
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor
+
+[map]
+probBomb=24
+probSpecial=6
+probHidden=71
+row00=BBBBBBBBBBBBBBB
+row01=B__XX_XBX_XX__B
+row02=B__XXBXXXBXX__B
+row03=BXXXXXXBXXXXXXB
+row04=BXXXBX_X_XBXXXB
+row05=BB_XXXBXBXXX_BB
+row06=BXXB_XX_XX_BXXB
+row07=BB_XXXBXBXXX_BB
+row08=BXXXBX_X_XBXXXB
+row09=BXXXXXXBXXXXXXB
+row10=B__XXBXXXBXX__B
+row11=B__XX_XBX_XX__B
+row12=BBBBBBBBBBBBBBB

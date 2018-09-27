@@ -1,0 +1,63 @@
+[info]
+name=Renovation Master 2
+author=Skywalker
+hint=This level needs to be renovated
+gameMode=R23456STDL
+
+[shrink]
+type=compoundF
+
+[func]
+extra=mayhem
+key=rc
+
+[player]
+bombs=1
+range=2
+specialBombs=12
+pos1= 7  3
+pos2= 5  5
+pos3= 9  5
+pos4= 5  7
+pos5= 9  7
+pos6= 7  9
+initExtra=rc
+
+[bombs]
+fuseTime=short
+default=renovation
+hidden=blastnow
+
+[graphics]
+block00=chess_floor      #000000 #FFEFD5 #000000
+block01=chess_floor_X    #000000 #FFEFD5 #000000
+block02=dark_block       #000000 #F08080 #CD5C5C
+block03=dark_block_R     #000000 #F08080 #CD5C5C
+block04=chess_sphere     #000000 #FFEFD5 #6495ED
+block05=chess_sphere_O   #000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=dark_block       #000000 #F08080 #CD5C5C
+
+[map]
+probBomb=18
+probRange=19
+probVirus=19
+probSpecial=12
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=BXX___XXX___XXB
+row02=BXB_BXB_BXB_BXB
+row03=B___X_____X___B
+row04=B_BXB_B_B_BXB_B
+row05=B_X____X____X_B
+row06=BXB_B_XBX_B_BXB
+row07=B_X____X____X_B
+row08=B_BXB_B_B_BXB_B
+row09=B___X_____X___B
+row10=BXB_BXB_BXB_BXB
+row11=BXX___XXX___XXB
+row12=BBBBBBBBBBBBBBB
+

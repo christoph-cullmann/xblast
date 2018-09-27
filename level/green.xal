@@ -1,0 +1,132 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Green One, Two ,Tree
+author=Vulpes Incendium
+hint=Just do It ... Green
+gameMode=R2-456STDL
+
+[shrink]
+type=down
+
+[scrambleDraw]
+time=0.5
+numBlocks=26
+pos000=1 1
+pos001=1 11
+pos002=2 2
+pos003=2 10
+pos004=3 3
+pos005=3 9
+pos006=5 5
+pos007=5 6
+pos008=5 7
+pos009=7 1
+pos010=7 2
+pos011=7 3
+pos012=7 4
+pos013=7 8
+pos014=7 9
+pos015=7 10
+pos016=7 11
+pos017=9 5
+pos018=9 6
+pos019=9 7
+pos020=11 3
+pos021=11 9
+pos022=12 2
+pos023=12 10
+pos024=13 1
+pos025=13 11
+
+[scrambleDel]
+time=0.2
+numBlocks=38
+pos000=1 4
+pos001=2 1
+pos002=2 2
+pos003=2 6
+pos004=2 10
+pos005=2 11
+pos006=4 1
+pos007=4 2
+pos008=4 3
+pos009=4 6
+pos010=4 9
+pos011=4 10
+pos012=4 11
+pos013=6 1
+pos014=6 2
+pos015=6 6
+pos016=6 10
+pos017=6 11
+pos018=7 4
+pos019=7 8
+pos020=8 1
+pos021=8 2
+pos022=8 6
+pos023=8 10
+pos024=8 11
+pos025=10 1
+pos026=10 2
+pos027=10 3
+pos028=10 9
+pos029=10 10
+pos030=10 11
+pos031=11 6
+pos032=12 1
+pos033=12 2
+pos034=12 10
+pos035=12 11
+pos036=13 4
+pos037=13 6
+
+[func]
+
+[player]
+bombs=5
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=dark_block		#000000 #00FF7F #7FFFD4
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_BeveB_BeveB_B
+row02=B_B_v_B_B_v_B_B
+row03=B___v_____v___B
+row04=BBBsvsBBBsvsBBB
+row05=Be_____e_____eB
+row06=BBBBB_vvv_BBBBB
+row07=Be_____e_____eB
+row08=BBBsvsBBBsvsBBB
+row09=B___v_____v___B
+row10=B_B_v_B_B_v_B_B
+row11=B_BeveB_BeveB_B
+row12=BBBBBBBBBBBBBBB

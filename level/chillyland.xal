@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Chilly Land
+author=NL : C. Lin (C.Lin@ele.tue.nl)
+hint=Chill or eat napalm
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=life
+key=specialBomb
+
+[player]
+bombs=4
+range=3
+specialBombs=30
+pos1=7 7
+pos2=7 7
+pos3=7 7
+pos4=7 7
+pos5=7 7
+pos6=7 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+fuseTime=short
+default=random
+special=napalm
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #000000 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probSpecial=100
+row00=BBBBBBBBBBBBBBB
+row01=B___B__q__B___B
+row02=B____B___B____B
+row03=B_B___B_B___B_B
+row04=B__B_______B__B
+row05=B___B_B_B_B___B
+row06=B_____________B
+row07=B___B_B_B_B___B
+row08=B__B_______B__B
+row09=B_B___B_B___B_B
+row10=B____B___B____B
+row11=B___B_____B___B
+row12=BBBBBBBBBBBBBBB

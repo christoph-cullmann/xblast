@@ -1,0 +1,71 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Waterworld
+author=Glaset
+hint=Blast over the water
+gameMode=R234--STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.5
+numBlocks=6
+pos000=3 6
+pos001=4 6
+pos002=6 6
+pos003=7 6
+pos004=9 6
+pos005=10 6
+
+[func]
+
+[player]
+bombs=5
+range=13
+pos1=2 6
+pos2=11 6
+pos3=8 6
+pos4=5 6
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=rebound
+
+[graphics]
+block00=rock_floor		#000000 #3CB371 #00FF7F
+block01=rock_floor		#000000 #3CB371 #00FF7F
+block02=book_shelf		#000000 #00FF7F #7FFFD4
+block03=book_shelf		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=dark_way		#00BFFF #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=Bv_bv_bv_bv_bvB
+row02=Bv_vv_vv_vv_vvB
+row03=Bv_bv_bv_bv_bvB
+row04=Bv_vv_vv_vv_vvB
+row05=Bv_vv_vv_vv_vvB
+row06=Bv_vv_vv_vv_vvB
+row07=Bv_vv_vv_vv_vvB
+row08=Bv_vv_vv_vv_vvB
+row09=Bv_rv_rv_rv_rvB
+row10=Bv_vv_vv_vv_vvB
+row11=Br_vr_vr_vr_vvB
+row12=BBBBBBBBBBBBBBB

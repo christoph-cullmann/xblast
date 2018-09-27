@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Still Trying
+author=old EPFL : RBwaBD
+hint=Equip yourself properly and come get some!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=4
+range=5
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 3
+pos6=7 9
+
+[bombs]
+default=grenade
+
+[graphics]
+block00=karo_dark		#000000 #2E8B57 #8FBC8F
+block01=karo_dark		#000000 #2E8B57 #8FBC8F
+block02=wall		#000000 #000000 #000000
+block03=wall_R		#000000 #000000 #2E8B57
+block04=chest		#000000 #8B4513 #FFD700
+block05=chest_O		#000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=22
+probVirus=3
+probSpecial=13
+probHidden=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___X_B_BBXB__B
+row03=B__X______XXX_B
+row04=BX___XBBBXBXB_B
+row05=B__X__XXX_X___B
+row06=B_X___BXXXB_X_B
+row07=B_____XXX_____B
+row08=B_BXBXB_BXBXB_B
+row09=B_XX______X_X_B
+row10=B_BBXBB_B_XBB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

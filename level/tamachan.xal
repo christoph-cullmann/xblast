@@ -1,0 +1,101 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Tama-chan
+author=Reinco
+hint=Ahhh,Turtles everywhere
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[scrambleDraw]
+time=0.3
+numBlocks=16
+pos000=4 4
+pos001=4 5
+pos002=4 7
+pos003=4 8
+pos004=5 4
+pos005=5 8
+pos006=6 4
+pos007=6 8
+pos008=8 4
+pos009=8 8
+pos010=9 4
+pos011=9 8
+pos012=10 4
+pos013=10 5
+pos014=10 7
+pos015=10 8
+
+[scrambleDel]
+time=0.3
+numBlocks=15
+pos000=5 5
+pos001=5 6
+pos002=5 7
+pos003=6 5
+pos004=6 6
+pos005=6 7
+pos006=7 5
+pos007=7 6
+pos008=7 7
+pos009=8 5
+pos010=8 6
+pos011=8 7
+pos012=9 5
+pos013=9 6
+pos014=9 7
+
+[func]
+extra=slow
+
+[player]
+bombs=1
+range=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=slow
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqqqqqqqqqqqqqB
+row02=BqqqqqqqqqqqqqB
+row03=BqqqqqqqqqqqqqB
+row04=BqqqqqqqqqqqqqB
+row05=BqqqqqqqqqqqqqB
+row06=BqqqqqqqqqqqqqB
+row07=BqqqqqqqqqqqqqB
+row08=BqqqqqqqqqqqqqB
+row09=BqqqqqqqqqqqqqB
+row10=BqqqqqqqqqqqqqB
+row11=BqqqqqqqqqqqqqB
+row12=BBBBBBBBBBBBBBB

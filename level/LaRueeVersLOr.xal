@@ -1,0 +1,67 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=La Ruee Vers L'Or
+author=Laurent Marsan
+hint=Teamwork might be useful
+gameMode=-2-4--S--L
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=life
+
+[player]
+bombs=1
+range=2
+pos1=1 5
+pos2=2 5
+pos3=2 7
+pos4=1 7
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=random
+
+[graphics]
+block00=hex		#000000 #A0522D #228B22
+block01=hex_X		#000000 #A0522D #228B22
+block02=hex_wall		#000000 #A0522D #4169E1
+block03=hex_wall		#000000 #A0522D #4169E1
+block04=hex_extra		#000000 #A0522D #FFD700
+block05=hex_extra_O		#000000 #A0522D #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor
+
+[map]
+extraDistribution=all
+probBomb=20
+probRange=40
+probHidden=40
+row00=BBBBBBBBBBBBBBB
+row01=BXXXsssssssXXqB
+row02=BXXXsssssssXXXB
+row03=BXXBBBBBBBBBbrB
+row04=B__B_______BrbB
+row05=B__B_B_B_B_BbrB
+row06=BBBB_B___B_XrbB
+row07=B__B_B_B_B_BbrB
+row08=B__B_______BrbB
+row09=BXXBBBBBBBBBbrB
+row10=BXXXsssssssXXXB
+row11=BXXXsssssssXXqB
+row12=BBBBBBBBBBBBBBB

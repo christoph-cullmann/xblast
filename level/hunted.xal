@@ -1,0 +1,76 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Hunted
+author=Reinco
+hint=Hunting season has opened !
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[scrambleDraw]
+time=0.5
+numBlocks=1
+pos000=7 6
+
+[scrambleDel]
+time=0.5
+numBlocks=2
+pos000=5 6
+pos001=9 6
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=3
+range=1
+pos1=5 10
+pos2=1 10
+pos3=6 11
+pos4=4 11
+pos5=1 11
+pos6=4 10
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+wallClick=contact
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor_X		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probRange=75
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XX_______XX_B
+row03=B_XX_______XX_B
+row04=Brrrr_________B
+row05=BrrrrB___B___qB
+row06=BrrrrB_X_B___qB
+row07=BrrrrB___B___qB
+row08=B____________qB
+row09=B_XX_______XXqB
+row10=B_XX_______XXqB
+row11=B______qqqqqqqB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,70 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=MegaBlast
+author=Tor Andræ
+hint=Full power...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=9
+range=10
+specialBombs=30
+pos1=2 2
+pos2=12 10
+pos3=12 2
+pos4=2 10
+pos5=6 5
+pos6=8 7
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+normal=napalm
+special=renovation
+hidden=renovation
+bombClick=snooker
+playerClick=contact
+wallClick=contact
+
+[graphics]
+block00=iron_floor		#000000 #B0C4DE #00FF7F
+block01=iron_floor		#000000 #B0C4DE #00FF7F
+block02=dark_block		#000000 #F08080 #CD5C5C
+block03=dark_block_R		#000000 #F08080 #CD5C5C
+block04=extra		#000000 #A0522D #000000
+block05=extra		#000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__X_______X__B
+row03=B_XBX_____XBX_B
+row04=B__X_______X__B
+row05=B______X______B
+row06=B_____XBX_____B
+row07=B______X______B
+row08=B__X_______X__B
+row09=B_XBX_____XBX_B
+row10=B__X_______X__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

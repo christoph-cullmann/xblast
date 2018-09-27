@@ -1,0 +1,137 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=HBBlast
+author=Bremen : Matthias Intemann
+hint=Better watch HB!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.9838709677419355
+numBlocks=33
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=6 3
+pos008=6 4
+pos009=6 5
+pos010=6 6
+pos011=6 7
+pos012=6 8
+pos013=6 9
+pos014=4 6
+pos015=5 6
+pos016=8 3
+pos017=8 4
+pos018=8 5
+pos019=8 6
+pos020=8 7
+pos021=8 8
+pos022=8 9
+pos023=9 3
+pos024=10 3
+pos025=11 4
+pos026=11 5
+pos027=10 6
+pos028=9 6
+pos029=11 7
+pos030=11 8
+pos031=10 9
+pos032=9 9
+
+[scrambleDel]
+time=0.03125
+numBlocks=31
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=6 3
+pos008=6 4
+pos009=6 5
+pos010=6 6
+pos011=6 7
+pos012=6 8
+pos013=6 9
+pos014=4 6
+pos015=8 3
+pos016=8 4
+pos017=8 5
+pos018=8 6
+pos019=8 7
+pos020=8 8
+pos021=8 9
+pos022=9 3
+pos023=10 3
+pos024=11 4
+pos025=11 5
+pos026=10 6
+pos027=11 7
+pos028=11 8
+pos029=10 9
+pos030=9 9
+
+[func]
+extra=morph
+key=morph
+
+[player]
+bombs=7
+range=6
+pos1=7 1
+pos2=1 2
+pos3=13 2
+pos4=1 10
+pos5=13 10
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+
+[graphics]
+block00=chess_floor		#000000 #2E8B57 #008000
+block01=chess_floor		#000000 #2E8B57 #008000
+block02=chess_sphere		#000000 #2E8B57 #2E8B57
+block03=chess_sphere_O		#000000 #2E8B57 #2E8B57
+block04=extra		#000000 #2E8B57 #FFFF00
+block05=extra_O		#000000 #2E8B57 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=morph
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=2
+probSpecial=93
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=B___X_____X___B
+row02=B_B_B_B_B_B_B_B
+row03=B__X__XBXXX___B
+row04=B_BXB_X_X_BXB_B
+row05=B__X__XBX__X__B
+row06=BXBXXXX_XXX_BXB
+row07=B__X__XBX__X__B
+row08=B_BXB_X_X_BXB_B
+row09=B__X__XBXXX___B
+row10=B_B_B_B_B_B_B_B
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB

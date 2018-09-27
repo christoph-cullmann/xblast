@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Reshape
+author=Stn
+hint=Change Shape and Beam Away
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=swapcolor
+key=teleport
+
+[player]
+bombs=5
+range=3
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 6
+pos6=7 6
+initExtra=teleport 
+reviveExtra=teleport 
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=karo_dark		#000000 #000000 #0000FF
+block01=karo_dark		#000000 #000000 #0000FF
+block02=wall		#000000 #ADD8E6 #32CD32
+block03=wall_R		#000000 #ADD8E6 #32CD32
+block04=chest		#000000 #6A5ACD #FFD700
+block05=chest_O		#000000 #6A5ACD #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=swapcolor
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=get
+probBomb=16
+probRange=32
+probVirus=3
+probSpecial=37
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=B_____XBX_____B
+row02=B_B___XBX___B_B
+row03=B___XXXBXXX___B
+row04=B___XB_X_BX___B
+row05=BXXXX_____XXXXB
+row06=BBBBBX___XBBBBB
+row07=BXXXX_____XXXXB
+row08=B___XB_X_BX___B
+row09=B___XXXBXXX___B
+row10=B_B___XBX___B_B
+row11=B_____XBX_____B
+row12=BBBBBBBBBBBBBBB

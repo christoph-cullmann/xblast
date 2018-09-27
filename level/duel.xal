@@ -1,0 +1,91 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Duel
+author=LORIA : Marc Lejeune
+hint=the error is so classic
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.4
+numBlocks=16
+pos000=2 6
+pos001=3 6
+pos002=4 6
+pos003=5 6
+pos004=9 6
+pos005=10 6
+pos006=11 6
+pos007=12 6
+pos008=7 2
+pos009=7 3
+pos010=7 4
+pos011=7 5
+pos012=7 7
+pos013=7 8
+pos014=7 9
+pos015=7 10
+
+[scrambleDel]
+time=0.75
+numBlocks=4
+pos000=5 6
+pos001=9 6
+pos002=7 5
+pos003=7 7
+
+[func]
+
+[player]
+bombs=2
+range=2
+pos1=5 5
+pos2=7 5
+pos3=9 5
+pos4=5 7
+pos5=7 7
+pos6=9 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #B22222 #FFD700
+block01=iron_floor		#000000 #B22222 #FFD700
+block02=wall		#000000 #B22222 #000000
+block03=wall_R		#000000 #B22222 #000000
+block04=hex_extra		#000000 #8B4513 #FFD700
+block05=hex_extra_O		#000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probBomb=24
+probRange=24
+probVirus=24
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=Bbbb_______rrrB
+row02=BbbB__XXX__BrrB
+row03=BbBBBB___BBBBrB
+row04=B__B__X_X__B__B
+row05=B__X__X_X__X__B
+row06=B_XsXXXXXXXsX_B
+row07=B__X__X_X__X__B
+row08=B__B__X_X__B__B
+row09=BrBBBB___BBBBbB
+row10=BrrB__XXX__BbbB
+row11=Brrr_______bbbB
+row12=BBBBBBBBBBBBBBB

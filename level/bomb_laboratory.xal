@@ -1,0 +1,65 @@
+[info]
+name=Bomb Laboratory
+author=mariu
+hint=Test your bombs
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+default=random
+special=construction
+hidden=construction
+
+[graphics]
+block00=city_free        #000000 #A6A6A6 #666666
+block01=city_free_X      #000000 #A6A6A6 #666666
+block02=dark_house       #000000 #B22222 #DEB887
+block03=dark_house_R     #000000 #B22222 #DEB887
+block04=box              #000000 #00FFFF #FFA500
+block05=box              #000000 #00FFFF #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=construction
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=31
+probRange=15
+probVirus=16
+probSpecial=16
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=B__B_X_____X__B
+row02=B______X_B___XB
+row03=BX_X_B_____X__B
+row04=B_______X____BB
+row05=B_B_X_X_______B
+row06=B________X_B_XB
+row07=B_X_X_B_______B
+row08=B_______B_X_X_B
+row09=BB_X_X________B
+row10=B______B_X____B
+row11=B_X__X______B_B
+row12=BBBBBBBBBBBBBBB
+

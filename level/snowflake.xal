@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Snowflake
+author=Stn
+hint=
+gameMode=R234--STDL
+
+[shrink]
+type=downF
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=5
+pos1=1 1
+pos2=13 1
+pos3=4 1
+pos4=10 1
+pos5=7 1
+pos6=7 11
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+direction=down
+
+[graphics]
+block00=iron_floor		#000000 #E6E6FA #40E0D0
+block01=iron_floor		#000000 #E6E6FA #40E0D0
+block02=dark_block		#000000 #2E8B57 #3CB371
+block03=dark_block_R		#000000 #2E8B57 #3CB371
+block04=extra		#000000 #4682B4 #00BFFF
+block05=extra_O		#000000 #4682B4 #00BFFF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=8
+probVirus=24
+row00=BBBBBBBBBBBBBBB
+row01=B__X__X_X__X__B
+row02=B_B____B____B_B
+row03=BX_B__BBB__B_XB
+row04=B__XBX_B_XBX__B
+row05=BXX_X_X_X_X_XXB
+row06=B_BBB__B__BBB_B
+row07=BXX_X_X_X_X_XXB
+row08=B__XBX_B_XBX__B
+row09=BX_B__BBB__B_XB
+row10=B_B____B____B_B
+row11=B__X__X_X__X__B
+row12=BBBBBBBBBBBBBBB

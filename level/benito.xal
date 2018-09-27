@@ -1,0 +1,58 @@
+[info]
+name=benito
+author=antimiage : Choupette
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=2
+range=2
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=trianglebombs
+special=napalm
+
+[graphics]
+block00=dark_way         #000000 #00FF00 #BEBEBE
+block01=dark_way_X       #000000 #00FF00 #BEBEBE
+block02=r_i_p            #000000 #BEBEBE #00FF00
+block03=r_i_p_R          #000000 #BEBEBE #00FF00
+block04=pumpkin          #000000 #DAA520 #00FF00
+block05=pumpkin_O        #000000 #DAA520 #00FF00
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+probBomb=48
+probRange=48
+row00=BBBBBBBBBBBBBBB
+row01=B___B_____B___B
+row02=B___B_____B___B
+row03=B__XXXXXXXXX__B
+row04=B__XXXXXXXXX__B
+row05=B__XXXXXXXXX__B
+row06=BBBXXXqqqXXXBBB
+row07=B__XXXXXXXXX__B
+row08=B__XXXXXXXXX__B
+row09=B__XXXXXXXXX__B
+row10=B___B_____B___B
+row11=B___B_____B___B
+row12=BBBBBBBBBBBBBBB
+

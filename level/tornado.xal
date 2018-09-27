@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Tornado!
+author=mariu
+hint=No more tornado!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=5
+range=49
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=airpump
+reviveExtra=airpump
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+playerClick=thru
+fuseTime=long
+
+[graphics]
+block00=sphere_half		#000000 #9ACD32 #FF0000
+block01=sphere_half		#000000 #9ACD32 #FF0000
+block02=sphere_dark		#000000 #FF4500 #000000
+block03=sphere_light		#000000 #FFFF00 #000000
+block04=sphere_light		#000000 #FF4500 #000000
+block05=sphere_light_O		#000000 #FF4500 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=sphere_half		#000000 #4169E1 #FF0000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_B_____B_____B
+row02=B____________BB
+row03=B____B________B
+row04=B_______B__B__B
+row05=B____B________B
+row06=B_____________B
+row07=B________B____B
+row08=B__B__B_______B
+row09=B________B____B
+row10=BB____________B
+row11=B_____B_____B_B
+row12=BBBBBBBBBBBBBBB

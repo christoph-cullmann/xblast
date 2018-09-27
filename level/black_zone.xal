@@ -1,0 +1,122 @@
+[info]
+name=Black Zone
+author=EPFL - disun : Yves Bresson
+hint=Black is Deadly
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.3331
+numBlocks=30
+pos000=4 8
+pos001=2 10
+pos002=2 6
+pos003=2 2
+pos004=4 4
+pos005=6 2
+pos006=8 2
+pos007=12 2
+pos008=10 4
+pos009=12 6
+pos010=10 8
+pos011=12 10
+pos012=8 10
+pos013=6 10
+pos014=6 6
+pos015=8 6
+pos016=10 10
+pos017=8 8
+pos018=12 8
+pos019=10 6
+pos020=12 4
+pos021=10 2
+pos022=8 4
+pos023=6 4
+pos024=4 2
+pos025=2 4
+pos026=4 6
+pos027=2 8
+pos028=6 8
+pos029=4 10
+
+[scrambleDel]
+time=0.6666
+numBlocks=30
+pos000=2 2
+pos001=4 2
+pos002=4 4
+pos003=2 4
+pos004=2 6
+pos005=4 6
+pos006=4 8
+pos007=2 8
+pos008=2 10
+pos009=4 10
+pos010=6 10
+pos011=6 8
+pos012=8 8
+pos013=8 10
+pos014=10 10
+pos015=10 8
+pos016=12 8
+pos017=12 10
+pos018=12 6
+pos019=10 6
+pos020=8 6
+pos021=6 6
+pos022=6 4
+pos023=6 2
+pos024=8 2
+pos025=8 4
+pos026=10 4
+pos027=10 2
+pos028=12 2
+pos029=12 4
+
+[func]
+extra=kick
+
+[player]
+bombs=4
+range=10
+pos1= 2  2
+pos2= 7  2
+pos3=12  2
+pos4= 2 10
+pos5= 7 10
+pos6=12 10
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #228B22 #000000
+block01=rock_floor_X     #000000 #228B22 #000000
+block02=weight           #000000 #228B22 #000000
+block03=weight_R         #000000 #228B22 #000000
+block04=weight           #000000 #9ACD32 #000000
+block05=weight_R         #000000 #9ACD32 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probSpecial=46
+probHidden=-46
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___X_____X___B
+row03=B_____________B
+row04=B_X___X_X___X_B
+row05=B_____________B
+row06=B___X_____X___B
+row07=B_____________B
+row08=B_X___X_X___X_B
+row09=B_____________B
+row10=B___X_____X___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

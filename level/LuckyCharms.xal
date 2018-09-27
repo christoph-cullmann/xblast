@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lucky_Charms
+author=Thomas Cornet
+hint=Be lucky
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=7
+range=7
+specialBombs=30
+pos1=5 5
+pos2=9 5
+pos3=9 7
+pos4=5 7
+pos5=7 4
+pos6=7 8
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+fuseTime=long
+default=grenade
+special=threebombs
+
+[graphics]
+block00=iron_floor		#000000 #CD5C5C #FFFF00
+block01=iron_floor		#000000 #CD5C5C #FFFF00
+block02=dark_block		#000000 #6A5ACD #00FFFF
+block03=dark_block_R		#000000 #6A5ACD #000000
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

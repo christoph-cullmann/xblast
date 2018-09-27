@@ -1,0 +1,74 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Spinner
+author=Tobias Johansson
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+
+[func]
+extra=longStunned
+
+[player]
+bombs=3
+range=3
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=napalm
+playerClick=thru
+wallClick=contact
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=karo_light		#000000 #8B0000 #808080
+block01=karo_light		#000000 #8B0000 #808080
+block02=temple		#000000 #FFFFFF #808080
+block03=temple		#000000 #FFFFFF #808080
+block04=box		#000000 #FFFF00 #8B0000
+block05=box		#000000 #FFFF00 #8B0000
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=21
+probRange=19
+probVirus=21
+probSpecial=19
+probHidden=21
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B____XX____XX_B
+row03=B_X____X_X____B
+row04=B_X_XX____XX__B
+row05=B_X___________B
+row06=B__XX_X_X_X___B
+row07=B_X_____X__X__B
+row08=B___X__X______B
+row09=B_X__X___XX_X_B
+row10=B__X_XX_____X_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

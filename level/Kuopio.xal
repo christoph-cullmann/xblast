@@ -1,0 +1,91 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Kuopio
+author=Glaset
+hint=Run Forrest
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+[scrambleDel]
+time=0.91
+numBlocks=23
+pos000=1 1
+pos001=2 1
+pos002=3 1
+pos003=4 1
+pos004=5 1
+pos005=6 1
+pos006=7 1
+pos007=7 2
+pos008=7 3
+pos009=7 4
+pos010=7 5
+pos011=7 6
+pos012=7 7
+pos013=7 8
+pos014=7 9
+pos015=7 10
+pos016=7 11
+pos017=8 1
+pos018=9 1
+pos019=10 1
+pos020=11 1
+pos021=12 1
+pos022=13 1
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=0
+range=0
+pos1=1 1
+pos2=1 1
+pos3=1 1
+pos4=1 1
+pos5=1 1
+pos6=1 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=construction
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #228B22
+block03=lego_white		#000000 #0000FF #228B22
+block04=lego_black		#FF0000 #000000 #228B22
+block05=lego_black_O		#000000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=lego_floor		#000000 #228B22 #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_rrrrrrrrrrrrB
+row02=BbbbbbbbbbbbbrB
+row03=BBBBBBBBBBBBbqB
+row04=BrbbbbbbbbbbbrB
+row05=BrbrrrrrrrrrrrB
+row06=BqbBBBBBBBBBBBB
+row07=BrbrrrrrrrrrrrB
+row08=BrbbbbbbbbbbbrB
+row09=BBBBBBBBBBBBbqB
+row10=BqbbbbbbbbbbbrB
+row11=BrrrrrrrrrrrrrB
+row12=BBBBBBBBBBBBBBB

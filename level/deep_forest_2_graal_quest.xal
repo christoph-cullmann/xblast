@@ -1,0 +1,62 @@
+[info]
+name=Deep Forest 2 - Graal Quest
+author=EPFL - cosun : Yves Bresson
+hint=Explore the Jungle - Find the Graal
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=holyGrail
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1= 7  1
+pos2= 1  2
+pos3=13  2
+pos4= 1 10
+pos5=13 10
+pos6= 7 11
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+fuseTime=short
+hidden=construction
+
+[graphics]
+block00=chess_floor      #000000 #8FBC8F #000000
+block01=chess_floor_X    #000000 #8FBC8F #000000
+block02=chess_sphere     #000000 #8FBC8F #2E8B57
+block03=chess_sphere     #000000 #8FBC8F #2E8B57
+block04=chess_sphere     #000000 #8FBC8F #556B2F
+block05=chess_sphere_O   #000000 #8FBC8F #556B2F
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=31
+probRange=26
+probVirus=13
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXX_XXXXXXB
+row02=B_XXXXXXXXXXX_B
+row03=BXXXXXXXXXXXXXB
+row04=BXXXXXXXXXXXXXB
+row05=BXXXXXXXXXXXXXB
+row06=BXXXqXXXXXqXXXB
+row07=BXXXXXXXXXXXXXB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=B_XXXXXXXXXXX_B
+row11=BXXXXXX_XXXXXXB
+row12=BBBBBBBBBBBBBBB
+

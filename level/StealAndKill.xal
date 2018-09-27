@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Steal and kill
+author=LORIA : Pierre 'in your back' Laroche
+hint=You're the wolf, they're sheeps.
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=steal
+
+[player]
+bombs=1
+range=8
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=rebound
+playerClick=null
+
+[graphics]
+block00=mr_beam_free		#000000 #CD5C5C #000000
+block01=mr_beam_free		#000000 #CD5C5C #000000
+block02=karo_light_S		#000000 #6B8E23 #FFD700
+block03=weight_R		#000000 #B0C4DE #000000
+block04=extra_O		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=steal
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probRange=8
+probVirus=6
+probSpecial=76
+probHidden=10
+row00=BBBBBBBBBBBBBBB
+row01=BXs_B_____B_sXB
+row02=Bss_B_____B_ssB
+row03=BBB_________BBB
+row04=B___B_____B___B
+row05=Bs__B_____B__sB
+row06=BXs_________sXB
+row07=Bs__B_____B__sB
+row08=B___B_____B___B
+row09=BBB_________BBB
+row10=Bss_B_____B_ssB
+row11=BXs_B_____B_sXB
+row12=BBBBBBBBBBBBBBB

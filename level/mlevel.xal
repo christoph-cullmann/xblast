@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Mlevel
+author=EPFL - disun : Moutz
+hint=comment
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+pos1=1 1
+pos2=2 1
+pos3=4 2
+pos4=3 5
+pos5=3 8
+pos6=10 8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=threebombs
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #B0C4DE #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=triangle_bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B__XsB________B
+row02=B__X_Bqb__bq_bB
+row03=B__XsBq_bb_q_bB
+row04=B_XXXBq____q_bB
+row05=B_X_XBq_rr_q_bB
+row06=B_XsXBq_rrXq_bB
+row07=B_XsXBq_rXsX_bB
+row08=B_X_XBq_rX_X_bB
+row09=B_XXXBq_rXXX_bB
+row10=B__XXBq_rr_q_bB
+row11=BssXsX________B
+row12=BBBBBBBBBBBBBBB

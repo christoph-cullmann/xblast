@@ -1,0 +1,68 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Kickpicker
+author=Tobias Johansson
+hint=Beware of the wave shrink
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+bombClick=contact
+playerClick=contact
+wallClick=contact
+
+[graphics]
+block00=ghost		#000000 #FFFFF0 #000000
+block01=ghost		#000000 #FFFFF0 #000000
+block02=ghost_sq		#000000 #FFFFF0 #006400
+block03=ghost_sq_R		#000000 #FFFFF0 #006400
+block04=ghost_ci		#000000 #FFFFF0 #7FFFD4
+block05=ghost_ci_R		#000000 #FFFFF0 #7FFFD4
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #00FF7F #4169E1
+
+[map]
+probBomb=24
+probRange=24
+probVirus=24
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_XXXXXXXXXXX_B
+row04=B_X_________X_B
+row05=B_X_XXXXXXX_X_B
+row06=B_X_XqqqqqX_X_B
+row07=B_X_XXXXXXX_X_B
+row08=B_X_________X_B
+row09=B_XXXXXXXXXXX_B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

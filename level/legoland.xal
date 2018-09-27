@@ -1,0 +1,62 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Legoland
+author=Oliver Vogel
+hint=Catch them in a corner
+gameMode=R23456STDL
+
+[shrink]
+type=spiralLego
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=3 3
+pos2=11 3
+pos3=11 9
+pos4=3 9
+pos5=7 5
+pos6=7 7
+
+[bombs]
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #228B22
+block03=lego_floor		#000000 #228B22 #000000
+block04=lego_black		#FF0000 #000000 #228B22
+block05=lego_black_O		#FF0000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=lego_floor_S		#000000 #228B22 #000000
+
+[map]
+probBomb=29
+probRange=43
+probVirus=25
+row00=vvvvvvvvvvvvvvv
+row01=vBBBBBBBBBBBBBv
+row02=vBBBBBBBBBBBBvv
+row03=vBB__X_X_X__Bvv
+row04=vBB_BXB_BXB_Bvv
+row05=vBBX_XX__X_XBvv
+row06=vBBXBXBXBXBXBvv
+row07=vBBX_X__XX_XBvv
+row08=vBB_BXB_BXB_Bvv
+row09=vBB__X_X_X__Bvv
+row10=vBBBBBBBBBBBBvv
+row11=vBBBBBBBBBBBBBv
+row12=vvvvvvvvvvvvvvv

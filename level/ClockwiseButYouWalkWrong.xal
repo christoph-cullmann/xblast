@@ -1,0 +1,70 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Clockwise... but you walk wrong 2
+author=Skywalker
+hint=Clockwise... but you walk wrong
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=4
+pos1=5 2
+pos2=9 4
+pos3=1 6
+pos4=13 6
+pos5=9 9
+pos6=4 10
+initVirus=reverse
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+playerClick=thru
+special=threebombs
+hidden=ringofire
+
+[graphics]
+block00=button_floor		#000000 #000000 #000000
+block01=button_floor_X		#000000 #000000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#000000 #000000 #000000
+block04=pumpkin		#FFFF00 #000000 #000000
+block05=pumpkin_O		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+probVirus=50
+probHidden=50
+row00=BBBBBBBBBBBBBBB
+row01=B______X______B
+row02=B_BB___B_XX_BXB
+row03=B_X____X____B_B
+row04=B_B_BB_B__B_X_B
+row05=B_B_______B___B
+row06=B_____BXB_BX__B
+row07=BB__B_________B
+row08=BX__B_X_BXB_BXB
+row09=B_B___B_______B
+row10=B_BB__B_X__BBXB
+row11=B__X__________B
+row12=BBBBBBBBBBBBBBB

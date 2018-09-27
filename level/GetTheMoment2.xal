@@ -1,0 +1,165 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Get the moment 2
+author=Peter Riede
+hint=TIMING!!! get into the middle!
+gameMode=R23456STDL
+
+[shrink]
+type=outwardSpiral
+
+[scrambleDraw]
+time=0.38
+numBlocks=41
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 11
+pos013=3 1
+pos014=3 11
+pos015=4 1
+pos016=4 11
+pos017=5 1
+pos018=5 11
+pos019=6 1
+pos020=7 1
+pos021=8 1
+pos022=9 1
+pos023=9 11
+pos024=10 1
+pos025=10 11
+pos026=11 1
+pos027=11 11
+pos028=12 1
+pos029=12 11
+pos030=13 1
+pos031=13 2
+pos032=13 3
+pos033=13 4
+pos034=13 5
+pos035=13 6
+pos036=13 7
+pos037=13 8
+pos038=13 9
+pos039=13 10
+pos040=13 11
+
+[scrambleDel]
+time=0.31
+numBlocks=49
+pos000=2 5
+pos001=2 6
+pos002=2 7
+pos003=3 5
+pos004=3 6
+pos005=3 7
+pos006=4 5
+pos007=4 6
+pos008=4 7
+pos009=5 5
+pos010=5 6
+pos011=5 7
+pos012=6 2
+pos013=6 3
+pos014=6 4
+pos015=6 5
+pos016=6 6
+pos017=6 7
+pos018=6 8
+pos019=6 9
+pos020=6 10
+pos021=7 2
+pos022=7 3
+pos023=7 4
+pos024=7 5
+pos025=7 7
+pos026=7 8
+pos027=7 9
+pos028=7 10
+pos029=8 2
+pos030=8 3
+pos031=8 4
+pos032=8 5
+pos033=8 7
+pos034=8 8
+pos035=8 9
+pos036=8 10
+pos037=9 5
+pos038=9 6
+pos039=9 7
+pos040=10 5
+pos041=10 6
+pos042=10 7
+pos043=11 5
+pos044=11 6
+pos045=11 7
+pos046=12 5
+pos047=12 6
+pos048=12 7
+
+[func]
+
+[player]
+bombs=4
+range=2
+pos1=12 2
+pos2=2 6
+pos3=2 10
+pos4=12 6
+pos5=2 2
+pos6=12 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=hex		#800000 #000000 #8B0000
+block01=hex_X		#800000 #000000 #8B0000
+block02=hex_wall		#800000 #000000 #00008B
+block03=hex_wall		#800000 #000000 #00008B
+block04=hex_extra		#800000 #000000 #00FF7F
+block05=hex_extra_O		#800000 #000000 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____BBB_____B
+row09=B_____BBB_____B
+row10=B_____BBB_____B
+row11=B_____BBB_____B
+row12=BBBBBBBBBBBBBBB

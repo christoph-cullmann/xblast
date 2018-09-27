@@ -1,0 +1,53 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Anti Gravity
+author=Chris Doherty (Adelaide)
+hint=Show us how these bombs never used to fly, but now they do
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+
+[player]
+bombs=5
+range=10
+pos1= 1  1
+pos2= 5  1
+pos3= 9  1
+pos4=13  1
+pos5= 3  1
+pos6=11  1
+
+[bombs]
+direction=up
+
+[graphics]
+block00=check            #000000 #0000FF #808080
+block01=check_X          #000000 #0000FF #808080
+block02=uparrow          #000000 #FF0000 #FFFF00
+block03=uparrow          #000000 #FF0000 #FFFF00
+block04=extra            #000000 #FFFFFF #808080
+block05=extra_O          #000000 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=check            #000000 #FF0000 #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B_B_B_B_B_B
+row03=B_____________B
+row04=B_B_B_B_B_B_B_B
+row05=B_____________B
+row06=B_B_B_B_B_B_B_B
+row07=B_____________B
+row08=B_B_B_B_B_B_B_B
+row09=B_____________B
+row10=B_B_B_B_B_B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

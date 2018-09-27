@@ -1,0 +1,57 @@
+[info]
+name=Treasure Hunt
+author=Oliver Vogel
+hint=Equip your self properly and then blast them
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  3
+pos6= 7  9
+
+[bombs]
+
+[graphics]
+block00=karo_dark        #000000 #2E8B57 #8FBC8F
+block01=karo_dark_X      #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #FF3030 #000000
+block03=wall_R           #000000 #FF3030 #2E8B57
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=31
+probRange=22
+probVirus=15
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B____X_X_X____B
+row02=B_BBXBB_BBXBB_B
+row03=B_XXX_____XXX_B
+row04=BXBXBXBBBXBXBXB
+row05=B_B_X_XXX_X_B_B
+row06=B_X_B_BXB_B_X_B
+row07=B_B_X_XXX_X_B_B
+row08=BXBXBXBBBXBXBXB
+row09=B_XXX_____XXX_B
+row10=B_BBXBB_BBXBB_B
+row11=B____X_X_X____B
+row12=BBBBBBBBBBBBBBB
+

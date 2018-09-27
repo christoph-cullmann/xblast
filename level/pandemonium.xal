@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Pandemonium
+author=Keith Gillow
+hint=Use the skulls wisely
+gameMode=R234--STDL
+
+[shrink]
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=6
+range=3
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=teleport
+reviveVirus=teleport
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=city_free		#000000 #000000 #000000
+block01=city_free		#000000 #000000 #000000
+block02=dark_house		#000000 #000000 #000000
+block03=dark_house_R		#000000 #000000 #000000
+block04=score_floor		#000000 #D2B48C #000000
+block05=score_floor		#000000 #D2B48C #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=iron_floor		#000000 #000000 #FF4500
+
+[map]
+probBomb=5
+probRange=6
+probVirus=76
+probSpecial=3
+probHidden=3
+row00=vBBBBBBBBBBBBBv
+row01=B_b_s_XqX_s_b_B
+row02=Bbs_B_XXX_B_sbB
+row03=B___B_____B___B
+row04=B_____________B
+row05=BXX_B__B__B_XXB
+row06=BqX___s_s___XqB
+row07=BXX_B__B__B_XXB
+row08=B_____________B
+row09=B___B_____B___B
+row10=Bbs_B_XXX_B_sbB
+row11=B_b_s_XqX_s_b_B
+row12=vBBBBBBBBBBBBBv

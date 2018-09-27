@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Highway
+author=ENSERB : Seb
+hint=Want to die ?
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+key=specialBomb
+
+[player]
+bombs=6
+range=4
+specialBombs=30
+pos1=3 3
+pos2=3 8
+pos3=10 3
+pos4=10 8
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+special=grenade
+
+[graphics]
+block00=rock_floor		#000000 #000000 #000000
+block01=rock_floor		#000000 #000000 #000000
+block02=weight		#000000 #000000 #000000
+block03=weight_R		#000000 #000000 #000000
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=BBB_________BBB
+row02=BB___________BB
+row03=B_____________B
+row04=B____BB_BB____B
+row05=B___BBB_BBB___B
+row06=B___BBB_BBB___B
+row07=B___BBB_BBB___B
+row08=B____BB_BB____B
+row09=B_____________B
+row10=BB___________BB
+row11=BBB_________BBB
+row12=BBBBBBBBBBBBBBB

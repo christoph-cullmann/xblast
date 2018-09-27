@@ -1,0 +1,138 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Right Side2
+author=Peter Riede
+hint=Leave the Area! Follow the Path!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.24
+numBlocks=30
+pos000=5 1
+pos001=5 2
+pos002=5 3
+pos003=5 4
+pos004=5 5
+pos005=5 6
+pos006=6 1
+pos007=6 2
+pos008=6 3
+pos009=6 4
+pos010=6 5
+pos011=6 6
+pos012=7 1
+pos013=7 2
+pos014=7 3
+pos015=7 4
+pos016=7 5
+pos017=7 6
+pos018=8 1
+pos019=8 2
+pos020=8 3
+pos021=8 4
+pos022=8 5
+pos023=8 6
+pos024=9 1
+pos025=9 2
+pos026=9 3
+pos027=9 4
+pos028=9 5
+pos029=9 6
+
+[scrambleDel]
+time=0.46
+numBlocks=32
+pos000=1 7
+pos001=2 2
+pos002=2 10
+pos003=3 5
+pos004=3 10
+pos005=4 5
+pos006=4 6
+pos007=4 7
+pos008=4 8
+pos009=5 8
+pos010=5 9
+pos011=5 10
+pos012=6 8
+pos013=7 8
+pos014=8 8
+pos015=8 10
+pos016=8 11
+pos017=9 8
+pos018=10 1
+pos019=10 2
+pos020=10 3
+pos021=10 4
+pos022=10 5
+pos023=10 6
+pos024=10 7
+pos025=10 8
+pos026=10 9
+pos027=10 10
+pos028=11 4
+pos029=11 9
+pos030=12 2
+pos031=12 6
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=9 7
+pos2=7 7
+pos3=8 7
+pos4=9 6
+pos5=5 7
+pos6=6 7
+initVirus=run
+reviveVirus=run
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=contact
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #4682B4
+block01=karo_light_X		#000000 #6A5ACD #4682B4
+block02=pyramid		#000000 #DAA520 #DAA520
+block03=pyramid_R		#000000 #DAA520 #DAA520
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=extra		#D3D3D3 #D2B48C #FFE4C4
+
+[map]
+probBomb=33
+probRange=17
+probVirus=17
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=BX__X_____v___B
+row02=B_BXXX__B_v_q_B
+row03=B_X_X_____v___B
+row04=BX_XXX____vv__B
+row05=B_X_v__B__v___B
+row06=BXBXv_____vevXB
+row07=B_X_v_____vXeeB
+row08=BXXBvvvvvvveXeB
+row09=BXeXeveXeevvXXB
+row10=BevvXvXXvXvXeXB
+row11=BXeXeXeeveXeXeB
+row12=BBBBBBBBBBBBBBB

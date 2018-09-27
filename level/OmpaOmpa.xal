@@ -1,0 +1,64 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Ompa Ompa
+author=Glaset
+hint=Watch the Clock
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=5
+range=5
+pos1=2 2
+pos2=12 10
+pos3=12 2
+pos4=2 10
+pos5=7 2
+pos6=7 10
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+wallClick=clockwise
+fuseTime=long
+
+[graphics]
+block00=iron_floor		#000000 #B0C4DE #00FF7F
+block01=iron_floor		#000000 #B0C4DE #00FF7F
+block02=dark_block		#000000 #F08080 #CD5C5C
+block03=dark_block_R		#000000 #F08080 #CD5C5C
+block04=extra		#000000 #A0522D #000000
+block05=extra_O		#000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BBB____B____BBB
+row02=BB___________BB
+row03=B_____________B
+row04=B_____________B
+row05=B______B______B
+row06=BB____BBB____BB
+row07=B______B______B
+row08=B_____________B
+row09=B_____________B
+row10=BB___________BB
+row11=BBB____B____BBB
+row12=BBBBBBBBBBBBBBB

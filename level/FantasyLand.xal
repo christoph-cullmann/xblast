@@ -1,0 +1,65 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fantasy Land 3
+author=Skywalker
+hint=Watch the bouncing bombs
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=7
+range=9
+pos1=4 4
+pos2=10 4
+pos3=10 8
+pos4=4 8
+pos5=7 4
+pos6=7 8
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+default=search
+
+[graphics]
+block00=iron_floor		#000000 #87CEEB #FFFF00
+block01=iron_floor_X		#000000 #87CEEB #FFFF00
+block02=dark_block		#000000 #00FFFF #00FF7F
+block03=dark_block_R		#000000 #00FFFF #00FF7F
+block04=extra		#000000 #8B4513 #000000
+block05=extra_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_BB_______BB_B
+row03=B_BBXXBBBXXBB_B
+row04=B____X___X____B
+row05=B__B_X___X_B__B
+row06=B__BXXXXXXXB__B
+row07=B__B_X___X_B__B
+row08=B____X___X____B
+row09=B_BBXXBBBXXBB_B
+row10=B_BB_______BB_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

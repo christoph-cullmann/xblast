@@ -1,0 +1,59 @@
+[info]
+name=Bomb A La Surprise
+author=Stn
+hint=Watch For Hidden Bombs
+gameMode=R234--STDL
+
+[shrink]
+type=constrictWave
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  2
+pos2=13  2
+pos3=13 10
+pos4= 1 10
+pos5= 7  5
+pos6= 9  9
+
+[bombs]
+bombClick=snooker
+wallClick=randomdir
+hidden=random
+
+[graphics]
+block00=lego_floor       #000000 #4169E1 #4169E1
+block01=lego_floor_X     #000000 #4169E1 #4169E1
+block02=lego_white       #000000 #FFFF00 #4169E1
+block03=lego_black       #FFFFE0 #000000 #4169E1
+block04=lego_black       #FFFFFF #000000 #4169E1
+block05=lego_black_O     #FFFFFF #000000 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=15
+probRange=8
+probHidden=70
+row00=BBBBBBBBBBBBBBB
+row01=BXrqsX_B_XsqrXB
+row02=B_XB_B_B_B_BX_B
+row03=B_B_b__X__b_B_B
+row04=B__BsB_B_BsB__B
+row05=BsX___r_X___sXB
+row06=BrBBrXB_BXrBBrB
+row07=BXs___X_r___XsB
+row08=B__BsB_B_BsB__B
+row09=B_B_b__X__b_B_B
+row10=B_XB_B_B_B_BX_B
+row11=BXrqbX_B_XbqrXB
+row12=BBBBBBBBBBBBBBB
+

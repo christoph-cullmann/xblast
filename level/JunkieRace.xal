@@ -1,0 +1,153 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Junkie Race
+author=Vargusz
+hint=Mr. Junkie versus The Fungus Guys
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+[scrambleDraw]
+time=0.6
+numBlocks=16
+pos000=3 3
+pos001=3 4
+pos002=3 8
+pos003=3 9
+pos004=4 3
+pos005=4 9
+pos006=5 3
+pos007=5 9
+pos008=9 3
+pos009=9 9
+pos010=10 3
+pos011=10 9
+pos012=11 3
+pos013=11 4
+pos014=11 8
+pos015=11 9
+
+[scrambleDel]
+time=0.6
+numBlocks=60
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 3
+pos013=2 6
+pos014=2 11
+pos015=3 1
+pos016=3 6
+pos017=3 10
+pos018=3 11
+pos019=4 1
+pos020=4 6
+pos021=4 11
+pos022=5 1
+pos023=5 11
+pos024=6 1
+pos025=6 11
+pos026=7 1
+pos027=7 2
+pos028=7 3
+pos029=7 4
+pos030=7 8
+pos031=7 9
+pos032=7 10
+pos033=7 11
+pos034=8 1
+pos035=8 11
+pos036=9 1
+pos037=9 11
+pos038=10 1
+pos039=10 6
+pos040=10 11
+pos041=11 1
+pos042=11 2
+pos043=11 6
+pos044=11 11
+pos045=12 1
+pos046=12 6
+pos047=12 9
+pos048=12 11
+pos049=13 1
+pos050=13 2
+pos051=13 3
+pos052=13 4
+pos053=13 5
+pos054=13 6
+pos055=13 7
+pos056=13 8
+pos057=13 9
+pos058=13 10
+pos059=13 11
+
+[func]
+extra=junkie
+key=specialBomb
+
+[player]
+bombs=2
+range=3
+specialBombs=30
+pos1=9 8
+pos2=5 4
+pos3=8 6
+pos4=7 5
+pos5=6 6
+pos6=7 7
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=fungus
+haunt=fast
+
+[graphics]
+block00=karo_dark		#000000 #483D8B #FF4500
+block01=karo_dark_X		#000000 #483D8B #FF4500
+block02=weight		#708090 #000000 #708090
+block03=weight_R		#000000 #000000 #708090
+block04=extra		#000000 #8B4513 #000000
+block05=extra_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=syringe
+block10=karo_dark		#000000 #E0FFFF #FF4500
+
+[map]
+probBomb=40
+probRange=40
+probVirus=20
+row00=BBBBBBBBBBBBBBB
+row01=BqX___XvX___XqB
+row02=BXX___XvX___XXB
+row03=B_____XvX_____B
+row04=B______v______B
+row05=BXXXX_____XXXXB
+row06=Bvvvvv_B_vvvvvB
+row07=BXXXX_____XXXXB
+row08=B______v______B
+row09=B_____XvX_____B
+row10=BXX___XvX___XXB
+row11=BqX___XvX___XqB
+row12=BBBBBBBBBBBBBBB

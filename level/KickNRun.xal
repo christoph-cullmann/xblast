@@ -1,0 +1,56 @@
+[info]
+name=Kick'n'Run
+author=Tobias Johansson
+hint=Action!
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=15
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=iron_floor       #000000 #8A2BE2 #00FF7F
+block01=iron_floor_X     #000000 #8A2BE2 #00FF7F
+block02=dark_block       #000000 #00FF7F #7FFFD4
+block03=dark_block_R     #000000 #00FF7F #7FFFD4
+block04=extra            #000000 #FFD700 #FF4500
+block05=extra_O          #000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B____B___B____B
+row02=B__B_B_B_B_B__B
+row03=B_____________B
+row04=B_BB_B___B_BB_B
+row05=B______B______B
+row06=B__B_B___B_B__B
+row07=B______B______B
+row08=B_BB_B___B_BB_B
+row09=B_____________B
+row10=B__B_B_B_B_B__B
+row11=B____B___B____B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,60 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Psychological Warfare
+author=Gnat (Adelaide)
+hint=It's very easy to get crushed by the shrink in this level
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+extra=speed
+key=cloak
+
+[player]
+bombs=1
+range=5
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 1  6
+pos6=13  6
+initExtra=cloak 
+reviveExtra=cloak 
+
+[bombs]
+
+[graphics]
+block00=chess_floor      #000000 #40E0D0 #808080
+block01=chess_floor_X    #000000 #40E0D0 #808080
+block02=wall             #000000 #8A2BE2 #40E0D0
+block03=wall             #000000 #8A2BE2 #40E0D0
+block04=chess_sphere     #000000 #40E0D0 #ADFF2F
+block05=chess_sphere_O   #000000 #40E0D0 #ADFF2F
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=check            #000000 #FFFFFF #808080
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=25
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B___X_X_X_X___B
+row02=B_BXBXBXBXBXB_B
+row03=B_X_Xq___qX_X_B
+row04=BXBXB_B_B_BXBXB
+row05=B__XX_XXX_XX__B
+row06=B_BXB_XBX_BXB_B
+row07=B__XX_XXX_XX__B
+row08=BXBXB_B_B_BXBXB
+row09=B_X_Xq___qX_X_B
+row10=B_BXBXBXBXBXB_B
+row11=B___X_X_X_X___B
+row12=BBBBBBBBBBBBBBB

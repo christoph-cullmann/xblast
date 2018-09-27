@@ -1,0 +1,64 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Je m'appelle Rico
+author=Laurent Marsan
+hint=Don't PANIC!
+gameMode=R234--ST-L
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=7 5
+pos2=7 7
+pos3=8 6
+pos4=6 6
+pos5=-1 -1
+pos6=-1 -1
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #E0FFFF #0000FF
+block01=iron_floor		#000000 #E0FFFF #0000FF
+block02=bricks		#000000 #A0522D #000000
+block03=brick_O		#000000 #FFFF00 #000000
+block04=bricks		#000000 #228B22 #000000
+block05=brick_O		#000000 #00FF7F #000000
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#FA8072 #FA8072 #FA8072
+
+[map]
+probBomb=32
+probRange=32
+probVirus=16
+probHidden=21
+row00=BBBBBBBBBBBBBBB
+row01=BXXXXXXXXXXXXXB
+row02=BXXXXXXXXXXXXXB
+row03=BXXXXXXXXXXXXXB
+row04=BXXXXXXXXXXXXXB
+row05=BXXXXXX_XXXXXXB
+row06=BXXXXX___XXXXXB
+row07=BXXXXXX_XXXXXXB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

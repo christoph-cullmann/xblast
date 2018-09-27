@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Quick
+author=Stn
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=2
+range=5
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=5 6
+pos6=11 6
+initVirus=run
+reviveVirus=run
+
+[bombs]
+special=distance
+hidden=parallel
+
+[graphics]
+block00=karo_light		#000000 #D2B48C #8B4513
+block01=karo_light		#000000 #D2B48C #8B4513
+block02=pyramid		#000000 #BC8F8F #DAA520
+block03=pyramid_R		#000000 #BC8F8F #DAA520
+block04=extra		#000000 #F4A460 #FFA500
+block05=extra_O		#000000 #F4A460 #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=16
+probVirus=8
+probSpecial=32
+probHidden=21
+row00=BBBBBBBBBBBBBBB
+row01=B__XX__X__XX__B
+row02=B__BX_B_B_XB__B
+row03=BXBBX__B__XBBXB
+row04=BXXXXXX_XXXXXXB
+row05=B_B__BXXXB__B_B
+row06=BX_B__XBX__B_XB
+row07=B_B__BXXXB__B_B
+row08=BXXXXXX_XXXXXXB
+row09=BXBBX__B__XBBXB
+row10=B__BX_B_B_XB__B
+row11=B__XX__X__XX__B
+row12=BBBBBBBBBBBBBBB

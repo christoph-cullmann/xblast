@@ -1,0 +1,60 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Le Bon, Moi et le Truand
+author=old EPFL : RBwaBD
+hint=Clear the line of fire!
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=revive
+
+[player]
+bombs=1
+range=35
+pos1=3 3
+pos2=11 3
+pos3=7 3
+pos4=3 9
+pos5=7 9
+pos6=11 9
+
+[bombs]
+
+[graphics]
+block00=dark_way		#FFFFFF #FFFF00 #000000
+block01=dark_way		#FFFFFF #FFFF00 #000000
+block02=r_i_p		#FFFFFF #000000 #FFFF00
+block03=r_i_p_R		#FFFFFF #000000 #FFFF00
+block04=extra		#FFFFFF #A0522D #FFA500
+block05=extra_O		#FFFFFF #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=phoenix
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_qqqqqqqqqqq_B
+row03=B_qqqqqqqqqqq_B
+row04=B_qqqqqqqqqqq_B
+row05=B_qqqqqqqqqqq_B
+row06=B_qqqqqqqqqqq_B
+row07=B_qqqqqqqqqqq_B
+row08=B_qqqqqqqqqqq_B
+row09=B_qqqqqqqqqqq_B
+row10=B_qqqqqqqqqqq_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

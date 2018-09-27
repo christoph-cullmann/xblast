@@ -1,0 +1,64 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=3D World
+author=Mark Black (Adelaide)
+hint=Choice bitmaps aren't they?
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=1
+range=5
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor       #000000 #B0C4DE #FFD700
+block01=iron_floor_X     #000000 #B0C4DE #FFD700
+;block02=d_world         #000000 #8B4513 #000000
+;block03=d_world         #000000 #8B4513 #000000
+;block04=d_world_extra   #000000 #8B4513 #000000
+;block05=d_world_extra   #000000 #8B4513 #000000
+;block06=d_world_extra   #000000 #8B4513 #000000
+;block07=d_world_extra   #000000 #8B4513 #000000
+;block08=d_world_extra   #000000 #8B4513 #000000
+block02=bricks           #000000 #8B4513 #000000
+block03=bricks           #000000 #8B4513 #000000
+block04=bricks           #000000 #A0522D #FFFFFF
+block05=bricks           #000000 #A0522D #FFFFFF
+block06=bricks           #000000 #A0522D #FFFFFF
+block07=bricks           #000000 #A0522D #FFFFFF
+block08=bricks           #000000 #A0522D #FFFFFF
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=32
+probRange=32
+probVirus=8
+row00=BBBBBBBBBBBBBBB
+row01=B__X_X___X_X__B
+row02=B_B_B_B_B_B_B_B
+row03=Br___X_r_X___rB
+row04=B_B_B_B_B_B_B_B
+row05=B__X_______X__B
+row06=BbB_BXBbBXB_BbB
+row07=B__X_______X__B
+row08=B_B_B_B_B_B_B_B
+row09=Br___X_r_X___rB
+row10=B_B_B_B_B_B_B_B
+row11=B__X_X___X_X__B
+row12=BBBBBBBBBBBBBBB

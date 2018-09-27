@@ -1,0 +1,67 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Full Power Ring'o'fire
+author=EPFL - insun : Yves Bresson
+hint=YAAAAAA !! Bouffe ca !
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=2
+range=15
+pos1=2 2
+pos2=7 2
+pos3=12 2
+pos4=2 10
+pos5=7 10
+pos6=12 10
+initExtra= revive
+reviveExtra= revive
+
+[bombs]
+default=ringofire
+
+[graphics]
+block00=chess_floor		#000000 #000000 #000000
+block01=chess_floor		#000000 #000000 #000000
+block02=chess_sphere		#FF0000 #FF4500 #2E8B57
+block03=chess_sphere		#008000 #FF4500 #2E8B57
+block04=chess_sphere		#0000FF #000000 #FFD700
+block05=chess_sphere_O		#0000FF #000000 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=chess_sphere		#FFFF00 #000000 #FFD700
+
+[map]
+extraDistribution=get
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=32
+probHidden=8
+row00=qrvqXBbrsvqXrBb
+row01=sBBBBBBBBBBBBBs
+row02=XB___________Bv
+row03=BB___________Br
+row04=bB___________BB
+row05=vB___________Bb
+row06=qB___________BX
+row07=sB___________Bq
+row08=rB___________Bs
+row09=XB___________Bv
+row10=bB___________BB
+row11=BBBBBBBBBBBBBBX
+row12=vqBrvXsbBrvqbsr

@@ -1,0 +1,60 @@
+[info]
+name=Remote Quest
+author=EPFL - cosun : Yves Bresson
+hint=Earn your remote controller
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=3
+range=2
+pos1= 7  2
+pos2= 3  3
+pos3=11  3
+pos4= 3  9
+pos5=11  9
+pos6= 7 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=lego_floor       #000000 #4169E1 #4169E1
+block01=lego_floor_X     #000000 #4169E1 #4169E1
+block02=lego_white       #000000 #FFFF00 #4169E1
+block03=lego_black       #FFFFE0 #000000 #4169E1
+block04=lego_black       #FFFFFF #000000 #4169E1
+block05=lego_black_O     #FFFFFF #000000 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=31
+probRange=19
+probVirus=25
+probHidden=9
+row00=BBBBBBBBBBBBBBB
+row01=BXXX___X___XXXB
+row02=BXX_________XXB
+row03=BX__XXXXXXX__XB
+row04=B___X_____X___B
+row05=B__X___X___X__B
+row06=BX_X__XqX__X_XB
+row07=B__X___X___X__B
+row08=B___X_____X___B
+row09=BX__XXXXXXX__XB
+row10=BXX_________XXB
+row11=BXXX___X___XXXB
+row12=BBBBBBBBBBBBBBB
+

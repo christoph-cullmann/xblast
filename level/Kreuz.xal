@@ -1,0 +1,81 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Kreuz
+author=Peter Riede
+hint=The control is inside
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+
+[scrambleDel]
+time=0.18
+numBlocks=8
+pos000=2 5
+pos001=2 7
+pos002=4 2
+pos003=4 10
+pos004=6 2
+pos005=6 10
+pos006=12 5
+pos007=12 7
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1=13 11
+pos2=1 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=7 1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+playerClick=contact
+
+[graphics]
+block00=rock_floor		#6A5ACD #A0522D #B8860B
+block01=rock_floor_X		#6A5ACD #A0522D #B8860B
+block02=jizz		#000000 #696969 #000000
+block03=hole_floor		#6A5ACD #696969 #000000
+block04=ghost_ci		#000000 #696969 #000000
+block05=ghost_ci_R		#6A5ACD #696969 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=karo_dark		#00FFFF #006400 #B8860B
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probVirus=25
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___BXB_______B
+row03=B___XqX_______B
+row04=B___X_X_______B
+row05=B_BXB_BXXXXXB_B
+row06=B_Xq_q__q__qX_B
+row07=B_BXB_BXXXXXB_B
+row08=B___X_X_______B
+row09=B___XqX_______B
+row10=B___BXB_______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

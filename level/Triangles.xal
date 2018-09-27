@@ -1,0 +1,78 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Triangles
+author=Peter Riede
+hint=Dont lose your kick-extra!
+gameMode=R23456STDL
+
+[shrink]
+type=speedSpiral
+
+
+[scrambleDel]
+time=0.67
+numBlocks=5
+pos000=3 3
+pos001=3 9
+pos002=4 6
+pos003=10 6
+pos004=11 3
+
+[func]
+extra=kick
+key=teleport
+
+[player]
+bombs=5
+range=4
+pos1=13 1
+pos2=7 9
+pos3=7 3
+pos4=1 11
+pos5=1 1
+pos6=13 11
+initExtra=teleport kick
+reviveExtra=teleport 
+
+[bombs]
+default=trianglebombs
+hidden=grenade
+
+[graphics]
+block00=karo_dark		#000000 #FFFFF0 #FFFF00
+block01=karo_dark_X		#000000 #FFFFF0 #FFFF00
+block02=sphere_dark		#000000 #FF0000 #00FFFF
+block03=sphere_dark		#000000 #FF0000 #00FFFF
+block04=sphere_light		#000000 #8B4513 #000000
+block05=sphere_light_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=sphere_dark		#FFFFFF #000080 #000000
+
+[map]
+extraDistribution=get
+probBomb=6
+probRange=6
+probVirus=12
+probHidden=50
+row00=BBBBBBBBBBBBBBB
+row01=B_____BBB_____B
+row02=B_____________B
+row03=B_B___B_v__B__B
+row04=B_B_v_____B___B
+row05=B____________BB
+row06=B___vB_q_Bv___B
+row07=BB____________B
+row08=B___B_____v_B_B
+row09=B__B__v_B___B_B
+row10=B_____________B
+row11=B_____BBB_____B
+row12=BBBBBBBBBBBBBBB

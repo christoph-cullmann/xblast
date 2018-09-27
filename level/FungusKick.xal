@@ -1,0 +1,85 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Fungus Kick
+author=Peter Riede
+hint=Kick the Fungus-Bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.49
+numBlocks=14
+pos000=3 3
+pos001=3 4
+pos002=3 6
+pos003=3 8
+pos004=3 9
+pos005=4 4
+pos006=4 8
+pos007=10 4
+pos008=10 8
+pos009=11 3
+pos010=11 4
+pos011=11 6
+pos012=11 8
+pos013=11 9
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=3
+range=4
+specialBombs=30
+pos1=13 1
+pos2=13 11
+pos3=7 1
+pos4=7 11
+pos5=1 11
+pos6=1 1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+default=fungus
+
+[graphics]
+block00=lego_floor		#F5F5F5 #4B0082 #4B0082
+block01=lego_floor_X		#F5F5F5 #4B0082 #4B0082
+block02=lego_white		#696969 #FFD700 #F5F5F5
+block03=lego_white		#F5F5F5 #FFD700 #F5F5F5
+block04=hex_extra		#FFD700 #90EE90 #FFEFD5
+block05=hex_extra_O		#F5F5F5 #90EE90 #FFEFD5
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=hex		#EEE8AA #4B0082 #F5F5F5
+
+[map]
+probVirus=25
+probSpecial=25
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__v_______v__B
+row03=B__v_______v__B
+row04=B__vv_v_v_vv__B
+row05=B_____________B
+row06=B__vv_____vv__B
+row07=B_____________B
+row08=B__vv_v_v_vv__B
+row09=B__v_______v__B
+row10=B__v_______v__B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

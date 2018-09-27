@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=TNT Smugglers
+author=Bremen : Miru
+hint=Those teddies contain explosive stuff
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=8
+pos1=1 1
+pos2=1 11
+pos3=13 1
+pos4=13 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+special=firecracker
+hidden=blastnow
+
+[graphics]
+block00=mr_beam_free		#000000 #FFA500 #000000
+block01=mr_beam_free		#000000 #FFA500 #000000
+block02=mr_beam_tv		#000000 #FFA500 #800000
+block03=ghost_sq_R		#000000 #000000 #D2691E
+block04=mr_beam_bear		#000000 #FFA500 #B8860B
+block05=mr_beam_bear_O		#000000 #FFA500 #B8860B
+block06=bomb
+block07=range
+block08=trap
+block09=firecracker
+block10=score_floor		#000000 #BDB76B #FFA500
+
+[map]
+probBomb=44
+probSpecial=6
+probHidden=50
+row00=BBBBBBBBBBBBBBB
+row01=B__BXB___BXB__B
+row02=B__XXB_B_BXX__B
+row03=BBXBXBXXXBXBXBB
+row04=BXXXXXXBXXXXXXB
+row05=BBXBXBXXXBXBXBB
+row06=BBBXXXXBXXXXBBB
+row07=BBXBXBXXXBXBXBB
+row08=BXXXXXXBXXXXXXB
+row09=BBXBXBXXXBXBXBB
+row10=B__XXB_B_BXX__B
+row11=B__BXB___BXB__B
+row12=BBBBBBBBBBBBBBB

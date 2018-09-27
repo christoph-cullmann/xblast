@@ -1,0 +1,60 @@
+[info]
+name=Que fait la police
+author=antimiage : Choupette
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+[func]
+extra=cloak
+key=cloak
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=random
+
+[graphics]
+block00=hole_floor       #000000 #8A2BE2 #FFD700
+block01=hole_floor_X     #000000 #8A2BE2 #FFD700
+block02=jizz             #000000 #8A2BE2 #FFD700
+block03=jizz             #000000 #8A2BE2 #FFD700
+block04=extra            #000000 #FFFF00 #FFFFFF
+block05=extra_O          #000000 #FFFF00 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor      #000000 #BEBEBE #FFFFFF
+
+[map]
+probBomb=23
+probRange=23
+probVirus=24
+probSpecial=23
+row00=BBBBBBBBBBBBBBB
+row01=B__bX_b_X_____B
+row02=B_X_BB__rBbq__B
+row03=Br__qX_X__X_X_B
+row04=B_BXb___X____rB
+row05=Bq_____q__Bq__B
+row06=B__q_rX__X_B__B
+row07=BX_Xb__B__X_XXB
+row08=B_B__X_X_X____B
+row09=Br__X______B_rB
+row10=B___B_q_X_bXBqB
+row11=B__X_____bX___B
+row12=BBBBBBBBBBBBBBB
+

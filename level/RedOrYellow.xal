@@ -1,0 +1,72 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Red or Yellow
+author=Peter Riede
+hint=Make a decision
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.65
+numBlocks=1
+pos000=3 2
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=2
+pos1=1 2
+pos2=1 6
+pos3=1 6
+pos4=1 10
+pos5=1 2
+pos6=1 10
+
+[bombs]
+bombClick=contact
+wallClick=contact
+
+[graphics]
+block00=chess_floor		#000000 #008000 #008000
+block01=chess_floor_X		#000000 #008000 #008000
+block02=sphere_dark		#000000 #008000 #008000
+block03=sphere_dark		#000000 #008000 #008000
+block04=chess_sphere		#000000 #008000 #008000
+block05=chess_sphere_O		#000000 #008000 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=B____rrrrq__sqB
+row02=B_XX_BBXXX__sqB
+row03=B____bbbbq__sqB
+row04=B_XX_XBBXX__sqB
+row05=B____rrrrq__sqB
+row06=B_XX_XXBXX__sqB
+row07=B____bbbbq__sqB
+row08=B_XX_XXBBX__sqB
+row09=B____rrrrq__sqB
+row10=B_XX_XXXBB__sqB
+row11=B____bbbbq__sqB
+row12=BBBBBBBBBBBBBBB

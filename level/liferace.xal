@@ -1,0 +1,114 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Life Race 2
+author=Skywalker
+hint=Run for your Life !
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.5
+numBlocks=20
+pos000=3 3
+pos001=3 4
+pos002=3 9
+pos003=4 3
+pos004=4 4
+pos005=5 9
+pos006=6 3
+pos007=6 8
+pos008=6 9
+pos009=7 3
+pos010=7 8
+pos011=7 9
+pos012=8 8
+pos013=8 9
+pos014=9 7
+pos015=9 9
+pos016=10 7
+pos017=10 8
+pos018=11 3
+pos019=11 9
+
+[scrambleDel]
+time=0.6
+numBlocks=14
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=4 3
+pos004=5 3
+pos005=5 4
+pos006=8 7
+pos007=8 8
+pos008=8 9
+pos009=9 9
+pos010=10 9
+pos011=11 7
+pos012=11 8
+pos013=11 9
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1=1 2
+pos2=7 3
+pos3=13 3
+pos4=7 8
+pos5=1 9
+pos6=12 9
+initVirus=slow
+reviveVirus=slow
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+playerClick=thru
+special=threebombs
+hidden=renovation
+
+[graphics]
+block00=hex		#000000 #F4A460 #000000
+block01=hex_X		#000000 #F4A460 #000000
+block02=hex_wall		#000000 #F4A460 #FFD700
+block03=hex_wall		#000000 #F4A460 #FFD700
+block04=hex_extra		#000000 #F4A460 #000000
+block05=hex_extra_O		#000000 #F4A460 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=score_floor
+
+[map]
+extraDistribution=get
+probBomb=12
+probRange=12
+probVirus=12
+probSpecial=12
+probHidden=25
+row00=BBBBBBBBBBBBBBB
+row01=B_BBB_B_XXXXBBB
+row02=B__BXXX_XBXX_BB
+row03=BBXXXB__BBBX__B
+row04=BXXXXBBBBXXBX_B
+row05=BXBBBXBXXXXXXBB
+row06=BXXXBXXqXBBXXXB
+row07=BXXXXXBBBBBB_XB
+row08=BBXBXX___BBBBXB
+row09=B__XB_X_XXBX__B
+row10=BB_XXXXBXXXX_BB
+row11=BBBXXXBBBXXXBBB
+row12=BBBBBBBBBBBBBBB

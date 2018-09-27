@@ -1,0 +1,61 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dark Crypt Level
+author=old EPFL : EPFL
+hint=Push hard
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=5
+range=10
+pos1=1 2
+pos2=13 2
+pos3=13 10
+pos4=1 10
+pos5=7 2
+pos6=7 10
+initExtra=kick stop
+reviveExtra=kick stop
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=dark_way		#000000 #008000 #000000
+block01=dark_way		#000000 #008000 #000000
+block02=r_i_p		#000000 #000000 #008000
+block03=r_i_p_R		#000000 #000000 #008000
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BB___B__B____BB
+row02=B_____________B
+row03=BB_BBB___B____B
+row04=B___B___BB____B
+row05=BB__B____B___BB
+row06=B_____________B
+row07=BB___B___BB__BB
+row08=B____B__BB____B
+row09=B__BBB___B____B
+row10=B_____________B
+row11=BB___B__B____BB
+row12=BBBBBBBBBBBBBBB

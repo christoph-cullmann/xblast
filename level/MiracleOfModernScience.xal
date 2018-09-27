@@ -1,0 +1,133 @@
+[info]
+name=Miracle of modern science
+author=George
+hint=Are we getting this
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[scrambleDel]
+time=0.1998
+numBlocks=70
+pos000=1 10
+pos001=1 11
+pos002=2 10
+pos003=2 11
+pos004=3 10
+pos005=3 11
+pos006=4 10
+pos007=4 11
+pos008=5 10
+pos009=5 11
+pos010=6 10
+pos011=6 11
+pos012=7 10
+pos013=7 11
+pos014=8 10
+pos015=8 11
+pos016=9 1
+pos017=9 2
+pos018=9 3
+pos019=9 4
+pos020=9 5
+pos021=9 6
+pos022=9 7
+pos023=9 8
+pos024=9 10
+pos025=9 11
+pos026=10 1
+pos027=10 2
+pos028=10 3
+pos029=10 4
+pos030=10 5
+pos031=10 6
+pos032=10 7
+pos033=10 8
+pos034=10 9
+pos035=10 10
+pos036=10 11
+pos037=11 1
+pos038=11 2
+pos039=11 3
+pos040=11 4
+pos041=11 5
+pos042=11 6
+pos043=11 7
+pos044=11 8
+pos045=11 9
+pos046=11 10
+pos047=11 11
+pos048=12 1
+pos049=12 2
+pos050=12 3
+pos051=12 4
+pos052=12 5
+pos053=12 6
+pos054=12 7
+pos055=12 8
+pos056=12 9
+pos057=12 10
+pos058=12 11
+pos059=13 1
+pos060=13 2
+pos061=13 3
+pos062=13 4
+pos063=13 5
+pos064=13 6
+pos065=13 7
+pos066=13 8
+pos067=13 9
+pos068=13 10
+pos069=13 11
+
+[func]
+extra=speed
+
+[player]
+bombs=2
+range=5
+pos1= 2  2
+pos2= 1  2
+pos3= 1  1
+pos4= 2  1
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+playerClick=rebound
+special=random
+
+[graphics]
+block00=iron_floor       #000000 #8A2BE2 #00FF7F
+block01=iron_floor_X     #000000 #8A2BE2 #00FF7F
+block02=dark_block       #000000 #00FF7F #7FFFD4
+block03=dark_block_R     #000000 #00FF7F #7FFFD4
+block04=extra            #000000 #FFD700 #FF4500
+block05=extra_O          #000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__brqrrqBBBBBB
+row02=B__brrbrrBBBBBB
+row03=BbbbbbrbrBBBBBB
+row04=BrrrrrrrrBBBBBB
+row05=BqrqbbrbrBBBBBB
+row06=BrbrrrqrrBBBBBB
+row07=BrrrbrrbrBBBBBB
+row08=BqrrrbbrqBBBBBB
+row09=BBBBBBBBBBBBBBB
+row10=BBBBBBBBBBBBBBB
+row11=BBBBBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB
+

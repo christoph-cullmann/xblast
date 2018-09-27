@@ -1,0 +1,73 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Are You Down
+author=Groningen : Koen
+hint=You can wait and die
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+
+[scrambleDel]
+time=0.05
+numBlocks=6
+pos000=2 3
+pos001=4 3
+pos002=6 3
+pos003=8 3
+pos004=10 3
+pos005=12 3
+
+[func]
+extra=poison
+key=rc
+
+[player]
+bombs=3
+range=0
+pos1=2 1
+pos2=12 1
+pos3=10 1
+pos4=4 1
+pos5=6 1
+pos6=8 1
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=check		#000000 #FFFF00 #808080
+block01=check_X		#000000 #FFFF00 #808080
+block02=downarrow		#000000 #FF0000 #0000FF
+block03=downarrow		#000000 #FF0000 #0000FF
+block04=chess_sphere		#000000 #FFFFFF #808080
+block05=chess_sphere_O		#000000 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=poison
+block10=check		#000000 #00FFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BB_B_B_B_B_B_BB
+row02=BB_B_B_B_B_B_BB
+row03=BBBBBBBBBBBBBBB
+row04=BBqBqBqBqBqBqBB
+row05=BBqBqBqBqBqBqBB
+row06=BBqBqBqBqBqBqBB
+row07=BBqBqBqBqBqBqBB
+row08=BBqBqBqBqBqBqBB
+row09=BBrrrrrrrrrrrBB
+row10=BBrrrrrrrrrrrBB
+row11=BBrrrrrrrrrrrBB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,74 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Moving Death
+author=EPFL - insun : Yves Bresson
+hint=Be VERY Carefull
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=teleport
+key=teleport
+
+[player]
+bombs=3
+range=2
+pos1=2 2
+pos2=8 2
+pos3=13 3
+pos4=2 8
+pos5=13 10
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=randomdir
+wallClick=randomdir
+default=search
+hidden=pyro
+haunt=fast
+
+[graphics]
+block00=city_free		#000000 #D2B48C #A0522D
+block01=city_free		#000000 #D2B48C #A0522D
+block02=city_rip		#000000 #F5FFFA #D2B48C
+block03=city_rip_R		#000000 #F5FFFA #D2B48C
+block04=light_house		#808080 #000000 #000000
+block05=light_house_O		#808080 #CD5C5C #000000
+block06=bomb
+block07=range
+block08=trap
+block09=q3a_beam
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=21
+probVirus=10
+probSpecial=10
+probHidden=32
+row00=BBBBBBBBBBBBBBB
+row01=BX_BBX___BBX_XB
+row02=B____B_____B__B
+row03=B_BX_B_BBX_B__B
+row04=B__B_____B____B
+row05=B____BBX_B____B
+row06=BB____qBq__BBXB
+row07=B__BBX_B_____BB
+row08=B____B___BBX_BB
+row09=B_BX_B_____B__B
+row10=B__B____BX_B__B
+row11=BX_______B___XB
+row12=BBBBBBBBBBBBBBB

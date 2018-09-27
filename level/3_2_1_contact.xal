@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=3-2-1 Contact
+author=Chris Doherty (Adelaide)
+hint=Use the contact walls to escape with all your lives
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=invincible
+
+[player]
+bombs=1
+range=2
+pos1= 6  1
+pos2= 8  1
+pos3= 8 11
+pos4= 6 11
+pos5= 1  4
+pos6=13  8
+initVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+
+[graphics]
+block00=sphere_half      #000000 #377F50 #4682B4
+block01=sphere_half_X    #000000 #377F50 #4682B4
+block02=sphere_dark      #000000 #4682B4 #000000
+block03=sphere_light     #000000 #B0C4DE #000000
+block04=sphere_light     #000000 #4682B4 #000000
+block05=sphere_light_O   #000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=32
+probSpecial=24
+row00=BBBBBBBBBBBBBBB
+row01=BX_XX__B__XX_XB
+row02=B__X_BBXBB_X__B
+row03=BX__X_XXX_X__XB
+row04=B_BXBX_X_XBXB_B
+row05=B_X_X__X__X_X_B
+row06=BBBX_XBBBX_XBBB
+row07=B_X_X__X__X_X_B
+row08=B_BXBX_X_XBXB_B
+row09=BX__X_XXX_X__XB
+row10=B__X_BBXBB_X__B
+row11=BX_XX__B__XX_XB
+row12=BBBBBBBBBBBBBBB

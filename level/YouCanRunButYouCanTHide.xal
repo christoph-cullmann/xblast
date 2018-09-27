@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=You can run but you can't hide
+author=old EPFL : STriX
+hint=You should kick the bombs...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+
+
+[func]
+extra=kick
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=6 6
+pos6=8 6
+initExtra=rc 
+reviveExtra=rc 
+
+[bombs]
+
+[graphics]
+block00=city_free		#000000 #8B4513 #F4A460
+block01=city_free		#000000 #8B4513 #F4A460
+block02=lego_white		#000000 #FF0000 #8B0000
+block03=lego_white		#000000 #FF0000 #8B0000
+block04=chest		#000000 #4169E1 #FFD700
+block05=chest_O		#000000 #4169E1 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=16
+probVirus=3
+probSpecial=8
+row00=BBBBBBBBBBBBBBB
+row01=B__bBqBXBqBb__B
+row02=B__XB_r_r_BX__B
+row03=BbXX__BXB__XXbB
+row04=BBB__XX_XX__BBB
+row05=Bq__sXX_XXs__qB
+row06=BBrBBX___XBBrBB
+row07=Bq__sXX_XXs__qB
+row08=BBB__XX_XX__BBB
+row09=BbXX__BXB__XXbB
+row10=B__XB_r_r_BX__B
+row11=B__bBqBXBqBb__B
+row12=BBBBBBBBBBBBBBB

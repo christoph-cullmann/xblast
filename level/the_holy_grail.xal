@@ -1,0 +1,55 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Holy Grail
+author=Dave Siow (Adelaide)
+hint=Run like shit to get the grail
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=karo_dark        #000000 #2E8B57 #8FBC8F
+block01=karo_dark_X      #000000 #2E8B57 #8FBC8F
+block02=wall             #000000 #B22222 #000000
+block03=wall_R           #000000 #B22222 #2E8B57
+block04=chest            #000000 #8B4513 #FFD700
+block05=chest_O          #000000 #8B4513 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=51
+probRange=25
+row00=BBBBBBBBBBBBBBB
+row01=BX___X_X_X___XB
+row02=BXBBXBBXBBXBBXB
+row03=B_XXXB_X_BXXX_B
+row04=BXBXBXBXBXBXBXB
+row05=BBB_X_XXX_X_BBB
+row06=B_X_B_BqB_B_X_B
+row07=BBB_X_XXX_X_BBB
+row08=BXBXBXBXBXBXBXB
+row09=B_XXXB_X_BXXX_B
+row10=BXBBXBBXBBXBBXB
+row11=BX___X_X_X___XB
+row12=BBBBBBBBBBBBBBB

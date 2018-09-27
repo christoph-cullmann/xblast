@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Downward Spiral
+author=Lachlan Cameron Smith (Adelaide)
+hint=You get me closer to god
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+
+[graphics]
+;block00=nin_1           #000000 #000000 #FFFFFF
+;block01=nin_1           #000000 #000000 #FFFFFF
+block00=iron_floor       #000000 #A9A9A9 #696969
+block01=iron_floor_X     #000000 #A9A9A9 #696969
+block02=dark_block       #000000 #F08080 #CD5C5C
+block03=dark_block_R     #000000 #F08080 #CD5C5C
+block04=extra            #000000 #8B4513 #CD853F
+block05=extra_O          #000000 #8B4513 #CD853F
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_XXXXXXXXXXX_B
+row03=B___________X_B
+row04=B_XXXXXXXXX_X_B
+row05=B_X_______X_X_B
+row06=B_X_XXXXX_X_X_B
+row07=B_X_X_____X_X_B
+row08=B_X_XXXXXXX_X_B
+row09=B_X_________X_B
+row10=B_XXXXXXXXXXX_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

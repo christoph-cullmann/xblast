@@ -1,0 +1,57 @@
+[info]
+name=Long Way
+author=EPFL - cosun : Yves Bresson
+hint=on the road again
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=5
+pos1= 1  1
+pos2=12  1
+pos3= 1 11
+pos4=13 11
+pos5= 1  6
+pos6=13  6
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+bombClick=snooker
+wallClick=anticlockwise
+playerClick=thru
+
+[graphics]
+block00=button_floor     #000000 #EEE8AA #0000FF
+block01=button_floor_X   #000000 #EEE8AA #0000FF
+block02=weight           #000000 #228B22 #CCCCCC
+block03=uparrow          #000000 #00FF7F #FFFFFF
+block04=extra            #FFFF00 #B22222 #000000
+block05=extra_O          #FFFF00 #B22222 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=cloak
+block10=score_floor      #4682B4 #4682B4 #4169E1
+
+[map]
+probRange=39
+row00=BBBBBBBBBBBBBBB
+row01=B____________RB
+row02=B_B___________B
+row03=B__________B__B
+row04=B___B_________B
+row05=B_______B_____B
+row06=B_____B_______B
+row07=B_____________B
+row08=B________B____B
+row09=B____B________B
+row10=B___________B_B
+row11=B__B__________B
+row12=BBBBBBBBBBBBBBB
+

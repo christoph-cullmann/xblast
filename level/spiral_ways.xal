@@ -1,0 +1,59 @@
+[info]
+name=Spiral Ways
+author=EPFL - cosun : Yves Bresson
+hint=Choose your way
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=invincible
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 2  1
+pos3= 1  2
+pos4= 2  2
+pos5= 1  3
+pos6= 2  3
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #F4A460 #000000
+block01=rock_floor_X     #000000 #F4A460 #000000
+block02=weight           #000000 #F0FFFF #FFD700
+block03=weight_R         #000000 #B0C4DE #000000
+block04=bricks           #000000 #6B8E23 #000000
+block05=brick_O          #000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+probBomb=31
+probRange=31
+probVirus=31
+row00=BBBBBBBBBBBBBBB
+row01=B__B__r_______B
+row02=B__B___b______B
+row03=B__B__BBBBXB__B
+row04=B__B__B___XB__B
+row05=B__B__XqB__BrbB
+row06=B__BX_BBB__BbrB
+row07=B__BX_____XB__B
+row08=B__BXXX__XXB__B
+row09=B__BXBBBBBXB__B
+row10=B_b___b_____b_B
+row11=Br____r______rB
+row12=BBBBBBBBBBBBBBB
+

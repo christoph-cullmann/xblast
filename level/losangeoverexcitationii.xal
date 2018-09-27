@@ -1,0 +1,76 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Losange Over-excitation II
+author=Joachim Kaltz (modified by KAG)
+hint=Getting kick bombs will help
+gameMode=R23456STDL
+
+[shrink]
+type=spiralPlus
+
+
+[scrambleDel]
+time=0.75
+numBlocks=8
+pos000=6 4
+pos001=5 5
+pos002=6 8
+pos003=5 7
+pos004=8 4
+pos005=9 5
+pos006=8 8
+pos007=9 7
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1=7 1
+pos2=12 8
+pos3=7 11
+pos4=1 4
+pos5=1 8
+pos6=12 4
+
+[bombs]
+
+[graphics]
+block00=hex		#000000 #FF6347 #FF0000
+block01=hex		#000000 #FF6347 #FF0000
+block02=hex_wall		#000000 #FF6347 #FF4500
+block03=hex_extra		#000000 #FF6347 #FFA500
+block04=hex_extra		#000000 #FF6347 #FFFF00
+block05=hex_extra_O		#000000 #FF6347 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=hex		#000000 #FF6347 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=25
+probSpecial=13
+probHidden=32
+row00=vvvvvBBBBBvvvvv
+row01=vvvvBB___BBvvvv
+row02=vvvBBXX_XXBBvvv
+row03=vBBBXXXXXXXBBBv
+row04=B___XXBXBXX___B
+row05=B_XXXBBXBBXXX_B
+row06=BXXXXXXXXXX__XB
+row07=B_XXXBBXBBXXX_B
+row08=B___XXBXBXX___B
+row09=vBBBXXXXXXXBBBv
+row10=vvvBBXX_XXBBvvv
+row11=vvvvBB___BBvvvv
+row12=vvvvvBBBBBvvvvv

@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=ZoSo World
+author=Chris Doherty (Adelaide)
+hint=We made this one for Bill
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=3
+pos1= 3  2
+pos2=11  2
+pos3=11 10
+pos4= 3 10
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=button_floor     #000000 #C0C0C0 #000000
+block01=button_floor     #000000 #C0C0C0 #000000
+block02=dark_block       #000000 #FF0000 #000000
+block03=dark_block_R     #000000 #FF0000 #000000
+block04=zoso_extra      #000000 #000000 #FFFF00
+block05=zoso_extra_O    #000000 #000000 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #FF0000 #FF0000 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+probSpecial=19
+row00=BBBBBBBBBBBBBBB
+row01=B_X_XXX_XXX_X_B
+row02=B_X_XX___XX_X_B
+row03=B_X_XX_B_XX_X_B
+row04=B_X_XX_B_XX_X_B
+row05=B_X_XX_X_XX_X_B
+row06=B_XBXB_B_BXBX_B
+row07=B_X_XX_X_XX_X_B
+row08=B_X_XX_B_XX_X_B
+row09=B_X_XX_B_XX_X_B
+row10=B_X_XX___XX_X_B
+row11=B_X_XXX_XXX_X_B
+row12=BBBBBBBBBBBBBBB

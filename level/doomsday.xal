@@ -1,0 +1,185 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Doomsday
+author=Reinco
+hint=Today's judgement day !
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.9
+numBlocks=110
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 1
+pos023=3 2
+pos024=3 3
+pos025=3 4
+pos026=3 5
+pos027=3 6
+pos028=3 7
+pos029=3 8
+pos030=3 9
+pos031=3 10
+pos032=3 11
+pos033=4 1
+pos034=4 2
+pos035=4 3
+pos036=4 4
+pos037=4 5
+pos038=4 6
+pos039=4 7
+pos040=4 8
+pos041=4 9
+pos042=4 10
+pos043=4 11
+pos044=5 1
+pos045=5 2
+pos046=5 3
+pos047=5 4
+pos048=5 5
+pos049=5 6
+pos050=5 7
+pos051=5 8
+pos052=5 9
+pos053=5 10
+pos054=5 11
+pos055=9 1
+pos056=9 2
+pos057=9 3
+pos058=9 4
+pos059=9 5
+pos060=9 6
+pos061=9 7
+pos062=9 8
+pos063=9 9
+pos064=9 10
+pos065=9 11
+pos066=10 1
+pos067=10 2
+pos068=10 3
+pos069=10 4
+pos070=10 5
+pos071=10 6
+pos072=10 7
+pos073=10 8
+pos074=10 9
+pos075=10 10
+pos076=10 11
+pos077=11 1
+pos078=11 2
+pos079=11 3
+pos080=11 4
+pos081=11 5
+pos082=11 6
+pos083=11 7
+pos084=11 8
+pos085=11 9
+pos086=11 10
+pos087=11 11
+pos088=12 1
+pos089=12 2
+pos090=12 3
+pos091=12 4
+pos092=12 5
+pos093=12 6
+pos094=12 7
+pos095=12 8
+pos096=12 9
+pos097=12 10
+pos098=12 11
+pos099=13 1
+pos100=13 2
+pos101=13 3
+pos102=13 4
+pos103=13 5
+pos104=13 6
+pos105=13 7
+pos106=13 8
+pos107=13 9
+pos108=13 10
+pos109=13 11
+
+[scrambleDel]
+time=0.53
+numBlocks=4
+pos000=5 4
+pos001=5 8
+pos002=9 4
+pos003=9 8
+
+[func]
+
+[player]
+bombs=1
+range=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=1 6
+pos6=13 6
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=firecracker
+hidden=firecracker
+bombClick=snooker
+
+[graphics]
+block00=sphere_half		#000000 #8A2BE2 #00FF7F
+block01=sphere_half_X		#000000 #8A2BE2 #00FF7F
+block02=weight		#000000 #FF00FF #DA70D6
+block03=weight_R		#000000 #FF00FF #DA70D6
+block04=sphere_light		#000000 #DDA0DD #DA70D6
+block05=sphere_light_O		#000000 #DDA0DD #DA70D6
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probVirus=75
+row00=BBBBBBBBBBBBBBB
+row01=B___bv___vb___B
+row02=B____v___v____B
+row03=B_X_bv_e_vb_X_B
+row04=BB___v___v___BB
+row05=B_X_bv___vb_X_B
+row06=B____v_e_v____B
+row07=B_X_bv___vb_X_B
+row08=BB___v___v___BB
+row09=B_X_bv_e_vb_X_B
+row10=B____v___v____B
+row11=B___bv___vb___B
+row12=BBBBBBBBBBBBBBB

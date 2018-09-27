@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 15
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=5
+range=8
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+hidden=construction
+
+[graphics]
+block00=karo_light		#696969 #DDA0DD #A9A9A9
+block01=karo_light_X		#696969 #DDA0DD #A9A9A9
+block02=temple		#008080 #D3D3D3 #000000
+block03=temple		#696969 #D3D3D3 #000000
+block04=bricks		#696969 #C0C0C0 #DDA0DD
+block05=brick_O		#696969 #C0C0C0 #DDA0DD
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probSpecial=12
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___XXXXXXX___B
+row03=BXX_XXXXXXX_XXB
+row04=BXX_________XXB
+row05=B__XXXX_XXXX__B
+row06=B__XXXX_XXXX__B
+row07=B__XXXX_XXXX__B
+row08=BXX_________XXB
+row09=BXX_XXXXXXX_XXB
+row10=B___XXXXXXX___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

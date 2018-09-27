@@ -1,0 +1,62 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=The Fundamental Error
+author=The Adelaide Group (mwblack)
+hint=Winning the start is all important.
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+
+[bombs]
+
+[graphics]
+block00=button_floor		#000000 #B0C4DE #000000
+block01=button_floor		#000000 #B0C4DE #000000
+block02=dark_block		#000000 #4682B4 #6A5ACD
+block03=dark_block_R		#000000 #87CEEB #4169E1
+block04=box		#000000 #2E8B57 #00FF7F
+block05=box		#000000 #3CB371 #7FFFD4
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+row00=BBBBBBBBBBBBBBB
+row01=BrrrrrsssbrrrbB
+row02=Bbbrbb_b_bbbbbB
+row03=Brrrrr_s_brrrbB
+row04=BBBBB_BsB_BBBBB
+row05=B_____XXX_____B
+row06=B_BBBXB_BXBBB_B
+row07=B______b______B
+row08=BrBBXX_X_XXBBrB
+row09=BXXrbB___BbrXXB
+row10=BXrBbBBbBBbBrXB
+row11=BrXXbbbbbbbXXrB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,70 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Napalm Gardens
+author=Tobias Johansson
+hint=Full Power Napalm
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=10
+pos1=3 1
+pos2=2 10
+pos3=12 2
+pos4=12 10
+pos5=7 3
+pos6=7 9
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+normal=napalm
+hidden=napalm
+bombClick=randomdir
+playerClick=thru
+
+[graphics]
+block00=iron_floor		#000000 #8A2BE2 #00FF7F
+block01=iron_floor		#000000 #8A2BE2 #00FF7F
+block02=dark_block		#000000 #00FF7F #7FFFD4
+block03=dark_block_R		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #FFFFFF #000000
+
+[map]
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=BqB____B_____XB
+row02=BrB____B______B
+row03=BbB___________B
+row04=BrB___________B
+row05=BbB___eXe_____B
+row06=B_B___XqX__BBBB
+row07=B_____eXe_____B
+row08=B_____________B
+row09=B_____________B
+row10=B______B______B
+row11=BX_____B_____XB
+row12=BBBBBBBBBBBBBBB

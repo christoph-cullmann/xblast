@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Death Valley
+author=EPFL - disun : Yves Bresson
+hint=Don't get lost...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=swapposition
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=2 1
+pos2=4 1
+pos3=6 1
+pos4=8 1
+pos5=10 1
+pos6=12 1
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=button_floor		#CD853F #CD853F #000000
+block01=button_floor		#CD853F #CD853F #000000
+block02=dark_block		#8B4513 #8B4513 #000000
+block03=dark_block_R		#8B4513 #8B4513 #000000
+block04=extra		#DAA520 #000000 #000000
+block05=extra_O		#DAA520 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=swapposition
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=8
+probRange=40
+probVirus=16
+probSpecial=37
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__X__XXX__X__B
+row04=BqX__XXXXX__XqB
+row05=B__q_XqXqX_q__B
+row06=B____XXXXX____B
+row07=B____XXqXX____B
+row08=BX_X_______X_XB
+row09=B__qXXXXXXXq__B
+row10=B__X_q_q_q_X__B
+row11=Bq___________qB
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,73 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Watch that Banana 2
+author=Skywalker
+hint=It's yellow and bendy!
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=7
+range=30
+specialBombs=30
+pos1=1 1
+pos2=13 1
+pos3=13 11
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=cloak kick
+reviveExtra=cloak kick
+
+[bombs]
+bombClick=rebound
+wallClick=clockwise
+special=napalm
+
+[graphics]
+block00=iron_floor		#000000 #000000 #FFFF00
+block01=iron_floor_X		#000000 #000000 #FFFF00
+block02=dark_block		#000000 #000000 #BA55D3
+block03=dark_block_R		#000000 #000000 #BA55D3
+block04=extra		#000000 #FFFF00 #000000
+block05=extra_O		#000000 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+probBomb=25
+probRange=25
+probVirus=12
+probSpecial=12
+row00=BBBBBBBBBBBBBBB
+row01=B___XXXXXXX___B
+row02=B__XXXXXXXXX__B
+row03=B_X_________X_B
+row04=BXX_XXX_XXX_XXB
+row05=BXX_XXXXXXX_XXB
+row06=BXX__XXXXX__XXB
+row07=BXX_XXXXXXX_XXB
+row08=BXX_XXX_XXX_XXB
+row09=B_X_________X_B
+row10=B__XXXXXXXXX__B
+row11=B___XXXXXXX___B
+row12=BBBBBBBBBBBBBBB

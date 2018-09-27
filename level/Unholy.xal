@@ -1,0 +1,71 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Unholy
+author=Tobias Johansson
+hint=Not every grail is holy
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+[scrambleDraw]
+time=0.03
+numBlocks=5
+pos000=3 5
+pos001=5 5
+pos002=7 5
+pos003=9 5
+pos004=11 5
+
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=1
+range=3
+pos1=4 11
+pos2=10 11
+pos3=12 11
+pos4=2 11
+pos5=8 11
+pos6=6 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=city_free		#000000 #00CED1 #4682B4
+block01=city_free		#000000 #00CED1 #4682B4
+block02=city_rip		#000000 #C71585 #00CED1
+block03=city_rip_R		#000000 #C71585 #00CED1
+block04=chest		#000000 #4682B4 #000000
+block05=chest_O		#000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B__q_q_q_q_q__B
+row06=B__X_X_X_X_X__B
+row07=B_____________B
+row08=B_X_X_X_X_X_X_B
+row09=B_____________B
+row10=BX_X_X_X_X_X_XB
+row11=BX_X_X_X_X_X_XB
+row12=BBBBBBBBBBBBBBB

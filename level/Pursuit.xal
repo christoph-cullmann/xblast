@@ -1,0 +1,90 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Pursuit
+author=Tobias Johansson
+hint=Kick is king
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.45
+numBlocks=8
+pos000=5 3
+pos001=5 5
+pos002=5 7
+pos003=5 9
+pos004=9 3
+pos005=9 5
+pos006=9 7
+pos007=9 9
+
+[scrambleDel]
+time=0.45
+numBlocks=12
+pos000=3 3
+pos001=3 5
+pos002=3 7
+pos003=3 9
+pos004=7 3
+pos005=7 5
+pos006=7 7
+pos007=7 9
+pos008=11 3
+pos009=11 5
+pos010=11 7
+pos011=11 9
+
+[func]
+extra=kick
+
+[player]
+bombs=3
+range=4
+pos1=1 1
+pos2=1 1
+pos3=1 1
+pos4=1 1
+pos5=1 1
+pos6=1 1
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=hex		#000000 #2F4F4F #FF6347
+block01=hex		#000000 #2F4F4F #FF6347
+block02=hex_wall		#000000 #2F4F4F #FF0000
+block03=hex_wall		#000000 #2F4F4F #FF0000
+block04=hex_extra		#000000 #2F4F4F #00BFFF
+block05=hex_extra_O		#000000 #2F4F4F #00BFFF
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=51
+probRange=49
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B__X__________B
+row02=B__X__________B
+row03=BXXBB_BBB_BB__B
+row04=B_____________B
+row05=B__BB_BBB_BB__B
+row06=B_____________B
+row07=B__BB_BBB_BB__B
+row08=B_____________B
+row09=B__BB_BBB_BB__B
+row10=B_____________B
+row11=B____________qB
+row12=BBBBBBBBBBBBBBB

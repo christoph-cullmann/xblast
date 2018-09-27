@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Nonal in the wind
+author=LORIA : Arnaud 'F12' Simon
+hint=Take your comb !
+gameMode=R23456STDL
+
+[shrink]
+type=downF
+
+
+
+[func]
+extra=air
+key=air
+
+[player]
+bombs=3
+range=1
+pos1=1 11
+pos2=1 11
+pos3=1 11
+pos4=1 11
+pos5=1 11
+pos6=1 11
+initVirus=run
+reviveVirus=run
+
+[bombs]
+bombClick=contact
+wallClick=contact
+default=trianglebombs
+hidden=construction
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #FF0000
+block05=chess_sphere_O		#000000 #FFEFD5 #FF0000
+block06=bomb
+block07=range
+block08=trap
+block09=air_pump
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=49
+probVirus=49
+row00=BBBBBBBBBBBBBBB
+row01=B_____sssssrrrB
+row02=B_X__XsXXXsrrrB
+row03=B_XX_XsXqXsrrrB
+row04=B_X_XXsXqXsrrrB
+row05=B_X__XsXXXsrrrB
+row06=B_____sssssrrrB
+row07=BsB__BsXXXsBbrB
+row08=B_BB_BsXqXsBbrB
+row09=B_B_BBsXXXsBbrB
+row10=B_B__BsX_XsBBrB
+row11=B_____sB_BsrrrB
+row12=BBBBBBBBBBBBBBB

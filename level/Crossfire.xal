@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Crossfire
+author=Peter Riede
+hint=The Walls launch bombs!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=6
+pos1=8 7
+pos2=8 5
+pos3=6 6
+pos4=6 7
+pos5=6 5
+pos6=8 6
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=rock_floor		#000000 #32CD32 #228B22
+block01=rock_floor_X		#000000 #32CD32 #228B22
+block02=dark_block		#000000 #0000FF #0000FF
+block03=dark_block_R		#000000 #0000FF #0000FF
+block04=dark_house		#000000 #0000FF #0000FF
+block05=dark_house		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=Bs__s__s_ss_ssB
+row02=B____qX__q____B
+row03=Bs_q_____BB__sB
+row04=Bs__v__q__q_qsB
+row05=Bs__v________sB
+row06=BsX_q__B____X_B
+row07=Bs_______qv__sB
+row08=B_________v__sB
+row09=Bsq_BBq_X____qB
+row10=B__________q_sB
+row11=Bss_qs_ss_ss_sB
+row12=BBBBBBBBBBBBBBB

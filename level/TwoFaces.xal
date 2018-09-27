@@ -1,0 +1,68 @@
+[info]
+name=Two faces
+author=Tor Andræ
+hint=Get a life
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+[scrambleDel]
+time=0.4297
+numBlocks=7
+pos000=1 6
+pos001=3 6
+pos002=5 6
+pos003=7 6
+pos004=9 6
+pos005=11 6
+pos006=13 6
+
+[func]
+extra=life
+
+[player]
+bombs=3
+range=5
+pos1= 1  1
+pos2=11  1
+pos3=13  1
+pos4= 3  1
+pos5= 9  1
+pos6= 5  1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=thru
+
+[graphics]
+block00=button_floor     #000000 #00008B #00FF7F
+block01=button_floor_X   #000000 #00008B #00FF7F
+block02=dark_block       #000000 #FFFF00 #FFFF00
+block03=dark_block_R     #000000 #FFFF00 #FFFF00
+block04=chest            #000000 #CD853F #A52A2A
+block05=chest_O          #000000 #CD853F #A52A2A
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=downarrow        #000000 #FFFFFF #00008B
+
+[map]
+probBomb=50
+probRange=48
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=BBBBBBBBBBBBBBB
+row07=BrqrqrqrqrqrqrB
+row08=BrXrXrXrXrXrXrB
+row09=B_r_r_r_r_r_r_B
+row10=BB_B_B_B_B_B_BB
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

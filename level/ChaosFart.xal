@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Chaos Fart
+author=DK : galatius and Svansenudisten
+hint=Hnnngggg
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1=2 3
+pos2=2 9
+pos3=11 2
+pos4=6 5
+pos5=8 8
+pos6=13 10
+initExtra= bfarter
+reviveExtra= bfarter
+
+[bombs]
+playerClick=contact
+fuseTime=long
+hidden=firecracker
+
+[graphics]
+block00=karo_light		#000000 #6A5ACD #008000
+block01=karo_light		#000000 #6A5ACD #008000
+block02=pyramid		#000000 #DAA520 #4682B4
+block03=pyramid_R		#000000 #DAA520 #FF4500
+block04=extra		#000000 #A0522D #FFA500
+block05=extra_O		#000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=8
+probRange=56
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B_B_X_X_s__B__B
+row02=B_X___B_X___sXB
+row03=BX_B_Xs__B_X__B
+row04=B_s_X_X_X_s_B_B
+row05=BBX__X_Xs_X___B
+row06=B__XsB___s_XXsB
+row07=B__X__XX_X_B__B
+row08=BXs__X__B_s_X_B
+row09=B__sX__X__X__BB
+row10=B_B_s_B__B_sX_B
+row11=BX_X_X__X_B___B
+row12=BBBBBBBBBBBBBBB

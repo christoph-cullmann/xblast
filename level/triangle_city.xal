@@ -1,0 +1,55 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Triangle City
+author=Chris Doherty (Adelaide)
+hint=Well, I guess you triangle people
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=2
+range=1
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=city_free        #000000 #A9A9A9 #D2B48C
+block01=city_free_X      #000000 #A9A9A9 #D2B48C
+block02=dark_house       #000000 #B22222 #A0522D
+block03=dark_house_R     #000000 #B22222 #A0522D
+block04=light_house      #000000 #32CD32 #F4A460
+block05=light_house_O    #000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+probBomb=19
+probRange=19
+probVirus=25
+row00=BBBBBBBBBBBBBBB
+row01=B___X_XbX_X___B
+row02=B_BX_X_b_X_XB_B
+row03=B_XBB_BbB_BBX_B
+row04=BX_BBXBXBXBB_XB
+row05=B__X_rbsbr_X__B
+row06=B__BBsBXBsBB__B
+row07=B__X_rbsbr_X__B
+row08=BX_BBXBXBXBB_XB
+row09=B_XBB_BbB_BBX_B
+row10=B_BX_X_b_X_XB_B
+row11=B___X_XbX_X___B
+row12=BBBBBBBBBBBBBBB

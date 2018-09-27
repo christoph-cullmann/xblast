@@ -1,0 +1,63 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Tunnels
+author=Penfold
+hint=Don't be trapped
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=kick
+
+[player]
+bombs=2
+range=15
+pos1=1 1
+pos2=1 5
+pos3=13 1
+pos4=1 11
+pos5=13 5
+pos6=13 11
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+playerClick=contact
+
+[graphics]
+block00=dark_way		#000000 #008000 #808080
+block01=dark_way		#000000 #008000 #808080
+block02=r_i_p		#000000 #808080 #008000
+block03=r_i_p_R		#000000 #808080 #008000
+block04=pumpkin		#000000 #DAA520 #008000
+block05=pumpkin_O		#000000 #DAA520 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+probRange=49
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=BBBBBB___BBBBBB
+row03=BbrXbX___XbXrbB
+row04=BBBBBB___BBBBBB
+row05=B_____________B
+row06=BBBBBB___BBBBBB
+row07=BqXXXX___XXXXqB
+row08=BBBBBB___BBBBBB
+row09=BbrXbX___XbXrbB
+row10=BBBBBB___BBBBBB
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

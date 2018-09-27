@@ -1,0 +1,65 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Old Glen
+author=Tobias Johansson
+hint=Old Glen is watching you
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+
+
+[func]
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initVirus=reverse
+reviveVirus=reverse
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=karo_dark		#000000 #F8F8FF #8FBC8F
+block01=karo_dark		#000000 #F8F8FF #8FBC8F
+block02=wall		#000000 #B22222 #000000
+block03=wall_R		#000000 #B22222 #000000
+block04=chest		#000000 #00FFFF #FFD700
+block05=chest_O		#000000 #00FFFF #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probBomb=49
+probRange=49
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B____BB___BB__B
+row03=B____BX___XB__B
+row04=B_BB____XB____B
+row05=B_XB_XB_BB_BX_B
+row06=B____BB____BB_B
+row07=B_______BB____B
+row08=B_BB_BX_XB_XB_B
+row09=B_BX_BB____BB_B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

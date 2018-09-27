@@ -1,0 +1,69 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lucky luke
+author=ENSERB : sun
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=savageCompound
+
+
+
+[func]
+extra=speed
+key=specialBomb
+
+[player]
+bombs=20
+range=20
+specialBombs=30
+pos1=5 4
+pos2=7 4
+pos3=9 4
+pos4=5 7
+pos5=7 7
+pos6=9 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=long
+special=fungus
+hidden=trianglebombs
+
+[graphics]
+block00=hex		#000000 #2E8B57 #8A2BE2
+block01=hex		#000000 #2E8B57 #8A2BE2
+block02=hex_wall		#000000 #2E8B57 #000080
+block03=hex_wall		#000000 #2E8B57 #000080
+block04=hex_extra		#000000 #2E8B57 #00FF7F
+block05=hex_extra_O		#000000 #2E8B57 #00FF7F
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+probSpecial=33
+probHidden=33
+row00=BBBBBBBBBBBBBBB
+row01=BBB___BBB___BBB
+row02=BB____BBB____BB
+row03=B__XX__B__XX__B
+row04=B__XX_____XX__B
+row05=BssXXsX_XsXXssB
+row06=BssXXsX_XsXXssB
+row07=B__XX_____XX__B
+row08=B__XX_____XX__B
+row09=B__XX__B__XX__B
+row10=BB____BBB____BB
+row11=BBB___BBB___BBB
+row12=BBBBBBBBBBBBBBB

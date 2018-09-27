@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Labyrinthe Zone
+author=Bocal : naoko
+hint=Vous reprendrez un peu de camenbert ?
+gameMode=R23456STDL
+
+[shrink]
+type=compoundF
+
+
+
+[func]
+extra=igniteAll
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=13 11
+pos3=1 11
+pos4=13 1
+pos5=3 1
+pos6=11 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=rebound
+
+[graphics]
+block00=dark_way		#000000 #000000 #000000
+block01=dark_way		#000000 #000000 #000000
+block02=ghost_sq		#000000 #000000 #000000
+block03=ghost_sq		#000000 #000000 #000000
+block04=extra		#000000 #000000 #B0C4DE
+block05=extra_O		#000000 #000000 #B0C4DE
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=karo_light		#000000 #000000 #000000
+
+[map]
+extraDistribution=get
+probBomb=27
+probRange=21
+probVirus=16
+probSpecial=14
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_B__BB_BB__B_B
+row02=B_BB_X_B__BBB_B
+row03=B__XBB_X_BBX__B
+row04=BBB__XB_BX__BBB
+row05=BXXBB_XXX_BBXXB
+row06=BX____BXB____XB
+row07=BXXBB_XXX_BBXXB
+row08=BBB__XB_BX__BBB
+row09=B__XBB_X_BBX__B
+row10=B_BB___B_X_BB_B
+row11=B_B__BB_BB__B_B
+row12=BBBBBBBBBBBBBBB

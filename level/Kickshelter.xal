@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Kickshelter
+author=Sebastian Sager
+hint=Find shelter, bombs are loooong!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+[scrambleDel]
+time=0.5
+numBlocks=4
+pos000=3 5
+pos001=3 6
+pos002=11 5
+pos003=11 6
+
+[func]
+extra=kick
+
+[player]
+bombs=10
+range=99
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+
+[bombs]
+wallClick=contact
+fuseTime=long
+
+[graphics]
+block00=rock_floor		#000000 #32CD32 #228B22
+block01=rock_floor_X		#000000 #32CD32 #228B22
+block02=dark_block		#000000 #0000FF #0000FF
+block03=dark_block_R		#000000 #0000FF #0000FF
+block04=dark_block		#000000 #0000FF #0000FF
+block05=dark_block		#000000 #0000FF #0000FF
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#4682B4 #4682B4 #4169E1
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_v_____v_B_B
+row03=BqB_BB_q_BB_BqB
+row04=B___qv___vq___B
+row05=Bq_B___q___B_qB
+row06=Bq_B___q___B_qB
+row07=B___qv___vq___B
+row08=B___BB___BB___B
+row09=BqB_B__q__B_BqB
+row10=B_B_v_____v_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

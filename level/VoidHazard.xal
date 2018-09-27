@@ -1,0 +1,99 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Void Hazard
+author=Tor Andræ
+hint=Remember the void blocks
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.18
+numBlocks=15
+pos000=2 2
+pos001=2 6
+pos002=2 10
+pos003=4 4
+pos004=4 8
+pos005=6 2
+pos006=6 6
+pos007=6 10
+pos008=8 4
+pos009=8 8
+pos010=10 2
+pos011=10 6
+pos012=10 10
+pos013=12 4
+pos014=12 8
+
+[scrambleDel]
+time=0.18
+numBlocks=15
+pos000=2 4
+pos001=2 8
+pos002=4 2
+pos003=4 6
+pos004=4 10
+pos005=6 4
+pos006=6 8
+pos007=8 2
+pos008=8 6
+pos009=8 10
+pos010=10 4
+pos011=10 8
+pos012=12 2
+pos013=12 6
+pos014=12 10
+
+[func]
+key=air
+
+[player]
+bombs=5
+range=12
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #006400 #8B0000
+block01=iron_floor		#000000 #006400 #8B0000
+block02=dark_block		#000000 #800000 #800000
+block03=dark_block_R		#000000 #800000 #800000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=iron_floor		#000000 #006400 #8B0000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_v_v_v_v_v_v_B
+row03=B_____________B
+row04=B_v_v_v_v_v_v_B
+row05=B_____________B
+row06=B_v_v_v_v_v_v_B
+row07=B_____________B
+row08=B_v_v_v_v_v_v_B
+row09=B_____________B
+row10=B_v_v_v_v_v_v_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

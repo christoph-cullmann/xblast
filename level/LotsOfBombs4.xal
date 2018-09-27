@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Lots of Bombs 4
+author=Peter Riede
+hint=Instant Pyros
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+extra=invincible
+key=specialBomb
+
+[player]
+bombs=30
+range=1
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 2
+pos6=7 10
+initVirus=malfunction
+reviveVirus=malfunction
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+playerClick=contact
+fuseTime=long
+special=pyro2
+haunt=slow
+
+[graphics]
+block00=ghost		#696969 #8A2BE2 #006400
+block01=ghost_X		#696969 #8A2BE2 #006400
+block02=ghost_sq		#000000 #006400 #ADD8E6
+block03=ghost_sq_R		#696969 #006400 #ADD8E6
+block04=ghost_ci		#696969 #FFD700 #FF4500
+block05=ghost_ci_R		#696969 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=ghost		#696969 #FFFFFF #808080
+
+[map]
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B______B______B
+row02=B_B_v_____B_B_B
+row03=B__qv______q__B
+row04=B_v_v_B_v_B_v_B
+row05=B_____B_qB____B
+row06=B_BB_______BB_B
+row07=B____Bq_B_____B
+row08=B_v_B_v_B_v_v_B
+row09=B__q______vq__B
+row10=B_B_B_____v_B_B
+row11=B______B______B
+row12=BBBBBBBBBBBBBBB

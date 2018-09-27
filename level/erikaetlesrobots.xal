@@ -1,0 +1,71 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Erika et les robots
+author=LORIA : Jeannot Moulman
+hint=Total finasse
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+
+
+[func]
+extra=stunOthers
+key=rc
+
+[player]
+bombs=5
+range=5
+pos1=2 11
+pos2=13 11
+pos3=3 11
+pos4=1 11
+pos5=11 11
+pos6=12 11
+initVirus=mini
+reviveVirus=mini
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+fuseTime=short
+special=construction
+hidden=construction
+
+[graphics]
+block00=rock_floor		#000000 #191970 #3CB371
+block01=rock_floor		#000000 #191970 #3CB371
+block02=city_rip		#000000 #FF0000 #DC143C
+block03=city_rip_R		#000000 #FF0000 #DC143C
+block04=sphere_light		#000000 #000000 #000000
+block05=sphere_light_O		#000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=rock_floor		#000000 #00FFFF #00FFFF
+
+[map]
+probHidden=100
+row00=BBBBBBBBBBBBBBB
+row01=BvvvvvvvvvvvvvB
+row02=BvvvvvvvvvvvvvB
+row03=BvvvvvvvvvvvvvB
+row04=B______r______B
+row05=BqqqqqqqqqqqqqB
+row06=BXXXXXXXXXXXXXB
+row07=BsXsXsXsXsXsXsB
+row08=BXXXXXXXXXXXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=B___XXXXXXX___B
+row12=BBBBBBBBBBBBBBB

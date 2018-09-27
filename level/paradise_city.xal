@@ -1,0 +1,54 @@
+[info]
+name=Paradise City
+author=Oliver Vogel
+hint=Be the first to be outside
+gameMode=R23456ST-L
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=1
+range=2
+pos1= 5  5
+pos2= 9  5
+pos3= 9  7
+pos4= 5  7
+pos5= 7  5
+pos6= 7  7
+
+[bombs]
+
+[graphics]
+block00=city_free        #000000 #A6A6A6 #D2B48C
+block01=city_free_X      #000000 #A6A6A6 #D2B48C
+block02=dark_house       #000000 #B22222 #A0522D
+block03=dark_house_R     #000000 #B22222 #A0522D
+block04=light_house      #000000 #32CD32 #F4A460
+block05=light_house_O    #000000 #32CD32 #F4A460
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+probBomb=18
+probRange=19
+probVirus=25
+row00=BBBBBBBBBBBBBBB
+row01=B_r_b_r_r_b_r_B
+row02=BrBXBXBXBXBXBrB
+row03=B_XX_X_X_X_XX_B
+row04=BbB_BXBXBXB_BbB
+row05=B_XXX_____XXX_B
+row06=BrB_B_B_B_B_BrB
+row07=B_XXX_____XXX_B
+row08=BbB_BXBXBXB_BbB
+row09=B_XX_X_X_X_XX_B
+row10=BrBXBXBXBXBXBrB
+row11=B_r_b_r_r_b_r_B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,171 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Disguise
+author=Reinco
+hint=Be careful with your presents
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.53
+numBlocks=94
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 3
+pos014=2 4
+pos015=2 5
+pos016=2 6
+pos017=2 7
+pos018=2 8
+pos019=2 9
+pos020=2 10
+pos021=2 11
+pos022=3 1
+pos023=3 2
+pos024=3 3
+pos025=3 4
+pos026=3 5
+pos027=3 6
+pos028=3 7
+pos029=3 8
+pos030=3 9
+pos031=3 10
+pos032=3 11
+pos033=4 1
+pos034=4 2
+pos035=4 3
+pos036=4 4
+pos037=4 5
+pos038=4 6
+pos039=4 7
+pos040=4 8
+pos041=4 9
+pos042=4 10
+pos043=4 11
+pos044=5 1
+pos045=5 2
+pos046=5 10
+pos047=5 11
+pos048=6 1
+pos049=6 2
+pos050=6 10
+pos051=6 11
+pos052=7 1
+pos053=7 2
+pos054=7 10
+pos055=7 11
+pos056=8 1
+pos057=8 2
+pos058=8 10
+pos059=8 11
+pos060=9 1
+pos061=9 2
+pos062=9 10
+pos063=9 11
+pos064=10 1
+pos065=10 2
+pos066=10 10
+pos067=10 11
+pos068=11 1
+pos069=11 2
+pos070=11 10
+pos071=11 11
+pos072=12 1
+pos073=12 2
+pos074=12 3
+pos075=12 4
+pos076=12 5
+pos077=12 6
+pos078=12 7
+pos079=12 8
+pos080=12 9
+pos081=12 10
+pos082=12 11
+pos083=13 1
+pos084=13 2
+pos085=13 3
+pos086=13 4
+pos087=13 5
+pos088=13 6
+pos089=13 7
+pos090=13 8
+pos091=13 9
+pos092=13 10
+pos093=13 11
+
+[scrambleDel]
+time=0.63
+numBlocks=4
+pos000=6 7
+pos001=7 5
+pos002=8 8
+pos003=10 6
+
+[func]
+extra=multiple
+
+[player]
+bombs=3
+range=0
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=range		#000000 #8A2BE2 #00FF7F
+block01=range		#000000 #8A2BE2 #00FF7F
+block02=trap		#000000 #00FF7F #7FFFD4
+block03=trap		#000000 #00FF7F #7FFFD4
+block04=bomb		#000000 #FFD700 #FF4500
+block05=bomb		#000000 #FFD700 #FF4500
+block06=multiple
+block07=trap
+block08=range
+block09=multiple
+block10=score_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=22
+probRange=5
+probVirus=5
+probSpecial=67
+row00=BBBBBBBBBBBBBBB
+row01=B__Xer__X___X_B
+row02=BerXXXXXX_X_X_B
+row03=BXX____X____XrB
+row04=BX__X____X__XeB
+row05=BX_XX_BBBXB__XB
+row06=BX_XX_BrBrBX_XB
+row07=BX__X_BrrrBX_XB
+row08=BXX_XXBBBBB__XB
+row09=BXX_________XXB
+row10=BerXXXXXXXXXr_B
+row11=B__XXX____XXe_B
+row12=BBBBBBBBBBBBBBB

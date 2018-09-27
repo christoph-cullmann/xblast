@@ -1,0 +1,56 @@
+[info]
+name=Rubber Bombs
+author=Stn
+hint=Bombs Bounce Off Of Everything
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=5
+range=11
+pos1= 3  2
+pos2=11  2
+pos3= 6  6
+pos4= 8  6
+pos5= 3 10
+pos6=11 10
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+playerClick=rebound
+direction=down
+fuseTime=long
+
+[graphics]
+block00=iron_floor       #000000 #228B22 #FFD700
+block01=iron_floor_X     #000000 #228B22 #FFD700
+block02=dark_block       #000000 #228B22 #FF0000
+block03=dark_block_R     #000000 #228B22 #FF0000
+block04=extra            #000000 #FAEBD7 #8470FF
+block05=extra            #000000 #FAEBD7 #8470FF
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__B_______B__B
+row04=B_____________B
+row05=B_____________B
+row06=B______B______B
+row07=B_____________B
+row08=B_____________B
+row09=B__B_______B__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

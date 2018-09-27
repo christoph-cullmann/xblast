@@ -1,0 +1,72 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Cheese
+author=Stuttgart : Thommes Volz
+hint=Be carefull outside
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.5
+numBlocks=1
+pos000=7 6
+
+
+[func]
+extra=invincible
+key=specialBomb
+
+[player]
+bombs=2
+range=2
+specialBombs=30
+pos1=2 2
+pos2=12 10
+pos3=2 10
+pos4=12 2
+pos5=7 10
+pos6=7 2
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+special=destruction
+
+[graphics]
+block00=rock_floor		#000000 #6A5ACD #FFFF00
+block01=rock_floor		#000000 #6A5ACD #FFFF00
+block02=cheese		#000000 #FFFF00 #000000
+block03=cheese		#000000 #FFFF00 #000000
+block04=cheese		#000000 #FFFF00 #000000
+block05=cheese		#000000 #FFFF00 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=48
+probRange=48
+probSpecial=5
+row00=BBBBBBBBBBBBBBB
+row01=BBXBBBBXBBBBXBB
+row02=BXqXBBXqXBBXqXB
+row03=BBXBBBBXBBBBXBB
+row04=BBBB__BBB__BBBB
+row05=BBBBBBBBBBBBBBB
+row06=BB_BBB___BBB_BB
+row07=BBBBBBBBBBBBBBB
+row08=BBBB__BBB__BBBB
+row09=BBXBBBBXBBBBXBB
+row10=BXqXBBXqXBBXqXB
+row11=BBXBBBBXBBBBXBB
+row12=BBBBBBBBBBBBBBB

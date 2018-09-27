@@ -1,0 +1,62 @@
+[info]
+name=C club
+author=Tobias Johansson
+hint=The fuse is short at C club
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDel]
+time=0.6697
+numBlocks=5
+pos000=3 8
+pos001=5 6
+pos002=6 4
+pos003=8 9
+pos004=10 3
+
+[func]
+extra=kick
+
+[player]
+bombs=3
+range=3
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=iron_floor       #000000 #000000 #000000
+block01=iron_floor_X     #000000 #000000 #000000
+block02=dark_block       #000000 #FF0000 #FF0000
+block03=dark_block_R     #000000 #FF0000 #FF0000
+block04=bricks           #000000 #FF4500 #FF4500
+block05=brick_O          #000000 #FF4500 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__qrq___qrq__B
+row02=B_______BB____B
+row03=B______B__B___B
+row04=B_____B___B___B
+row05=Bq___B_______qB
+row06=Br___B_______rB
+row07=Bq__B________qB
+row08=B__B__________B
+row09=B__B___BBB____B
+row10=B___BBB_______B
+row11=B__qrq___qrq__B
+row12=BBBBBBBBBBBBBBB
+

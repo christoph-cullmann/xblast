@@ -1,0 +1,61 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Peters Lego Cave
+author=Peter Riede
+hint=This won't last long...
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=2
+range=3
+pos1=6 5
+pos2=9 9
+pos3=10 3
+pos4=6 8
+pos5=8 1
+pos6=8 7
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+
+[graphics]
+block00=lego_floor		#000000 #228B22 #228B22
+block01=lego_floor_X		#000000 #228B22 #228B22
+block02=lego_white		#000000 #0000FF #228B22
+block03=lego_white		#000000 #0000FF #228B22
+block04=lego_black		#FF0000 #000000 #228B22
+block05=lego_black_O		#000000 #000000 #228B22
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=lego_floor		#000000 #228B22 #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BXXBBBBB___BBBB
+row02=BXBXBBBB_v__BBB
+row03=BXXBBBBB_v__BBB
+row04=BXBBBBB_____BBB
+row05=BXBBBB____B_BBB
+row06=BBBBB__vv___BBB
+row07=BXXBB_______BBB
+row08=BXBXB__B_v__BBB
+row09=BXXBBB_____BBBB
+row10=BXBXBBBBBBBBBBB
+row11=BXBXBBBBBBBBBBB
+row12=BBBBBBBBBBBBBBB

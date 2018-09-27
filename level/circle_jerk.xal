@@ -1,0 +1,57 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Circle Jerk
+author=Chris Doherty & Mark Black (Adelaide)
+hint=What a JIZZ level!
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=4
+range=4
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5=-1 -1
+pos6=-1 -1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=karo_light       #000000 #6A5ACD #4682B4
+block01=karo_light_X     #000000 #6A5ACD #4682B4
+block02=pyramid          #000000 #DAA520 #DAA520
+block03=pyramid_R        #000000 #DAA520 #000000
+block04=extra            #000000 #A0522D #FFA500
+block05=extra_O          #000000 #A0522D #FFA500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+row00=BBBBBBBBBBBBBBB
+row01=BBBBBB___BBBBBB
+row02=BBB_X_____X_BBB
+row03=BB__X_____X__BB
+row04=BBXXX_____XXXBB
+row05=B______X______B
+row06=B_____XBX_____B
+row07=B______X______B
+row08=BBXXX_____XXXBB
+row09=BB__X_____X__BB
+row10=BBB_X_____X_BBB
+row11=BBBBBB___BBBBBB
+row12=BBBBBBBBBBBBBBB

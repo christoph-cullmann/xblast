@@ -1,0 +1,111 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Tournicoti Tournicoton
+author=ISTY : Cyril MAESTRAGGI
+hint=Time your bombs... no-one will come to you
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.25
+numBlocks=48
+pos000=2 1
+pos001=4 1
+pos002=6 1
+pos003=8 1
+pos004=10 1
+pos005=12 1
+pos006=2 2
+pos007=4 2
+pos008=6 2
+pos009=8 2
+pos010=10 2
+pos011=12 2
+pos012=2 3
+pos013=4 3
+pos014=6 3
+pos015=8 3
+pos016=10 3
+pos017=12 3
+pos018=2 4
+pos019=4 4
+pos020=6 4
+pos021=8 4
+pos022=10 4
+pos023=12 4
+pos024=2 8
+pos025=4 8
+pos026=6 8
+pos027=8 8
+pos028=10 8
+pos029=12 8
+pos030=2 9
+pos031=4 9
+pos032=6 9
+pos033=8 9
+pos034=10 9
+pos035=12 9
+pos036=2 10
+pos037=4 10
+pos038=6 10
+pos039=8 10
+pos040=10 10
+pos041=12 10
+pos042=2 11
+pos043=4 11
+pos044=6 11
+pos045=8 11
+pos046=10 11
+pos047=12 11
+
+[func]
+extra=stunOthers
+
+[player]
+bombs=2
+range=2
+pos1=3 1
+pos2=7 1
+pos3=11 1
+pos4=3 11
+pos5=7 11
+pos6=11 11
+
+[bombs]
+
+[graphics]
+block00=iron_floor		#000000 #000000 #00FF7F
+block01=iron_floor		#000000 #000000 #00FF7F
+block02=dark_block		#191970 #4169E1 #000000
+block03=dark_block_R		#4169E1 #FFFFFF #FFFFFF
+block04=extra		#000000 #8B4513 #000000
+block05=extra		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=BrB_BrB_BbB_BbB
+row02=B_B_B_B_B_B_B_B
+row03=B_B_B_B_B_B_B_B
+row04=B_B_B_B_B_B_B_B
+row05=BsBsBsBsBsBsBsB
+row06=BrsqsbsqsrsqsbB
+row07=BsBsBsBsBsBsBsB
+row08=B_B_B_B_B_B_B_B
+row09=B_B_B_B_B_B_B_B
+row10=B_B_B_B_B_B_B_B
+row11=BbB_BbB_BrB_BrB
+row12=BBBBBBBBBBBBBBB

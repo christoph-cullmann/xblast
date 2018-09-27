@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Balloon
+author=Stn
+hint=Fly In The Sky
+gameMode=-23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=3
+range=7
+pos1=1 11
+pos2=3 11
+pos3=5 11
+pos4=9 11
+pos5=11 11
+pos6=13 11
+
+[bombs]
+bombClick=contact
+wallClick=clockwise
+direction=up
+
+[graphics]
+block00=hex		#000000 #A0522D #228B22
+block01=hex		#000000 #A0522D #228B22
+block02=hex_wall		#000000 #A0522D #4169E1
+block03=hex_extra		#000000 #A0522D #4169E1
+block04=hex_extra		#000000 #A0522D #FFD700
+block05=hex_extra_O		#000000 #A0522D #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B__B___B___B__B
+row02=B_____________B
+row03=B_____B_B_____B
+row04=B_____________B
+row05=B___B_____B___B
+row06=BB___________BB
+row07=B_____________B
+row08=B____B___B____B
+row09=B_____________B
+row10=B_B___B_B___B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

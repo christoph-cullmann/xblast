@@ -1,0 +1,56 @@
+[info]
+name=Soccer field
+author=Tor Andræ
+hint=Don't run offside
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=stunOthers
+key=teleport
+
+[player]
+bombs=1
+range=8
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 6  1
+pos6= 8 11
+initExtra=kick teleport
+reviveExtra=kick teleport
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=rock_floor       #000000 #00FF00 #00FF7F
+block01=rock_floor_X     #000000 #00FF00 #00FF7F
+block02=dark_block       #000000 #FF0000 #B22222
+block03=dark_block_R     #000000 #FF0000 #B22222
+block04=extra            #000000 #FFD700 #FF4500
+block05=extra_O          #000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=pow
+block10=score_floor      #FFFFFF #FFFFFF #FFFFFF
+
+[map]
+extraDistribution=get
+row00=BBBBBBBBBBBBBBB
+row01=B______v______B
+row02=B______v______B
+row03=B______v______B
+row04=Bvv____v____vvB
+row05=B_v____v____v_B
+row06=Bqv___qvq___vqB
+row07=B_v____v____v_B
+row08=Bvv____v____vvB
+row09=B______v______B
+row10=B______v______B
+row11=B______v______B
+row12=BBBBBBBBBBBBBBB
+

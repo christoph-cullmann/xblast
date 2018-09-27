@@ -1,0 +1,66 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=La Biblio
+author=EPFL - insun : Yves Bresson
+hint=Ca vas etre dur de trianguler...
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+extra=through
+
+[player]
+bombs=3
+range=2
+pos1=11 1
+pos2=2 3
+pos3=10 5
+pos4=6 7
+pos5=3 10
+pos6=12 11
+
+[bombs]
+
+[graphics]
+block00=chess_floor		#000000 #000000 #000000
+block01=chess_floor		#000000 #000000 #000000
+block02=book_shelf		#000000 #FF4500 #2E8B57
+block03=book_shelf		#FFFFFF #FF4500 #2E8B57
+block04=chess_sphere		#000000 #000000 #FFD700
+block05=chess_sphere_O		#000000 #000000 #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=extrathrough
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=16
+probRange=16
+probVirus=16
+probSpecial=32
+probHidden=8
+row00=BBBBBBBBBBBBBBB
+row01=BB__BBXXXBB__BB
+row02=BB___________BB
+row03=BX_B_BB_BB_B_XB
+row04=BX_X_q_______XB
+row05=BX__B__B____BXB
+row06=BB_B__BBB__B_BB
+row07=BX___X_B_____XB
+row08=BX__B_____X__XB
+row09=BX_B__B_B_qB_XB
+row10=BB________BX_BB
+row11=BB__BBXXXBB__BB
+row12=BBBBBBBBBBBBBBB

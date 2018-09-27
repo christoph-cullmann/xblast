@@ -1,0 +1,112 @@
+; Level created by Storch 2.23
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Graal Quest 2
+author=Skywalker
+hint=Dig a way to the Graal
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+[scrambleDraw]
+time=0.12
+numBlocks=40
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 8
+pos005=1 9
+pos006=1 10
+pos007=1 11
+pos008=2 1
+pos009=2 2
+pos010=2 3
+pos011=2 9
+pos012=2 10
+pos013=2 11
+pos014=3 1
+pos015=3 2
+pos016=3 10
+pos017=3 11
+pos018=4 1
+pos019=4 11
+pos020=10 1
+pos021=10 11
+pos022=11 1
+pos023=11 2
+pos024=11 10
+pos025=11 11
+pos026=12 1
+pos027=12 2
+pos028=12 3
+pos029=12 9
+pos030=12 10
+pos031=12 11
+pos032=13 1
+pos033=13 2
+pos034=13 3
+pos035=13 4
+pos036=13 8
+pos037=13 9
+pos038=13 10
+pos039=13 11
+
+
+[func]
+extra=holyGrail
+key=rc
+
+[player]
+bombs=2
+range=2
+pos1=2 4
+pos2=12 4
+pos3=2 8
+pos4=12 8
+pos5=7 1
+pos6=7 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+special=threebombs
+hidden=blastnow
+
+[graphics]
+block00=rock_floor		#000000 #F4A460 #000000
+block01=rock_floor_X		#000000 #F4A460 #000000
+block02=weight		#000000 #F0FFFF #FFD700
+block03=weight_R		#000000 #F0FFFF #FFD700
+block04=bricks		#000000 #6B8E23 #000000
+block05=brick_O		#000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=rock_floor
+
+[map]
+extraDistribution=single
+probBomb=33
+probRange=17
+probHidden=50
+row00=BBBBBBBBBBBBBBB
+row01=B___s_____s___B
+row02=B__s__sBs__s__B
+row03=B_s__sXXXs__s_B
+row04=Bs__sXXXXXs__sB
+row05=B__sXXBXBXXs__B
+row06=B__BXXXqXXXB__B
+row07=B__sXXBXBXXs__B
+row08=Bs__sXXXXXs__sB
+row09=B_s__sXXXs__s_B
+row10=B__s__sBs__s__B
+row11=B___s_____s___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,60 @@
+[info]
+name=boing
+author=antimiage : Choupette
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+[func]
+extra=speed
+
+[player]
+bombs=1
+range=1
+pos1= 1  1
+pos2= 7  1
+pos3=13  1
+pos4= 1 11
+pos5= 7 11
+pos6=13 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=clockwise
+playerClick=randomdir
+
+[graphics]
+block00=karo_light       #000000 #FFFFFF #BEBEBE
+block01=karo_light_X     #000000 #FFFFFF #BEBEBE
+block02=temple           #000000 #FFFFFF #BEBEBE
+block03=temple           #000000 #FFFFFF #BEBEBE
+block04=extra            #000000 #FFFFFF #BEBEBE
+block05=extra_O          #000000 #FFFFFF #BEBEBE
+block06=bomb
+block07=range
+block08=trap
+block09=speed
+block10=score_floor      #000000 #FFFFFF #BEBEBE
+
+[map]
+extraDistribution=single
+probBomb=32
+probRange=33
+probSpecial=33
+row00=BBBBBBBBBBBBBBB
+row01=B___B_____B___B
+row02=B__X_______X__B
+row03=B_XX_______XX_B
+row04=BBbbXXXXXXXbbBB
+row05=BrbbrXBXBXrbbrB
+row06=BrrrrXXqXXrrrrB
+row07=BrbbrXBXBXrbbrB
+row08=BBbbXXXXXXXbbBB
+row09=B_XX_______XX_B
+row10=B__X_______X__B
+row11=B___B_____B___B
+row12=BBBBBBBBBBBBBBB
+

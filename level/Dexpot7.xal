@@ -1,0 +1,86 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Dexpot 7
+author=Dexpot GbR
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+[scrambleDraw]
+time=0.33
+numBlocks=9
+pos000=6 5
+pos001=6 6
+pos002=6 7
+pos003=7 5
+pos004=7 6
+pos005=7 7
+pos006=8 5
+pos007=8 6
+pos008=8 7
+
+[scrambleDel]
+time=0.5
+numBlocks=5
+pos000=6 6
+pos001=7 5
+pos002=7 6
+pos003=7 7
+pos004=8 6
+
+[func]
+extra=invincible
+
+[player]
+bombs=1
+range=1
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=invisible
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=chess_floor		#006400 #008B8B #000000
+block01=chess_floor_X		#006400 #008B8B #000000
+block02=book_shelf		#000000 #32CD32 #696969
+block03=book_shelf		#006400 #32CD32 #696969
+block04=chest		#000000 #FF8C00 #FFFFFF
+block05=chest_O		#006400 #FF8C00 #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probSpecial=100
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__rrr___bbb__B
+row04=B__rXr___bXb__B
+row05=B__rrr___bbb__B
+row06=B_____________B
+row07=B__bbb___rrr__B
+row08=B__bXb___rXr__B
+row09=B__bbb___rrr__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

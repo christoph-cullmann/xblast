@@ -1,0 +1,54 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Nowhere to run
+author=Garth Denley (Adelaide) / Joachim Kaltz
+hint=Time your bombs... no-one will come to you
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=10
+range=15
+pos1= 5  5
+pos2= 9  5
+pos3= 9  7
+pos4= 5  7
+pos5= 7  4
+pos6= 7  8
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=iron_floor       #000000 #333333 #00FF7F
+block01=iron_floor_X     #000000 #333333 #00FF7F
+block02=dark_block       #191970 #4169E1 #000000
+block03=dark_block_R     #4169E1 #FFFFFF #FFFFFF
+block04=extra            #000000 #8B4513 #000000
+block05=extra            #000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

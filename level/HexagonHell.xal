@@ -1,0 +1,64 @@
+[info]
+name=Hexagon hell
+author=Tobias Johansson
+hint=Kick 'em carefully
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=6
+pos1= 1  1
+pos2=13 11
+pos3=13  1
+pos4= 1 11
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=contact
+special=grenade
+
+[graphics]
+block00=hole_floor       #000000 #191970 #FFD700
+block01=hole_floor_X     #000000 #191970 #FFD700
+block02=jizz             #000000 #191970 #FF4500
+block03=hole_floor       #000000 #191970 #FF4500
+block04=hex_extra        #000000 #191970 #E6E6FA
+block05=hex_extra_O      #000000 #191970 #E6E6FA
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor      #000000 #BEBEBE #FFFFFF
+
+[map]
+probBomb=12
+probRange=11
+probVirus=12
+probSpecial=11
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B___X_____X___B
+row02=B_B____B____B_B
+row03=B__X_______X__B
+row04=B___BX___XB___B
+row05=B_____B_B_____B
+row06=BX__B__X__B__XB
+row07=B_____B_B_____B
+row08=B___BX___XB___B
+row09=B__X_______X__B
+row10=B_B____B____B_B
+row11=B___X_____X___B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,55 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Hustler
+author=Chris Doherty (Adelaide)
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+
+[player]
+bombs=5
+range=5
+pos1= 2  2
+pos2=12  2
+pos3=12 10
+pos4= 2 10
+pos5= 7  2
+pos6= 7 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=rebound
+
+[graphics]
+block00=score_floor      #000000 #32CD32 #32CD32
+block01=score_floor      #000000 #32CD32 #32CD32
+block02=dark_block       #000000 #8B4513 #8B4513
+block03=dark_block_R     #000000 #8B4513 #8B4513
+block04=extra            #000000 #A0522D #000000
+block05=extra            #000000 #A0522D #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__BBB___BBB__B
+row02=B___BBB_BBB___B
+row03=BB___________BB
+row04=BB___________BB
+row05=BB___________BB
+row06=BB___________BB
+row07=BB___________BB
+row08=BB___________BB
+row09=BB___________BB
+row10=B___BBB_BBB___B
+row11=B__BBB___BBB__B
+row12=BBBBBBBBBBBBBBB

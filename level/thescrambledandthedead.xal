@@ -1,0 +1,135 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=The Scrambled and the Dead
+author=MisterE
+hint=The Scrambled and the Dead
+gameMode=R23456STDL
+
+[shrink]
+type=quad
+
+[scrambleDraw]
+time=0.05
+numBlocks=41
+pos000=1 4
+pos001=1 8
+pos002=2 4
+pos003=2 8
+pos004=3 4
+pos005=3 8
+pos006=4 1
+pos007=4 2
+pos008=4 3
+pos009=4 5
+pos010=4 6
+pos011=4 7
+pos012=4 9
+pos013=4 10
+pos014=4 11
+pos015=5 4
+pos016=5 8
+pos017=6 4
+pos018=6 8
+pos019=7 4
+pos020=7 8
+pos021=8 4
+pos022=8 8
+pos023=9 1
+pos024=9 2
+pos025=9 3
+pos026=9 4
+pos027=9 5
+pos028=9 6
+pos029=9 7
+pos030=9 9
+pos031=9 10
+pos032=9 11
+pos033=10 4
+pos034=10 8
+pos035=11 4
+pos036=11 8
+pos037=12 4
+pos038=12 8
+pos039=13 4
+pos040=13 8
+
+[scrambleDel]
+time=0.06
+numBlocks=20
+pos000=3 4
+pos001=3 8
+pos002=4 3
+pos003=4 4
+pos004=4 5
+pos005=4 7
+pos006=4 8
+pos007=4 9
+pos008=5 4
+pos009=5 8
+pos010=8 4
+pos011=8 8
+pos012=9 3
+pos013=9 4
+pos014=9 5
+pos015=9 7
+pos016=9 8
+pos017=9 9
+pos018=10 4
+pos019=10 8
+
+[func]
+key=specialBomb
+
+[player]
+bombs=2
+range=5
+specialBombs=30
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=construction
+hidden=destruction
+bombClick=snooker
+
+[graphics]
+block00=ghost		#000000 #228B22 #000000
+block01=ghost_X		#000000 #228B22 #000000
+block02=ghost_sq		#000000 #228B22 #B22222
+block03=ghost_sq_R		#000000 #228B22 #B22222
+block04=ghost_ci		#000000 #228B22 #4169E1
+block05=ghost_ci_R		#000000 #228B22 #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #000000
+
+[map]
+probHidden=75
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

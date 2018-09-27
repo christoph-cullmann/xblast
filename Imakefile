@@ -1,0 +1,74 @@
+/*
+ * Imakefile for UNIX/X11 with sound 
+ * 
+ * $Id: Imakefile,v 1.3 2004/05/13 12:24:16 iskywalker Exp $
+ */
+XBLASTDIR=$(LIBDIR)/xblast
+
+/*
+ * Libraries needed for XBlast 
+ * (The Solaris setting is very conservative)
+ */
+/*
+#ifdef SOLARIS
+DEPLIBS=$(DEPXTOOLLIB) $(DEPXLIB)
+LOCAL_LIBRARIES=$(XTOOLLIB) $(XLIB) -lSM -lICE 
+#else*/
+DEPLIBS=$(DEPXLIB)
+LOCAL_LIBRARIES=$(XLIB) -lm
+/*
+#endif
+*/
+/*
+ * compiler specifc flags (uncomment and edit if needed)
+ */
+# CDEBUGFLAGS=-g -O2
+# CCOPTIONS=-ansi -Wall -pedantic 
+EXTRA_DEFINES=-DXBLASTDIR=\"$(XBLASTDIR)\" -DAPPLOADDIR=\"$(XAPPLOADDIR)\" \
+	-DDEBUG # -DSMPF # -DDEBUG_PIXMAP
+
+SRCS=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
+	color.c status.c player.c action.c bomb.c bot.c event.c image.c \
+	shrink.c func.c info.c ini_file.c atom.c scramble.c \
+	demo.c debug.c level.c random.c \
+	game_local.c game_demo.c game_server.c game_client.c game.c\
+	menu.c menu_player.c menu_level.c menu_control.c menu_game.c\
+	menu_network.c menu_extras.c\
+	mi_tool.c mi_base.c mi_button.c mi_color.c mi_combo.c mi_cyclic.c\
+	mi_host.c mi_int.c mi_keysym.c mi_label.c mi_player.c mi_string.c \
+	mi_tag.c mi_toggle.c mi_map.c mi_stat.c\
+	client.c server.c network.c com.c browse.c\
+	com_to_server.c com_listen.c com_to_client.c com_stream.c \
+	com_dg_client.c com_dg_server.c com_dgram.c \
+	com_query.c com_browse.c com_reply.c com_base.c \
+	net_socket.c net_tele.c net_dgram.c \
+	central.c com_newgame.c com_to_central.c com_from_central.c com_central.c user.c dat_rating.c \
+	cfg_main.c cfg_level.c cfg_player.c cfg_game.c cfg_control.c \
+	cfg_stat.c cfg_demo.c cfg_xblast.c\
+	x11_common.c x11_event.c x11_atom.c x11_config.c x11_msgbox.c\
+	x11c_init.c x11c_image.c x11c_text.c x11c_tile.c x11c_sprite.c \
+	x11c_pixmap.c x11_sound.c x11_socket.c x11_joystick.c
+OBJS=xblast.o util.o str_util.o intro.o introdat.o map.o sprite.o \
+	color.o status.o player.o bomb.o bot.o action.o event.o image.o \
+	shrink.o func.o info.o ini_file.o atom.o scramble.o \
+	demo.o debug.o level.o random.o \
+	game_local.o game_demo.o game_server.o game_client.o game.o\
+	menu.o menu_player.o menu_level.o menu_control.o menu_game.o\
+	menu_network.o menu_extras.o\
+	mi_tool.o mi_base.o mi_button.o mi_color.o mi_combo.o mi_cyclic.o\
+	mi_host.o mi_int.o mi_keysym.o mi_label.o mi_player.o mi_string.o\
+        mi_tag.o mi_toggle.o mi_map.o mi_stat.o \
+	client.o server.o network.o com.o browse.o\
+	com_to_server.o com_listen.o com_to_client.o com_stream.o \
+	com_dg_client.o com_dg_server.o com_dgram.o \
+	com_query.o com_browse.o com_reply.o com_base.o \
+	net_socket.o net_tele.o net_dgram.o \
+	central.o com_newgame.o com_to_central.o com_from_central.o com_central.o user.o dat_rating.o \
+	cfg_main.o cfg_level.o cfg_player.o cfg_game.o cfg_control.o\
+	cfg_stat.o cfg_demo.o cfg_xblast.o\
+	x11_common.o x11_event.o x11_atom.o x11_config.o x11_msgbox.o\
+	x11c_init.o x11c_image.o x11c_text.o x11c_tile.o x11c_sprite.o \
+	x11c_pixmap.o x11_sound.o x11_socket.o x11_joystick.o 
+
+AllTarget(xblast)
+ComplexProgramTarget(xblast)

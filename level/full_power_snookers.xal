@@ -1,0 +1,60 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Full Power Snookers
+author=Dave Hille (Adelaide)
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+[func]
+
+[player]
+bombs=10
+range=10
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  1
+pos6= 7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+
+[graphics]
+block00=city_free        #000000 #A9A9A9 #D2B48C
+block01=city_free_X      #000000 #A9A9A9 #D2B48C
+block02=r_i_p            #000000 #C0C0C0 #F5F5F5
+block03=r_i_p_R          #000000 #C0C0C0 #F5F5F5
+block04=pumpkin          #000000 #DAA520 #008000
+block05=pumpkin_O        #000000 #DAA520 #008000
+block06=bomb
+block07=range
+block08=trap
+block09=ignite
+block10=score_floor      #000000 #000000 #4169E1
+
+[map]
+probBomb=25
+probRange=25
+probVirus=13
+probSpecial=16
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B______B______B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,76 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Everblasting
+author=Tobias Johansson
+hint=Long lasting blast
+gameMode=R23456STDL
+
+[shrink]
+type=compoundSolid
+
+
+[scrambleDel]
+time=0.33
+numBlocks=6
+pos000=5 5
+pos001=5 7
+pos002=7 5
+pos003=7 7
+pos004=9 5
+pos005=9 7
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=20
+pos1=6 5
+pos2=8 7
+pos3=8 5
+pos4=6 7
+pos5=7 4
+pos6=7 8
+initVirus=healthy
+reviveVirus=healthy
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=hole_floor		#000000 #00FA9A #FFD700
+block01=hole_floor		#000000 #00FA9A #FFD700
+block02=jizz		#000000 #00FA9A #377F50
+block03=hole_floor		#000000 #00FA9A #377F50
+block04=hex_extra		#000000 #00FA9A #FF4500
+block05=hex_extra_O		#000000 #00FA9A #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor		#000000 #808080 #FFFFFF
+
+[map]
+probBomb=25
+probRange=25
+probVirus=5
+probSpecial=13
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_X_X_X_X_X_X_B
+row03=B__B_B_B_B_B__B
+row04=B_X_X_X_X_X_X_B
+row05=B__B_B_B_B_B__B
+row06=B_X_X_X_X_X_X_B
+row07=B__B_B_B_B_B__B
+row08=B_X_X_X_X_X_X_B
+row09=B__B_B_B_B_B__B
+row10=B_X_X_X_X_X_X_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

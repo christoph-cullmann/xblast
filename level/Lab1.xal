@@ -1,0 +1,73 @@
+; XBlast TNT level - edited with BlastEd 
+; BlastEd is (C) 1998-99 by Yves Bresson 
+; my email is   :   yves.bresson@epfl.ch 
+; and the website : http://get.to/xblast 
+
+[info]
+name=Lab
+author=Vargusz
+hint=Na ki is itt a Vargusz? :)
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+[scrambleDraw]
+[scrambleDel]
+
+[func]
+game=nasty_walls
+
+[player]
+bombs=2
+range=5
+pos1=6 9
+pos2=7 10
+pos3=5 11
+pos4=8 11
+pos5=0 0
+pos6=0 0
+;initVirus=invisible
+initExtra=kick
+reviveExtra=cloak
+
+[bombs]
+bombClick=snooker
+wallClick=clockwise
+playerClick=contact
+
+[graphics]
+block00=chess_floor #430887 #699672 #740666
+block01=chess_floor #920068 #831799 #425182
+block02=box #509418 #279653 #000000
+block03=box #276215 #217597 #000000
+block04=bricks #978148 #547339 #000000
+block05=brick_O #648907 #740135 #963780
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor #299568 #116030 #692921
+
+[map]
+extraDistribution=none
+probBomb=15
+probRange=15
+probSkull=15
+probSecial=15
+probHidden=15
+row00=BBBBBBBBBBBBBBB
+row01=Bq___________XB
+row02=BBBBBBBBBXBBB_B
+row03=B______B_____qB
+row04=B_BBBB_BBBsBBBB
+row05=B_sXss_B___BsXB
+row06=BBBXBB_s_BBB_BB
+row07=BrbrbB_B______B
+row08=BbrbrBXBBBsBB_B
+row09=BrBrBB_B____BsB
+row10=BbBbB____BBBBqB
+row11=BrBrB_XX_srXBXB
+row12=BBBBBBBBBBBBBBB
+
+; end of file 

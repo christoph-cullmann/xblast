@@ -1,0 +1,61 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Not-So-Holy Hand Grenade
+author=Chris Doherty (Adelaide)
+hint=2 flames increases the range of your grenades by 1 layer
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=specialBomb
+key=specialBomb
+
+[player]
+bombs=1
+range=2
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  3
+pos6= 7  9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+special=grenade
+
+[graphics]
+block00=rock_floor       #000000 #A0522D #A0522D
+block01=rock_floor_X     #000000 #A0522D #A0522D
+block02=wall             #000000 #CD853F #A0522D
+block03=wall             #000000 #F4A460 #A0522D
+block04=extra            #000000 #A0522D #006400
+block05=extra_O          #000000 #A0522D #006400
+block06=bomb
+block07=range
+block08=trap
+block09=napalm
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=46
+probRange=21
+probSpecial=30
+row00=BBBBBBBBBBBBBBB
+row01=BX_X_X_X_X_X_XB
+row02=B_BBB_XBX_BBB_B
+row03=BXB__X___X__BXB
+row04=B_B_XBX_XBX_B_B
+row05=BX_X___X___X_XB
+row06=B_BXBXBXBXBXB_B
+row07=BX_X___X___X_XB
+row08=B_B_XBX_XBX_B_B
+row09=BXB__X___X__BXB
+row10=B_BBB_XBX_BBB_B
+row11=BX_X_X_X_X_X_XB
+row12=BBBBBBBBBBBBBBB

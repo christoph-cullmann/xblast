@@ -1,0 +1,68 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=L'Arene des Infos
+author=old EPFL : RBwaBD
+hint=Don't push me or I'll kill you!!!
+gameMode=R23456STDL
+
+[shrink]
+type=compound
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=80
+range=0
+pos1=1 1
+pos2=7 1
+pos3=13 1
+pos4=1 11
+pos5=7 11
+pos6=13 11
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+bombClick=snooker
+playerClick=contact
+
+[graphics]
+block00=hex		#000000 #A0522D #228B22
+block01=hex		#000000 #A0522D #228B22
+block02=hex_wall		#000000 #A0522D #4169E1
+block03=hex_extra		#000000 #A0522D #4169E1
+block04=hex_extra		#000000 #A0522D #FFD700
+block05=hex_extra_O		#000000 #A0522D #FFD700
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=25
+probRange=51
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

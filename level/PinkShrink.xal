@@ -1,0 +1,93 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Pink Shrink
+author=Peter Riede
+hint=Shrinks to the middle
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+[scrambleDel]
+time=0.25
+numBlocks=23
+pos000=3 2
+pos001=3 10
+pos002=5 2
+pos003=5 10
+pos004=6 6
+pos005=7 2
+pos006=7 6
+pos007=7 10
+pos008=9 2
+pos009=9 6
+pos010=9 10
+pos011=10 6
+pos012=11 2
+pos013=11 5
+pos014=11 7
+pos015=11 10
+pos016=12 3
+pos017=12 4
+pos018=12 5
+pos019=12 6
+pos020=12 7
+pos021=12 8
+pos022=12 9
+
+[func]
+key=teleport
+
+[player]
+bombs=6
+range=7
+pos1=2 8
+pos2=12 1
+pos3=2 4
+pos4=12 11
+pos5=5 11
+pos6=5 1
+initVirus=run
+reviveVirus=run
+initExtra=teleport kick
+reviveExtra=teleport kick
+
+[bombs]
+playerClick=contact
+fuseTime=long
+
+[graphics]
+block00=karo_light		#FFC0CB #FFC0CB #FFC0CB
+block01=karo_light_X		#FFC0CB #FFC0CB #FFC0CB
+block02=book_shelf		#8A2BE2 #BA55D3 #DB7093
+block03=book_shelf		#FFC0CB #BA55D3 #DB7093
+block04=sphere_light		#FFC0CB #FF1493 #FFC0CB
+block05=sphere_light_O		#FFC0CB #FF1493 #FFC0CB
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=score_floor		#000000 #000000 #4169E1
+
+[map]
+probBomb=75
+row00=BBBBBBBBBBBBBBB
+row01=BBBBB________BB
+row02=BBBB_________BB
+row03=BBB__________BB
+row04=BB_________B_BB
+row05=B_________BB_BB
+row06=B____BBBBBB__BB
+row07=B_________BB_BB
+row08=BB_________B_BB
+row09=BBB__________BB
+row10=BBBB_________BB
+row11=BBBBB________BB
+row12=BBBBBBBBBBBBBBB

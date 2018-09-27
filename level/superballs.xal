@@ -1,0 +1,55 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=Superballs
+author=Lachlan Cameron Smith (Adelaide)
+hint=Go nuts!!!
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[func]
+
+[player]
+bombs=6
+range=5
+pos1= 6  6
+pos2= 8  6
+pos3= 4  6
+pos4=10  6
+pos5= 2  6
+pos6=12  6
+
+[bombs]
+bombClick=rebound
+wallClick=rebound
+direction=down
+
+[graphics]
+block00=check            #000000 #800080 #800080
+block01=check            #000000 #800080 #800080
+block02=downarrow        #000000 #FF0000 #008000
+block03=uparrow          #000000 #FF0000 #008000
+block04=extra            #000000 #FFFFFF #808080
+block05=extra_O          #000000 #FFFFFF #808080
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=R_____________R
+row08=R_____________R
+row09=R_____________R
+row10=R_____________R
+row11=R_____________R
+row12=RRRRRRRRRRRRRRR

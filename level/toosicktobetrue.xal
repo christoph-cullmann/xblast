@@ -1,0 +1,79 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Too sick to be true
+author=Reinco
+hint=It's good to be sick
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.51
+numBlocks=3
+pos000=6 6
+pos001=7 6
+pos002=9 6
+
+
+[func]
+extra=life
+
+[player]
+bombs=1
+range=4
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=empty
+reviveVirus=healthy
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+hidden=napalm
+bombClick=contact
+playerClick=thru
+wallClick=contact
+
+[graphics]
+block00=city_free		#000000 #8A2BE2 #00FF7F
+block01=city_free_X		#000000 #8A2BE2 #00FF7F
+block02=book_shelf		#000000 #00FF7F #7FFFD4
+block03=book_shelf		#000000 #00FF7F #7FFFD4
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=bomb_floor		#000000 #FFFFFF #808080
+
+[map]
+probBomb=21
+probRange=21
+probVirus=42
+probSpecial=10
+probHidden=5
+extraDistribution=single
+row00=BBBBBBBBBBBBBBB
+row01=B_______e_____B
+row02=Bessssssssss_eB
+row03=B_sXXXXXXXXs__B
+row04=B__ssssqssXs__B
+row05=B__sXXXXXsXs__B
+row06=B__sXsssXqXs__B
+row07=B__sXsXXXsXs__B
+row08=B__sXqssssXs__B
+row09=B__sXXXXXXXs__B
+row10=Be_sssssssss_eB
+row11=B_____e_______B
+row12=BBBBBBBBBBBBBBB

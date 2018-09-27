@@ -1,0 +1,76 @@
+; Level created by Storch 2.16
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Bluetooth
+author=Tor Andræ
+hint=
+gameMode=R23456STDL
+
+[shrink]
+type=spiralPlus
+
+
+[scrambleDel]
+time=0.38
+numBlocks=8
+pos000=2 4
+pos001=4 2
+pos002=4 10
+pos003=5 8
+pos004=9 4
+pos005=10 2
+pos006=10 10
+pos007=12 8
+
+[func]
+key=rc
+
+[player]
+bombs=5
+range=5
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=healthy
+reviveVirus=healthy
+initExtra=rc kick
+reviveExtra=rc kick
+
+[bombs]
+
+[graphics]
+block00=button_floor		#000080 #FFFFFF #000000
+block01=button_floor		#000080 #FFFFFF #000000
+block02=dark_block		#000000 #00008B #0000CD
+block03=dark_block_R		#000080 #00008B #0000CD
+block04=extra		#000000 #FFFFFF #FFFFFF
+block05=extra_O		#000080 #FFFFFF #FFFFFF
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=extra		#000000 #000080 #FF4500
+
+[map]
+probBomb=51
+probRange=49
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B___B__B__B___B
+row03=B______B______B
+row04=B_B__X___B__X_B
+row05=B______B______B
+row06=BB_BB_BBB_BB_BB
+row07=B______B______B
+row08=B_X__B___X__B_B
+row09=B______B______B
+row10=B___B__B__B___B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

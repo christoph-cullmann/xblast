@@ -1,0 +1,63 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Void Blocks 4
+author=Sebastian Sager
+hint=The series continues
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+
+
+[func]
+
+[player]
+bombs=10
+range=12
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+fuseTime=long
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor_X		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #32CD32 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=chess_floor		#4169E1 #778899 #708090
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_v_________v_B
+row02=B_____________B
+row03=B___v_____v___B
+row04=B_____________B
+row05=B_____v_v_____B
+row06=Bv___________vB
+row07=B_____v_v_____B
+row08=B_____________B
+row09=B___v_____v___B
+row10=B_____________B
+row11=B_v_________v_B
+row12=BBBBBBBBBBBBBBB

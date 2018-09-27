@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Welcome in Corsica
+author=Bocal : Benjamin DRIEU
+hint=If you eat, you're hit !
+gameMode=R23456STDL
+
+[shrink]
+type=lazyCompoundF
+
+
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=1
+range=2
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=5 6
+pos6=9 6
+initVirus=bomb
+reviveVirus=bomb
+
+[bombs]
+fuseTime=long
+
+[graphics]
+block00=chess_floor		#000000 #FFEFD5 #000000
+block01=chess_floor		#000000 #FFEFD5 #000000
+block02=book_shelf		#000000 #32CD32 #D2691E
+block03=book_shelf		#000000 #000000 #D2691E
+block04=chess_sphere		#000000 #FFEFD5 #6495ED
+block05=chess_sphere_O		#000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor		#4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=32
+probRange=24
+probVirus=5
+probSpecial=32
+probHidden=5
+row00=BBBBBBBBBBBBBBB
+row01=B__XX_B_B_XX__B
+row02=B__XB_B_B_BX__B
+row03=BXXX_XXXXX_XXXB
+row04=BXB_XXXXXXX_BXB
+row05=BXBXX__B__XXBXB
+row06=BX__X__B__X__XB
+row07=BXBXX__B__XXBXB
+row08=BXB_XXXXXXX_BXB
+row09=BXXX_XXXXX_XXXB
+row10=B__XB_B_B_BX__B
+row11=B__XX_B_B_XX__B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,59 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=XBlast 2000.
+author=Mark Black (Adelaide)
+hint=Stunned = Lose a life
+gameMode=R23456STDL
+
+[shrink]
+type=spiral3
+
+[func]
+extra=longStunned
+
+[player]
+bombs=1
+range=4
+pos1= 3  3
+pos2=11  3
+pos3=11  9
+pos4= 3  9
+pos5= 7  5
+pos6= 7  7
+
+[bombs]
+
+[graphics]
+block00=sphere_half      #000000 #FF7F50 #4682B4
+block01=sphere_half_X    #000000 #FF7F50 #4682B4
+block02=sphere_dark      #000000 #4682B4 #000000
+block03=sphere_light     #000000 #B0C4DE #000000
+block04=sphere_light     #000000 #4682B4 #000000
+block05=sphere_light_O   #000000 #4682B4 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=sphere_half      #000000 #FF7F50 #4682B4
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=24
+probRange=24
+probVirus=8
+probSpecial=24
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=BX__X__B__X__XB
+row02=B_BXBXBXBXBXB_B
+row03=B___X__X__X___B
+row04=BXBXBXBXBXBXBXB
+row05=B_X_X_____X_X_B
+row06=BBBXBXBXBXBXBBB
+row07=B_X_X_____X_X_B
+row08=BXBXBXBXBXBXBXB
+row09=B___X__X__X___B
+row10=B_BXBXBXBXBXB_B
+row11=BX__X__B__X__XB
+row12=BBBBBBBBBBBBBBB

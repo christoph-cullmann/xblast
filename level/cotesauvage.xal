@@ -1,0 +1,70 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Cote Sauvage
+author=LORIA : Pierre 'in your back' Laroche
+hint=Center is life
+gameMode=R23456STDL
+
+[shrink]
+type=compoundExtra
+
+
+
+[func]
+extra=multiple
+
+[player]
+bombs=1
+range=1
+pos1=1 3
+pos2=7 1
+pos3=13 3
+pos4=1 9
+pos5=7 11
+pos6=13 9
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+hidden=construction
+
+[graphics]
+block00=hex		#000000 #6495ED #000000
+block01=hex		#000000 #6495ED #000000
+block02=jizz		#000000 #000000 #6495ED
+block03=jizz		#000000 #000000 #6495ED
+block04=chest		#000000 #6495ED #000000
+block05=chest_O		#000000 #6495ED #000000
+block06=bomb
+block07=range
+block08=trap
+block09=multiple
+block10=score_floor		#000000 #4169E1 #4169E1
+
+[map]
+extraDistribution=single
+probBomb=16
+probRange=24
+probVirus=16
+probSpecial=21
+probHidden=24
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B__XXXXXXXXX__B
+row04=B__X_______X__B
+row05=B__X_______X__B
+row06=B__X__XXX__X__B
+row07=B__X_______X__B
+row08=B__X_______X__B
+row09=B__XXXXXXXXX__B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

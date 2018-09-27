@@ -1,0 +1,56 @@
+; XBlast TNT Adelaide level
+
+[info]
+name=The Focal Point
+author=Mark Black (Adelaide)
+hint=Gee, I wonder...
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=kick
+
+[player]
+bombs=1
+range=2
+pos1= 1  2
+pos2=13  2
+pos3=13 10
+pos4= 1 10
+pos5=-1 -1
+pos6=-1 -1
+
+[bombs]
+
+[graphics]
+block00=iron_floor       #000000 #FAEBD7 #2F4F4F
+block01=iron_floor_X     #000000 #FAEBD7 #2F4F4F
+block02=dark_block       #000000 #800000 #800000
+block03=dark_block_R     #000000 #800000 #800000
+block04=extra            #000000 #2F4F4F #4169E1
+block05=extra_O          #000000 #2F4F4F #4169E1
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=50
+probRange=50
+row00=BBBBBBBBBBBBBBB
+row01=B___XX___XX___B
+row02=B_BX_B_X_B_XB_B
+row03=B__B_XB_BX_B__B
+row04=BXXXB__X__BXXXB
+row05=B_B__BXXXB__B_B
+row06=BX_X_Xq_qX_X_XB
+row07=B_B__BXXXB__B_B
+row08=BXXXB__X__BXXXB
+row09=B__B_XB_BX_B__B
+row10=B_BX_B_X_B_XB_B
+row11=B___XX___XX___B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,253 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Changeling
+author=Vargusz
+hint=You need to have good reflexes
+gameMode=R23456STDL
+
+[shrink]
+type=down
+
+[scrambleDraw]
+time=0.5
+numBlocks=110
+pos000=1 2
+pos001=1 3
+pos002=1 4
+pos003=1 6
+pos004=1 7
+pos005=1 8
+pos006=1 9
+pos007=1 10
+pos008=1 11
+pos009=2 1
+pos010=2 2
+pos011=2 3
+pos012=2 4
+pos013=2 6
+pos014=2 7
+pos015=2 8
+pos016=2 11
+pos017=3 1
+pos018=3 2
+pos019=3 3
+pos020=3 4
+pos021=3 6
+pos022=3 7
+pos023=3 8
+pos024=3 11
+pos025=4 1
+pos026=4 2
+pos027=4 3
+pos028=4 4
+pos029=4 6
+pos030=4 7
+pos031=4 8
+pos032=4 11
+pos033=5 1
+pos034=5 2
+pos035=5 3
+pos036=5 4
+pos037=5 6
+pos038=5 7
+pos039=5 8
+pos040=5 9
+pos041=5 10
+pos042=5 11
+pos043=6 1
+pos044=6 2
+pos045=6 3
+pos046=6 4
+pos047=6 6
+pos048=6 7
+pos049=6 8
+pos050=6 11
+pos051=7 1
+pos052=7 2
+pos053=7 3
+pos054=7 4
+pos055=7 6
+pos056=7 7
+pos057=7 8
+pos058=7 11
+pos059=8 1
+pos060=8 2
+pos061=8 3
+pos062=8 4
+pos063=8 6
+pos064=8 7
+pos065=8 8
+pos066=8 11
+pos067=9 1
+pos068=9 2
+pos069=9 3
+pos070=9 4
+pos071=9 6
+pos072=9 7
+pos073=9 8
+pos074=9 9
+pos075=9 10
+pos076=9 11
+pos077=10 1
+pos078=10 2
+pos079=10 3
+pos080=10 4
+pos081=10 6
+pos082=10 7
+pos083=10 8
+pos084=10 11
+pos085=11 1
+pos086=11 2
+pos087=11 3
+pos088=11 4
+pos089=11 6
+pos090=11 7
+pos091=11 8
+pos092=11 11
+pos093=12 1
+pos094=12 2
+pos095=12 3
+pos096=12 4
+pos097=12 6
+pos098=12 7
+pos099=12 8
+pos100=12 11
+pos101=13 2
+pos102=13 3
+pos103=13 4
+pos104=13 6
+pos105=13 7
+pos106=13 8
+pos107=13 9
+pos108=13 10
+pos109=13 11
+
+[scrambleDel]
+time=0.56
+numBlocks=61
+pos000=2 2
+pos001=2 3
+pos002=2 4
+pos003=2 5
+pos004=2 6
+pos005=3 2
+pos006=3 3
+pos007=3 4
+pos008=3 5
+pos009=3 6
+pos010=3 7
+pos011=3 8
+pos012=4 2
+pos013=4 3
+pos014=4 4
+pos015=4 5
+pos016=4 6
+pos017=5 2
+pos018=5 3
+pos019=5 4
+pos020=5 5
+pos021=5 6
+pos022=6 2
+pos023=6 3
+pos024=6 4
+pos025=6 5
+pos026=6 6
+pos027=7 2
+pos028=7 3
+pos029=7 4
+pos030=7 5
+pos031=7 6
+pos032=7 7
+pos033=7 8
+pos034=8 2
+pos035=8 3
+pos036=8 4
+pos037=8 5
+pos038=8 6
+pos039=9 2
+pos040=9 3
+pos041=9 4
+pos042=9 5
+pos043=9 6
+pos044=10 2
+pos045=10 3
+pos046=10 4
+pos047=10 5
+pos048=10 6
+pos049=11 2
+pos050=11 3
+pos051=11 4
+pos052=11 5
+pos053=11 6
+pos054=11 7
+pos055=11 8
+pos056=12 2
+pos057=12 3
+pos058=12 4
+pos059=12 5
+pos060=12 6
+
+[func]
+extra=invincible
+key=specialBomb
+
+[player]
+bombs=3
+range=3
+specialBombs=12
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initVirus=run
+reviveVirus=run
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=randomdir
+default=grenade
+special=napalm
+hidden=pyro
+
+[graphics]
+block00=karo_dark		#000000 #483D8B #FF4500
+block01=karo_dark_X		#000000 #483D8B #FF4500
+block02=weight		#708090 #000000 #708090
+block03=weight_R		#000000 #000000 #708090
+block04=extra		#000000 #8B4513 #000000
+block05=extra_O		#000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=karo_dark		#000000 #E0FFFF #FF4500
+
+[map]
+extraDistribution=get
+probBomb=10
+probRange=42
+probVirus=42
+probSpecial=5
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=BXBBB_BBB_BBBXB
+row03=B_B_B_B_B_B_B_B
+row04=B_____X_X_____B
+row05=B__X__X_X__X__B
+row06=B_XXX_XqX_XXX_B
+row07=B__X__X_X__X__B
+row08=B_____X_X_____B
+row09=B_B_B_B_B_B_B_B
+row10=BXBBB_BBB_BBBXB
+row11=B_X___X_X___X_B
+row12=BBBBBBBBBBBBBBB

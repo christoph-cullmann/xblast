@@ -1,0 +1,57 @@
+[info]
+name=Snow Brothers
+author=EPFL - cosun : Yves Bresson & C‰dric Junillon
+hint=It is very cold here
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+key=rc
+
+[player]
+bombs=2
+range=3
+pos1= 2  2
+pos2=12  2
+pos3= 7  4
+pos4= 7  8
+pos5= 2 10
+pos6=12 10
+initVirus=slow
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+special=renovation
+hidden=blastnow
+
+[graphics]
+block00=kick_bomb        #6495ED #6495ED #6495ED
+block01=kick_bomb	 #6495ED #6495ED #6495ED
+block02=holygrail        #20B2AA #ADD8E6 #20B2AA
+block03=ghost            #000000 #000000 #000000
+block04=chess_sphere     #000000 #000000 #000000
+block05=chess_sphere_O   #000000 #000000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=mayhem
+block10=score_floor      #000000 #000000 #000000
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B______BB_____B
+row02=B___B_________B
+row03=B___BB__BB____B
+row04=B____B___BB___B
+row05=BB______BB___BB
+row06=BBBB_____B_BBBB
+row07=B_B_________BBB
+row08=B____B_______BB
+row09=B____BB__B____B
+row10=BB__BB____B___B
+row11=BBB_____B_____B
+row12=BBBBBBBBBBBBBBB
+
