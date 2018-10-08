@@ -1097,6 +1097,9 @@ uninstall-am: uninstall-binPROGRAMS
 
 install-data-local:
 	@$(NORMAL_INSTALL)
+	if test -r ${srcdir}/bad_words.txt; then \
+		cp -f -p ${srcdir}/bad_words.txt $(DESTDIR)${game_datadir}/; \
+	fi;
 	if test -d $(srcdir)/image; then \
 	  $(mkinstalldirs) $(DESTDIR)$(game_datadir); \
 	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/image; \
