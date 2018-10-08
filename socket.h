@@ -1,9 +1,9 @@
 /*
  * file socket.h - sockets abstraction for xblast
  *
- * $Id: socket.h,v 1.4 2004/11/04 16:41:39 lodott Exp $
+ * $Id: socket.h,v 1.7 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,8 +22,6 @@
  */
 #ifndef XBLAST_SOCKET_H
 #define XBLAST_SOCKET_H
-
-#include "xblast.h"
 
 /*
  * global const
@@ -36,10 +34,11 @@
  * type definitions
  */
 typedef struct _xb_socket XBSocket;
-typedef struct _xb_socket_interface {
-  char *name;
-  char *addrDevice;
-  char *addrBroadcast;
+typedef struct _xb_socket_interface
+{
+	char *name;
+	char *addrDevice;
+	char *addrBroadcast;
 } XBSocketInterface;
 
 /*
@@ -48,39 +47,43 @@ typedef struct _xb_socket_interface {
 
 /* managing sockets */
 extern XBBool Socket_Init (void);
-extern void   Socket_Finish (void);
+extern void Socket_Finish (void);
 
 /* data */
-extern int         Socket_Fd       (const XBSocket *);
-extern int         Socket_Family   (const XBSocket *);
-extern const char *Socket_HostName (const XBSocket *pSocket, XBBool peer);
-extern unsigned    Socket_HostPort (const XBSocket *pSocket, XBBool peer);
+extern int Socket_Fd (const XBSocket *);
+extern int Socket_Family (const XBSocket *);
+extern const char *Socket_HostName (const XBSocket * pSocket, XBBool peer);
+extern unsigned Socket_HostPort (const XBSocket * pSocket, XBBool peer);
 
 /* construct */
 extern XBSocket *Socket_Alloc (int family);
-extern void      Socket_Free  (XBSocket *);
+extern void Socket_Free (XBSocket *);
 
-extern XBBool      Socket_SetAddressInet (XBSocket *pSocket, XBBool peer, const char *hostName, unsigned short port);
-extern XBBool      Socket_SetBroadcast   (XBSocket *pSocket, XBBool enable);
+extern XBBool Socket_SetAddressInet (XBSocket * pSocket, XBBool peer, const char *hostName,
+									 unsigned short port);
+extern XBBool Socket_SetBroadcast (XBSocket * pSocket, XBBool enable);
+extern XBBool Socket_SetReuse (XBSocket * pSocket);
 
-extern void Socket_RegisterWrite   (XBSocket *);
-extern void Socket_RegisterRead    (XBSocket *);
+extern void Socket_RegisterWrite (XBSocket *);
+extern void Socket_RegisterRead (XBSocket *);
 extern void Socket_UnregisterWrite (XBSocket *);
-extern void Socket_UnregisterRead  (XBSocket *);
+extern void Socket_UnregisterRead (XBSocket *);
 
 /* bsd calls */
-extern XBBool Socket_Open     	   (XBSocket *pSocket, int type);
-extern XBBool Socket_Connect  	   (XBSocket *pSocket);
-extern XBBool Socket_Bind     	   (XBSocket *pSocket);
-extern XBBool Socket_Accept   	   (XBSocket *pSocket, const XBSocket *pListen);
-extern XBBool Socket_Listen   	   (XBSocket *pSocket);
-extern void   Socket_Close         (XBSocket *);
-extern void   Socket_ShutdownWrite (XBSocket *);
+extern XBBool Socket_Open (XBSocket * pSocket, int type);
+extern XBBool Socket_Connect (XBSocket * pSocket);
+extern XBBool Socket_Bind (XBSocket * pSocket);
+extern XBBool Socket_Accept (XBSocket * pSocket, const XBSocket * pListen);
+extern XBBool Socket_Listen (XBSocket * pSocket);
+extern void Socket_Close (XBSocket *);
+extern void Socket_ShutdownWrite (XBSocket *);
 
-extern int    Socket_Send        (const XBSocket *pSocket, const void *buf, size_t len);
-extern int    Socket_Receive     (const XBSocket *pSocket, void *buf, size_t len);
-extern int    Socket_SendTo      (XBSocket *pSocket, const void *buf, size_t len, const char *host, unsigned short port);
-extern int    Socket_ReceiveFrom (XBSocket *pSocket, void *buf, size_t len, const char **host, unsigned short *port);
+extern int Socket_Send (const XBSocket * pSocket, const void *buf, size_t len);
+extern int Socket_Receive (const XBSocket * pSocket, void *buf, size_t len);
+extern int Socket_SendTo (XBSocket * pSocket, const void *buf, size_t len, const char *host,
+						  unsigned short port);
+extern int Socket_ReceiveFrom (XBSocket * pSocket, void *buf, size_t len, const char **host,
+							   unsigned short *port);
 
 /* interfaces */
 extern const XBSocketInterface *Socket_GetInterfaces (size_t *);

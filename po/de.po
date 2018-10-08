@@ -1,0 +1,1584 @@
+# translation catalogue for xblast-tnt.
+# Copyright (C) 2006 Xblast authors
+# This file is distributed under the same license as the xblast-tnt package.
+# Gerfried Fuchs <alfie@users.sourceforge.net>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xblast 2.10.3\n"
+"Report-Msgid-Bugs-To: xblast-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-07-06 11:09+0200\n"
+"PO-Revision-Date: 2006-06-16 16:59-0500\n"
+"Last-Translator: Gerfried Fuchs <alfie@ist.org>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: bomb.c:295
+msgid "Napalm bomb"
+msgstr "Napalm-Bombe"
+
+#: bomb.c:296
+#, fuzzy
+msgid "Instant bomb"
+msgstr "Anfängliche Mini-Bomben"
+
+#: bomb.c:298
+msgid "Firecracker"
+msgstr ""
+
+#: bomb.c:300
+msgid "Construction bomb"
+msgstr ""
+
+#: bomb.c:301
+#, fuzzy
+msgid "Three bomb"
+msgstr "Eine Bombe"
+
+#: bomb.c:302
+msgid "Grenade"
+msgstr ""
+
+#: bomb.c:303
+msgid "Triangle bomb"
+msgstr ""
+
+#: bomb.c:304
+msgid "Destruction bomb"
+msgstr ""
+
+#: bomb.c:305
+msgid "Fungus bomb"
+msgstr ""
+
+#: bomb.c:306
+msgid "Renovation bomb"
+msgstr ""
+
+#: bomb.c:307
+#, fuzzy
+msgid "Pyro bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:309
+msgid "Random bomb"
+msgstr "Zufällige Bombe"
+
+#: bomb.c:310
+#, fuzzy
+msgid "Fast bomb"
+msgstr "Eine Bombe"
+
+#: bomb.c:311
+#, fuzzy
+msgid "Diagonal bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:312
+msgid "Scissor bomb >"
+msgstr ""
+
+#: bomb.c:313
+msgid "Scissor bomb <"
+msgstr ""
+
+#: bomb.c:314
+msgid "Parallel bomb"
+msgstr ""
+
+#: bomb.c:315
+msgid "Distance bomb"
+msgstr ""
+
+#: bomb.c:316
+#, fuzzy
+msgid "Lucky bomb"
+msgstr "Eine Bombe"
+
+#: bomb.c:317
+#, fuzzy
+msgid "Parasol bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:318
+#, fuzzy
+msgid "Combo bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:319
+#, fuzzy
+msgid "Farpyro bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:320
+#, fuzzy
+msgid "Nuclear bomb"
+msgstr "Keine Bomben"
+
+#: bomb.c:321
+#, fuzzy
+msgid "Protection bomb"
+msgstr "Permanente Mini-Bomben"
+
+#: bomb.c:322
+msgid "Ring of Fire"
+msgstr ""
+
+#: bomb.c:323
+msgid "Mine"
+msgstr "Mine"
+
+#: bomb.c:324
+msgid "Row"
+msgstr "Reihe"
+
+#: bomb.c:325
+msgid "Column"
+msgstr "Spalte"
+
+#: bomb.c:326
+msgid "Psycho"
+msgstr ""
+
+#: bomb.c:546
+#, c-format
+msgid "%s as default"
+msgstr ""
+
+#: bomb.c:552
+#, c-format
+msgid "%s as an extra"
+msgstr "%s als Extra"
+
+#: bomb.c:560
+msgid "All bombs are long fused"
+msgstr ""
+
+#: bomb.c:563
+msgid "All bombs are short fused"
+msgstr ""
+
+#: bomb.c:575
+msgid "All bombs are haunted"
+msgstr ""
+
+#: bomb.c:578
+msgid "All bombs are haunted (and dangerous)"
+msgstr ""
+
+#: bomb.c:585
+msgid "Bombs rebound from others"
+msgstr ""
+
+#: bomb.c:588
+msgid "Bombs explode on contact with others"
+msgstr ""
+
+#: bomb.c:591
+msgid "Bombs turn clockwise on hitting others"
+msgstr ""
+
+#: bomb.c:594
+msgid "Bombs turn anticlockwise on hitting others"
+msgstr ""
+
+#: bomb.c:597
+msgid "Bombs bounce off randomly from others"
+msgstr ""
+
+#: bomb.c:600
+msgid "Bombs are snooker bombs"
+msgstr "Bomben sind Snooker-Bomben"
+
+#: bomb.c:604
+msgid "Bombs split with contact off Bombs"
+msgstr ""
+
+#: bomb.c:608
+msgid "Bombs rebound off walls"
+msgstr "Bomben prallen von der Wand ab"
+
+#: bomb.c:611
+msgid "Bombs explode on contact with walls"
+msgstr ""
+
+#: bomb.c:614
+msgid "Bombs turn clockwise on hitting walls"
+msgstr ""
+
+#: bomb.c:617
+msgid "Bombs turn anticlockwise on hitting walls"
+msgstr ""
+
+#: bomb.c:620
+msgid "Bombs bounce off randomly of walls"
+msgstr ""
+
+#: bomb.c:624
+msgid "Bombs split with contact off Walls"
+msgstr ""
+
+#: bomb.c:628
+msgid "Bombs stun players running through"
+msgstr ""
+
+#: bomb.c:631
+msgid "Bombs explode on contact with players"
+msgstr ""
+
+#: bomb.c:634
+msgid "Bombs rebound off players"
+msgstr "Bomben prallen von Spielern ab"
+
+#: bomb.c:638
+msgid "Bombs split with contact off players"
+msgstr ""
+
+#: bomb.c:642
+msgid "The Walls launch bombs"
+msgstr "Die Wände werfen Bomben"
+
+#: cfg_stat.c:369
+msgid "All Levels"
+msgstr "Alle Level"
+
+#: cfg_stat.c:383
+msgid "Draw Games"
+msgstr "Unentschieden"
+
+#: cfg_stat.c:386
+msgid "Out of Time"
+msgstr "Zeit überschritten"
+
+#: func.c:37
+msgid "No Special Extra"
+msgstr ""
+
+#: func.c:38
+msgid "No Special Key"
+msgstr ""
+
+#: func.c:788
+msgid "Airpump as an extra"
+msgstr "Luftpumpe als Extra"
+
+#: func.c:791
+msgid "Bfarter as an extra"
+msgstr ""
+
+#: func.c:794
+msgid "Choice as an extra"
+msgstr ""
+
+#: func.c:797
+msgid "Cloak as an extra"
+msgstr ""
+
+#: func.c:800
+msgid "Daleif as an extra"
+msgstr ""
+
+#: func.c:803
+msgid "Electrify as an extra"
+msgstr ""
+
+#: func.c:806
+msgid "Farter as an extra"
+msgstr ""
+
+#: func.c:809
+msgid "Frogger as an extra"
+msgstr ""
+
+#: func.c:812
+msgid "Ghost as an extra"
+msgstr "Geist als Extra"
+
+#: func.c:815
+msgid "The Holy Grail as an extra"
+msgstr ""
+
+#: func.c:818
+msgid "Button as an extra"
+msgstr ""
+
+#: func.c:821
+msgid "Invincibility as an extra"
+msgstr "Unsichtbarkeit als Extra"
+
+#: func.c:824
+msgid "Jump as an extra"
+msgstr "Springen als Extra"
+
+#: func.c:827
+msgid "Junkie virus as an extra"
+msgstr "Junkie-Virus als Extra"
+
+#: func.c:830
+msgid "Kick as an extra"
+msgstr ""
+
+#: func.c:833
+msgid "Free life as an extra"
+msgstr "Frei-Leben als Extra"
+
+#: func.c:836
+msgid "Spinner as an extra"
+msgstr ""
+
+#: func.c:839
+msgid "Mayhem (Kick & Run) as an extra"
+msgstr ""
+
+#: func.c:842
+msgid "Morphing as an extra"
+msgstr "Verwandeln als Extra"
+
+#: func.c:845
+msgid "Random special extra"
+msgstr "Zufälliges Spezial-Extra"
+
+#: func.c:848
+msgid "Phantom as an extra"
+msgstr "Phantom als Extra"
+
+#: func.c:851
+msgid "Poison as an extra"
+msgstr "Gift als Extra"
+
+#: func.c:854
+msgid "Remote control as an extra"
+msgstr "Fernbedienung als Extra"
+
+#: func.c:857
+msgid "Revive control as an extra"
+msgstr ""
+
+#: func.c:860
+msgid "Snipe as an extra"
+msgstr ""
+
+#: func.c:863 func.c:884
+msgid "Stop as an extra"
+msgstr "Stop als Extra"
+
+#: func.c:866
+msgid "Sucker as an extra"
+msgstr ""
+
+#: func.c:869
+msgid "Swapcolor as an extra"
+msgstr "Farbtausch als Extra"
+
+#: func.c:872
+msgid "Swapposition as an extra"
+msgstr "Positionstausch als Extra"
+
+#: func.c:875
+msgid "Slowdown as an extra"
+msgstr "Langsam als Extra"
+
+#: func.c:878
+msgid "Speed as an extra"
+msgstr "Schnell als Extra"
+
+#: func.c:881
+msgid "SpeedII as an extra"
+msgstr "Schnell2 als Extra"
+
+#: func.c:887
+msgid "Stunner as an extra"
+msgstr ""
+
+#: func.c:890
+msgid "Teleporter as an extra"
+msgstr "Teleportieren als Extra"
+
+#: func.c:893
+msgid "Through as an extra"
+msgstr ""
+
+#: game.c:598
+msgid "Draw Game"
+msgstr "Unentschieden"
+
+#: intro.c:376
+msgid "Loading ..."
+msgstr "Laden ..."
+
+#: intro.c:440 introdat.c:36
+msgid "Press Space or Return"
+msgstr "Space oder Enter drücken"
+
+#: intro.c:890
+msgid "Scoreboard"
+msgstr ""
+
+#: introdat.c:31
+msgid "On a Workstation not far away"
+msgstr "Auf einem nicht weit entfernten Rechner"
+
+#: introdat.c:78
+msgid "Coauthor Garth Denley"
+msgstr "Co-Autor Garth Denley"
+
+#: introdat.c:88
+msgid "Sound by Norbert Nicolay"
+msgstr "Klang von Norbert Nicolay"
+
+#: introdat.c:130 menu.c:163
+msgid "visit http://xblast.sf.net/"
+msgstr "Besucht http://xblast.sf.net/"
+
+#: introdat.c:154 menu_extras.c:308
+msgid "Player Info"
+msgstr "Spieler-Info"
+
+#: introdat.c:212
+msgid "Level Info"
+msgstr "Level-Info"
+
+#: introdat.c:270
+msgid "Extra Info"
+msgstr "Extra-Info"
+
+#: map.c:208
+msgid "Walls are invisible"
+msgstr "Wände sind unsichtbar"
+
+#: map.c:213
+msgid "Extras all look the same"
+msgstr "Extras sehen alle gleich aus"
+
+#: map.c:216
+msgid "Some walls are blastable"
+msgstr ""
+
+#: map.c:232
+msgid "scarce"
+msgstr "vereinzelt"
+
+#: map.c:235
+msgid "rare"
+msgstr "selten"
+
+#: map.c:238
+msgid "uncommon"
+msgstr "unüblich"
+
+#: map.c:241
+msgid "common"
+msgstr "üblich"
+
+#: map.c:244
+msgid "plentiful"
+msgstr "reichlich"
+
+#: map.c:395
+#, c-format
+msgid "Bomb extras are %s"
+msgstr "Bomben-Extras sind %s"
+
+#: map.c:398
+#, c-format
+msgid "Rang extras are %s"
+msgstr ""
+
+#: map.c:401
+#, c-format
+msgid "Infections are %s"
+msgstr ""
+
+#: map.c:404
+#, c-format
+msgid "Special extras are %s"
+msgstr "Spezial-Extras sind %s"
+
+#: map.c:407
+#, c-format
+msgid "Hidden bombs are %s"
+msgstr "Versteckte Bomben sind %s"
+
+#: menu.c:60 menu_game.c:152 menu_level.c:200
+msgid "None"
+msgstr "Keines"
+
+#: menu.c:61
+msgid "Beep"
+msgstr ""
+
+#: menu.c:62
+msgid "Waveout"
+msgstr ""
+
+#: menu.c:68
+msgid "No"
+msgstr "Nein"
+
+# XXX No - no ?
+#: menu.c:69
+msgid "Yes"
+msgstr "Ja"
+
+# XXX Yes - yes ?
+#: menu.c:146
+msgid "XBlast Main Menu"
+msgstr "XBlast Hauptmenü"
+
+#: menu.c:148
+msgid "Start Local Game"
+msgstr "Lokales Spiel starten"
+
+#: menu.c:150
+msgid "Create Network Game"
+msgstr "Netzwerkspiel erstellen"
+
+#: menu.c:152 menu_game.c:714
+msgid "Join Network Game"
+msgstr "Netzwerkspiel beitreten"
+
+#: menu.c:154
+msgid "Options"
+msgstr "Optionen"
+
+#: menu.c:156 menu_extras.c:481
+msgid "Extras"
+msgstr "Extras"
+
+#: menu.c:158
+msgid "Start Central"
+msgstr ""
+
+#: menu.c:162
+msgid "to talk to others go to http://xblast.sf.net/irc/"
+msgstr "http://xblast.sf.net/irc/ besuchen und mit anderen reden"
+
+#: menu.c:165
+msgid "Quit"
+msgstr ""
+
+#: menu.c:237
+msgid "Sound Setup"
+msgstr ""
+
+#: menu.c:239
+msgid "Mode:"
+msgstr ""
+
+#: menu.c:241
+msgid "Stereo:"
+msgstr "Stereo:"
+
+#: menu.c:249 menu.c:291 menu.c:325 menu.c:361 menu_control.c:117
+#: menu_control.c:169 menu_edit.c:1706
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: menu.c:251 menu.c:293 menu.c:327 menu.c:365 menu_control.c:122
+#: menu_control.c:174 menu_edit.c:246 menu_edit.c:356 menu_edit.c:527
+#: menu_edit.c:582 menu_edit.c:810 menu_edit.c:1809
+msgid "Ok"
+msgstr ""
+
+#: menu.c:287
+msgid "Screen Setup"
+msgstr ""
+
+#: menu.c:288
+msgid "Fullscreen:"
+msgstr ""
+
+#: menu.c:313 menu.c:347
+msgid "Central Setup"
+msgstr ""
+
+#: menu.c:318
+msgid "Hostname:"
+msgstr ""
+
+#: menu.c:319 menu.c:354
+msgid "TCP-Port:"
+msgstr "TCP-Port:"
+
+#: menu.c:329
+msgid "Select Central"
+msgstr ""
+
+#: menu.c:352
+msgid "Hostname List:"
+msgstr ""
+
+#: menu.c:362
+msgid "Enter Manually"
+msgstr "Manuell eingeben"
+
+#: menu.c:381
+msgid "XBlast Options Menu"
+msgstr ""
+
+#: menu.c:383 menu_extras.c:392
+msgid "Players"
+msgstr "Spieler"
+
+#: menu.c:384
+msgid "Controls"
+msgstr ""
+
+#: menu.c:385
+msgid "Sound"
+msgstr ""
+
+#: menu.c:387
+msgid "Video"
+msgstr ""
+
+#: menu.c:389
+msgid "Central"
+msgstr ""
+
+#: menu.c:392 menu_extras.c:626
+msgid "Main Menu"
+msgstr "Hauptmenü"
+
+#: menu_control.c:87 menu_control.c:161
+msgid "Configure Keyboard"
+msgstr "Tastatur konfigurieren"
+
+#: menu_control.c:90
+msgid "Go up:"
+msgstr "Nach oben:"
+
+#: menu_control.c:91
+msgid "Drop Bomb:"
+msgstr "Bombe setzen:"
+
+#: menu_control.c:93
+msgid "Go down:"
+msgstr "Nach unten:"
+
+#: menu_control.c:94
+msgid "Special extra:"
+msgstr ""
+
+#: menu_control.c:96
+msgid "Go left:"
+msgstr "Nach links:"
+
+#: menu_control.c:97
+msgid "Pause game:"
+msgstr "Spiel pausieren:"
+
+#: menu_control.c:99
+msgid "Go right:"
+msgstr "Nach rechts:"
+
+#: menu_control.c:100
+msgid "Abort level:"
+msgstr "Level abbrechen:"
+
+#: menu_control.c:103
+msgid "Laola:"
+msgstr "Laola:"
+
+#: menu_control.c:104
+msgid "Looser:"
+msgstr "Looser:"
+
+#: menu_control.c:107
+msgid "Stop:"
+msgstr ""
+
+#: menu_control.c:108
+msgid "Cancel abort:"
+msgstr ""
+
+#: menu_control.c:110 menu_game.c:554
+msgid "Bot:"
+msgstr "Bot:"
+
+#: menu_control.c:111
+msgid "Chat Send:"
+msgstr ""
+
+#: menu_control.c:113
+msgid "Chat Start:"
+msgstr ""
+
+#: menu_control.c:114
+msgid "Chat Cancel:"
+msgstr ""
+
+#: menu_control.c:119
+msgid "Next"
+msgstr ""
+
+#: menu_control.c:171
+msgid "Last"
+msgstr ""
+
+#: menu_control.c:193
+msgid "Configure Controls"
+msgstr ""
+
+#: menu_control.c:196
+msgid "Right Keyboard"
+msgstr "Rechte Tastatur"
+
+#: menu_control.c:199
+msgid "Left Keyboard"
+msgstr "Linke Tastatur"
+
+#: menu_control.c:208
+msgid "Options Menu"
+msgstr ""
+
+#: menu_edit.c:119
+msgid "Save Level"
+msgstr "Level speichern"
+
+#: menu_edit.c:120
+msgid "Name:"
+msgstr "Name:"
+
+#: menu_edit.c:122 menu_edit.c:245 menu_edit.c:355 menu_edit.c:525
+#: menu_edit.c:581 menu_edit.c:808 menu_edit.c:1502 menu_edit.c:1807
+msgid "Abort"
+msgstr ""
+
+#: menu_edit.c:124 menu_edit.c:1505
+msgid "Save"
+msgstr "Speichern"
+
+#: menu_edit.c:237 menu_edit.c:1685
+msgid "Edit Level Info"
+msgstr "Level-Infos editieren"
+
+#: menu_edit.c:238
+msgid "Title:"
+msgstr "Titel:"
+
+#: menu_edit.c:240
+msgid "Author:"
+msgstr "Autor:"
+
+#: menu_edit.c:242
+msgid "Hint:"
+msgstr "Tipp:"
+
+#: menu_edit.c:319
+msgid "Edit Bomb Settings"
+msgstr "Bomben-Einstellungen editieren"
+
+#: menu_edit.c:341
+msgid "Default Bomb Type"
+msgstr ""
+
+#: menu_edit.c:343
+msgid "Initial Range"
+msgstr ""
+
+#: menu_edit.c:345
+msgid "Initial Bombs"
+msgstr ""
+
+#: menu_edit.c:347
+msgid "Special Bombs"
+msgstr ""
+
+#: menu_edit.c:350
+msgid "Special Bomb Type"
+msgstr ""
+
+#: menu_edit.c:352
+msgid "Hidden Bomb Type"
+msgstr ""
+
+#: menu_edit.c:511
+msgid "Edit Extras Settings"
+msgstr ""
+
+#: menu_edit.c:512
+msgid "Extra Type"
+msgstr ""
+
+#: menu_edit.c:515
+msgid "Key Type"
+msgstr ""
+
+#: menu_edit.c:518
+msgid "Init Extra"
+msgstr ""
+
+#: menu_edit.c:520
+msgid "Revive Extra"
+msgstr ""
+
+#: menu_edit.c:522
+msgid "Init Kick"
+msgstr ""
+
+#: menu_edit.c:523
+msgid "Rev Kick"
+msgstr ""
+
+#: menu_edit.c:572
+msgid "Edit Nasty Walls"
+msgstr ""
+
+#: menu_edit.c:574
+msgid "Nasty Walls:"
+msgstr ""
+
+#: menu_edit.c:576
+msgid "Intensity"
+msgstr ""
+
+#: menu_edit.c:578
+msgid "Range"
+msgstr ""
+
+#: menu_edit.c:600 menu_edit.c:1692
+msgid "Edit Bombs"
+msgstr "Bomben editieren"
+
+#: menu_edit.c:601
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: menu_edit.c:603
+msgid "Nasty Walls"
+msgstr ""
+
+#: menu_edit.c:607 menu_extras.c:326 menu_extras.c:572 menu_game.c:624
+#: menu_game.c:640 menu_game.c:668 menu_game.c:684 menu_game.c:728
+msgid "Back"
+msgstr "Zurück"
+
+#: menu_edit.c:782 menu_edit.c:1686
+msgid "Edit Shrink"
+msgstr "Schrumpfen editieren"
+
+#: menu_edit.c:794
+msgid "Shrink Type"
+msgstr "Schrumpf-Typ"
+
+#: menu_edit.c:797
+msgid "Use Scramble Draw"
+msgstr ""
+
+#: menu_edit.c:800
+msgid "Scramble Draw Time (%)"
+msgstr ""
+
+#: menu_edit.c:802
+msgid "Use Scramble Delete"
+msgstr ""
+
+#: menu_edit.c:804
+msgid "Scramble DeleteTime (%)"
+msgstr ""
+
+#: menu_edit.c:1326 menu_edit.c:1486
+msgid "Free Block"
+msgstr ""
+
+#: menu_edit.c:1340
+msgid "Burned Block"
+msgstr ""
+
+#: menu_edit.c:1354 menu_edit.c:1489
+msgid "Solid Block"
+msgstr ""
+
+#: menu_edit.c:1368 menu_edit.c:1490
+msgid "Rising Block"
+msgstr ""
+
+#: menu_edit.c:1382 menu_edit.c:1491
+msgid "Blastable Block"
+msgstr ""
+
+#: menu_edit.c:1396 menu_edit.c:1466 menu_edit.c:1499
+msgid "Void Block"
+msgstr ""
+
+#: menu_edit.c:1410
+msgid "Bomb Block"
+msgstr ""
+
+#: menu_edit.c:1424
+msgid "Range Block"
+msgstr ""
+
+#: menu_edit.c:1438
+msgid "Trap Block"
+msgstr ""
+
+#: menu_edit.c:1452
+msgid "Special Block"
+msgstr ""
+
+#: menu_edit.c:1482
+msgid "Select Block"
+msgstr ""
+
+#: menu_edit.c:1487
+msgid "Shadowed Block"
+msgstr ""
+
+#: menu_edit.c:1493
+msgid "Blasted Block"
+msgstr ""
+
+#: menu_edit.c:1494
+msgid "Extra Bomb"
+msgstr ""
+
+#: menu_edit.c:1495
+msgid "Extra Range"
+msgstr ""
+
+#: menu_edit.c:1496
+msgid "Trap"
+msgstr ""
+
+#: menu_edit.c:1497
+msgid "Special Extra"
+msgstr ""
+
+#: menu_edit.c:1503 menu_edit.c:1545
+msgid "Apply"
+msgstr ""
+
+#: menu_edit.c:1538
+msgid "Return"
+msgstr ""
+
+#: menu_edit.c:1540
+msgid "Change Block"
+msgstr "Block ändern"
+
+#: menu_edit.c:1542
+msgid "Change Colors"
+msgstr "Farben ändern"
+
+#: menu_edit.c:1610
+msgid "exit"
+msgstr ""
+
+#: menu_edit.c:1684
+msgid "Edit Level"
+msgstr "Level editieren"
+
+#: menu_edit.c:1689
+msgid "Edit Special Extras"
+msgstr ""
+
+#: menu_edit.c:1695
+msgid "Edit Graphics"
+msgstr "Grafiken editieren"
+
+#: menu_edit.c:1698
+msgid "Edit Map"
+msgstr "Karte editieren"
+
+#: menu_edit.c:1703
+msgid "Save as ..."
+msgstr "Speichern als ..."
+
+#: menu_edit.c:1777
+msgid "Write something clever here"
+msgstr "Hier etwas Sinnvolles hinschreiben"
+
+#: menu_edit.c:1778
+msgid "My name"
+msgstr "Mein Name"
+
+#: menu_edit.c:1779
+msgid "My new level"
+msgstr "Mein neues Level"
+
+#: menu_edit.c:1802
+msgid "Load Level"
+msgstr "Lade Level"
+
+#: menu_edit.c:1803
+msgid "Level File:"
+msgstr "Level-Datei:"
+
+#: menu_edit.c:1820 menu_extras.c:621
+msgid "Edit Levels"
+msgstr "Levels editieren"
+
+#: menu_edit.c:1821
+msgid "Create New Level"
+msgstr "Neues Level erstellen"
+
+#: menu_edit.c:1823
+msgid "Load Existing Level"
+msgstr "Vorhandenes Level laden"
+
+#: menu_edit.c:1825 menu_extras.c:613
+msgid "Extras Menu"
+msgstr ""
+
+#: menu_extras.c:128 menu_extras.c:341 menu_extras.c:615
+msgid "Player Statistics"
+msgstr "Spieler-Statistiken"
+
+#: menu_extras.c:142 menu_extras.c:355
+msgid "Up"
+msgstr ""
+
+#: menu_extras.c:177 menu_extras.c:238 mi_stat.c:407
+msgid "Level"
+msgstr "Level"
+
+#: menu_extras.c:194 menu_extras.c:221
+msgid "Player"
+msgstr "Spieler"
+
+#: menu_extras.c:468 menu_extras.c:619
+msgid "Demo Playback"
+msgstr ""
+
+#: menu_extras.c:528
+msgid "Update finished!"
+msgstr ""
+
+#: menu_extras.c:560
+msgid "Update statistics"
+msgstr ""
+
+#: menu_extras.c:568
+msgid "Connected..."
+msgstr "Verbunden..."
+
+#: menu_extras.c:569
+msgid "Receiving players..."
+msgstr "Empfange Spieler..."
+
+#: menu_extras.c:577
+msgid "Unable to connect to central."
+msgstr ""
+
+#: menu_extras.c:579
+msgid "Damn"
+msgstr ""
+
+#: menu_extras.c:617
+msgid "Level Statistics"
+msgstr "Level-Statistiken"
+
+#: menu_extras.c:622
+msgid "Central Statistics"
+msgstr ""
+
+#: menu_extras.c:623
+msgid "Update Central Statistics"
+msgstr ""
+
+#: menu_game.c:67
+msgid "Right Keyboard:"
+msgstr "Rechte Tastatur:"
+
+#: menu_game.c:68
+msgid "Left Keyboard:"
+msgstr "Linke Tastatur:"
+
+#: menu_game.c:69
+#, fuzzy
+msgid "Joystick 1:"
+msgstr "Joystick 1"
+
+#: menu_game.c:70
+#, fuzzy
+msgid "Joystick 2:"
+msgstr "Joystick 2"
+
+#: menu_game.c:71
+#, fuzzy
+msgid "Joystick 3:"
+msgstr "Joystick 3"
+
+#: menu_game.c:72
+#, fuzzy
+msgid "Joystick 4:"
+msgstr "Joystick 4"
+
+#: menu_game.c:110
+msgid "Alphabetic"
+msgstr "Alphabetisch"
+
+#: menu_game.c:111
+msgid "Random"
+msgstr "Zufällig"
+
+#: menu_game.c:112
+msgid "Time"
+msgstr "Zeit"
+
+#: menu_game.c:153
+msgid "Team"
+msgstr "Team"
+
+#: menu_game.c:540
+msgid "Lives:"
+msgstr "Leben:"
+
+#: menu_game.c:542
+msgid "Victories:"
+msgstr "Siege:"
+
+#: menu_game.c:544
+msgid "Frame Rate:"
+msgstr ""
+
+#: menu_game.c:548
+msgid "Level Order:"
+msgstr ""
+
+#: menu_game.c:550
+msgid "Info screen:"
+msgstr "Info-Schirm:"
+
+#: menu_game.c:552 menu_game.c:718
+msgid "Record Demo:"
+msgstr "Demo aufnehmen:"
+
+#: menu_game.c:555
+msgid "Recom. Lives:"
+msgstr ""
+
+#: menu_game.c:557 menu_game.c:724
+msgid "Music:"
+msgstr "Musik:"
+
+#: menu_game.c:560
+msgid "Rated Game:"
+msgstr ""
+
+#: menu_game.c:627 menu_game.c:645 menu_network.c:1104
+msgid "Start"
+msgstr "Starten"
+
+#: menu_game.c:633
+msgid "Setup Local Game"
+msgstr ""
+
+#: menu_game.c:642 menu_game.c:686
+msgid "Select Levels"
+msgstr "Level auswählen"
+
+#: menu_game.c:671
+msgid "Cont."
+msgstr ""
+
+#: menu_game.c:677
+msgid "Start Network Game"
+msgstr "Netzwerkspiel starten"
+
+#: menu_game.c:689
+msgid "Continue"
+msgstr ""
+
+#: menu_game.c:721
+msgid "bot:"
+msgstr "Bot:"
+
+#: menu_game.c:722
+msgid "Beep at start:"
+msgstr ""
+
+#: menu_game.c:730
+msgid "Search Central"
+msgstr ""
+
+#: menu_game.c:733
+msgid "Connect ..."
+msgstr "Verbinden ..."
+
+#: menu_game.c:736
+msgid "Search LAN"
+msgstr ""
+
+#: menu_level.c:174
+msgid "Level Selection"
+msgstr "Level-Auswahl"
+
+#: menu_level.c:193
+msgid "Backward"
+msgstr "Zurück"
+
+#: menu_level.c:196
+msgid "Forward"
+msgstr "Weiter"
+
+#: menu_level.c:199
+msgid "All"
+msgstr "Alle"
+
+#: menu_network.c:1099 menu_network.c:1237
+msgid "Disconnect"
+msgstr ""
+
+#: menu_network.c:1101
+msgid "Kick out"
+msgstr ""
+
+#: menu_network.c:1234
+#, fuzzy
+msgid "Chat with lamer Rado and others in http://xblast.sf.net/irc/"
+msgstr "http://xblast.sf.net/irc/ besuchen und mit anderen reden"
+
+#: mi_stat.c:288
+msgid "Score"
+msgstr ""
+
+#: mi_stat.c:290
+msgid "Avg. Score"
+msgstr ""
+
+#: mi_stat.c:291 mi_stat.c:336
+msgid "# Won"
+msgstr ""
+
+#: mi_stat.c:292 mi_stat.c:337
+#, c-format
+msgid "%% Won"
+msgstr ""
+
+#: mi_stat.c:293 mi_stat.c:338
+msgid "# Total"
+msgstr ""
+
+#: mi_stat.c:334
+msgid "Rating"
+msgstr ""
+
+#: mi_stat.c:335
+msgid "Rank"
+msgstr ""
+
+#: mi_stat.c:372
+msgid "Parameter"
+msgstr "Parameter"
+
+#: mi_stat.c:373
+msgid "Value"
+msgstr "Wert"
+
+#: mi_stat.c:406
+msgid "Date & Time"
+msgstr ""
+
+#: mi_stat.c:409
+msgid "#players"
+msgstr ""
+
+#: mi_stat.c:442
+msgid "Game"
+msgstr ""
+
+#: mi_stat.c:443
+msgid "Host"
+msgstr ""
+
+#: mi_stat.c:444
+msgid "Ping"
+msgstr "Ping"
+
+#: mi_stat.c:446
+msgid "Version"
+msgstr "Version"
+
+#: mi_stat.c:447
+msgid "#lives"
+msgstr ""
+
+#: mi_stat.c:448
+msgid "#wins"
+msgstr ""
+
+#: mi_stat.c:449
+msgid "FPS"
+msgstr "FPS"
+
+#: mi_tool.c:39
+msgid "no"
+msgstr "Nein"
+
+#: mi_tool.c:40
+msgid "yes"
+msgstr "Ja"
+
+#: player.c:236
+msgid "Permanent random bombing"
+msgstr ""
+
+#: player.c:237
+msgid "Permanent slowdown"
+msgstr "Permanentes Langsam"
+
+#: player.c:238
+msgid "Permanent running"
+msgstr "Permanentes Laufen"
+
+#: player.c:239
+msgid "Permanent mini bombs"
+msgstr "Permanente Mini-Bomben"
+
+#: player.c:240 player.c:253
+msgid "No bomb while healthy"
+msgstr ""
+
+#: player.c:241
+msgid "Permanent invisibility"
+msgstr ""
+
+#: player.c:242
+msgid "Permanent malfunctions"
+msgstr "Permanente Fehlfunktionen"
+
+#: player.c:243
+msgid "Permanent reverse controls"
+msgstr ""
+
+#: player.c:244
+msgid "Permanent reverse(2) controls"
+msgstr ""
+
+#: player.c:245
+msgid "Permanent random teleporting"
+msgstr "Permanentes zufälliges Teleportieren"
+
+#: player.c:249
+msgid "Initial random bombing"
+msgstr ""
+
+#: player.c:250
+msgid "Initial slowdown"
+msgstr "Anfängliches Langsam"
+
+#: player.c:251
+msgid "Initial running"
+msgstr "Anfängliches Laufen"
+
+#: player.c:252
+msgid "Initial mini bombs"
+msgstr "Anfängliche Mini-Bomben"
+
+#: player.c:254
+msgid "Initial invisibility"
+msgstr "Anfängliche Unsichtbarkeit"
+
+#: player.c:255
+msgid "Initial malfunctions"
+msgstr "Anfängliche Fehlfunktionen"
+
+#: player.c:256
+msgid "Initial reverse controls"
+msgstr ""
+
+#: player.c:257
+msgid "Initial reverse(2) controls"
+msgstr ""
+
+#: player.c:258
+msgid "Initial random teleporting"
+msgstr "Anfängliches zufälliges Teleportieren"
+
+#: player.c:262
+msgid "Revived with random bombing"
+msgstr ""
+
+#: player.c:263
+msgid "Revived with slowdown"
+msgstr "Erholung mit Langsam"
+
+#: player.c:264
+msgid "Revived with running"
+msgstr "Erholung mit Laufen"
+
+#: player.c:265
+msgid "Revived with mini bombs"
+msgstr "Erholung mit Mini-Bomben"
+
+#: player.c:266
+msgid "Revived with bombs while healthy"
+msgstr ""
+
+#: player.c:267
+msgid "Revived with invisibility"
+msgstr ""
+
+#: player.c:268
+msgid "Revived with malfunctions"
+msgstr "Erholung mit Fehlfunktionen"
+
+#: player.c:269
+msgid "Revived with reverse controls"
+msgstr ""
+
+#: player.c:270
+msgid "Revived with reverse(2) controls"
+msgstr ""
+
+#: player.c:271
+msgid "Revived with random teleporting"
+msgstr "Erholung mit zufälligem Teleportieren"
+
+#: player.c:604
+msgid "No bomb"
+msgstr "Keine Bomben"
+
+#: player.c:607
+msgid "1 bomb"
+msgstr "Eine Bombe"
+
+#. TRANSLATORS: %d > 1 (multiple bombs only)
+#: player.c:611
+#, c-format
+msgid "%d bombs"
+msgstr "%d Bomben"
+
+#: player.c:616
+msgid "No initial range"
+msgstr ""
+
+#: player.c:619
+msgid "Only mini bombs"
+msgstr "Nur Mini-Bomben"
+
+#: player.c:622
+#, c-format
+msgid "Initial range %d"
+msgstr ""
+
+#: player.c:640
+msgid "Daleif as default"
+msgstr ""
+
+#: player.c:643
+msgid "Initial Daleif"
+msgstr ""
+
+#: player.c:647
+msgid "Revived with Daleif"
+msgstr ""
+
+#: player.c:651
+msgid "Remote control as default"
+msgstr ""
+
+#: player.c:654
+msgid "Initial remote control"
+msgstr "Anfängliche Fernbedienung"
+
+#: player.c:658
+msgid "Revived with remote control"
+msgstr "Erholung mit Fernbedienung"
+
+#: player.c:662
+msgid "Jump as default"
+msgstr ""
+
+#: player.c:665
+msgid "Initial Jump"
+msgstr "Anfängliches Springen"
+
+#: player.c:669
+msgid "Revived with Jump"
+msgstr "Erholung mit Springen"
+
+#: player.c:673
+msgid "Airpump as default"
+msgstr ""
+
+#: player.c:676
+msgid "Initial airpump"
+msgstr "Anfängliche Luftpumpe"
+
+#: player.c:680
+msgid "Revived with airpump"
+msgstr "Erholung mit Luftpumpe"
+
+#: player.c:684
+msgid "Cloak as default"
+msgstr ""
+
+#: player.c:687
+msgid "Initial cloak"
+msgstr ""
+
+#: player.c:691
+msgid "Revived with cloak"
+msgstr ""
+
+#: player.c:695 player.c:698
+msgid "Initial kick"
+msgstr ""
+
+#: player.c:702
+msgid "Revived with kick"
+msgstr ""
+
+#: player.c:706
+msgid "Morphing as default"
+msgstr ""
+
+#: player.c:709
+msgid "Initial morphing"
+msgstr "Anfängliches Verwandeln"
+
+#: player.c:713
+msgid "Revived with morphing"
+msgstr "Erholung mit Verwandeln"
+
+#: player.c:717
+msgid "Throughing as default"
+msgstr ""
+
+#: player.c:720
+msgid "Initial throughing"
+msgstr ""
+
+#: player.c:724
+msgid "Revived with throughing"
+msgstr ""
+
+#: player.c:729
+msgid "Sucker as default"
+msgstr ""
+
+#: player.c:732
+msgid "Initial sucker"
+msgstr ""
+
+#: player.c:736
+msgid "Revived with sucker"
+msgstr ""
+
+#: player.c:827
+#, c-format
+msgid "%s wins"
+msgstr ""
+
+#: player.c:836
+msgid "CONGRATULATIONS!"
+msgstr "GRATULIERE!"
+
+#: player.c:2772
+msgid "Bot Activated"
+msgstr "Bot aktiviert"
+
+#: player.c:2775
+msgid "Bot Deactivated"
+msgstr "Bot deaktiviert"
+
+#, fuzzy
+#~ msgid "none"
+#~ msgstr "Keines"

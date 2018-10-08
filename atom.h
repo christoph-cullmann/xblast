@@ -1,9 +1,9 @@
 /*
  * file atom.h - predefined atoms fast database access
  *
- * $Id: atom.h,v 1.15 2005/01/11 22:44:41 lodott Exp $
+ * $Id: atom.h,v 1.19 2006/02/09 21:21:22 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,8 +22,6 @@
  */
 #ifndef XBLAST_ATOM_H
 #define XBLAST_ATOM_H
-
-#include "gui.h"
 
 /*
  * global variables
@@ -41,11 +39,11 @@ extern XBAtom atomBombs;
 extern XBAtom atomBot;
 extern XBAtom atomBottom;
 extern XBAtom atomBrowseLan;
-extern XBAtom atomCentral; // XBCC
-extern XBAtom atomCentralJoinName; // XBCC
-extern XBAtom atomCentralJoinPort; // XBCC
-extern XBAtom atomCentralLocal; // XBCC
-extern XBAtom atomCentralRemote; // XBCC
+extern XBAtom atomCentral;		// XBCC
+extern XBAtom atomCentralJoinName;	// XBCC
+extern XBAtom atomCentralJoinPort;	// XBCC
+extern XBAtom atomCentralLocal;	// XBCC
+extern XBAtom atomCentralRemote;	// XBCC
 extern XBAtom atomClient;
 extern XBAtom atomColor;
 extern XBAtom atomControl;
@@ -80,7 +78,7 @@ extern XBAtom atomHint;
 extern XBAtom atomHost;
 extern XBAtom atomIfRecLives;
 extern XBAtom atomInfo;
-extern XBAtom atomInfoTime; // LRF
+extern XBAtom atomInfoTime;		// LRF
 extern XBAtom atomInitExtra;
 extern XBAtom atomInitVirus;
 extern XBAtom atomKey;
@@ -95,11 +93,11 @@ extern XBAtom atomKeySpecial;
 extern XBAtom atomKeyStop;
 extern XBAtom atomKeyUp;
 extern XBAtom atomLarge;
-extern XBAtom atomLastPlayed;  // LRF Better random leves (hopefully)
+extern XBAtom atomLastPlayed;	// LRF Better random leves (hopefully)
 extern XBAtom atomLeft;
 extern XBAtom atomLeftKeyboard;
 extern XBAtom atomLevel;
-extern XBAtom atomLevelOrder; // LRF
+extern XBAtom atomLevelOrder;	// LRF
 extern XBAtom atomLevelShuffled;
 extern XBAtom atomLevelSorted;
 extern XBAtom atomLevelStat;
@@ -108,6 +106,11 @@ extern XBAtom atomLightText2;
 extern XBAtom atomLives;
 extern XBAtom atomLocal;
 extern XBAtom atomMap;
+extern XBAtom atomMaskBytes;
+extern XBAtom atomMaxHosts;
+extern XBAtom atomMaxLocals;
+extern XBAtom atomMaxMaskBytes;
+extern XBAtom atomMaxPlayers;
 extern XBAtom atomMedium;
 extern XBAtom atomMissing;
 extern XBAtom atomMode;
@@ -129,11 +132,11 @@ extern XBAtom atomNumBlocks;
 extern XBAtom atomNumFrames;
 extern XBAtom atomNumPlayers;
 extern XBAtom atomOutOfTime;
-extern XBAtom atomPass; // XBCC
-extern XBAtom atomPID; // XBCC
+extern XBAtom atomPass;			// XBCC
+extern XBAtom atomPID;			// XBCC
 extern XBAtom atomPlayer;
 extern XBAtom atomPlayerClick;
-extern XBAtom atomPlayerRating; // XBCC
+extern XBAtom atomPlayerRating;	// XBCC
 extern XBAtom atomPlayerStat;
 extern XBAtom atomPort;
 extern XBAtom atomPorthis[10];
@@ -146,7 +149,7 @@ extern XBAtom atomRandomLevels;
 extern XBAtom atomRandomPlayers;
 extern XBAtom atomRandomSeed;
 extern XBAtom atomRange;
-extern XBAtom atomRatedGame; // XBCC
+extern XBAtom atomRatedGame;	// XBCC
 extern XBAtom atomRecLives;
 extern XBAtom atomRecordDemo;
 extern XBAtom atomRecorded;
@@ -174,6 +177,9 @@ extern XBAtom atomStatusBg;
 extern XBAtom atomStatusFg;
 extern XBAtom atomStatusLed;
 extern XBAtom atomStereo;
+/* AbsInt begin */
+extern XBAtom atomBeep;
+/* AbsInt end */
 extern XBAtom atomTeamMode;
 extern XBAtom atomTime;
 extern XBAtom atomTimeRatings;
@@ -188,12 +194,13 @@ extern XBAtom atomUseStopKey;
 extern XBAtom atomVersionMajor;
 extern XBAtom atomVersionMinor;
 extern XBAtom atomVersionPatch;
+extern XBAtom atomVideo;
 extern XBAtom atomWallClick;
 extern XBAtom atomWin32;
 extern XBAtom atomWinner;
 extern XBAtom atomWins;
 extern XBAtom atomX11;
-extern XBAtom atomXBCCRating;      // XBCC
+extern XBAtom atomXBCCRating;	// XBCC
 extern XBAtom atomXBCCGamesPlayed;
 extern XBAtom atomXBCCRealWins;
 extern XBAtom atomXBCCRelativeWins;
@@ -201,24 +208,24 @@ extern XBAtom atomXBCCTimeUpdate;
 extern XBAtom atomXBCCTimeRegister;
 extern XBAtom atomXblast;
 
-    /* Skywalker */
-extern XBAtom atomKeyLaola 	 ;
-extern XBAtom atomKeyLooser	  ;
-extern XBAtom atomKeyBot	  ;
+	/* Skywalker */
+extern XBAtom atomKeyLaola;
+extern XBAtom atomKeyLooser;
+extern XBAtom atomKeyBot;
 
 extern XBAtom atomKeyChatStart;
 extern XBAtom atomKeyChatSend;
 extern XBAtom atomKeyChatCancel;
 extern XBAtom atomKeyChatChangeReceiver;
-    /* */
+	/* */
 extern XBAtom atomArrayBlock00[MAX_BLOCK];
-extern XBAtom atomArrayControl0[MAX_PLAYER+1];
+extern XBAtom atomArrayControl0[MAX_PLAYER + 1];
 extern XBAtom atomArrayHost0[MAX_HOSTS];
-extern XBAtom atomArrayPlayer0[MAX_PLAYER+1];
-extern XBAtom atomArrayPos0[MAX_PLAYER+1];
-extern XBAtom atomArrayPos000[MAZE_W*MAZE_H];
+extern XBAtom atomArrayPlayer0[MAX_PLAYER + 1];
+extern XBAtom atomArrayPos0[MAX_PLAYER + 1];
+extern XBAtom atomArrayPos000[MAZE_W * MAZE_H];
 extern XBAtom atomArrayRow00[MAZE_H];
-extern XBAtom atomArrayTeam0[MAX_PLAYER+1];
+extern XBAtom atomArrayTeam0[MAX_PLAYER + 1];
 
 /*
  * global prototypes

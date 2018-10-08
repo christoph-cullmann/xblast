@@ -1,7 +1,7 @@
 /*
  * file info.c - display info at level start
  *
- * $Id: info.c,v 1.7 2005/01/11 22:44:41 lodott Exp $
+ * $Id: info.c,v 1.11 2006/03/28 11:41:19 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,12 +20,8 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "info.h"
-#include "atom.h"
-#include "shrink.h"
-#include "func.h"
-#include "map.h"
-#include "bomb.h"
+
+#include "xblast.h"
 
 /*
  * local constants
@@ -36,11 +32,11 @@
 /*
  * local variables
  */
-static int    levelCount;
-static int    extraCount;
-static int    playerCount;
-static char **levelInfo  = NULL;
-static char **extraInfo  = NULL;
+static int levelCount;
+static int extraCount;
+static int playerCount;
+static char **levelInfo = NULL;
+static char **extraInfo = NULL;
 static char **playerInfo = NULL;
 static unsigned gameMode;
 
@@ -50,17 +46,17 @@ static unsigned gameMode;
 static char **
 AllocInfo (void)
 {
-  char **ptr;
-  int i;
+	char **ptr;
+	int i;
 
-  ptr = (char **) calloc (MAX_INFO, sizeof(char *) );
-  assert (NULL != ptr);
-  for (i=0; i<MAX_INFO; i++) {
-    ptr[i] = calloc (INFO_LENGTH, sizeof(char) );
-    assert (NULL != ptr[i]);
-  }
-  return ptr;
-} /* AllocInfo */
+	ptr = (char **)calloc (MAX_INFO, sizeof (char *));
+	assert (NULL != ptr);
+	for (i = 0; i < MAX_INFO; i++) {
+		ptr[i] = calloc (INFO_LENGTH, sizeof (char));
+		assert (NULL != ptr[i]);
+	}
+	return ptr;
+}								/* AllocInfo */
 
 /*
  * free info memory
@@ -68,15 +64,15 @@ AllocInfo (void)
 static void
 FreeInfo (char **ptr)
 {
-  int i;
+	int i;
 
-  assert (ptr != NULL);
-  for (i=0; i<MAX_INFO; i++) {
-    assert (ptr[i] != NULL);
-    free (ptr[i]);
-  }
-  free (ptr);
-} /* FreeInfo */
+	assert (ptr != NULL);
+	for (i = 0; i < MAX_INFO; i++) {
+		assert (ptr[i] != NULL);
+		free (ptr[i]);
+	}
+	free (ptr);
+}								/* FreeInfo */
 
 /*
  * clear alloc info data
@@ -84,19 +80,19 @@ FreeInfo (char **ptr)
 void
 ClearInfo (void)
 {
-  if (NULL != extraInfo) {
-    FreeInfo (extraInfo);
-    extraInfo = NULL;
-  }
-  if (NULL != levelInfo) {
-    FreeInfo (levelInfo);
-    levelInfo = NULL;
-  }
-  if (NULL != playerInfo) {
-    FreeInfo (playerInfo);
-    playerInfo = NULL;
-  }
-} /* ClearInfo */
+	if (NULL != extraInfo) {
+		FreeInfo (extraInfo);
+		extraInfo = NULL;
+	}
+	if (NULL != levelInfo) {
+		FreeInfo (levelInfo);
+		levelInfo = NULL;
+	}
+	if (NULL != playerInfo) {
+		FreeInfo (playerInfo);
+		playerInfo = NULL;
+	}
+}								/* ClearInfo */
 
 /*
  * reset info strings
@@ -104,66 +100,66 @@ ClearInfo (void)
 void
 ResetInfo (void)
 {
-  int i;
+	int i;
 
-  /* alloc data if needed */
-  if (NULL == extraInfo) {
-    extraInfo = AllocInfo ();
-    assert (NULL != extraInfo);
-  }
-  if (NULL == levelInfo) {
-    levelInfo = AllocInfo ();
-    assert (NULL != levelInfo);
-  }
-  if (NULL == playerInfo) {
-    playerInfo = AllocInfo ();
-    assert (NULL != playerInfo);
-  }
-  /* set first strings to zero length ones */
-  for (i=0; i<MAX_INFO; i++) {
-    levelInfo[i][0]  = '\0';
-    extraInfo[i][0]  = '\0';
-    playerInfo[i][0] = '\0';
-  }
-  levelCount  = 0;
-  extraCount  = 0;
-  playerCount = 0;
-} /* ResetInfo */
+	/* alloc data if needed */
+	if (NULL == extraInfo) {
+		extraInfo = AllocInfo ();
+		assert (NULL != extraInfo);
+	}
+	if (NULL == levelInfo) {
+		levelInfo = AllocInfo ();
+		assert (NULL != levelInfo);
+	}
+	if (NULL == playerInfo) {
+		playerInfo = AllocInfo ();
+		assert (NULL != playerInfo);
+	}
+	/* set first strings to zero length ones */
+	for (i = 0; i < MAX_INFO; i++) {
+		levelInfo[i][0] = '\0';
+		extraInfo[i][0] = '\0';
+		playerInfo[i][0] = '\0';
+	}
+	levelCount = 0;
+	extraCount = 0;
+	playerCount = 0;
+}								/* ResetInfo */
 
 /*
  * parse level info section
  */
 XBBool
-ParseLevelInfo (const DBSection *section, DBSection *warn)
+ParseLevelInfo (const DBSection * section, DBSection * warn)
 {
-  const char *g;
-  unsigned i;
-  static const char    *gameModeString  = "R23456STDL";
-  /* reseting */
-  ResetInfo ();
-  /* check if section exists */
-  if (NULL == section) {
-    Dbg_Out("LEVEL: info section is missing!\n");
-    DB_CreateEntryString(warn,atomMissing,"true");
-    return XBFalse;
-  }
-  /* extract gameMode */
-  gameMode = 0;
-  /* game mode entry is required */
-  if (! DB_GetEntryString (section, atomGameMode, &g) ) {
-    Dbg_Out("LEVEL: game mode is missing!\n");
-    DB_CreateEntryString(warn,atomGameMode,"missing!");
-    return XBFalse;
-  }
-  /* convert to unsigned */
-  for (i = 0; g[i] != 0 && gameModeString[i] != 0; i ++) {
-    if (g[i] == gameModeString[i]) {
-      gameMode |= (1 << i);
-    }
-  }
-  Dbg_Level("gameMode = %s, converted to %u\n", g, gameMode);
-  return XBTrue;
-} /* ParseLevelInfo */
+	const char *g;
+	unsigned i;
+	static const char *gameModeString = "R23456STDL";
+	/* reseting */
+	ResetInfo ();
+	/* check if section exists */
+	if (NULL == section) {
+		Dbg_Out ("LEVEL: info section is missing!\n");
+		DB_CreateEntryString (warn, atomMissing, "true");
+		return XBFalse;
+	}
+	/* extract gameMode */
+	gameMode = 0;
+	/* game mode entry is required */
+	if (!DB_GetEntryString (section, atomGameMode, &g)) {
+		Dbg_Out ("LEVEL: game mode is missing!\n");
+		DB_CreateEntryString (warn, atomGameMode, "missing!");
+		return XBFalse;
+	}
+	/* convert to unsigned */
+	for (i = 0; g[i] != 0 && gameModeString[i] != 0; i++) {
+		if (g[i] == gameModeString[i]) {
+			gameMode |= (1 << i);
+		}
+	}
+	Dbg_Level ("gameMode = %s, converted to %u\n", g, gameMode);
+	return XBTrue;
+}								/* ParseLevelInfo */
 
 /*
  * add a generic info line
@@ -171,22 +167,22 @@ ParseLevelInfo (const DBSection *section, DBSection *warn)
 static void
 AddInfo (char **info, int *count, const char *fmt, va_list argList)
 {
-  /* sanity check */
-  assert (count != NULL);
-  assert (info  != NULL);
-  /* do we have any space left */
-  /* BUGFIX1 */
-  if (*count >= MAX_INFO) {
-    return;
-  }
-  /* 1BUGFIX */
-  assert (info[*count] != NULL);
-  assert (fmt != NULL);
-  /* add text */
-  (void) vsprintf (info[*count], fmt, argList);
-  /* next line */
-  *count = *count + 1;
-} /* AddInfo */
+	/* sanity check */
+	assert (count != NULL);
+	assert (info != NULL);
+	/* do we have any space left */
+	/* BUGFIX1 */
+	if (*count >= MAX_INFO) {
+		return;
+	}
+	/* 1BUGFIX */
+	assert (info[*count] != NULL);
+	assert (fmt != NULL);
+	/* add text */
+	vsprintf (info[*count], gettext(fmt), argList);
+	/* next line */
+	*count = *count + 1;
+}								/* AddInfo */
 
 /*
  * add player info
@@ -194,12 +190,12 @@ AddInfo (char **info, int *count, const char *fmt, va_list argList)
 void
 AddPlayerInfo (const char *fmt, ...)
 {
-  va_list argList;
+	va_list argList;
 
-  va_start (argList, fmt);
-  AddInfo (playerInfo, &playerCount, fmt, argList);
-  va_end (argList);
-} /* AddPlayerInfo */
+	va_start (argList, fmt);
+	AddInfo (playerInfo, &playerCount, fmt, argList);
+	va_end (argList);
+}								/* AddPlayerInfo */
 
 /*
  * add level info
@@ -207,12 +203,12 @@ AddPlayerInfo (const char *fmt, ...)
 void
 AddLevelInfo (const char *fmt, ...)
 {
-  va_list argList;
+	va_list argList;
 
-  va_start (argList, fmt);
-  AddInfo (levelInfo, &levelCount, fmt, argList);
-  va_end (argList);
-} /* AddLevelInfo */
+	va_start (argList, fmt);
+	AddInfo (levelInfo, &levelCount, fmt, argList);
+	va_end (argList);
+}								/* AddLevelInfo */
 
 /*
  * add extra info
@@ -220,12 +216,12 @@ AddLevelInfo (const char *fmt, ...)
 void
 AddExtraInfo (const char *fmt, ...)
 {
-  va_list argList;
+	va_list argList;
 
-  va_start (argList, fmt);
-  AddInfo (extraInfo, &extraCount, fmt, argList);
-  va_end (argList);
-} /* AddExtraInfo */
+	va_start (argList, fmt);
+	AddInfo (extraInfo, &extraCount, fmt, argList);
+	va_end (argList);
+}								/* AddExtraInfo */
 
 /*
  *
@@ -233,10 +229,10 @@ AddExtraInfo (const char *fmt, ...)
 const char **
 GetPlayerInfo (int *pNum)
 {
-  assert (pNum != NULL);
-  *pNum = playerCount;
-  return (const char **) playerInfo;
-} /* GetPlayerInfo */
+	assert (pNum != NULL);
+	*pNum = playerCount;
+	return (const char **)playerInfo;
+}								/* GetPlayerInfo */
 
 /*
  *
@@ -244,10 +240,10 @@ GetPlayerInfo (int *pNum)
 const char **
 GetLevelInfo (int *pNum)
 {
-  assert (pNum != NULL);
-  *pNum = levelCount;
-  return (const char **) levelInfo;
-} /* GetLevelInfo */
+	assert (pNum != NULL);
+	*pNum = levelCount;
+	return (const char **)levelInfo;
+}								/* GetLevelInfo */
 
 /*
  *
@@ -255,19 +251,19 @@ GetLevelInfo (int *pNum)
 const char **
 GetExtraInfo (int *pNum)
 {
-  assert (pNum != NULL);
-  *pNum = extraCount;
-  return (const char **) extraInfo;
-} /* GetExtraInfo */
+	assert (pNum != NULL);
+	*pNum = extraCount;
+	return (const char **)extraInfo;
+}								/* GetExtraInfo */
 
 /*
  * get current gamemode
  */
 unsigned
-GetGameModeInfo()
+GetGameModeInfo (void)
 {
-  return gameMode;
-} /* GetGameModeInfo */
+	return gameMode;
+}								/* GetGameModeInfo */
 
 /*
  * end of file info.c

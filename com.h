@@ -1,9 +1,9 @@
 /*
  * file com.h - toplevel functions for all communications
  *
- * $Id: com.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
+ * $Id: com.h,v 1.4 2006/02/09 18:31:45 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -29,11 +29,12 @@
 typedef struct _xb_comm XBComm;
 
 /* types of communication */
-typedef enum {
-  XCR_OK = 0,
-  XCR_Error,
-  XCR_Finished,
-  XCR_NoComm
+typedef enum
+{
+	XCR_OK = 0,
+	XCR_Error,
+	XCR_Finished,
+	XCR_NoComm
 } XBCommResult;
 
 /*
@@ -41,7 +42,7 @@ typedef enum {
  */
 extern void CommWriteable (int fd);
 extern void CommReadable (int fd);
-extern void CommDelete (XBComm *comm);
+extern void CommDelete (XBComm * comm);
 
 #endif
 /*

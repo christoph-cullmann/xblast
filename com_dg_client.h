@@ -1,7 +1,7 @@
 /*
  * file com_dg_client.h - send datagrams to client
  *
- * $Id: com_dg_client.h,v 1.5 2004/10/03 17:27:20 lodott Exp $
+ * $Id: com_dg_client.h,v 1.8 2006/02/09 21:21:23 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,10 +23,6 @@
 #ifndef XBLAST_COM_DG_CLIENT_H
 #define XBLAST_COM_DG_CLIENT_H
 
-#include "com.h"
-
-#include "action.h"
-
 /*
  * global prototypes
  */
@@ -45,11 +41,12 @@ extern XBBool D2C_Connected (unsigned id);
 extern long D2C_LastPing (unsigned id);
 
 /* set local data */
-extern void   D2C_Reset (unsigned id);
+extern void D2C_Reset (unsigned id);
+extern void D2C_SetMaskBytes (unsigned bytes);
 
 /* queue data */
-extern void   D2C_SendPlayerAction (unsigned id, int gameTime, const PlayerAction *data);
-extern void   D2C_SendFinish (unsigned id, int gameTime);
+extern void D2C_SendPlayerAction (unsigned id, int gameTime, const PlayerAction * data);
+extern void D2C_SendFinish (unsigned id, int gameTime);
 extern XBBool D2C_Flush (unsigned id);
 
 #endif

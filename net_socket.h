@@ -1,9 +1,9 @@
 /*
  * net_socket.h - low level functions to network communication
  *
- * $Id: net_socket.h,v 1.9 2005/01/16 08:48:54 iskywalker Exp $
+ * $Id: net_socket.h,v 1.11 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,13 +22,6 @@
  */
 #ifndef XBLAST_NET_SOCKET_H
 #define XBLAST_NET_SOCKET_H
-#ifdef W32
-/* only WMS need it here */
-#ifndef WMS
-#include <winsock2.h>
-#endif
-#endif
-#include "socket.h"
 
 /*
  * global prototypes
@@ -36,14 +29,14 @@
 extern void Net_Init (void);
 extern XBSocket *Net_ConnectInet (const char *hostname, unsigned short port);
 extern XBSocket *Net_ListenInet (unsigned short port);
-extern XBSocket *Net_Accept (const XBSocket *pSocket);
+extern XBSocket *Net_Accept (const XBSocket * pSocket);
 extern XBSocket *Net_BindUdp (const char *device, unsigned port);
-extern XBBool Net_ConnectUdp (XBSocket *, const char *, unsigned short); 
-extern void Net_Close (XBSocket *socket);
-extern const char * Net_LocalName (const XBSocket *pSocket);
-extern const char * Net_RemoteName (const XBSocket *pSocket);
-extern unsigned Net_LocalPort (const XBSocket *pSocket);
-extern unsigned Net_RemotePort (const XBSocket *pSocket);
+extern XBBool Net_ConnectUdp (XBSocket *, const char *, unsigned short);
+extern void Net_Close (XBSocket * socket);
+extern const char *Net_LocalName (const XBSocket * pSocket);
+extern const char *Net_RemoteName (const XBSocket * pSocket);
+extern unsigned Net_LocalPort (const XBSocket * pSocket);
+extern unsigned Net_RemotePort (const XBSocket * pSocket);
 
 #endif
 /*

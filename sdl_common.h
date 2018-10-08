@@ -1,9 +1,9 @@
 /*
  * file SDL_common.h -  global variables for Win32 engine
  *
- * $Id: sdl_common.h,v 1.2 2004/09/10 19:03:08 tenderflake Exp $
+ * $Id: sdl_common.h,v 1.7 2006/03/28 11:49:10 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -25,7 +25,21 @@
 #define XBLAST_SDL_COMMON_H
 
 #include <SDL/SDL.h>
-#include <SDL/SDL_endian.h>
+#include <SDL/SDL_image.h>
+#include <SDL/SDL_ttf.h>
+#include <SDL/SDL_gfxPrimitives.h>
+#include <SDL/SDL_keyboard.h>
+
+#include "sdl_event.h"
+#include "sdl_keysym.h"
+#include "sdl_joystick.h"
+#include "sdl_image.h"
+#include "sdl_config.h"
+#include "sdl_text.h"
+#include "sdl_sprite.h"
+#include "sdl_socket.h"
+#include "sdl_tile.h"
+#include "sdl_pixmap.h"
 
 #if SDL_BYTEORDER == SDL_LIL_ENDIAN
 #define RMASK 0x0000FF
@@ -37,7 +51,6 @@
 #define BMASK 0x0000FF
 #endif
 
-
 /*
  * global constants
  */
@@ -47,16 +60,9 @@
  * global variables
  */
 extern SDL_Surface *screen;
-
-
-/* extern HANDLE      instance; */
-/* extern HWND        window; */
-/* extern HBITMAP     pix; */
-/* extern HPALETTE    palette; */
+extern SDL_Surface *pix;
 
 extern const char *xblastClass;
-
-
 
 #endif
 /*

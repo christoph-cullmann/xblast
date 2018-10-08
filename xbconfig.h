@@ -1,9 +1,9 @@
 /*
  * file config.h - configuration types
  *
- * $Id: xbconfig.h,v 1.1 2005/01/11 17:32:42 iskywalker Exp $
+ * $Id: xbconfig.h,v 1.3 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,9 +22,6 @@
  */
 #ifndef XBCONFIG_H
 #define XBCONFIG_H
-
-#include "color.h"
-#include "xblast.h"
 
 /*
  * constants
@@ -36,27 +33,29 @@
  */
 
 /* player data shape, colors, strings etc */
-typedef struct {
-  char    name[16];
-  char    shape[16];
-  XBColor helmet;
-  XBColor face;
-  XBColor body;
-  XBColor arms_legs;
-  XBColor hands_feet;
-  XBColor backpack;
-  XBColor white;
-  XBBool  useStopKey;
+typedef struct
+{
+	char name[16];
+	char shape[16];
+	XBColor helmet;
+	XBColor face;
+	XBColor body;
+	XBColor arms_legs;
+	XBColor hands_feet;
+	XBColor backpack;
+	XBColor white;
+	XBBool useStopKey;
 } XBPlayerConfig;
 
 /* game config (not complete now) */
-typedef struct {
-  int     num_players;
-  int     num_lives;
-  int     num_wins;
-  XBBool  random_levels;
-  XBBool  random_players;
-  XBBool *level_select;
+typedef struct
+{
+	int num_players;
+	int num_lives;
+	int num_wins;
+	XBBool random_levels;
+	XBBool random_players;
+	XBBool *level_select;
 } XBGameConfig;
 
 #endif

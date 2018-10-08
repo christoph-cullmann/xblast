@@ -1,7 +1,7 @@
 /*
- * file version.h - strings and ints with version info
+ * file version.h - tools for version data
  *
- * $Id: version.h,v 1.12 2005/01/13 18:58:04 lodott Exp $
+ * $Id: version.h,v 1.27 2006/06/16 22:09:08 alfie Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,39 +23,52 @@
 #ifndef XBLAST_VERSION_H
 #define XBLAST_VERSION_H
 
+
+
 /*
  * global macros
  */
-#define VERSION_STRING "2.10.0 (Central,epfl,Sky)"
+#define VERSION_STRING "2.10.4 (Central,epfl,Sky)"
 #define VERSION_MAJOR  2
 #define VERSION_MINOR  10
-#define VERSION_PATCH  0
-#define COPYRIGHT_YEAR "1993-2005"
+#define VERSION_PATCH  4
+#define COPYRIGHT_YEAR "1993-2006"
 
-#include "ini_file.h"
-
-typedef struct {
-  int major;
-  int minor;
-  int patch;
+/* version struct */
+typedef struct
+{
+	int major;
+	int minor;
+	int patch;
 } XBVersion;
 
+/* version types */
+typedef unsigned char XBVerType;
+#define VERSION_JOINT 0xFF
+
+/* constant version strings, please document incompatibility issues here */
+extern const XBVersion Ver_None;
+extern const XBVersion Ver_Local;
 extern const XBVersion Ver_2_10_1;
 /* slowMotionBurst key in map section added */
+extern const XBVersion Ver_2_10_2;
+/* XBTS_Out introduced, earlier versions can't handle it and assert */
+/* bug fix for swapcolor, earlier versions might crash (SMPF) */
 
-extern void Version_GetLocal(XBVersion *);
-extern void Version_GetJoint(XBVersion *);
+/* general tools */
+extern char *Version_ToString (const XBVersion *);
+extern void Version_Clear (XBVersion *);
+extern XBBool Version_isDefined (const XBVersion *);
+extern int Version_Compare (const XBVersion * v1, const XBVersion * v2);
 
-extern char * Version_ToString(const XBVersion *);
-extern void Version_ShowData();
+/* getting local data */
+extern void Version_Get (XBVerType, XBVersion *);
+extern XBBool Version_AtLeast (XBVerType, const XBVersion *);
 
-extern void Version_Clear(XBVersion *);
-extern XBBool Version_isDefined(const XBVersion *);
-
-extern void Version_Reset();
-extern int Version_Compare(const XBVersion *v1, const XBVersion *v2);
-extern void Version_Join(const XBVersion *);
-extern XBBool Version_AtLeast(const XBVersion *);
+/* modifying host versions */
+extern void Version_Reset (void);
+extern XBBool Version_Join (unsigned char, const XBVersion *);
+extern XBBool Version_Remove (unsigned char);
 
 #endif
 /*

@@ -1,7 +1,7 @@
 /*
  * file x11_common.c -
  *
- * $Id: x11_common.c,v 1.3 2004/05/14 10:00:36 alfie Exp $
+ * $Id: x11_common.c,v 1.5 2006/02/09 21:21:25 fzago Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -21,29 +21,30 @@
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include "xblast.h"
 #include "x11_common.h"
 
 /*
  * global variables
  */
-Display  *dpy = NULL;   /* connection to X11 display */
-Window    win;          /* the xblast window */
-Colormap  cmap;         /* colormap used */
-Visual   *defVisual;    /* used visual */
-int       defDepth;     /* color depth (in bits) */
-int       bitsPerPixel; /* pixel memroy size (in bits) */
-int 	  whitePixel;   /* id for color white */
-int 	  blackPixel;   /* id for color black */
-int       iconified;    /* flag if window is iconfified */
+Display *dpy = NULL;			/* connection to X11 display */
+Window win;						/* the xblast window */
+Colormap cmap;					/* colormap used */
+Visual *defVisual;				/* used visual */
+int defDepth;					/* color depth (in bits) */
+int bitsPerPixel;				/* pixel memroy size (in bits) */
+int whitePixel;					/* id for color white */
+int blackPixel;					/* id for color black */
+int iconified;					/* flag if window is iconfified */
 
-char *xblastResName  = "xblast"; 
+char *xblastResName = "xblast";
 char *xblastResClass = "XBlast";
 
-GC gcFromPix;  /* context to draw from pixmap into window */
-GC gcWindow;   /* context to clear window */
-GC gcClearPix; /* context to clear pixmap */
+GC gcFromPix;					/* context to draw from pixmap into window */
+GC gcWindow;					/* context to clear window */
+GC gcClearPix;					/* context to clear pixmap */
 
-Pixmap pix;    /* pixmap for double buffering */
+Pixmap pix;						/* pixmap for double buffering */
 
 /*
  * end of x11_file common.c

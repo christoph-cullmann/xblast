@@ -1,9 +1,9 @@
 /*
  * file str_util.h - some own string routines
  *
- * $Id: str_util.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
+ * $Id: str_util.h,v 1.6 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,15 +23,14 @@
 #ifndef _STR_UTIL_H
 #define _STR_UTIL_H
 
-#include "common.h"
-
 /*
  * prototypes
  */
-extern char *DupString (const char* ptr);
-extern char *DupStringNum (const char* ptr, size_t length);
+extern char *DupString (const char *ptr);
+extern char *DupStringNum (const char *ptr, size_t length);
 extern char **SplitString (const char *string, int *largc);
 extern const char *DateString (time_t);
+extern const char *TempString (const char *fmt, ...);
 
 #endif
 /*

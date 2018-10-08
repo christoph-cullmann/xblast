@@ -1,9 +1,9 @@
 /*
  * file menu_player.h - edit player settings
  *
- * $Id: menu_player.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
+ * $Id: menu_player.h,v 1.4 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,7 +23,7 @@
 #ifndef _MENU_PLAYER_H
 #define _MENU_PLAYER_H
 
-#include "xblast.h"
+
 
 /*
  * global prototypes

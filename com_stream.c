@@ -1,7 +1,7 @@
 /*
  * file com_stream.c - base struct und functions for stream connections
  *
- * $Id: com_stream.c,v 1.5 2004/11/06 01:53:47 lodott Exp $
+ * $Id: com_stream.c,v 1.12 2006/02/09 21:21:23 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,130 +20,160 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "com_stream.h"
 
-/************
- * handlers *
- ************/
+#include "xblast.h"
 
 /*
- * receiving data on stream
+ * try to read telegrams from server
  */
 static XBCommResult
-ReadStream (XBComm *comm)
+ReadStream (XBComm * comm)
 {
-  XBTeleResult  result;
-  XBTelegram   *tele;
-  XBCommResult  cResult;
-  XBCommStream *stream = (XBCommStream *) comm;
-  unsigned cnt = 0;
-  unsigned fd;
-
-  assert (NULL != stream);
-  fd = Socket_Fd (stream->comm.socket);
-  result = Net_Receive (stream->rcvQueue, stream->comm.socket);
-  if (result == XBT_R_IOError) {
-    Dbg_Stream ("read-error on fd=%u, shutting down\n", fd);
-    assert (stream->eventFunc != NULL);
-    (void) (*stream->eventFunc) (stream, XBST_IOREAD);
-    return XCR_Error;
-  } else if (result == XBT_R_EndOfFile) {
-    if (!stream->prepFinish) {
-      Dbg_Stream ("unexpected end of file on fd=%u\n", fd);
-      (void) (*stream->eventFunc) (stream, XBST_EOF);
-      return XCR_Finished;
-    } else {
-      Dbg_Stream ("expected end of file on fd=%u\n", fd);
-      /* only stream remains to be removed */
-      Stream_CommFinish(stream);
-      free(stream);
-      return XCR_OK;
-    }
-  }
-  assert (stream->handleFunc != NULL);
-  while (NULL != (tele = Net_ReceiveTelegram (stream->rcvQueue) ) ) {
-    cResult = (*stream->handleFunc) (stream, tele);
-    Net_DeleteTelegram (tele);
-    cnt += 1;
-    if (cResult != XCR_OK) {
-      Dbg_Stream("parse error on message #%u on %u, shutting down\n", cnt, fd);
-      return cResult;
-    }
-  }
-  Dbg_Stream("successfully parsed %u messages on %u\n", cnt, fd);
-  return XCR_OK;
-} /* ReadStream */
+	XBTeleResult result;
+	XBTelegram *tele;
+	XBCommResult cResult;
+	XBCommStream *stream = (XBCommStream *) comm;
+	unsigned fd;
+	assert (NULL != stream);
+	/* get file descriptor for debug output */
+	fd = Socket_Fd (stream->comm.socket);
+	/* read data into queue */
+	result = Net_Receive (stream->rcvQueue, stream->comm.socket);
+	if (stream->prepFinish) {
+		/* reading while waiting for eof */
+		switch (result) {
+		case XBT_R_EndOfFile:
+			Dbg_Stream ("expected end of file on fd=%u\n", fd);
+			break;
+		case XBT_R_IOError:
+			Dbg_Stream ("read error on fd=%u while waiting for eof\n", fd);
+			break;
+		default:
+			Dbg_Stream ("successful read on fd=%u while waiting for eof\n", fd);
+			break;
+		}
+		/* only stream remains to be removed, sends close to parent layer */
+		Stream_CommFinish (stream);
+		return XCR_OK;
+	}
+	else {
+		/* active mode */
+		switch (result) {
+		case XBT_R_EndOfFile:
+			Dbg_Stream ("unexpected end of file on fd=%u\n", fd);
+			/* eof event to parent layer */
+			(void)(*stream->eventFunc) (stream, XBST_EOF);
+			return XCR_Finished;
+		case XBT_R_IOError:
+			Dbg_Stream ("read error on fd=%u\n", fd);
+			/* state change to parent layer */
+			assert (stream->eventFunc != NULL);
+			(void)(*stream->eventFunc) (stream, XBST_IOREAD);
+			return XCR_Error;
+		default:
+			Dbg_Stream ("successful read on fd=%u\n", fd);
+		}
+	}
+	/* data in rcv queue, handle as much as possible */
+	assert (stream->handleFunc != NULL);
+	while (NULL != (tele = Net_ReceiveTelegram (stream->rcvQueue))) {
+		/* handle a single message */
+		cResult = (*stream->handleFunc) (stream, tele);
+		/* message not needed anymore */
+		Net_DeleteTelegram (tele);
+		/* return if handling fails, otherwise continue */
+		if (cResult != XCR_OK) {
+			Dbg_Stream ("parse error on fd=%u, shutting down\n", fd);
+			return cResult;
+		}
+	}
+	return XCR_OK;
+}								/* ReadStream */
 
 /*
- * write telegram to server
+ * XBComm write handler for XBCommStream
  */
 static XBCommResult
-WriteStream (XBComm *comm)
+WriteStream (XBComm * comm)
 {
-  XBTeleResult result;
-  XBCommStream *stream = (XBCommStream *) comm;
-  unsigned fd;
-  assert (NULL != stream);
-  fd = Socket_Fd (stream->comm.socket);
-  result = Net_Send (stream->sndQueue, stream->comm.socket);
-  switch (result) {
-  case XBT_R_Complete:
-    Socket_UnregisterWrite (CommSocket (&stream->comm));
-    Dbg_Stream("sent all telegrams on fd=%u\n", fd);
-    assert (stream->eventFunc != NULL);
-    (void) (*stream->eventFunc) (stream, XBST_WAIT);
-    if (stream->prepFinish) {
-      Socket_ShutdownWrite (CommSocket (&stream->comm));
-      Dbg_Stream("socket shutdown for writing\n");
-    }
-    return XCR_OK;
-  case XBT_R_IOError:
-    Dbg_Stream ("i/o-error write to fd=%u, shutting down\n", fd);
-    assert (stream->eventFunc != NULL);
-    (void) (*stream->eventFunc) (stream, XBST_IOWRITE);
-    return XCR_Error;
-    /* anything else */
-  default:
-    Dbg_Stream("partial send on fd=%u\n", fd);
-    assert (stream->eventFunc != NULL);
-    (void) (*stream->eventFunc) (stream, XBST_BUSY);
-    return XCR_OK;
-  }
-} /* WriteStream */
+	XBTeleResult result;
+	XBCommStream *stream = (XBCommStream *) comm;
+	unsigned fd;
+	assert (NULL != stream);
+	/* get file descriptor for debug output */
+	fd = Socket_Fd (stream->comm.socket);
+	/* send top element of send queue */
+	result = Net_Send (stream->sndQueue, stream->comm.socket);
+	switch (result) {
+	case XBT_R_Complete:		/* queue has been emptied */
+		Dbg_Stream ("sent all telegrams on fd=%u\n", fd);
+		/* no more writing needed */
+		Socket_UnregisterWrite (CommSocket (&stream->comm));
+		/* state change to parent layer */
+		assert (stream->eventFunc != NULL);
+		(void)(*stream->eventFunc) (stream, XBST_WAIT);
+		/* shutdown for empty queue, if asked for */
+		if (stream->prepFinish) {
+			Socket_ShutdownWrite (CommSocket (&stream->comm));
+			Dbg_Stream ("socket shutdown for writing\n");
+		}
+		return XCR_OK;
+	case XBT_R_IOError:		/* error while sending telegram */
+		Dbg_Stream ("i/o-error write to fd=%u, shutting down\n", fd);
+		/* state change to parent layer */
+		assert (stream->eventFunc != NULL);
+		(void)(*stream->eventFunc) (stream, XBST_IOWRITE);
+		/* return error, deletes XBComm */
+		return XCR_Error;
+	default:					/* anything else */
+		Dbg_Stream ("partial send on fd=%u\n", fd);
+		/* state to parent layer */
+		assert (stream->eventFunc != NULL);
+		(void)(*stream->eventFunc) (stream, XBST_BUSY);
+		return XCR_OK;
+	}
+}								/* WriteStream */
 
 /*
- * constructor for a XBCommStream
+ * add a XBCommStream
  */
 void
-Stream_CommInit (XBCommStream *stream, XBCommType commType, XBSocket *pSocket, StreamHandleFunc handleFunc, StreamEventFunc eventFunc, XBCommFunc deleteFunc)
+Stream_CommInit (XBCommStream * stream, XBCommType commType, XBSocket * pSocket,
+				 StreamHandleFunc handleFunc, StreamEventFunc eventFunc, XBCommFunc deleteFunc)
 {
-  assert (stream != NULL);
-  /* set values */
-  CommInit (&stream->comm, COMM_ToServer, pSocket, ReadStream, WriteStream, deleteFunc);
-  stream->handleFunc = handleFunc;
-  stream->eventFunc  = eventFunc;
-  stream->prepFinish = XBFalse;
-  /* create tele lists */
-  stream->sndQueue = Net_CreateSndQueue (commType == COMM_ToClient);
-  stream->rcvQueue = Net_CreateRcvQueue (commType == COMM_ToClient);
-  assert (NULL != stream->sndQueue);
-  assert (NULL != stream->rcvQueue);
-  Dbg_Stream("created stream on fd=%u\n", Socket_Fd (stream->comm.socket));
-} /* CommCreateToServer */
+	assert (stream != NULL);
+	/* add the underlying XBComm to internal list */
+	CommInit (&stream->comm, commType, pSocket, ReadStream, WriteStream, deleteFunc);
+	/* set stream specific handlers */
+	stream->handleFunc = handleFunc;
+	stream->eventFunc = eventFunc;
+	/* flag: shutdown when send queue empty */
+	stream->prepFinish = XBFalse;
+	/* create queues */
+	stream->sndQueue = Net_CreateSndQueue (commType == COMM_ToClient);
+	stream->rcvQueue = Net_CreateRcvQueue (commType == COMM_ToClient);
+	assert (NULL != stream->sndQueue);
+	assert (NULL != stream->rcvQueue);
+}								/* Stream_CommInit */
 
 /*
- * remove allocated memory
+ * remove a XBCommStream
+ * does not free allocated XBComm memory!!
  */
 void
-Stream_CommFinish (XBCommStream *stream)
+Stream_CommFinish (XBCommStream * stream)
 {
-  CommFinish (&stream->comm);
-  Net_DeleteSndQueue (stream->sndQueue);
-  Net_DeleteRcvQueue (stream->rcvQueue);
-  Dbg_Stream("removed stream on fd=%u\n", Socket_Fd (stream->comm.socket));
-  assert (stream->eventFunc != NULL);
-  (void) (*stream->eventFunc) (stream, XBST_CLOSE);
-} /* Stream_CommFinish */
+	/* debug output before socket is freed */
+	Dbg_Stream ("removing stream on fd=%u\n", Socket_Fd (stream->comm.socket));
+	/* remove XBComm from internal list, socket is freed */
+	CommFinish (&stream->comm);
+	/* free up queues */
+	Net_DeleteSndQueue (stream->sndQueue);
+	Net_DeleteRcvQueue (stream->rcvQueue);
+	/* close event to parent layer */
+	assert (stream->eventFunc != NULL);
+	(void)(*stream->eventFunc) (stream, XBST_CLOSE);
+}								/* Stream_CommFinish */
 
 /*
  * end of file com_stream.c

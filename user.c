@@ -1,7 +1,7 @@
 /*
  * file user.c - communication interface for users
  *
- * $Id: user.c,v 1.6 2005/01/23 16:12:49 lodott Exp $
+ * $Id: user.c,v 1.14 2006/03/28 11:41:19 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -21,11 +21,9 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "user.h"
-#include "atom.h"
-#include "cfg_player.h"
-#include "util.h"
-#include "str_util.h"
+
+#include "xblast.h"
+
 /*
  * local macros
  */
@@ -37,10 +35,9 @@
 /*
  * local variables
  */
-static XBComm  *comm  = NULL;
+static XBComm *comm = NULL;
 static int PID = PID_NONE;
 static int received = 0;
-static XBBool complete = XBFalse;
 
 /**********************
  * connect/disconnect *
@@ -50,42 +47,42 @@ static XBBool complete = XBFalse;
  * try to connect to server
  */
 XBBool
-User_Connect (CFGCentralSetup *cfg)
+User_Connect (CFGCentralSetup * cfg)
 {
-  int  j;
-  char tmp[16];
-  /* create communication */
-  assert (comm == NULL);
-  comm = X2C_CreateComm (cfg);
-  if (NULL == comm) {
-    Dbg_User("failed to establish tcp connection to central\n");
-    return XBFalse;
-  }
-  Dbg_User("successfully established tcp to central\n");
-  /* init data */
-  PID = PID_NONE;
-  received = 0;
-  complete = XBFalse;
-  /* is that needed ? */
-  j = sprintf(tmp,"tmpPlayer");
-  tmp[j+1] = 0;
-  Network_SetPlayer (0, 0, GUI_StringToAtom (tmp)) ;
-  return XBTrue;
-} /* User_Connect */
+	int j;
+	char tmp[16];
+	/* create communication */
+	assert (comm == NULL);
+	comm = X2C_CreateComm (cfg);
+	if (NULL == comm) {
+		Dbg_User ("failed to establish tcp connection to central\n");
+		return XBFalse;
+	}
+	Dbg_User ("successfully established tcp to central\n");
+	/* init data */
+	PID = PID_NONE;
+	received = 0;
+	/* is that needed ? */
+	j = sprintf (tmp, "tmpPlayer");
+	tmp[j + 1] = 0;
+	Network_SetPlayer (0, 0, GUI_StringToAtom (tmp));
+	return XBTrue;
+}								/* User_Connect */
 
 /*
  * disconnect from server by shutting down
  */
 void
-User_Disconnect ()
+User_Disconnect (void)
 {
-  if (comm != NULL) {
-    Dbg_User("disconnecting from central\n");
-    CommDelete (comm);
-  } else {
-    Dbg_User("already disconnected from central\n");
-  }
-} /* User_Disconnect */
+	if (comm != NULL) {
+		Dbg_User ("disconnecting from central\n");
+		CommDelete (comm);
+	}
+	else {
+		Dbg_User ("already disconnected from central\n");
+	}
+}								/* User_Disconnect */
 
 /*
  * handle stream events
@@ -93,37 +90,41 @@ User_Disconnect ()
 XBBool
 User_EventToCentral (const XBEventToCentral ev)
 {
-  switch (ev) {
-  case XBE2C_IORead:
-    Dbg_User("read error to central, shutdown!\n");
-    return XBTrue;
-  case XBE2C_IOWrite:
-    Dbg_User("write error to central, shutdown!\n");
-    return XBTrue;
-  case XBE2C_InvalidCot:
-    Dbg_User("invalid telegram CoT from central, shutdown!\n");
-    return XBTrue;
-  case XBE2C_InvalidID:
-    Dbg_User("invalid telegram id central, ignoring!\n");
-    return XBTrue;
-  case XBE2C_UnexpectedEOF:
-    Dbg_User("unexpected eof to central, shutdown!\n");
-    return XBTrue;
-  case XBE2C_StreamWaiting:
-    Dbg_User("all queued data sent to central\n");
-    return XBFalse;
-  case XBE2C_StreamBusy:
-    /* Dbg_User("data waits to be sent to central\n"); */
-    return XBFalse;
-  case XBE2C_StreamClosed:
-    Dbg_User("connection to central has been removed\n");
-    comm = NULL;
-    return XBFalse;
-  default:
-    Dbg_User("unknown event on stream, ignoring\n");
-    return XBFalse;
-  }
-} /* User_EventToCentral */
+	switch (ev) {
+	case XBE2C_IORead:
+		Dbg_User ("read error to central, shutdown!\n");
+		Network_QueueEvent (XBNW_Error, CENTRAL_READ_ERR);
+		return XBTrue;
+	case XBE2C_IOWrite:
+		Dbg_User ("write error to central, shutdown!\n");
+		Network_QueueEvent (XBNW_Error, CENTRAL_WRITE_ERR);
+		return XBTrue;
+	case XBE2C_InvalidCot:
+		Dbg_User ("invalid telegram CoT from central, shutdown!\n");
+		Network_QueueEvent (XBNW_Error, CENTRAL_COT_INVALID);
+		return XBTrue;
+	case XBE2C_InvalidID:
+		Dbg_User ("invalid telegram id central, ignoring!\n");
+		return XBTrue;
+	case XBE2C_UnexpectedEOF:
+		Dbg_User ("unexpected eof to central, shutdown!\n");
+		Network_QueueEvent (XBNW_Error, CENTRAL_DISCONNECT);
+		return XBTrue;
+	case XBE2C_StreamWaiting:
+		Dbg_User ("all queued data sent to central\n");
+		return XBFalse;
+	case XBE2C_StreamBusy:
+		/* Dbg_User("data waits to be sent to central\n"); */
+		return XBFalse;
+	case XBE2C_StreamClosed:
+		Dbg_User ("connection to central has been removed\n");
+		comm = NULL;
+		return XBFalse;
+	default:
+		Dbg_User ("unknown event on stream, ignoring\n");
+		return XBFalse;
+	}
+}								/* User_EventToCentral */
 
 /****************
  * receive data *
@@ -135,36 +136,36 @@ User_EventToCentral (const XBEventToCentral ev)
 void
 User_ReceivePlayerConfig (const char *data)
 {
-  XBAtom atom,atomID;
-  CFGPlayerEx tmpPlayer;
-  int         i;
-
-  atom=Network_ReceivePlayerConfig (CT_Central, 0,0, data);
-  /* if atom is valid, data is complete */
-  if (ATOM_INVALID != atom) {
-    Dbg_User("Got player from central\n");
-    RetrievePlayerEx(CT_Central, atom, &tmpPlayer);
-    i=tmpPlayer.id.PID;
-    if (i>=0) {
-      /* store player under valid pid */
-      received++;
-      atomID=GUI_IntToAtom(i);
-      StorePlayerEx(CT_Central, atomID, &tmpPlayer);
-    }
-    /* remove the received database */
-    DeletePlayerConfig(CT_Central, atom);
-  }
-} /* User_ReceivePlayerConfig */
+	XBAtom atom, atomID;
+	CFGPlayerEx tmpPlayer;
+	int i;
+	atom = Network_ReceivePlayerConfig (CT_Central, 0, 0, data);
+	/* if atom is valid, data is complete */
+	if (ATOM_INVALID != atom) {
+		Dbg_User ("Got player from central\n");
+		RetrievePlayerEx (CT_Central, atom, &tmpPlayer);
+		i = tmpPlayer.id.PID;
+		if (i >= 0) {
+			/* store player under valid pid */
+			received++;
+			atomID = GUI_IntToAtom (i);
+			StorePlayerEx (CT_Central, atomID, &tmpPlayer);
+		}
+		/* remove the received database */
+		DeletePlayerConfig (CT_Central, atom);
+	}
+}								/* User_ReceivePlayerConfig */
 
 /*
  * received last player
  */
 void
-User_NoMorePlayers() {
-  Dbg_User("received %u players\n", received);
-  complete = XBTrue;
-  User_SendDisconnect();
-} /* User_NoMorePlayers */
+User_NoMorePlayers (void)
+{
+	Dbg_User ("received %u players\n", received);
+	User_SendDisconnect ();
+	Network_QueueEvent (XBNW_Disconnected, CENTRAL_FINISHED);
+}								/* User_NoMorePlayers */
 
 /*
  * receive player pid from server
@@ -172,19 +173,21 @@ User_NoMorePlayers() {
 void
 User_ReceivePlayerPID (const char *data)
 {
-  if ( !sscanf(data, "%i", &PID) ) {
-    PID = PID_INVALID;
-  }
-} /* User_ReceivePlayerPID */
+	if (!sscanf (data, "%i", &PID)) {
+		PID = PID_INVALID;
+	}
+}								/* User_ReceivePlayerPID */
 
+#ifdef unused
 /*
  * central has disconnected
  */
-void
+static void
 User_ReceiveDisconnect (unsigned id)
 {
-  Network_QueueEvent (XBNW_Disconnected, id);
-} /* User_ReceiveDisconnect */
+	Network_QueueEvent (XBNW_Disconnected, CENTRAL_DISCONNECT);
+}								/* User_ReceiveDisconnect */
+#endif
 
 /******************
  * get local data *
@@ -194,36 +197,28 @@ User_ReceiveDisconnect (unsigned id)
  * return if connection is up
  */
 XBBool
-User_Connected()
+User_Connected (void)
 {
-  return ( comm != NULL );
-} /* User_Connected */
+	return (comm != NULL);
+}								/* User_Connected */
 
 /*
  * return PID
  */
 int
-User_GetPID()
+User_GetPID (void)
 {
-  return PID;
-} /* User_GetPID */
+	return PID;
+}								/* User_GetPID */
 
 /*
  * return number of players received
  */
 int
-User_Received() {
-  return received;
-} /* User_Received */
-
-/*
- * return if players completely received
- */
-XBBool
-User_Complete()
+User_Received (void)
 {
-  return complete;
-} /* User_Complete */
+	return received;
+}								/* User_Received */
 
 /**************
  * queue data *
@@ -233,10 +228,17 @@ User_Complete()
  * send disconnect sequence, will shutdown after send
  */
 void
-User_SendDisconnect() {
-  Dbg_User("queueing disconnect sequence to central\n");
-  X2C_SendDisconnect(comm);
-} /* User_SendDisconnect */
+User_SendDisconnect (void)
+{
+	if (comm != NULL) {
+		Dbg_User ("queueing disconnect sequence to central\n");
+		X2C_SendDisconnect (comm);
+
+	}
+	else {
+		Dbg_User ("already disconnected from central\n");
+	}
+}								/* User_SendDisconnect */
 
 /*
  * queue registration data
@@ -244,9 +246,9 @@ User_SendDisconnect() {
 void
 User_SendRegisterPlayer (XBAtom atom)
 {
-  PID = PID_NONE;
-  X2C_SendPlayerConfig(comm, atom);
-} /* Use_SendRegisterPlayer */
+	PID = PID_NONE;
+	X2C_SendPlayerConfig (comm, atom);
+}								/* Use_SendRegisterPlayer */
 
 /*
  * unregister player
@@ -254,60 +256,61 @@ User_SendRegisterPlayer (XBAtom atom)
 void
 User_SendUnregisterPlayer (XBAtom atom)
 {
-} /* User_SendUnregisterPlayer */
+}								/* User_SendUnregisterPlayer */
 
 /*
  * queue request for scores
  */
 void
-User_RequestUpdate()
+User_RequestUpdate (void)
 {
-  complete = XBFalse;
-  received = 0;
-  RemoveAllPlayers(CT_Central);
-  X2C_QueryPlayerConfig(comm);
-  Dbg_User("queueing update request, old rankings deleted\n");
-} /* User_RequestUpdate */
+	received = 0;
+	RemoveAllPlayers (CT_Central);
+	X2C_QueryPlayerConfig (comm);
+	Dbg_User ("queueing update request, old rankings deleted\n");
+}								/* User_RequestUpdate */
 
 /*
  * queue current score
  */
 void
-User_SendGameStat (int numPlayers, BMPlayer *playerStat, int *pa)
+User_SendGameStat (int numPlayers, BMPlayer * playerStat, int *pa)
 {
-  int PID[MAX_PLAYER];
-  int Score[MAX_PLAYER];
-  BMPlayer *ps,*ps2;
-  int i,j,t=0,k;
+	int PID[MAX_PLAYER];
+	int Score[MAX_PLAYER];
+	BMPlayer *ps, *ps2;
+	int i, j, t = 0, k;
 
-  if(numPlayers>0) {
-    for (i=0,j=0, ps = playerStat; i < numPlayers; ps ++, i++) {
-      if(pa[i]) {
-	PID[j]=ps->PID;
-	Score[j]=0;
-	for (k=0, ps2 = playerStat; k < numPlayers; ps2 ++, k++) {
-	  if((ps->team==ps2->team) && (ps2->lives>0)) Score[j]=1;
+	if (numPlayers > 0) {
+		for (i = 0, j = 0, ps = playerStat; i < numPlayers; ps++, i++) {
+			if (pa[i]) {
+				PID[j] = ps->PID;
+				Score[j] = 0;
+				for (k = 0, ps2 = playerStat; k < numPlayers; ps2++, k++) {
+					if ((ps->team == ps2->team) && (ps2->lives > 0)) {
+						Score[j] = 1;
+					}
+				}
+				t += Score[j];
+				j++;
+			}
+		}
+		if (t == 0) {
+			for (i = 0; i < j; i++) {
+				Score[i] = 1;
+			}
+		}
 	}
-	t+=Score[j];
-	j++;
-      }
-    }
-    if(t==0) { // draw
-      for(i=0;i<j;i++) {
-	Score[i]=1;
-      }
-    }
-  } else { // game stat
-    j=-numPlayers;
-    for (i=0, ps = playerStat; i < j; ps ++, i++) {
-      PID[i]=ps->PID;
-      Score[i]=ps->lives;
-      Dbg_Out("send %d %d\n",PID[i],Score[i]);
-    }
-  }
+	else {
+		j = -numPlayers;
+		for (i = 0, ps = playerStat; i < j; ps++, i++) {
+			PID[i] = ps->PID;
+			Score[i] = ps->lives;
+		}
+	}
 
-  X2C_SendGameStat(comm, j, PID, Score);
-} /* User_SendGameStat */
+	X2C_SendGameStat (comm, j, PID, Score);
+}								/* User_SendGameStat */
 
 /*
  * end of file user.c

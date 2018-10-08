@@ -1,7 +1,7 @@
 /*
  * file x11_msgbox.c - 
  *
- * $Id: x11_msgbox.c,v 1.3 2004/05/14 10:00:36 alfie Exp $
+ * $Id: x11_msgbox.c,v 1.5 2006/02/09 21:21:25 fzago Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -21,7 +21,9 @@
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-#include "gui.h"
+
+#include "xblast.h"
+#include "x11_common.h"
 
 /*
  * not yet implemented
@@ -29,15 +31,15 @@
 void
 GUI_ErrorMessage (const char *fmt, ...)
 {
-  va_list argList;
+	va_list argList;
 
-  GUI_Bell ();
-  fputs ("*** ", stderr);
-  va_start (argList, fmt);
-  vfprintf (stderr, fmt, argList);
-  va_end (argList);
-  fputs (" ***\n", stderr);
-} /* GUI_ErrorMessage */
+	GUI_Bell ();
+	fputs ("*** ", stderr);
+	va_start (argList, fmt);
+	vfprintf (stderr, fmt, argList);
+	va_end (argList);
+	fputs (" ***\n", stderr);
+}								/* GUI_ErrorMessage */
 
 /*
  * end of file x11_msgbox.c

@@ -1,9 +1,9 @@
 /*
  * file mi_string.h -
  *
- * $Id: mi_string.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
+ * $Id: mi_string.h,v 1.5 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,10 +23,9 @@
 #ifndef _MI_STRING_H
 #define _MI_STRING_H
 
-#include "mi_base.h"
-
-extern XBMenuItem *MenuCreateString (int x, int y, int w_text, const char *text, int w, char *buffer, size_t len);
-extern void MenuDeleteString (XBMenuItem *item);
+extern XBMenuItem *MenuCreateString (int x, int y, int w_text, const char *text, int w,
+									 char *buffer, size_t len);
+extern void MenuDeleteString (XBMenuItem * item);
 
 #endif
 /*

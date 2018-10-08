@@ -1,12 +1,36 @@
+if SDL
+
+sdl_files=sdl_common.h sdl_event.h  sdl_config.h  sdl_image.h sdl_keysym.h\
+	sdl_text.h sdl_tile.h sdl_sprite.h 	sdl_pixmap.h\
+	sdl_common.c sdl_event.c sdl_atom.c sdl_config.c\
+	sdl_msgbox.c	sdl_init.c sdl_image.c sdl_text.c\
+	sdl_tile.c sdl_sprite.c sdl_pixmap.c sdl_keysym.c\
+	sdl_socket.c sdl_joystick.c sdl_socket.h sdl_sprite.h sdl_joystick.h\
+	sdl_sound.c
+x11_files= x11_sound.h 
+
+else
+
 if XBSNDSRV
-soundbinaries =  xbsndsrv
+soundbinaries =  aixbsndsrv
 else
 soundbinaries =  
 endif
 
-bin_PROGRAMS =  ${soundbinaries} xblast
+sdl_files=
+x11_files=	x11_common.c x11_event.c x11_atom.c x11_config.c\
+	x11_msgbox.c	x11c_init.c x11c_image.c x11c_text.c\
+	x11c_tile.c x11c_sprite.c 	x11c_pixmap.c x11_sound.c\
+	x11_socket.c x11_joystick.c\
+	x11_common.h x11_event.h  x11_config.h  x11c_image.h\
+	x11c_text.h x11c_tile.h x11c_sprite.h 	x11c_pixmap.h\
+	x11_sound.h x11_socket.h x11_joystick.h  
 
-xblast_SOURCES=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
+endif
+
+bin_PROGRAMS =  ${soundbinaries} aixblast
+
+aixblast_SOURCES=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
 	color.c status.c player.c action.c bomb.c event.c image.c\
 	shrink.c func.c info.c ini_file.c atom.c scramble.c \
 	demo.c debug.c level.c random.c \
@@ -24,10 +48,7 @@ xblast_SOURCES=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
 	com_from_central.c com_central.c user.c dat_rating.c \
 	cfg_main.c cfg_level.c cfg_player.c cfg_game.c\
 	cfg_control.c 	cfg_stat.c cfg_demo.c cfg_xblast.c\
-	x11_common.c x11_event.c x11_atom.c x11_config.c\
-	x11_msgbox.c	x11c_init.c x11c_image.c x11c_text.c\
-	x11c_tile.c x11c_sprite.c 	x11c_pixmap.c x11_sound.c\
-	x11_socket.c x11_joystick.c  bot.c xblast.h util.h \
+	bot.c xblast.h util.h \
 	str_util.h intro.h introdat.h map.h sprite.h 	color.h \
 	status.h player.h action.h bomb.h event.h image.h \
 	shrink.h func.h info.h ini_file.h atom.h scramble.h \
@@ -46,38 +67,64 @@ xblast_SOURCES=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
 	com_newgame.h com_to_central.h com_from_central.h com_central.h\
 	user.h dat_rating.h 	cfg_main.h cfg_level.h cfg_player.h\
 	cfg_game.h cfg_control.h 	cfg_stat.h cfg_demo.h cfg_xblast.h\
-	x11_common.h x11_event.h  x11_config.h  x11c_image.h\
-	x11c_text.h x11c_tile.h x11c_sprite.h 	x11c_pixmap.h\
-	x11_sound.h x11_socket.h x11_joystick.h  bot.h shrinkdat.h\
+	bot.h shrinkdat.h\
 	version.h  x11c_sprite.h socket.h  gui.h geom.h config.h snd.h\
-	common.h menu_layout.h chat.h chat.c menu_edit.c menu_edit.h version.c
+	menu_layout.h chat.h chat.c menu_edit.c menu_edit.h version.c\
+	${sdl_files} ${x11_files} \
+	bad_words.c
 
-EXTRA_DIST =  xblast.man autogen.sh Makefile.w32 Makefile.windows *.ico \
-	*.coff xblast.rc w32*.h w32*.c time.c timeval.h Makefile.dist Imakefile\
+EXTRA_DIST = config.rpath xblast.man autogen.sh Makefile.w32 Makefile.windows *.ico \
+	*.coff xblast.rc w32*.h w32*.c time.c timeval.h Imakefile\
 	image/misc/*.ppm image/misc/*.pbm  image/explosion/*.pbm \
 	image/explosion/*.ppm image/score/*.epm image/score/*.ppm \
 	image/sprite/*.pbm image/sprite/*.ppm image/block/*.ppm \
-	image/sprite/*.epm level/*.xal sounds/*.raw
+	image/sprite/*.epm level/*.xal sounds/*.raw \
+	debian/changelog debian/control debian/rules debian/compat bad_words.txt
 
-xbsndsrv_SOURCES = xbsndsrv.c snd.h 
+aixbsndsrv_SOURCES = xbsndsrv.c snd.h 
 
 game_datadir=@game_datadir@
-
-
+localedir = $(game_datadir)/locale
+DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
+ 
 install-data-local:
 	@$(NORMAL_INSTALL)
 	if test -d $(srcdir)/image; then \
-	  $(mkinstalldirs)     $(game_datadir); \
-	  $(mkinstalldirs) $(game_datadir)/image; \
-	  cp -r $(srcdir)/image/* $(game_datadir)/image;\
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir); \
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/image; \
+	  cp -r $(srcdir)/image/* $(DESTDIR)$(game_datadir)/image;\
 	fi; \
 	if test -d $(srcdir)/level; then \
-	  $(mkinstalldirs) $(game_datadir)/ ; \
-	  $(mkinstalldirs) $(game_datadir)//level; \
-	  cp -r $(srcdir)/level/* $(game_datadir)//level;\
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/level; \
+	  cp -r $(srcdir)/level/* $(DESTDIR)$(game_datadir)/level;\
 	fi; \
 	if test -d $(srcdir)/sounds; then \
-	  $(mkinstalldirs) $(game_datadir)/ ; \
-	  $(mkinstalldirs) $(game_datadir)//sounds; \
-	  cp -r $(srcdir)/sounds/* $(game_datadir)//sounds;\
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/ ; \
+	  $(mkinstalldirs) $(DESTDIR)$(game_datadir)/sounds; \
+	  cp -r $(srcdir)/sounds/* $(DESTDIR)$(game_datadir)/sounds;\
 	fi;
+
+indent:
+	 indent -npro -gnu -ts4 -i4 -br -lp -sob -l100 -ss -ncs *.[ch]
+
+SUBDIRS = po
+
+ACLOCAL_AMFLAGS = -I m4
+
+install-game-data:
+	$(INSTALL) -d $(DESTDIR)${game_datadir}
+	if test -r ${srcdir}/bad_words.txt; then \
+		cp -f -p ${srcdir}/bad_words.txt $(DESTDIR)${game_datadir}/; \
+	fi;
+	cd level           ; $(MAKE) install-game-data ; cd -
+	cd image/explosion ; $(MAKE) install-game-data ; cd -
+	cd image/sprite    ; $(MAKE) install-game-data ; cd -
+	cd image/block     ; $(MAKE) install-game-data ; cd -
+	cd image/misc      ; $(MAKE) install-game-data ; cd -
+	cd image/score     ; $(MAKE) install-game-data ; cd -
+
+#ai_version.h:
+#	echo "const int ai_version = " > ai_version.h
+#	svn info | grep 'Last Changed Rev' | cut -d' ' -f 2 >> ai_version.h
+#	echo ";" >> ai_version.h

@@ -1,9 +1,9 @@
 /*
  * file w32_image.h -
  *
- * $Id: w32_image.h,v 1.2 2004/05/14 10:00:35 alfie Exp $
+ * $Id: w32_image.h,v 1.4 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -25,15 +25,17 @@
 
 #include "w32_common.h"
 
-#include "xblast.h"
+
 #include "color.h"
 
 extern XBBool InitImages (void);
 extern void FinishImages (void);
 extern HBITMAP ReadPbmBitmap (const char *path, const char *filename);
 extern HBITMAP ReadRgbPixmap (const char *path, const char *filename);
-extern HBITMAP ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg, XBColor add);
-extern HBITMAP ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBColor *color);
+extern HBITMAP ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg,
+							  XBColor add);
+extern HBITMAP ReadEpmPixmap (const char *path, const char *filename, int n_colors,
+							  const XBColor * color);
 
 #endif
 /*

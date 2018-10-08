@@ -1,7 +1,7 @@
 /*
  * file com.c - toplevel functions for all communications
  *
- * $Id: com.c,v 1.3 2004/05/14 10:00:33 alfie Exp $
+ * $Id: com.c,v 1.6 2006/02/09 21:21:23 fzago Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,63 +20,67 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "com.h"
 
-#include "com_base.h"
-#include "net_socket.h"
+#include "xblast.h"
 
 /*
- * communication prt becomes writeable
+ * file descriptor becomes writeable
  */
 void
 CommWriteable (int fd)
 {
-  XBComm *comm = CommFind (fd);
-  if (NULL != comm) {
-    assert (NULL != comm->writeFunc);
-    switch ((*comm->writeFunc) (comm)) {
-    case XCR_Finished:
-    case XCR_Error:
-      assert (NULL != comm->deleteFunc);
-      (void) (*comm->deleteFunc) (comm);
-      break;
-    default:
-      break;
-    }
-  }
-} /* CommWrite */
+	/* find associated XBComm */
+	XBComm *comm = CommFind (fd);
+	if (NULL != comm) {
+		/* call write handler */
+		assert (NULL != comm->writeFunc);
+		switch ((*comm->writeFunc) (comm)) {
+		case XCR_Finished:
+		case XCR_Error:
+			/* remove on error or finish */
+			assert (NULL != comm->deleteFunc);
+			(void)(*comm->deleteFunc) (comm);
+			break;
+		default:
+			break;
+		}
+	}
+}								/* CommWriteable */
 
 /*
- * communication prt becomes readable
+ * file descriptor becomes readable
  */
 void
 CommReadable (int fd)
 {
-  XBComm *comm = CommFind (fd);
-  if (NULL != comm) {
-    assert (NULL != comm->readFunc);
-    switch ((*comm->readFunc) (comm)) {
-    case XCR_Finished:
-    case XCR_Error:
-      assert (NULL != comm->deleteFunc);
-      (void) (*comm->deleteFunc) (comm);
-      break;
-    default:
-      break;
-    }
-  }
-} /* CommRead */
+	/* find associated XBComm */
+	XBComm *comm = CommFind (fd);
+	if (NULL != comm) {
+		/* call read handler */
+		assert (NULL != comm->readFunc);
+		switch ((*comm->readFunc) (comm)) {
+		case XCR_Finished:
+		case XCR_Error:
+			/* remove on error or finish */
+			assert (NULL != comm->deleteFunc);
+			(void)(*comm->deleteFunc) (comm);
+			break;
+		default:
+			break;
+		}
+	}
+}								/* CommReadable */
 
 /*
  * delete given communication
  */
 void
-CommDelete (XBComm *comm)
+CommDelete (XBComm * comm)
 {
-  assert (NULL != comm);
-  assert (NULL != comm->deleteFunc);
-  (void) (*comm->deleteFunc) (comm);
-} /* CommDelete */
+	assert (NULL != comm);
+	assert (NULL != comm->deleteFunc);
+	(void)(*comm->deleteFunc) (comm);
+}								/* CommDelete */
 
 /*
  * end of file com.c

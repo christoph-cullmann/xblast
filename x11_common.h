@@ -1,9 +1,9 @@
 /*
  * file x11_common.h -
  *
- * $Id: x11_common.h,v 1.4 2004/05/16 16:52:46 iskywalker Exp $
+ * $Id: x11_common.h,v 1.6 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -31,8 +31,6 @@
 #include <X11/keysym.h>
 #include <X11/Intrinsic.h>
 
-#include "common.h"
-
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/wait.h>
@@ -50,7 +48,17 @@
 #include <sys/sockio.h>
 #endif
 
-#include "xblast.h"
+#include "x11_event.h"
+#include "x11_config.h"
+#include "x11_joystick.h"
+#include "x11c_image.h"
+#include "x11c_pixmap.h"
+#include "x11_socket.h"
+#include "x11c_tile.h"
+#include "x11c_text.h"
+#include "x11_sound.h"
+#include "x11c_sprite.h"
+
 /*
  * global constants
  */
@@ -59,24 +67,24 @@
 /*
  * global variables;
  */
-extern Display  *dpy;
-extern int       defDepth;
-extern int       bitsPerPixel;
-extern Window    win;
-extern Colormap  cmap;
-extern Visual   *defVisual;
-extern int       whitePixel;
-extern int 	 blackPixel;
-extern int       iconified;
+extern Display *dpy;
+extern int defDepth;
+extern int bitsPerPixel;
+extern Window win;
+extern Colormap cmap;
+extern Visual *defVisual;
+extern int whitePixel;
+extern int blackPixel;
+extern int iconified;
 
-extern char     *xblastResName;
-extern char     *xblastResClass;
+extern char *xblastResName;
+extern char *xblastResClass;
 
-extern GC 	 gcFromPix;
-extern GC 	 gcWindow;
-extern GC        gcClearPix;
+extern GC gcFromPix;
+extern GC gcWindow;
+extern GC gcClearPix;
 
-extern Pixmap    pix;
+extern Pixmap pix;
 
 #endif
 /*

@@ -1,9 +1,9 @@
 /*
  * file com_listen.h - listen for client to connect
  *
- * $Id: com_listen.h,v 1.4 2004/11/05 16:43:17 lodott Exp $
+ * $Id: com_listen.h,v 1.5 2006/02/09 21:21:23 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,9 +22,6 @@
  */
 #ifndef _COM_LISTEN_H
 #define _COM_LISTEN_H
-
-#include "cfg_game.h"
-#include "com_base.h"
 
 /*
  * type definitions

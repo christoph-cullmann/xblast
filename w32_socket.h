@@ -1,9 +1,9 @@
 /*
  * file w32_socket.h - true bsd sockets for xblast
  *
- * $Id: w32_socket.h,v 1.2 2004/05/14 10:00:36 alfie Exp $
+ * $Id: w32_socket.h,v 1.3 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,7 +23,7 @@
 #ifndef XBLAST_W32_SOCKET_H
 #define XBLAST_W32_SOCKET_H
 
-#include "xblast.h"
+
 
 /*
  * global prototypes

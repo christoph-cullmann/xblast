@@ -1,7 +1,7 @@
 /*
  * x11_atom.h - atoms (aka XrmQuark) for faster database handling
  *
- * $Id: x11_atom.c,v 1.3 2004/05/14 10:00:36 alfie Exp $
+ * $Id: x11_atom.c,v 1.5 2006/02/09 21:21:25 fzago Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,9 +20,9 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "x11_common.h"
 
-#include "gui.h"
+#include "xblast.h"
+#include "x11_common.h"
 
 /*
  * Initialize Atoms
@@ -30,48 +30,48 @@
 XBBool
 GUI_InitAtoms (void)
 {
-  XrmInitialize ();
-  return XBTrue;
-} /* InitAtoms */
+	XrmInitialize ();
+	return XBTrue;
+}								/* InitAtoms */
 
 /*
  * conversion string to atom
  */
-XBAtom 
+XBAtom
 GUI_StringToAtom (const char *string)
 {
-  XBAtom atom;
+	XBAtom atom;
 
-  assert (NULL != string);
-  atom = XrmStringToQuark (string);
+	assert (NULL != string);
+	atom = XrmStringToQuark (string);
 #ifdef DEBUG_ATOM
-  fprintf (stderr, "atom = %lu\n", atom);
+	fprintf (stderr, "atom = %lu\n", atom);
 #endif
-  return atom;
-} /* GUI_StringToAtom */
+	return atom;
+}								/* GUI_StringToAtom */
 
 /*
  * formatted string to atom
  */
-XBAtom 
+XBAtom
 GUI_FormatToAtom (const char *fmt, ...)
 {
-  XBAtom atom;
-  char tmp[256];
-  va_list argList;
+	XBAtom atom;
+	char tmp[256];
+	va_list argList;
 
-  assert (NULL != fmt);
-  /* formatting */
-  va_start (argList, fmt);
-  vsprintf (tmp, fmt, argList);
-  va_end (argList);
-  /* conversion */
-  atom = XrmStringToQuark (tmp);
+	assert (NULL != fmt);
+	/* formatting */
+	va_start (argList, fmt);
+	vsprintf (tmp, fmt, argList);
+	va_end (argList);
+	/* conversion */
+	atom = XrmStringToQuark (tmp);
 #ifdef DEBUG_ATOM
-  fprintf (stderr, "atom = %lu\n", atom);
+	fprintf (stderr, "atom = %lu\n", atom);
 #endif
-  return atom;
-} /* GUI_FormatToAtom */
+	return atom;
+}								/* GUI_FormatToAtom */
 
 /*
  * convert int to atom
@@ -79,17 +79,17 @@ GUI_FormatToAtom (const char *fmt, ...)
 XBAtom
 GUI_IntToAtom (int value)
 {
-  return GUI_FormatToAtom ("%d", value);
-} /* GUI_IntToAtom */
+	return GUI_FormatToAtom ("%d", value);
+}								/* GUI_IntToAtom */
 
 /*
  * conversion atom to string
  */
-const char * 
+const char *
 GUI_AtomToString (XBAtom atom)
 {
-  return XrmQuarkToString (atom);
-} /* GUI_StringToAtom */
+	return XrmQuarkToString (atom);
+}								/* GUI_StringToAtom */
 
 /*
  * convert atom int or -1 
@@ -97,13 +97,13 @@ GUI_AtomToString (XBAtom atom)
 int
 GUI_AtomToInt (XBAtom atom)
 {
-  int value;
+	int value;
 
-  if (1 != sscanf (XrmQuarkToString (atom), "%d", &value) ) {
-    return -1;
-  }
-  return value;
-} /* GUI_AtomToInt */
+	if (1 != sscanf (XrmQuarkToString (atom), "%d", &value)) {
+		return -1;
+	}
+	return value;
+}								/* GUI_AtomToInt */
 
 /*
  * end of file x11_atom.c

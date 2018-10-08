@@ -1,9 +1,9 @@
 /*
  * file w32_sndsrv.c - sound library for xblast
  *
- * $Id: w32_sndsrv.h,v 1.2 2004/05/14 10:00:36 alfie Exp $
+ * $Id: w32_sndsrv.h,v 1.4 2006/02/09 21:21:25 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -25,7 +25,7 @@
 
 #include "w32_common.h"
 #include "snd.h"
-#include "xblast.h"
+
 
 /*
  * global macros
@@ -45,7 +45,7 @@
  */
 extern XBBool SoundCheckWaveOut (XBBool stereo);
 extern DWORD PASCAL _export SoundThreadStereo (void *);
-extern char * SoundLoadFile (SND_Id id);
+extern char *SoundLoadFile (SND_Id id);
 
 #endif
 /*

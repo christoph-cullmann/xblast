@@ -1,9 +1,9 @@
 /*
- * file game.h - rin the game 
+ * file game.h - rin the game
  *
- * $Id: game.h,v 1.4 2004/08/04 04:46:15 iskywalker Exp $
+ * $Id: game.h,v 1.6 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,11 +23,6 @@
 #ifndef XBLAST_GAME_H
 #define XBLAST_GAME_H
 
-#include "action.h"
-#include "cfg_game.h"
-#include "cfg_player.h"
-#include "ini_file.h"
-
 /*
  * global macrors
  */
@@ -36,26 +31,30 @@
 /*
  * global types
  */
-typedef struct {
-  CFGGame   game;
-  CFGPlayer player[MAX_PLAYER];
+typedef struct
+{
+	CFGGame game;
+	CFGPlayer player[MAX_PLAYER];
 } XBGameConfig;
 
 /*
  * global prototypes
  */
-extern void   	   ClearPlayerAction (PlayerAction *);
-extern XBBool 	   GameEventLoop (XBEventCode eCode, XBEventData *eData);
-extern XBBool 	   PauseEvalAction (int numPlayer, PlayerAction *playerAction, int pauseStatus);
-extern void   	   GameTurn (int gameTime, int numPlayer, int *numActive);
-extern int    	   GameEvalAction (int numPlayer, PlayerAction *playerAction);
-extern void        GameUpdateWindow (void);
-extern void        LevelBegin (const char *name);
-extern const char *LevelResult (int gameTime, int *lastTeam, int numPlayers, const DBRoot *level, XBBool store);
+extern void ClearPlayerAction (PlayerAction *);
+extern XBBool GameEventLoop (XBEventCode eCode, XBEventData * eData);
+extern XBBool PauseEvalAction (int numPlayer, PlayerAction * playerAction, int pauseStatus);
+extern void GameTurn (int gameTime, int numPlayer, int *numActive);
+/* AbsInt begin */
+extern int GameEvalAction (int numPlayer, PlayerAction * playerAction, int *aborted);
+/* AbsInt end */
+extern void GameUpdateWindow (void);
+extern void LevelBegin (const char *name);
+extern const char *LevelResult (int gameTime, int *lastTeam, int numPlayers, const DBRoot * level,
+								XBBool store);
 
 extern XBBool InitGame (XBPlayerHost, CFGType, const CFGGame *, PlayerAction *);
 extern void FinishGame (const CFGGame *);
-extern int  GetNumOfPlayers (void);
+extern int GetNumOfPlayers (void);
 
 #endif
 /*

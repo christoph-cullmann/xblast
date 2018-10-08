@@ -14,7 +14,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Publis License for more details.
  *
@@ -25,7 +25,6 @@
 
 #ifndef _BOT_H
 #define _BOT_H
-#include "player.h"
 
 #define NB_DIR 5
 #define STOP  0
@@ -43,8 +42,9 @@
 
 #define NB_PRIORITY 6
 
-extern void gestionBot(BMPlayer *player_stat, PlayerAction *player_action, int numero_bot, int num_player);
-extern void SetBotTime(int game_time);
+extern void gestionBot (BMPlayer * player_stat, PlayerAction * player_action, int numero_bot,
+						int num_player);
+extern void SetBotTime (int game_time);
 
 #endif
 /*

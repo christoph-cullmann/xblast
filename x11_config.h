@@ -1,9 +1,9 @@
 /*
  * file x11_config.h - x11 specific configuration
  *
- * $Id: x11_config.h,v 1.3 2004/05/14 10:00:36 alfie Exp $
+ * $Id: x11_config.h,v 1.4 2006/02/09 18:31:47 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -30,22 +30,24 @@
  */
 
 /* font configuration */
-typedef struct {
-  const char *small;
-  const char *medium;
-  const char *large;
+typedef struct
+{
+	const char *small;
+	const char *medium;
+	const char *large;
 } CFGFont;
 /* colors */
-typedef struct {
-  XBColor titleFg;
-  XBColor titleBg;
-  XBColor darkText1;
-  XBColor darkText2;
-  XBColor lightText1;
-  XBColor lightText2;
-  XBColor statusFg;
-  XBColor statusBg;
-  XBColor statusLed;
+typedef struct
+{
+	XBColor titleFg;
+	XBColor titleBg;
+	XBColor darkText1;
+	XBColor darkText2;
+	XBColor lightText1;
+	XBColor lightText2;
+	XBColor statusFg;
+	XBColor statusBg;
+	XBColor statusLed;
 } CFGColor;
 
 /*
@@ -54,7 +56,7 @@ typedef struct {
 extern const CFGFont *GetFontConfig (void);
 extern const CFGColor *GetColorConfig (void);
 
-#endif 
+#endif
 /*
  * end of file x11_config.h
  */

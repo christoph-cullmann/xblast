@@ -1,9 +1,9 @@
 /*
  * file menu_extras.h - user interface for extras like demo playback and statistics
  *
- * $Id: menu_extras.h,v 1.4 2005/01/23 16:12:49 lodott Exp $
+ * $Id: menu_extras.h,v 1.5 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,7 +23,7 @@
 #ifndef _MENU_EXTRAS_H
 #define _MENU_EXTRAS_H
 
-#include "xblast.h"
+
 
 /*
  * global prototypes

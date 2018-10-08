@@ -1,9 +1,9 @@
 /*
  * file com_to_central.h - handle communications with clients
  *
- * $Id: com_from_central.h,v 1.4 2004/11/06 02:01:54 lodott Exp $
+ * $Id: com_from_central.h,v 1.7 2006/02/09 21:21:23 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  * Added by Koen De Raedt for central support
  *
@@ -13,7 +13,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,35 +24,22 @@
 #ifndef _COM_FROM_CENTRAL_H
 #define _COM_FROM_CENTRAL_H
 
-#include "atom.h"
-#include "com_base.h"
-#include "net_socket.h"
-#include "network.h"
-#include "ini_file.h"
-
 /*
  * global prototypes
  */
+extern XBComm *C2X_CreateComm (const XBSocket * socket);
 
-/* constructor */
-extern XBComm *C2X_CreateComm (const XBSocket *socket);
-
-/* local data */
+/* get data */
 extern XBBool C2X_Connected (unsigned id);
 extern const char *C2X_HostName (unsigned id);
 extern const char *C2X_LocalName (unsigned id);
 
 /* queue data */
-extern void C2X_SendPlayerConfig (unsigned id, unsigned hostId, int player, XBAtom);
-extern void C2X_Disconnect (unsigned id);
-extern void C2X_SendUserPID (unsigned id, int PID);
+extern void C2X_QueuePlayerRankings (unsigned id);
+extern void C2X_QueueUserPID (unsigned id, int PID);
+extern void C2X_QueueDisconnect (unsigned id);
 
 #endif
 /*
  * end of file com_to_central.h
  */
-
-
-
-
-

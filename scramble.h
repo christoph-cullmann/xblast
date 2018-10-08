@@ -1,9 +1,9 @@
 /*
  * file scramble.h - scrambling blocks
  *
- * $Id: scramble.h,v 1.5 2004/11/29 14:44:49 lodott Exp $
+ * $Id: scramble.h,v 1.8 2006/02/10 15:07:41 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,25 +23,25 @@
 #ifndef __SCRAMBLE_H
 #define __SCRAMBLE_H
 
-#include "ini_file.h"
-
 /*
  * global prototypes
  */
-extern XBBool ParseLevelScramble (const DBSection *sectionDraw, const DBSection *sectionDel, DBSection *warn1, DBSection *warn2);
+extern XBBool ParseLevelScramble (const DBSection * sectionDraw, const DBSection * sectionDel,
+								  DBSection * warn1, DBSection * warn2);
 extern void DoScramble (int gameTime);
- 
-extern int getScrambleTimes(int p_time); // XBCC
+
+extern int getScrambleTimes (int p_time);	// XBCC
 /* Scramble Structure */
 
-typedef struct {
-  int      time;
-  unsigned row[MAZE_H];
+typedef struct
+{
+	int time;
+	unsigned row[MAZE_H];
 } XBScrambleData;
 extern XBScrambleData scrambleDraw;
 extern XBScrambleData scrambleDel;
-extern XBScrambleData *GetScrDel ();
-extern XBScrambleData *GetScrDraw ();
+extern XBScrambleData *GetScrDel (void);
+extern XBScrambleData *GetScrDraw (void);
 
 #endif
 /*

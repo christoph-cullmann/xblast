@@ -1,0 +1,60 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Chauuud
+author=Simon
+hint=
+gameMode=R23456STDL
+
+[shrink]
+
+
+
+[func]
+
+[player]
+bombs=3
+range=300
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+
+[graphics]
+block00=karo_light		#000000 #1E90FF #000080
+block01=karo_light_X		#000000 #1E90FF #000080
+block02=pyramid		#000000 #008B8B #000000
+block03=pyramid_R		#000000 #008B8B #000000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=chess_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_____________B
+row07=B_____________B
+row08=B_____________B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

@@ -1,0 +1,10 @@
+config.status
+config.log
+cscope.out
+Makefile
+autom4te.cache
+xbsndsrv
+config.h
+.deps
+xblast
+stamp-h1

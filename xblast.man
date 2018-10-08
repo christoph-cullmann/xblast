@@ -1,491 +1,181 @@
-.TH xblast 1 "Release 2.6.1 (September 18th 1999)"
+.TH xblast 6x "Release 2.10.0 (Februar 27th 2005)"
 .SH NAME
-XBlast - Multi-player "Blast the Others" game
+XBlast (TNT) \- Multi-player "Blast the Others" game
 .PP
+
+
 .SH SYNOPSIS
-.B xblast \fI [ [player1]@[display1] [player2]@[display2] ...] [options]
+.B xblast \fI [options]
 .PP
+
+
 .SH DESCRIPTION
 .PP
 XBlast is a multi-player arcade game for X11R5/R6. The game can be played
 with at least two players and up to six players. It was inspired by
-the video/computer game Bomberman(Dynablaster), which was to my
+the video/computer game Bomberman/Dynablaster which was to my
 knowledge first programmed for NEC's PC Engine/Turbo Grafx. Other
 (commercial) versions of the original game exist for IBM-PC, Atari ST,
 Amiga, NES, GameBoy and Super NES.
 .PP
-.SH PLAYER SETUP
-If you never have started xblast before, take a look at the 
-section 
-.B LAUNCHING XBLAST
-below.
+
+
+.SH
+Actualized information you can obtain on the web page:
+http://xblast.sourceforge.net/
+Follow the link Player-Tutorials
+
+
+.SH LAUNCHING XBLAST
+Just type xblast in an xconsole.
 .PP
-In order to setup XBlast via command-line you have to define
-the players and their according displays first. The player setup
-can only be omitted when loading the default or a 
-named setup (using \fB-D\fP or \fB-D=\fP\fIsetup\fP).
-The players have to be the first command-line arguments given
-to xblast. They can be given in one of the following formats
-.TP
-.I playerName@displayName
-This defines a player named 
-.I playerName
-using the display
-.I displayName.
-.TP
-.I playerName
-As above, but the player will be using the default display,
-i.e. the one defined by the environment variable \fBDISPLAY\fP
-or by the option \fB-display\fP.
-.TP
-.I @displayName
-This defines a player at the display 
-.I displayName.
-The player name will be taken from internal defaults or
-from the X-Resources (see below).
-.TP
-.I @
-As above, but the player will be using the default display,
-i.e. the one defined by the environment variable \fBDISPLAY\fP
-or by the option \fB-display\fP.
-.PP
-If two players have the same \fIdisplayName\fP (or both of them
-none at all), they will be playing in the same window at their
-display \fIdisplayName\fP. The first player given will be using
-the number pad for control, while the second player will
-use alphanumeric part for control. There can be only one or
-two players at one display.
-.PP
-.SH TEAM MODE OPTION
-Since version 2.2 \fIXBlast\fP features several team modes, allowing
-players to cooperate: 
-.TP
-.B -single
-In this mode each players plays for himself, .i.e the team mode is disabled.
-It is also the default setting.
-.TP
-.B -team 
-In this mode two players work together as one team. The players 1 & 2,
-3 & 4 and 5 & 6 each form a team. In order to win, only one player of
-a team has to survive. This mode only works with 4 or 6 players.
-.TP
-.B -double
-This mode is still experimental. Each team consits of two players at
-one display, where both player sprites have the same name and colors.
-A two-team-game must be setup like a two-player-game with option
--double. The same for three and four player games.
-.PP
+
+
 .SH SOUND OPTIONS
-These options are only valid, when \fIXBlast\fP was compiled with the
-optional Linux sound support.
+This option is only valid when \fIXBlast\fP was compiled with the
+optional sound support. Freebsd, Linux and Sun should be supported.
 .TP
-.B -stereo
-This enables the stereo sound support for \fIXBlast\fP. This is the default
-option.
-.TP
-.B -mono
-This enables the mono sound support.
-.TP
-.B -nosound
+.B -ns
 This disables the sound support.
 .PP
-.SH DEMO OPTIONS
-These options allow you to record an playback demos of your games.
-.TP
-.B -R
-This enables the demo recording during the game. The demos will be stored
-in files named xblastXXXX.dem, where the number XXXX will be increased 
-after each level.
-.B -d \fIdemoFile [demoFile ...]
-This option enables Playback of the demos specified by \fIdemoFile\fP. 
-.PP
+
+
 .SH OTHER OPTIONS
-The program \fIXBlast\fP supports the following command-line options
-besides the player setup. With the exception of \fI+u\fP
-and \fI+U\fP options beginning with a `+'
-restore a setting to its default. This is useful for modifying
-loaded setups or X-resources.
+The program \fIXBlast\fP supports the following command-line options:
 .TP
-.B -display 
-This option specifies your display. This display is used for all players, 
-where a display name has been omitted (see above).
+.B -central
+This option starts the program as central server.
 .TP
-.B -?, -h
-This option causes \fIXBlast\fP to print a usage message.
-.TP
-.B -bw
-The option forces black and white mode for all displays.
-.TP
-.B +bw
-The option indicates to allow the color mode for all displays, 
-which support it.
-.TP
-.B -D
-This option indicates to load default settings from the file ".xblast" 
-in your home directory. This save file will be used by
-the Tcl/Tk based launcher in the package.
-.TP
-.B -D=\fIsetup
-This option indicates to load the game setting named \fIsetup\fP as default.
-The setup is loaded from the file \fIsetup\fP in the directory 
-".xblast-setups" in your home directory.
-.TP
-.B -f \fInumber
-This option sets the frame rate to \fInumber\fP frames per second.
-The default value is 20.
-.TP
-.B -F
-The options disables the fork mode. Only one process is running now.
-.B +F
-This option causes \fIXBlast\fP to fork and run one process for each
-display. Very useful if you are playing on XTerminals connected
-to a fast server.
-.TP
-.B -L \fInumber
-This option sets the number of lives per player to \fInumber\fP.
-The default value is 3.
-.TP
-.B -l \fIlevelID
-This option sets the starting level to \fIlevelID\fP 
-The option
-.B -l
-is ignored when using random level order.
-Use
-.B -s
-to determine the \fIlevelID\fP of all levels available.
-.TP
-.B -q
-The option turns off bell sound. 
-.TP
-.B +q
-The option turn on bell sound.
-.TP
-.B -r
-The option sets the random mode for level order and player position on.
-This option does \fBnot\fP override the options 
-.I +rp
-and
-.I +rl
-or the equivalent resources.
-.TP
-.B +r
-The option sets the random mode for level order and player position off.
-This option does \fBnot\fP override the options 
-.I -rp
-and
-.I -rl
-or the equivalent resources.
-.TP 
-.B -rl
-The option turns on random mode for level order.
-.TP 
-.B +rl
-The option turns off random mode for level order.
-.TP 
-.B -rp
-The option turns on random mode for player positions.
-.TP 
-.B +rp
-The option turns off random mode for player positions.
-.TP
-.B -S
-This option indicates to save the current settings as default to the file 
-".xblast" in your home directory. This save file will be used by
-the Tcl/Tk based launcher in the package.
-.TP
-.B -S=\fIsetup
-This option indicates to save the current settings under the name
-\fIsetup\fP.  The setup will be saved in the directory
-".xblast-setups" in your home under the filename \fIsetup\fP.
-.TP
-.B -s
-The option forces \fIXBlast\fP to print a list of all levels. 
-The list contains the level ID, its name
-and author.
-.TP
-.B -u \fIlevelID [levelID ...]
-The option indicates to use the levels given by \fIlevelID\fP for
-playing.  \fIlevelID can either be the id of a single level or a
-interval of ids as \"left-right\".  These levels will be added to the
-levels already selected in a loaded setup or X-resource.  This option
-is useful to add levels to a loaded setup (see \fI-D, -D=\fP).
-.TP
-.B -U \fIlevelID [levelID ...]
-The option indicates to use the levels given by \fIlevelID\fP for playing. 
-Any level not given in that list will not be played. This option is useful
-to override any level selection form a load setup (see \fI-D, -D=\fP).
-.TP
-.B +u \fIlevelID ...
-The option indicates to ignore any level given by its \fIlevelID\fP
-for playing.
-These option removes the given levels from the selection.
-It can be used to remove levels to play from a loaded setup.
-(see \fI-D, -D=\fP).
-.TP
-.B +U \fIlevelID [levelID ...]
-The option indicates to ignore any level given by its \fIlevelID\fP
-for playing.  These option removes the given levels from the
-selection.  Any level not given will be selected to play.  It can be
-used to override loaded setups.  (see \fI-D, -D=\fP).
-.TP
-.B -v \fInumber
-This option sets the number of victories to win game to \fInumber\fP.
-The default value is 5.
-.TP
-.B -wm
-This options allows \fIXBlast\fP to override the reparent request by
-the window manager, i.e. the \fIXBlast\fP windows will not be managed by 
-the window managers. This may speed up performance on some systems.
-.TP
-.B +wm
-This options allows the \fIXBlast\fP windows to be managed by the
-window manager. 
+.B -check
+This option verifies if all levels are loadable.
 .PP
-.SH LAUNCHING XBLAST 
-The easiest way to start \fIXBlast\fP is to use \fItkXBlast(1)\fP
-The second easiest way to launch \fIXBlast\fP is to start it without
-any command-line arguments. Then \fIXBlast\fP runs an interactive
-game setup querying for players and game parameters.
-.PP
-Since it faster to launch \fIXBlast\fP using command-line arguments,
-some examples are given here.
-A detailed description of all command-line
-arguments is given in the sections \fBPLAYER SETUP\fP
-and \fBOTHER OPTIONS\fP (see above).
-.PP
-In the first example xblast is invoked for two players (named
-\fIOlli\fP and\fI Rodi\fP) at one display, the default display.  The
-default display's name is taken from the environment variable
-\fBDISPLAY\fP.
-.br
-.B $ xblast Olli Rodi
-.br
-In this example defaults are used for all settings, e.g
-3 victories needed to win the game, 3 lives per player.
-.PP
-If \fIRodi\fP is using his own X-terminal (or workstation) \fIX25\fP,
-use
-.br
-.B $ xblast Olli Rodi@x25:0
-.br
-Do not forget that the player \fIOlli\fP needs access permission
-to the display of player \fIRodi\fP. This can be achieved by
-using \fBxhost.\fP  If \fIXBlast\fP is started on the host
-\fIhamlet\fP, \fIRodi\fP must type 
-.br 
-.B $ xhost hamlet
-before \fIXBlast\fP is started. 
-.PP
-If you want for more players to join the fun, use for example
-.br
-.B $ xblast Olli Andreas@x09:0 Rodi Harald@x25:0
-.br
-Now \fIAndreas\fP is the second player playing at \fIx09\fP,
-\fIRodi\fP is the third, playing together with \fIOlli\fP
-at the default display. \fIHarald\fP is the fourth player
-using \fIx25\fP.
-.PP
-If you want to play in team mode, i.e. Olli and Andreas vs. Rodi and Harald,
-do the following:
-.br
-.B $ xblast Olli Andreas@x09:0 Rodi Harald@x25:0 -team
-.PP
-To make the things complicated let's add some game options.
-Here only \fIOlli\fP and \fIAndreas\fP are playing, 
-but with 6 victories needed to win the game:
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6
-.br
-If you also want random starting positions for each player, type
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -rp 
-.br
-To play also the levels in random order, type
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -rp -rl
-.br 
-or
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r
-.br
-which turns all random order options on.
-.PP
-Next case, you don't like some levels, e.g. \fIXBlast 2000\fP.
-To exclude it first type 
-.br
-.B $ xblast -s | grep "XBlast 2000"
-.br
-to get the \fBID\fP of the level \fIXBlast 2000\fP.
-In the current version it is \fB3\fI. Thus type
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r +u 3
-.br
-But if you only want to play only some levels (e.g. \fIShrinking World\fP
-and \fIFull Power Level\fP), type
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r -u 2 4
-.PP
-Alternatively, if you also want to play levels 5 to 8, you can
-either type  
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r -u 2 4 5 6 7 8
-.PP
-or
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r -u 2 4-8
-.PP
-Since setting up \fIXBlast\fP from scratch is a bit unhandy,
-let's save the setup. In order to save the above setup, use
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r -u 2 4-8 -S
-.br
-To start \fIXBlast\fP again with the same setup, just  type
-.br
-.B $ xblast -D
-.PP
-If you want to save several different setups, use
-a named setup, e.g. if you want to save the above settings
-as \fIafterLunch\fP, type
-.br
-.B $ xblast Olli Andreas@x09:0 -v 6 -r -u 2 4-8 -S=afterLunch
-.br
-and
-.br
-.B $ xblast -D=afterLunch
-.br
-to restore it.
-.PP
-You can also modify a loaded setup, e.g you want to play
-with only 2 lives per player, then type
-.br
-.B $ xblast -D=afterLunch -L 2
-.PP 
-If you also want to change the levels to play, you can
-add or delete levels from the setup (using 
-\fI-u\fP or \fI+u\fP), or you can create a new list 
-(using \fI-U\fP or \fI+U\fP). Example: if you want to play
-the level \fISeek'N Destroy\fP in addition to the above setup, type
-.br
-.B $ xblast -D=afterLunch -L2 -u 0
-.br
-If you type instead
-.br
-.B $ xblast -D=afterLunch -L2 -U 0
-.br
-only the level \fISeek'N Destroy\fP will be played.
-.PP
-Last but not least to save your modified setup, e.g as \fIafterTea\fP use
-.br
-.B $ xblast -D=afterLunch -L2 -u 0 -S=afterTea
-.PP
+
+
 .SH PLAYING XBLAST
-The idea of the game is quite simple "There can be only one ...".  So
+The idea of the game is quite simple: "There can be only one ...".  So
 the aim is to blast away all the other players. Use your bombs to
 blast away the other players and certain blocks (e.g. the ?-Blocks
-in the 1st level). Under some of these blocks are extras. 
+in the 1st level). Below some of these blocks there are extras.
 .PP
-The following keys control the first (right) player at one
-display
-.TP
-.I KP_8, KP_Up
-player starts walking up.
-.TP
-.I KP_2, KP_Down
-player starts walking down.
-.TP
-.I KP_4, KP_Left
-player starts walking to the left.
-.TP
-.I KP_6, KP_Right
-player starts walking to the right.
-.TP
-.I KP_5
-player stops (in the center of the next block).
-.TP
-.I KP_0, KP_Insert
-player drops a bomb (in the center of the current block).
-.TP
-.I Return, KP_Add
-special key (e.g. remote control, special bombs)
-.TP
-.I KP_Multiply
-request to abort of level.
-.TP
-.I KP_Divide
-cancel abort request.
+The program \fIXBlast\fP can be played locally or in network.
+After you started \fIXBlast\fP it will display an intro. The
+next step will show you the "Main Menu". In the "Main Menu"
+you can  decide if you want to start a local game, join a
+network game or host a network game. For detailed information
+please go to the web site.
+
+
+.SH CONTROLS
 .PP
-The following keys control the second (left) player at one
-display
+The following will explain the default bindings.
+These keys control the first (right) player at your display:
 .TP
-.I T
-player starts walking up.
+.IR KP_8 , \ KP_Up
+Player starts walking up.
 .TP
-.I V, B
-player starts walking down
+.IR KP_2 , \ KP_Down
+Player starts walking down.
 .TP
-.I F
-player starts walking to the left.
+.IR KP_4 , \ KP_Left
+Player starts walking to the left.
 .TP
-.I H
-player starts walking to the right.
+.IR KP_6 , \ KP_Right
+Player starts walking to the right.
 .TP
-.I G
-player stops (in the center of the next block).
+.IR KP_5
+Player stops (in the center of the next block).
 .TP
-.I Space
-player drops a bomb (in the center of the current block).
+.IR KP_0 , \ KP_Insert
+Player drops a bomb (in the center of the current block).
 .TP
-.I Tab
-special key (e.g. remote control, special bombs)
+.IR Return , \ KP_Add
+Player uses special function (e.g. remote control, special bombs).
 .TP
-.I A
-request to abort of level.
+.IR KP_Subtract
+Pause of level in Local Game.
 .TP
-.I Z
+.IR KP_Multiply
+Request to abort the level.
+.TP
+.IR KP_Divide
+Cancel abort request.
+.PP
+The following keys control the second (left) player at your display:
+.TP
+.IR T
+Player starts walking up.
+.TP
+.IR V , \ B
+Player starts walking down.
+.TP
+.IR F
+Player starts walking to the left.
+.TP
+.IR H
+Player starts walking to the right.
+.TP
+.IR G
+Player stops (in the center of the next block).
+.TP
+.IR Space
+Player drops a bomb (in the center of the current block).
+.TP
+.IR Tab
+Player uses special function (e.g. remote control, special bombs).
+.TP
+.IR P
+Pause of level in Local Game.
+.TP
+.IR A
+Request to abort of level.
+.TP
+.IR Z
 cancel abort request.
 .PP
 A single player can use both key sets for playing.
-Furthermore the following keys effect all players
+Furthermore the following keys effect all players:
 .TP
-.I P
+.IR P
 pause game, resume game after pause.
 .TP
-.I Escape
-quit game immediately.
+.IR Escape
+Go to previous menu.
 .PP
-Please not, since \fIXBlast 2.2\fP the keybindings can customised
-via XResources (see also \fBPLAYER RESOURCES\fP and \fItkXBlast(1)\fP).
+Please note that since \fIXBlast 2.7.x\fP the keybindings can be customised
+via Options Menu Controls (see also \fxhttp://blast.sf.net/ \fP).
 .PP
+
+
 .SH EXTRA SYMBOLS
 There are many extras to be found in xblast. Most of the time
-they can be found under blastable blocks, sometimes they are 
+they can be found under blastable blocks, sometimes they are
 just lying around. The following extras can be found in nearly
 any level. You will keep these extras until you have lost all
-your lives or the level ends.
-.TP 
+your lives or the level ends. See the web site for actualized information.
+.TP
 .B Bomb \fP(red frame)
 This extra increases the number of bombs you can drop by one.
 .TP
 .B Flame \fP(yellow flame)
-This extra increases the range of your bombs by one field. 
+This extra increases the range of your bombs by one field.
 .PP
-Furthermore in several levels the following symbol can be found
+Furthermore in several levels the following symbol can be found:
 .TP
 .B Skull \fP(cyan frame)
 This is not really an extra, but you will be infected with an random illness
 when picking it up. You will be healed automatically after a certain time,
 or if you loose one life. Additionally you can infect other players
-while being ill.
+while being ill by running past them.
 .PP
 In many levels there is also a special extra. There will always be
 only one type of special extra per level and you will loose
-it if you loose a life. The following special extras can be found
+it if you loose a life. The following special extras can be found:
 .TP
 .B Kick extra \fP(moving bomb in blue frame)
 This extra enables you to kick bombs by running into them.
 .TP
 .B Invincibility \fP(star in golden frame)
-This extra makes you invincible for some time. You are not killed by 
+This extra makes you invincible for some time. You are not killed by
 explosions, stunned by moving bombs, nor infected by skulls.
 .TP
 .B Global Detonator \fP(button in deep pink frame)
@@ -497,14 +187,14 @@ create a blastable block when exploding. Use the special key to drop
 them.
 .TP
 .B Remote Control \fP(button box in spring green frame)
-This extra enables you to ignite all your bombs, by pressing the
+This extra enables you to ignite all your bombs by pressing the
 special key.
 .TP
 .B Teleport Extra \fP(beaming player in orchid frame)
 This extra enables you to beam away to a random location. You
 must be in the center of a block to activate it. Use the special
 key to teleport.
-.TP 
+.TP
 .B Airpump \fP(clouds in sky blue frame)
 This extra enables you to blow away (not to blast away) bombs
 within a range of 2 fields. It also works when your are trapped
@@ -520,24 +210,24 @@ to occur, it must explode on its own.
 .B Firecrackers \fP(firecrackers in orange frame)
 This extra allows you to drop firecracker bombs with the special key.
 Firecracker bombs set off a series of explosions that can clear away a
-small area. One in ten firecracker bombs is high powered, and clears
+small area. One in ten firecracker bombs is high powered and clears
 away a much larger area. There is no way to tell if a firecracker is
-high powered or not until it explodes. Unlike napalm bombs, there is
+high powered or not until it explodes. Unlike napalm bombs there is
 no way to stop the firecracker explosion, although it is blocked by
 walls and other solid objects.
 .TP
 .B Pyro bombs \fP(firecrackers in orange frame)
 This extra allows you to drop pyro bombs with the special key. Pyro
 bombs explode with a series of small explosions that dance around the
-level. These explosions are blocked by walls and other bombs, but are
+level. These explosions are blocked by walls and other bombs but are
 able to travel through corridors with ease. They explode randomly and
 cannot be controlled. Pyro bombs have the same range irrespective of
 how many flame extras you have. Even if the bomb is struck with an
-explosion, it will still explode as pyro bomb.
+explosion it will still explode as pyro bomb.
 .TP
 .B Junkie Virus \fP(syringe in yellow green frame)
 This extra infects you with the junkie virus. Whilst you have the
-junkie virus, you are randomly infected with illnesses (as if you were
+junkie virus you are randomly infected with illnesses (as if you were
 picking up skulls). You MUST touch other players to pass on the
 illness within a certain time limit or you will lose a life. Any
 touched players are given the junkie virus as well. There is currently
@@ -545,12 +235,12 @@ no way to get rid of the junkie virus (but look for a rehabilitation
 centre in the next release). :)
 .TP
 .B Poison \fP(black skull in steel blue frame)\fI
-This extra?! cost you one of your lives. So avoid to step on it. At least 
+This extra?! cost you one of your lives. So avoid to step on it. At least
 if you are not currenlty invincible.
 .TP
 .B Spinner \fP(looks like normal floor)\fI
-When picking up this extra, you will be stunned for some time. Your opponents
-might want to blast you,  while you are spinning.
+When picking up this extra you will be stunned for some time. Your opponents
+might want to blast you while you are spinning.
 .TP
 .B Speed \fP(moving head in light blue frame)\fI
 This extra enables you too run twice as fast as normal. Try to overtake other
@@ -564,76 +254,28 @@ This extras transfers life energy to you from your opponents.
 Be sure you are the one to get there first.
 .TP
 .B Life \fP(head and first aid kit in red frame)
-This extra increases your number of lifes by one. Comes in handy, 
+This extra increases your number of lifes by one. Comes in handy
 while in "hot" environments.
 .TP
 .B Random \fP(question mark in light blue frame)\fI
-Picking up this extra, will give you one of the following extras:
-\fISpeed, Poison, Invincibility, Spinner, Air Pump or Life\fP.
-Avoid it if you have only life left.
-.TP Cloak
+Picking up this extra will give you one of the following extras:
+.IR Speed , \ Poison , \ Invincibility , \ Spinner , \ Air\ Pump \ or\  Life .
+Avoid it if you have only one life left.
+.TP
 .B Cloak \fP(vanishing player in violet frame)\fI
 This extras allows you to cloak yourself using the special key.
 You become invisible for all other players. The extras wears out
-of a certain time of use. 
-.TP 
+after a certain time of use.
+.TP
 .B Morph \fP(bomb with eyes in green frame)\fI
 Get this extra to morph into a bomb with the special key. You still
-move as a bomb, although you cannot alter course while on the run.
+move as a bomb although you cannot alter course while on the run.
 You cannot be harmed by explosions while you are a bomb. Beware not
-to be kicked in the wall, while the level shrinks.
+to be kicked in the wall while the level shrinks.
 .PP
-.SH SETUP RESOURCES
-These resources define the player and display setup of xblast, they 
-will be read from setup files only (see \fB-D\fP or \fB-D=\fP).
-The command-line always overrides these settings.
-.TP
-.B numberOfPlayers (\fPclass\fB NumberOfPlayers)
-Specifies the number of players for the game
-.TP 
-.B player1 (\fRclass\fP Player)
-Specifies the name of the first player.
-The default is "Olli"
-.TP
-.B display1 (\fPclass\fB Display)
-Specifies the display for the first player.
-.TP 
-.B player2 (\fRclass\fP Player)
-Specifies the name of the second player.
-The default is "Norbert".
-.TP
-.B display2 (\fPclass\fB Display)
-Specifies the display for the second player.
-.TP 
-.B player3 (\fRclass\fP Player)
-Specifies the name of the third player.
-The default is "Rodi".
-.TP
-.B display3 (\fPclass\fB Display)
-Specifies the display for the third player.
-.TP 
-.B player4 (\fRclass\fP Player)
-Specifies the name of the fourth player.
-The default is "Harald".
-.TP
-.B display4 (\fPclass\fB Display)
-Specifies the display for fourth player.
-.TP
-.B player5 (\fRclass\fP Player)
-Specifies the name of the fourth player.
-The default is "Susi".
-.TP
-.B display5 (\fPclass\fB Display)
-Specifies the display for fifth player.
-.TP
-.B player6 (\fRclass\fP Player)
-Specifies the name of the fourth player.
-The default is "Garth".
-.TP
-.B display6 (\fPclass\fB Display)
-Specifies the display for sixth player.
-.PP
-.SH GAME RESOURCES 
+
+
+.SH GAME RESOURCES
 These resources define the rest of the game setup of xblast. They will be
 taken from the following sources (in the given order):
 .TP
@@ -641,65 +283,10 @@ taken from the following sources (in the given order):
 internal defaults
 .TP
 .B 2.
-the file "/usr/lib/X11/app-defaults/XBlast"
-.TP
-.B 3.
-the server resources of the default display
-(can be set using \fIxrdb\fP).
-.TP
-.B 4.
-a setup file (see \fB-D\fP or \fB-D=\fP).
+the directory "~/.xblast_tnt"
 .PP
-The command line arguments or the interactive setup always
-override resources from sources mentioned before.
-The following game resources are available:
-.TP
-.B allowColorMode (\fPclass\fB AllowColorMode)
-Specifies whether the color mode is allowed for any display, which supports it.
-The default is "true"
-.TP
-.B bellSound (\fPclass\fB BellSound)
-Specifies if the bell is used for explosions and game restart after pause.
-The default is "true"
-.TP
-.B forceOverride (\fPclass\fB ForceOverride)
-Specifies if reparent by window is overridden for all windows.
-This means windows will not be managed by the window manager.
-The default is "false". The may speed up the performance on some
-systems.
-.TP
-.B fork (\fPclass\fB Fork)
-Specifies is \fIXBlast\fP forks to run one process per served
-display. When "false" one process serves all displays. The
-default is "false".
-.TP
-.B frameRate (\fPclass\fB FrameRate)
-Specifies the frames per second to be displayed.
-The default is "20".
-.TP
-.B numberOfLives (\fPclass\fB NumberOfLives)
-Specifies the number of lives each player has.
-The value can range from "1" to "3".
-The default is "3".
-.TP
-.B numberOfVictories (\fPclass\fB NumberOfVictories)
-Specifies the number of victories need to win the game.
-The value can range from "1" to "9".
-The default is "5".
-.TP 
-.B randomLevelOrder (\fPclass\fB Random)
-Specifies if a random level order is used.
-The default is "false".
-.TP 
-.B randomPlayerPosition (\fPclass\fB Random)
-Specifies if random player positions are used.
-The default is "false".
-.TP
-.B startingLevel (\fPclass\fB StartingLevel)
-Specifies the level to start with. This resource will
-be ignored when the game is in random level order mode.
-The default is "0", which is the level \fISeek'N Destroy\fP.
-.PP
+
+
 .SH DISPLAY RESOURCES
 These resources are read separately for each display used in xblast.
 They are read only from the following sources (in the given order):
@@ -708,264 +295,21 @@ They are read only from the following sources (in the given order):
 internal defaults
 .TP
 .B 2.
-the file "/usr/lib/X11/app-defaults/XBlast"
+the directory "~/.xblast_tnt"
 .TP
 .B 3.
 the server resources of the default display
 (can be set using \fIxrdb\fP).
 .PP
-The display resources allow to setup resources for the players using 
-that display
-.TP
-.B rightPlayer (\fRclass\fP Player)
-Specifies the name of the first, the right player (using the numeric keypad)
-.TP
-.B leftPlayer (\fRclass\fP Player)
-Specifies the name of the second, the left player (using the alpha keys)
-.TP
-.B singlePlayer (\fRclass\fP Player)
-Specifies the name of a single player
-.PP
-Furthermore the following general resources can be set:
-.TP
-.B colorMode (\fRclass\fP ColorMode)
-Specifies if color mode should be used. This resource
-is used only for color displays. The default is "true".
-.TP
-.B override (\fRclass\fP Override)
-Specifies if reparenting by window manager is to be overridden.
-This means the xblast window will not be managed
-by the window manager. The default is "false".
-.TP
-.B largeFont (\fRclass\fP Font)
-Specifies the font to be used for large sized text.
-The default is "-*-helvetica-bold-r-*-*-24-*-*-*-*-*-iso8859-*"
-.TP
-.B mediumFont (\fRclass\fP Font)
-Specifies the font to be used for medium sized text.
-The default is "-*-helvetica-bold-r-*-*-18-*-*-*-*-*-iso8859-*"
-.TP
-.B smallFont (\fRclass\fP Font)
-Specifies the font to be used for small sized text.
-The default is "-*-helvetica-bold-r-*-*-14-*-*-*-*-*-iso8859-*"
-.TP 
-.B titleColor1 (\fRclass\fP Background)
-Specifies the first color to be used for the title screen background.
-The default is "Gray75"
-.TP 
-.B titleColor2 (\fRclass\fP Background)
-Specifies the second color to be used for the title screen background.
-The default is "MidnightBlue"
-.PP
-The following resources can be set for the object
-.I statusBar
-(class
-.I StatusBar
-):
-.TP
-.B background (\fRclass\fI Background)
-Specifies the background color of the status bar at the bottom
-of the \fIXBlast\fP window. The default is "SaddleBrown".
-.TP
-.B foreground (\fRclass\fI Foreground)
-Specifies the foreground color of the status bar at the bottom
-of the \fIXBlast\fP window. The default is "LightGoldenrod".
-.TP
-.B ledColor (\fRclass\fI Foreground)
-Specifies the color of LED time display at the very bottom
-of the \fIXBlast\fP window. 
-The default is "SpringGreen".
-.PP
-The following resources can be set for the object
-.I textBox
-(class
-.I TextBox
-):
-.TP
-.B darkColor1 (\fRclass\fP Background)
-Specifies the first color used for dark texts.
-It is also used as background for boxed light texts.
-The default is "Black".
-.TP
-.B darkColor2(\fRclass\fP Background)
-Specifies the second color used for dark texts.
-It is also used as background for boxed light texts.
-The default is "MidnightBlue".
-.TP
-.B lightColor1 (\fRclass\fP Foreground)
-Specifies the first color used for light texts.
-It is also used as background for boxed dark texts.
-The default is "Yellow".
-.TP
-.B lightColor2 (\fRclass\fP Foreground)
-Specifies the second color used for light texts.
-It is also used as background for boxed dark texts.
-The default is "Gold".
-.PP
-.SH PLAYER RESOURCES
-These resources define the player controls, colors and messages used
-in the game.  They are specified as part of the setup resources
-.I player1, player2, player3, player4, player5
-or
-.I player6 
-( class
-.I Player 
-) or as part of the display resources
-.I singlePlayer, leftPlayer, 
-or
-.I rightPlayer
-( class
-.I Player 
-). The following resource allow to define the keybindings of a player.
-Give a list of Keysyms to bind to this function. The defaults
-for \fIsinglePlayer\fP player are always the combined lists for
-\fIrightPlayer\fP and \fIleftPlayer\fP.
-.TP
-.B pauseKey (\fRclass\fP PauseKey)
-Specifies the keybinding for \fIpause game\fP. The defaults are
-"KP_Subtract" for \fIrightPlayer\fP and "P" for \fIleftPlayer\fP.
-.TP 
-.B upKey (\fRclass\fP UpKey)
-Specifies the keybinding for \fIwalk up\fP. The defaults are "KP_8 KP_UP
-Up" for \fIrightPlayer\fP and "T" for \fIleftPlayer\fP.
-.TP 
-.B downKey (\fRclass\fP DownKey)
-Specifies the keybinding for \fIwalk down\fP. The defaults are "KP_2 KP_DOWN
-Down" for \fIrightPlayer\fP and "B V" for \fIleftPlayer\fP.
-.TP 
-.B leftKey (\fRclass\fP LeftKey)
-Specifies the keybinding for \fIwalk left\fP. The defaults are "KP_4 KP_Left
-Left" for \fIrightPlayer\fP and "F" for \fIleftPlayer\fP.
-.TP 
-.B rightKey (\fRclass\fP RightKey)
-Specifies the keybinding for \fIwalk right\fP. The defaults are "KP_8 KP_Right
-Right" for \fIrightPlayer\fP and "H" for \fIleftPlayer\fP.
-.TP 
-.B stopKey (\fRclass\fP StopKey)
-Specifies the keybinding for \fIstop\fP. The defaults are "KP_5 KP_Begin
-Begin" for \fIrightPlayer\fP and "G" for \fIleftPlayer\fP.
-When this resource is defined as "None", the player will stop when releasing
-the current \fIwalk key\fP. Use the \fIturnStep\fP resource to modify the 
-stopping behaviour.  
-.TP
-.B turnStep (\fRclass \fP TurnStep)
-Defines a tolerance for changing directions and stopping. How many steps,
-i.e. animation frames, after passing the center of a tile, should the player
-still go back to the center of the tile to stop or change his direction.
-The default value is "0". When using \fIstopKey\fP "None", "4" is a good choice.
-.TP
-.B bombKey (\fRClass\fP BombKey)
-Specifies the keybinding for \fIdrop bomb\fP. The defaults are 
-"KP_0 KP_Insert Insert" for \fIrightPlayer\fP and "space" for \fIleftPlayer\fP.
-.TP
-.B specialKey (\fRClass\fP SpecialKey)
-Specifies the keybinding for the \fIspecial key\fP. The defaults are 
-"Return KP_Add" for \fIrightPlayer\fP and "Tab" for \fIleftPlayer\fP.
-.TP
-.B abortKey (\fRClass\fP AbortKey)
-Specifies the keybinding for \fIabort game\fP. The defaults are 
-"KP_Multiply" for \fIrightPlayer\fP and "A" for \fIleftPlayer\fP.
-.TP
-.B abortCancelKey (\fRClass\fP AbortCancelKey)
-Specifies the keybinding for \fIcanel abort\fP. The defaults are 
-"KP_Divide" for \fIrightPlayer\fP and "Z" for \fIleftPlayer\fP.
-.PP
-For messages the following resources are available:
-.TP
-.B welcomeMsg (\fRclass\fP WelcomeMsg)
-Specifies the message to welcome the 
-.I Player
-at the begin of a new level. No default defined.
-.TP
-.B gloatMsg (\fRclass\fP GloatMsg)
-Specifies the message to be displayed when the
-.I Player
-gloats over another player's death.
-No default defined.
-.TP 
-.B abortMsg (\fRclass\fP AbortMsg)
-Specifies the message to be displayed when the
-.I Player
-requests a level abort.
-The default is "Abort requested by \fIPlayer\fP" 
-.TP
-.B abortCancelMsg (\fRclass\fP AbortCancelMsg)
-Specifies the message to be displayed when the
-.I Player
-cancels a level abort.
-The default is "\fIPlayer\fP cancels abort" 
-.TP 
-.B loseLifeMsg (\fRclass\fP LoseLevelMsg)
-Specifies the message to be displayed when the 
-.I Player
-has lost a life.
-No default defined.
-.TP 
-.B loseLevelMsg (\fRclass\fP LoseLevelMsg)
-Specifies the message to be displayed when the 
-.I Player
-has lost a level.
-No default defined.
-.TP 
-.B winGameMsg (\fRclass\fP WinGameMsg)
-Specifies the message to be displayed when the 
-.I Player
-wins a game.
-The default is "CONGRATULATIONS".
-.TP
-.B winLevelMsg (\fRclass\fP WinLevelMsg)
-Specifies the message to be displayed when the 
-.I Player
-wins a level.
-The default is "\fIPlayer\fP wins"
-.PP
-Since \fIXBlast\fP 2.6 the shape of your player sprite can be defined
-using the resource
-.TP
-.B shape (\fRclass \fP Shape)
-"normal" defines the standard \fIXBlast\fP player sprite,
-"fat" gives you a sprite with a distinct belly,
-"tall" is a bit larger than the others,
-and "girl" is just what it says.
-.PP
-In order to define the player colors the following resources are
-available:
-.TP
-.B armsLegsColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's arms and legs.
-.TP
-.B backpackColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's backpack and belt.
-.TP
-.B bodyColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's body.
-.TP
-.B faceColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's face.
-.TP
-.B handsFeetColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's hands and feet.
-.TP
-.B helmetColor (\fRclass\fP Background)
-Specifies the color for the \fIPlayer\fP's helmet.
-.PP
+
+
 .SH BUGS
-.br
-If the program does not react to any key stroke,
-move the mouse cursor out of the window and inside again.
-.br
-If you alter the players of a loaded setup, you may get
-surprising results, when defining players without a given
-display name (see \fBPLAYER SETUP\fP).
-.br
-Names given by commandline do not always override, names
-taken from X-resources.
-.br
-The pyro bomb used in the level \fISky Show\fP does not have its
-own bitmap yet.
 .PP
+If you found one go to the web site and tell us.
+
+
 .SH COPYRIGHT
-Copyright (C) 1993-1999, Oliver Vogel (\fIm.vogel@ndh.net\fP).
+Copyright (C) 1993-2005, Oliver Vogel.
 .PP
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public Licences as published
@@ -973,7 +317,7 @@ by the Free Software Foundation; either version 2; or (at your option)
 any later version
 .PP
 This program is distributed in the hope that it will be entertaining,
-but WITHOUT ANY WARRANTY; without even the implied warranty of 
+but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
 Public License for more details.
 .PP
@@ -981,6 +325,8 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.
 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 .PP
+
+
 .SH AUTHORS
 .TP
 Oliver Vogel \fI(Main Author)
@@ -991,9 +337,21 @@ g0denley@teaching.cs.adelaide.edu.au
 .TP
 Norbert Nicolay \fI(Linux Sound Support, optional)
 nicolay@ikp.uni-koeln.de
+.TP
+Koen (central, SMPF, teammode on TNT, bugcatcher)
+.TP
+EPFL
+.TP
+Belgium Guys
+.TP
+Skywalker (epfl port, laola, some game functions, user friendliness, Shapes)
+.TP
+Kruno Sever (Major network review, Chat, bugcatcher)
 .PP
+
+
 .SH CONTRIBUTORS
-.PP 
+.PP
 Xavier Caron \- x-caron@es2.fr
 .br
 Chris Doherty \- cpdohert@teaching.cs.adelaide.edu.au
@@ -1017,6 +375,31 @@ Mike Schneider \- schneid@tellabs.com
 Mark Shepherd \- ...@...
 .br
 Rob, Simon and Tristan \- ...@...
+.br
+Xbresse
+.br
+Gerfried Fuchs
+.br
+Rado
+.br
+Ifi
+.br
+Bombenfutter
+.br
+Galatius
+.br
+Garth Denley
+.br
+Stephan Natschlaeger
+.br
+Amilhastre
+.br
+Fouf
+.br
+ALu
+.br
+Larsl
+.br
+Stefan Stiasny
+.br
 .PP
-
-

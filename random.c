@@ -1,7 +1,7 @@
 /*
  * file random.c - generator
  *
- * $Id: random.c,v 1.5 2005/01/11 17:51:37 iskywalker Exp $
+ * $Id: random.c,v 1.8 2006/02/10 15:07:41 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,10 +20,8 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "common.h"
-#include "random.h"
 
-#include <math.h>
+#include "xblast.h"
 
 /*
  * local Variables
@@ -71,8 +69,8 @@ static unsigned oRand;
 */
 
 /* Globals */
-double u[97],c,cd,cm;
-int i97,j97;
+double u[97], c, cd, cm;
+int i97, j97;
 int test = 0;
 
 /*
@@ -87,84 +85,87 @@ int test = 0;
    number generator can create 900 million different subsequences -- with
    each subsequence having a length of approximately 10^30.
 */
-void RandomInitialise(int ij,int kl)
+static void
+RandomInitialise (int ij, int kl)
 {
-   double s,t;
-   int ii,i,j,k,l,jj,m;
+	double s, t;
+	int ii, i, j, k, l, jj, m;
 
-   /*
-      Handle the seed range errors
-	 First random number seed must be between 0 and 31328
-	 Second seed must have a value between 0 and 30081
-   */
-   if (ij < 0 || ij > 31328) {
-     ij = 1802;
-   }
-   if(kl < 0 || kl > 30081) {
-     kl = 9373;
-   }
+	/*
+	   Handle the seed range errors
+	   First random number seed must be between 0 and 31328
+	   Second seed must have a value between 0 and 30081
+	 */
+	if (ij < 0 || ij > 31328) {
+		ij = 1802;
+	}
+	if (kl < 0 || kl > 30081) {
+		kl = 9373;
+	}
 
-   i = (ij / 177) % 177 + 2;
-   j = (ij % 177)       + 2;
-   k = (kl / 169) % 178 + 1;
-   l = (kl % 169);
+	i = (ij / 177) % 177 + 2;
+	j = (ij % 177) + 2;
+	k = (kl / 169) % 178 + 1;
+	l = (kl % 169);
 
-   for (ii=0; ii<97; ii++) {
-      s = 0.0;
-      t = 0.5;
-      for (jj=0; jj<24; jj++) {
-	 m = (((i * j) % 179) * k) % 179;
-	 i = j;
-	 j = k;
-	 k = m;
-	 l = (53 * l + 1) % 169;
-	 if (((l * m % 64)) >= 32)
-	    s += t;
-	 t *= 0.5;
-      }
-      u[ii] = s;
-   }
+	for (ii = 0; ii < 97; ii++) {
+		s = 0.0;
+		t = 0.5;
+		for (jj = 0; jj < 24; jj++) {
+			m = (((i * j) % 179) * k) % 179;
+			i = j;
+			j = k;
+			k = m;
+			l = (53 * l + 1) % 169;
+			if (((l * m % 64)) >= 32)
+				s += t;
+			t *= 0.5;
+		}
+		u[ii] = s;
+	}
 
-   c    = 362436.0 / 16777216.0;
-   cd   = 7654321.0 / 16777216.0;
-   cm   = 16777213.0 / 16777216.0;
-   i97  = 97;
-   j97  = 33;
-   test = 1;
-} /* RandomInitialize */
+	c = 362436.0 / 16777216.0;
+	cd = 7654321.0 / 16777216.0;
+	cm = 16777213.0 / 16777216.0;
+	i97 = 97;
+	j97 = 33;
+	test = 1;
+}								/* RandomInitialize */
 
 /*
    This is the random number generator proposed by George Marsaglia in
    Florida State University Report: FSU-SCRI-87-50
 */
-double RandomUniform(void)
+static double
+RandomUniform (void)
 {
-   double uni;
+	double uni;
 
-   /* Make sure the initialisation routine has been called */
-   if (!test)
-	RandomInitialise(1802,9373);
+	/* Make sure the initialisation routine has been called */
+	if (!test)
+		RandomInitialise (1802, 9373);
 
-   uni = u[i97-1] - u[j97-1];
-   if (uni <= 0.0)
-      uni++;
-   u[i97-1] = uni;
-   i97--;
-   if (i97 == 0)
-      i97 = 97;
-   j97--;
-   if (j97 == 0)
-      j97 = 97;
-   c -= cd;
-   if (c < 0.0)
-      c += cm;
-   uni -= c;
-   if (uni < 0.0)
-      uni++;
+	uni = u[i97 - 1] - u[j97 - 1];
+	if (uni <= 0.0)
+		uni++;
+	u[i97 - 1] = uni;
+	i97--;
+	if (i97 == 0)
+		i97 = 97;
+	j97--;
+	if (j97 == 0)
+		j97 = 97;
+	c -= cd;
+	if (c < 0.0)
+		c += cm;
+	uni -= c;
+	if (uni < 0.0)
+		uni++;
 
-   return(uni);
-} /* RandomUniform */
+	return (uni);
+}								/* RandomUniform */
 
+#ifdef unused
 /*
   ALGORITHM 712, COLLECTED ALGORITHMS FROM ACM.
   THIS WORK PUBLISHED IN TRANSACTIONS ON MATHEMATICAL SOFTWARE,
@@ -176,55 +177,61 @@ double RandomUniform(void)
   The algorithm uses the ratio of uniforms method of A.J. Kinderman
   and J.F. Monahan augmented with quadratic bounding curves.
 */
-double RandomGaussian(double mean,double stddev)
+static double
+RandomGaussian (double mean, double stddev)
 {
-   double  q,u,v,x,y;
+	double q, u, v, x, y;
 
 	/*
-		Generate P = (u,v) uniform in rect. enclosing acceptance region
-      Make sure that any random numbers <= 0 are rejected, since
-      gaussian() requires uniforms > 0, but RandomUniform() delivers >= 0.
-	*/
-   do {
-      u = RandomUniform();
-      v = RandomUniform();
-	if (u <= 0.0 || v <= 0.0) {
-	u = 1.0;
-	v = 1.0;
-	}
-      v = 1.7156 * (v - 0.5);
+	   Generate P = (u,v) uniform in rect. enclosing acceptance region
+	   Make sure that any random numbers <= 0 are rejected, since
+	   gaussian() requires uniforms > 0, but RandomUniform() delivers >= 0.
+	 */
+	do {
+		u = RandomUniform ();
+		v = RandomUniform ();
+		if (u <= 0.0 || v <= 0.0) {
+			u = 1.0;
+			v = 1.0;
+		}
+		v = 1.7156 * (v - 0.5);
 
-      /*  Evaluate the quadratic form */
-      x = u - 0.449871;
-      y = fabs(v) + 0.386595;
-      q = x * x + y * (0.19600 * y - 0.25472 * x);
+		/*  Evaluate the quadratic form */
+		x = u - 0.449871;
+		y = fabs (v) + 0.386595;
+		q = x * x + y * (0.19600 * y - 0.25472 * x);
 
-      /* Accept P if inside inner ellipse */
-      if (q < 0.27597)
+		/* Accept P if inside inner ellipse */
+		if (q < 0.27597)
 			break;
 
-      /*  Reject P if outside outer ellipse, or outside acceptance region */
-    } while ((q > 0.27846) || (v * v > -4.0 * log(u) * u * u));
+		/*  Reject P if outside outer ellipse, or outside acceptance region */
+	} while ((q > 0.27846) || (v * v > -4.0 * log (u) * u * u));
 
-    /*  Return ratio of P's coordinates as the normal deviate */
-    return (mean + stddev * v / u);
-} /* RandomGaussian */
+	/*  Return ratio of P's coordinates as the normal deviate */
+	return (mean + stddev * v / u);
+}								/* RandomGaussian */
+#endif
 
 /*
    Return random integer within a range, lower -> upper INCLUSIVE
 */
-int RandomInt(int lower,int upper)
+static int
+RandomInt (int lower, int upper)
 {
-   return((int)(RandomUniform() * (upper - lower + 1)) + lower);
-} /* RandomInt */
+	return ((int)(RandomUniform () * (upper - lower + 1)) + lower);
+}								/* RandomInt */
 
+#ifdef unused
 /*
    Return random float within a range, lower -> upper
 */
-double RandomDouble(double lower,double upper)
+static double
+RandomDouble (double lower, double upper)
 {
-   return((upper - lower) * RandomUniform() + lower);
-} /* RandomDouble */
+	return ((upper - lower) * RandomUniform () + lower);
+}								/* RandomDouble */
+#endif
 
 /*
  * seeds both random number generators
@@ -232,13 +239,13 @@ double RandomDouble(double lower,double upper)
 void
 SeedRandom (unsigned seed)
 {
-  int i;
-  gRand = oRand = seed;
-  RandomInitialise(seed % 31328, (seed / 313) % 30081);
-  for(i=0;i<100;i++) {
-    GameRandomNumber(100);
-  }
-} /* SeedRandom */
+	int i;
+	gRand = oRand = seed;
+	RandomInitialise (seed % 31328, (seed / 313) % 30081);
+	for (i = 0; i < 100; i++) {
+		GameRandomNumber (100);
+	}
+}								/* SeedRandom */
 
 /*
  * get the seed of the random number generator
@@ -246,8 +253,8 @@ SeedRandom (unsigned seed)
 unsigned
 GetRandomSeed (void)
 {
-  return gRand;
-} /* GetRandomSeed */
+	return gRand;
+}								/* GetRandomSeed */
 
 /*
  * creates a 32 Bit pseudo random number
@@ -255,9 +262,9 @@ GetRandomSeed (void)
 static unsigned
 GameRandom (void)
 {
-  gRand = 1664525L * gRand + 1013904223L;
-  return gRand;
-} /* GameRandom */
+	gRand = 1664525L * gRand + 1013904223L;
+	return gRand;
+}								/* GameRandom */
 
 /*
  * creates a 32 Bit pseudo random number
@@ -279,10 +286,10 @@ OtherRandom (void)
 int
 GameRandomNumber1 (int maxVal)
 {
-  /* return (int)(GameRandom () % maxVal); */
-  /* fprintf(stderr,"new gamerandom\n"); */
-  return RandomInt(0,maxVal-1);
-} /* RandomNumber */
+	/* return (int)(GameRandom () % maxVal); */
+	/* fprintf(stderr,"new gamerandom\n"); */
+	return RandomInt (0, maxVal - 1);
+}								/* RandomNumber */
 
 /*
  * creates an integer random number between 0 and maxVal-1;
@@ -290,10 +297,11 @@ GameRandomNumber1 (int maxVal)
 int
 GameRandomNumber2 (int maxVal, const char *file, int line)
 {
-  int result = (int) (GameRandom () % maxVal);
-  fprintf (stderr, "%s:%d: GameRandomNumber() =  %d/%d (%u)\n", file, line, result, maxVal, gRand);
-  return result;
-} /* RandomNumber */
+	int result = (int)(GameRandom () % maxVal);
+	fprintf (stderr, "%s:%d: GameRandomNumber() =  %d/%d (%u)\n", file, line, result, maxVal,
+			 gRand);
+	return result;
+}								/* RandomNumber */
 
 /*
  * creates an integer random number between 0 and maxVal-1;
@@ -301,10 +309,10 @@ GameRandomNumber2 (int maxVal, const char *file, int line)
 int
 OtherRandomNumber (int maxVal)
 {
-  /*  return (int) (OtherRandom () % maxVal); */
-  /*  printf("new otherrandom\n"); */
-  return RandomInt(0,maxVal-1);
-} /* RandomNumber */
+	/*  return (int) (OtherRandom () % maxVal); */
+	/*  printf("new otherrandom\n"); */
+	return RandomInt (0, maxVal - 1);
+}								/* RandomNumber */
 
 /*
  * end of file random.c

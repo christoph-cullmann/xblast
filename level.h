@@ -1,7 +1,7 @@
 /*
  * file level.h - Setting up level given in database
  *
- * $Id: level.h,v 1.5 2004/12/04 06:01:13 lodott Exp $
+ * $Id: level.h,v 1.8 2006/02/10 15:07:42 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -24,21 +24,16 @@
 #define _LEVEL_H
 
 /*
- * type definitions
- */
-#include "ini_file.h"
-
-/*
  * global prototypes
  */
-extern XBBool ParseLevel (const DBRoot *level);
-extern XBBool ConfigLevel (const DBRoot *level);
+extern XBBool ParseLevel (const DBRoot * level);
+extern XBBool ConfigLevel (const DBRoot * level);
 extern void FinishLevel (void);
 
-extern const char *GetLevelName   (const DBRoot *level);
-extern const char *GetLevelAuthor (const DBRoot *level);
-extern const char *GetLevelHint   (const DBRoot *level);
-extern unsigned GetWarningCount();
+extern const char *GetLevelName (const DBRoot * level);
+extern const char *GetLevelAuthor (const DBRoot * level);
+extern const char *GetLevelHint (const DBRoot * level);
+extern unsigned GetWarningCount (void);
 
 #endif
 /*

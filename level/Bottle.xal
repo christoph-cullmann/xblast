@@ -1,0 +1,84 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Bottle
+author=Simon
+hint=Quand on secoue la bouteille...
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.18
+numBlocks=12
+pos000=6 5
+pos001=6 6
+pos002=6 7
+pos003=7 5
+pos004=7 6
+pos005=7 7
+pos006=8 5
+pos007=8 6
+pos008=8 7
+pos009=9 5
+pos010=9 6
+pos011=9 7
+
+[scrambleDel]
+time=0.15
+numBlocks=3
+pos000=2 5
+pos001=2 6
+pos002=2 7
+
+[func]
+key=air
+
+[player]
+bombs=4
+range=9
+pos1=7 6
+pos2=7 6
+pos3=7 6
+pos4=7 6
+pos5=7 6
+pos6=7 6
+initExtra=airpump kick
+reviveExtra=airpump kick
+
+[bombs]
+wallClick=contact
+fuseTime=short
+
+[graphics]
+block00=dark_way		#000000 #006400 #00FF00
+block01=dark_way_X		#000000 #006400 #00FF00
+block02=wall		#000000 #FF4500 #000000
+block03=wall_R		#000000 #FF4500 #000000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=chess_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B____BBBBBB___B
+row05=B_BBBBbbrbB___B
+row06=B_Brrrr_rbB___B
+row07=B_BBBBbbrbB___B
+row08=B____BBBBBB___B
+row09=B_____________B
+row10=B_____________B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

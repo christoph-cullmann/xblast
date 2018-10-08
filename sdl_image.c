@@ -1,7 +1,7 @@
 /*
  * file SDL_image.c - image conversion (rgb to pixel)
  *
- * $Id: sdl_image.c,v 1.3 2004/09/13 22:32:35 tenderflake Exp $
+ * $Id: sdl_image.c,v 1.10 2006/03/28 11:48:02 fzago Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -22,12 +22,8 @@
  */
 
 #include "xblast.h"
-#include "util.h"
-#include "color.h"
-#include "sdl_common.h"
-#include <string.h>
-#include <SDL/SDL_image.h>
 
+#include "sdl_common.h"
 
 /*
  * library function: InitImages
@@ -35,13 +31,12 @@
  * parameters:       none
  * return value:     0 on success, -1 on failure 
  */
-XBBool 
+XBBool
 InitImages (void)
 {
-  // Nothing to do!
-  return XBTrue;
-} /* InitImages */
-
+	// Nothing to do!
+	return XBTrue;
+}								/* InitImages */
 
 /*
  *
@@ -49,9 +44,8 @@ InitImages (void)
 void
 FinishImages (void)
 {
-  // Nothing to do!
-} /* FinishImages */
-
+	// Nothing to do!
+}								/* FinishImages */
 
 /*
  * library function: CatPathAndFilename
@@ -60,29 +54,27 @@ FinishImages (void)
  *                   filename - name of image file
  * return value:     Absolute filename.
  */
-char *
-CatPathAndFilename(const char *path, 
-                   const char *filename)
+static char *
+CatPathAndFilename (const char *path, const char *filename)
 {
-  char *absPath;
-  size_t pathLength, filenameLength;
-  
-  /* Check if last character is a path separator "/" */
-  pathLength     = strlen(path);
-  filenameLength = strlen(filename);
-  
-  /* 1 seperator "/" char + 1 string terminating NULL = 2 */
-  absPath = (char *)calloc(pathLength + filenameLength + 2, sizeof(char));
-  if ( !absPath ) {
-    fprintf(stderr, "Could not allocate memory in CatPathAndFile(%s, %s)", path, filename);
-    return NULL;
-  };
-  strcat(absPath, path);
-  strcat(absPath, "/");
-  strcat(absPath, filename);
-  return absPath;
-};
+	char *absPath;
+	size_t pathLength, filenameLength;
 
+	/* Check if last character is a path separator "/" */
+	pathLength = strlen (path);
+	filenameLength = strlen (filename);
+
+	/* 1 seperator "/" char + 1 string terminating NULL = 2 */
+	absPath = (char *)calloc (pathLength + filenameLength + 2, sizeof (char));
+	if (!absPath) {
+		fprintf (stderr, "Could not allocate memory in CatPathAndFile(%s, %s)\n", path, filename);
+		return NULL;
+	};
+	strcat (absPath, path);
+	strcat (absPath, "/");
+	strcat (absPath, filename);
+	return absPath;
+};
 
 /*
  * library function: AddExtension
@@ -91,49 +83,27 @@ CatPathAndFilename(const char *path,
  *                   - Extension (duh!)
  * return value:     Filename + Extension.
  */
-char *
-AddExtension(const char *Filename,
-             const char *Extension)
+static char *
+AddExtension (const char *Filename, const char *Extension)
 {
-  char *result;
-  size_t FilenameLength, ExtensionLength;
-  
-  /* Check if last character is a path separator "/" */
-  FilenameLength     = strlen(Filename);
-  ExtensionLength = strlen(Extension);
-  
-  /* 1 "." char + 1 string terminating NULL = 2 */
-  result = (unsigned char *)calloc(FilenameLength + ExtensionLength + 2, sizeof(char));
-  if ( !result ) {
-    fprintf(stderr, "Could not allocate memory in AddExtension(%s, %s)", Filename, Extension);
-    return NULL;
-  };
-  strcat(result, Filename);
-  strcat(result, ".");
-  strcat(result, Extension);
-  return result;
+	char *result;
+	size_t FilenameLength, ExtensionLength;
+
+	/* Check if last character is a path separator "/" */
+	FilenameLength = strlen (Filename);
+	ExtensionLength = strlen (Extension);
+
+	/* 1 "." char + 1 string terminating NULL = 2 */
+	result = calloc (FilenameLength + ExtensionLength + 2, sizeof (char));
+	if (!result) {
+		fprintf (stderr, "Could not allocate memory in AddExtension(%s, %s)\n", Filename, Extension);
+		return NULL;
+	};
+	strcat (result, Filename);
+	strcat (result, ".");
+	strcat (result, Extension);
+	return result;
 };
-
-
-/*
- * library function: ConvertToScreenSurface
- * description:      Convert a given surface to the same
- *                   pixel format used by the screen.
- * parameters:       - Surface to convert.
- * return value:     Converted surface.
- */
-static SDL_Surface *
-ConvertToScreenSurface(SDL_Surface *src) {
-  SDL_Surface *bitmap = NULL;
-  bitmap = SDL_ConvertSurface(src, screen->format, SDL_HWSURFACE);
-  if(!bitmap) {
-    fprintf(stderr, "Could not create bitmap (%s)", SDL_GetError());
-    return NULL;
-  };
-  return bitmap;
-};
-
-
 
 /*
  * local function: BitmapFromRGBPixel
@@ -147,31 +117,28 @@ static SDL_Surface *
 BitmapFromRGBPixel (unsigned char *data, int width, int height)
 {
 
-  SDL_Surface *temp   = NULL; 
-  SDL_Surface *bitmap = NULL;
-  unsigned char *pixels = NULL;
+	SDL_Surface *temp;
+	SDL_Surface *bitmap;
+	unsigned char *pixels;
+	int i;
 
-  // Create new empty surface with correct dimensions
-  temp = SDL_CreateRGBSurface(SDL_HWSURFACE, width, height, 24,
-                                    RMASK, GMASK, BMASK, 0);
+	// Create new empty surface with correct dimensions
+	temp = SDL_CreateRGBSurface (screen->flags, width, height, 24, RMASK, GMASK, BMASK, 0);
 
-  // Copy all pixels from data to surface.
-  SDL_LockSurface(temp);
-  pixels = (unsigned char *)temp->pixels;
-  int i = 0;
-  for(i = 0; i<(3*width*height); i++){
-    *(pixels+i) = *(data+i);
-  };
-  SDL_UnlockSurface(temp);
+	// Copy all pixels from data to surface.
+	SDL_LockSurface (temp);
+	pixels = (unsigned char *)temp->pixels;
 
-  bitmap = ConvertToScreenSurface(temp);
-  SDL_FreeSurface(temp);
-  return bitmap;
+	for (i = 0; i < (3 * width * height); i++) {
+		*(pixels + i) = *(data + i);
+	};
+	SDL_UnlockSurface (temp);
 
-} /* BitmapFromRGBPixel */
+	bitmap = SDL_DisplayFormat (temp);
+	SDL_FreeSurface (temp);
+	return bitmap;
 
-
-
+}								/* BitmapFromRGBPixel */
 
 /*
  * library function: ReadPbmBitmap
@@ -183,24 +150,25 @@ BitmapFromRGBPixel (unsigned char *data, int width, int height)
 SDL_Surface *
 ReadPbmBitmap (const char *path, const char *filename)
 {
-  SDL_Surface   *temp, *bitmap;
+	SDL_Surface *temp, *bitmap;
 
-  char *tempAbsFilename, *absFilename;
-  tempAbsFilename = CatPathAndFilename(path, filename);
-  absFilename = AddExtension(tempAbsFilename, "pbm");
+	char *tempAbsFilename, *absFilename;
+	tempAbsFilename = CatPathAndFilename (path, filename);
+	absFilename = AddExtension (tempAbsFilename, "pbm");
 
-  temp = IMG_Load(absFilename);
-  if(!temp) {
-    fprintf(stderr, "Could not create bitmap (%s)", SDL_GetError());
-    return NULL;
-  };
-  
-  bitmap = ConvertToScreenSurface(temp);
-  SDL_FreeSurface(temp);
-  return bitmap;
+	temp = IMG_Load (absFilename);
+	if (!temp) {
+		fprintf (stderr, "Could not create bitmap (%s)\n", SDL_GetError ());
+		return NULL;
+	};
 
-} /* ReadPbmBitmap */
+	bitmap = SDL_DisplayFormat (temp);
+	free (tempAbsFilename);
+	free (absFilename);
+	SDL_FreeSurface (temp);
+	return bitmap;
 
+}								/* ReadPbmBitmap */
 
 /*
  * library function: ReadRgbPixmap
@@ -209,28 +177,30 @@ ReadPbmBitmap (const char *path, const char *filename)
  *                   filename - name of image file
  * return value:     handle of bitmap, or NULL on failure
  */
-SDL_Surface * 
+SDL_Surface *
 ReadRgbPixmap (const char *path, const char *filename)
 {
 
-  SDL_Surface   *temp, *bitmap;
+	SDL_Surface *temp, *bitmap;
 
-  char *tempAbsFilename, *absFilename;
-  tempAbsFilename = CatPathAndFilename(path, filename);
-  absFilename = AddExtension(tempAbsFilename, "ppm");
+	char *tempAbsFilename, *absFilename;
+	tempAbsFilename = CatPathAndFilename (path, filename);
+	absFilename = AddExtension (tempAbsFilename, "ppm");
 
-  temp = IMG_Load(absFilename);
-  if(!temp) {
-    fprintf(stderr, "Could not create bitmap (%s)", SDL_GetError());
-    return NULL;
-  };
-  
-  bitmap = ConvertToScreenSurface(temp);
-  SDL_FreeSurface(temp);
-  return bitmap;
+	temp = IMG_Load (absFilename);
+	if (!temp) {
+		fprintf (stderr, "Could not create bitmap (%s)\n", SDL_GetError ());
+		return NULL;
+	};
 
-} /* ReadRgbPixmap */
+	bitmap = SDL_DisplayFormat (temp);
+	assert (bitmap);
+	free (tempAbsFilename);
+	free (absFilename);
+	SDL_FreeSurface (temp);
+	return bitmap;
 
+}								/* ReadRgbPixmap */
 
 /*
  * library function: ReadCchPixmap
@@ -246,32 +216,31 @@ ReadRgbPixmap (const char *path, const char *filename)
 SDL_Surface *
 ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg, XBColor add)
 {
-  int            width;
-  int            height;
-  unsigned char *ppm;
-  SDL_Surface   *bitmap;
+	int width;
+	int height;
+	unsigned char *ppm;
+	SDL_Surface *bitmap;
 
-  /* load ppm file */
-  if (NULL == (ppm = ReadPpmFile (path, filename, &width, &height) ) ) {
-    fprintf(stderr, "ReadPpmFile(&s, %s) failed", path, width);
-    return NULL;
-  }
-  /* convert color */
-  CchToPpm (ppm, width, height, fg, bg, add);
-  /* now create bitmap */
+	/* load ppm file */
+	if (NULL == (ppm = ReadPpmFile (path, filename, &width, &height))) {
+		fprintf (stderr, "ReadPpmFile(%s, %d) failed\n", path, width);
+		return NULL;
+	}
+	/* convert color */
+	CchToPpm (ppm, width, height, fg, bg, add);
+	/* now create bitmap */
 
-  bitmap = BitmapFromRGBPixel(ppm, width, height);
-  if(!bitmap) {
-    fprintf(stderr, "Could not create bitmap (%s)", SDL_GetError());
-    return NULL;
-  };
+	bitmap = BitmapFromRGBPixel (ppm, width, height);
+	if (!bitmap) {
+		fprintf (stderr, "Could not create bitmap (%s)\n", SDL_GetError ());
+		return NULL;
+	};
 
-  free (ppm);
-  return bitmap;
-} /* ReadCchPixmap */
+	free (ppm);
+	return bitmap;
+}								/* ReadCchPixmap */
 
-
-/*
+/**
  * library function: ReadEpmPixmap
  * description:      create a bitmap from a ppm file (using red as bg, green as add 
  *                   and white as highlight)
@@ -282,56 +251,61 @@ ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg, X
  * return value:     handle of bitmap, or NULL on failure
  */
 SDL_Surface *
-ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBColor *color)
+ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBColor * color)
 {
-  int            width;
-  int            height;
-  int            depth;
-  unsigned char *epm;
-  unsigned char *ppm;
-  SDL_Surface   *bitmap, *mask;
-  char *tempAbsFilename, *absFilename;
+	int width;
+	int height;
+	int depth;
+	unsigned char *epm;
+	unsigned char *ppm;
+	SDL_Surface *bitmap, *mask;
+	char *tempAbsFilename, *absFilename;
 
 /*   assert (NULL != color); */
-  assert (NULL != path);
-  assert (NULL != filename);
-  /* load ppm file */
-  if (NULL == (epm = ReadEpmFile (path, filename, &width, &height, &depth) ) ) {
-    fprintf(stderr, "ReadEpmFile(%s, %s) failed.", path, filename);
-    return NULL;
-  }
+	assert (NULL != path);
+	assert (NULL != filename);
+	/* load ppm file */
+	if (NULL == (epm = ReadEpmFile (path, filename, &width, &height, &depth))) {
+		fprintf (stderr, "ReadEpmFile(%s, %s) failed.\n", path, filename);
+		return NULL;
+	}
 
-  tempAbsFilename = CatPathAndFilename(path, filename);
-  absFilename = AddExtension(tempAbsFilename, "pbm");
+	/* check depth */
+	if (depth < n_colors) {
+		n_colors = depth;
+	}
+	/* create ppm array */
+	ppm = malloc (width * height * 3);
+	assert (ppm != NULL);
+	/* convert color */
+	EpmToPpm (epm, ppm, width, height, n_colors, color);
+	bitmap = BitmapFromRGBPixel (ppm, width, height);
 
-  mask  = IMG_Load(absFilename);
-  SDL_SetColorKey(mask, SDL_SRCCOLORKEY, 1);
-  
-  /* check depth */
-  if (depth < n_colors) {
-    n_colors = depth;
-  }
-  /* create ppm array */
-  ppm = malloc (width * height * 3);
-  assert (ppm != NULL);
-  /* convert color */
-  EpmToPpm (epm, ppm, width, height, n_colors, color);
+	tempAbsFilename = CatPathAndFilename (path, filename);
+	absFilename = AddExtension (tempAbsFilename, "pbm");
 
-  bitmap = BitmapFromRGBPixel(ppm, width, height);
+	mask = IMG_Load (absFilename);
+	/* Some epm files dont have a companion mask file */
+	if (NULL != mask) {
+		SDL_SetColorKey (mask, SDL_SRCCOLORKEY, 1);
+		SDL_BlitSurface (mask, NULL, bitmap, NULL);
+	}
+	SDL_SetColorKey (bitmap, SDL_SRCCOLORKEY, SDL_MapRGB (bitmap->format, 0xFF, 0xFF, 0xFF));
+	free (tempAbsFilename);
+	free (absFilename);
+	free (epm);
+	free (ppm);
+	if (NULL != mask) {
+		SDL_FreeSurface (mask);
+	}
 
-  SDL_BlitSurface(mask, NULL, bitmap, NULL);
-  SDL_SetColorKey(bitmap, SDL_SRCCOLORKEY, SDL_MapRGB(bitmap->format, 0xFF, 0xFF, 0xFF));
-  SDL_FreeSurface(mask);
+	if (!bitmap) {
+		fprintf (stderr, "Could not create bitmap (%s)\n", SDL_GetError ());
+		return NULL;
+	};
 
-  if(!bitmap) {
-    fprintf(stderr, "Could not create bitmap (%s)", SDL_GetError());
-    return NULL;
-  };
-  
-  return bitmap;
-} /* ReadEpmPixmap */
-
-
+	return bitmap;
+}								/* ReadEpmPixmap */
 
 /*
  * convert colorname to value (not supported for win32)
@@ -339,8 +313,8 @@ ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBCol
 XBColor
 GUI_ParseColor (const char *name)
 {
-  return COLOR_INVALID;
-} /* GUI_ParseColor */
+	return COLOR_INVALID;
+}								/* GUI_ParseColor */
 
 /*
  * end of file SDL_image.c

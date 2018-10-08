@@ -1,0 +1,142 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Bloups !
+author=Simon
+hint=Dis bonjour au voison d'en face !
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.1
+numBlocks=6
+pos000=1 1
+pos001=1 11
+pos002=7 1
+pos003=7 11
+pos004=13 1
+pos005=13 11
+
+[scrambleDel]
+time=0.05
+numBlocks=69
+pos000=1 2
+pos001=1 10
+pos002=2 1
+pos003=2 2
+pos004=2 3
+pos005=2 9
+pos006=2 10
+pos007=2 11
+pos008=3 2
+pos009=3 3
+pos010=3 4
+pos011=3 5
+pos012=3 6
+pos013=3 7
+pos014=3 8
+pos015=3 9
+pos016=3 10
+pos017=4 3
+pos018=4 6
+pos019=4 9
+pos020=5 3
+pos021=5 6
+pos022=5 9
+pos023=6 1
+pos024=6 2
+pos025=6 3
+pos026=6 6
+pos027=6 9
+pos028=6 10
+pos029=6 11
+pos030=7 2
+pos031=7 3
+pos032=7 4
+pos033=7 5
+pos034=7 6
+pos035=7 7
+pos036=7 8
+pos037=7 9
+pos038=7 10
+pos039=8 1
+pos040=8 2
+pos041=8 3
+pos042=8 6
+pos043=8 9
+pos044=8 10
+pos045=8 11
+pos046=9 3
+pos047=9 6
+pos048=9 9
+pos049=10 3
+pos050=10 6
+pos051=10 9
+pos052=11 2
+pos053=11 3
+pos054=11 4
+pos055=11 5
+pos056=11 6
+pos057=11 7
+pos058=11 8
+pos059=11 9
+pos060=11 10
+pos061=12 1
+pos062=12 2
+pos063=12 3
+pos064=12 9
+pos065=12 10
+pos066=12 11
+pos067=13 2
+pos068=13 10
+
+[func]
+
+[player]
+bombs=4
+range=9
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+wallClick=contact
+
+[graphics]
+block00=dark_way		#000000 #006400 #00FF00
+block01=dark_way_X		#000000 #006400 #00FF00
+block02=wall		#000000 #FF4500 #000000
+block03=wall_R		#000000 #FF4500 #000000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=bomb
+block10=chess_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=B__vvv___vvv__B
+row02=B__vvv___vvv__B
+row03=BvvvvvvvvvvvvvB
+row04=BvvvvvvvvvvvvvB
+row05=BvvvvvvvvvvvvvB
+row06=BvvvvvvvvvvvvvB
+row07=BvvvvvvvvvvvvvB
+row08=BvvvvvvvvvvvvvB
+row09=BvvvvvvvvvvvvvB
+row10=B__vvv___vvv__B
+row11=B__vvv___vvv__B
+row12=BBBBBBBBBBBBBBB

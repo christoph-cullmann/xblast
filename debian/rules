@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+PREFIX=/usr
+
+configure: configure-stamp
+configure-stamp:
+	./aclocal
+	automake --add-missing --copy --gnu
+	autoconf
+	./configure --prefix=$(PREFIX) --enable-sound --with-otherdatadir=$(PREFIX)/share/aixblast-tnt
+	touch configure-stamp
+
+
+build: build-stamp
+build-stamp: configure-stamp
+	dh_testdir
+	$(MAKE)
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -f configure-stamp
+	-$(MAKE) clean
+	-$(MAKE) distclean
+	dh_clean
+
+install:
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	$(MAKE) DESTDIR=`pwd`/debian/aixblast-tnt install
+	$(MAKE) DESTDIR=`pwd`/debian/aixblast-tnt install-game-data
+
+binary: build install
+	dh_testdir -a
+	dh_testroot -a
+	dh_installdocs -a
+	dh_link -a
+	dh_fixperms -a
+	dh_installdeb -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
+
+.PHONY: build clean binary install

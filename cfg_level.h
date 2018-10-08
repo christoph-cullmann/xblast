@@ -1,9 +1,9 @@
 /*
  * cfg_level.c - managing level data
  *
- * $Id: cfg_level.h,v 1.9 2004/10/19 17:59:17 iskywalker Exp $
+ * $Id: cfg_level.h,v 1.11 2006/02/09 21:21:23 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,11 +24,8 @@
 #ifndef _CFG_LEVEL_H
 #define _CFG_LEVEL_H
 
-#include "ini_file.h"
-#include "cfg_game.h"
-
-/* 
- * game mode flags for levels 
+/*
+ * game mode flags for levels
  */
 #define GM_Random     	(1<<0)
 #define GM_2_Player   	(1<<1)
@@ -58,26 +55,26 @@ extern void LoadLevelConfig (void);
 extern void SaveLevelConfig (void);
 extern void FinishLevelConfig (void);
 
-extern int         GetNumLevels       (void);
-extern XBAtom      GetLevelAtom       (int index);
+extern int GetNumLevels (void);
+extern XBAtom GetLevelAtom (int index);
 extern const char *GetLevelNameByAtom (XBAtom atom);
 
-extern XBBool GetLevelSelected   (XBAtom atom);
-extern void   StoreLevelSelected (XBAtom atom, XBBool value);
+extern XBBool GetLevelSelected (XBAtom atom);
+extern void StoreLevelSelected (XBAtom atom, XBBool value);
 
-extern XBBool        InitLevels    (const CFGGame *);
+extern XBBool InitLevels (const CFGGame *);
 
-extern XBAtom        GetNextLevel  (void);
+extern XBAtom GetNextLevel (void);
 extern const DBRoot *LoadLevelFile (XBAtom atom);
 
-extern void 	     SendLevelConfig        (XBSndQueue *queue, XBTeleCOT cot, const DBRoot *level);
-extern void 	     ClearRemoteLevelConfig (void);
-extern void 	     AddToRemoteLevelConfig (unsigned iob, const char *data);
-extern XBBool 	     CheckLocalLevelConfig (void);
-extern XBBool 	     CheckRemoteLevelConfig (void);
-extern XBBool 	     CheckAnyLevelConfig (const DBRoot *);
-extern XBBool        CheckAllLevelConfigs(void);
-extern const DBRoot *GetRemoteLevelConfig   (void);
+extern void SendLevelConfig (XBSndQueue * queue, XBTeleCOT cot, const DBRoot * level);
+extern void ClearRemoteLevelConfig (void);
+extern void AddToRemoteLevelConfig (unsigned iob, const char *data);
+extern XBBool CheckLocalLevelConfig (void);
+extern XBBool CheckRemoteLevelConfig (void);
+extern XBBool CheckAnyLevelConfig (const DBRoot *);
+extern XBBool CheckAllLevelConfigs (void);
+extern const DBRoot *GetRemoteLevelConfig (void);
 
 #endif
 /*

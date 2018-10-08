@@ -1,9 +1,9 @@
 /*
  * file net_dgram.c - Datagrams for in game messages
  *
- * $Id: net_dgram.c,v 1.8 2005/01/23 14:26:32 lodott Exp $
+ * $Id: net_dgram.c,v 1.12 2006/02/09 21:21:24 fzago Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -20,14 +20,16 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "net_dgram.h"
+
+#include "xblast.h"
 
 /*
  * local structures
  */
-struct _xb_datagram {
-  void   *data;
-  size_t  len;
+struct _xb_datagram
+{
+	void *data;
+	size_t len;
 };
 
 /*
@@ -39,7 +41,7 @@ struct _xb_datagram {
 /*
  * local variables
  */
-static unsigned char buffer[MAX_DGRAM_SIZE+3];
+static unsigned char buffer[MAX_DGRAM_SIZE + 3];
 
 /*
  * create a datagram
@@ -47,115 +49,114 @@ static unsigned char buffer[MAX_DGRAM_SIZE+3];
 XBDatagram *
 Net_CreateDatagram (const void *data, size_t len)
 {
-  XBDatagram *ptr;
-  assert (len <= MAX_DGRAM_SIZE);
-  /* alloc data */
-  ptr = calloc (1, sizeof (*ptr));
-  assert (NULL != ptr);
-  /* alloc buffer */
-  ptr->data = calloc (len + 1, 1);
-  assert (NULL != ptr->data);
-  /* set values */
-  ptr->len = len;
-  if (NULL != data) {
-    memcpy (ptr->data, data, len);
-  }
-  /* that's all */
-  return ptr;
-} /* Net_CreateDatagram */
+	XBDatagram *ptr;
+	assert (len <= MAX_DGRAM_SIZE);
+	/* alloc data */
+	ptr = calloc (1, sizeof (XBDatagram));
+	assert (NULL != ptr);
+	/* alloc buffer */
+	ptr->data = calloc (len + 1, 1);
+	assert (NULL != ptr->data);
+	/* set values */
+	ptr->len = len;
+	if (NULL != data) {
+		memcpy (ptr->data, data, len);
+	}
+	/* that's all */
+	return ptr;
+}								/* Net_CreateDatagram */
 
 /*
- * delete datagram
+ * delete datagram 
  */
 void
-Net_DeleteDatagram (XBDatagram *ptr)
+Net_DeleteDatagram (XBDatagram * ptr)
 {
-  assert (ptr != NULL);
-  assert (ptr->data != NULL);
-  free (ptr->data);
-  free (ptr);
-} /* Net_DeleteDatagram */
+	assert (ptr != NULL);
+	assert (ptr->data != NULL);
+	free (ptr->data);
+	free (ptr);
+}								/* Net_DeleteDatagram */
 
 /*
  * write datagram to local buffer
  */
 static void
-MakeDatagram (const XBDatagram *ptr)
+MakeDatagram (const XBDatagram * ptr)
 {
-  assert (ptr != NULL);
-  /* write buffer */
-  buffer[0] = DGRAM_START;
-  buffer[1] = ptr->len;
-  memcpy (buffer + 2, ptr->data, ptr->len);
-  buffer[ptr->len+2] = DGRAM_STOP;
-  /* send it */
+	assert (ptr != NULL);
+	/* write buffer */
+	buffer[0] = DGRAM_START;
+	buffer[1] = ptr->len;
+	memcpy (buffer + 2, ptr->data, ptr->len);
+	buffer[ptr->len + 2] = DGRAM_STOP;
+	/* send it */
 #ifdef DEBUG_TELE
-  {
-    int i;
-    Dbg_Out ("snd dgram ");
-    for (i = 0; i < ptr->len; i ++) {
-      Dbg_Out ("%02x ", (unsigned) (buffer[i+2]) );
-    }
-    Dbg_Out ("(%u bytes)\n", ptr->len);
-  }
+	{
+		int i;
+		Dbg_Out ("snd dgram ");
+		for (i = 0; i < ptr->len; i++) {
+			Dbg_Out ("%02x ", (unsigned)(buffer[i + 2]));
+		}
+		Dbg_Out ("(%u bytes)\n", ptr->len);
+	}
 #endif
-} /* MakeDatagram */
+}								/* MakeDatagram */
 
 /*
  * send datagram on a socket
  */
 XBBool
-Net_SendDatagram (const XBDatagram *ptr, const XBSocket *pSocket)
+Net_SendDatagram (const XBDatagram * ptr, const XBSocket * pSocket)
 {
-  int result;
-  /* fill buffer */
-  MakeDatagram (ptr);
+	int result;
+	/* fill buffer */
+	MakeDatagram (ptr);
 #ifdef DEBUG_UDP
-  /* simulate heavy data loss */
-  if (rand () % 2) {
-    Dbg_Dgram ("dgram discarded, simulated data loss\n");
-    return XBTrue;
-  }
+	/* simulate heavy data loss */
+	if (rand () % 2) {
+		Dbg_Dgram ("dgram discarded, simulated data loss\n");
+		return XBTrue;
+	}
 #endif
-  /* send */
-  result = Socket_Send (pSocket, buffer, ptr->len + 3);
-  switch (result) {
-  case XB_SOCKET_END_OF_FILE:
-  case XB_SOCKET_ERROR:
-    return XBFalse;
-  case XB_SOCKET_WOULD_BLOCK:
-    return XBTrue;
-  default:
-    return (ptr->len + 3 == result);
-  }
-} /* Net_SendDatagram */
+	result = Socket_Send (pSocket, buffer, ptr->len + 3);
+	switch (result) {
+	case XB_SOCKET_END_OF_FILE:
+	case XB_SOCKET_ERROR:
+		return XBFalse;
+	case XB_SOCKET_WOULD_BLOCK:
+		return XBTrue;
+	default:
+		return (ptr->len + 3 == (size_t) result);
+	}
+}								/* Net_SendDatagram */
 
 /*
- * send datagram on socket to specified peer and broadcast option
+ * send datagram to specified peer with given broadcast option
  */
 XBBool
-Net_SendDatagramTo (const XBDatagram *ptr, XBSocket *pSocket, const char *host, unsigned short port, XBBool broadcast)
+Net_SendDatagramTo (const XBDatagram * ptr, XBSocket * pSocket, const char *host,
+					unsigned short port, XBBool broadcast)
 {
-  int result;
-  /* fill buffer */
-  MakeDatagram (ptr);
-  /* enable broadcast if needed */
-  if (broadcast && ! Socket_SetBroadcast (pSocket, broadcast)) {
-    Dbg_Out("failed to set broadcast flag on socket!\n");
-    return XBFalse;
-  }
-  /* send */
-  result = Socket_SendTo (pSocket, buffer, ptr->len + 3, host, port);
-  switch (result) {
-  case XB_SOCKET_END_OF_FILE:
-  case XB_SOCKET_ERROR:
-    return XBFalse;
-  case XB_SOCKET_WOULD_BLOCK:
-    return XBTrue;
-  default:
-    return (ptr->len + 3 == result);
-  }
-} /* Net_SendDatagram */
+	int result;
+	/* fill buffer */
+	MakeDatagram (ptr);
+	/* enable broadcast if needed */
+	if (broadcast && !Socket_SetBroadcast (pSocket, broadcast)) {
+		Dbg_Out ("failed to set broadcast flag on socket!\n");
+		return XBFalse;
+	}
+	result = Socket_SendTo (pSocket, buffer, ptr->len + 3, host, port);
+	switch (result) {
+	case XB_SOCKET_END_OF_FILE:
+	case XB_SOCKET_ERROR:
+		return XBFalse;
+	case XB_SOCKET_WOULD_BLOCK:
+		return XBTrue;
+	default:
+		return (ptr->len + 3 == (size_t) result);
+	}
+}								/* Net_SendDatagram */
 
 /*
  * parse datagram in read buffer
@@ -163,84 +164,85 @@ Net_SendDatagramTo (const XBDatagram *ptr, XBSocket *pSocket, const char *host, 
 static XBDatagram *
 ParseDatagram (size_t len)
 {
-  switch (len) {
-  case XB_SOCKET_END_OF_FILE:
-  case XB_SOCKET_WOULD_BLOCK:
-  case XB_SOCKET_ERROR:
-    return NULL;
-  }
-  /* length check */
-  if (len < 3) {
-    return NULL;
-  }
-  /* check start */
-  if (buffer[0] != DGRAM_START) {
-    return NULL;
-  }
-  /* check length stop */
-  if (buffer[1] + 3 != len) {
-    return NULL;
-  }
-  /* check stop */
-  if (buffer[len-1] != DGRAM_STOP) {
-    return NULL;
-  }
+	switch (len) {
+	case XB_SOCKET_END_OF_FILE:
+	case XB_SOCKET_WOULD_BLOCK:
+	case XB_SOCKET_ERROR:
+		return NULL;
+	}
+	/* length check */
+	if (len < 3) {
+		return NULL;
+	}
+	/* check start */
+	if (buffer[0] != DGRAM_START) {
+		return NULL;
+	}
+	/* check length stop */
+	if (buffer[1] + 3 != (unsigned char)len) {
+		return NULL;
+	}
+	/* check stop */
+	if (buffer[len - 1] != DGRAM_STOP) {
+		return NULL;
+	}
 #ifdef DEBUG_TELE
-  {
-    size_t i;
-    Dbg_Out ("rcv dgram ");
-    for (i = 0; i < buffer[1]; i ++) {
-      Dbg_Out ("%02x ", (unsigned) buffer[i+2]);
-    }
-    Dbg_Out ("(%u bytes)\n", (unsigned) buffer[1]);
-  }
+	{
+		size_t i;
+		Dbg_Out ("rcv dgram ");
+		for (i = 0; i < buffer[1]; i++) {
+			Dbg_Out ("%02x ", (unsigned)buffer[i + 2]);
+		}
+		Dbg_Out ("(%u bytes)\n", (unsigned)buffer[1]);
+	}
 #endif
-  /* datagram is correct */
-  return Net_CreateDatagram (buffer + 2, buffer[1]);
-} /* ParseDatagram */
+	/* datagram is correct */
+	return Net_CreateDatagram (buffer + 2, buffer[1]);
+}								/* ParseDatagram */
 
 /*
  * receive datagram
  */
 XBDatagram *
-Net_ReceiveDatagram (const XBSocket *pSocket)
+Net_ReceiveDatagram (const XBSocket * pSocket)
 {
 #ifdef W32
-  long len;
+	long len;
 #else
-  ssize_t len;
+	ssize_t len;
 #endif
-  len = Socket_Receive (pSocket, buffer, sizeof (buffer) );
-  return ParseDatagram (len);
-} /* Net_ReceiveDatagram */
+
+	len = Socket_Receive (pSocket, buffer, sizeof (buffer));
+	return ParseDatagram (len);
+}								/* Net_ReceiveDatagram */
 
 /*
  * receive datagram
  */
 XBDatagram *
-Net_ReceiveDatagramFrom (XBSocket *pSocket, const char **host, unsigned short *port)
+Net_ReceiveDatagramFrom (XBSocket * pSocket, const char **host, unsigned short *port)
 {
 #ifdef W32
-  long len;
+	long len;
 #else
-  ssize_t len;
+	ssize_t len;
 #endif
-  len = Socket_ReceiveFrom (pSocket, buffer, sizeof (buffer), host, port);
-  return ParseDatagram (len);
-} /* Net_ReceiveDatagram */
+	len = Socket_ReceiveFrom (pSocket, buffer, sizeof (buffer), host, port);
+	return ParseDatagram (len);
+}								/* Net_ReceiveDatagram */
 
 /*
  * contents of datagram
  */
 const void *
-Net_DgramData (const XBDatagram *dgram, size_t *len)
+Net_DgramData (const XBDatagram * dgram, size_t * len)
 {
-  assert (NULL != dgram);
-  assert (NULL != len);
+	assert (NULL != dgram);
+	assert (NULL != len);
 
-  *len = dgram->len;
-  return dgram->data;
-} /* Net_DgramData* */
+	*len = dgram->len;
+	return dgram->data;
+}								/* Net_DgramData* */
 
 /*
  * end of file net_dgram.c

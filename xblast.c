@@ -1,7 +1,7 @@
 /*
  * file xblast.c - main routine
  *
- * $Id: xblast.c,v 1.13 2004/11/29 14:40:22 lodott Exp $
+ * $Id: xblast.c,v 1.19 2006/02/15 22:30:32 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -21,24 +21,12 @@
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "atom.h"
-#include "cfg_main.h"
-#include "demo.h"
-#include "game_client.h"
-#include "game_demo.h"
-#include "game_local.h"
-#include "game_server.h"
-#include "image.h"
-#include "info.h"
-#include "intro.h"
-#include "menu.h"
-#include "random.h"
-#include "socket.h"
-#include "menu_game.h"
+#include "xblast.h"
 
-#if defined(XBLAST_SOUND)
-#include "snd.h"
-#endif
+/* AbsInt start */
+XBBool trace_aborted;
+FILE *trace_aborted_file;
+/* AbsInt end */
 
 /*
  * going down gracefully
@@ -46,129 +34,178 @@
 static void
 Finish (void)
 {
-  Dbg_Out ("Finish\n");
-  /* shutdown sound */
+	Dbg_Out ("Finish\n");
+	/* shutdown sound */
 #if defined(XBLAST_SOUND)
-  SND_Finish ();
+	SND_Finish ();
 #endif
-  /* shutdown network */
-  Socket_Finish ();
-  /* clean up some modules */
-  ClearShapeList ();
-  ClearInfo ();
-  /* save and delete current configuration */
-  SaveConfig ();
-  FinishConfig ();
+	/* shutdown network */
+	Socket_Finish ();
+	/* clean up some modules */
+	ClearShapeList ();
+	ClearInfo ();
+	/* save and delete current configuration */
+	SaveConfig ();
+	FinishConfig ();
+	/* finish all remaining databases */
+	DB_Finish ();
+	/* finish level selection, if necessary */
+	FinishLevelSelection ();
 #ifdef DEBUG_ALLOC
-  Dbg_FinishAlloc ();
+	Dbg_FinishAlloc ();
 #endif
-} /* Finish */
+}								/* Finish */
 
 /*
  * main routine
  */
 #ifdef WMS
-int WINAPI WinMain(
-  HINSTANCE hInstance,      // handle to current instance
-  HINSTANCE hPrevInstance,  // handle to previous instance
-  LPSTR lpCmdLine,          // pointer to command line
-  int nCmdShow              // show state of window
-)
+int WINAPI
+WinMain (HINSTANCE hInstance,	// handle to current instance
+		 HINSTANCE hPrevInstance,	// handle to previous instance
+		 LPSTR lpCmdLine,		// pointer to command line
+		 int nCmdShow			// show state of window
+	)
 #else
 int
 main (int argc, char *argv[])
 #endif
 {
 #if defined(XBLAST_SOUND)
-  CFGSoundSetup  soundSetup;
+	CFGSoundSetup soundSetup;
 #endif
 #ifndef WMS
-  int i;
+	int i;
 #endif
-  XBPlayerHost   hostType;
-  XBBool         autoCentral;
-  XBBool         nsound;
-  XBBool         check;
+	XBPlayerHost hostType;
+	XBBool autoCentral;
+	XBBool nsound;
+	XBBool check;
 
-  autoCentral = XBFalse;
-  nsound = XBFalse;
-  check = XBFalse;
-#ifndef WMS
-  if(argc>1){
-    i=1;
-    while(i<argc){
-      if (0==strcmp("-central",argv[i])) {
-	autoCentral = XBTrue;
-	i++;
-	continue;
-      } else if (0==strcmp("-ns",argv[i])) {
-	nsound = XBTrue;
-	i++;
-	continue;
-      } else if (0==strcmp("-check",argv[i])) {
-	check = XBTrue;
-	i++;
-	continue;
-      } else {
-	break;
-      }
-    }
-  }
+#ifdef ENABLE_NLS
+	setlocale (LC_ALL, "");
+	bindtextdomain (PACKAGE, LOCALEDIR);
+	textdomain (PACKAGE);
 #endif
-  /* init new configuration */
-  InitConfig ();
-  /* initialize network */
-  if (! Socket_Init ()) {
-    return -1;
-  }
-  /* Init Sound support */
+
+	autoCentral = XBFalse;
+	nsound = XBFalse;
+	check = XBFalse;
+    /* AbsInt start */
+    trace_aborted = XBFalse;
+    /* AbsInt end */
+
+/* AbsInt: initialize chat filter from text file */
+#if defined(XBLAST_CHAT_FILTER)
+    init_bad_words();
+#endif
+/* AbsInt end */
+
+#ifndef WMS
+	if (argc > 1) {
+		i = 1;
+		while (i < argc) {
+			if (0 == strcmp ("-central", argv[i])) {
+				autoCentral = XBTrue;
+				i++;
+				continue;
+			}
+			else if (0 == strcmp ("-ns", argv[i])) {
+				nsound = XBTrue;
+				i++;
+				continue;
+			}
+			else if (0 == strcmp ("-check", argv[i])) {
+				check = XBTrue;
+				i++;
+				continue;
+		    }
+			/* AbsInt start */
+            else if (0 == strcmp("-trace-abort", argv[1])) {
+                printf("activating trace-mode...\n");
+                trace_aborted = XBTrue;
+                trace_aborted_file = fopen(GAME_DATADIR "/aborted_levels.txt", "at");
+                if (!trace_aborted_file) {
+                    printf("Cannot open '%s' for writing...\n", GAME_DATADIR "/aborted_levels.txt");
+                    exit(EXIT_FAILURE);
+                }
+                ++i;
+                continue;
+			}
+            /* AbsInt end */
+			else {
+				break;
+			}
+		}
+	}
+#endif
+	/* init new configuration */
+	InitConfig ();
+	/* initialize network */
+	if (!Socket_Init ()) {
+		return -1;
+	}
+	/* Init Sound support */
 #if defined(XBLAST_SOUND)
-  RetrieveSoundSetup (&soundSetup);
-  if (!nsound) {
-    SND_Init (&soundSetup);
-  }
+	RetrieveSoundSetup (&soundSetup);
+	if (!nsound) {
+		SND_Init (&soundSetup);
+	}
 #endif
 
-  /* Initialize graphics engine */
+	/* Initialize graphics engine */
 #ifdef WMS
-  if (! GUI_Init (0, NULL) ) {
+	if (!GUI_Init (0, NULL)) {
 #else
-  if (! GUI_Init (argc, argv) ) {
+	if (!GUI_Init (argc, argv)) {
 #endif
-    Finish ();
-    return -1;
-  }
-  GUI_OnQuit (Finish);
-  if (check && ! CheckConfig() ) {
-    GUI_Finish();
-    Finish();
-    return -2;
-  }
-  /* init random number generator */
-  SeedRandom (time (NULL));
-  /* Call intro */
-  DoIntro ();
+		Finish ();
+		return -1;
+	}
+	GUI_OnQuit (Finish);
+	if (check && !CheckConfig ()) {
+		GUI_Finish ();
+		Finish ();
+		return -2;
+	}
+	/* init random number generator */
+	SeedRandom (time (NULL));
+	/* Call intro */
+	DoIntro ();
 
-  /* main loop until quit */
-  while (XBPH_None != (hostType = DoMenu (autoCentral) ) ) {
-    /* save current configurations */
-    SaveConfig ();
-    SetHostType(hostType);
-    /* run selected game  */
-    switch (hostType) {
-    case XBPH_Local:  RunLocalGame ();          break;
-    case XBPH_Demo:   RunDemoGame ();           break;
-    case XBPH_Server: RunServerGame ();         break;
-    default:          RunClientGame (hostType); break;
-    }
-  }
-  /* close Display */
-  GUI_Finish ();
-  /* shutdown the rest */
-  Finish ();
-  /* that's all */
-  return 0;
-} /* main */
+	/* main loop until quit */
+	while (XBPH_None != (hostType = DoMenu (autoCentral))) {
+		/* save current configurations */
+		SaveConfig ();
+		SetHostType (hostType);
+		/* run selected game  */
+		switch (hostType) {
+		case XBPH_Local:
+			RunLocalGame ();
+			break;
+		case XBPH_Demo:
+			RunDemoGame ();
+			break;
+		case XBPH_Server:
+			RunServerGame ();
+			break;
+		default:
+			RunClientGame (hostType);
+			break;
+		}
+	}
+    /* AbsInt start */
+    /* Close the trace file if needed */
+    if (trace_aborted)
+        fclose(trace_aborted_file);
+    /* AbsInt end */
+	/* close Display */
+	GUI_Finish ();
+	/* shutdown the rest */
+	Finish ();
+	/* that's all */
+	return 0;
+}								/* main */
 
 /*
  * end of file xblast.c

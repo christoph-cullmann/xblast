@@ -1,9 +1,9 @@
 /*
  * file com_dg_server.h - send ingame datagrams to server
  *
- * $Id: com_dg_server.h,v 1.5 2004/10/04 12:13:55 lodott Exp $
+ * $Id: com_dg_server.h,v 1.8 2006/02/09 21:21:23 fzago Exp $
  *
- * Program XBLAST 
+ * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,10 +22,6 @@
  */
 #ifndef XBLAST_COM_DG_SERVER_H
 #define XBLAST_COM_DG_SERVER_H
-
-#include "com_base.h"
-
-#include "action.h"
 
 /*
  * global prototypes
@@ -40,13 +36,14 @@ extern XBBool D2S_Timeout (const XBComm *, const struct timeval *tv);
 extern XBBool D2S_Connected (const XBComm *);
 
 /* set local data */
-extern void   D2S_Reset (XBComm *comm);
+extern void D2S_Reset (XBComm * comm);
+extern void D2S_SetMaskBytes (XBComm * comm, unsigned);
 
 /* queue data */
-extern void   D2S_SendConnect (XBComm *comm);
-extern void   D2S_SendPlayerAction (XBComm *comm, int gameTime, const PlayerAction *data);
-extern void   D2S_SendFinish (XBComm *comm, int gameTime);
-extern XBBool D2S_Flush (XBComm *comm);
+extern void D2S_SendConnect (XBComm * comm);
+extern void D2S_SendPlayerAction (XBComm * comm, int gameTime, const PlayerAction * data);
+extern void D2S_SendFinish (XBComm * comm, int gameTime);
+extern XBBool D2S_Flush (XBComm * comm);
 
 #endif
 /*

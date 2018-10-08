@@ -1,7 +1,7 @@
 /*
  * file info.h - display info at level start
  *
- * $Id: info.h,v 1.6 2004/12/04 06:01:13 lodott Exp $
+ * $Id: info.h,v 1.9 2006/02/10 15:07:42 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,14 +23,11 @@
 #ifndef _INFO_H
 #define _INFO_H
 
-#include "xblast.h"
-#include "ini_file.h"
-
 /*
  * prototypes
  */
 extern void ResetInfo (void);
-extern XBBool ParseLevelInfo (const DBSection *section, DBSection *warn);
+extern XBBool ParseLevelInfo (const DBSection * section, DBSection * warn);
 extern void ClearInfo (void);
 extern void AddPlayerInfo (const char *fmt, ...);
 extern void AddLevelInfo (const char *fmt, ...);
@@ -38,7 +35,7 @@ extern void AddExtraInfo (const char *fmt, ...);
 extern const char **GetPlayerInfo (int *pNum);
 extern const char **GetLevelInfo (int *pNum);
 extern const char **GetExtraInfo (int *pNum);
-extern unsigned GetGameModeInfo();
+extern unsigned GetGameModeInfo (void);
 #endif
 /*
  * end of file info.h

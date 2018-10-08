@@ -1,7 +1,7 @@
 /*
  * file chat.h - managing chat data for both client and server
  *
- * $Id: chat.h,v 1.3 2004/08/04 22:02:30 iskywalker Exp $
+ * $Id: chat.h,v 1.11 2006/02/24 21:29:16 fzago Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,34 +23,68 @@
 #ifndef XBLAST_CHAT_H
 #define XBLAST_CHAT_H
 
-#define CHAT_LINE_SIZE 40
+#define CHAT_LINE_SIZE 50
 
-#include "common.h"
+/* AbsInt: control chat messages for display activity */
+#define DEACTIVATE_DISPLAY "<--off"
+#define ACTIVATE_DISPLAY "<--on"
+/* AbsInt end */
 
 /*
  * type declarations
  */
 typedef struct _xb_chat XBChat;
-struct _xb_chat {
-  XBChat     *next;
-  unsigned   fh;
-  unsigned   fp;
-  unsigned   th;
-  unsigned   tp;
-  unsigned   how; /* 0..numofplayers (private), public, team */
-  char       txt[CHAT_LINE_SIZE];
-  size_t     len;
-  unsigned   status;
-};
+
+typedef enum
+{
+	XBCM_Public,
+	XBCM_Team,
+	XBCM_Private,
+	XBCM_System,
+} XBChatMode;
+
+typedef enum
+{
+	XBCS_Created,
+	XBCS_Input,
+	XBCS_Inactive,
+	XBCS_Sent,
+	XBCS_Received,
+} XBChatStatus;
 
 /*
  * global prototypes
  */
 
-extern void Chat_Clear();
-extern XBChat * Chat_Pop();
-extern XBChat * Chat_Create(unsigned fh, unsigned fp, unsigned th, unsigned tp, unsigned how, const char *chat);
-extern void Chat_Receive(XBChat *);
+/* init */
+extern void Chat_Clear (void);
+
+/* start/stop chat handling */
+extern void Chat_Listen (XBBool);
+extern XBBool Chat_isListening (void);
+
+/* create */
+extern XBChat *Chat_Create (void);
+extern XBChat *Chat_CreateSys (void);
+
+/* modify */
+extern void Chat_Set (XBChat * chat, unsigned char fh, unsigned char fp, unsigned char th,
+					  unsigned char tp, unsigned char how, const char *txt);
+extern void Chat_SetText (XBChat * chat, const char *txt);
+
+/* get */
+extern void Chat_Receive (XBChat *);
+extern XBChat *Chat_Pop (void);
+
+/* packing/unpacking */
+extern size_t Chat_PackData (XBChat * chat, char **data, unsigned *iob);
+extern XBChat *Chat_UnpackData (const char *data, size_t len, unsigned iob);
+
+/* chat events */
+extern void Chat_AddEventCode (unsigned local, XBEventCode ev);
+extern XBEventCode Chat_GetCurrentCode (void);
+extern unsigned char Chat_FindCode (XBEventCode);
+extern XBBool Chat_Event (XBEventCode, XBEventData);
 
 #endif
 /*
