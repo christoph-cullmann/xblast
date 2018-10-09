@@ -28,7 +28,7 @@
  * local constants
  */
 #ifndef XBLAST_SOUND_SERVER
-#define XBLAST_SOUND_SERVER "xbsndsrv"
+#define XBLAST_SOUND_SERVER "padsp", "aixbsndsrv"
 #endif
 
 /* client/server commands */
