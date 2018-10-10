@@ -1,9 +1,9 @@
 /*
  * file mi_cyclic.h - menu item which peridically calls a given function
- *
- * $Id: mi_cyclic.h,v 1.5 2006/02/09 21:21:24 fzago Exp $
- *
- * Program XBLAST
+ * 
+ * $Id: mi_cyclic.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
+ * 
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,11 +23,14 @@
 #ifndef _MI_CYCLIC_H
 #define _MI_CYCLIC_H
 
+#include "mi_base.h"
+
 /*
  * global prototypes
  */
 extern XBMenuItem *MenuCreateCyclic (MIC_cyclic func, void *par);
-extern void MenuDeleteCyclic (XBMenuItem * item);
+extern void MenuDeleteCyclic (XBMenuItem *item);
+
 
 #endif
 /*

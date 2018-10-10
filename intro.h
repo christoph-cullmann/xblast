@@ -1,7 +1,7 @@
 /*
  * file intro.h - intro and inbetween screens
  *
- * $Id: intro.h,v 1.6 2006/02/09 21:21:24 fzago Exp $
+ * $Id: intro.h,v 1.4 2004/11/19 17:09:54 lodott Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,19 +23,21 @@
 #ifndef XBLAST_INTRO_H
 #define XBLAST_INTRO_H
 
+#include "gui.h"
+#include "player.h"
+
 /*
  * global prototypes
  */
-extern void DoFade (XBFadeMode fadeMode, int maxLine);
-extern void DoIntro (void);
+extern void   DoFade (XBFadeMode fadeMode, int maxLine);
+extern void   DoIntro (void);
 extern XBBool InitPlayerSprites (int numPlayers, const CFGPlayer *);
-extern void InitScoreBoard (int numPlayers, int numWins);
-extern void InitWinner (int numPlayers);
-extern XBBool LevelIntro (int numPlayers, const DBRoot * level, int timeOut);
+extern void   InitScoreBoard (int numPlayers, int numWins);
+extern void   InitWinner (int numPlayers);
+extern XBBool LevelIntro (int numPlayers, const DBRoot *level, int timeOut);
 extern XBBool LevelEnd (int numPlayers, int lastTeam, const char *msg, int timeOut);
-extern XBBool ShowScoreBoard (int lastTeam, int maxNumWins, int numPlayers, BMPlayer * ps,
-							  int timeOut);
-extern void ShowWinner (int lastTeam, int numPlayers, BMPlayer * ps);
+extern XBBool ShowScoreBoard (int lastTeam, int maxNumWins, int numPlayers, BMPlayer *ps, int timeOut);
+extern void   ShowWinner (int lastTeam, int numPlayers, BMPlayer *ps);
 
 #endif
 /*

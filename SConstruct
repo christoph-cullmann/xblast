@@ -12,10 +12,10 @@ list=Split("""xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c
 	com_dg_server.c com_dgram.c com_query.c com_browse.c com_reply.c 
 	com_base.c net_socket.c net_tele.c net_dgram.c cfg_main.c cfg_level.c 
 	cfg_player.c cfg_game.c cfg_control.c cfg_stat.c cfg_demo.c 
-	cfg_xblast.c chat.c x11_common.c x11_event.c x11_atom.c x11_config.c
+	cfg_xblast.c chat.c menu_edit.c x11_common.c x11_event.c x11_atom.c x11_config.c
 	x11_msgbox.c	x11c_init.c x11c_image.c x11c_text.c
 	x11c_tile.c x11c_sprite.c 	x11c_pixmap.c x11_sound.c
-	x11_socket.c x11_joystick.c bot.c  menu_edit.c version.c""")
+	x11_socket.c x11_joystick.c bot.c""")
 opts = Options()
 opts.Add(PathOption('Datadir',
                                'Path to configuration file',
@@ -23,19 +23,15 @@ opts.Add(PathOption('Datadir',
 
 env = Environment(options = opts,
                              CPPDEFINES={'GAME_DATADIR' : '"$CONFIG"'},
+	LIBS = Split('png m X11'),
 	CPPPATH = ['/usr/include'],
         LIBPATH = ['/usr/lib','/usr/X11R6/lib'] )
-
-if 'bar' in COMMAND_LINE_TARGETS:
-          print "Don't forget to copy `bar' to the archive!"
-          print "Don't forget to copy `bar' to the archive!"
-
 conf = Configure(env)
-if not conf.CheckLib('m'):
-        print 'Did not find libm.a or m.lib, exiting!'
-        Exit(1)
-if not conf.CheckLib('X11'):
-        print 'Did not find lib X11 , exiting!'
-        Exit(1)
+#if not conf.CheckLib('m'):
+#        print 'Did not find libm.a or m.lib, exiting!'
+#        Exit(1)
+#if not conf.CheckLib('X11'):
+#        print 'Did not find lib X11 , exiting!'
+#        Exit(1)
 env = conf.Finish()
 env.Program('xblast',list)

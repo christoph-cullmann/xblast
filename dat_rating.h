@@ -1,9 +1,9 @@
 /*
  * file dat_rating.h - level and game statistics
  *
- * $Id: dat_rating.h,v 1.5 2006/02/09 21:21:23 fzago Exp $
+ * $Id: dat_rating.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  * Added by Koen De Raedt for central support
  *
@@ -13,7 +13,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -25,29 +25,30 @@
 #ifndef _DAT_RATING_H
 #define _DAT_RATING_H
 
-#define MAX_MENU_INFO 15
+#include "event.h"
+#include "cfg_player.h"
+
+#define MAX_INFO 15
 
 /*
  * global prototypes
  */
-typedef struct
-{
-	XBAtom atom;
-	const char *name;
-	int numWon;
-	int numTotal;
-	double score;
-	double percent;
-	int rank;
+typedef struct {
+  XBAtom      atom;
+  const char *name;
+  int         numWon;
+  int         numTotal;
+  double      score;
+  double      percent;
+  int         rank;
 } XBCentralData;
 
-typedef struct
-{
-	const char *name;
-	const char *value;
+typedef struct {
+  const char *name;
+  const char *value;
 } XBCentralInfo;
 
-extern XBCentralData *CreateCentralStat (size_t * num);
+extern XBCentralData *CreateCentralStat (size_t *num);
 extern XBCentralInfo *CreateCentralInfo (XBAtom atom, XBCentralData data);
 
 #endif

@@ -1,9 +1,9 @@
 /*
  * file random.h - generator
  *
- * $Id: random.h,v 1.4 2006/02/09 18:31:45 fzago Exp $
+ * $Id: random.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -29,7 +29,7 @@
 
 /* needed for debugging */
 #ifdef DEBUG_RANDOM
-#define GameRandomNumber(a) GameRandomNumber2(a, __FILE__, __LINE__)
+#define GameRandomNumber(a) GameRandomNumber2(a, __FILE__, __LINE__) 
 #else
 #define GameRandomNumber(a) GameRandomNumber1(a)
 #endif

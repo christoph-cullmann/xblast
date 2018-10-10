@@ -1,9 +1,9 @@
 /*
  * file w32_common.h -  global variables for Win32 engine
  *
- * $Id: w32_common.h,v 1.3 2006/02/09 18:31:47 fzago Exp $
+ * $Id: w32_common.h,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -34,10 +34,10 @@
 /*
  * global variables
  */
-extern HANDLE instance;
-extern HWND window;
-extern HBITMAP pix;
-extern HPALETTE palette;
+extern HANDLE      instance;
+extern HWND        window;
+extern HBITMAP     pix;
+extern HPALETTE    palette;
 extern const char *xblastClass;
 
 #endif

@@ -1,9 +1,9 @@
 /*
  * file mi_host.h - Menu item for host selection in networked games
  *
- * $Id: mi_host.h,v 1.9 2006/02/09 21:21:24 fzago Exp $
+ * $Id: mi_host.h,v 1.7 2004/10/10 14:31:01 lodott Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,26 +23,22 @@
 #ifndef XBLAST_MI_HOST_H
 #define XBLAST_MI_HOST_H
 
+#include "mi_base.h"
+
 /*
  * global prototypes
  */
-extern XBMenuItem *MenuCreateHost (int x, int y, int w, unsigned client, const char **pText,
-								   XBHSFocusFunc focusFunc, XBHSChangeFunc chgFunc,
-								   XBHSUpdateFunc upFunc);
+extern XBMenuItem *MenuCreateHost (int x, int y, int w, unsigned client, const char **pText, XBHSFocusFunc focusFunc, XBHSChangeFunc chgFunc, XBHSUpdateFunc upFunc);
 extern XBMenuItem *MenuCreateServer (int x, int y, int w, const char **pText);
-extern XBMenuItem *MenuCreateClient (int x, int y, int w, const char **pText, XBHostState * pState,
-									 const int *pPing);
-extern XBMenuItem *MenuCreatePeer (int x, int y, int w, const char **pText, XBHostState * pState,
-								   const int *pPing);
+extern XBMenuItem *MenuCreateClient (int x, int y, int w, const char **pText, XBHostState *pState, const int *pPing);
+extern XBMenuItem *MenuCreatePeer   (int x, int y, int w, const char **pText, XBHostState *pState, const int *pPing);
 
-extern XBMenuItem *MenuCreateTeam (int x, int y, int w, unsigned id, unsigned player,
-								   XBTSFocusFunc focusFunc, XBTSChangeFunc chgFunc,
-								   XBTSUpdateFunc upFunc);
-extern XBMenuItem *MenuCreateServerTeam (int x, int y, int w, XBTeamState * pTeam);
-extern XBMenuItem *MenuCreatePeerTeam (int x, int y, int w, XBTeamState * pTeam);
+extern XBMenuItem *MenuCreateTeam (int x, int y, int w, unsigned id, unsigned player, XBTSFocusFunc focusFunc, XBTSChangeFunc chgFunc, XBTSUpdateFunc upFunc);
+extern XBMenuItem *MenuCreateServerTeam (int x, int y, int w, XBTeamState *pTeam);
+extern XBMenuItem *MenuCreatePeerTeam (int x, int y, int w, XBTeamState *pTeam);
 
-extern void MenuDeleteHost (XBMenuItem * item);
-extern void MenuDeleteTeam (XBMenuItem * item);
+extern void MenuDeleteHost (XBMenuItem *item);
+extern void MenuDeleteTeam (XBMenuItem *item);
 
 #endif
 /*

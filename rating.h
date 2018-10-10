@@ -1,9 +1,9 @@
 /*
  * file rating.h - rating system
  *
- * $Id: rating.h 149513 2010-10-19 15:16:52Z swegener $
+ * $Id: rating.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  * Author: Koen De Raedt (k.de.raedt@wing.rug.nl)
  *
@@ -13,7 +13,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *

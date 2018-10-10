@@ -1,9 +1,9 @@
 /*
  * file x11c_tile.h -
  *
- * $Id: x11c_tile.h,v 1.4 2006/02/09 21:21:25 fzago Exp $
+ * $Id: x11c_tile.h,v 1.3 2004/05/14 10:00:36 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,6 +22,8 @@
  */
 #ifndef _X11_COLOR_TILE_H
 #define _X11_COLOR_TILE_H
+
+#include "xblast.h"
 
 extern XBBool InitTiles (void);
 

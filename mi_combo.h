@@ -1,9 +1,9 @@
 /*
  * file mi_combo.h -
  *
- * $Id: mi_combo.h,v 1.5 2006/02/09 21:21:24 fzago Exp $
+ * $Id: mi_combo.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,10 +23,11 @@
 #ifndef _MI_COMBO_H
 #define _MI_COMBO_H
 
-extern XBMenuItem *MenuCreateCombo (int x, int y, int w_text, const char *text, int w,
-									int *value, void **data, XBAtom * atom,
-									XBComboEntryList * table);
-extern void MenuDeleteCombo (XBMenuItem * item);
+#include "mi_base.h"
+
+extern XBMenuItem *MenuCreateCombo (int x, int y, int w_text, const char *text, int w, 
+				    int *value, void **data, XBAtom *atom, XBComboEntryList *table);
+extern void MenuDeleteCombo (XBMenuItem *item);
 
 #endif
 /*

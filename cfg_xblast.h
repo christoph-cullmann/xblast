@@ -1,9 +1,9 @@
 /*
  * file cfg_xblast.h - general xblast configurations
  *
- * $Id: cfg_xblast.h,v 1.6 2006/02/09 21:21:23 fzago Exp $
+ * $Id: cfg_xblast.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,57 +23,36 @@
 #ifndef _CFG_XBLAST_H
 #define _CFG_XBLAST_H
 
+#include "xblast.h"
+
 /*
  * modes of sound
- */
-typedef enum
-{
-	XBSM_None,
-	XBSM_Beep,
-	XBSM_Waveout,
-	/* no new elements after this line */
-	NUM_XBSM
+ */ 
+typedef enum {
+  XBSM_None,
+  XBSM_Beep,
+  XBSM_Waveout,
+  /* no new elements after this line */
+  NUM_XBSM
 } XBSoundMode;
 
 /*
- * Video modes
- */
-typedef enum
-{
-	XBVM_Windowed,
-	XBVM_Full,
-	NUM_VBSM
-} XBVideodMode;
-
-/*
  * default central XBCC
- */
-typedef struct
-{
-	const char *name;
-	int port;
+ */ 
+typedef struct {
+  const char   *name;
+  int           port;
 } CFGCentralSetup;
 
 /*
  * mode definitions
  */
-typedef struct
-{
-	XBSoundMode mode;
-	XBBool stereo;
-    /* AbsInt begin */
-    XBBool beep;
-    /* AbsInt end */
+typedef struct {
+  XBSoundMode mode;
+  XBBool      stereo;
 } CFGSoundSetup;
 
-/*
- * mode definitions
- */
-typedef struct
-{
-	XBVideodMode mode;
-	XBBool full;
-} CFGVideoSetup;
+
 
 /*
  * global prototypes
@@ -82,16 +61,13 @@ extern void LoadXBlastConfig (void);
 extern void SaveXBlastConfig (void);
 extern void FinishXBlastConfig (void);
 
-extern void StoreSoundSetup (const CFGSoundSetup *);
+extern void   StoreSoundSetup (const CFGSoundSetup *);
 extern XBBool RetrieveSoundSetup (CFGSoundSetup *);
 
-extern void StoreVideoSetup (const CFGVideoSetup * video);
-extern XBBool RetrieveVideoSetup (CFGVideoSetup * video);
-extern void SetupVideo (CFGVideoSetup * video);
-
-extern void StoreCentralSetup (const CFGCentralSetup *);	// XBCC
+extern void   StoreCentralSetup (const CFGCentralSetup *); // XBCC
 extern XBBool RetrieveCentralSetup (CFGCentralSetup *);
 #endif
 /*
  * end of file cfg_xblast.h
  */
+

@@ -1,6 +1,6 @@
 #!/bin/sh
 autoheader
-aclocal -I m4
+aclocal
 autoconf
 automake --gnu --add-missing --copy 
 if [ -s config.cache ] ; then 

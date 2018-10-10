@@ -1,9 +1,9 @@
 /*
  * file com_reply.h - server answers to broadcasts by clients
  *
- * $Id: com_reply.h,v 1.5 2006/02/09 21:21:23 fzago Exp $
+ * $Id: com_reply.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,6 +23,9 @@
 #ifndef XBLAST_COM_REPLY_H
 #define XBLAST_COM_REPLY_H
 
+#include "com.h"
+#include "cfg_game.h"
+
 /*
  * type definitions
  */
@@ -30,8 +33,7 @@
 /*
  * global prototypes
  */
-extern XBComm *Reply_CreateComm (unsigned short replyPort, const CFGGameHost * cfg,
-								 const CFGGameSetup *);
+extern XBComm* Reply_CreateComm (unsigned short replyPort, const CFGGameHost *cfg, const CFGGameSetup *);
 
 #endif
 /*

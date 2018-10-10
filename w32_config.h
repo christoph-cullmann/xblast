@@ -1,10 +1,10 @@
 /*
  * file w32_config.h - config data for win32 graphics engine
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
- * $Id: w32_config.h,v 1.4 2006/02/09 21:21:25 fzago Exp $
+ * $Id: w32_config.h,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,13 +24,13 @@
 #define _W32_CONFIG_H
 
 #include "w32_common.h"
-
+#include "xblast.h"
 
 /*
  * global prototypes
  */
-extern XBBool RetrieveWindowRect (RECT * rect);
-extern void StoreWindowRect (const RECT * cfg);
+extern XBBool RetrieveWindowRect (RECT *rect);
+extern void   StoreWindowRect (const RECT *cfg);
 
 #endif
 /*

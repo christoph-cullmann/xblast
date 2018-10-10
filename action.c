@@ -1,7 +1,7 @@
 /*
  * file action.c - converting player actions to bytes and back
  *
- * $Id: action.c,v 1.9 2006/02/09 21:21:22 fzago Exp $
+ * $Id: action.c,v 1.6 2005/01/15 17:41:35 iskywalker Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,8 +20,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-
-#include "xblast.h"
+#include "action.h"
 
 /*
  *  local macros
@@ -61,68 +60,48 @@
  * parameters:      playerAction - action struct to convert
  */
 unsigned char
-PlayerActionToByte (const PlayerAction * playerAction)
+PlayerActionToByte (const PlayerAction *playerAction)
 {
-	unsigned char result;
-	assert (playerAction != NULL);
-	/* direction 0-2 */
-	if (playerAction->suicide) {
-		result = PA_GO_ALL;
-	}
-	else {
-		switch (playerAction->dir) {
-		case GoStop:
-			result = PA_GO_STOP;
-			break;
-		case GoUp:
-			result = PA_GO_UP;
-			break;
-		case GoLeft:
-			result = PA_GO_LEFT;
-			break;
-		case GoDown:
-			result = PA_GO_DOWN;
-			break;
-		case GoRight:
-			result = PA_GO_RIGHT;
-			break;
-		default:
-			result = PA_GO_DEFAULT;
-			break;
-		}
-	}
-	/* drop bomb 3 */
-	if (playerAction->bomb) {
-		result |= PA_BOMB;
-	}
-	/* special extra 4 */
-	if (playerAction->special) {
-		result |= PA_SPECIAL;
-	}
-	/* laola uses PAUSE mask */
-	if (playerAction->laola) {
-		result |= PA_LAOLA;
-	}
-	/* loser */
-	if (playerAction->looser) {
-		result |= PA_LOSER;
-	}
-	else {
-		switch (playerAction->abort) {
-		case ABORT_CANCEL:
-			result |= PA_ABORT_CANCEL;
-			break;
-		case ABORT_TRUE:
-			result |= PA_ABORT_TRUE;
-			break;
-		default:
-			result |= PA_ABORT_NONE;
-			break;
-		}
-	}
-	/* that's all */
-	return result;
-}								/* PlayerActionToByte */
+  unsigned char result;
+  assert (playerAction != NULL);
+  /* direction 0-2 */
+  if (playerAction->suicide) {
+    result = PA_GO_ALL;
+  } else {
+    switch (playerAction->dir) {
+    case GoStop: result = PA_GO_STOP;    break;
+    case GoUp:   result = PA_GO_UP;      break;
+    case GoLeft: result = PA_GO_LEFT;    break;
+    case GoDown: result = PA_GO_DOWN;    break;
+    case GoRight:result = PA_GO_RIGHT;   break;
+    default:     result = PA_GO_DEFAULT; break;
+    }
+  }
+  /* drop bomb 3 */
+  if (playerAction->bomb) {
+    result |= PA_BOMB;
+  }
+  /* special extra 4 */
+  if (playerAction->special) {
+    result |= PA_SPECIAL;
+  }
+  /* laola uses PAUSE mask */
+  if (playerAction->laola) {
+    result|=PA_LAOLA;
+  }
+  /* loser */
+  if (playerAction->looser) {
+    result |= PA_LOSER;
+  } else {
+    switch (playerAction->abort) {
+    case ABORT_CANCEL: result |= PA_ABORT_CANCEL; break;
+    case ABORT_TRUE:   result |= PA_ABORT_TRUE;   break;
+    default:           result |= PA_ABORT_NONE;   break;
+    }
+  }
+  /* that's all */
+  return result;
+} /* PlayerActionToByte */
 
 /*
  * global function: PlayerActionFromByte
@@ -132,59 +111,38 @@ PlayerActionToByte (const PlayerAction * playerAction)
  *                  value        - byte to convert
  */
 void
-PlayerActionFromByte (PlayerAction * playerAction, unsigned char value)
+PlayerActionFromByte (PlayerAction *playerAction, unsigned char value)
 {
-	assert (playerAction != NULL);
-	/* direction */
-	switch (value & PA_DIR_MASK) {
-	case PA_GO_STOP:
-		playerAction->dir = GoStop;
-		break;
-	case PA_GO_UP:
-		playerAction->dir = GoUp;
-		break;
-	case PA_GO_LEFT:
-		playerAction->dir = GoLeft;
-		break;
-	case PA_GO_DOWN:
-		playerAction->dir = GoDown;
-		break;
-	case PA_GO_RIGHT:
-		playerAction->dir = GoRight;
-		break;
-	case PA_GO_ALL:
-		playerAction->suicide = XBTrue;
-		break;
-	default:
-		playerAction->dir = GoDefault;
-		playerAction->suicide = XBFalse;
-		break;
-	}
-	/* drop bomb */
-	playerAction->bomb = (value & PA_BOMB) ? XBTrue : XBFalse;
-	/* special extras */
-	playerAction->special = (value & PA_SPECIAL) ? XBTrue : XBFalse;
-	/* pause keys */
-	playerAction->laola = (value & PA_LAOLA) ? XBTrue : XBFalse;
-	/* abort 6-7 */
-	if (value & PA_ABORT_TRUE && value & PA_ABORT_CANCEL) {
-		playerAction->looser = XBTrue;
-	}
-	else {
-		playerAction->looser = XBFalse;
-		switch (value & PA_ABORT_MASK) {
-		case PA_ABORT_CANCEL:
-			playerAction->abort = ABORT_CANCEL;
-			break;
-		case PA_ABORT_TRUE:
-			playerAction->abort = ABORT_TRUE;
-			break;
-		default:
-			playerAction->abort = ABORT_NONE;
-			break;
-		}
-	}
-}								/* PlayerActionFromByte */
+  assert (playerAction != NULL);
+  /* direction */
+  switch (value & PA_DIR_MASK) {
+  case PA_GO_STOP:  playerAction->dir = GoStop;     break;
+  case PA_GO_UP:    playerAction->dir = GoUp;       break;
+  case PA_GO_LEFT:  playerAction->dir = GoLeft;     break;
+  case PA_GO_DOWN:  playerAction->dir = GoDown;     break;
+  case PA_GO_RIGHT: playerAction->dir = GoRight;    break;
+  case PA_GO_ALL:   playerAction->suicide = XBTrue; break;
+  default:          playerAction->dir = GoDefault;  break;
+  }
+  /* drop bomb */
+  playerAction->bomb    = (value & PA_BOMB)    ? XBTrue : XBFalse;
+  /* special extras */
+  playerAction->special = (value & PA_SPECIAL) ? XBTrue : XBFalse;
+  /* pause keys */
+  playerAction->laola    = (value & PA_LAOLA)   ? XBTrue : XBFalse;
+  /* abort 6-7 */
+  if (value & PA_ABORT_TRUE && 
+      value & PA_ABORT_CANCEL ) {
+    playerAction->looser = XBTrue;
+  } else {
+    playerAction->looser = XBFalse;
+    switch (value & PA_ABORT_MASK) {
+    case PA_ABORT_CANCEL: playerAction->abort = ABORT_CANCEL; break;
+    case PA_ABORT_TRUE:   playerAction->abort = ABORT_TRUE;   break;
+    default:              playerAction->abort = ABORT_NONE;   break;
+    }
+  }
+} /* PlayerActionFromByte */
 
 /*
  * end of file action.c

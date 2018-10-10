@@ -1,9 +1,9 @@
 /*
  * file cfg_stat.h - level and game statistics
  *
- * $Id: cfg_stat.h,v 1.5 2006/02/09 21:21:23 fzago Exp $
+ * $Id: cfg_stat.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,18 +24,19 @@
 #ifndef _CFG_STAT_H
 #define _CFG_STAT_H
 
+#include "event.h"
+
 /*
  * type definitions
  */
-typedef struct
-{
-	XBAtom atom;
-	const char *name;
-	int numWon;
-	int numTotal;
-	double scoreTotal;
-	double percent;
-	double average;
+typedef struct {
+  XBAtom      atom;
+  const char *name;
+  int         numWon;
+  int         numTotal;
+  double      scoreTotal;
+  double      percent;
+  double      average;
 } XBStatData;
 
 /*
@@ -45,13 +46,13 @@ extern void LoadStatConfig (void);
 extern void SaveStatConfig (void);
 extern void FinishStatConfig (void);
 
-extern void StoreLevelStat (XBAtom level, XBAtom player, XBBool won, double points);
+extern void StoreLevelStat (XBAtom level, XBAtom player, XBBool won, double points); 
 
-extern XBStatData *CreateLevelStat (XBAtom level, size_t * num);
-extern XBStatData *CreatePlayerSingleStat (XBAtom level, size_t * num);
-extern XBStatData *CreatePlayerTotalStat (size_t * num);
-extern XBStatData *CreateLevelTotalStat (size_t * num);
-extern XBStatData *CreateLevelSingleStat (XBAtom level, size_t * num);
+extern XBStatData *CreateLevelStat (XBAtom level, size_t *num);
+extern XBStatData *CreatePlayerSingleStat (XBAtom level, size_t *num);
+extern XBStatData *CreatePlayerTotalStat (size_t *num);
+extern XBStatData *CreateLevelTotalStat (size_t *num);
+extern XBStatData *CreateLevelSingleStat (XBAtom level, size_t *num);
 
 #endif
 /*

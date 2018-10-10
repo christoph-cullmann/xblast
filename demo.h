@@ -1,9 +1,9 @@
 /*
  * file demo.h - recording and playback of xblast games
  *
- * $Id: demo.h,v 1.7 2006/02/09 21:21:23 fzago Exp $
+ * $Id: demo.h,v 1.3 2004/05/14 10:00:33 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,6 +24,9 @@
 #ifndef _DEMO_H
 #define _DEMO_H
 
+#include "action.h"
+#include "cfg_game.h"
+
 /*
  * type definitions
  */
@@ -31,23 +34,17 @@
 /*
  * global prototypes
  */
-
-/* initialize recording */
-extern void DemoInitGame (CFGType cfgType, const CFGGame * cfgGame);
+//extern void DemoInitGame (XBPlayerHost hostType, const CFGGame *cfgGame);
+extern void DemoInitGame (CFGType cfgType, const CFGGame *cfgGame); // DEMOFIX
 extern void DemoInitLevel (XBAtom level);
-/* game recording */
-extern void DemoRecordFrame (int gameTime, const PlayerAction * pa);
-/* finish recording */
-extern void DemoFinishLevel (int gameTime, int winner, const char *type);
+extern void DemoRecordFrame (int gameTime, const PlayerAction *pa);
+extern void DemoFinishLevel (int gameTime,int winner);
 extern void DemoFinishGame (void);
-/* get game config for playback */
+
 extern XBBool DemoPlaybackConfig (CFGGame *);
-/* get level name for playback */
 extern XBAtom DemoPlaybackLevel (void);
-/* load actions for playback */
 extern XBBool DemoPlaybackStart (void);
-/* get action for playback */
-extern XBBool DemoPlaybackFrame (int gameTime, PlayerAction * pa);
+extern XBBool DemoPlaybackFrame (int gameTime, PlayerAction *pa);
 
 #endif
 /*

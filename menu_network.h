@@ -1,9 +1,9 @@
 /*
  * file menu_network.h - user interface for setting up networks games
  *
- * $Id: menu_network.h,v 1.6 2006/02/09 21:21:24 fzago Exp $
+ * $Id: menu_network.h,v 1.4 2004/06/04 11:24:19 iskywalker Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,17 +23,17 @@
 #ifndef XBLAST_MENU_NETWORK_H
 #define XBLAST_MENU_NETWORK_H
 
-
+#include "xblast.h"
 
 /*
  * global prototypes
  */
-extern XBBool CreateServerMenu (void *par);
-extern XBBool CreateCentralMenu (void *par);	// XBCC
-extern XBBool CreateClientMenu (void *par);
+extern XBBool CreateServerMenu    (void *par);
+extern XBBool CreateCentralMenu   (void *par); // XBCC
+extern XBBool CreateClientMenu    (void *par);
 extern XBBool CreateSearchLanMenu (void *par);
-extern XBBool CreateSearchCentralMenu (void *par);	// XBCC
-extern void setAutoCentral2 (XBBool set);
+extern XBBool CreateSearchCentralMenu   (void *par); // XBCC
+extern void setAutoCentral2(XBBool set);
 
 #endif
 /*

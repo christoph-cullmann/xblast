@@ -1,7 +1,7 @@
 /*
  * file x11_event.c - event handling 
  *
- * $Id: sdl_event.c,v 1.11 2006/02/24 21:57:55 fzago Exp $
+ * $Id: sdl_event.c,v 1.2 2004/10/19 17:59:19 iskywalker Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,11 +20,18 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+#include "x11_event.h"
+#include "gui.h"
 
-#include "xblast.h"
+#include "x11_common.h"
+#include "x11_socket.h"
 
-#include "sdl_common.h"
-
+#include "com.h"
+#include "event.h"
+#include "geom.h"
+#include "cfg_control.h"
+#include "player.h"
+#include "SDL.h"
 /*
  * local constants
  */
@@ -33,55 +40,47 @@
 /*
  * local types
  */
-typedef enum
-{
-	TM_NONE,
-	TM_ONCE,
-	TM_PERIODIC
+typedef enum {
+  TM_NONE,
+  TM_ONCE,
+  TM_PERIODIC
 } TimerMode;
 
-typedef struct
-{
-	SDLKey key;
-	XBEventCode code;
-	int value;
+typedef struct {
+  KeyCode     key;
+  XBEventCode code;
+  int         value;
 } GameKeyEvent;
 
-typedef struct _game_key_list
-{
-	GameKeyEvent gke;
-	struct _game_key_list *next;
+typedef struct _game_key_list {
+  GameKeyEvent gke;
+  struct _game_key_list *next;
 } GameKeyList;
 
-typedef struct _poll_func_list
-{
-	XBPollFunction func;
-	struct _poll_func_list *next;
+typedef struct _poll_func_list {
+  XBPollFunction          func;
+  struct _poll_func_list *next;
 } PollFuncList;
 
 /*
  * local variables
  */
 /* Timeout */
-static TimerMode timerMode = TM_NONE;
+static TimerMode      timerMode = TM_NONE;
 static struct timeval nextTimer;
 static struct timeval timerIncr;
 /* polling */
-static PollFuncList *pollList = NULL;
-static struct timeval nextPoll;
+static PollFuncList   *pollList = NULL;
+static struct timeval  nextPoll;
 /* keyboard mode */
 static XBKeyboardMode keyboardMode = KB_NONE;
 /* keyboard lookup tables */
-static int numKeyMenu = 0;
-static int numKeyPress = 0;
-static int numKeyChat = 0;
-static int numKeyRelease = 0;
-static GameKeyEvent *keyMenuTable = NULL;
-static GameKeyEvent *keyPressTable = NULL;
+static int           numKeyMenu      = 0;
+static int           numKeyPress     = 0;
+static int           numKeyRelease   = 0;
+static GameKeyEvent *keyMenuTable    = NULL;
+static GameKeyEvent *keyPressTable   = NULL;
 static GameKeyEvent *keyReleaseTable = NULL;
-static GameKeyEvent *keyChatTable = NULL;
-static void HandleAsciiKey (SDL_KeyboardEvent * KbEvent);
-static XBBool HandleChatKey (SDL_KeyboardEvent * KbEvent);
 
 /*
  * Set keyboard mode
@@ -89,102 +88,103 @@ static XBBool HandleChatKey (SDL_KeyboardEvent * KbEvent);
 void
 GUI_SetKeyboardMode (XBKeyboardMode Mode)
 {
-	keyboardMode = Mode;
-}								/* GUI_SetKeyboardMode */
+  keyboardMode = Mode;
+} /* GUI_SetKeyboardMode */
 
 /*
- * Set mouse mode
+ * Set mouse moude
  */
 void
 GUI_SetMouseMode (XBBool enable)
 {
-	/* TODO?: Enable or disable mouse events. We probably don't care. */
-}
+  XSetWindowAttributes xswa;
+
+  if (enable) {
+    xswa.event_mask = EVENT_MASK_MOUSE;
+  } else {
+    xswa.event_mask = EVENT_MASK_NORMAL;
+  }
+  //  XChangeWindowAttributes (dpy, win, CWEventMask, &xswa);
+} /* GUI_SetMouseMode */
 
 /*
- * Show/Hide cursor
- */
-void GUI_ShowCursor(XBBool enable)
-{
-	if (enable) {
-		SDL_ShowCursor(SDL_ENABLE);
-	} else {
-		SDL_ShowCursor(SDL_DISABLE);
-	}
-}
-
-/*
- * Compare to GameKeyCode
+ * Comapre to GameKeyCode
  */
 static int
 CompareKeyCode (const void *a, const void *b)
 {
-	return (*(const SDLKey *) a) - (*(const SDLKey *) b);
-}								/* CompareKeyCode */
+  return (*(KeyCode *) a) - (*(KeyCode *) b);
+} /* CompareKeyCode */
 
 /*
  * create keyboard lookup table from init table
  */
 static GameKeyEvent *
-CreateGameKeyTable (const CFGKeyTable * init, int *nelem)
+CreateGameKeyTable (const CFGKeyTable *init, int *nelem)
 {
-	const CFGKeyTable *ptr;
-	GameKeyList *list = NULL;
-	GameKeyList *elem;
-	GameKeyEvent *table = NULL;
-	SDLKey keySym;
-	int i;
+  const CFGKeyTable *ptr;
+  GameKeyList       *list = NULL;
+  GameKeyList       *elem;
+  GameKeyEvent      *table = NULL;
+  KeyCode            keyCode;
+  KeySym             keySym;
+  int                i;
 
-	assert (nelem != NULL);
-	*nelem = 0;
-	/* create list with with all keymappings (part one) */
-	for (ptr = init; ptr->keysym != NULL; ptr++) {
-		/* convert keysymbol name to keycode */
-		keySym = StringToVirtualKey (ptr->keysym);
-		if (SDLK_UNKNOWN == keySym) {
-			Dbg_Out ("unknown keysymbol %s.\n", ptr->keysym);
-			continue;
-		}
-		/* create new list element */
-		elem = calloc (1, sizeof (GameKeyList));
-		assert (elem != NULL);
-		elem->gke.key = keySym;
-		elem->gke.code = ptr->eventCode;
-		elem->gke.value = ptr->eventData;
-		/* put it into list */
-		elem->next = list;
-		list = elem;
-		/* increment counter */
-		*nelem += 1;
-	}
-	/* create lookup table */
-	table = malloc (*nelem * sizeof (GameKeyEvent));
-	assert (table != NULL);
-	/* store list in array and delete it */
-	i = 0;
-	while (list != NULL) {
-		/* store next one */
-		elem = list->next;
-		/* copy data */
-		assert (i < *nelem);
-		memcpy (table + i, &list->gke, sizeof (GameKeyEvent));
-		i++;
-		/* next one */
-		free (list);
-		list = elem;
-	}
-	/* now sort it with quciksort */
-	qsort (table, *nelem, sizeof (GameKeyEvent), CompareKeyCode);
-	/* now check for double entries */
-	for (i = 1; i < *nelem; i++) {
-		if (table[i - 1].key == table[i].key) {
-			//  GUI_ErrorMessage ("Multiple bindings for key \"%s\".", XKeysymToString (XKeycodeToKeysym (dpy, table[i].key, 0)));
-			break;
-		}
-	}
-	/* that's all */
-	return table;
-}								/* CreateGameKeyTable */
+  assert (nelem != NULL);
+  *nelem = 0;
+  /* create list with with all keymappings (part one) */
+  for (ptr = init; ptr->keysym != NULL; ptr ++) {
+    /* convert keysymbol name to keycode */
+    keySym = XStringToKeysym (ptr->keysym);
+    if (NoSymbol == keySym) {
+      Dbg_Out ("unknown keysymbol %s.\n", ptr->keysym);
+      continue;
+    }
+    keyCode = XKeysymToKeycode (dpy, keySym);
+    if (0 == keyCode) {
+      Dbg_Out ("unmapped keysymbol %s.\n", ptr->keysym);
+      continue;
+    }
+    /* create new list element */
+    elem = calloc (1, sizeof (GameKeyList) );
+    assert (elem != NULL);
+    elem->gke.key   = keyCode;
+    elem->gke.code  = ptr->eventCode;
+    elem->gke.value = ptr->eventData;
+    /* put it into list */
+    elem->next = list;
+    list = elem;
+    /* increment counter */
+    *nelem += 1;
+  }
+  /* create lookup table */
+  table = malloc (*nelem * sizeof (GameKeyEvent));
+  assert (table != NULL);
+  /* store list in array and delete it */
+  i = 0;
+  while (list != NULL) {
+    /* store next one */
+    elem = list->next;
+    /* copy data */
+    assert (i < *nelem);
+    memcpy (table + i, &list->gke, sizeof (GameKeyEvent)); 
+    i ++;
+    /* next one */
+    free (list);
+    list = elem;
+  }
+  /* now sort it with quciksort */
+  qsort (table, *nelem, sizeof (GameKeyEvent), CompareKeyCode);
+  /* now check for double entries */
+  for (i = 1; i < *nelem; i ++) {
+    if (table[i-1].key == table[i].key) {
+      GUI_ErrorMessage ("Multiple bindings for key \"%s\".", XKeysymToString (XKeycodeToKeysym (dpy, table[i].key, 0)));
+      break;
+    }
+  }
+  /* that's all */
+  return table;
+} /* CreateGameKeyTable */
 
 /*
  * reinitialize key tables
@@ -192,31 +192,25 @@ CreateGameKeyTable (const CFGKeyTable * init, int *nelem)
 void
 GUI_UpdateKeyTables (void)
 {
-	/* game key presses */
-	if (NULL != keyPressTable) {
-		free (keyPressTable);
-	}
-	keyPressTable = CreateGameKeyTable (GetGameKeyPressTable (), &numKeyPress);
-	assert (keyPressTable != NULL);
-	/* game key releases */
-	if (NULL != keyReleaseTable) {
-		free (keyReleaseTable);
-	}
-	keyReleaseTable = CreateGameKeyTable (GetGameKeyReleaseTable (), &numKeyRelease);
-	assert (keyReleaseTable != NULL);
-	/* menu keys */
-	if (NULL != keyMenuTable) {
-		free (keyMenuTable);
-	}
-	keyMenuTable = CreateGameKeyTable (GetMenuKeyTable (), &numKeyMenu);
-	assert (keyMenuTable != NULL);
-	/* chat keys */
-	if (NULL != keyChatTable) {
-		free (keyChatTable);
-	}
-	keyChatTable = CreateGameKeyTable (GetChatKeyTable (), &numKeyChat);
-	assert (keyChatTable != NULL);
-}								/* GUI_UpdateKeyTables */
+  /* game key presses */
+  if (NULL != keyPressTable) {
+    free (keyPressTable);
+  }
+  keyPressTable = CreateGameKeyTable (GetGameKeyPressTable (), &numKeyPress);
+  assert (keyPressTable != NULL);
+  /* game key releases */
+  if (NULL != keyReleaseTable) {
+    free (keyReleaseTable);
+  }
+  keyReleaseTable = CreateGameKeyTable (GetGameKeyReleaseTable (), &numKeyRelease);
+  assert (keyReleaseTable != NULL);
+  /* menu keys */
+  if (NULL != keyMenuTable) {
+    free (keyMenuTable);
+  }
+  keyMenuTable = CreateGameKeyTable (GetMenuKeyTable (), &numKeyMenu);
+  assert (keyMenuTable != NULL);
+} /* GUI_UpdateKeyTables */
 
 /*
  * Init Event routine
@@ -224,13 +218,13 @@ GUI_UpdateKeyTables (void)
 XBBool
 InitEvent (void)
 {
-	/* setup keyboard */
-	GUI_UpdateKeyTables ();
-	/* register display for socket polling */
-	//  RegisterDisplay (ConnectionNumber (dpy));
-	/* that's all */
-	return XBTrue;
-}								/* InitEvent */
+  /* setup keyboard */
+  GUI_UpdateKeyTables ();
+  /* register display for socket polling*/
+  RegisterDisplay (ConnectionNumber (dpy));
+  /* that's all */
+  return XBTrue;
+} /* InitEvent */
 
 /*
  * finish event handling
@@ -238,24 +232,20 @@ InitEvent (void)
 void
 FinishEvent (void)
 {
-	/* clean up key tables */
-	if (NULL != keyMenuTable) {
-		free (keyMenuTable);
-		keyMenuTable = NULL;
-	}
-	if (NULL != keyPressTable) {
-		free (keyPressTable);
-		keyPressTable = NULL;
-	}
-	if (NULL != keyReleaseTable) {
-		free (keyReleaseTable);
-		keyReleaseTable = NULL;
-	}
-	if (NULL != keyChatTable) {
-		free (keyChatTable);
-		keyChatTable = NULL;
-	}
-}								/* FinishEvent */
+  /* clean up key tables */
+  if (NULL != keyMenuTable) {
+    free (keyMenuTable);
+    keyMenuTable = NULL;
+  }
+  if (NULL != keyPressTable) {
+    free (keyPressTable);
+    keyPressTable = NULL;
+  }
+  if (NULL != keyReleaseTable) {
+    free (keyReleaseTable);
+    keyReleaseTable = NULL;
+  }
+} /* FinishEvent */
 
 /*
  * Set timer for event
@@ -263,30 +253,28 @@ FinishEvent (void)
 void
 GUI_SetTimer (long msec, XBBool periodic)
 {
-	if (0 == msec) {
-		timerMode = TM_NONE;
-	}
-	else {
-		/* get current time */
-		gettimeofday (&nextTimer, NULL);
-		/* set next timeout */
-		timerIncr.tv_sec = msec / 1000;
-		timerIncr.tv_usec = 1000 * (msec % 1000);
-		/* --- */
-		nextTimer.tv_sec += timerIncr.tv_sec;
-		nextTimer.tv_usec += timerIncr.tv_usec;
-		if (nextTimer.tv_usec > 1000000L) {
-			nextTimer.tv_usec -= 1000000L;
-			nextTimer.tv_sec++;
-		}
-		/* periodic ? */
-		if (!periodic) {
-			timerMode = TM_ONCE;
-		}
-		else {
-			timerMode = TM_PERIODIC;
-		}
-	}
+  if (0 == msec) {
+    timerMode = TM_NONE;
+  } else {
+    /* get current time */
+    gettimeofday (&nextTimer, NULL);
+    /* set next timeout */
+    timerIncr.tv_sec  = msec / 1000;
+    timerIncr.tv_usec = 1000 *(msec % 1000);
+    /* --- */
+    nextTimer.tv_sec  += timerIncr.tv_sec;
+    nextTimer.tv_usec += timerIncr.tv_usec;
+    if (nextTimer.tv_usec > 1000000L) {
+      nextTimer.tv_usec -= 1000000L;
+      nextTimer.tv_sec ++;
+    }
+    /* periodic ? */
+    if (! periodic) {
+      timerMode = TM_ONCE;
+    } else {
+      timerMode = TM_PERIODIC;
+    }
+  }
 }
 
 /*
@@ -295,14 +283,14 @@ GUI_SetTimer (long msec, XBBool periodic)
 static int
 CheckTimer (struct timeval *a, struct timeval *b)
 {
-	if (a->tv_sec < b->tv_sec) {
-		return XBTrue;
-	}
-	if (a->tv_sec > b->tv_sec) {
-		return XBFalse;
-	}
-	return (a->tv_usec < b->tv_usec);
-}								/* CheckTimer */
+  if (a->tv_sec < b->tv_sec) {
+    return TRUE;
+  }
+  if (a->tv_sec > b->tv_sec) {
+    return FALSE;
+  }
+  return (a->tv_usec < b->tv_usec);
+} /* CheckTimer */
 
 /*
  * Calc difference between timvals
@@ -310,33 +298,33 @@ CheckTimer (struct timeval *a, struct timeval *b)
 static void
 DeltaTimer (struct timeval *delta, struct timeval *a, struct timeval *b)
 {
-	delta->tv_sec = a->tv_sec - b->tv_sec;
-	delta->tv_usec = a->tv_usec - b->tv_usec;
-	if (delta->tv_usec < 0) {
-		delta->tv_usec += 1000000;
-		delta->tv_sec--;
-	}
-}								/* DeltaTimer */
+  delta->tv_sec  = a->tv_sec  - b->tv_sec;
+  delta->tv_usec = a->tv_usec - b->tv_usec;
+  if (delta->tv_usec < 0) {
+    delta->tv_usec += 1000000;
+    delta->tv_sec --;
+  }
+} /* DeltaTimer */
 
 /*
  * insert poll function
- */
+ */ 
 void
 GUI_AddPollFunction (XBPollFunction func)
 {
-	PollFuncList *ptr;
-	/* set timeout */
-	if (NULL == pollList) {
-		gettimeofday (&nextPoll, NULL);
-		nextPoll.tv_sec++;
-	}
-	/* create new element */
-	ptr = calloc (1, sizeof (*ptr));
-	assert (NULL != ptr);
-	ptr->func = func;
-	ptr->next = pollList;
-	pollList = ptr;
-}								/* GUI_AddPollFunction */
+  PollFuncList *ptr;
+  /* set timeout */
+  if (NULL == pollList) {
+    gettimeofday (&nextPoll, NULL);
+    nextPoll.tv_sec ++;
+  }
+  /* create new element */
+  ptr = calloc (1, sizeof (*ptr));
+  assert (NULL != ptr);
+  ptr->func = func;
+  ptr->next = pollList;
+  pollList  = ptr;
+} /* GUI_AddPollFunction */
 
 /*
  * subtract poll function 
@@ -344,383 +332,389 @@ GUI_AddPollFunction (XBPollFunction func)
 void
 GUI_SubtractPollFunction (XBPollFunction func)
 {
-	assert (pollList != NULL);
-
-	if (pollList->func == func) {
-		pollList = pollList->next;
-	}
-	else {
-		PollFuncList *ptr;
-		for (ptr = pollList; ptr->next != NULL; ptr = ptr->next) {
-			if (ptr->next->func == func) {
-				PollFuncList *save = ptr->next;
-				ptr->next = save->next;
-				free (save);
-			}
-		}
-	}
-}								/* GUI_SubtractPollFunction */
-
-static GameKeyEvent *
-LookupKeyTable (const SDLKey keyCode, const int numKey, const GameKeyEvent * keyTable)
-{
-	return bsearch (&keyCode, keyTable, numKey, sizeof (GameKeyEvent), CompareKeyCode);
-}
+  assert (pollList != NULL);
+  
+  if (pollList->func == func) {
+    pollList = pollList->next;
+  } else {
+    PollFuncList *ptr;
+    for (ptr = pollList; ptr->next != NULL; ptr = ptr->next) {
+      if (ptr->next->func == func) {
+	PollFuncList *save = ptr->next;
+	ptr->next = save->next;
+	free (save);
+      }
+    }
+  }
+} /* GUI_SubtractPollFunction */
 
 /*
- * Handle Keyboard-Event by looking up Menu Event
+ * Handle X11-KEyboard-Event by looking up Menu Event
  */
 static void
-HandleMenuKey (SDL_KeyboardEvent * KbEvent)
+HandleMenuKey (XKeyEvent *xkey)
 {
-	SDLKey keyCode;
-
-	keyCode = KbEvent->keysym.sym;
-	if (!HandleChatKey (KbEvent)) {
-		GameKeyEvent *key;
-
-		key = LookupKeyTable (keyCode, numKeyMenu, keyMenuTable);
-		if (key) {
-			QueueEventValue (key->code, key->value);
-		}
-	}
-}
+  GameKeyEvent *key;
+  KeyCode       keyCode;
+  /* search for key */
+  keyCode = xkey->keycode;
+  key = bsearch (&keyCode, keyMenuTable, numKeyMenu, sizeof (GameKeyEvent), CompareKeyCode);
+  if (NULL != key) {
+    //Dbg_Out("code %i value %c \n",key->code, key->value);
+    QueueEventValue (key->code, key->value);
+  }
+} /* HandleMenuKey */
 
 /*
- * Handle Keyboard-Event by looking XBlast Event
+ * Handle X11-KEyboard-Event by looking XBlast Event
  */
 static void
-HandleXBlastKey (SDL_KeyboardEvent * KbEvent)
+HandleXBlastKey (XKeyEvent *xkey)
 {
-	GameKeyEvent *key_table;
-	int num_key;
-	SDLKey keyCode;
-	GameKeyEvent *key;
-
-	/* which table to loopkup */
-	if (KbEvent->state == SDL_PRESSED) {
-		key_table = keyPressTable;
-		num_key = numKeyPress;
-		if (HandleChatKey (KbEvent)) {
-			return;
-		}
-	}
-	else {
-		key_table = keyReleaseTable;
-		num_key = numKeyRelease;
-	}
-	/* search for key */
-	keyCode = KbEvent->keysym.sym;
-	key = LookupKeyTable (keyCode, num_key, key_table);
-	if (key) {
-		QueueEventValue (key->code, key->value);
-	}
-}								/* HandleXBlastKey */
+  GameKeyEvent *key_table;
+  int           num_key;
+  GameKeyEvent *key;
+  KeyCode       keyCode;
+  /* which table to loopkup */
+  if (xkey->type == KeyPress) {
+    key_table = keyPressTable;
+    num_key   = numKeyPress;
+  } else {
+    key_table = keyReleaseTable;
+    num_key   = numKeyRelease;
+  }
+  /* search for key */
+  keyCode = xkey->keycode;
+  key = bsearch (&keyCode, key_table, num_key, sizeof (GameKeyEvent), CompareKeyCode);
+  if (NULL != key) {
+    QueueEventValue (key->code, key->value);
+  }
+} /* HandleXBlastKey */
 
 /*
- * handle chat key event
- */
-static XBBool
-HandleChatKey (SDL_KeyboardEvent * KbEvent)
-{
-	SDLKey keyCode;
-	GameKeyEvent *key;
-
-	keyCode = KbEvent->keysym.sym;
-	key = LookupKeyTable (keyCode, numKeyChat, keyChatTable);
-	if (key && Chat_isListening ()) {
-		if ((keyCode == SDLK_BACKSPACE || keyCode == SDLK_ESCAPE || keyCode == SDLK_RETURN)
-			&& Chat_GetCurrentCode () == XBE_NONE) {
-			return XBFalse;
-		}
-
-		QueueEventValue (key->code, key->value + 1000);
-		return XBTrue;
-	}
-
-	/* if chat input is active, expect character event */
-	if (Chat_GetCurrentCode () != XBE_NONE) {
-		HandleAsciiKey (KbEvent);
-		return XBTrue;
-	}
-
-	return XBFalse;
-}
-
-/*
- * Handle Keyboard-Event by looking up ascii value of key
+ * Handle X11-KEyboard-Event by looking up ascii value of key
  */
 static void
-HandleAsciiKey (SDL_KeyboardEvent * KbEvent)
+HandleAsciiKey (XKeyEvent *xkey)
 {
-	SDLKey keyCode;
-	keyCode = KbEvent->keysym.sym;
+  char buf[8];
+  KeySym keySym;
+  int len;
+  
+  len = XLookupString (xkey, buf, sizeof (buf), &keySym, NULL);
+  // Dbg_Out("especial key b %i xk %c s %i l %i ks %i ip %i en %i back %i\n",buf[0],xkey->keycode,sizeof (buf),len,keySym,isprint(buf[0]),XK_End,XK_BackSpace);
+  if (len == 1) {
+    if (isprint (buf[0])) {
+      /* printable character */
+      QueueEventValue (XBE_ASCII, buf[0]);
+    } else if (iscntrl (buf[0]) ) {
+      /* control key */
+      
+      switch (keySym) {
+      case  XK_BackSpace: 
+	QueueEventValue (XBE_CTRL, XBCK_BACKSPACE); break;
+      case XK_Escape: 
+	QueueEventValue (XBE_CTRL, XBCK_ESCAPE);    break;
+      case XK_Return: 
+	QueueEventValue (XBE_CTRL, XBCK_RETURN);    break;
+      case XK_Delete:
+	QueueEventValue (XBE_CTRL, XBCK_DELETE);    break;
+	
+	/*    case 71: QueueEventValue (XBE_CTRL, XBCK_INSERT);    break;
+      case 79: QueueEventValue (XBE_CTRL, XBCK_END);    break;
+      case 127: QueueEventValue (XBE_CTRL, XBCK_DELETE);    break;
+      case 129: QueueEventValue (XBE_CTRL, XBCK_HOME);    break;*/
 
-	if (isprint (keyCode)) {
-		/* printable character */
-		QueueEventValue (XBE_ASCII, keyCode);
-	}
-	else {
-		/* control key */
-		switch (keyCode) {
-		case SDLK_BACKSPACE:
-			QueueEventValue (XBE_CTRL, XBCK_BACKSPACE);
-			break;
-		case SDLK_ESCAPE:
-			QueueEventValue (XBE_CTRL, XBCK_ESCAPE);
-			break;
-		case SDLK_RETURN:
-			QueueEventValue (XBE_CTRL, XBCK_RETURN);
-			break;
-		default:
-			break;
-		}
-	}
+      default: break;
+      }
+    }
 
-}
+  }
+  else{
+    if(keySym==XK_End){
+      QueueEventValue (XBE_CTRL, XBCK_END);
+    }
+    if(keySym==XK_Home){
+      QueueEventValue (XBE_CTRL, XBCK_HOME);
+    }
+    if(keySym==XK_Insert){
+      QueueEventValue (XBE_CTRL, XBCK_INSERT);
+    }
+    if(keySym==XK_Delete){
+      QueueEventValue (XBE_CTRL, XBCK_DELETE);
+    }
+    
+  }
+    
+  
+} /* HandleAsciiKey */
 
 /*
- * Handle Keyboard-Event by looking up keysymbol name
+ * Handle X11-KEyboard-Event by looking up keysymbol name
  */
 static void
-HandleKeysymKey (SDL_KeyboardEvent * KbEvent)
+HandleKeysymKey (XKeyEvent *xkey)
 {
-	SDLKey keyCode;
-	keyCode = KbEvent->keysym.sym;
-	if (keyCode == SDLK_ESCAPE) {
-		QueueEventAtom (XBE_KEYSYM, ATOM_INVALID);
-	}
-	else {
-		XBAtom atom = VirtualKeyToAtom (keyCode);
-		if (ATOM_INVALID != atom) {
-			QueueEventAtom (XBE_KEYSYM, atom);
-		}
-	}
-}
+  KeySym keySym;
+  /* look up key smybol (lower case only) */
+  keySym = XLookupKeysym (xkey, 0);
+  if (keySym == XK_Escape) {
+    QueueEventAtom (XBE_KEYSYM, ATOM_INVALID);
+  } else if (keySym != NoSymbol) {
+    char *keyName = XKeysymToString (keySym);
+    if (NULL != keyName) {
+      QueueEventAtom (XBE_KEYSYM, GUI_StringToAtom (keyName) );
+    }
+  }
+} /* HandleKeysymKey */
 
 /*
- * Handle SDL Events
+ * Handle X11 Events
  */
 static void
-HandleSDLEvent (SDL_Event * event)
+HandleX11Event (XEvent *xev)
 {
-	switch (event->type) {
-	case SDL_KEYDOWN:
-		switch (keyboardMode) {
-		case KB_CHAT:
-			(void)HandleChatKey (&event->key);
-			break;
-		case KB_MENU:
-			HandleMenuKey (&event->key);
-			break;
-		case KB_XBLAST:
-			HandleXBlastKey (&event->key);
-			break;
-		case KB_ASCII:
-			HandleAsciiKey (&event->key);
-			break;
-		case KB_KEYSYM:
-			HandleKeysymKey (&event->key);
-			break;
-		default:
-			break;
-		}
-		break;
+  BMPlayer         *ps;
+  int counter=0,numofplayers;
+  switch (xev->type) {
+    /* window is iconfied */
+  case UnmapNotify:
+    iconified = TRUE;
+    break;
 
-	case SDL_KEYUP:
-		switch (keyboardMode) {
-		case KB_XBLAST:
-			HandleXBlastKey (&event->key);
-			break;
-		default:
-			break;
-		}
-		break;
+    /* window is mapped again */
+  case MapNotify:
+    iconified = FALSE;
+    break;
 
-	case SDL_MOUSEMOTION:
-		QueueEventPos (XBE_MOUSE_MOVE, event->motion.x / BASE_X, event->motion.y / BASE_Y);
-		break;
+    /* part of the window was exposed */
+  case Expose:
+    GUI_FlushPixmap(FALSE);
+    break;
+    
+    /* a key was pressed */
+  case KeyPress:
+    switch (keyboardMode) {
+    case KB_MENU:
+      
+      if(GetChatMode()>0)
+	HandleAsciiKey (&xev->xkey); 
+      else
+	HandleMenuKey   (&xev->xkey); 
+      break;
+    case KB_XBLAST:  
+      numofplayers=GetNumOfPlayers();
+      for (ps = player_stat,counter=0; ps < player_stat + numofplayers; ps ++,counter++) {
+	  if (ps->local) {
+	    break;
+      	  }
+	}
+      //      Dbg_Out(" Chatmode %i \n",ps->chatmode);
+      if(ps->chatmode==1){
+	HandleAsciiKey (&xev->xkey); 
+      }
+      // else 
+       HandleXBlastKey (&xev->xkey); break;
+    case KB_ASCII:  HandleAsciiKey  (&xev->xkey); break;
+    case KB_KEYSYM: HandleKeysymKey (&xev->xkey); break;
+    default:        break;
+    }
+    break;
 
-	case SDL_MOUSEBUTTONUP:
-		break;
+    /* a key was released */
+  case KeyRelease:
+    switch (keyboardMode) {
+    case KB_XBLAST: HandleXBlastKey (&xev->xkey); break;
+    default:        break;
+    }
+    break;
 
-	case SDL_MOUSEBUTTONDOWN:
-		switch (event->button.button) {
-		case SDL_BUTTON_LEFT:
-			QueueEventPos (XBE_MOUSE_1, event->button.x / BASE_X, event->button.y / BASE_Y);
-			break;
-		case SDL_BUTTON_RIGHT:
-			QueueEventPos (XBE_MOUSE_2, event->button.x / BASE_X, event->button.y / BASE_Y);
-			break;
-		case SDL_BUTTON_MIDDLE:
-			QueueEventPos (XBE_MOUSE_3, event->button.x / BASE_X, event->button.y / BASE_Y);
-			break;
-		default:
-			break;
-		}
-		break;
-
-	case SDL_JOYAXISMOTION:
-	case SDL_JOYBALLMOTION:
-	case SDL_JOYHATMOTION:
-	case SDL_JOYBUTTONDOWN:
-	case SDL_JOYBUTTONUP:
-		if (keyboardMode == KB_MENU)
-			HandleMenuJoystick (event);
-		else
-			HandleXBlastJoystick (event);
-		break;
-
-	case SDL_QUIT:
-		exit (1);
-
-	default:
-		GUI_FlushPixmap (XBFalse);
-		break;
-	};
-}
+    /* a mouse button has been pressed */
+  case ButtonPress:
+    switch (xev->xbutton.button) {
+    case Button1: QueueEventPos (XBE_MOUSE_1, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    case Button2: QueueEventPos (XBE_MOUSE_3, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    case Button3: QueueEventPos (XBE_MOUSE_2, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    default:      break;
+    }
+    break;
+  case ButtonRelease:
+    switch (xev->xbutton.button) {
+    case Button1: QueueEventPos (XBE_RMOUSE_1, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    case Button2: QueueEventPos (XBE_RMOUSE_3, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    case Button3: QueueEventPos (XBE_RMOUSE_2, xev->xbutton.x / BASE_X, xev->xbutton.y / BASE_Y); break;
+    default:      break;
+    }
+    break;
+    /* the mouse pointer has been moved */
+  case MotionNotify:
+    QueueEventPos (XBE_MOUSE_MOVE, xev->xmotion.x / BASE_X, xev->xmotion.y / BASE_Y);
+    break;
+  }
+} /* HandleX11Event */
 
 /*
  * check application and poll timer
- */
-static struct timeval *
+ */ 
+struct timeval *
 HandleTimeout (XBBool peek)
 {
-	struct timeval now;
-	struct timeval *timeout;
-	static struct timeval dTimer;
-	static struct timeval dPoll;
-	static struct timeval dPeek;
-
-	/* application timer */
-	if (timerMode == TM_NONE) {
-		timeout = NULL;
+  struct timeval         now;
+  struct timeval        *timeout;
+  static struct timeval  dTimer;
+  static struct timeval  dPoll;
+  static struct timeval  dPeek;
+  
+  /* application timer */
+  if (timerMode == TM_NONE) {
+    timeout = NULL;
+  } else {
+    gettimeofday (&now, NULL);
+    if (CheckTimer (&nextTimer, &now)) {
+      /* timer has triggered */
+      if (timerMode == TM_ONCE) {
+	/* this timer will only fire once */
+	timerMode = TM_NONE;
+      } else {
+	/* set new timer value */
+	nextTimer.tv_sec  += timerIncr.tv_sec;
+	nextTimer.tv_usec += timerIncr.tv_usec;
+	if (nextTimer.tv_usec > 1000000L) {
+	  nextTimer.tv_usec -= 1000000L;
+	  nextTimer.tv_sec ++;
 	}
-	else {
-		gettimeofday (&now, NULL);
-		if (CheckTimer (&nextTimer, &now)) {
-			/* timer has triggered */
-			if (timerMode == TM_ONCE) {
-				/* this timer will only fire once */
-				timerMode = TM_NONE;
-			}
-			else {
-				/* set new timer value */
-				nextTimer.tv_sec += timerIncr.tv_sec;
-				nextTimer.tv_usec += timerIncr.tv_usec;
-				if (nextTimer.tv_usec > 1000000L) {
-					nextTimer.tv_usec -= 1000000L;
-					nextTimer.tv_sec++;
-				}
-			}
-			/* create new timer event */
-			QueueEventVoid (XBE_TIMER);
-			dTimer.tv_sec = 0;
-			dTimer.tv_usec = 0;
-			timeout = &dTimer;
-		}
-		else {
-			/* no timeout yet , calc time to timeout */
-			DeltaTimer (&dTimer, &nextTimer, &now);
-			/* link to timeout */
-			timeout = &dTimer;
-		}
-	}
-	/* polling (once per second) */
-	if (pollList != NULL) {
-		gettimeofday (&now, NULL);
-		if (CheckTimer (&nextPoll, &now)) {
-			PollFuncList *poll;
-			for (poll = pollList; poll != NULL; poll = poll->next) {
-				(*poll->func) (&now);
-			}
-			nextPoll.tv_sec = now.tv_sec + 1;
-			nextPoll.tv_usec = now.tv_usec;
+      }
+      /* create new timer event */
+      QueueEventVoid (XBE_TIMER);
+      dTimer.tv_sec  = 0;
+      dTimer.tv_usec = 0;
+      timeout = &dTimer;
+    } else {
+      /* no timeout yet , calc time to timeout */
+      DeltaTimer (&dTimer, &nextTimer, &now);
+      /* link to timeout */
+      timeout = &dTimer;
+    }
+  }
+  /* polling (once per second) */
+  if (pollList != NULL) {
+    gettimeofday (&now, NULL);
+    if (CheckTimer (&nextPoll, &now) ) {
+      PollFuncList *poll;
+      for (poll = pollList; poll != NULL; poll = poll->next) {
+	(*poll->func) (&now);
+      }
+      nextPoll.tv_sec  = now.tv_sec + 1; 
+      nextPoll.tv_usec = now.tv_usec; 
 #ifdef DEBUG_EVENT
-			Dbg_Out ("poll\n");
+      Dbg_Out ("poll\n");
 #endif
-		}
-		/* calc time for next polling */
-		DeltaTimer (&dPoll, &nextPoll, &now);
-		if (NULL == timeout || CheckTimer (&dPoll, timeout)) {
-			timeout = &dPoll;
-		}
-	}
-	/* only peeking */
-	if (peek) {
-		dPeek.tv_sec = 0;
-		dPeek.tv_usec = 0;
-		timeout = &dPeek;
-	}
-	return timeout;
-}								/* CheckTimer */
+    }      
+    /* calc time for next polling */
+    DeltaTimer (&dPoll, &nextPoll, &now);
+    if (NULL == timeout || 
+	CheckTimer (&dPoll, timeout) ) {
+      timeout = &dPoll;
+    }
+  }
+  /* only peeking */
+  if (peek) {
+    dPeek.tv_sec  = 0;
+    dPeek.tv_usec = 0;
+    timeout = &dPeek;
+  }
+  return timeout;
+} /* CheckTimer */
 
 /*
  * xblast main event routine
  */
 XBEventCode
-GUI_WaitEvent (XBEventData * data)
+GUI_WaitEvent (XBEventData *data)
 {
-	XBEventCode ecode;
-	SDL_Event event;			/* Event structure */
-	//  XEvent      xev;
-	struct timeval *timeout;
+  XBEventCode     ecode;
+  int      	  i, num_queued;
+  XEvent   	  xev;
+  struct timeval *timeout;
 
-	/* only if there are no events in our xblast event queue */
-	while (XBE_NONE == (ecode = NextEvent (data))) {
-		/* wird sind schon Timeout */
-		timeout = HandleTimeout (XBFalse);
-		/* are their any X11-Events in the Queue */
-
-		SelectSockets (timeout);
-
-		/* Check for events */
-		/* Loop until there are no events left on the queue */
-		while (SDL_PollEvent (&event)) {
-			HandleSDLEvent (&event);
-		}
-	}
-	/* we have an event, return it */
-	return ecode;
-}								/* WaitEvent */
+  /* only if there are no events in our xblast event queue */
+  // while (XBE_NONE == (ecode = NextEvent (data) ) ) {
+    /* wird sind schon Timeout */
+    timeout = HandleTimeout (XBFalse);
+    /* are their any X11-Events in the Queue */	
+    //XFlush(dpy);
+    /*    num_queued = XEventsQueued (dpy, QueuedAlready);
+    for (i = 0; i < num_queued; i ++) {
+      XNextEvent (dpy, &xev);
+      HandleX11Event (&xev);
+    }
+    if (SelectSockets (keyboardMode, timeout)) {
+      int num_queued = XEventsQueued (dpy, QueuedAfterReading);
+      for (i = 0; i < num_queued; i ++) {
+	XNextEvent (dpy, &xev);
+	HandleX11Event (&xev);
+      }
+      }*/
+    //   }
+  /* we have an event, return it */
+  return ecode;
+} /* WaitEvent */
 
 /*
  * xblast main event routine
  */
 XBEventCode
-GUI_PeekEvent (XBEventData * data)
+GUI_PeekEvent (XBEventData *data)
 {
-	XBEventCode ecode;
-	SDL_Event event;			/* Event structure */
-	struct timeval *timeout;
+  XBEventCode     ecode;
+  int      	  i, num_queued;
+  XEvent   	  xev;
+  struct timeval *timeout;
+	Window u1; int u2;
+	Window current_win;
+	int x, y;
+	unsigned int mask;
 
-	/* only if there are no events in our xblast event queue */
-	if (XBE_NONE != (ecode = NextEvent (data))) {
-		return ecode;
-	}
-	/* wird sind schon Timeout */
-	timeout = HandleTimeout (XBTrue);
-	/* are their any X11-Events in the Queue */
-
-	SelectSockets (timeout);
-
-	/* Check for events */
-	/* Loop until there are no events left on the queue */
-	while (SDL_PollEvent (&event)) {
-		HandleSDLEvent (&event);
-	}
-
-	return NextEvent (data);
-}								/* WaitEvent */
+  /* only if there are no events in our xblast event queue */
+  if (XBE_NONE != (ecode = NextEvent (data) ) ) {
+    return ecode;
+  }
+  /* wird sind schon Timeout */
+  timeout = HandleTimeout (XBTrue);
+  /* are their any X11-Events in the Queue */
+  num_queued = XEventsQueued (dpy, QueuedAlready);
+  for (i = 0; i < num_queued; i ++) {
+    XNextEvent (dpy, &xev);
+    XQueryPointer(dpy, win, &u1, &current_win,
+		  &u2, &u2, &x, &y, &mask);
+    HandleX11Event (&xev);
+  }
+  /* if (SelectSockets (keyboardMode, timeout)) {
+    int num_queued = XEventsQueued (dpy, QueuedAfterReading);
+    for (i = 0; i < num_queued; i ++) {
+      XNextEvent (dpy, &xev);
+      HandleX11Event (&xev);
+    }
+    }*/
+  /* we have check everything now return event if any */
+  return NextEvent (data);
+} /* WaitEvent */
 
 /*
  *
  */
-void
+void 
 GUI_Sync (void)
 {
-	//That was easy.
-}								/* GUI_Sync */
+	SDL_Event event;
+ 	
+	/*  if ( SDL_WaitEvent(&event) < 0 ) {
+			fprintf(stderr, "SDL_PullEvent() error: %s\n",
+								SDL_GetError());
+
+
+								}*/
+} /* GUI_Sync */
 
 /*
  *
@@ -728,14 +722,8 @@ GUI_Sync (void)
 void
 GUI_Bell (void)
 {
-#ifdef WIN32
-//  #include "windows.h"
-	MessageBeep (0);
-#else
-	fputc ('\a', stderr);
-	fflush (stderr);
-#endif
-}								/* GUI_Bell */
+  XBell (dpy, BELL_VOLUME);
+} /* GUI_Bell */
 
 /*
  * send event
@@ -743,8 +731,8 @@ GUI_Bell (void)
 void
 GUI_SendEventValue (XBEventCode code, int value)
 {
-	QueueEventValue (code, value);
-}								/* GUI_SendEventValue */
+  QueueEventValue (code, value);
+} /* GUI_SendEventValue */
 
 /*
  * end of file x11_event.c

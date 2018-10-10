@@ -1,7 +1,7 @@
 /*
  * file SDL_common.c - global variables for Win32 engine
  *
- * $Id: sdl_common.c,v 1.6 2006/02/09 21:21:24 fzago Exp $
+ * $Id: sdl_common.c,v 1.3 2004/09/13 22:33:45 tenderflake Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,16 +20,15 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-
-#include "xblast.h"
-
 #include "sdl_common.h"
+
 
 /*
  * global variables
  */
 SDL_Surface *screen = NULL;
-SDL_Surface *pix = NULL;
+SDL_Surface *pix    = NULL;
+
 
 const char *xblastClass = "XBlast";
 

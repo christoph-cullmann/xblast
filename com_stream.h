@@ -1,7 +1,7 @@
 /*
  * file com_stream.h - base struct und functions for stream connections
  *
- * $Id: com_stream.h,v 1.8 2006/02/09 21:21:23 fzago Exp $
+ * $Id: com_stream.h,v 1.5 2004/11/06 01:53:47 lodott Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,6 +23,8 @@
 #ifndef XBLAST_COM_STREAM_H
 #define XBLAST_COM_STREAM_H
 
+#include "com_base.h"
+
 /*
  * type definitions
  */
@@ -31,37 +33,39 @@
 typedef struct _xb_comm_stream XBCommStream;
 
 /* stream events */
-typedef enum
-{
-	XBST_IOREAD,
-	XBST_IOWRITE,
-	XBST_EOF,
-	XBST_BUSY,
-	XBST_WAIT,
-	XBST_CLOSE
+typedef enum {
+  XBST_IOREAD,
+  XBST_IOWRITE,
+  XBST_EOF,
+  XBST_BUSY,
+  XBST_WAIT,
+  XBST_CLOSE,
 } XBStreamEvent;
 
 /* callback for handling incoming telegrams */
-typedef XBCommResult (*StreamHandleFunc) (XBCommStream *, const XBTelegram * tele);
-typedef XBBool (*StreamEventFunc) (XBCommStream *, const XBStreamEvent);
+typedef XBCommResult (*StreamHandleFunc) (XBCommStream *, const XBTelegram *tele);
+typedef XBBool       (*StreamEventFunc)  (XBCommStream *, const XBStreamEvent);
 
-/* base structure for all stream bases communications */
-struct _xb_comm_stream
-{
-	XBComm comm;
-	XBBool prepFinish;
-	XBSndQueue *sndQueue;
-	XBRcvQueue *rcvQueue;
-	StreamHandleFunc handleFunc;
-	StreamEventFunc eventFunc;
+/* base structure for all stream based communications */
+struct _xb_comm_stream {
+  XBComm      comm;
+  XBBool      prepFinish;
+  XBBool      waitingeof;
+  XBSndQueue *sndQueue;
+  XBRcvQueue *rcvQueue;
+  StreamHandleFunc  handleFunc;
+  StreamEventFunc   eventFunc;
 };
 
 /*
  * global prototypes
  */
-extern void Stream_CommInit (XBCommStream *, XBCommType, XBSocket *, StreamHandleFunc,
-							 StreamEventFunc, XBCommFunc);
-extern void Stream_CommFinish (XBCommStream * stream);
+
+/* constructor */
+extern void Stream_CommInit (XBCommStream *, XBCommType, XBSocket *, StreamHandleFunc, StreamEventFunc, XBCommFunc);
+
+/* destructor */
+extern void Stream_CommFinish (XBCommStream *stream);
 
 #endif
 /*

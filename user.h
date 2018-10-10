@@ -1,7 +1,7 @@
 /*
  * file user.h - communication interface for users
  *
- * $Id: user.h,v 1.10 2006/02/10 15:07:18 fzago Exp $
+ * $Id: user.h,v 1.5 2004/11/11 14:58:15 lodott Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -24,11 +24,10 @@
 #ifndef XBLAST_USER_H
 #define XBLAST_USER_H
 
-#define CENTRAL_FINISHED 0+(1<<10)
-#define CENTRAL_DISCONNECT 1+(1<<10)
-#define CENTRAL_READ_ERR 2+(1<<10)
-#define CENTRAL_WRITE_ERR 3+(1<<10)
-#define CENTRAL_COT_INVALID 4+(1<<10)
+#include "player.h"
+#include "network.h"
+#include "cfg_xblast.h"
+#include "com_to_central.h"
 
 /*
  * global prototypes
@@ -37,24 +36,25 @@
 /* connect/disconnect */
 extern XBBool User_Connect (CFGCentralSetup *);
 extern void User_Disconnect (void);
-extern XBBool User_EventToCentral (const XBEventToCentral);
+extern XBBool User_EventToCentral(const XBEventToCentral);
 
 /* get data */
-extern XBBool User_Connected (void);
-extern int User_GetPID (void);
-extern int User_Received (void);
-extern void User_NoMorePlayers (void);
+extern XBBool User_Connected();
+extern int    User_GetPID();
+extern int    User_Received();
+extern XBBool User_Complete();
+extern void   User_NoMorePlayers();
 
 /* receive data */
 extern void User_ReceivePlayerPID (const char *data);
 extern void User_ReceivePlayerConfig (const char *data);
 
 /* queue data */
-extern void User_SendDisconnect (void);
-extern void User_RequestUpdate (void);
+extern void User_SendDisconnect(void);
+extern void User_RequestUpdate();
 extern void User_SendRegisterPlayer (XBAtom);
 extern void User_SendUnregisterPlayer (XBAtom);
-extern void User_SendGameStat (int numPlayers, BMPlayer * playerStat, int *pa);
+extern void User_SendGameStat (int numPlayers, BMPlayer *playerStat, int *pa);
 
 #endif
 /*

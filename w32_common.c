@@ -1,7 +1,7 @@
 /*
  * file w32_common.c - global variables for Win32 engine
  *
- * $Id: w32_common.c,v 1.3 2006/02/09 18:31:47 fzago Exp $
+ * $Id: w32_common.c,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -25,10 +25,10 @@
 /*
  * global variables
  */
-HANDLE instance = NULL;
-HWND window = NULL;
-HBITMAP pix = NULL;
-HPALETTE palette = NULL;
+HANDLE   instance = NULL;
+HWND     window   = NULL;
+HBITMAP  pix      = NULL;
+HPALETTE palette  = NULL;
 
 const char *xblastClass = "XBlast";
 

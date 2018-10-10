@@ -1,9 +1,9 @@
 /*
  * file w32_joystick.h - joystick support for Win32
  *
- * $Id: w32_joystick.h,v 1.4 2006/02/19 13:33:01 lodott Exp $
+ * $Id: w32_joystick.h,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -24,11 +24,12 @@
 #define XBLAST_W32_JOYSTICK_H
 
 #include "w32_common.h"
+#include "xblast.h"
 
-extern XBBool InitJoystick (void);
-extern void FinishJoystick (void);
-extern void HandleMenuJoy (UINT message, UINT wParam, LONG lParam);
-extern void HandleXBlastJoy (UINT message, UINT wParam, LONG lParam);
+extern XBBool InitJoystick   (void);
+extern void   FinishJoystick (void);
+extern void   HandleMenuJoy   (UINT message, UINT wParam, LONG lParam);
+extern void   HandleXBlastJoy (UINT message, UINT wParam, LONG lParam);
 
 #endif
 /*

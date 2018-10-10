@@ -1,7 +1,7 @@
 /*
  * file action.h - converting player actions to bytes and back
  *
- * $Id: action.h,v 1.9 2006/02/09 21:21:22 fzago Exp $
+ * $Id: action.h,v 1.7 2004/11/08 19:59:08 lodott Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -23,16 +23,17 @@
 #ifndef XBLAST_ACTION_H
 #define XBLAST_ACTION_H
 
+#include "xblast.h"
+
 /*
  * type definitions
  */
 
 /* status of player abort */
-typedef enum
-{
-	ABORT_NONE = 0,
-	ABORT_TRUE,
-	ABORT_CANCEL
+typedef enum {
+  ABORT_NONE = 0,
+  ABORT_TRUE,
+  ABORT_CANCEL
 } PlayerAbort;
 
 /* chat defines */
@@ -43,19 +44,18 @@ typedef enum
 #define CHAT_LEN     40
 
 /* player action(s) at last turn */
-typedef struct
-{
-	int player;
-	BMDirection dir;
-	XBBool bomb;
-	XBBool special;
-	XBBool pause;
-	PlayerAbort abort;
-	XBBool suicide;
-	XBBool laola;
-	XBBool looser;
-	XBBool bot;
-	XBBool away;
+typedef struct {
+  int         player;
+  BMDirection dir;
+  XBBool      bomb;
+  XBBool      special;
+  XBBool      pause;
+  PlayerAbort abort;
+  XBBool      suicide;
+  XBBool      laola;
+  XBBool      looser;
+  XBBool      bot;
+  XBBool      away;
 } PlayerAction;
 
 /*

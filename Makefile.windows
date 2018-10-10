@@ -19,15 +19,15 @@
 # 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
-# cygwin options for exe independent of cygwin1.dll
-# comment out or remove for dependent exe
-CYGWINOPT=-mno-cygwin
-CYGWINLIB=-lmingw32
+# extra cygwin options
+# remove comments for exe independent of cygwin1.dll
+CYGWINOPT=#-mno-cygwin
+CYGWINLIB=#-lmingw32
 
-DEBUGFLAGS=#-DDEBUG_CHAT -DDEBUG_SERVER -DDEBUG_CLIENT -DDEBUG_NETWORK -DDEBUG_VERSION
+DEBUGFLAGS=-DDEBUG_NAT -DDEBUG_GAME -DDEBUG_NETWORK #-DDEBUG_CLIENT -DDEBUG_SERVER
 GCCWARN=-Wall -Wno-comment
-GCCOPTS=-O2 $(CYGWINOPT) #-std=c99 -pedantic
-XBLAST=-DW32 -DDEBUG_NAT -DXBLAST_SOUND -DMINI_XBLAST #-DREQUESTS
+GCCOPTS=-g -O2 $(CYGWINOPT) #-std=c99 -pedantic
+XBLAST=-DW32 -DXBLAST_SOUND -DMINI_XBLAST -DHAVECONFIG_H #-DREQUESTS
 XBLASTDIRS=-DXBLASTDIR=\".\" -DGAME_DATADIR=\".\"
 
 CC=gcc.exe #/lib/gcc-lib/i686-pc-mingw32/3.2/cc1.exe

@@ -1,9 +1,9 @@
 /*
  * file menu_layout.h - macros for menu layouts
  *
- * $Id: menu_layout.h,v 1.4 2006/02/09 18:31:45 fzago Exp $
+ * $Id: menu_layout.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -27,7 +27,7 @@
  * global macros
  */
 #define TITLE_WIDTH    	 (5*CELL_W)
-#define TITLE_LEFT     	 (5*CELL_W)
+#define TITLE_LEFT     	 (5*CELL_W) 
 #define TITLE_TOP      	 (2*CELL_H)
 
 #define MENU_WIDTH     	 (6*CELL_W)

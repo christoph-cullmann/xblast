@@ -1,6 +1,6 @@
 GETTING XBLAST
 
- use the Download links on http://xblast.sf.net/
+ use the Download links on http://xblast.sf.net
 
  o  get source package xblast, if you want to compile yourself
 
@@ -41,10 +41,8 @@ COMPILING THE BINARY
  o run 'configure' with appropriate options
 
     o for public installation (requires root)
-	(will install binaries in /usr/games/bin and 
-	 data into /usr/share/games/XBlast-TNT)
 
-      --prefix=/usr/games --enable-admin
+      --prefix=/usr/share/games --with-otherdatadir=/usr/share/games
 
     o for sound
 
@@ -57,23 +55,6 @@ COMPILING THE BINARY
     o for 16-player support
 
       --enable-SMPF
-
-    o if you want that data go to a different path then
-    $prefix/share/games/XBlast-TNT
-
-      --with-otherdatadir=mydir
-
-Examples:
-
-Private install:
-
-	configure 
-
-Root install with mini, SMPF, sound, data in /usr/local/share/xblast and with
-xblast and xbsndsrv in /usr/bin:
-
-	configure --enable-admin --enable-sound --enable-SMPF --enable-mini \
-	--prefix=/usr --with-otherdatadir=/usr/local/share/xblast
 
  o run 'make' to create the binary
 
@@ -98,5 +79,5 @@ xblast and xbsndsrv in /usr/bin:
  for details on compilation with msvc, contact devs
 
 for more informations read README or pass by:
-http://xblast.sf.net/irc/
-http://xblast.sf.net/
+http://irc.xblast-center.com
+http://xblast.sf.net

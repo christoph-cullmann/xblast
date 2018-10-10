@@ -1,2037 +1,370 @@
-2006-06-16 23:27  alfie
-
-	* config.guess, config.sub: Updated config.{guess,sub}
-
-2006-06-16 22:09  alfie
-
-	* Makefile.in, config.h.in, configure, version.h: autogen for
-	  2.10.4 release
-
-2006-06-16 22:00  alfie
-
-	* po/de.po: Some updates/enhances
-
-2006-06-15 10:49  fzago
-
-	* Makefile.am: Do not build xbsndsrv for SDL target.
-
-2006-06-13 11:19  fzago
-
-	* sdl_sound.c: Add more mixing channels so less sound effects are
-	  skipped. Do not call Mix_SetPanning is there is no mix channel
-	  available.
-
-2006-06-13 11:11  fzago
-
-	* game.c, menu_network.c, player.c: New strings to translate.
-
-2006-06-13 11:10  fzago
-
-	* menu_game.c, sdl_sound.c: Fixed 2 typos.
-
-2006-06-12 11:06  fzago
-
-	* intro.c, sdl_sound.c, snd.h, x11_sound.c, xbsndsrv.c: Stop all
-	  sounds before playing the "won" music at the end of a level, else
-	  that music might never play (not enough mix channels).
-
-2006-06-12 10:55  fzago
-
-	* version.h: Updated copyright year.
-
-2006-06-12 10:55  fzago
-
-	* util.c: Fixed a few warnings.
-
-2006-06-12 10:54  fzago
-
-	* introdat.c: Enlarge and move down the "press space .." box on the
-	  intro window so French translation appear in full.
-
-2006-06-12 10:51  fzago
-
-	* cfg_player.c: Fixed typo.
-
-2006-06-12 10:51  fzago
-
-	* bomb.c: More strings to translate.
-
-2006-06-12 10:48  fzago
-
-	* Makefile.am: Adds $(DESTDIR) to fix rpm package build.
-	  Makefile.dist and common.h are no longer present so don't look
-	  for them during "make dist".
-
-2006-06-12 10:42  fzago
-
-	* acinclude.m4, configure.in: Add more compile flags when gcc is
-	  used.
-
-2006-06-12 10:38  fzago
-
-	* po/: fr.po, xblast.pot: More French translations and more strings
-	  to translate.
-
-2006-06-01 17:47  alfie
-
-	* po/de.po: Some more strings....
-
-2006-05-04 17:28  fzago
-
-	* sdl_init.c: Don't ignore the first SDL_QUIT event.
-
-2006-05-04 17:26  fzago
-
-	* x11c_text.c: Typo
-
-2006-04-14 20:43  iskywalker
-
-	* configure.in: Fail if sdl libs are not found
-
-2006-04-11 16:54  fzago
-
-	* sdl_init.c: Commented out unused code. Activate the event filter
-	  (alloows for instance fullscreen hotkey). Do not filter out key
-	  up events since they are needed in a keyboard option.
-
-2006-04-11 16:45  fzago
-
-	* xbsndsrv.c: Fixed a couple function declarations.
-
-2006-04-11 16:44  fzago
-
-	* ini_file.c, ini_file.h, menu_edit.c: DB_GetSection does not
-	  return a const, so fix its declaration. And remove a bunch of
-	  casts that were added because of that.
-
-2006-03-29 21:48  alfie
-
-	* Makefile.in, config.h.in, configure: Update of the automatic
-	  generated files
-
-2006-03-29 21:46  alfie
-
-	* func.c: Fixed a string
-
-2006-03-29 21:45  alfie
-
-	* player.c, po/Makevars.template[DEAD], po/de.po, po/fr.po,
-	  po/xblast.pot: player.c: Added a comment for translators
-	  po/xblast.pot: regenerated po/de.po, po/fr.po: updated from pot
-	  po/de.po: Added some more translation po/Makevars.template:
-	  Unneeded template file removed
-
-2006-03-29 19:59  fzago
-
-	* po/fr.po: Translation updates.
-
-2006-03-29 19:46  fzago
-
-	* po/LINGUAS: Added de
-
-2006-03-29 19:46  fzago
-
-	* po/Makevars: Set MSGID_BUGS_ADDRESS.
-
-2006-03-29 19:39  fzago
-
-	* player.c: "%d bomb" -> "%d bombs"
-
-2006-03-29 19:33  fzago
-
-	* player.c: no bombs -> no bomb
-
-2006-03-29 09:44  alfie
-
-	* po/: de.po, xblast.pot: Updated some of the default headers with
-	  sensible data.  Added initial german file.
-
-2006-03-28 11:58  fzago
-
-	* xblast.h: Include stdint.h
-
-2006-03-28 11:54  fzago
-
-	* sdl_sound.c: Change file lengths from long to int (better on 64
-	  bits platforms). Removed some dead code and unused variables.
-	  When converting a sound from mono to stereo, avoid allocating
-	  some memory.
-
-2006-03-28 11:50  fzago
-
-	* sdl_pixmap.c: Handle case where pixmap is not found (avoids
-	  segfault). Move variables declarations at the beggining of the
-	  block.
-
-2006-03-28 11:49  fzago
-
-	* sdl_common.h: Includes 2 more headers.
-
-2006-03-28 11:48  fzago
-
-	* ini_file.c, sdl_image.c, sdl_joystick.c: Minor code cleanups:
-	  moved variables declaraions at the beggining of the block, fixed
-	  functions prototypes.
-
-2006-03-28 11:41  fzago
-
-	* central.c, cfg_control.c, cfg_level.c, chat.c, client.c,
-	  com_central.c, demo.c, game.c, info.c, intro.c, level.c,
-	  menu_edit.c, menu_extras.c, menu_level.c, net_socket.c,
-	  network.c, player.c, scramble.c, sdl_text.c, sdl_tile.c,
-	  server.c, shrink.c, user.c: Minor code cleanups: fixed function
-	  declarations, moved variables declarations at the beggining of
-	  blocks, added static/const keywords, removed/commented out dead
-	  code, replaced 0 by NULL whenever possible.
-
-2006-02-25 16:13  fzago
-
-	* sdl_image.c: Added missing CR.
-
-2006-02-24 22:14  fzago
-
-	* sdl_event.h: Removed unused defines.
-
-2006-02-24 22:13  fzago
-
-	* map.c: emoved bad cast.
-
-2006-02-24 22:09  fzago
-
-	* game_client.c, game_local.c: Hide the mouse pointer during a
-	  game.
-
-2006-02-24 21:57  fzago
-
-	* gui.h, sdl_event.c, w32_event.c, x11_event.c: Introducing
-	  GUI_ShowCursor() to show or hide the mouse cursor.
-
-2006-02-24 21:52  fzago
-
-	* sdl_event.c: GUI_SetMouseMode is intended to mask/unmask mouse
-	  events. So ignore it for SDL.
-
-2006-02-24 21:42  fzago
-
-	* sdl_atom.c, sdl_event.c, sdl_image.c: Cleanups: fix typos, use
-	  correct casts, made a couple functions static.
-
-2006-02-24 21:36  fzago
-
-	* sdl_socket.c: includes sdl_socket.h
-
-2006-02-24 21:29  fzago
-
-	* browse.c, cfg_demo.c, cfg_game.c, cfg_player.c, cfg_stat.c,
-	  chat.c, chat.h, com_base.c, com_central.c, com_dgram.c,
-	  com_newgame.c, menu_edit.c, server.c, user.c: Cleanups: make some
-	  functions static, fixed some prototypes, use proper casts.
-
-2006-02-20 09:26  lodott
-
-	* xblast.h: correcting include for mingw-config makes 'make -f
-	  Makefile.windows' work on cygwin
-
-2006-02-19 17:22  fzago
-
-	* xblast.h: Always include time.h
-
-2006-02-19 14:49  lodott
-
-	* x11_socket.c: enabling socket close after shutdown for writing
-
-2006-02-19 13:41  lodott
-
-	* Makefile.windows: updating mingw Makefile to use config-mingw.h
-
-2006-02-19 13:39  lodott
-
-	* xblast.h: fixing include order, enable non-autoconf config
-	  headers
-
-2006-02-19 13:37  lodott
-
-	* config-mingw.h: mingw-specific config file, can probably be
-	  trimmed
-
-2006-02-19 13:33  lodott
-
-	* w32_atom.c, w32_config.c, w32_event.c, w32_image.c, w32_init.c,
-	  w32_joystick.c, w32_joystick.h, w32_keysym.c, w32_msgbox.c,
-	  w32_pixmap.c, w32_sndsrv.c, w32_socket.c, w32_sound.c,
-	  w32_sprite.c, w32_text.c, w32_text.h, w32_tile.c, w32_tile.h:
-	  fixing xblast.h inclusion to enable mingw-compilation under
-	  cygwin
-
-2006-02-19 13:26  lodott
-
-	* util.c: print search path list for files not found
-
-2006-02-19 13:06  fzago
-
-	* sdl_text.c: TTF_OpenFont() segfaults if the font doesn't exist.
-	  So test for the presence of the file before calling
-	  TTF_OpenFont().
-
-2006-02-18 23:31  fzago
-
-	* sdl_text.c: Changed the return type of DrawAlignedText from int
-	  to void, since the result was never used.
-
-2006-02-18 23:26  fzago
-
-	* sdl_init.c, sdl_text.c: Replaced several printf() by Dbg_Out().
-
-2006-02-18 21:40  fzago
-
-	* central.c, cfg_level.c, chat.c, client.c, com_dg_client.c,
-	  com_dg_server.c, com_dgram.c, debug.c, game_server.c, network.c,
-	  server.c: Fixed warnings in debug format strings (64 bits fixes,
-	  missing arguments, extra arguments).
-
-2006-02-18 13:38  fzago
-
-	* sdl_common.h, sdl_event.c, sdl_socket.c, sdl_socket.h: Straighten
-	  SDL event handling. This fixes network games and chat.
-
-2006-02-18 12:24  lodott
-
-	* configure.in, xbsndsrv.c: adding checks for sound headers and
-	  using them
-
-2006-02-17 22:57  fzago
-
-	* sdl_socket.c: Fix network interfaces enumeration.
-
-2006-02-17 20:32  fzago
-
-	* sdl_socket.c: Fix format warnings in debug traces.
-
-2006-02-17 19:52  fzago
-
-	* client.c, com_dgram.c, com_query.c, server.c, util.c,
-	  x11_socket.c: Fixed some warnings in debug traces.
-
-2006-02-15 22:30  fzago
-
-	* xblast.c, xblast.h: Do not use nls includes and functions when
-	  nls is not enabled, or not present.
-
-2006-02-14 20:51  fzago
-
-	* map.c: Fixed crash in map editor.
-
-2006-02-14 19:52  lodott
-
-	* configure.in: corrected checkin, library has to be added to LIBS,
-	  not LDFLAGS (sorry)
-
-2006-02-14 19:29  lodott
-
-	* configure.in: adding LIBINTL library for linking in cygwin,
-	  needed because gettext not in libc (probably)
-
-2006-02-14 19:29  lodott
-
-	* m4/sdl.m4: autoconf macro definition for sdl, for systems without
-	  sdl taken from sdl distribution
-
-2006-02-14 19:28  lodott
-
-	* autogen.sh: corrected: adding m4 as search directory for aclocal
-
-2006-02-14 19:28  lodott
-
-	* central.c: corrected: manually including limits.h to define
-	  INT_MAX in cygwin
-
-2006-02-14 19:28  lodott
-
-	* Makefile.in, aclocal.m4, configure: unintended checkin, but
-	  probably doesn't hurt
-
-2006-02-13 21:35  fzago
-
-	* po/: fr.po, xblast.pot: More translations.
-
-2006-02-13 21:34  fzago
-
-	* cfg_stat.c, menu_edit.c, mi_stat.c: Added some translation tags.
-
-2006-02-11 13:51  fzago
-
-	* po/: fr.po, xblast.pot: Updated translation strings.
-
-2006-02-11 13:50  fzago
-
-	* func.c, info.c, introdat.c, map.c, menu_extras.c, player.c: Added
-	  translation markers.
-
-2006-02-11 12:30  fzago
-
-	* bomb.c: Fixed typo.
-
-2006-02-11 12:28  fzago
-
-	* player.c: s/Initital/Initial/
-
-2006-02-11 12:27  fzago
-
-	* player.c: Added translation markers.
-
-2006-02-10 15:35  fzago
-
-	* po/: fr.po, xblast.pot: Updated pot file and partial french
-	  translation.
-
-2006-02-10 15:07  fzago
-
-	* version.h, xblast.h, version.c, user.h, server.c, server.h,
-	  shrink.c, shrink.h, snd.h, status.c, status.h, random.c,
-	  scramble.h, sdl_config.h, sdl_init.c, sdl_keysym.c, sdl_sprite.c,
-	  bomb.c, central.h, chat.c, chat.h, client.c, client.h,
-	  com_central.h, com_dg_server.c, func.c, game_server.c, info.h,
-	  ini_file.h, level.c, level.h, menu_extras.c, menu_level.c,
-	  menu_level.h, menu_network.c, mi_button.h, network.h, player.c,
-	  player.h: Fix non-ansi prototypes. Added static to some
-	  functions. Commented out some dead code. Fixed some compilation
-	  warnings.
-
-2006-02-10 13:28  fzago
-
-	* sdl_text.c, version.c, w32_event.c, x11c_text.c: dos2unix and
-	  make indent
-
-2006-02-10 13:23  fzago
-
-	* bomb.c: s/whith/with/
-
-2006-02-10 13:22  fzago
-
-	* bomb.c, intro.c, menu.c, menu_control.c, menu_extras.c,
-	  menu_game.c, menu_level.c, mi_tool.c: Added translation markers.
-
-2006-02-10 11:02  fzago
-
-	* po/fr.po: [no log message]
-
-2006-02-10 10:53  fzago
-
-	* intro.c, sdl_text.c: Move the call to gettext to where it
-	  belongs.
-
-2006-02-10 10:27  fzago
-
-	* xbsndsrv.c: Includes xblast.h
-
-2006-02-09 23:44  fzago
-
-	* Makefile.am, Makefile.in, config.h.in, configure, intro.c,
-	  introdat.c, sdl_text.c, xblast.c, xblast.h, po/LINGUAS,
-	  po/POTFILES.in, po/fr.po, po/xblast.pot: i18n
-
-2006-02-09 22:10  fzago
-
-	* po/Makevars: From Makevars.template
-
-2006-02-09 22:10  fzago
-
-	* configure.in: i18n
-
-2006-02-09 22:09  fzago
-
-	* aclocal.m4: Regenerated (aclocal -I m4)
-
-2006-02-09 21:56  fzago
-
-	* ABOUT-NLS, Makefile.am, Makefile.in, config.rpath, configure.in,
-	  m4/codeset.m4, m4/gettext.m4, m4/glibc2.m4, m4/glibc21.m4,
-	  m4/iconv.m4, m4/intdiv0.m4, m4/intmax.m4, m4/inttypes-pri.m4,
-	  m4/inttypes.m4, m4/inttypes_h.m4, m4/isc-posix.m4,
-	  m4/lcmessage.m4, m4/lib-ld.m4, m4/lib-link.m4, m4/lib-prefix.m4,
-	  m4/longdouble.m4, m4/longlong.m4, m4/nls.m4, m4/po.m4,
-	  m4/printf-posix.m4, m4/progtest.m4, m4/signed.m4, m4/size_max.m4,
-	  m4/stdint_h.m4, m4/uintmax_t.m4, m4/ulonglong.m4, m4/wchar_t.m4,
-	  m4/wint_t.m4, m4/xsize.m4, po/Makefile.in.in,
-	  po/Makevars.template, po/POTFILES.in, po/Rules-quot,
-	  po/boldquot.sed, po/en@boldquot.header, po/en@quot.header,
-	  po/insert-header.sin, po/quot.sed, po/remove-potcdate.sin: i18n
-	  first pass.
-
-2006-02-09 21:31  fzago
-
-	* common.h[DEAD]: Removed.
-
-2006-02-09 21:21  fzago
-
-	* action.c, action.h, atom.c, atom.h, bomb.c, bomb.h, bot.c, bot.h,
-	  browse.c, browse.h, central.c, central.h, cfg_control.c,
-	  cfg_control.h, cfg_demo.c, cfg_demo.h, cfg_game.c, cfg_game.h,
-	  cfg_level.c, cfg_level.h, cfg_main.c, cfg_main.h, cfg_player.c,
-	  cfg_player.h, cfg_stat.c, cfg_stat.h, cfg_xblast.c, cfg_xblast.h,
-	  chat.c, chat.h, client.c, client.h, color.c, color.h, com.c,
-	  com_base.c, com_base.h, com_browse.c, com_browse.h,
-	  com_central.c, com_central.h, com_dg_client.c, com_dg_client.h,
-	  com_dg_server.c, com_dg_server.h, com_dgram.c, com_dgram.h,
-	  com_from_central.c, com_from_central.h, com_listen.c,
-	  com_listen.h, com_newgame.c, com_newgame.h, com_query.c,
-	  com_query.h, com_reply.c, com_reply.h, com_stream.c,
-	  com_stream.h, com_to_central.c, com_to_central.h,
-	  com_to_client.c, com_to_client.h, com_to_server.c,
-	  com_to_server.h, dat_rating.c, dat_rating.h, debug.c, debug.h,
-	  demo.c, demo.h, event.c, event.h, func.c, func.h, game.c, game.h,
-	  game_client.c, game_client.h, game_demo.c, game_local.c,
-	  game_server.c, geom.h, gui.h, image.c, image.h, info.c, info.h,
-	  ini_file.c, ini_file.h, intro.c, intro.h, introdat.c, introdat.h,
-	  level.c, level.h, map.c, map.h, menu.c, menu.h, menu_control.c,
-	  menu_control.h, menu_edit.c, menu_edit.h, menu_extras.c,
-	  menu_extras.h, menu_game.c, menu_game.h, menu_level.c,
-	  menu_level.h, menu_network.c, menu_network.h, menu_player.c,
-	  menu_player.h, mi_base.c, mi_base.h, mi_button.c, mi_button.h,
-	  mi_color.c, mi_color.h, mi_combo.c, mi_combo.h, mi_cyclic.c,
-	  mi_cyclic.h, mi_host.c, mi_host.h, mi_int.c, mi_int.h,
-	  mi_keysym.c, mi_keysym.h, mi_label.c, mi_label.h, mi_map.c,
-	  mi_player.c, mi_player.h, mi_stat.c, mi_stat.h, mi_string.c,
-	  mi_string.h, mi_tag.c, mi_tag.h, mi_toggle.c, mi_toggle.h,
-	  mi_tool.c, mi_tool.h, net_dgram.c, net_dgram.h, net_socket.c,
-	  net_socket.h, net_tele.c, net_tele.h, network.c, network.h,
-	  player.c, player.h, random.c, scramble.c, scramble.h, sdl_atom.c,
-	  sdl_common.c, sdl_common.h, sdl_config.c, sdl_config.h,
-	  sdl_event.c, sdl_event.h, sdl_image.c, sdl_image.h, sdl_init.c,
-	  sdl_joystick.c, sdl_joystick.h, sdl_keysym.c, sdl_keysym.h,
-	  sdl_msgbox.c, sdl_pixmap.c, sdl_pixmap.h, sdl_socket.c,
-	  sdl_socket.h, sdl_sound.c, sdl_sprite.c, sdl_sprite.h,
-	  sdl_text.c, sdl_text.h, sdl_tile.c, sdl_tile.h, server.c,
-	  server.h, shrink.c, shrink.h, snd.h, socket.h, sprite.c,
-	  sprite.h, status.c, status.h, str_util.c, str_util.h, user.c,
-	  user.h, util.c, util.h, version.c, version.h, w32_config.h,
-	  w32_event.h, w32_image.h, w32_keysym.h, w32_pixmap.h,
-	  w32_sndsrv.h, w32_socket.h, w32_sprite.h, x11_atom.c,
-	  x11_common.c, x11_common.h, x11_config.c, x11_event.c,
-	  x11_event.h, x11_joystick.c, x11_joystick.h, x11_msgbox.c,
-	  x11_socket.c, x11_socket.h, x11_sound.c, x11c_image.c,
-	  x11c_image.h, x11c_init.c, x11c_pixmap.c, x11c_pixmap.h,
-	  x11c_sprite.c, x11c_sprite.h, x11c_text.c, x11c_text.h,
-	  x11c_tile.c, x11c_tile.h, xbconfig.h, xblast.c, xblast.h:
-	  Reorganize include. Only (almost) one include per C file, and no
-	  include in headers. Paves the way for i18n and split into
-	  libraries.
-
-2006-02-09 18:31  fzago
-
-	* action.c, action.h, atom.c, atom.h, bomb.c, bomb.h, bot.c, bot.h,
-	  browse.c, browse.h, central.c, central.h, cfg_control.c,
-	  cfg_control.h, cfg_demo.c, cfg_demo.h, cfg_game.c, cfg_game.h,
-	  cfg_level.c, cfg_level.h, cfg_main.c, cfg_main.h, cfg_player.c,
-	  cfg_player.h, cfg_stat.c, cfg_stat.h, cfg_xblast.c, cfg_xblast.h,
-	  chat.c, chat.h, client.c, client.h, color.c, color.h, com.c,
-	  com_base.c, com_base.h, com_browse.c, com_browse.h,
-	  com_central.c, com_central.h, com_dg_client.c, com_dg_client.h,
-	  com_dg_server.c, com_dg_server.h, com_dgram.c, com_dgram.h,
-	  com_from_central.c, com.h, com_from_central.h, com_listen.c,
-	  com_newgame.c, com_newgame.h, com_query.c, com_query.h,
-	  com_reply.c, com_reply.h, com_stream.c, com_stream.h,
-	  com_to_central.c, com_to_central.h, com_to_client.c,
-	  com_to_client.h, com_to_server.c, com_to_server.h, common.h,
-	  dat_rating.c, dat_rating.h, debug.c, debug.h, demo.c, demo.h,
-	  event.c, event.h, func.c, func.h, game.c, game.h, game_client.c,
-	  game_demo.c, game_local.c, game_local.h, game_server.c, geom.h,
-	  gui.h, image.c, image.h, info.c, info.h, ini_file.c, ini_file.h,
-	  intro.c, intro.h, introdat.c, introdat.h, level.c, level.h,
-	  map.c, map.h, menu.c, menu_control.c, menu_edit.c, menu_edit.h,
-	  menu_extras.c, menu_game.c, menu_game.h, menu_layout.h,
-	  menu_level.c, menu_level.h, menu_network.c, menu_network.h,
-	  menu_player.c, mi_base.c, mi_base.h, mi_button.c, mi_button.h,
-	  mi_color.c, mi_color.h, mi_combo.c, mi_combo.h, mi_cyclic.c,
-	  mi_cyclic.h, mi_host.c, mi_host.h, mi_int.c, mi_int.h,
-	  mi_keysym.c, mi_keysym.h, mi_label.c, mi_label.h, mi_map.c,
-	  mi_player.c, mi_player.h, mi_stat.c, mi_stat.h, mi_string.c,
-	  mi_string.h, mi_tag.c, mi_toggle.c, mi_toggle.h, mi_tool.c,
-	  mi_tool.h, net_dgram.c, net_dgram.h, net_socket.c, net_socket.h,
-	  net_tele.c, net_tele.h, network.c, network.h, player.c, player.h,
-	  random.c, random.h, randomlib.c, randomlib.h, scramble.c,
-	  scramble.h, sdl_atom.c, sdl_common.c, sdl_common.h, sdl_config.c,
-	  sdl_config.h, sdl_event.c, sdl_image.c, sdl_image.h, sdl_init.c,
-	  sdl_joystick.c, sdl_joystick.h, sdl_keysym.c, sdl_msgbox.c,
-	  sdl_pixmap.c, sdl_ppm.c, sdl_socket.c, sdl_socket.h, SDL_vkeys.h,
-	  sdl_sound.c, sdl_sprite.c, sdl_sprite.h, sdl_text.c, sdl_text.h,
-	  sdl_tile.c, server.c, server.h, shrink.c, shrink.h, shrinkdat.h,
-	  snd.h, socket.h, sprite.c, sprite.h, status.c, status.h,
-	  str_util.c, str_util.h, time.c, timeval.h, try.c, user.c, user.h,
-	  util.c, util.h, version.c, version.h, w32_atom.c, w32_common.c,
-	  w32_common.h, w32_config.c, w32_config.h, w32_event.c,
-	  w32_image.c, w32_image.h, w32_init.c, w32_joystick.c,
-	  w32_joystick.h, w32_keysym.c, w32_mm.h, w32_msgbox.c,
-	  w32_pixmap.c, w32_pixmap.h, w32_sndsrv.c, w32_sndsrv.h,
-	  w32_socket.c, w32_sound.c, w32_sprite.c, w32_text.c, w32_tile.c,
-	  x11_atom.c, x11_common.c, x11_common.h, x11_config.c,
-	  x11_config.h, x11_event.c, x11_joystick.c, x11_joystick.h,
-	  x11_msgbox.c, x11_socket.c, x11_socket.h, x11_sound.c,
-	  x11c_image.c, x11c_image.h, x11c_init.c, x11c_pixmap.c,
-	  x11c_sprite.c, x11c_text.c, x11c_tile.c, xbconfig.h, xblast.c,
-	  xblast.h, xbsndsrv.c: Reindent (make indent)
-
-2006-02-09 18:29  fzago
-
-	* Makefile.am, Makefile.in: Added indent rule.
-
-2006-02-08 20:23  fzago
-
-	* debug.h: Added possible DEBUG_*. Added __attribute__ ((format
-	  (printf, 1, 2))) to prototypes of debug functions.
-
-2006-02-03 23:47  fzago
-
-	* atom.c, atom.h, cfg_xblast.c, cfg_xblast.h, menu.c, sdl_init.c:
-	  Added a fullscreen option for SDL.
-
-2006-02-03 23:43  fzago
-
-	* sdl_atom.c: fix memleak in sdl_atom.c.
-
-2006-02-03 23:41  fzago
-
-	* menu_edit.c: 64 bits fixes.
-
-2006-02-03 23:39  fzago
-
-	* com_central.c, func.c, sdl_atom.c, sdl_event.c, sdl_image.c,
-	  sdl_init.c, sdl_sound.c, sdl_sprite.c, sdl_text.c, sdl_text.h,
-	  sdl_tile.c: Fixes compilation warnings.
-
-2006-02-03 23:28  fzago
-
-	* configure, configure.in: Changed summary of options selected.
-
-2006-02-03 23:27  fzago
-
-	* Makefile.in: Regenerated.
-
-2006-02-03 23:22  fzago
-
-	* config.guess, config.sub, depcomp, install-sh, missing,
-	  mkinstalldirs: Updates (from autoupdate).
-
-2006-02-03 23:19  fzago
-
-	* Makefile.am: Add missing files.
-
-2006-02-03 22:52  fzago
-
-	* Makefile.am, Makefile.in, acinclude.m4, aclocal.m4, config.h.in,
-	  configure, configure.in: Update build system for SDL target.
-
-2006-02-03 22:36  fzago
-
-	* sdl_event.c: Fix compile issue.
-
-2006-02-03 20:32  fzago
-
-	* sdl_atom.c, sdl_common.c, sdl_common.h, sdl_config.c,
-	  sdl_config.h, sdl_event.c, sdl_event.h, sdl_image.c, sdl_image.h,
-	  sdl_init.c, sdl_joystick.c, sdl_joystick.h, sdl_keysym.c,
-	  sdl_keysym.h, sdl_msgbox.c, sdl_pixmap.c, sdl_pixmap.h,
-	  sdl_ppm.c, sdl_socket.c, sdl_socket.h, sdl_sound.c, sdl_sound.h,
-	  sdl_sprite.c, sdl_sprite.h, sdl_text.c, sdl_text.h, sdl_tile.c,
-	  sdl_tile.h: Imported sdl files from the sdl branch, and updated
-	  existing ones.
-
-2005-12-30 17:18  lodott
-
-	* game.c, game_server.c, network.h, server.c, server.h: moving
-	  winning team codes to network.h; output of winning teams per host
-	  in case of async; server system messages via chat
-
-2005-12-30 17:12  lodott
-
-	* chat.c, chat.h: support for system messages; slight extension of
-	  max message length
-
-2005-12-30 17:09  lodott
-
-	* str_util.c, str_util.h:
-	  adding helper function: temporary string creation
-
-2005-11-14 14:18  alfie
-
-	* configure: network debugging switch
-
-2005-06-06 11:18  lodott
-
-	* game_server.c: minor simplification and output for central
-	  network events
-
-2005-06-06 11:10  lodott
-
-	* user.h, user.c: defines for central network events
-
-2005-06-03 12:49  iskywalker
-
-	* game_server.c, user.c: differ from disconnection from central and
-	  disconnect from game server
-
-2005-05-30 15:52  lodott
-
-	* server.c: fixed: out team state was set to none on change to
-	  chaos mode
-
-2005-05-27 22:14  iskywalker
-
-	* configure.in, game.c, INSTALL: bomberman was already in
-	  options/player/controls
-
-2005-05-27 19:22  iskywalker
-
-	* INSTALL: updated with configure.in
-
-2005-05-27 19:08  iskywalker
-
-	* game.c, configure.in: bomberman like, extra for gryzor _ stop key
-	  set as default _
-
-2005-05-20 18:34  lodott
-
-	* net_socket.c: set reuse option before bind on listen socket
-
-2005-05-14 15:50  iskywalker
-
-	* configure.in, version.h: bumped version
-
-2005-05-14 15:49  iskywalker
-
-	* menu_edit.c: cleared warnings
-
-2005-05-14 15:38  lodott
-
-	* game_server.c: replacing local central connection flag with more
-	  accurate connection indicator from user.c
-
-2005-05-14 15:36  iskywalker
-
-	* menu_edit.c: add kick to init, rev extras
-
-2005-05-14 15:34  iskywalker
-
-	* user.c: fix bug when terminating server
-
-2005-05-14 15:04  lodott
-
-	* client.c: clear network events on passive disconnect
-
-2005-05-13 11:32  lodott
-
-	* menu_extras.c: fixing failure message for statistics update from
-	  central
-
-2005-05-13 11:29  lodott
-
-	* menu_network.c: fix possible client segfaults on disconnect
-	  during connect process
-
-2005-05-10 02:55  iskywalker
-
-	* func.c: fixed some functions needed by menu_edit.c
-
-2005-05-10 02:53  iskywalker
-
-	* menu_edit.c: fixed some extra inits things
-
-2005-04-28 09:09  alfie
-
-	* xblast.man: major rewrite and formating fixes
-
-2005-04-27 12:39  iskywalker
-
-	* menu_player.c: mistyped
-
-2005-04-26 13:16  iskywalker
-
-	* cfg_player.c: seems to work
-
-2005-04-26 12:59  iskywalker
-
-	* cfg_player.c, menu_player.c: not final solution for bug
-
-2005-04-19 15:23  iskywalker
-
-	* util.c:  fixed sub dirs bug
-
-2005-04-18 09:39  alfie
-
-	* configure: autogen.sh update
-
-2005-04-09 00:02  iskywalker
-
-	* warning.rtf: windows warning installation text
-
-2005-04-08 17:32  lodott
-
-	* version.h: setting version string for 2.10.2 release
-
-2005-04-08 17:30  lodott
-
-	* player.c: removing unconditional debug output
-
-2005-04-08 17:16  lodott
-
-	* Makefile.windows: no debug flags as default
-
-2005-04-05 14:15  lodott
-
-	* com_stream.c: removing double-free while closing stream waiting
-	  for eof
-
-2005-04-02 14:55  lodott
-
-	* central.c, com_from_central.c, central.h: adding counter for tcp
-	  connections, slot id alone not sufficient for identification
-
-2005-04-02 14:53  lodott
-
-	* com_central.c: check success for games.html, delayed retry on
-	  failure
-
-2005-04-02 14:43  lodott
-
-	* debug.c: fixed memory debugging
-
-2005-04-02 14:13  lodott
-
-	* com_stream.c: correctly handle errors while waiting for eof
-
-2005-04-02 14:09  lodott
-
-	* debug.c: memory debugging to stderr, ignore internal table by
-	  default
-
-2005-03-23 13:40  lodott
-
-	* central.c, com_browse.c, com_central.c, net_dgram.c, net_tele.c,
-	  network.c, w32_socket.c: using sizeof with typenames instead of
-	  variable names
-
-2005-03-21 17:22  lodott
-
-	* com_stream.c: syncing with xbcs (just formatting)
-
-2005-03-21 17:12  lodott
-
-	* com.c, com_browse.c: syncing with xbcs (just difference in
-	  comments)
-
-2005-03-21 17:11  lodott
-
-	* com_from_central.c: fixing output, synced with xbcs
-
-2005-03-21 16:54  lodott
-
-	* com_central.c: updating central udp to current xbcs (rewritten
-	  game table handlign, some fixes)
-
-2005-03-21 16:50  lodott
-
-	* com_base.c: debugging for XBComm's, comments, whitespaces
-
-2005-03-21 16:50  lodott
-
-	* debug.c, debug.h: adding debugging support for XBComm's
-
-2005-03-18 09:59  lodott
-
-	* com_stream.c: fixed assert failure when tcp is closed
-	  (DEBUG_STREAM)
-
-2005-03-15 14:54  lodott
-
-	* net_socket.c, socket.h, w32_socket.c, x11_socket.c: enable reuse
-	  of listening tcp socket (not implemented for w32)
-
-2005-03-15 14:22  lodott
-
-	* net_dgram.c: syncing with xbcs
-
-2005-03-15 14:17  lodott
-
-	* com_stream.c, com_stream.h: syncing with xbcs
-
-2005-03-15 14:09  lodott
-
-	* central.c, central.h, com_from_central.c, com_from_central.h,
-	  menu_network.c: syncing with xbcs
-
-2005-03-15 14:03  lodott
-
-	* com_central.c: write games file only when changed, synced with
-	  xbcs
-
-2005-03-14 17:31  lodott
-
-	* com_dgram.c: fix memory leaks around connection ping
-
-2005-03-14 17:28  lodott
-
-	* com_newgame.c, com_reply.c: fixing two tiny memory leaks
-
-2005-03-12 17:37  iskywalker
-
-	* cfg_demo.c, cfg_level.c, image.c, ini_file.c, ini_file.h,
-	  menu_edit.c, util.c, util.h: code performance improved and sanity
-	  check not mixed up with recursive, xb-stile conform
-
-2005-03-12 16:56  lodott
-
-	* cfg_demo.c, cfg_level.c, image.c, ini_file.c, ini_file.h,
-	  menu_edit.c, util.c, util.h: recursive dir search as parameter
-	  for DB_LoadDir and CreateFileList
-
-2005-03-12 16:27  lodott
-
-	* util.c: formatting, whitespaces, comments
-
-2005-03-12 15:51  iskywalker
-
-	* SConstruct: working Sconstruct for 2.10.x
-
-2005-03-12 15:25  iskywalker
-
-	* util.c: recursive dir search for windows, also fixed memory leak
-
-2005-03-12 14:51  lodott
-
-	* cfg_demo.c, cfg_game.c, cfg_level.c, game_client.c: a bunch of
-	  minor corrections
-
-2005-03-12 14:15  lodott
-
-	* version.h: adding version check documentation for swapcolor extra
-
-2005-03-12 14:13  lodott
-
-	* w32_config.c, x11_config.c: adding debug output for gui config
-
-2005-03-12 14:12  lodott
-
-	* demo.c, demo.h, game_client.c, game_local.c, game_server.c:
-	  adding demo game type (client, server, local) in demo file name
-
-2005-03-12 14:11  lodott
-
-	* cfg_control.c, cfg_demo.c, cfg_game.c, cfg_level.c, cfg_player.c,
-	  cfg_stat.c, cfg_xblast.c: adding debug output for config data
-
-2005-03-12 14:09  lodott
-
-	* debug.c, debug.h: debug output for config and files
-
-2005-03-12 11:20  lodott
-
-	* cfg_demo.c, cfg_demo.h: whitespaces, formatting, comments
-
-2005-03-12 10:44  lodott
-
-	* demo.c, demo.h: whitespaces, formatting, comments
-
-2005-03-11 19:46  iskywalker
-
-	* x11_event.c: cleaned code
-
-2005-03-11 19:45  iskywalker
-
-	* ini_file.c, util.c, util.h: search subdirs for levels in level
-	  directory
-
-2005-03-10 17:53  lodott
-
-	* func.c: only swapcolor is problematic, swapposition is okay
-
-2005-03-10 17:33  lodott
-
-	* func.c: add a version check for levels with swap extras
-
-2005-03-10 15:38  iskywalker
-
-	* w32_event.c: make ms vc++ compiler happy
-
-2005-03-10 15:18  iskywalker
-
-	* player.c: corrected SMPF bug and add optinal variations
-
-2005-03-10 14:56  lodott
-
-	* com_dg_server.c: make sure client has not been disconnected
-	  before queueing data
-
-2005-03-08 17:48  lodott
-
-	* x11_event.c: removing compiler warning on sun
-
-2005-03-08 17:27  lodott
-
-	* xbsndsrv.c: removing compiler warnings on sun, adding PID_FORMAT
-	  macro
-
-2005-03-08 16:42  lodott
-
-	* game_server.c: removing compiler warning when DEBUG_GAME not set
-
-2005-03-08 16:39  lodott
-
-	* ini_file.c, str_util.c, menu_edit.c: adding explicit cast for
-	  isspace(), removes warning on sun
-
-2005-03-08 16:36  lodott
-
-	* xbsndsrv.c: whitespaces, removing unused var
-
-2005-03-08 16:36  iskywalker
-
-	* player.c: changed MAX_PLAYER for numPlayer, code cleaned up and
-	  formatted a little
-
-2005-03-08 16:34  iskywalker
-
-	* menu_game.c: liberate for all the possible fps
-
-2005-03-08 16:32  iskywalker
-
-	* x11c_init.c: changed minimized icon
-
-2005-03-08 10:25  lodott
-
-	* version.h, configure.in: bumping version to 2.10.2rc
-
-2005-03-08 09:58  lodott
-
-	* game_client.c: use GUI beeping
-
-2005-03-08 09:58  lodott
-
-	* server.c: better cleanup when listen fails, use GUI beeping
-
-2005-03-08 09:55  lodott
-
-	* cfg_game.c: store beep settings for server in database, fixes
-	  missing beep for connections
-
-2005-03-08 09:54  lodott
-
-	* snd.h, w32_sound.c, x11_sound.c: add routine for single beep, win
-	  and x11
-
-2005-03-07 16:48  lodott
-
-	* com_browse.c: properly cleaning up received browse datagrams
-
-2005-03-07 16:22  lodott
-
-	* xblast.c, menu_level.c, map.c, menu_level.h: some more memory
-	  cleanup to find real memory leaks
-
-2005-03-07 15:34  lodott
-
-	* cfg_level.c: fixing memory cleanup
-
-2005-03-07 15:33  lodott
-
-	* menu_network.c: fix some compiler warnings
-
-2005-03-07 15:31  lodott
-
-	* user.c, user.h: cleanup, raise network event for finished update
-
-2005-03-07 14:47  lodott
-
-	* menu_extras.c, network.c: handling ranking update with network
-	  events, more efficient display, error display
-
-2005-03-07 14:43  lodott
-
-	* mi_tag.c, mi_tag.h, mi_tool.c, mi_tool.h: adding new menu item -
-	  integer tag
-
-2005-03-07 13:07  lodott
-
-	* cfg_xblast.c: removing ip translation for ancient central
-
-2005-03-07 13:05  lodott
-
-	* mi_label.c, mi_tag.c: whitespace cleanup, some formatting
-
-2005-03-03 18:17  lodott
-
-	* ini_file.c, ini_file.h, xblast.c: clean up databases at end to
-	  ease memory debugging
-
-2005-03-03 17:59  lodott
-
-	* mi_stat.c: fixing a small memory leak (menu table cells not
-	  freed)
-
-2005-03-03 17:47  lodott
-
-	* mi_stat.c: whitespaces, formatting, comments
-
-2005-03-03 17:36  lodott
-
-	* cfg_game.c, menu_network.c: cleaning up ip history, proper
-	  cleanup of history data
-
-2005-03-03 17:33  lodott
-
-	* atom.c: formatting, making history atom creation more consistent
-
-2005-03-02 15:36  lodott
-
-	* cfg_game.c: fixing buffer overflow in ip history strings
-
-2005-03-02 15:04  lodott
-
-	* chat.c: fixing sys chat GUI display
-
-2005-03-02 15:03  lodott
-
-	* map.c: whitespaces, remove a small memory leak
-
-2005-03-01 17:51  lodott
-
-	* chat.c: refining chat output, adding name truncation option for
-	  display
-
-2005-03-01 16:14  lodott
-
-	* client.c, client.h, com_to_server.c: client correctly handles
-	  server disconnect announcement now, fixes double free
-
-2005-03-01 16:11  lodott
-
-	* server.c: fixing memory leak/assert when server fails to get udp
-	  socket to central
-
-2005-03-01 10:04  lodott
-
-	* net_tele.c: add malloc() check when creating telegrams, add
-	  comments for telegram parser
-
-2005-02-28 13:27  iskywalker
-
-	* xblast.man: rewrited for xblast tnt
-
-2005-02-26 23:41  lodott
-
-	* menu_network.c: simplify focus handlers, removing obsolete code
-
-2005-02-26 23:40  lodott
-
-	* mi_player.c: do not display player sprite when team color changed
-	  to invalid
-
-2005-02-26 23:38  lodott
-
-	* mi_host.c, network.c: display team "out", ignore out players in
-	  global game config
-
-2005-02-26 23:36  lodott
-
-	* server.c: handling an out request for a player
-
-2005-02-26 23:34  lodott
-
-	* com_to_client.c, com_to_client.h, network.h: adding a new team
-	  state "out"
-
-2005-02-26 22:11  lodott
-
-	* map.c, version.c, version.h: added version constant for 2_10_2,
-	  refined Version_AtLeast function
-
-2005-02-26 19:23  lodott
-
-	* menu_network.c, network.c, network.h: slightly reducing code for
-	  team color change
-
-2005-02-26 18:42  lodott
-
-	* intro.c: cleaning up, comments, format
-
-2005-02-26 18:17  lodott
-
-	* game_client.c: act on escape key in sync loops, forgotten in
-	  previous checkin
-
-2005-02-26 18:13  lodott
-
-	* game_client.c, game_server.c: allowing escape in sync loops,
-	  removing temporary chat deactivation
-
-2005-02-26 18:10  lodott
-
-	* game.c: code cleanup, simplifying player input initialization
-
-2005-02-26 17:46  lodott
-
-	* w32_event.c: cleaning up: whitespaces, formatting, comments
-
-2005-02-25 22:46  lodott
-
-	* intro.c: enabling chat during intro screens
-
-2005-02-25 22:41  lodott
-
-	* x11_event.c: enabling chat during sync'ing for x11 as well
-
-2005-02-25 22:39  lodott
-
-	* game_client.c, game_server.c, gui.h, w32_event.c: enabling chat
-	  during client/server sync step
-
-2005-02-25 21:07  lodott
-
-	* menu_network.c, network.c: max player check for server, when
-	  creating global game config
-
-2005-02-25 19:23  lodott
-
-	* menu_network.c: disallow start when hosts can't handle player
-	  count, set them out
-
-2005-02-25 19:22  lodott
-
-	* client.c, server.c: add case for game config result, set mask
-	  bytes after receiving global game config
-
-2005-02-25 19:20  lodott
-
-	* network.c, network.h: modified range checking, add functions to
-	  retrieve network data
-
-2005-02-25 19:14  lodott
-
-	* com_dgram.c, com_dg_client.c, com_dg_client.h, com_dg_server.c,
-	  com_dg_server.h, com_dgram.h: add support for changing maskbyte
-	  count for client/server dgram connections
-
-2005-02-25 17:07  lodott
-
-	* client.c, network.c, server.c, menu_game.c: use game constants
-	  received in game configs, store before entering network game
-
-2005-02-25 17:01  lodott
-
-	* cfg_game.h: comments, reordering, adding prototype
-
-2005-02-25 14:44  iskywalker
-
-	* menu_player.c: keep compiler with wall happy
-
-2005-02-25 14:38  iskywalker
-
-	* event.h, w32_event.c, x11_event.c, cfg_control.c, chat.c: insert
-	  enter as send key and corrected xbkeys and chat keys
-
-2005-02-25 13:24  iskywalker
-
-	* menu_player.c: keep compiler happy with Wall
-
-2005-02-25 13:22  iskywalker
-
-	* cfg_player.h, chat.c, configure.in, game_server.c, gui.h,
-	  menu_network.c, menu_player.c, mi_tool.c, mi_tool.h, timeval.h,
-	  x11_event.c, x11_socket.c: compiling with Wall and menu_player
-	  corrected for x11
-
-2005-02-24 22:43  lodott
-
-	* network.c: removing accidental protocol change, all 2.10.x should
-	  be compatible again
-
-2005-02-24 21:19  lodott
-
-	* mi_player.c: autoupdate colors and shapes in player colors menu
-
-2005-02-24 21:18  lodott
-
-	* menu_player.c: player colors: removing apply button, initial
-	  color selection, non-looping player animation
-
-2005-02-24 21:16  lodott
-
-	* mi_tool.c, mi_tool.h: make item selection external
-
-2005-02-24 17:54  iskywalker
-
-	* mi_tool.c, menu_player.c, mi_player.c, mi_player.h, mi_tool.h:
-	  got player updating, almost there
-
-2005-02-23 15:11  lodott
-
-	* com_to_server.c: remove superfluous line that can cause segfaults
-
-2005-02-23 14:50  lodott
-
-	* client.c: fixing misplaced code from last commit
-
-2005-02-23 14:30  lodott
-
-	* network.c: fixing keyboard assignemnt for chat
-
-2005-02-23 13:45  alfie
-
-	* aclocal.m4, config.h.in, configure: Update generated files.
-
-2005-02-23 13:40  lodott
-
-	* client.c, network.c, network.h, server.c: moving host id check
-	  for game config to network.c
-
-2005-02-23 13:21  iskywalker
-
-	* chat.c, x11_event.c:	keep compiler happy
-
-2005-02-22 20:10  lodott
-
-	* com_dgram.c: fixing possible buffer overflow on server when
-	  clients have bad connection
-
-2005-02-22 20:02  lodott
-
-	* cfg_game.c, cfg_game.h: adding game constants to game confg, for
-	  later use; securing player data defaults
-
-2005-02-22 19:47  lodott
-
-	* game_server.c: disconnect when game init fails, instead just
-	  return
-
-2005-02-22 19:44  lodott
-
-	* version.c, version.h: making local version constant extern
-
-2005-02-22 19:42  lodott
-
-	* chat.c: fixing chat backspace implementation
-
-2005-02-22 19:40  lodott
-
-	* atom.c, atom.h: some new atoms for game constants
-
-2005-02-22 18:05  iskywalker
-
-	* player.c: corrected cloak bugg
-
-2005-02-22 15:14  iskywalker
-
-	* x11_event.c: fprintf out
-
-2005-02-22 15:12  iskywalker
-
-	* x11_event.c: chat for x11
-
-2005-02-21 18:00  lodott
-
-	* chat.c, chat.h: updated chat event handling, fixing a bug when
-	  canceling chat
-
-2005-02-21 17:57  lodott
-
-	* cfg_control.c, event.c, event.h: modifying existing key tables
-
-2005-02-21 17:54  lodott
-
-	* w32_event.c: cleaning up windows keyboard event generation
-
-2005-02-21 17:51  lodott
-
-	* game.c: changing order in event handling
-
-2005-02-21 17:49  lodott
-
-	* mi_tool.c: cleaning up event handling for menus
-
-2005-02-20 15:19  lodott
-
-	* w32_event.c: correcting a typo in precious checkin
-
-2005-02-20 15:15  lodott
-
-	* w32_event.c: some minor correction, adding the Finish routine for
-	  the new keytable
-
-2005-02-20 15:13  lodott
-
-	* x11_event.c: adding similar modifications as for w32, but ascii
-	  keys still don't work
-
-2005-02-20 14:40  lodott
-
-	* x11_event.c: fix to make it compile, whitespaces - chat doesn't
-	  work, correct events need yet to be generated
-
-2005-02-20 14:31  lodott
-
-	* chat.c, chat.h: belongs to previous checkin
-
-2005-02-20 14:24  lodott
-
-	* client.c, event.c, game.c, game_client.c, game_server.c,
-	  mi_tool.c, network.c, server.c, w32_event.c: moving chat event
-	  handling to chat.c, generation of chat-specific events, chatting
-	  is done with the game keys alone, both in menu as well as in game
-	  (windows only so far)
-
-2005-02-20 13:53  lodott
-
-	* cfg_control.c, cfg_control.h, event.h: adding a keytable for chat
-	  keys
-
-2005-02-19 21:10  lodott
-
-	* central.c, client.c, game_client.c, game_server.c,
-	  menu_network.c, network.c, network.h, server.c, server.h:
-	  separating global from local config, use define for game config
-	  atoms, make server receive global config like clients do, fix
-	  attempt for NAT detection
-
-2005-02-19 20:59  lodott
-
-	* com_dgram.h, xblast.h: moving MASK_BYTES define to xblast.h
-
-2005-02-19 20:57  lodott
-
-	* w32_socket.c: fixing compile error with Debug_Socket
-
-2005-02-18 18:42  iskywalker
-
-	* INSTALL:  better instructions
-
-2005-02-18 18:23  iskywalker
-
-	* INSTALL, acinclude.m4, configure.in: better INSTALL and configure
-	  options
-
-2005-02-18 16:49  iskywalker
-
-	* configure.in, xbsndsrv.c: sound support for solaris 2.7 mschoepf
-
-2005-02-17 23:47  lodott
-
-	* client.c, client.h, com_to_server.c, menu_network.c, network.c,
-	  network.h, server.c: complete revision of game config exchange
-	  between client/server requires more testing!!
-
-2005-02-17 23:44  lodott
-
-	* cfg_game.c: checking range when extracting game config, version
-	  storage/retrieval secured
-
-2005-02-17 17:10  lodott
-
-	* Makefile.windows: correct comment regarding cygwin options
-
-2005-02-17 17:08  lodott
-
-	* client.c, client.h, server.c, menu_network.c, network.c,
-	  network.h: storing local host id in network.c, for both server
-	  and client
-
-2005-02-17 17:04  lodott
-
-	* version.c: minor correction in debug output and comments
-
-2005-02-17 14:59  lodott
-
-	* client.c, network.c, network.h, server.c, version.c, version.h:
-	  moving version control for hosts from network.c to version.c
-
-2005-02-17 12:52  lodott
-
-	* mi_tool.c: removing unneeded routine
-
-2005-02-17 12:50  lodott
-
-	* game.c: removing unnecessary warning flood and variables
-
-2005-02-16 14:49  alfie
-
-	* xbsndsrv.c: Incorporated patch for 16 bit solaris stereo support,
-	  sent in by <paul@infoeng.flinders.edu.au>
-
-2005-02-15 19:12  lodott
-
-	* game.c: assigning input events to default players, remove
-	  unneeded vars
-
-2005-02-15 16:41  lodott
-
-	* menu_network.c: server sends local players in final game config
-	  again
-
-2005-02-15 15:06  lodott
-
-	* client.c: fixing compile error with DEBUG_CLIENT
-
-2005-02-15 15:04  lodott
-
-	* server.c: fixing previous checkin
-
-2005-02-14 13:49  lodott
-
-	* server.c, server.h: using receive mechanism for local server init
-
-2005-02-12 13:08  lodott
-
-	* chat.c, chat.h, client.c, client.h, com_to_client.c,
-	  com_to_server.c, game.c, mi_tool.c, network.c, network.h,
-	  player.c, server.c: reworking chat, moving chat code to chat.c
-
-2005-02-12 12:49  lodott
-
-	* debug.c, debug.h: debugging out for chat
-
-2005-02-10 18:50  lodott
-
-	* Makefile.windows: setting no-cygwin compile as default
-	  (cygwin-compile currently broken). removing mini as default
-
-2005-02-10 17:27  lodott
-
-	* com_dgram.c, com_dgram.h: adding support for extensible action
-	  mask size
-
-2005-02-10 13:01  iskywalker
-
-	* com_dgram.c, com_dgram.h: fixed mask problem, hopefully
-
-2005-02-08 21:02  lodott
-
-	* menu_network.c, client.c: immediate disconnect from server on
-	  error, no delay
-
-2005-02-08 20:57  lodott
-
-	* mi_host.c: adding reset for local request
-
-2005-02-08 20:27  lodott
-
-	* menu_network.c: getting back OLDMENU, instead removing the old
-	  menu code
-
-2005-02-08 20:09  lodott
-
-	* server.c, client.c, network.c, network.h: adding checks for
-	  MAX_PLAYER when receiving game configs
-
-2005-02-07 15:09  iskywalker
-
-	* game_client.c, game_server.c, mi_tool.c, mi_tool.h: fixed chat
-	  bug
-
-2005-02-03 16:21  lodott
-
-	* com_newgame.c, x11_socket.c: use sun macro instead of sparc macro
-
-2005-02-02 14:33  lodott
-
-	* cfg_game.h, menu_network.c, mi_host.c, network.c, network.h:
-	  removing OLDMENUS switch
-
-2005-02-02 14:21  lodott
-
-	* client.c, server.c, version.c, version.h: minor rearrangement of
-	  version tools, added comments
-
-2005-02-02 14:20  lodott
-
-	* debug.h: deactivating implicit DEBUG macro
-
-2005-02-02 09:52  alfie
-
-	* configure: Update generated configure, too.
-
-2005-02-01 19:05  lodott
-
-	* game_server.c: continually send suicide for unlinked players to
-	  avoid async by data loss
-
-2005-02-01 18:47  lodott
-
-	* action.c: really fixing auto-suicide bug (missing default value)
-
-2005-02-01 13:17  lodott
-
-	* game_client.c: correcting finish gametime for client
-
-2005-02-01 12:40  lodott
-
-	* configure.in, version.h: bumping version to 2.10.1-cvs for
-	  development
-
-2005-02-01 11:45  lodott
-
-	* menu_game.c: adding bot option for server in game setup
-
-2005-02-01 11:44  lodott
-
-	* com_dgram.h: removing assertion failure on clients when level
-	  times out on clients
-
-2005-02-01 11:44  lodott
-
-	* game_client.c: no action output unless explicitly requested with
-	  DEBUG_ACTION
-
-2005-01-31 21:28  lodott
-
-	* game_client.c: adding action debugging, avoid early server
-	  events, continue to wait on invalid server events - fixes async
-	  action status on client/server, making client timeout
-
-2005-01-31 21:23  lodott
-
-	* com_dg_server.c, com_dgram.c: fixing some debugging output
-
-2005-01-31 21:21  lodott
-
-	* debug.c, debug.h: debug output for game action
-
-2005-01-31 07:45  iskywalker
-
-	* xblast.wxs: better configuration, with control dialogs
-
-2005-01-30 13:45  lodott
-
-	* game_server.c: fixing incorrect team counting in team mode
-
-2005-01-30 02:24  lodott
-
-	* game_client.c, player.c: improving client bot management,
-	  multiple local players are handled
-
-2005-01-30 01:45  lodott
-
-	* game_server.c: improving server bot handling, handles multiple
-	  local players now
-
-2005-01-30 01:43  lodott
-
-	* game.c: simplification of local event checking
-
-2005-01-30 01:42  lodott
-
-	* cfg_game.c: adding explicit conversion result checking, for
-	  easier readability
-
-2005-01-30 01:33  lodott
-
-	* bot.c, player.c, player.h: adding some bot-related routines
-
-2005-01-29 13:57  lodott
-
-	* server.c: fix query allocation for new game connection
-
-2005-01-28 23:12  lodott
-
-	* client.c: non-SMPF clients can deal with an SMPF server now
-
-2005-01-28 21:58  lodott
-
-	* mi_host.c: fix display bug for player graphics on change of team
-	  color
-
-2005-01-28 21:56  lodott
-
-	* network.c, network.h, server.c: save team assignment before
-	  switch to chaos, restore on switch back
-
-2005-01-28 21:54  lodott
-
-	* com_newgame.c: do not connect socket for sparcs, can cause
-	  trouble with sendto()
-
-2005-01-28 16:18  alfie
-
-	* INSTALL, README, menu.c, menu_network.c: Changed
-	  irc.xblast-center.com to xblast.sf.net/irc/
-
-2005-01-27 23:51  iskywalker
-
-	* menu_network.c, mi_host.c, x11_event.c: Rmoved some debug msgs,
-	  remove team bug
-
-2005-01-26 08:29  iskywalker
-
-	* xblast.wxs: add desktop shortcut and icon
-
-2005-01-25 20:46  alfie
-
-	* version.h: Uups, remove the CVS from VERSION_STRING
-
-2005-01-25 12:59  iskywalker
+2005-01-25 13:59  iskywalker
 
 	* makewxs.sh, xblast.wxs: initial import, files for .msi
 
-2005-01-23 17:28  lodott
+2005-01-23 18:28  lodott
 
 	* cfg_player.c: whitespace cleanup, set default PID to invalid
 
-2005-01-23 16:55  lodott
+2005-01-23 17:55  lodott
 
 	* central.c: fix player registration for client in slot #0
 
-2005-01-23 16:54  lodott
+2005-01-23 17:54  lodott
 
 	* menu_player.c: general cleanup, comments
 
-2005-01-23 16:13  lodott
+2005-01-23 17:13  lodott
 
 	* debug.c: typo fix
 
-2005-01-23 16:12  lodott
+2005-01-23 17:12  lodott
 
 	* menu_extras.c, menu_extras.h, user.c: fixing bug when updating
 	  central scores
 
-2005-01-23 15:02  lodott
+2005-01-23 16:02  lodott
 
 	* menu_extras.c: comments, general cleanup
 
-2005-01-23 14:30  lodott
+2005-01-23 15:30  lodott
 
 	* com_query.c: corrected output
 
-2005-01-23 14:29  lodott
+2005-01-23 15:29  lodott
 
 	* menu_game.c: removing team mode in server config (default none)
 
-2005-01-23 14:26  lodott
+2005-01-23 15:26  lodott
 
 	* net_dgram.c: some minor correction in comments/output
 
-2005-01-23 14:24  lodott
+2005-01-23 15:24  lodott
 
 	* browse.c: removing superfluous output
 
-2005-01-23 14:23  lodott
+2005-01-23 15:23  lodott
 
 	* menu_network.c: fixing update bug in central menu
 
-2005-01-23 14:21  lodott
+2005-01-23 15:21  lodott
 
 	* central.c, central.h: general cleanup, debugging output
 
-2005-01-23 14:19  lodott
+2005-01-23 15:19  lodott
 
 	* com_central.c, com_central.h: some renaming, more debugging and
 	  general cleanup
 
-2005-01-23 14:18  lodott
+2005-01-23 15:18  lodott
 
 	* debug.c, debug.h: adding debugging for C2B (central udp socket)
 
-2005-01-23 12:07  lodott
+2005-01-23 13:07  lodott
 
 	* debug.c, debug.h: whitespace-cleanup
 
-2005-01-23 12:05  lodott
+2005-01-23 13:05  lodott
 
 	* debug.c, debug.h: central debug output
 
-2005-01-21 22:22  lodott
+2005-01-21 23:22  lodott
 
 	* client.c, com_query.c, com_query.h: central queries only on
 	  default device, no broadcast previous behaviour if
 	  FULL_CENTRAL_QUERY set
 
-2005-01-21 22:19  lodott
+2005-01-21 23:19  lodott
 
 	* net_dgram.c: extra check for failure to set broadcast flag
 
-2005-01-20 13:17  lodott
+2005-01-20 14:17  lodott
 
 	* Makefile.windows, INSTALL: Updated windows/cygwin Makefile, more
 	  detailed INSTALL instructions
 
-2005-01-18 15:36  lodott
+2005-01-18 16:36  lodott
 
 	* game_client.c, game_server.c: more frequent updating of player
 	  link status plus bugfix (missing break in switch)
 
-2005-01-18 15:33  lodott
+2005-01-18 16:33  lodott
 
 	* game.c, server.c, version.c: some debug corrections
 
-2005-01-17 16:21  lodott
+2005-01-17 17:21  lodott
 
 	* com_dg_client.c: server bases udp timeout for clients only on
 	  receive interval now
 
-2005-01-17 16:17  lodott
+2005-01-17 17:17  lodott
 
 	* client.c, com_query.c, game_client.c, game_server.c: some minor
 	  output changes, removing a compiler warning
 
-2005-01-16 08:48  iskywalker
+2005-01-16 09:48  iskywalker
 
 	* net_socket.h: forgot a ifdef
 
-2005-01-15 17:41  iskywalker
+2005-01-15 18:41  iskywalker
 
 	* action.c, com_listen.c, com_query.c, common.h, net_socket.h,
 	  time.c, timeval.h, w32_joystick.c, w32_socket.c, xblastc.dsp:
 	  memory leak in joystick, abort loser problem correctted, cygwin,
 	  wms and mingw compatible now
 
-2005-01-15 12:48  lodott
+2005-01-15 13:48  lodott
 
 	* client.c: removing accidentally checked in line, adding a comment
 
-2005-01-15 12:40  lodott
+2005-01-15 13:40  lodott
 
 	* client.c, com_dgram.c, com_newgame.c, com_query.c, common.h,
 	  debug.c, server.c, timeval.h, util.c, w32_event.c: removing some
 	  more compiler warnings
 
-2005-01-15 09:41  iskywalker
+2005-01-15 10:41  iskywalker
 
 	* bot.c: fixed memory leak
 
-2005-01-14 22:20  iskywalker
+2005-01-14 23:20  iskywalker
 
 	* map.c: memory leak fixed
 
-2005-01-14 19:57  lodott
+2005-01-14 20:57  lodott
 
 	* cfg_level.c, cfg_stat.c: removing compiler warnings
 
-2005-01-14 13:46  lodott
+2005-01-14 14:46  lodott
 
 	* client.c, menu_network.c, server.c, w32_event.c, w32_image.c,
 	  w32_pixmap.c: removing some minor compiler warnings
 
-2005-01-14 13:20  alfie
+2005-01-14 14:20  alfie
 
 	* configure, configure.in: Updated version in configure.in also.
 
-2005-01-13 18:58  lodott
+2005-01-13 19:58  lodott
 
 	* map.c, version.c, version.h: activating slowMotionBurst for
 	  version 2.10.1
 
-2005-01-13 18:52  lodott
+2005-01-13 19:52  lodott
 
 	* debug.c, debug.h: debug output for version stuff
 
-2005-01-13 11:40  lodott
+2005-01-13 12:40  lodott
 
 	* str_util.c: fixing split error for strings with trailing spaces -
 	  from
 	  http://luc.saillard.free.fr/XBlast-TNT/patches/XBlast-TNT-str_util-memleak.patch
 
-2005-01-12 15:50  lodott
+2005-01-12 16:50  lodott
 
 	* client.c, network.c, network.h, server.c, version.c, version.h:
 	  calculate joint(=min) version of all connected hosts
 
-2005-01-12 15:48  lodott
+2005-01-12 16:48  lodott
 
 	* bomb.c, map.c: deactivating slowMotionBurst for release
 
-2005-01-12 13:21  alfie
+2005-01-12 14:21  alfie
 
 	* Makefile.am, Makefile.in, config.h.in: Added version.c to
 	  Makefile.am (rest is auto generated).
 
-2005-01-12 13:02  alfie
+2005-01-12 14:02  alfie
 
 	* Makefile.in, configure: Updated the generated files.
 
-2005-01-12 00:20  lodott
+2005-01-12 01:20  lodott
 
 	* cfg_game.c, cfg_game.h, client.c, network.c, network.h, server.c,
 	  version.c, version.h: basic version management for network games
 
-2005-01-11 22:44  lodott
+2005-01-11 23:44  lodott
 
 	* atom.c, atom.h, bomb.c, func.c, info.c, map.c, player.c,
 	  shrink.c: checking existence of level sections, adding missing
 	  default for ceilNasty
 
-2005-01-11 19:48  iskywalker
+2005-01-11 20:48  iskywalker
 
 	* atom.c, atom.h, bomb.c, bomb.h, map.c: slowmotionflame request
 	  from zorgzorg2
 
-2005-01-11 17:58  iskywalker
+2005-01-11 18:58  iskywalker
 
 	* config.h[DEAD]: delete old config
 
-2005-01-11 17:51  iskywalker
+2005-01-11 18:51  iskywalker
 
 	* mi_tool.c, random.c: new configure method with config.h, old fix
 	  for leveleditor
 
-2005-01-11 17:37  lodott
+2005-01-11 18:37  lodott
 
 	* client.c, client.h, game_client.c: clearing player actions at
 	  client before each level
 
-2005-01-11 17:33  iskywalker
+2005-01-11 18:33  iskywalker
 
 	* configure.in, color.h, common.h: new configure method with
 	  config.h
 
-2005-01-11 17:32  iskywalker
+2005-01-11 18:32  iskywalker
 
 	* xbconfig.h: oldconfig.h
 
-2005-01-11 17:30  iskywalker
+2005-01-11 18:30  iskywalker
 
 	* config.h[DEAD], config.h: changed old coinfig.h to configure
 	  config.h
 
-2005-01-11 15:33  lodott
+2005-01-11 16:33  lodott
 
 	* game.c: clear suicide flag for next player action
 
-2005-01-11 14:00  alfie
+2005-01-11 15:00  alfie
 
 	* game_server.c: Made MAX_REJECTS a define and default to 50.
 
-2005-01-08 05:17  lodott
+2005-01-08 06:17  lodott
 
 	* menu_network.c, server.c: fixing server override of client Go!
 	  requests
 
-2005-01-07 23:36  lodott
+2005-01-08 00:36  lodott
 
 	* server.c: eliminating superfluous host/team state changes, some
 	  output corrections
 
-2005-01-07 23:34  lodott
+2005-01-08 00:34  lodott
 
 	* menu_network.c: deactivating host button after disconnect
 
-2005-01-07 19:06  lodott
+2005-01-07 20:06  lodott
 
 	* mi_host.c: host button correctly cleared now, when client
 	  disconnects
 
-2005-01-07 00:43  lodott
+2005-01-07 01:43  lodott
 
 	* game_server.c: react to disconnect's between game start and first
 	  level
 
-2005-01-06 23:50  alfie
+2005-01-07 00:50  alfie
 
 	* version.h: Mark 2.10.0 as CVS version in VERSION_STRING.
 
-2005-01-06 23:09  lodott
+2005-01-07 00:09  lodott
 
 	* cfg_level.c: actually call level parser when checking the level..
 
-2005-01-06 22:36  alfie
+2005-01-06 23:36  alfie
 
 	* config.guess, config.sub: Updated to more current versions.
 
-2005-01-06 22:34  lodott
+2005-01-06 23:34  lodott
 
 	* menu_game.c: song choice also in "join network" menu
 
-2005-01-06 22:27  lodott
+2005-01-06 23:27  lodott
 
 	* game_client.c, game_local.c, game_server.c: stop the correct song
 	  on level end
 
-2005-01-06 21:44  lodott
+2005-01-06 22:44  lodott
 
 	* com_query.c, intro.c, network.c: some more warnings removed
 
-2005-01-06 21:42  lodott
+2005-01-06 22:42  lodott
 
 	* cfg_game.c, cfg_game.h, game_client.c, game_local.c,
 	  game_server.c, menu_game.c: music choice via combobox instead of
 	  boolean toggle
 
-2005-01-06 18:28  lodott
+2005-01-06 19:28  lodott
 
 	* ini_file.c, ini_file.h, menu_network.c, mi_host.c: removing some
 	  compiler warnings, thanks to jlh
 
-2005-01-06 00:17  alfie
+2005-01-06 01:17  alfie
 
 	* server.h: GetTeamState should return TeamState and GetHostState
 	  should return HostState. :)
 
-2005-01-05 18:20  lodott
+2005-01-05 19:20  lodott
 
 	* cfg_level.c: removing check for level version entries
 
-2005-01-05 17:14  alfie
+2005-01-05 18:14  alfie
 
 	* Makefile.am, configure, version.h: Bumped version for release,
 	  did autogen.sh for release, too.
 
-2005-01-05 17:12  alfie
+2005-01-05 18:12  alfie
 
 	* xbsndck.sh[DEAD], xbsndsrv.c: Cleaned up.
 
-2005-01-04 15:58  iskywalker
+2005-01-04 16:58  iskywalker
 
 	* configure.in: optimized
 
-2005-01-04 15:19  iskywalker
+2005-01-04 16:19  iskywalker
 
 	* xbsndsrv.c: final version (haha)
 
-2005-01-04 14:53  iskywalker
+2005-01-04 15:53  iskywalker
 
 	* Makefile.am, configure.in: autoconf tools rpaired
 
-2005-01-04 03:02  iskywalker
+2005-01-04 04:02  iskywalker
 
 	* x11c_init.c, xbsndsrv.c: corrections, xbsndsrv n==0, is EOF,
 	  XFree xsh not xch 2 times
 
-2005-01-02 19:36  iskywalker
+2005-01-02 20:36  iskywalker
 
 	* atom.c, x11c_image.c, x11c_init.c, xbsndsrv.c: Stefan proposals
 
-2004-12-21 02:19  iskywalker
+2004-12-21 03:19  iskywalker
 
 	* Makefile.am, map.c, xbsndck.sh, xbsndsrv.c: checking for running
 	  xblast versions
 
-2004-12-19 15:05  iskywalker
+2004-12-19 16:05  iskywalker
 
 	* xbsndsrv.c: fixed bug for creating file
 
-2004-12-06 15:41  lodott
+2004-12-06 16:41  lodott
 
 	* player.c: fixed reclives level entry, doesn't overwrite maxLives
 	  anymore
 
-2004-12-04 06:04  lodott
+2004-12-04 07:04  lodott
 
 	* cfg_level.c: complete revision: some cleanup, parse levels with
 	  -check instead of config; let client reject a level proposal if
 	  it parses with warnings
 
-2004-12-04 06:01  lodott
+2004-12-04 07:01  lodott
 
 	* info.c, info.h, level.c, level.h: store game mode in info.c
 
-2004-12-04 05:58  lodott
+2004-12-04 06:58  lodott
 
 	* map.c: splitting map into parse and configure step
 
-2004-12-04 05:57  lodott
+2004-12-04 06:57  lodott
 
 	* game_client.c, game_server.c: minor fix for clean end of game
 
-2004-12-04 03:21  iskywalker
+2004-12-04 04:21  iskywalker
 
 	* xbsndsrv.c: checking for multiple sound servers
 
-2004-12-04 01:44  lodott
+2004-12-04 02:44  lodott
 
 	* cfg_game.h, menu_network.c, mi_host.c, network.c, network.h,
 	  server.c, server.h: standard is now previous STATES with
@@ -2040,415 +373,415 @@
 	  detailed request info OLDMENUS flag for old code (not tested,
 	  expect to be removed soon)
 
-2004-12-04 01:35  lodott
+2004-12-04 02:35  lodott
 
 	* com_to_client.c: disable server listening to "toggle" signals
 	  from client
 
-2004-12-01 12:40  lodott
+2004-12-01 13:40  lodott
 
 	* map.c: correcting extra probabilities
 
-2004-11-29 17:32  lodott
+2004-11-29 18:32  lodott
 
 	* bomb.c, player.c: complete conversion tables
 
-2004-11-29 16:55  lodott
+2004-11-29 17:55  lodott
 
 	* map.c: add non-NULL entry for no extra Distribution in levels
 
-2004-11-29 16:49  iskywalker
+2004-11-29 17:49  iskywalker
 
 	* menu_edit.c: [no log message]
 
-2004-11-29 14:48  lodott
+2004-11-29 15:48  lodott
 
 	* random.c: formatting
 
-2004-11-29 14:46  lodott
+2004-11-29 15:46  lodott
 
 	* cfg_game.c: adapting to new conversion routines
 
-2004-11-29 14:44  lodott
+2004-11-29 15:44  lodott
 
 	* bomb.c, bomb.h, func.c, func.h, info.c, info.h, level.c, map.c,
 	  map.h, player.c, player.h, scramble.c, scramble.h, shrink.c,
 	  shrink.h: improved level parsing, unknown strings are stored as
 	  warnings
 
-2004-11-29 14:41  lodott
+2004-11-29 15:41  lodott
 
 	* ini_file.c, ini_file.h: some functions to deal with databases
 
-2004-11-29 14:40  lodott
+2004-11-29 15:40  lodott
 
 	* xblast.c: whitespaces, return -2 when -check fails
 
-2004-11-27 02:34  iskywalker
+2004-11-27 03:34  iskywalker
 
 	* introdat.c, menu.c: change default central, publicitys spams
 
-2004-11-26 11:27  alfie
+2004-11-26 12:27  alfie
 
 	* Changelog[DEAD]: This file didn't contain anything useful and
 	  creates a conflict on not-to-be-named stupid file systems.
 
-2004-11-19 17:09  lodott
+2004-11-19 18:09  lodott
 
 	* game_client.c, game_demo.c, game_local.c, game_server.c, intro.c,
 	  intro.h: auto-keypressing for bot on info/levelend/scoreboard
 
-2004-11-18 15:25  lodott
+2004-11-18 16:25  lodott
 
 	* server.c: fixed dgram timeout, udp wasn't removed before
 
-2004-11-15 19:03  lodott
+2004-11-15 20:03  lodott
 
 	* game_server.c: fixed async random numbers - thanks to lefant for
 	  finding/debugging this one!
 
-2004-11-14 15:17  lodott
+2004-11-14 16:17  lodott
 
 	* game_client.c, game_local.c, game_server.c: handle errors when
 	  configuring a level
 
-2004-11-14 15:15  lodott
+2004-11-14 16:15  lodott
 
 	* ini_file.c, ini_file.h: some new database functions
 
-2004-11-13 18:40  lodott
+2004-11-13 19:40  lodott
 
 	* ini_file.c, ini_file.h: formatting, reordering
 
-2004-11-13 16:48  lodott
+2004-11-13 17:48  lodott
 
 	* level.c, level.h: corrected version of previous commit
 
-2004-11-13 16:45  lodott
+2004-11-13 17:45  lodott
 
 	* level.c: whitespace cleanup, make debug output dependent on
 	  DEBUG_LEVEL switch
 
-2004-11-13 12:25  lodott
+2004-11-13 13:25  lodott
 
 	* game.c: formatting, cleaning up LevelResult
 
-2004-11-11 17:58  lodott
+2004-11-11 18:58  lodott
 
 	* action.c, game.c: fixed suicide feature
 
-2004-11-11 17:22  lodott
+2004-11-11 18:22  lodott
 
 	* network.c: proper cleanup of network data on disconnect,
 	  whitespaces removed
 
-2004-11-11 15:02  lodott
+2004-11-11 16:02  lodott
 
 	* game_server.c: check for breakdown of connection to central
 
-2004-11-11 15:01  lodott
+2004-11-11 16:01  lodott
 
 	* menu_extras.c: player registration adapted, trailing whitespaces
 
-2004-11-11 14:58  lodott
+2004-11-11 15:58  lodott
 
 	* user.c, user.h: event handling for central connection, code
 	  cleanup
 
-2004-11-11 14:57  lodott
+2004-11-11 15:57  lodott
 
 	* com_to_central.c, com_to_central.h: implementing events for
 	  connection to central
 
-2004-11-11 14:54  lodott
+2004-11-11 15:54  lodott
 
 	* debug.c, debug.h: debugging for user connection to central
 
-2004-11-11 12:48  lodott
+2004-11-11 13:48  lodott
 
 	* user.c, user.h: formatting
 
-2004-11-08 20:43  lodott
+2004-11-08 21:43  lodott
 
 	* net_dgram.c, net_tele.c, net_tele.h: formatting, completed debug
 	  translations for telegram id's
 
-2004-11-08 20:08  lodott
+2004-11-08 21:08  lodott
 
 	* game_client.c: formatting, more detailed exit messages when
 	  server disconnects
 
-2004-11-08 20:07  lodott
+2004-11-08 21:07  lodott
 
 	* game_server.c: correctly check for disconnections, proper cleanup
 
-2004-11-08 20:05  lodott
+2004-11-08 21:05  lodott
 
 	* game.c, server.c: implement suicide
 
-2004-11-08 20:02  lodott
+2004-11-08 21:02  lodott
 
 	* player.c, player.h: remove disconnect solution for suicide, does
 	  not work with more than two clients
 
-2004-11-08 19:59  lodott
+2004-11-08 20:59  lodott
 
 	* action.c, action.h, xblast.h: add suicide action, formatting
 
-2004-11-08 15:08  lodott
+2004-11-08 16:08  lodott
 
 	* game_server.c, player.c, player.h: revising game server,
 	  immediately suicide disconnected players
 
-2004-11-08 15:05  lodott
+2004-11-08 16:05  lodott
 
 	* debug.c, debug.h: debug output for game and level
 
-2004-11-06 22:37  lodott
+2004-11-06 23:37  lodott
 
 	* server.c, server.h: DgramClosed event, inform others when dgram
 	  fails for client
 
-2004-11-06 22:35  lodott
+2004-11-06 23:35  lodott
 
 	* com_dg_server.c: handle dgram events, in particular Close
 
-2004-11-06 22:33  lodott
+2004-11-06 23:33  lodott
 
 	* com_dg_client.c: DgramClosed event for client
 
-2004-11-06 22:32  lodott
+2004-11-06 23:32  lodott
 
 	* com_dgram.c: commenting out test assert
 
-2004-11-06 22:30  lodott
+2004-11-06 23:30  lodott
 
 	* client.c, client.h: handle DgramEvents instead of DgramErrors, in
 	  particular XBSC_DgramClosed
 
-2004-11-06 19:54  lodott
+2004-11-06 20:54  lodott
 
 	* menu_network.c: client needs ping to be marked as In now
 	  (-DSTATES only)
 
-2004-11-06 19:52  lodott
+2004-11-06 20:52  lodott
 
 	* com_dgram.h: additional dgram event, belongs to previous commit
 
-2004-11-06 19:51  lodott
+2004-11-06 20:51  lodott
 
 	* com_dg_client.c, server.c, server.h: replace DgramError by
 	  DgramEvent, use CLOSE event for cleanup
 
-2004-11-06 19:46  lodott
+2004-11-06 20:46  lodott
 
 	* com_dgram.c: more detailed dgram events
 
-2004-11-06 02:04  lodott
+2004-11-06 03:04  lodott
 
 	* client.c, client.h, server.c, server.h: stream events handling
 	  instead of stream errors
 
-2004-11-06 02:01  lodott
+2004-11-06 03:01  lodott
 
 	* com_from_central.h: some comments
 
-2004-11-06 02:00  lodott
+2004-11-06 03:00  lodott
 
 	* com_from_central.c: basic stream event handling, automatic
 	  connection shutdown in background
 
-2004-11-06 01:59  lodott
+2004-11-06 02:59  lodott
 
 	* com_to_central.c: basic stream event handling
 
-2004-11-06 01:59  lodott
+2004-11-06 02:59  lodott
 
 	* com_to_server.c: stream event handling
 
-2004-11-06 01:56  lodott
+2004-11-06 02:56  lodott
 
 	* com_to_client.c: stream event handling, use prepFinish for
 	  automatic structure removal in background
 
-2004-11-06 01:53  lodott
+2004-11-06 02:53  lodott
 
 	* com_stream.c, com_stream.h: define stream events, extend error
 	  handler to an stream event handler
 
-2004-11-06 01:38  lodott
+2004-11-06 02:38  lodott
 
 	* debug.c, debug.h: debug output for tcp to and from central
 
-2004-11-05 16:43  lodott
+2004-11-05 17:43  lodott
 
 	* com_listen.c, com_listen.h, server.c: added regular close of
 	  listen socket and shutdown flag to distinguish between expected
 	  and unexpected shutdowns.
 
-2004-11-05 15:59  lodott
+2004-11-05 16:59  lodott
 
 	* server.c, com_listen.c, server.h: revising com_listen.c, adding
 	  shutdown notification to catch socket errors
 
-2004-11-05 15:57  lodott
+2004-11-05 16:57  lodott
 
 	* debug.c, debug.h: debug output for com_listen.c
 
-2004-11-04 17:04  lodott
+2004-11-04 18:04  lodott
 
 	* x11_socket.c: perror output for debug
 
-2004-11-04 16:48  lodott
+2004-11-04 17:48  lodott
 
 	* server.c: minor fix in debug output
 
-2004-11-04 16:46  lodott
+2004-11-04 17:46  lodott
 
 	* w32_socket.c: added error codes for debug output
 
-2004-11-04 16:41  lodott
+2004-11-04 17:41  lodott
 
 	* socket.h: reordered
 
-2004-11-04 16:40  lodott
+2004-11-04 17:40  lodott
 
 	* net_socket.c: implement user port range for client sockets use
 	  #define's USER_MINPORT and USER_MAXPORT to set range at compile
 	  time
 
-2004-11-04 16:26  lodott
+2004-11-04 17:26  lodott
 
 	* com_newgame.c: do not broadcast game data to central
 
-2004-11-04 16:25  lodott
+2004-11-04 17:25  lodott
 
 	* x11_socket.c: use ACCEPT_TIMEOUT for accept instead of
 	  CONNECT_TIMEOUT
 
-2004-11-04 16:23  lodott
+2004-11-04 17:23  lodott
 
 	* client.c, com_query.c, com_query.h: minor changes, better
 	  variable naming/order
 
-2004-11-03 14:56  lodott
+2004-11-03 15:56  lodott
 
 	* x11_socket.c: complete revision, making output similar to
 	  w32_socket.c
 
-2004-11-02 21:25  lodott
+2004-11-02 22:25  lodott
 
 	* com_newgame.c: minor bug, some cosmetic changes
 
-2004-11-02 21:22  lodott
+2004-11-02 22:22  lodott
 
 	* w32_socket.c: complete revision, fixed interface detection
 	  (WSIF_MOD is not needed anymore)
 
-2004-11-02 21:20  lodott
+2004-11-02 22:20  lodott
 
 	* debug.c, debug.h: debug output for sockets
 
-2004-11-02 18:36  lodott
+2004-11-02 19:36  lodott
 
 	* com_browse.c: require browse events for browse communications
 
-2004-11-02 18:28  lodott
+2004-11-02 19:28  lodott
 
 	* com_central.c: browse events for central games
 
-2004-11-02 18:20  lodott
+2004-11-02 19:20  lodott
 
 	* client.c, client.h, com_query.c, com_query.h: browse events and
 	  interface id for query communication, better debug output
 
-2004-11-02 18:16  lodott
+2004-11-02 19:16  lodott
 
 	* debug.c, debug.h: debug output for query sockets
 
-2004-11-02 16:10  lodott
+2004-11-02 17:10  lodott
 
 	* server.c: use default interface for server registration at
 	  central; compile with -DOLDIFCODE to get the old behaviour
 
-2004-10-30 21:18  lodott
+2004-10-30 23:18  lodott
 
 	* com_reply.c: revising reply communication, adding browse event
 	  handling
 
-2004-10-30 21:16  lodott
+2004-10-30 23:16  lodott
 
 	* com_newgame.c: cosmetic change
 
-2004-10-30 21:15  lodott
+2004-10-30 23:15  lodott
 
 	* browse.c: commenting browse communication parser
 
-2004-10-30 21:14  lodott
+2004-10-30 23:14  lodott
 
 	* debug.c, debug.h: debug output for reply communication
 
-2004-10-30 20:11  lodott
+2004-10-30 22:11  lodott
 
 	* com_newgame.c, com_newgame.h: revising newgame communication,
 	  close signal now triggers shutdown *after* sending
 
-2004-10-30 20:08  lodott
+2004-10-30 22:08  lodott
 
 	* server.c, server.h: splitting newgame close into an active and
 	  passive routine
 
-2004-10-30 20:04  lodott
+2004-10-30 22:04  lodott
 
 	* menu_network.c: fixing unnecessary initial double send of game
 	  data
 
-2004-10-30 20:02  lodott
+2004-10-30 22:02  lodott
 
 	* debug.c, debug.h: Debug output for Newgame sockets
 
-2004-10-26 09:16  aluleich
+2004-10-26 11:16  aluleich
 
 	* debug.c, debug.h: Corrected some misplaced debug-macros
 
-2004-10-21 19:28  lodott
+2004-10-21 21:28  lodott
 
 	* com_browse.c, com_browse.h, com_central.c, com_newgame.c,
 	  com_query.c, com_reply.c: add browse event handling mechanism
 
-2004-10-21 19:27  lodott
+2004-10-21 21:27  lodott
 
 	* debug.c, debug.h: debug output for Browse networking level
 
-2004-10-20 01:20  lodott
+2004-10-20 03:20  lodott
 
 	* debug.c, debug.h: remove warnings for debug outputs with
 	  undefined DEBUG flags
 
-2004-10-19 23:33  iskywalker
+2004-10-20 01:33  iskywalker
 
 	* menu_network.c, network.c: keep compiler happy
 
-2004-10-19 23:27  lodott
+2004-10-20 01:27  lodott
 
 	* network.c: fixed compile error without DEBUG_NETWORK
 
-2004-10-19 22:19  lodott
+2004-10-20 00:19  lodott
 
 	* menu_network.c, server.c: fixing request handling, restricting
 	  local requests
 
-2004-10-19 21:19  lodott
+2004-10-19 23:19  lodott
 
 	* client.c, com_to_server.c, com_to_server.h: fixed client join
 	  with two players
 
-2004-10-19 18:28  lodott
+2004-10-19 20:28  lodott
 
 	* network.c, network.h, server.c: team request handling, team mode
 	  now negotiable
 
-2004-10-19 17:59  iskywalker
+2004-10-19 19:59  iskywalker
 
 	* bot.c, cfg_level.h, client.h, game.c, game_client.c,
 	  game_local.c, gui.h, ini_file.h, map.c, map.h, menu_edit.c,
@@ -2457,371 +790,371 @@
 	  status.c, status.h, w32_pixmap.c, x11c_pixmap.c, xblast.c: keep
 	  compiler with Wall happy
 
-2004-10-19 17:31  lodott
+2004-10-19 19:31  lodott
 
 	* menu_network.c: implement remote start
 
-2004-10-19 17:30  lodott
+2004-10-19 19:30  lodott
 
 	* mi_host.c: slight correction of hostname display in wait menu
 
-2004-10-19 17:28  lodott
+2004-10-19 19:28  lodott
 
 	* network.c, network.h, server.c: request handling for server, in
 	  particular remote start
 
-2004-10-19 17:27  lodott
+2004-10-19 19:27  lodott
 
 	* debug.c, debug.h: Debug output for network
 
-2004-10-19 15:42  iskywalker
+2004-10-19 17:42  iskywalker
 
 	* bot.c: keep compiler happy
 
-2004-10-19 09:06  lodott
+2004-10-19 11:06  lodott
 
 	* menu_network.c: fix automatic change to team mode in standard
 	  mode
 
-2004-10-19 01:57  iskywalker
+2004-10-19 03:57  iskywalker
 
 	* game_local.c: no fprintfs
 
-2004-10-18 21:32  iskywalker
+2004-10-18 23:32  iskywalker
 
 	* action.h, game.c, game_client.c, game_local.c, game_server.c:
 	  auto bot activation
 
-2004-10-18 08:56  lodott
+2004-10-18 10:56  lodott
 
 	* menu_network.c: fix to allow non-team game in standard mode
 
-2004-10-17 21:11  iskywalker
+2004-10-17 23:11  iskywalker
 
 	* menu_edit.c, shrink.c: Alll should work now, documentation and
 	  some saving stuff should be although implemented _edit level
 	  info_ deletes all changed stuff _only map is saved_
 
-2004-10-15 23:14  lodott
+2004-10-16 01:14  lodott
 
 	* client.c, com_to_server.c, com_to_server.h: moving request
 	  handling to client
 
-2004-10-15 22:08  lodott
+2004-10-16 00:08  lodott
 
 	* cfg_player.c, cfg_player.h, menu_network.c, mi_player.c: show
 	  sprites in team colors in wait menu
 
-2004-10-13 17:02  lodott
+2004-10-13 19:02  lodott
 
 	* cfg_game.h: add invalid player team, for correct transfer of game
 	  setup
 
-2004-10-13 17:01  lodott
+2004-10-13 19:01  lodott
 
 	* menu_network.c: reimplementing start button, -DSTATES playable
 	  now
 
-2004-10-13 16:58  lodott
+2004-10-13 18:58  lodott
 
 	* server.c, server.h: moved initial state assignment to server,
 	  clean up comments
 
-2004-10-13 16:55  lodott
+2004-10-13 18:55  lodott
 
 	* client.c: clear data when disconnecting
 
-2004-10-13 16:53  lodott
+2004-10-13 18:53  lodott
 
 	* network.c, network.h: routines to clear host data
 
-2004-10-13 16:51  lodott
+2004-10-13 18:51  lodott
 
 	* mi_host.c: fix initial local team request
 
-2004-10-12 18:47  lodott
+2004-10-12 20:47  lodott
 
 	* com_to_client.c: minor corrections
 
-2004-10-12 10:56  lodott
+2004-10-12 12:56  lodott
 
 	* com_to_client.c, com_to_server.c: unified request data format for
 	  server send/client receive
 
-2004-10-11 14:21  lodott
+2004-10-11 16:21  lodott
 
 	* server.c, server.h: correct types instead of unsigned for states,
 	  basic server state request handling
 
-2004-10-11 14:20  lodott
+2004-10-11 16:20  lodott
 
 	* menu_player.c, mi_host.c: fixing compile error for standard due
 	  to previous checkin (typedef move)
 
-2004-10-11 14:01  lodott
+2004-10-11 16:01  lodott
 
 	* mi_tool.h, network.c, network.h: moving type def for host/team
 	  states to network
 
-2004-10-11 13:59  lodott
+2004-10-11 15:59  lodott
 
 	* mi_host.c: improved host/team item display with respect to local
 	  requests
 
-2004-10-10 21:08  lodott
+2004-10-10 23:08  lodott
 
 	* client.c, client.h, com_dg_client.c, menu_network.c, network.c,
 	  network.h, server.c, server.h: moving ping time data to network.c
 
-2004-10-10 21:07  lodott
+2004-10-10 23:07  lodott
 
 	* mi_host.c: defining out team state Invalid for standard/SMPF
 
-2004-10-10 20:29  lodott
+2004-10-10 22:29  lodott
 
 	* mi_host.c, mi_tool.h: sensible starting values for host/team
 	  items
 
-2004-10-10 20:21  lodott
+2004-10-10 22:21  lodott
 
 	* com_to_server.c: fix for sending team requests
 
-2004-10-10 18:02  lodott
+2004-10-10 20:02  lodott
 
 	* client.c, menu_network.c, network.c, network.h, server.c: moving
 	  state data to network, adding network types
 
-2004-10-10 14:31  lodott
+2004-10-10 16:31  lodott
 
 	* menu_network.c, mi_tool.c, mi_tool.h, mi_host.c, mi_host.h: added
 	  focus handler for host/team items (-DSTATES)
 
-2004-10-09 19:30  lodott
+2004-10-09 21:30  lodott
 
 	* menu_network.c, mi_host.c, mi_host.h, mi_tool.c, mi_tool.h:
 	  variant wait menu for client/server with -DSTATES (not finished);
 	  completely separated from -DSMPF and standard now
 
-2004-10-09 13:49  lodott
+2004-10-09 15:49  lodott
 
 	* menu_network.c, mi_host.c: trivial requests exchange for hosts
 	  implemented
 
-2004-10-09 13:47  lodott
+2004-10-09 15:47  lodott
 
 	* com_dg_client.c: allow to check connectedness of server just as
 	  for a host
 
-2004-10-09 13:45  lodott
+2004-10-09 15:45  lodott
 
 	* server.c, server.h: proper data initialization, prototypef for
 	  state retrieval
 
-2004-10-09 13:44  lodott
+2004-10-09 15:44  lodott
 
 	* client.c, client.h: proper data initialization, state data
 	  retrieval unified
 
-2004-10-08 21:31  lodott
+2004-10-08 23:31  lodott
 
 	* client.c, client.h, com_to_server.c, com_to_server.h: client
 	  send/rcv facilities for host/team state requests
 
-2004-10-08 20:34  lodott
+2004-10-08 22:34  lodott
 
 	* com_to_client.c, net_tele.h: send/rcv facilities for server for
 	  host/team state requests
 
-2004-10-08 19:37  lodott
+2004-10-08 21:37  lodott
 
 	* mi_host.c, menu_network.c, mi_host.h, mi_tool.c, mi_tool.h:
 	  display for host/team states (with -DSTATES)
 
-2004-10-06 23:33  lodott
+2004-10-07 01:33  lodott
 
 	* com_to_client.c, com_to_client.h, menu_network.c, server.c,
 	  server.h: check dgram success, completed server states managing
 	  except actual sending
 
-2004-10-06 22:20  lodott
+2004-10-07 00:20  lodott
 
 	* menu_network.c: Started new variant for wait menu display (use
 	  -DSTATES)
 
-2004-10-06 22:16  lodott
+2004-10-07 00:16  lodott
 
 	* mi_host.c, mi_tool.c, mi_tool.h, mi_host.h: added generic host
 	  item with requested states, ordered source by item type
 
-2004-10-06 12:22  lodott
+2004-10-06 14:22  lodott
 
 	* menu_network.c: reordering source into menu sections
 
-2004-10-05 20:11  lodott
+2004-10-05 22:11  lodott
 
 	* client.c, client.h, com_to_server.c, com_to_server.h: Clean
 	  socket closing for clients
 
-2004-10-05 20:08  lodott
+2004-10-05 22:08  lodott
 
 	* server.c, server.h: slight refinement of disconnect sequence
 
-2004-10-05 18:26  lodott
+2004-10-05 20:26  lodott
 
 	* server.c, server.h, com_to_client.c, com_to_client.h: better
 	  structuring, error handling, cleaner socket closing
 
-2004-10-05 13:24  lodott
+2004-10-05 15:24  lodott
 
 	* client.c, client.h, com_dg_server.c: reordering, completing
 	  prototypes, client controls dgram shutdown now
 
-2004-10-05 12:35  lodott
+2004-10-05 14:35  lodott
 
 	* client.c, client.h, com_to_server.c, com_to_server.h: better
 	  structuring, debugging, error communication
 
-2004-10-05 12:32  lodott
+2004-10-05 14:32  lodott
 
 	* debug.c, debug.h: C2S and S2C debugging
 
-2004-10-04 15:18  lodott
+2004-10-04 17:18  lodott
 
 	* com_stream.c, com_stream.h, debug.c, debug.h: debugging for
 	  streams, minor code cosmetics
 
-2004-10-04 14:44  lodott
+2004-10-04 16:44  lodott
 
 	* com_dg_client.c, server.c, server.h: adding prototypes for server
 	  send, server controls dgram shutdown now
 
-2004-10-04 12:13  lodott
+2004-10-04 14:13  lodott
 
 	* client.c, client.h, com_dg_server.c, com_dg_server.h: better
 	  error communication, more structuring
 
-2004-10-03 17:27  lodott
+2004-10-03 19:27  lodott
 
 	* com_dg_client.c, com_dg_client.h, server.c, server.h: structuring
 	  source files, better error communication, preparation for
 	  host/team states extension
 
-2004-10-03 16:36  lodott
+2004-10-03 18:36  lodott
 
 	* debug.c, debug.h: Add debugging output for SERVER
 
-2004-10-02 21:52  lodott
+2004-10-02 23:52  lodott
 
 	* com_dg_client.c, com_dg_server.c, com_dgram.c, com_dgram.h:
 	  better variable names and comments for dgram communications, info
 	  handler extending finish handler, preparations to fix potential
 	  segfaults when errors occur
 
-2004-10-02 21:45  lodott
+2004-10-02 23:45  lodott
 
 	* debug.c, debug.h: Debug output for DGRAM, D2C, D2S
 
-2004-09-26 00:07  iskywalker
+2004-09-26 02:07  iskywalker
 
 	* menu_edit.c: imporved led and shrink
 
-2004-09-23 18:02  lodott
+2004-09-23 20:02  lodott
 
 	* client.c, client.h, com_to_server.c: Restructuring client.c,
 	  prepare host/team state protocol extension
 
-2004-09-23 17:57  lodott
+2004-09-23 19:57  lodott
 
 	* debug.c, debug.h: Add Dbg_Client() for use with -DDEBUG and
 	  -DDEBUG_CLIENT
 
-2004-09-23 13:36  iskywalker
+2004-09-23 15:36  iskywalker
 
 	* menu_edit.c, shrink.c: editor improved
 
-2004-09-22 23:47  iskywalker
+2004-09-23 01:47  iskywalker
 
 	* menu_edit.c, shrink.c, shrink.h: imporved editor
 
-2004-09-20 19:34  iskywalker
+2004-09-20 21:34  iskywalker
 
 	* menu.c: better central choose
 
-2004-09-20 10:00  alfie
+2004-09-20 12:00  alfie
 
 	* cfg_xblast.c: Changed default central to xblast.debian.net.
 
-2004-09-17 20:15  lodott
+2004-09-17 22:15  lodott
 
 	* atom.c, atom.h: Added atoms for result and ratings file name
 
-2004-09-17 19:50  lodott
+2004-09-17 21:50  lodott
 
 	* central.c: create rating/result files for central, better
 	  comments
 
-2004-09-17 18:56  lodott
+2004-09-17 20:56  lodott
 
 	* cfg_player.c, cfg_player.h: Added functions to append game
 	  results and time+rating to config files
 
-2004-09-17 18:54  lodott
+2004-09-17 20:54  lodott
 
 	* ini_file.c, ini_file.h: Added function to append database entries
 	  to config files
 
-2004-09-17 18:05  lodott
+2004-09-17 20:05  lodott
 
 	* central.c: Added name check for player registration, code cleanup
 
-2004-09-17 17:59  lodott
+2004-09-17 19:59  lodott
 
 	* cfg_player.c, cfg_player.h: Added function to find player name
 	  doubles
 
-2004-09-17 15:25  lodott
+2004-09-17 17:25  lodott
 
 	* com_central.c: Central checks received gameID and host:port now -
 	  formatting, comments
 
-2004-09-17 12:42  lodott
+2004-09-17 14:42  lodott
 
 	* com_newgame.c, com_query.c: Better debug output for debugging
 	  central messages
 
-2004-09-16 20:32  lodott
+2004-09-16 22:32  lodott
 
 	* net_tele.h: Fixed telegram id order to allow registering in
 	  central
 
-2004-09-16 20:14  iskywalker
+2004-09-16 22:14  iskywalker
 
 	* bomb.c, map.c, menu.c, menu_edit.c: central default button,
 	  ringoffire corrected, menu_edit extended
 
-2004-09-16 15:22  lodott
+2004-09-16 17:22  lodott
 
 	* com_query.c: Better debug output for -DDEBUG
 
-2004-09-13 22:33  tenderflake
+2004-09-14 00:33  tenderflake
 
 	* sdl_common.c, sdl_image.h: Changed #include sdl files to
 	  lowercase.
 
-2004-09-13 22:32  tenderflake
+2004-09-14 00:32  tenderflake
 
 	* sdl_image.c: Set transparent background for epm files
 
-2004-09-13 10:15  alfie
+2004-09-13 12:15  alfie
 
 	* Makefile.in: Synced Makefile.in with Makefile.am
 
-2004-09-13 09:10  lodott
+2004-09-13 11:10  lodott
 
 	* menu_network.c: Recognizes ready hoststate as in now, some
 	  streamlining
 
-2004-09-12 22:11  lodott
+2004-09-13 00:11  lodott
 
 	* client.c, client.h, com_to_client.c, com_to_client.h,
 	  com_to_server.c, menu_network.c, mi_host.c, mi_tool.h,
@@ -2829,275 +1162,275 @@
 	  hostState and means for its communication and display, slight
 	  protocol change
 
-2004-09-10 19:03  tenderflake
+2004-09-10 21:03  tenderflake
 
 	* sdl_common.c, sdl_common.h, sdl_image.c, sdl_image.h: Converted
 	  functions that load epm, ppm, etc to generate SDL_Surface
 	  bitmaps.
 
-2004-09-09 23:33  iskywalker
+2004-09-10 01:33  iskywalker
 
 	* sdl_common.c, sdl_common.h, sdl_event.c, sdl_image.c,
 	  sdl_image.h, sdl_init.c, sdl_pixmap.c, sdl_ppm.c, sdl_text.c,
 	  sdl_tile.c: initial import for sdl bracnch
 
-2004-09-08 13:09  lodott
+2004-09-08 15:09  lodott
 
 	* client.c, com_query.c, com_query.h: Proper free'ing of Query
 	  sockets for Lan/Central searching
 
-2004-09-08 08:18  lodott
+2004-09-08 10:18  lodott
 
 	* Makefile.windows: Added missing object file menu_edit.o
 
-2004-09-07 19:40  iskywalker
+2004-09-07 21:40  iskywalker
 
 	* menu_edit.c: set led
 
-2004-09-07 19:05  iskywalker
+2004-09-07 21:05  iskywalker
 
 	* menu_edit.c: a lot of improvements
 
-2004-09-02 12:11  iskywalker
+2004-09-02 14:11  iskywalker
 
 	* bomb.c, ini_file.c, mi_tool.c: bugs corrected
 
-2004-08-30 16:57  iskywalker
+2004-08-30 18:57  iskywalker
 
 	* game.c, game_client.c, player.c: some gimmics and correctures
 
-2004-08-30 02:55  iskywalker
+2004-08-30 04:55  iskywalker
 
 	* menu_edit.c: seg fault corrected
 
-2004-08-30 01:06  iskywalker
+2004-08-30 03:06  iskywalker
 
 	* sprite.c, ini_file.c, menu_edit.c, menu_edit.h, mi_tool.c,
 	  mi_tool.h, shrink.c: enhanced editor and some nice compiler,want
 	  to get -Wall
 
-2004-08-21 23:48  iskywalker
+2004-08-22 01:48  iskywalker
 
 	* SConstruct: initial import
 
-2004-08-21 16:04  iskywalker
+2004-08-21 18:04  iskywalker
 
 	* func.c, func.h, map.c, menu_edit.c, mi_map.c, mi_tool.c,
 	  mi_tool.h, sprite.c, sprite.h: editor scpecial extras,bug fixed
 
-2004-08-19 19:49  iskywalker
+2004-08-19 21:49  iskywalker
 
 	* Makefile.am, game_client.c, menu_edit.c, menu_edit.h: wait ingame
 	  menu better, make dist better, compiles nicier
 
-2004-08-19 06:54  alfie
+2004-08-19 08:54  alfie
 
 	* Makefile.in, depcomp: automake1.7 needs depcomp Makefile.in sync
 	  with Makefile.am
 
-2004-08-17 19:26  iskywalker
+2004-08-17 21:26  iskywalker
 
 	* README: Sound bug
 
-2004-08-17 18:23  iskywalker
+2004-08-17 20:23  iskywalker
 
 	* menu_edit.c, map.c, map.h, mi_tool.c, sprite.c, w32_pixmap.c,
 	  x11c_pixmap.c: Editor improved,(evilbomb showinging and saving
 
-2004-08-17 11:57  iskywalker
+2004-08-17 13:57  iskywalker
 
 	* Makefile.am: level editor
 
-2004-08-17 11:33  iskywalker
+2004-08-17 13:33  iskywalker
 
 	* menu_extras.c: level editor
 
-2004-08-16 22:16  iskywalker
+2004-08-17 00:16  iskywalker
 
 	* menu_edit.c, menu_edit.h: initial import
 
-2004-08-16 22:14  iskywalker
+2004-08-17 00:14  iskywalker
 
 	* bomb.c, bomb.h, event.h, map.c, map.h, menu_extras.c, mi_map.c,
 	  mi_tool.c, mi_tool.h, shrink.c, shrink.h, w32_event.c,
 	  x11_event.c, x11_event.h: level editor integrated
 
-2004-08-16 18:51  alfie
+2004-08-16 20:51  alfie
 
 	* Makefile.am, Makefile.in, aclocal.m4, config.guess, config.sub,
 	  configure: Some long standing updates (config.guess and
 	  config.sub), one fix in the Makefile.am and the rest regenerated.
 
-2004-08-16 18:48  alfie
+2004-08-16 20:48  alfie
 
 	* xbsndsrv.c: Don't use 100% CPU if xblast dies away. Rather die
 	  also, if the pipe is broken.
 
-2004-08-16 06:46  alfie
+2004-08-16 08:46  alfie
 
 	* x11_sound.c: Make it possible to -D a full path to the sound
 	  server.
 
-2004-08-15 17:31  iskywalker
+2004-08-15 19:31  iskywalker
 
 	* game_client.c, game_local.c, game_server.c, server.c: beep mode
 	  for windows with log file, stop sound when escaping
 
-2004-08-15 04:28  iskywalker
+2004-08-15 06:28  iskywalker
 
 	* debug.c: dgb_out go into error.log for windows
 
-2004-08-13 18:56  lodott
+2004-08-13 20:56  lodott
 
 	* client.c, network.c, network.h, server.c: Improving initial
 	  version check
 
-2004-08-13 18:53  lodott
+2004-08-13 20:53  lodott
 
 	* net_tele.h: moving async signal to receive signals from older
 	  clients correctly
 
-2004-08-13 18:52  lodott
+2004-08-13 20:52  lodott
 
 	* player.c: Leading comment is comment again
 
-2004-08-13 11:39  iskywalker
+2004-08-13 13:39  iskywalker
 
 	* game.c, player.c: unommented the SND_STEP lines for hearing
 	  steping
 
-2004-08-13 05:38  iskywalker
+2004-08-13 07:38  iskywalker
 
 	* Makefile.windows, atom.c, atom.h, bomb.c, func.c, intro.c,
 	  player.c, w32_event.c, xblast.coff: through, ceil, handlep0oll
 	  error fixed, minor fixes
 
-2004-08-12 21:31  iskywalker
+2004-08-12 23:31  iskywalker
 
 	* w32_sndsrv.c, xbsndsrv.c: fix sound
 
-2004-08-12 21:20  iskywalker
+2004-08-12 23:20  iskywalker
 
 	* atom.c, atom.h, cfg_game.c, cfg_game.h, client.c, game_client.c,
 	  game_local.c, game_server.c, menu_game.c, player.c, snd.h,
 	  xbsndsrv.c: music in
 
-2004-08-12 21:16  lodott
+2004-08-12 23:16  lodott
 
 	* server.c: server must also add game version to its game config
 
-2004-08-12 18:45  iskywalker
+2004-08-12 20:45  iskywalker
 
 	* atom.c, atom.h, cfg_game.c, cfg_game.h, client.c, game_client.c,
 	  intro.c, menu_game.c, xbsndsrv.c: beep when game start (optional)
 
-2004-08-12 18:30  lodott
+2004-08-12 20:30  lodott
 
 	* cfg_game.c, cfg_game.h, client.c, com_to_server.c, network.c,
 	  server.c: Added initial version check on client connect - all
 	  clients who don't send version data are disconnected
 
-2004-08-12 17:53  lodott
+2004-08-12 19:53  lodott
 
 	* atom.c, atom.h, cfg_game.c, cfg_level.c: changing atom names for
 	  version
 
-2004-08-12 16:47  iskywalker
+2004-08-12 18:47  iskywalker
 
 	* cfg_game.c, cfg_game.h, com_query.c, menu_network.c, server.c:
 	  beeping for incoming clients
 
-2004-08-11 19:34  iskywalker
+2004-08-11 21:34  iskywalker
 
 	* Makefile.windows, client.c, game.c, player.c, player.h, server.c,
 	  xblast.coff: team chat fixed
 
-2004-08-11 11:14  iskywalker
+2004-08-11 13:14  iskywalker
 
 	* x11_event.c: cancel added
 
-2004-08-10 23:23  iskywalker
+2004-08-11 01:23  iskywalker
 
 	* Makefile.windows, bomb.c, func.c, game.c, mi_tool.c, player.c,
 	  player.h, w32_event.c, xblast.coff: input, through (extra)
 
-2004-08-10 20:47  iskywalker
+2004-08-10 22:47  iskywalker
 
 	* w32_event.c: better keyboard handling
 
-2004-08-10 17:57  iskywalker
+2004-08-10 19:57  iskywalker
 
 	* ini_file.c: scpace check on ini_file (seg fault if not and level
 	  raped
 
-2004-08-10 17:28  iskywalker
+2004-08-10 19:28  iskywalker
 
 	* game.c, mi_tool.c, x11_event.c: backspace and return added to
 	  chatmode
 
-2004-08-10 12:20  lodott
+2004-08-10 14:20  lodott
 
 	* map.c: Fixed minor memory leak - tile names not been freed before
 
-2004-08-09 11:55  lodott
+2004-08-09 13:55  lodott
 
 	* bomb.c, bomb.h, func.c, func.h, level.c, map.c, map.h, player.c,
 	  scramble.c, shrink.c: splitting level config into parse and setup
 	  stage
 
-2004-08-08 03:39  lodott
+2004-08-08 05:39  lodott
 
 	* cfg_level.c, info.c, info.h, level.c, player.c, player.h,
 	  scramble.c, scramble.h, shrink.c: Splitting level config into
 	  parse and setup stage, to allow refined level negotiations
 
-2004-08-07 18:27  lodott
+2004-08-07 20:27  lodott
 
 	* bomb.c, cfg_level.c, cfg_level.h, cfg_main.c, cfg_main.h,
 	  level.c, xblast.c: Added command-line option -check to check
 	  configs before menu (levels only so far)
 
-2004-08-07 01:11  iskywalker
+2004-08-07 03:11  iskywalker
 
 	* event.c, intro.c, mi_string.c, mi_tool.c, w32_event.c,
 	  w32_pixmap.c: Chat works also for windows, backspace implemnted
 
-2004-08-06 13:31  lodott
+2004-08-06 15:31  lodott
 
 	* w32_socket.c: add handling of close event for sockets, removes
 	  server crash on client disconnect
 
-2004-08-06 11:29  iskywalker
+2004-08-06 13:29  iskywalker
 
 	* mi_tool.c: chatMode after sending reseted(fix)
 
-2004-08-06 02:47  iskywalker
+2004-08-06 04:47  iskywalker
 
 	* SDL_vkeys.h: initial import, needed by w32_event.c
 
-2004-08-06 02:00  iskywalker
+2004-08-06 04:00  iskywalker
 
 	* bot.c: async prob fixed
 
-2004-08-06 01:57  iskywalker
+2004-08-06 03:57  iskywalker
 
 	* intro.c, w32_event.c, w32_pixmap.c, w32_text.c, xblast.coff:
 	  Capslock and better ascii sensitive
 
-2004-08-05 23:37  iskywalker
+2004-08-06 01:37  iskywalker
 
 	* w32_event.c: Key fix for windows, fucking windows key
 
-2004-08-05 22:38  lodott
+2004-08-06 00:38  lodott
 
 	* game_client.c: fixed escape key for client
 
-2004-08-05 22:37  lodott
+2004-08-06 00:37  lodott
 
 	* client.c, server.c: output as unsigned to avoid some confusing
 	  output
 
-2004-08-05 19:51  iskywalker
+2004-08-05 21:51  iskywalker
 
 	* Makefile.in, aclocal.m4, cfg_control.c, chat.c, client.c,
 	  com_to_client.c, com_to_server.c, configure, event.h, game.c,
@@ -3105,87 +1438,87 @@
 	  w32_event.c, x11_config.c, x11_event.c, x11_socket.c, xblast.c:
 	  chat also in Menu mode! (delete,home,end)
 
-2004-08-05 12:03  iskywalker
+2004-08-05 14:03  iskywalker
 
 	* menu_control.c: fixing bug
 
-2004-08-04 22:02  iskywalker
+2004-08-05 00:02  iskywalker
 
 	* chat.h, client.c, game.c, server.c: working chat, with private
 	  and team msgs
 
-2004-08-04 21:14  iskywalker
+2004-08-04 23:14  iskywalker
 
 	* client.c, game.c, server.c, server.h, xblast.coff: working chat,
 	  next step public private msgs, maybe also team msgs
 
-2004-08-04 19:29  lodott
+2004-08-04 21:29  lodott
 
 	* menu_network.c: Removed free() call for XBChat, freeing handled
 	  by chat.c now
 
-2004-08-04 19:26  lodott
+2004-08-04 21:26  lodott
 
 	* com_to_client.c, com_to_server.c: Fixed small bug (wrong length
 	  for chat string)
 
-2004-08-04 19:24  lodott
+2004-08-04 21:24  lodott
 
 	* client.h: Minor fix (parameter order in prototype)
 
-2004-08-04 19:22  lodott
+2004-08-04 21:22  lodott
 
 	* client.c: minor fix, better comments
 
-2004-08-04 19:01  lodott
+2004-08-04 21:01  lodott
 
 	* chat.c: Fixed stupid bugs
 
-2004-08-04 17:41  lodott
+2004-08-04 19:41  lodott
 
 	* chat.c, chat.h: Chat line manager
 
-2004-08-04 17:39  lodott
+2004-08-04 19:39  lodott
 
 	* menu_network.c: Simple interface for "waiting for clients" menu
 	  to access chat data
 
-2004-08-04 17:38  lodott
+2004-08-04 19:38  lodott
 
 	* net_tele.h: add id for tcp chat signal
 
-2004-08-04 17:36  lodott
+2004-08-04 19:36  lodott
 
 	* client.c, client.h, server.c, server.h: add tcp chat handling for
 	  client and server
 
-2004-08-04 17:34  lodott
+2004-08-04 19:34  lodott
 
 	* com_to_client.c, com_to_client.h, com_to_server.c,
 	  com_to_server.h: add tcp chat signals
 
-2004-08-04 17:33  lodott
+2004-08-04 19:33  lodott
 
 	* com_dg_client.c, com_dg_server.c, com_dgram.c, com_dgram.h:
 	  Removed udp chat facilities, replace with a reserved facility for
 	  future extensions
 
-2004-08-04 17:18  iskywalker
+2004-08-04 19:18  iskywalker
 
 	* cfg_control.c, client.c, game.c: improved chat
 
-2004-08-04 10:14  iskywalker
+2004-08-04 12:14  iskywalker
 
 	* chat.c, chat.h: initial import
 
-2004-08-04 08:08  iskywalker
+2004-08-04 10:08  iskywalker
 
 	* Makefile.windows, atom.c, atom.h, cfg_control.c, cfg_control.h,
 	  event.h, game.c, gui.h, intro.c, menu.c, menu_control.c,
 	  status.c, w32_tile.c, x11c_tile.c: chat target selction (some
 	  cosmetics too)
 
-2004-08-04 04:46  iskywalker
+2004-08-04 06:46  iskywalker
 
 	* Makefile.am, Makefile.in, Makefile.windows, aclocal.m4, action.h,
 	  atom.c, atom.h, bomb.c, bot.c, cfg_control.c, cfg_control.h,
@@ -3197,33 +1530,33 @@
 	  w32_event.c, w32_pixmap.c, x11_event.c, x11c_pixmap.c,
 	  x11c_text.c: local chat implemented
 
-2004-08-02 14:56  lodott
+2004-08-02 16:56  lodott
 
 	* cfg_level.c, cfg_level.h: enable server to check levels for
 	  version entries
 
-2004-08-02 13:57  iskywalker
+2004-08-02 15:57  iskywalker
 
 	* game_client.c, game_server.c: fix kunix patch
 
-2004-08-02 13:51  lodott
+2004-08-02 15:51  lodott
 
 	* server.c: adding some comments, cleaning up some other comments
 
-2004-08-02 13:11  iskywalker
+2004-08-02 15:11  iskywalker
 
 	* game.c: fix kunis patch
 
-2004-08-02 11:40  iskywalker
+2004-08-02 13:40  iskywalker
 
 	* atom.c, atom.h, cfg_level.c, cfg_level.h, client.c, client.h,
 	  event.h, mi_tool.c, x11_sound.c, xblast.coff: kunis patch
 
-2004-08-02 11:03  iskywalker
+2004-08-02 13:03  iskywalker
 
 	* bot.c: async bot causer away
 
-2004-08-02 01:44  iskywalker
+2004-08-02 03:44  iskywalker
 
 	* Makefile.windows, bot.c, cfg_game.c, cfg_level.c, cfg_level.h,
 	  client.c, client.h, com_to_client.c, com_to_client.h,
@@ -3232,392 +1565,392 @@
 	  server.h, w32_event.c: recommended level patch, kunis async
 	  routines, level version check
 
-2004-08-01 17:40  iskywalker
+2004-08-01 19:40  iskywalker
 
 	* player.c: rec lives fixed
 
-2004-08-01 14:53  iskywalker
+2004-08-01 16:53  iskywalker
 
 	* atom.c, atom.h, cfg_game.c, cfg_game.h, cfg_player.c,
 	  cfg_player.h, game.c, menu_game.c, menu_player.c, player.c,
 	  player.h: Laola msgs configure, recommended lives for level
 
-2004-07-30 14:05  iskywalker
+2004-07-30 16:05  iskywalker
 
 	* Makefile.windows: For without cygwin1.dll
 
-2004-07-30 14:03  iskywalker
+2004-07-30 16:03  iskywalker
 
 	* game_server.c, menu_network.c, server.c, server.h: Kunis patch
 	  for showing how many players are waiting for game start and score
 	  fo r running games
 
-2004-07-30 14:02  iskywalker
+2004-07-30 16:02  iskywalker
 
 	* com_newgame.c, com_newgame.h: Kunis patch for showing how many
 	  players are waiting for game start and score for running games
 
-2004-07-30 12:19  iskywalker
+2004-07-30 14:19  iskywalker
 
 	* bomb.c, func.c: format
 
-2004-07-30 12:18  iskywalker
+2004-07-30 14:18  iskywalker
 
 	* map.c: fix ghost
 
-2004-07-30 12:17  iskywalker
+2004-07-30 14:17  iskywalker
 
 	* player.c: Snipe fix
 
-2004-07-16 09:59  iskywalker
+2004-07-16 11:59  iskywalker
 
 	* missing: automake happy (--run)
 
-2004-07-16 09:58  iskywalker
+2004-07-16 11:58  iskywalker
 
 	* x11_socket.c: Assert makes XBlast to quit, when it should save
 	  the modification None by exiting
 
-2004-07-16 09:57  iskywalker
+2004-07-16 11:57  iskywalker
 
 	* autogen.sh: Rado and Alfie happy
 
-2004-07-16 09:57  iskywalker
+2004-07-16 11:57  iskywalker
 
 	* README: Rado happy
 
-2004-07-16 09:56  iskywalker
+2004-07-16 11:56  iskywalker
 
 	* Makefile.am: automake happy
 
-2004-07-11 21:20  iskywalker
+2004-07-11 23:20  iskywalker
 
 	* w32_socket.c: Kuni fixs for searching network
 
-2004-07-08 16:36  iskywalker
+2004-07-08 18:36  iskywalker
 
 	* configure.in, version.h: testing new version
 
-2004-07-08 16:29  iskywalker
+2004-07-08 18:29  iskywalker
 
 	* version.h, configure.in: release version
 
-2004-07-07 16:43  iskywalker
+2004-07-07 18:43  iskywalker
 
 	* Makefile.windows, common.h, net_socket.h, util.c: compiling with
 	  cygwin1.dll cause central works then :(
 
-2004-07-07 11:05  iskywalker
+2004-07-07 13:05  iskywalker
 
 	* Makefile.in, aclocal.m4, configure: WMS compatibility
 
-2004-07-07 11:02  iskywalker
+2004-07-07 13:02  iskywalker
 
 	* xblast.c: WMS gcc compatibility
 
-2004-07-07 10:53  iskywalker
+2004-07-07 12:53  iskywalker
 
 	* xblast.c: [no log message]
 
-2004-07-07 10:24  iskywalker
+2004-07-07 12:24  iskywalker
 
 	* Makefile.in, Makefile.windows, aclocal.m4, com_newgame.c,
 	  com_newgame.h, configure, game_server.c, menu_network.c,
 	  server.c, server.h, xblast.coff: running scores
 
-2004-06-30 16:06  iskywalker
+2004-06-30 18:06  iskywalker
 
 	* configure, func.c, func.h, game_server.c, map.c, map.h, player.c,
 	  player.h, shrink.c: Botkey also for server and ghost integrated!
 	  one of the last epfl features missing
 
-2004-06-29 17:09  iskywalker
+2004-06-29 19:09  iskywalker
 
 	* com_newgame.c: bufferoverflow check inserted
 
-2004-06-28 13:36  iskywalker
+2004-06-28 15:36  iskywalker
 
 	* bomb.c: Split click
 
-2004-06-28 10:16  iskywalker
+2004-06-28 12:16  iskywalker
 
 	* game_client.c: more comments
 
-2004-06-28 10:15  iskywalker
+2004-06-28 12:15  iskywalker
 
 	* player.c:  fixed bug with speed 2 which make initRun dont work,
 	  maybe there is a better way to solve it
 
-2004-06-27 01:40  iskywalker
+2004-06-27 03:40  iskywalker
 
 	* game_client.c, game_server.c: More comments better debug layout
 
-2004-06-26 19:09  iskywalker
+2004-06-26 21:09  iskywalker
 
 	* intro.c: [no log message]
 
-2004-06-26 03:36  iskywalker
+2004-06-26 05:36  iskywalker
 
 	* player.c, player.h: rever 2 illness
 
-2004-06-26 03:35  iskywalker
+2004-06-26 05:35  iskywalker
 
 	* mi_tool.h: keep compiler happy
 
-2004-06-26 03:34  iskywalker
+2004-06-26 05:34  iskywalker
 
 	* map.c: walk through walls check function
 
-2004-06-26 03:33  iskywalker
+2004-06-26 05:33  iskywalker
 
 	* image.c: MS compatibility
 
-2004-06-26 03:33  iskywalker
+2004-06-26 05:33  iskywalker
 
 	* game_local.c: bot key
 
-2004-06-26 03:31  iskywalker
+2004-06-26 05:31  iskywalker
 
 	* game.c: reverse 2 illness
 
-2004-06-26 03:30  iskywalker
+2004-06-26 05:30  iskywalker
 
 	* func.c: speed 2 extra
 
-2004-06-26 03:29  iskywalker
+2004-06-26 05:29  iskywalker
 
 	* com_dgram.h: MS compatibility
 
-2004-06-26 03:28  iskywalker
+2004-06-26 05:28  iskywalker
 
 	* bot.c: improved ai!
 
-2004-06-26 03:23  iskywalker
+2004-06-26 05:23  iskywalker
 
 	* common.h, debug.c, ini_file.h, net_socket.c, net_socket.h,
 	  server.c, timeval.h, util.c, xblast.c, xblastc.dsp, xblastc.dsw:
 	  MS Compiler compatibility
 
-2004-06-26 03:20  iskywalker
+2004-06-26 05:20  iskywalker
 
 	* client.c, com_central.c, com_newgame.c: MS Compiler compatibility
 
-2004-06-26 03:18  iskywalker
+2004-06-26 05:18  iskywalker
 
 	* bomb.c: (Con)Destruction bombs fixed i hope it depends on
 	  compiler :(
 
-2004-06-25 15:44  iskywalker
+2004-06-25 17:44  iskywalker
 
 	* README: updated a little
 
-2004-06-25 15:44  iskywalker
+2004-06-25 17:44  iskywalker
 
 	* INSTALL: configure install not xmkmf!
 
-2004-06-25 13:21  iskywalker
+2004-06-25 15:21  iskywalker
 
 	* game.c: Fixed draw game problems with one life
 
-2004-06-25 11:03  iskywalker
+2004-06-25 13:03  iskywalker
 
 	* configure.in, version.h: Thats why .19 shouldnt be release, this
 	  is the developer version, and .21 should be than released.  That
 	  is why the cvs version is .20 now!
 
-2004-06-24 20:00  iskywalker
+2004-06-24 22:00  iskywalker
 
 	* image.c: changed so that datadir works
 
-2004-06-24 20:00  iskywalker
+2004-06-24 22:00  iskywalker
 
 	* util.c: changed so that --with-otherdatadir really work
 
-2004-06-24 15:53  iskywalker
+2004-06-24 17:53  iskywalker
 
 	* bomb.c: ptr!=NULL problem solved with specialbombdestruction and
 	  specialbombconstruction!
 
-2004-06-21 11:25  alfie
+2004-06-21 13:25  alfie
 
 	* Makefile.am, Makefile.in, configure, configure.in, w32_tile.c:
 	  build files: Some fixes requested by iskywalke.  w32_tile.c:
 	  wrong variable used.
 
-2004-06-08 12:29  iskywalker
+2004-06-08 14:29  iskywalker
 
 	* w32_event.c: ALu's mods
 
-2004-06-06 04:30  iskywalker
+2004-06-06 06:30  iskywalker
 
 	* player.h: jump extra! new look (Alfie freundlicher Stil)
 
-2004-06-06 04:24  iskywalker
+2004-06-06 06:24  iskywalker
 
 	* player.c: jump extra! new look (Alfie freundlicher Stil)
 
-2004-06-06 04:24  iskywalker
+2004-06-06 06:24  iskywalker
 
 	* status.c: SMPF support for victory
 
-2004-06-06 04:24  iskywalker
+2004-06-06 06:24  iskywalker
 
 	* w32_tile.c, x11c_tile.c: SMPF support
 
-2004-06-06 04:19  iskywalker
+2004-06-06 06:19  iskywalker
 
 	* bomb.c, bomb.h, func.c: jump extra! new look (Alfie freundlicher
 	  Stil)
 
-2004-06-05 18:49  iskywalker
+2004-06-05 20:49  iskywalker
 
 	* configure.in: make some correctures (english and layout)
 
-2004-06-05 18:46  iskywalker
+2004-06-05 20:46  iskywalker
 
 	* Makefile.am: sounds in install mode added
 
-2004-06-05 18:27  iskywalker
+2004-06-05 20:27  iskywalker
 
 	* Makefile.am: put Imakefile in any case in dist.
 
-2004-06-05 18:10  iskywalker
+2004-06-05 20:10  iskywalker
 
 	* Makefile.am: *.h added to sources w32 added time.c timeval.h new
 	  layout
 
-2004-06-05 18:08  iskywalker
+2004-06-05 20:08  iskywalker
 
 	* xblast.c: make Skywalker happy
 
-2004-06-05 18:08  iskywalker
+2004-06-05 20:08  iskywalker
 
 	* game_server.c: Make Alfie happy
 
-2004-06-05 16:54  alfie
+2004-06-05 18:54  alfie
 
 	* Makefile.in: Udated Makefile.in according to Makefile.am.
 
-2004-06-04 21:42  iskywalker
+2004-06-04 23:42  iskywalker
 
 	* bot.c, map.c, map.h: [no log message]
 
-2004-06-04 21:19  iskywalker
+2004-06-04 23:19  iskywalker
 
 	* game_server.c: [no log message]
 
-2004-06-04 21:09  iskywalker
+2004-06-04 23:09  iskywalker
 
 	* Makefile.am: Made automake happy
 
-2004-06-04 13:29  alfie
+2004-06-04 15:29  alfie
 
 	* Makefile.in, aclocal.m4, configure: Update them after the changes
 	  in Makefile.am, and with some more recent autoconf/aclocal
 	  version.
 
-2004-06-04 13:15  alfie
+2004-06-04 15:15  alfie
 
 	* game_client.c: Some identation fixups.
 
-2004-06-04 11:27  iskywalker
+2004-06-04 13:27  iskywalker
 
 	* AUTHORS, NEWS: first commit
 
-2004-06-04 11:24  iskywalker
+2004-06-04 13:24  iskywalker
 
 	* Makefile.in, Makefile.windows, aclocal.m4, bot.c, configure,
 	  game.c, game_server.c, menu_network.h, mi_stat.c, net_tele.c,
 	  network.h, xblast.c: updating my xblast to cvs. (some little
 	  changes)
 
-2004-06-04 11:19  iskywalker
+2004-06-04 13:19  iskywalker
 
 	* configure.in: --enable-SMPF
 
-2004-06-04 10:02  iskywalker
+2004-06-04 12:02  iskywalker
 
 	* configure.in, version.h: .19
 
-2004-06-04 09:09  iskywalker
+2004-06-04 11:09  iskywalker
 
 	* network.h: SMPF xblasts can join non SMPF!
 
-2004-06-03 21:15  iskywalker
+2004-06-03 23:15  iskywalker
 
 	* x11c_pixmap.c: SMPF better supported
 
-2004-06-03 21:14  iskywalker
+2004-06-03 23:14  iskywalker
 
 	* bomb.c: int defaultBMP not more static
 
-2004-06-03 21:11  iskywalker
+2004-06-03 23:11  iskywalker
 
 	* game_server.c: SMPF support and Async fix
 
-2004-06-03 21:11  iskywalker
+2004-06-03 23:11  iskywalker
 
 	* game_client.c: SMPF support
 
-2004-06-03 21:11  iskywalker
+2004-06-03 23:11  iskywalker
 
 	* map.c: ALu SMPF patch
 
-2004-06-03 21:09  iskywalker
+2004-06-03 23:09  iskywalker
 
 	* w32_event.c, w32_pixmap.c: ALu patch
 
-2004-06-03 21:07  iskywalker
+2004-06-03 23:07  iskywalker
 
 	* network.h: SMPF support for async
 
-2004-06-03 17:09  iskywalker
+2004-06-03 19:09  iskywalker
 
 	* player.c: crash cause disconnected player (uninitialized position
 	  field) fixed
 
-2004-06-02 14:17  iskywalker
+2004-06-02 16:17  iskywalker
 
 	* menu_network.c: 10 seconds refresh
 
-2004-06-02 12:19  iskywalker
+2004-06-02 14:19  iskywalker
 
 	* Makefile.am: repaired xbsndsrv compiling flags
 
-2004-06-01 19:07  iskywalker
+2004-06-01 21:07  iskywalker
 
 	* configure.in: _XBLAST added to MINI
 
-2004-06-01 18:36  iskywalker
+2004-06-01 20:36  iskywalker
 
 	* player.c: revive extras fixed!
 
-2004-06-01 16:51  iskywalker
+2004-06-01 18:51  iskywalker
 
 	* menu_network.c: change refresh time to 5 seconds
 
-2004-06-01 15:39  iskywalker
+2004-06-01 17:39  iskywalker
 
 	* configure: updated to new configure.in
 
-2004-06-01 15:38  iskywalker
+2004-06-01 17:38  iskywalker
 
 	* configure.in: enable-mini and bug fixed in enable-sound
 
-2004-05-28 12:15  iskywalker
+2004-05-28 14:15  iskywalker
 
 	* client.c: nextGame =NULL if lastGame and firstGame=NULL why not
 	  nextGame .
 
-2004-05-28 12:15  iskywalker
+2004-05-28 14:15  iskywalker
 
 	* xbsndsrv.c: Gamedatadir included also for it
 
-2004-05-16 16:52  iskywalker
+2004-05-16 18:52  iskywalker
 
 	* x11_common.h: aix compatibility
 
-2004-05-14 10:00  alfie
+2004-05-14 12:00  alfie
 
 	* Makefile.w32, Makefile.windows, action.c, action.h, atom.c,
 	  atom.h, bomb.c, bomb.h, bot.c, bot.h, browse.c, browse.h,
@@ -3671,45 +2004,45 @@
 	  x11c_tile.c, x11c_tile.h, xblast.c, xblast.h, xblast.man,
 	  xbsndsrv.c: Updated FSF address.  Removed $Log$ entries....
 
-2004-05-13 19:31  alfie
+2004-05-13 21:31  alfie
 
 	* net_tele.c: Fixed spacing.
 
-2004-05-13 19:30  alfie
+2004-05-13 21:30  alfie
 
 	* net_socket.h: Fixed #ifdef
 
-2004-05-13 19:27  alfie
+2004-05-13 21:27  alfie
 
 	* net_dgram.c: Fixed spacing
 
-2004-05-13 19:16  alfie
+2004-05-13 21:16  alfie
 
 	* menu_extras.c: fb's changes commited back in
 
-2004-05-13 18:56  alfie
+2004-05-13 20:56  alfie
 
 	* game_client.c: Readded deleted space
 
-2004-05-13 17:55  alfie
+2004-05-13 19:55  alfie
 
 	* version.h_norm[DEAD], version.h_smpf[DEAD], Imakefile.norm[DEAD],
 	  Imakefile.smpf[DEAD]: No, we don't need those!
 
-2004-05-13 14:23  alfie
+2004-05-13 16:23  alfie
 
 	* x11c_tile.c, xblast.h: Aligned spacing.
 
-2004-05-13 12:54  alfie
+2004-05-13 14:54  alfie
 
 	* ini_file.c: No, removed #ifdef GAME_DATADIR as a whole, like
 	  discussed with fbenites
 
-2004-05-13 12:32  alfie
+2004-05-13 14:32  alfie
 
 	* Makefile.in, aclocal.m4, configure: Updated auto stuff again.
 
-2004-05-13 12:24  iskywalker
+2004-05-13 14:24  iskywalker
 
 	* COPYING, Imakefile, Imakefile.norm, Imakefile.smpf, Makefile.am,
 	  Makefile.in, README, aclocal.m4, action.h, atom.c, atom.h,
@@ -3722,50 +2055,50 @@
 	  w32_event.c, w32_joystick.c, w32_sndsrv.c, w32_socket.c,
 	  w32_tile.c, x11_sound.c, x11c_tile.c, xblast.c, xblast.h: .18
 
-2004-05-13 12:19  iskywalker
+2004-05-13 14:19  iskywalker
 
 	* time.c, timeval.h, version.h_norm, version.h_smpf, xblast.coff,
 	  xblast.man: some files xblast need to compile under windows and
 	  help files
 
-2004-05-13 12:17  iskywalker
+2004-05-13 14:17  iskywalker
 
 	* Makefile.windows: my cygwin compile file
 
-2004-05-13 12:16  iskywalker
+2004-05-13 14:16  iskywalker
 
 	* xbsndsrv.c: sound server
 
-2004-05-13 12:01  alfie
+2004-05-13 14:01  alfie
 
 	* ini_file.c: Added missing , -- problem noticed by Kruno, thanks!!
 
-2004-05-13 09:20  alfie
+2004-05-13 11:20  alfie
 
 	* Makefile.in, aclocal.m4, configure: Run autogen.sh and updated
 	  the scripts
 
-2004-05-10 15:31  alfie
+2004-05-10 17:31  alfie
 
 	* missing: Missing missing (autotools script)
 
-2004-05-10 15:06  iskywalker
+2004-05-10 17:06  iskywalker
 
 	* Makefile.am: xbsndsrv changed
 
-2004-05-10 15:04  iskywalker
+2004-05-10 17:04  iskywalker
 
 	* Makefile.am: initial import
 
-2004-05-10 14:57  iskywalker
+2004-05-10 16:57  iskywalker
 
 	* configure: Configure for Alfie...
 
-2004-05-10 12:03  iskywalker
+2004-05-10 14:03  iskywalker
 
 	* configure.in: LEX and YACC removed
 
-2004-05-10 08:45  alfie
+2004-05-10 10:45  alfie
 
 	* COPYING, Changelog, Imakefile, Imakefile.norm, Imakefile.smpf,
 	  Makefile.in, Makefile.w32, README, acinclude.m4, aclocal.m4,
@@ -3825,16 +2158,16 @@
 	  xblast-ted.ico, xblast.c, xblast.h, xblast.ico, xblast.rc:
 	  Updated to 2.9.18.
 
-2004-05-09 21:06  alfie
+2004-05-09 23:06  alfie
 
 	* Makefile.16[DEAD], Makefile.16.mini[DEAD], Makefile.mini[DEAD],
 	  Makefile.normal[DEAD], makeepfl.bat[DEAD]: Not really used.
 
-2004-05-09 18:23  alfie
+2004-05-09 20:23  alfie
 
 	* version.h_norm[DEAD]: Not used, removed it.
 
-2004-05-05 15:58  alfie
+2004-05-05 17:58  alfie
 
 	* action.c, action.h, atom.c, atom.h, bomb.c, bomb.h, browse.c,
 	  browse.h, central.c, central.h, cfg_control.c, cfg_control.h,

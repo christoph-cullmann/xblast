@@ -1,7 +1,7 @@
 /*
  * file com_central.h - central answers to browse from clients
  *
- * $Id: com_central.h,v 1.7 2006/02/10 15:07:42 fzago Exp $
+ * $Id: com_central.h,v 1.4 2005/01/23 14:19:59 lodott Exp $
  *
  * Program XBLAST
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -24,6 +24,9 @@
 #ifndef XBLAST_COM_CENTRAL_H
 #define XBLAST_COM_CENTRAL_H
 
+#include "com.h"
+#include "cfg_game.h"
+
 /*
  * type definitions
  */
@@ -31,9 +34,9 @@
 /*
  * global prototypes
  */
-extern int C2B_GetOpenGames (void);
-extern void C2B_ClearOldGames (void);
-extern XBComm *C2B_CreateComm (unsigned short centralPort);
+extern int C2B_GetOpenGames();
+extern void C2B_ClearOldGames();
+extern XBComm* C2B_CreateComm (unsigned short centralPort);
 
 #endif
 /*

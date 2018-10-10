@@ -1,9 +1,9 @@
 /*
- * cfg_main.h - managing configuration files
+ * cfg_main.h - managing configuration files 
  *
- * $Id: cfg_main.h,v 1.6 2006/02/09 21:21:23 fzago Exp $
- *
- * Program XBLAST
+ * $Id: cfg_main.h,v 1.4 2004/08/07 18:27:44 lodott Exp $
+ * 
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,16 +23,17 @@
 #ifndef XBLAST_CFG_MAIN_H
 #define XBLAST_CFG_MAIN_H
 
+#include "xblast.h"
+
 /*
  * global types
  */
-typedef enum
-{
-	CT_Local = 0,
-	CT_Remote,
-	CT_Demo,
-	CT_Central,
-	NUM_CT
+typedef enum {
+  CT_Local   = 0,
+  CT_Remote,
+  CT_Demo,
+  CT_Central,
+  NUM_CT
 } CFGType;
 
 /*

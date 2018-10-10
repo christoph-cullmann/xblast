@@ -1,9 +1,9 @@
 /*
  * file color.h - color and image manipulation
  *
- * $Id: color.h,v 1.6 2006/02/09 21:21:23 fzago Exp $
+ * $Id: color.h,v 1.4 2005/01/11 17:36:29 iskywalker Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -22,6 +22,11 @@
  */
 #ifndef _COLOR_H
 #define _COLOR_H
+
+#ifndef HAVECONFIG_H
+#include "config.h"
+#define HAVECONFIG_H
+#endif
 
 /*
  * type definitions
@@ -34,10 +39,10 @@ typedef unsigned short XBColor;
 #define XBCOLOR_DEPTH 31
 
 #define SET_COLOR(r,g,b) ((XBColor) (((r) & 0x001F) << 10) | (XBColor) (((g) & 0x001F) <<  5) | (XBColor)  ((b) & 0x001F) )
-
-#define GET_RED(c)   (((c) >> 10) & 0x001F)
-#define GET_GREEN(c) (((c) >>  5) & 0x001F)
-#define GET_BLUE(c)  ( (c)        & 0x001F)
+			
+#define GET_RED(c)   (((c) >> 10) & 0x001F)  
+#define GET_GREEN(c) (((c) >>  5) & 0x001F)  
+#define GET_BLUE(c)  ( (c)        & 0x001F)  
 
 /*
  * predefined colors
@@ -57,7 +62,7 @@ typedef unsigned short XBColor;
 #define COLOR_FIRE_BRICK_1     	SET_COLOR (31,  6,  6)
 #define COLOR_FOREST_GREEN     	SET_COLOR ( 4, 17,  4)
 #define COLOR_GOLD             	SET_COLOR (31, 26,  0)
-#define COLOR_GRAY_25          	SET_COLOR ( 8,  8,  8)
+#define COLOR_GRAY_25          	SET_COLOR ( 8,  8,  8) 
 #define COLOR_GRAY_75          	SET_COLOR (24, 24, 24)
 #define COLOR_GREEN_YELLOW     	SET_COLOR (21, 31,  5)
 #define COLOR_INDIAN_RED       	SET_COLOR (25, 11, 11)
@@ -80,10 +85,10 @@ typedef unsigned short XBColor;
 /*
  * global prototypes
  */
-extern void CchToPpm (unsigned char *ppm, int width, int height,
-					  XBColor fg, XBColor bg, XBColor add);
+extern void CchToPpm (unsigned char *ppm, int width, int height, 
+                      XBColor fg, XBColor bg, XBColor add);
 extern void EpmToPpm (unsigned char *epm, unsigned char *ppm, int width, int height,
-					  int ncolors, const XBColor * color);
+		      int ncolors, const XBColor *color);
 extern const char *ColorToString (XBColor color);
 extern XBColor StringToColor (const char *string);
 extern XBColor LighterColor (XBColor color);

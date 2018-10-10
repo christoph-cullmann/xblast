@@ -1,7 +1,7 @@
 /*
  * file w32_msgbox.c - message boxes 
  *
- * $Id: w32_msgbox.c,v 1.4 2006/02/19 13:33:01 lodott Exp $
+ * $Id: w32_msgbox.c,v 1.2 2004/05/14 10:00:36 alfie Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,7 +20,6 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "xblast.h"
 #include "gui.h"
 
 #include "w32_common.h"
@@ -33,13 +32,13 @@ static char msgText[1024];
 void
 GUI_ErrorMessage (const char *fmt, ...)
 {
-	va_list argList;
+  va_list argList;
 
-	va_start (argList, fmt);
-	vsprintf (msgText, fmt, argList);
-	va_end (argList);
-	MessageBox (window, msgText, "XBlast Error", MB_ICONSTOP | MB_OK);
-}								/* GUI_ErrorMessage */
+  va_start (argList, fmt);
+  vsprintf (msgText, fmt, argList);
+  va_end (argList);
+  MessageBox (window, msgText, "XBlast Error", MB_ICONSTOP | MB_OK);
+} /* GUI_ErrorMessage */
 
 /*
  * end of file w32_msgbox.c

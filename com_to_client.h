@@ -1,9 +1,9 @@
 /*
  * file com_to_client.h - handle communications with clients
  *
- * $Id: com_to_client.h,v 1.11 2006/02/09 21:21:23 fzago Exp $
+ * $Id: com_to_client.h,v 1.8 2004/10/06 23:33:28 lodott Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,12 +23,19 @@
 #ifndef _COM_TO_CLIENT_H
 #define _COM_TO_CLIENT_H
 
+#include "atom.h"
+#include "com_base.h"
+#include "net_socket.h"
+#include "network.h"
+#include "ini_file.h"
+#include "chat.h"
+
 /*
  * global prototypes
  */
 
 /* constructor */
-extern XBComm *S2C_CreateComm (const XBSocket * socket);
+extern XBComm *S2C_CreateComm (const XBSocket *socket);
 
 /* get local data */
 extern XBBool S2C_Connected (unsigned id);
@@ -43,17 +50,16 @@ extern void S2C_SendDgramPort (unsigned id, unsigned short port);
 extern void S2C_QueryGameConfig (unsigned id);
 extern void S2C_QueryPlayerConfig (unsigned id, int player);
 extern void S2C_SendHostState (unsigned id, unsigned hostId, unsigned state);
-extern void S2C_SendTeamState (unsigned id, unsigned host, unsigned player, XBTeamState team);
+extern void S2C_SendTeamState (unsigned id, unsigned host, unsigned player, unsigned team);
 extern void S2C_SendHostStateReq (unsigned id, unsigned who, unsigned hostId, unsigned state);
-extern void S2C_SendTeamStateReq (unsigned id, unsigned who, unsigned hostId, unsigned player,
-								  XBTeamState team);
-extern void S2C_SendChat (unsigned id, XBChat * chat);
+extern void S2C_SendTeamStateReq (unsigned id, unsigned who, unsigned hostId, unsigned player, unsigned team);
+extern void S2C_SendChat (unsigned id, XBChat *chat);
 extern void S2C_HostDisconnected (unsigned id, unsigned hostID);
 extern void S2C_Disconnect (unsigned id);
 extern void S2C_StartGame (unsigned id);
 extern void S2C_SendRandomSeed (unsigned id, unsigned seed);
 extern void S2C_Sync (unsigned id, XBNetworkEvent event);
-extern void S2C_SendLevelConfig (unsigned id, const DBRoot * db);
+extern void S2C_SendLevelConfig (unsigned id, const DBRoot *db);
 extern void S2C_SendLevelActivate (unsigned id);
 extern void S2C_SendLevelReset (unsigned id);
 extern void S2C_SendLevelAsync (unsigned id);
@@ -63,3 +69,8 @@ extern void S2C_SendLevelSync (unsigned id);
 /*
  * end of file com_to_client.h
  */
+
+
+
+
+

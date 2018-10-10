@@ -1,9 +1,9 @@
 /*
  * file mi_toggle.h -
  *
- * $Id: mi_toggle.h,v 1.5 2006/02/09 21:21:24 fzago Exp $
+ * $Id: mi_toggle.h,v 1.3 2004/05/14 10:00:35 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,8 +23,10 @@
 #ifndef _MI_TOGGLE_H
 #define _MI_TOGGLE_H
 
-extern XBMenuItem *MenuCreateToggle (int x, int y, int w, const char *text, XBBool * pState);
-extern void MenuDeleteToggle (XBMenuItem * item);
+#include "mi_base.h"
+
+extern XBMenuItem *MenuCreateToggle (int x, int y, int w, const char *text, XBBool *pState);
+extern void MenuDeleteToggle (XBMenuItem *item);
 
 #endif
 /*

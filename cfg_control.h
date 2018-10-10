@@ -1,9 +1,9 @@
 /*
  * cfg_control.h - keyboard and joystick configuration data
+ * 
+ * $Id: cfg_control.h,v 1.6 2004/08/04 08:08:39 iskywalker Exp $
  *
- * $Id: cfg_control.h,v 1.9 2006/02/09 21:21:23 fzago Exp $
- *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,44 +23,41 @@
 #ifndef _CFG_CONTROL_H
 #define _CFG_CONTROL_H
 
+#include "xblast.h"
+#include "event.h"
+
 /*
  * type definitions
  */
-#define NUM_KEYB_CONTROLS  2
-
-/* constant assignment of control to event type */
-const XBEventCode keyEventType[NUM_KEYB_CONTROLS];
 
 /* ingame controls for editing*/
-typedef struct
-{
-	XBAtom keyUp;
-	XBAtom keyDown;
-	XBAtom keyLeft;
-	XBAtom keyRight;
-	XBAtom keyStop;
-	XBAtom keyBomb;
-	XBAtom keySpecial;
-	XBAtom keyPause;
-	XBAtom keyAbort;
-	XBAtom keyAbortCancel;
-	/* Skywalker */
-	XBAtom keyLaola;
-	XBAtom keyLooser;
-	XBAtom keyBot;
-	XBAtom keyChatStart;
-	XBAtom keyChatSend;
-	XBAtom keyChatCancel;
-	XBAtom keyChatChangeReceiver;
-	/* */
+typedef struct {
+  XBAtom keyUp;
+  XBAtom keyDown;
+  XBAtom keyLeft;
+  XBAtom keyRight;
+  XBAtom keyStop;
+  XBAtom keyBomb;
+  XBAtom keySpecial;
+  XBAtom keyPause;
+  XBAtom keyAbort;
+  XBAtom keyAbortCancel;
+    /* Skywalker */
+  XBAtom keyLaola;
+  XBAtom keyLooser;
+  XBAtom keyBot;
+  XBAtom keyChatStart;
+  XBAtom keyChatSend;
+  XBAtom keyChatCancel;
+  XBAtom keyChatChangeReceiver;
+    /* */
 } CFGControlKeyboard;
 
 /* key tables for GUI */
-typedef struct
-{
-	const char *keysym;
-	XBEventCode eventCode;
-	int eventData;
+typedef struct {
+  const char  *keysym;
+  XBEventCode  eventCode;
+  int          eventData;
 } CFGKeyTable;
 
 /*
@@ -69,10 +66,9 @@ typedef struct
 extern void LoadControlConfig (void);
 extern void SaveControlConfig (void);
 extern void FinishControlConfig (void);
-extern void StoreControlKeyboard (XBEventCode type, const CFGControlKeyboard * ctrl);
-extern XBBool RetrieveControlKeyboard (XBEventCode type, CFGControlKeyboard * ctrl);
+extern void StoreControlKeyboard (XBEventCode type, const CFGControlKeyboard *ctrl);
+extern XBBool RetrieveControlKeyboard (XBEventCode type, CFGControlKeyboard *ctrl);
 extern const CFGKeyTable *GetGameKeyPressTable (void);
-extern const CFGKeyTable *GetChatKeyTable (void);
 extern const CFGKeyTable *GetGameKeyReleaseTable (void);
 extern const CFGKeyTable *GetMenuKeyTable (void);
 

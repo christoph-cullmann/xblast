@@ -1,7 +1,7 @@
 /*
  * cfg_main.c - managing configuration files 
  *
- * $Id: cfg_main.c,v 1.6 2006/02/09 21:21:23 fzago Exp $
+ * $Id: cfg_main.c,v 1.4 2004/08/07 18:27:44 lodott Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,8 +20,18 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+#include "cfg_main.h"
 
-#include "xblast.h"
+#include "atom.h"
+#include "cfg_demo.h"
+#include "cfg_player.h"
+#include "cfg_level.h"
+#include "cfg_game.h"
+#include "cfg_control.h"
+#include "cfg_stat.h"
+#include "cfg_xblast.h"
+
+#include "gui.h"
 
 /*
  * load all configurations
@@ -29,34 +39,34 @@
 void
 InitConfig (void)
 {
-	GUI_InitAtoms ();
-	InitDefaultAtoms ();
-	/* load databases */
-	LoadXBlastConfig ();
-	LoadDemoConfig ();
-	LoadPlayerConfig ();
-	LoadGameConfig ();
-	LoadLevelConfig ();
-	LoadControlConfig ();
-	LoadStatConfig ();
-	GUI_LoadConfig ();
-}								/* InitConfig */
+  GUI_InitAtoms ();
+  InitDefaultAtoms ();
+  /* load databases */
+  LoadXBlastConfig ();
+  LoadDemoConfig ();
+  LoadPlayerConfig ();
+  LoadGameConfig (); 
+  LoadLevelConfig ();
+  LoadControlConfig ();
+  LoadStatConfig ();
+  GUI_LoadConfig ();
+} /* InitConfig */
 
 /*
  * store all configurations
- */
+ */ 
 void
 SaveConfig (void)
 {
-	SaveXBlastConfig ();
-	SaveDemoConfig ();
-	SavePlayerConfig ();
-	SaveGameConfig ();
-	SaveLevelConfig ();
-	SaveControlConfig ();
-	SaveStatConfig ();
-	GUI_SaveConfig ();
-}								/* FinishConfig */
+  SaveXBlastConfig ();
+  SaveDemoConfig ();
+  SavePlayerConfig ();
+  SaveGameConfig ();
+  SaveLevelConfig ();
+  SaveControlConfig ();
+  SaveStatConfig ();
+  GUI_SaveConfig ();
+} /* FinishConfig */
 
 /*
  * check configurations
@@ -64,8 +74,8 @@ SaveConfig (void)
 XBBool
 CheckConfig (void)
 {
-	return CheckAllLevelConfigs ();
-}								/* CheckConfig */
+  return CheckAllLevelConfigs();
+} /* CheckConfig */
 
 /*
  * store all configurations
@@ -73,15 +83,15 @@ CheckConfig (void)
 void
 FinishConfig (void)
 {
-	FinishXBlastConfig ();
-	FinishDemoConfig ();
-	FinishPlayerConfig ();
-	FinishGameConfig ();
-	FinishLevelConfig ();
-	FinishControlConfig ();
-	FinishStatConfig ();
-	GUI_FinishConfig ();
-}								/* FinishConfig */
+  FinishXBlastConfig ();
+  FinishDemoConfig ();
+  FinishPlayerConfig ();
+  FinishGameConfig ();
+  FinishLevelConfig ();
+  FinishControlConfig ();
+  FinishStatConfig ();
+  GUI_FinishConfig ();
+} /* FinishConfig */
 
 /*
  * end of file cfg_main.c

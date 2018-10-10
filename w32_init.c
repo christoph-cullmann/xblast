@@ -1,7 +1,7 @@
 /*
  * file w32_init.c - initialze Win32-graphics engine
  *
- * $Id: w32_init.c,v 1.4 2006/02/19 13:33:01 lodott Exp $
+ * $Id: w32_init.c,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,8 +20,6 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-
-#include "xblast.h"
 #include "gui.h"
 
 #include "w32_config.h"
@@ -46,60 +44,61 @@
 static XBBool
 InitWindow (const char *title)
 {
-	RECT cRect;
-	RECT wRect;
-	int x, y;
-	int width, height;
+  RECT cRect;
+  RECT wRect;
+  int  x, y;
+  int  width, height;
+  
+  static WNDCLASS windowClass;
 
-	static WNDCLASS windowClass;
-
-	/* register xblast class */
-	windowClass.style = 0;
-	windowClass.lpfnWndProc = WindowProc;
-	windowClass.cbClsExtra = 0;
-	windowClass.cbWndExtra = 0;
-	windowClass.hInstance = instance;
-	windowClass.hIcon = LoadIcon (instance, xblastClass);
-	windowClass.hCursor = LoadCursor (NULL, IDC_ARROW);
-	windowClass.hbrBackground = GetStockObject (BLACK_BRUSH);
-	windowClass.lpszClassName = xblastClass;
-	if (0 == RegisterClass (&windowClass)) {
-		return XBFalse;
-	}
-	/* retrieve old geonetry */
-	RetrieveWindowRect (&wRect);
-	/* now create the window */
-	window = CreateWindow (xblastClass, title,
-						   WS_OVERLAPPED | WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX,
-						   CW_USEDEFAULT, CW_USEDEFAULT,
-						   wRect.right - wRect.left,
-						   wRect.bottom - wRect.top, NULL, NULL, instance, NULL);
-	if (window == NULL) {
-		return XBFalse;
-	}
-	/* now show it (may be moved elsewhere) */
-	ShowWindow (window, SW_SHOWDEFAULT);
-	UpdateWindow (window);
-	/* set window size correctly */
-	if (GetClientRect (window, &cRect)) {
-		x = wRect.left;
-		y = wRect.top;
-		width = wRect.right - wRect.left;
-		height = wRect.bottom - wRect.top;
-		/* adjust width and height, if client region has wrong size */
-		if (PIXW != cRect.right - cRect.left) {
-			width -= cRect.right - cRect.left - PIXW;
-		}
-		if (PIXH + SCOREH != cRect.bottom - cRect.top) {
-			height -= cRect.bottom - cRect.top - PIXH - SCOREH;
-		}
-		Dbg_Out ("Window geom %dx%d+%d+%d\n", width, height, x, y);
-		MoveWindow (window, x, y, width, height, TRUE);
-	}
-	/* that's all */
-	Dbg_Out ("InitWindow successful\n");
-	return XBTrue;
-}								/* InitWindow */
+  /* register xblast class */
+  windowClass.style         = 0;
+  windowClass.lpfnWndProc   = WindowProc;
+  windowClass.cbClsExtra    = 0;
+  windowClass.cbWndExtra    = 0;
+  windowClass.hInstance     = instance;
+  windowClass.hIcon         = LoadIcon (instance, xblastClass);
+  windowClass.hCursor       = LoadCursor (NULL, IDC_ARROW);
+  windowClass.hbrBackground = GetStockObject (BLACK_BRUSH);
+  windowClass.lpszClassName = xblastClass;
+  if (0 == RegisterClass (&windowClass) ) {
+    return XBFalse;
+  }
+  /* retrieve old geonetry */
+  RetrieveWindowRect (&wRect);
+  /* now create the window */
+  window = CreateWindow (xblastClass, title, 
+			 WS_OVERLAPPED | WS_SYSMENU | WS_CAPTION | WS_MINIMIZEBOX,
+			 CW_USEDEFAULT, CW_USEDEFAULT, 
+                         wRect.right - wRect.left, 
+                         wRect.bottom - wRect.top, 
+			 NULL, NULL, instance, NULL);
+  if (window == NULL) {
+    return XBFalse;
+  }
+  /* now show it (may be moved elsewhere) */
+  ShowWindow (window, SW_SHOWDEFAULT);
+  UpdateWindow (window);
+  /* set window size correctly */
+  if (GetClientRect (window, &cRect)) {
+    x      = wRect.left;
+    y      = wRect.top;
+    width  = wRect.right  - wRect.left;
+    height = wRect.bottom - wRect.top;
+    /* adjust width and height, if client region has wrong size */
+    if (PIXW != cRect.right - cRect.left) {
+      width -= cRect.right - cRect.left - PIXW;
+    }
+    if (PIXH + SCOREH != cRect.bottom - cRect.top) {
+      height -=  cRect.bottom - cRect.top - PIXH - SCOREH;
+    }
+    Dbg_Out ("Window geom %dx%d+%d+%d\n", width, height, x, y);
+    MoveWindow (window, x, y, width, height, TRUE);
+  }
+  /* that's all */
+  Dbg_Out ("InitWindow successful\n");
+  return XBTrue;
+} /* InitWindow */
 
 /*
  * local function: FinishWindow 
@@ -108,17 +107,17 @@ InitWindow (const char *title)
 static void
 FinishWindow (void)
 {
-	RECT rect;
+  RECT rect;
 
-	/* store last position */
-	if (GetWindowRect (window, &rect)) {
-		StoreWindowRect (&rect);
-	}
-	/* delete window */
-	DestroyWindow (window);
-	/* unregister window class */
-	UnregisterClass (xblastClass, instance);
-}								/* FinishWindow */
+  /* store last position */
+  if (GetWindowRect (window, &rect) ) {
+    StoreWindowRect (&rect);
+  }
+  /* delete window */
+  DestroyWindow (window);
+  /* unregister window class */
+  UnregisterClass (xblastClass, instance);
+} /* FinishWindow */
 
 /*
  * global function:  GUI_Init
@@ -130,46 +129,46 @@ FinishWindow (void)
 XBBool
 GUI_Init (int argc, char *argv[])
 {
-	/* get program instance */
-	instance = GetModuleHandleA (0);
-	/* create game window */
-	if (!InitWindow ("XBlast TNT " VERSION_STRING)) {
-		return XBFalse;
-	}
-	/* init image loading */
-	if (!InitImages ()) {
-		return XBFalse;
-	}
-	/* create bitmap for double buffering */
-	if (!InitPixmap ()) {
-		return XBFalse;
-	}
-	/* setup text output and fonts */
-	if (!InitText ()) {
-		return XBFalse;
-	}
-	/* setup tile output */
-	if (!InitTiles ()) {
-		return XBFalse;
-	}
-	/* create sprites */
-	if (!InitSprites ()) {
-		return XBFalse;
-	}
-	/* setup keysmbol table */
-	if (!InitKeysym ()) {
-		return XBFalse;
-	}
-	/* Setup Event handler */
-	if (!InitEvent ()) {
-		return XBFalse;
-	}
-	/* Setup Joystick Handler */
-	if (!InitJoystick ()) {
-		return XBFalse;
-	}
-	return XBTrue;
-}								/* GUI_Init */
+  /* get program instance */
+  instance = GetModuleHandleA (0);
+  /* create game window */
+  if (! InitWindow ("XBlast TNT " VERSION_STRING)) {
+    return XBFalse;
+  }
+  /* init image loading */
+  if (! InitImages ()) {
+    return XBFalse;
+  }
+  /* create bitmap for double buffering */
+  if (! InitPixmap ()) {
+    return XBFalse;
+  }
+  /* setup text output and fonts */
+  if (! InitText ()) {
+    return XBFalse;
+  }
+  /* setup tile output */
+  if (! InitTiles ()) {
+    return XBFalse;
+  }
+  /* create sprites */
+  if (! InitSprites ()) {
+    return XBFalse;
+  }
+  /* setup keysmbol table */
+  if (! InitKeysym ()) {
+    return XBFalse;
+  }
+  /* Setup Event handler */
+  if (! InitEvent () ) {
+    return XBFalse;
+  }
+  /* Setup Joystick Handler */
+  if (! InitJoystick ()) {
+    return XBFalse;
+  }
+  return XBTrue;
+} /* GUI_Init */
 
 /*
  * global function: GUI_Finish
@@ -178,25 +177,25 @@ GUI_Init (int argc, char *argv[])
 void
 GUI_Finish (void)
 {
-	/* cleanup joystick */
-	FinishJoystick ();
-	/* clean up event handling */
-	FinishEvent ();
-	/* setup keysmbol table */
-	FinishKeysym ();
-	/* remove all sprite bitmaps */
-	FinishSprites ();
-	/* romve all tiles */
-	FinishTiles ();
-	/* unload fonts etc */
-	FinishText ();
-	/* clear image conversion data structures */
-	FinishImages ();
-	/* remove double buffer */
-	FinishPixmap ();
-	/* remove window */
-	FinishWindow ();
-}								/* GUI_Finish */
+  /* cleanup joystick */
+  FinishJoystick ();
+  /* clean up event handling */
+  FinishEvent ();
+  /* setup keysmbol table */
+  FinishKeysym ();
+  /* remove all sprite bitmaps */
+  FinishSprites ();
+  /* romve all tiles */
+  FinishTiles ();
+  /* unload fonts etc */
+  FinishText ();
+  /* clear image conversion data structures */
+  FinishImages ();
+  /* remove double buffer */
+  FinishPixmap ();
+  /* remove window */
+  FinishWindow ();
+} /* GUI_Finish */
 
 /*
  * end of file w32_init.c

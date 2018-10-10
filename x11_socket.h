@@ -1,9 +1,9 @@
 /*
  * file x11_socket.h - true bsd sockets for xblast
  *
- * $Id: x11_socket.h,v 1.5 2006/02/09 21:21:25 fzago Exp $
+ * $Id: x11_socket.h,v 1.3 2004/05/14 10:00:36 alfie Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,14 +23,18 @@
 #ifndef XBLAST_X11_SOCKET_H
 #define XBLAST_X11_SOCKET_H
 
+#include "xblast.h"
+
+#include "gui.h"
+
 /*
  * global prototypes
  */
-extern void RegisterDisplay (int fd);
-extern XBBool SelectSockets (XBKeyboardMode kbMode, struct timeval *timeout);
-extern void RegisterJoystick (int fd);
-extern void RegisterSound (int fd);
-extern void UnregisterSound (int fd);
+extern void   RegisterDisplay  (int fd);
+extern XBBool SelectSockets    (XBKeyboardMode kbMode, struct timeval *timeout);
+extern void   RegisterJoystick (int fd);
+extern void   RegisterSound    (int fd);
+extern void   UnregisterSound  (int fd);
 
 #endif
 /*

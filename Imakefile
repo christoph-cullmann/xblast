@@ -27,7 +27,7 @@ LOCAL_LIBRARIES=$(XLIB) -lm
 EXTRA_DEFINES=-DXBLASTDIR=\"$(XBLASTDIR)\" -DAPPLOADDIR=\"$(XAPPLOADDIR)\" \
 	-DDEBUG # -DSMPF # -DDEBUG_PIXMAP
 
-SRCS=xblast.c bad_words.c util.c str_util.c intro.c introdat.c map.c sprite.c \
+SRCS=xblast.c util.c str_util.c intro.c introdat.c map.c sprite.c \
 	color.c status.c player.c action.c bomb.c bot.c event.c image.c \
 	shrink.c func.c info.c ini_file.c atom.c scramble.c \
 	demo.c debug.c level.c random.c \
@@ -48,7 +48,7 @@ SRCS=xblast.c bad_words.c util.c str_util.c intro.c introdat.c map.c sprite.c \
 	x11_common.c x11_event.c x11_atom.c x11_config.c x11_msgbox.c\
 	x11c_init.c x11c_image.c x11c_text.c x11c_tile.c x11c_sprite.c \
 	x11c_pixmap.c x11_sound.c x11_socket.c x11_joystick.c
-OBJS=xblast.o bad_words.o util.o str_util.o intro.o introdat.o map.o sprite.o \
+OBJS=xblast.o util.o str_util.o intro.o introdat.o map.o sprite.o \
 	color.o status.o player.o bomb.o bot.o action.o event.o image.o \
 	shrink.o func.o info.o ini_file.o atom.o scramble.o \
 	demo.o debug.o level.o random.o \

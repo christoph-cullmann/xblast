@@ -1,7 +1,7 @@
 /*
  * Datei w32_atom.c - atoms for database searches
  *
- * $Id: w32_atom.c,v 1.4 2006/02/19 13:33:01 lodott Exp $
+ * $Id: w32_atom.c,v 1.2 2004/05/14 10:00:35 alfie Exp $
  *
  * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
@@ -20,7 +20,6 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include "xblast.h"
 #include "gui.h"
 
 #include "w32_common.h"
@@ -38,56 +37,56 @@
 XBBool
 GUI_InitAtoms (void)
 {
-	InitAtomTable (NUM_ATOMS);
-	return XBTrue;
-}								/* InitAtoms */
+  InitAtomTable (NUM_ATOMS);
+  return XBTrue;
+} /* InitAtoms */
 
 /*
  * convert a string to an atom
  */
-XBAtom
+XBAtom 
 GUI_FormatToAtom (const char *fmt, ...)
 {
-	XBAtom atom;
-	char string[ATOM_STRING_MAX];
-	va_list argList;
+  XBAtom atom;
+  char string[ATOM_STRING_MAX];
+  va_list argList;
 #ifdef DEBUG_ATOM
-	static unsigned atomCount = 0;
+  static unsigned atomCount = 0;
 #endif
 
-	assert (fmt != NULL);
-	/* format string */
-	va_start (argList, fmt);
-	vsprintf (string, fmt, argList);
-	va_end (argList);
+  assert (fmt != NULL);
+  /* format string */
+  va_start (argList, fmt);
+  vsprintf (string, fmt, argList);
+  va_end (argList);
 #ifdef DEBUG_ATOM
-	if (0 == FindAtom (string)) {
-		atomCount++;
-		if ((atomCount & 0xF) == 0) {
-			fprintf (stderr, "atomCount=%u\n", atomCount);
-		}
-	}
+  if (0 == FindAtom (string) ) {
+    atomCount ++;
+    if ( (atomCount & 0xF) == 0) {
+      fprintf (stderr, "atomCount=%u\n", atomCount);
+    }
+  }
 #endif
-	atom = AddAtom (string);
-	return atom;
-}								/* GUI_StringToAtom */
+  atom = AddAtom (string);
+  return atom;
+} /* GUI_StringToAtom */
 
 /*
  * convert a string to an atom
  */
-XBAtom
+XBAtom 
 GUI_StringToAtom (const char *string)
 {
 #ifdef DEBUG_ATOM
-	return GUI_FormatToAtom ("%s", string);
+  return GUI_FormatToAtom ("%s", string);
 #else
-	XBAtom atom;
+  XBAtom atom;
 
-	assert (string != NULL);
-	atom = AddAtom (string);
-	return atom;
+  assert (string != NULL);
+  atom = AddAtom (string);
+  return atom;
 #endif
-}								/* GUI_StringToAtom */
+} /* GUI_StringToAtom */
 
 /*
  * convert integer to atom 
@@ -95,8 +94,8 @@ GUI_StringToAtom (const char *string)
 XBAtom
 GUI_IntToAtom (int value)
 {
-	return GUI_FormatToAtom ("%d", value);
-}								/* GUI_IntToAtom */
+  return GUI_FormatToAtom ("%d", value);
+} /* GUI_IntToAtom */
 
 /*
  * return string to an atom (transient)
@@ -104,18 +103,18 @@ GUI_IntToAtom (int value)
 const char *
 GUI_AtomToString (XBAtom atom)
 {
-	static int i = 0;
-	static char string[NUM_STATIC][ATOM_STRING_MAX];
+  static int  i = 0;
+  static char string[NUM_STATIC][ATOM_STRING_MAX];
 
-	i++;
-	if (i >= NUM_STATIC) {
-		i = 0;
-	}
-	if (0 == GetAtomName ((unsigned short)atom, string[i], sizeof (string[i]))) {
-		return NULL;
-	}
-	return string[i];
-}								/* GUI_AtomToString */
+  i ++;
+  if (i >= NUM_STATIC) {
+    i = 0;
+  }
+  if (0 == GetAtomName ((unsigned short) atom, string[i], sizeof (string[i]) ) ) {
+    return NULL;
+  }
+  return string[i];
+} /* GUI_AtomToString */
 
 /*
  * convert atom int or -1 
@@ -123,17 +122,17 @@ GUI_AtomToString (XBAtom atom)
 int
 GUI_AtomToInt (XBAtom atom)
 {
-	const char *s;
-	int value;
-
-	if (NULL == (s = GUI_AtomToString (atom))) {
-		return -1;
-	}
-	if (1 != sscanf (s, "%d", &value)) {
-		return -1;
-	}
-	return value;
-}								/* GUI_AtomToInt */
+  const char *s;
+  int value;
+  
+  if (NULL == (s = GUI_AtomToString (atom) ) ) {
+    return -1;
+  }
+  if (1 != sscanf (s, "%d", &value) ) {
+    return -1;
+  }
+  return value;
+} /* GUI_AtomToInt */
 
 /*
  * end of file w32_atom.c

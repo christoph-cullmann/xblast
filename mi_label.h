@@ -1,9 +1,9 @@
 /*
  * file mi_label.h - titles for menus
  *
- * $Id: mi_label.h,v 1.6 2006/02/09 21:21:24 fzago Exp $
- *
- * Program XBLAST
+ * $Id: mi_label.h,v 1.4 2004/05/14 10:00:35 alfie Exp $
+ * 
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -23,10 +23,12 @@
 #ifndef XBLAST_MI_LABEL_H
 #define XBLAST_MI_LABEL_H
 
+#include "mi_base.h"
+
 extern XBMenuItem *MenuCreateLabel (int x, int y, int w, const char *text);
 extern XBMenuItem *MenuCreateLabel1 (int x, int y, int w, const char *text);
 extern XBMenuItem *MenuCreateLabel2 (int x, int y, int w, const char *text);
-extern void MenuDeleteLabel (XBMenuItem * item);
+extern void MenuDeleteLabel (XBMenuItem *item);
 
 #endif
 /*

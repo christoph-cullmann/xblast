@@ -1,9 +1,9 @@
 /*
  * file SDL_image.h -
  *
- * $Id: sdl_image.h,v 1.6 2006/02/09 21:21:24 fzago Exp $
+ * $Id: sdl_image.h,v 1.3 2004/09/13 22:33:45 tenderflake Exp $
  *
- * Program XBLAST
+ * Program XBLAST 
  * (C) by Oliver Vogel (e-mail: m.vogel@ndh.net)
  *
  * This program is free software; you can redistribute it and/or modify
@@ -12,7 +12,7 @@
  * any later version
  *
  * This program is distributed in the hope that it will be entertaining,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
  * MERCHANTABILTY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
@@ -20,16 +20,23 @@
  * with this program; if not, write to the Free Software Foundation, Inc.
  * 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#ifndef XBLAST_SDL_IMAGE_H
-#define XBLAST_SDL_IMAGE_H
+#ifndef _SDL_IMAGE_H
+#define _SDL_IMAGE_H
+
+#include "sdl_common.h"
+#include <SDL/SDL.h>
+
+#include "xblast.h"
+#include "color.h"
 
 extern XBBool InitImages (void);
 extern void FinishImages (void);
 extern SDL_Surface *ReadPbmBitmap (const char *path, const char *filename);
 extern SDL_Surface *ReadRgbPixmap (const char *path, const char *filename);
-extern SDL_Surface *ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg,
-								   XBColor add);
-extern SDL_Surface *ReadEpmPixmap (const char *path, const char *filename, int n_colors,
-								   const XBColor * color);
+extern SDL_Surface *ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg, XBColor add);
+extern SDL_Surface *ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBColor *color);
 
 #endif
+/*
+ *
+ */
