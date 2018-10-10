@@ -27,6 +27,11 @@
 
 #include "common.h"
 
+/* AbsInt: control chat messages for display activity */
+#define DEACTIVATE_DISPLAY "<--off"
+#define ACTIVATE_DISPLAY "<--on"
+/* AbsInt end */
+
 /*
  * type declarations
  */

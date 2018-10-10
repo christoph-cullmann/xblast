@@ -1989,12 +1989,31 @@ NewExplosion (BMPlayer *player, int x, int y, int range, XBBool remote_controlle
 XBBool
 NewPlayerBomb (BMPlayer *ps, BMBombType type)
 {
-  return NewExplosion (ps, (ps->x + BLOCK_WIDTH/2)/BLOCK_WIDTH,
-		       (ps->y + BLOCK_HEIGHT + BLOCK_HEIGHT/2)/BLOCK_HEIGHT,
-		       (ps->illness == IllMini) ? 1 : ps->range,
-		       (ps->remote_control > 0),
-		       (ps->illness == IllMalfunction),
-		       type, 0, GoDefault );
+  /* AbsInt begin */
+  int range;
+
+  /* Default is a normal range */
+  range = ps->range;
+
+  if (ps->illness == IllMini)
+      range = 1;
+
+  if (ps->ai_revived) {
+      int x, y;
+
+      x = (ps->x + BLOCK_WIDTH/2)/BLOCK_WIDTH;
+      y = (ps->y + BLOCK_HEIGHT + BLOCK_HEIGHT/2)/BLOCK_HEIGHT;
+
+      if (CheckExplosion(x, y))
+          range = 0;
+  }
+
+  return NewExplosion (ps, (ps->x + BLOCK_WIDTH / 2) / BLOCK_WIDTH,
+                       (ps->y + BLOCK_HEIGHT + BLOCK_HEIGHT / 2) / BLOCK_HEIGHT,
+                       range,
+                       (ps->remote_control > 0),
+                       (ps->illness == IllMalfunction), type, 0, GoDefault);
+    /* AbsInt end */
 } /* NewPlayerBomb */
 
 /*

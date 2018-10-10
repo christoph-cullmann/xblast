@@ -178,6 +178,9 @@ XBAtom atomStatusBg;
 XBAtom atomStatusFg;
 XBAtom atomStatusLed;
 XBAtom atomStereo;
+/* AbsInt begin */
+XBAtom atomBeep;
+/* AbsInt end */
 XBAtom atomTeamMode;
 XBAtom atomTime;
 XBAtom atomTimeRatings;
@@ -386,6 +389,9 @@ InitDefaultAtoms (void)
   atomStatusFg          = GUI_StringToAtom ("statusFg");
   atomStatusLed         = GUI_StringToAtom ("statusLed");
   atomStereo            = GUI_StringToAtom ("stereo");
+  /* AbsInt begin */
+  atomBeep              = GUI_StringToAtom ("beep");
+  /* AbsInt end */
   atomTeamMode         	= GUI_StringToAtom ("teamMode");
   atomTime          	= GUI_StringToAtom ("time");
   atomTimeRatings       = GUI_StringToAtom ("ratings");

@@ -50,6 +50,9 @@ typedef struct {
 typedef struct {
   XBSoundMode mode;
   XBBool      stereo;
+  /* AbsInt begin */
+  XBBool beep;
+  /* AbsInt end */
 } CFGSoundSetup;
 
 

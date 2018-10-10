@@ -172,6 +172,11 @@ typedef enum {
  MAX_SCORE_TILES=4+5*MAX_PLAYER
 } BMScoreTile;
 
+/* AbsInt start */
+extern XBBool trace_aborted;
+extern FILE*  trace_aborted_file;
+/* AbsInt end */
+
 #endif
 /*
  * end of file xblast.h

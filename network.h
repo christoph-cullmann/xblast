@@ -57,6 +57,9 @@ typedef enum {
   XBNW_PingReceived,      /* received ping from client  */
   XBNW_NetworkGame,       /* a new network game was added to the list */
   XBNW_HostChange,        /* host state changed */
+  /* AbsInt start */
+  XBNW_VersionError,          /* Server and client version are not identical */
+  /* AbsInt end */
   /* no new message behind this line */
   XBNW_MAX
 } XBNetworkEvent;

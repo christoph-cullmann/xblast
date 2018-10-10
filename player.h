@@ -37,6 +37,9 @@
 #define EXTRA_THROUGH_TIME 64
 #define MAX_JUNKIE_TIME (384 + GameRandomNumber(31))
 #define NEW_INVINCIBLE    64
+/* AbsInt */
+#define ILLINIT_TIME      64
+/* AbsInt end */
 #define EXTRA_INVINCIBLE 160
 #define EXTRA_INVISIBLE  256
 #define STUN_TIME         16
@@ -82,6 +85,9 @@ typedef struct _bmplayer {
   int stunned;
   BMHealth health;
   BMHealth illness;
+  /* AbsInt start */
+  int ai_revived;
+  /* AbsInt end */
   int speed;
   int illtime;
   int junkie;

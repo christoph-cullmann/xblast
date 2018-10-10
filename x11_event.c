@@ -711,7 +711,12 @@ GUI_Sync (void)
 void
 GUI_Bell (void)
 {
-  XBell (dpy, BELL_VOLUME);
+  /* AbsInt begin */
+  CFGSoundSetup soundSetup;
+  RetrieveSoundSetup (&soundSetup);
+  if (soundSetup.beep)
+    XBell (dpy, BELL_VOLUME);
+  /* AbsInt end */
 } /* GUI_Bell */
 
 /*

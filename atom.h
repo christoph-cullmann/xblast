@@ -174,6 +174,9 @@ extern XBAtom atomStatusBg;
 extern XBAtom atomStatusFg;
 extern XBAtom atomStatusLed;
 extern XBAtom atomStereo;
+/* AbsInt begin */
+extern XBAtom atomBeep;
+/* AbsInt end */
 extern XBAtom atomTeamMode;
 extern XBAtom atomTime;
 extern XBAtom atomTimeRatings;

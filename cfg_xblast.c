@@ -107,6 +107,9 @@ StoreSoundSetup (const CFGSoundSetup *sound)
     DB_DeleteEntry (section, atomMode);
   }
   DB_CreateEntryBool (section, atomStereo, sound->stereo);
+  /* AbsInt begin */
+  DB_CreateEntryBool (section, atomBeep, sound->beep);
+  /* AbsInt end */
 } /* StoreSoundSetup */
 
 /*
@@ -128,6 +131,9 @@ RetrieveSoundSetup (CFGSoundSetup *sound)
   /* parse section */
   DB_ConvertEntryInt (section, atomMode, (int *) &sound->mode, convSoundModeTable);
   DB_GetEntryBool (section, atomStereo, &sound->stereo);
+  /* AbsInt begin */
+  DB_GetEntryBool (section, atomBeep, &sound->beep);
+  /* AbsInt end */
   /* that's all */
   return XBTrue;
 } /* RetrieveSoundSetup */

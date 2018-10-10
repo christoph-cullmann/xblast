@@ -234,6 +234,9 @@ CreateSoundMenu (void* par)
   /* Buttons */				   
   MenuAddComboInt  (5*CELL_W, MENU_ROW(0), 5*CELL_W, "Mode:",   3*CELL_W, (int *)&soundSetup.mode, soundModeList);
   MenuAddComboBool (5*CELL_W, MENU_ROW(1), 5*CELL_W, "Stereo:", 3*CELL_W, &soundSetup.stereo);
+  /* AbsInt begin */
+  MenuAddComboBool (5*CELL_W, MENU_ROW(2), 5*CELL_W, "Beep:",   3*CELL_W, &soundSetup.beep);
+  /* AbsInt end */
   /* leave menu */
   /* ok and cancel */
   MenuSetAbort   (MenuAddHButton ( 5 * CELL_W/2, MENU_BOTTOM, 4*CELL_W, "Cancel", CreateOptionsMenu, NULL) );

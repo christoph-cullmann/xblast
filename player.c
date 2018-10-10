@@ -506,6 +506,9 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
     ps->invincible     = NEW_INVINCIBLE;
     ps->illness        = initHealth;
     ps->health         = initHealth;
+    /* AbsInt start */
+    ps->ai_revived = 0;
+    /* AbsInt end */
     ps->illtime        = 0;
     ps->junkie         = 0;
     ps->ghost          = 0;
@@ -1516,6 +1519,10 @@ DoWalk (BMPlayer *ps, int gameTime)
   // 02-05-2002, reinco BUG fixed
   if(ps->invincible > 0) {
     ps->invincible --;
+    /* AbsInt start: */
+    if (!ps->invincible)
+      ps->ai_revived = 0;
+    /* AbsInt end */
   } else if (ps->teleport > 1) {
     ps->teleport --;
   }
@@ -2178,6 +2185,9 @@ RevivePlayer (BMPlayer *ps, int *active_player)
   ps->stunned    = 0;
   ps->illness    = reviveHealth;
   ps->health     = reviveHealth;
+  /* AbsInt: no bombs when revived */
+  ps->ai_revived = 1;
+  /* AbsInt end */
   ps->illtime    = 0;
   ps->teleport   = 0;
   ps->cloaking   = XBFalse;
@@ -2352,6 +2362,9 @@ DoDie (BMPlayer *ps)
       break;
     }
   }
+  /* AbsInt start: */
+  ps->ai_revived = 1;
+  /* AbsInt end */
 } /* DoDie */
 
 /*
