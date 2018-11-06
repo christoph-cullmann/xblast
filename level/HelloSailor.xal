@@ -1,0 +1,102 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Hello Sailor
+author=django
+hint=Ship ahoi!
+gameMode=R23456STDL
+
+[shrink]
+type=constrictWave
+
+[scrambleDraw]
+time=0.33
+numBlocks=13
+pos000=1 10
+pos001=2 10
+pos002=3 10
+pos003=4 10
+pos004=5 10
+pos005=6 10
+pos006=7 10
+pos007=8 10
+pos008=9 10
+pos009=10 10
+pos010=11 10
+pos011=12 10
+pos012=13 10
+
+[scrambleDel]
+time=0.26
+numBlocks=13
+pos000=1 11
+pos001=2 11
+pos002=3 11
+pos003=4 11
+pos004=5 11
+pos005=6 11
+pos006=7 11
+pos007=8 11
+pos008=9 11
+pos009=10 11
+pos010=11 11
+pos011=12 11
+pos012=13 11
+
+[func]
+extra=invincible
+
+[player]
+bombs=6
+range=6
+pos1=6 1
+pos2=7 2
+pos3=5 1
+pos4=8 1
+pos5=7 1
+pos6=9 1
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=snooker
+wallClick=contact
+playerClick=thru
+
+[graphics]
+block00=sphere_half		#000000 #000000 #FF0000
+block01=sphere_half_X		#000000 #000000 #FF0000
+block02=sphere_dark		#000000 #FF0000 #000000
+block03=sphere_dark		#000000 #FF0000 #000000
+block04=sphere_light		#000000 #0000FF #000000
+block05=sphere_light_O		#000000 #0000FF #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#FF0000 #FF0000 #FF0000
+
+[map]
+probBomb=6
+probRange=6
+probVirus=6
+probSpecial=6
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_____________B
+row03=B_____________B
+row04=B_____________B
+row05=B_____________B
+row06=B_XXX_______XXB
+row07=BXXXXX_____XXXB
+row08=BXXXXXX___XXXXB
+row09=BXXXXXXXXXXXXXB
+row10=BXXXXXXXXXXXXXB
+row11=BXXXXXXXXXXXXXB
+row12=BBBBBBBBBBBBBBB

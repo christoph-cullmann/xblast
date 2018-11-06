@@ -1,0 +1,79 @@
+[info]
+name=Restricted Zone (Tapette Land IV)
+author=ISTY : Cyril MAESTRAGGI
+hint=Go crazy
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDel]
+time=0.5000
+numBlocks=19
+pos000=4 4
+pos001=5 4
+pos002=6 4
+pos003=7 4
+pos004=8 4
+pos005=9 4
+pos006=10 4
+pos007=4 5
+pos008=10 5
+pos009=4 6
+pos010=4 7
+pos011=10 7
+pos012=4 8
+pos013=5 8
+pos014=6 8
+pos015=7 8
+pos016=8 8
+pos017=9 8
+pos018=10 8
+
+[func]
+extra=kick
+
+[player]
+bombs=0
+range=1
+pos1= 6  6
+pos2= 6  6
+pos3= 6  6
+pos4= 6  6
+pos5= 6  6
+pos6= 6  6
+
+[bombs]
+bombClick=contact
+wallClick=contact
+playerClick=contact
+nastyGentle=1
+nastyRange=1
+
+[graphics]
+block00=iron_floor       #000000 #333333 #00FF7F
+block01=iron_floor_X     #000000 #333333 #00FF7F
+block02=dark_block       #191970 #4169E1 #000000
+block03=dark_block_R     #4169E1 #FFFFFF #FFFFFF
+block04=extra            #000000 #8B4513 #000000
+block05=extra            #000000 #8B4513 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=Bq_r_q_r______B
+row02=B_b_b_b_b_____B
+row03=Br_q_r_q______B
+row04=B_b_BBBBBBB___B
+row05=Bq_rB_____B___B
+row06=B_b_B_________B
+row07=Br_qB_____B___B
+row08=B_b_BBBBBBB___B
+row09=Bq_r_q_r______B
+row10=B_b_b_b_b_____B
+row11=Br_q_r_q______B
+row12=BBBBBBBBBBBBBBB
+

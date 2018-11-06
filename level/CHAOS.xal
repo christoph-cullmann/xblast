@@ -1,0 +1,157 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=CHAOS!!!
+author=Peter Riede
+hint=A little bit of everything...
+gameMode=R23456STDL
+
+[shrink]
+type=earlySpiral
+
+[scrambleDraw]
+time=0.6
+numBlocks=29
+pos000=3 3
+pos001=3 4
+pos002=3 5
+pos003=3 6
+pos004=3 7
+pos005=3 8
+pos006=3 9
+pos007=4 3
+pos008=4 4
+pos009=4 5
+pos010=4 6
+pos011=4 7
+pos012=4 8
+pos013=4 9
+pos014=5 3
+pos015=5 4
+pos016=5 5
+pos017=5 6
+pos018=5 7
+pos019=5 8
+pos020=5 9
+pos021=6 3
+pos022=6 4
+pos023=6 5
+pos024=6 6
+pos025=6 7
+pos026=6 8
+pos027=6 9
+pos028=7 6
+
+[scrambleDel]
+time=0.5
+numBlocks=45
+pos000=4 1
+pos001=4 11
+pos002=5 1
+pos003=5 11
+pos004=6 1
+pos005=6 11
+pos006=7 1
+pos007=7 2
+pos008=7 7
+pos009=7 10
+pos010=7 11
+pos011=8 1
+pos012=8 2
+pos013=8 6
+pos014=8 10
+pos015=8 11
+pos016=9 1
+pos017=9 2
+pos018=9 10
+pos019=9 11
+pos020=10 2
+pos021=10 10
+pos022=11 1
+pos023=11 2
+pos024=11 10
+pos025=11 11
+pos026=12 1
+pos027=12 2
+pos028=12 3
+pos029=12 4
+pos030=12 5
+pos031=12 6
+pos032=12 7
+pos033=12 8
+pos034=12 9
+pos035=12 10
+pos036=12 11
+pos037=13 1
+pos038=13 2
+pos039=13 3
+pos040=13 4
+pos041=13 8
+pos042=13 9
+pos043=13 10
+pos044=13 11
+
+[func]
+extra=life
+key=rc
+
+[player]
+bombs=10
+range=50
+specialBombs=30
+pos1=13 1
+pos2=6 1
+pos3=11 1
+pos4=8 1
+pos5=3 1
+pos6=1 1
+initVirus=reverse
+reviveVirus=run
+initExtra=rc kick
+
+[bombs]
+bombClick=randomdir
+wallClick=anticlockwise
+playerClick=randomdir
+direction=down
+special=fungus
+hidden=random
+
+[graphics]
+block00=bomb_floor		#87CEFA #FFE4B5 #D2691E
+block01=bomb_floor_X		#87CEFA #FFE4B5 #D2691E
+block02=hex_wall		#808000 #9ACD32 #1E90FF
+block03=hex_wall		#87CEFA #9ACD32 #1E90FF
+block04=dark_house		#DEB887 #9370DB #ADD8E6
+block05=dark_house		#87CEFA #9370DB #ADD8E6
+block06=bomb
+block07=range
+block08=trap
+block09=life
+block10=city_free		#CD5C5C #556B2F #FF69B4
+
+[map]
+extraDistribution=single
+probBomb=20
+probRange=20
+probVirus=20
+probSpecial=20
+probHidden=20
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=BB_B__B_B__B_BB
+row03=BX_XsbX_rbsv_sB
+row04=Bv_qrbr_sXqs_rB
+row05=Bs_BsBX_XqXX_bB
+row06=BX_Xbvv_Bbbv_XB
+row07=BesqbqXBXresXBB
+row08=BvbBerrvbvqrreB
+row09=BqrsqrXeXrXbXrB
+row10=BBbsrvXsvqBXrrB
+row11=BvsBbsqrvbXsvbB
+row12=BBBBBBBBBBBBBBB

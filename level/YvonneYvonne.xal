@@ -1,0 +1,216 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Yvonne Yvonne
+author=django
+hint=She's very annoying!
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.33
+numBlocks=80
+pos000=1 1
+pos001=1 2
+pos002=1 3
+pos003=1 4
+pos004=1 5
+pos005=1 6
+pos006=1 7
+pos007=1 8
+pos008=1 9
+pos009=1 10
+pos010=1 11
+pos011=2 1
+pos012=2 2
+pos013=2 6
+pos014=2 7
+pos015=2 8
+pos016=2 9
+pos017=2 10
+pos018=2 11
+pos019=3 1
+pos020=3 7
+pos021=3 8
+pos022=3 9
+pos023=3 10
+pos024=3 11
+pos025=4 1
+pos026=4 8
+pos027=4 9
+pos028=4 10
+pos029=4 11
+pos030=5 1
+pos031=5 9
+pos032=5 10
+pos033=5 11
+pos034=6 1
+pos035=6 2
+pos036=6 10
+pos037=6 11
+pos038=7 1
+pos039=7 2
+pos040=7 3
+pos041=7 11
+pos042=8 1
+pos043=8 2
+pos044=8 10
+pos045=8 11
+pos046=9 1
+pos047=9 9
+pos048=9 10
+pos049=9 11
+pos050=10 1
+pos051=10 8
+pos052=10 9
+pos053=10 10
+pos054=10 11
+pos055=11 1
+pos056=11 7
+pos057=11 8
+pos058=11 9
+pos059=11 10
+pos060=11 11
+pos061=12 1
+pos062=12 2
+pos063=12 6
+pos064=12 7
+pos065=12 8
+pos066=12 9
+pos067=12 10
+pos068=12 11
+pos069=13 1
+pos070=13 2
+pos071=13 3
+pos072=13 4
+pos073=13 5
+pos074=13 6
+pos075=13 7
+pos076=13 8
+pos077=13 9
+pos078=13 10
+pos079=13 11
+
+[scrambleDel]
+time=0.45
+numBlocks=63
+pos000=2 3
+pos001=2 4
+pos002=2 5
+pos003=3 2
+pos004=3 3
+pos005=3 4
+pos006=3 5
+pos007=3 6
+pos008=4 2
+pos009=4 3
+pos010=4 4
+pos011=4 5
+pos012=4 6
+pos013=4 7
+pos014=5 2
+pos015=5 3
+pos016=5 4
+pos017=5 5
+pos018=5 6
+pos019=5 7
+pos020=5 8
+pos021=6 3
+pos022=6 4
+pos023=6 5
+pos024=6 6
+pos025=6 7
+pos026=6 8
+pos027=6 9
+pos028=7 4
+pos029=7 5
+pos030=7 6
+pos031=7 7
+pos032=7 8
+pos033=7 9
+pos034=7 10
+pos035=8 3
+pos036=8 4
+pos037=8 5
+pos038=8 6
+pos039=8 7
+pos040=8 8
+pos041=8 9
+pos042=9 2
+pos043=9 3
+pos044=9 4
+pos045=9 5
+pos046=9 6
+pos047=9 7
+pos048=9 8
+pos049=10 2
+pos050=10 3
+pos051=10 4
+pos052=10 5
+pos053=10 6
+pos054=10 7
+pos055=11 2
+pos056=11 3
+pos057=11 4
+pos058=11 5
+pos059=11 6
+pos060=12 3
+pos061=12 4
+pos062=12 5
+
+[func]
+extra=invincible
+
+[player]
+bombs=6
+range=6
+pos1=1 1
+pos2=13 11
+pos3=13 1
+pos4=1 11
+pos5=7 1
+pos6=7 11
+initExtra=kick
+
+[bombs]
+bombClick=anticlockwise
+wallClick=randomdir
+
+[graphics]
+block00=sphere_half		#000000 #808080 #FF0000
+block01=sphere_half_X		#000000 #808080 #FF0000
+block02=sphere_dark		#000000 #FF0000 #000000
+block03=sphere_dark		#000000 #FF0000 #000000
+block04=sphere_light		#000000 #FF0000 #000000
+block05=sphere_light_O		#000000 #FF0000 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=invincible
+block10=score_floor		#FF0000 #FF0000 #FF0000
+
+[map]
+probBomb=6
+probRange=6
+probVirus=6
+probSpecial=6
+probHidden=12
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B__XXX___XXX__B
+row03=B_XXXXX_XXXXX_B
+row04=B_XXXXXXXXXXX_B
+row05=B_XXXXXXXXXXX_B
+row06=B__XXXXXXXXX__B
+row07=B___XXXXXXX___B
+row08=B____XXXXX____B
+row09=B_____XXX_____B
+row10=B______X______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB

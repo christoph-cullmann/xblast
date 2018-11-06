@@ -1,0 +1,219 @@
+; Level created by Storch 2.15
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andræ (d97tan@efd.lth.se)
+
+; XBlast TNT level
+
+[info]
+name=Run forrest Run
+author=Groningen : Vulpes Incendium
+hint=You will need your bom.
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.15
+numBlocks=73
+pos000=3 1
+pos001=3 3
+pos002=3 5
+pos003=3 7
+pos004=3 9
+pos005=3 11
+pos006=4 1
+pos007=4 3
+pos008=4 5
+pos009=4 7
+pos010=4 9
+pos011=4 11
+pos012=5 1
+pos013=5 2
+pos014=5 3
+pos015=5 4
+pos016=5 5
+pos017=5 6
+pos018=5 7
+pos019=5 8
+pos020=5 9
+pos021=5 10
+pos022=5 11
+pos023=6 2
+pos024=6 6
+pos025=6 10
+pos026=7 1
+pos027=7 2
+pos028=7 3
+pos029=7 4
+pos030=7 5
+pos031=7 6
+pos032=7 7
+pos033=7 8
+pos034=7 9
+pos035=7 10
+pos036=7 11
+pos037=8 4
+pos038=8 8
+pos039=9 1
+pos040=9 2
+pos041=9 3
+pos042=9 4
+pos043=9 5
+pos044=9 6
+pos045=9 7
+pos046=9 8
+pos047=9 9
+pos048=9 10
+pos049=9 11
+pos050=10 6
+pos051=11 1
+pos052=11 2
+pos053=11 3
+pos054=11 4
+pos055=11 5
+pos056=11 6
+pos057=11 7
+pos058=11 8
+pos059=11 9
+pos060=11 10
+pos061=11 11
+pos062=12 1
+pos063=12 2
+pos064=12 3
+pos065=12 4
+pos066=12 5
+pos067=12 6
+pos068=12 7
+pos069=12 8
+pos070=12 9
+pos071=12 10
+pos072=12 11
+
+[scrambleDel]
+time=0.17
+numBlocks=79
+pos000=2 1
+pos001=2 3
+pos002=2 5
+pos003=2 7
+pos004=2 9
+pos005=2 11
+pos006=3 1
+pos007=3 3
+pos008=3 5
+pos009=3 7
+pos010=3 9
+pos011=3 11
+pos012=4 1
+pos013=4 3
+pos014=4 5
+pos015=4 7
+pos016=4 9
+pos017=4 11
+pos018=5 1
+pos019=5 2
+pos020=5 3
+pos021=5 4
+pos022=5 5
+pos023=5 6
+pos024=5 7
+pos025=5 8
+pos026=5 9
+pos027=5 10
+pos028=5 11
+pos029=6 2
+pos030=6 6
+pos031=6 10
+pos032=7 1
+pos033=7 2
+pos034=7 3
+pos035=7 4
+pos036=7 5
+pos037=7 6
+pos038=7 7
+pos039=7 8
+pos040=7 9
+pos041=7 10
+pos042=7 11
+pos043=8 4
+pos044=8 8
+pos045=9 1
+pos046=9 2
+pos047=9 3
+pos048=9 4
+pos049=9 5
+pos050=9 6
+pos051=9 7
+pos052=9 8
+pos053=9 9
+pos054=9 10
+pos055=9 11
+pos056=10 6
+pos057=11 1
+pos058=11 2
+pos059=11 3
+pos060=11 4
+pos061=11 5
+pos062=11 6
+pos063=11 7
+pos064=11 8
+pos065=11 9
+pos066=11 10
+pos067=11 11
+pos068=12 1
+pos069=12 2
+pos070=12 3
+pos071=12 4
+pos072=12 5
+pos073=12 6
+pos074=12 7
+pos075=12 8
+pos076=12 9
+pos077=12 10
+pos078=12 11
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=1
+range=2
+pos1=3 11
+pos2=3 9
+pos3=3 5
+pos4=3 7
+pos5=3 3
+pos6=3 1
+initVirus=slow
+reviveVirus=healthy
+
+[bombs]
+
+[graphics]
+block00=karo_light		#000000 #000000 #000000
+block01=karo_light_X		#000000 #000000 #000000
+block02=book_shelf		#000000 #000000 #000000
+block03=book_shelf		#000000 #000000 #000000
+block04=chest		#FF0000 #7FFF00 #FFFF00
+block05=chest_O		#000000 #7FFF00 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=lego_floor		#000000 #228B22 #808080
+
+[map]
+probSpecial=75
+row00=BBBBBBBBBBBBBBB
+row01=BXB___B_B_B___B
+row02=BBBBB___B_B__BB
+row03=BXB___B_B_B___B
+row04=BBBBB_B___B__BB
+row05=BXB___B_B_B___B
+row06=BBBBB___B____BB
+row07=BXB___B_B_B___B
+row08=BBBBB_B___B__BB
+row09=BXB___B_B_B___B
+row10=BBBBB___B_B__BB
+row11=BXB___B_B_B___B
+row12=BBBBBBBBBBBBBBB

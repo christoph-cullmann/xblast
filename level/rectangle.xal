@@ -1,0 +1,61 @@
+[info]
+name=Rectangle
+author=Stn
+hint=Run Fast And Trap The Others
+gameMode=R234--STDL
+
+[shrink]
+type=spiral
+
+[func]
+extra=rc
+key=rc
+
+[player]
+bombs=5
+range=6
+pos1= 1  1
+pos2=13  1
+pos3=13 11
+pos4= 1 11
+pos5= 0  0
+pos6= 0  0
+initVirus=run
+reviveVirus=run
+
+[bombs]
+
+[graphics]
+block00=iron_floor       #000000 #228B22 #FFD700
+block01=iron_floor_X     #000000 #228B22 #FFD700
+block02=dark_block       #000000 #228B22 #FF0000
+block03=dark_block_R     #000000 #228B22 #FF0000
+block04=extra            #000000 #FAEBD7 #8470FF
+block05=extra            #000000 #FAEBD7 #8470FF
+block06=bomb
+block07=range
+block08=trap
+block09=remote_control
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+probBomb=23
+probRange=23
+probVirus=16
+probSpecial=23
+probHidden=13
+row00=BBBBBBBBBBBBBBB
+row01=B_____XXX_____B
+row02=B_BBBBBXBBBBB_B
+row03=B_B___XXX___B_B
+row04=B_B_BBBXBBB_B_B
+row05=BXBXB_____BXBXB
+row06=BXXXX_BXB_XXXXB
+row07=BXBXB_____BXBXB
+row08=B_B_BBBXBBB_B_B
+row09=B_B___XXX___B_B
+row10=B_BBBBBXBBBBB_B
+row11=B_____XXX_____B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,87 @@
+[info]
+name=Plus Plus 4
+author=EPFL - insun : Yves Bresson
+hint=Back to the original... nearly
+gameMode=R23456STDL
+
+[shrink]
+type=spiral
+
+[scrambleDraw]
+time=0.5000
+numBlocks=10
+pos000=7 9
+pos001=10 6
+pos002=11 6
+pos003=3 6
+pos004=4 6
+pos005=7 3
+pos006=1 6
+pos007=13 6
+pos008=7 1
+pos009=7 11
+
+[scrambleDel]
+time=0.2500
+numBlocks=8
+pos000=3 6
+pos001=4 6
+pos002=7 3
+pos003=7 2
+pos004=10 6
+pos005=11 6
+pos006=7 10
+pos007=7 9
+
+[func]
+key=rc
+
+[player]
+bombs=3
+range=4
+pos1= 2  2
+pos2=12  2
+pos3= 5  6
+pos4= 9  6
+pos5= 2 10
+pos6=12 10
+initVirus=run
+reviveVirus=run
+initExtra=kick rc
+reviveExtra=kick rc
+
+[bombs]
+
+[graphics]
+block00=rock_floor       #000000 #F4A460 #000000
+block01=rock_floor_X     #000000 #F4A460 #000000
+block02=weight           #000000 #F0FFFF #FFD700
+block03=weight_R         #000000 #B0C4DE #FFFF00
+block04=bricks           #000000 #6B8E23 #000000
+block05=brick_O          #000000 #6B8E23 #000000
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+probBomb=15
+probRange=16
+probVirus=15
+probSpecial=16
+probHidden=16
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B______R______B
+row03=B______R______B
+row04=B_____________B
+row05=B______B______B
+row06=B__RR_BBB_RR__B
+row07=B______B______B
+row08=B_____________B
+row09=B______R______B
+row10=B______R______B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+

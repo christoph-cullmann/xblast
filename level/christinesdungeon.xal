@@ -1,0 +1,124 @@
+[info]
+name=Christine's Dungeon
+author=LORIA : Pierre 'in your back' Laroche
+hint=Quest is not Research...
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDraw]
+time=0.7500
+numBlocks=12
+pos000=6 11
+pos001=7 11
+pos002=8 11
+pos003=7 10
+pos004=7 9
+pos005=6 8
+pos006=7 8
+pos007=8 8
+pos008=9 7
+pos009=5 7
+pos010=5 6
+pos011=9 6
+
+[scrambleDel]
+time=0.5000
+numBlocks=46
+pos000=4 11
+pos001=5 11
+pos002=5 10
+pos003=6 10
+pos004=6 9
+pos005=5 9
+pos006=5 8
+pos007=8 9
+pos008=9 9
+pos009=9 8
+pos010=8 10
+pos011=9 10
+pos012=9 11
+pos013=10 11
+pos014=8 7
+pos015=6 7
+pos016=7 7
+pos017=7 6
+pos018=8 6
+pos019=6 6
+pos020=5 5
+pos021=5 4
+pos022=9 4
+pos023=9 5
+pos024=9 2
+pos025=9 3
+pos026=10 3
+pos027=8 3
+pos028=7 3
+pos029=7 2
+pos030=6 3
+pos031=5 3
+pos032=5 2
+pos033=4 3
+pos034=6 11
+pos035=7 11
+pos036=8 11
+pos037=7 10
+pos038=7 9
+pos039=6 8
+pos040=7 8
+pos041=8 8
+pos042=9 7
+pos043=5 7
+pos044=5 6
+pos045=9 6
+
+[func]
+extra=holyGrail
+
+[player]
+bombs=4
+range=10
+pos1= 1  1
+pos2=13  1
+pos3= 1  6
+pos4=13  6
+pos5= 1 11
+pos6=13 11
+initVirus=teleport
+reviveVirus=teleport
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+bombClick=contact
+wallClick=clockwise
+
+[graphics]
+block00=chess_floor      #000000 #00CED1 #000000
+block01=chess_floor_X    #000000 #00CED1 #000000
+block02=wall             #000000 #A9A9A9 #FFFFFF
+block03=wall_R           #000000 #A9A9A9 #FFFFFF
+block04=extra            #000000 #FFEFD5 #6495ED
+block05=extra_O          #000000 #FFEFD5 #6495ED
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=score_floor      #000000 #4169E1 #4169E1
+
+[map]
+probVirus=98
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=Bs___B_B_B___sB
+row03=B___BBBBBBB___B
+row04=Bs___BqbqB___sB
+row05=B____BbqbB____B
+row06=Bs___BBBBB___sB
+row07=B____BBBBB____B
+row08=Bs___BBBBB___sB
+row09=B____BBBBB____B
+row10=Bs___BBBBB___sB
+row11=B___BBBBBBB___B
+row12=BBBBBBBBBBBBBBB
+

@@ -1,0 +1,63 @@
+[info]
+name=Five
+author=Stn
+hint=Hide As Long As You Can
+gameMode=R23456STDL
+
+[shrink]
+
+[scrambleDel]
+time=0.7500
+numBlocks=5
+pos000=3 3
+pos001=3 9
+pos002=11 3
+pos003=11 9
+pos004=7 6
+
+[func]
+
+[player]
+bombs=3
+range=9
+pos1= 7  5
+pos2= 7  7
+pos3= 3  2
+pos4=11 10
+pos5=11  2
+pos6= 3 10
+initExtra=kick
+reviveExtra=kick
+
+[bombs]
+fuseTime=short
+
+[graphics]
+block00=karo_light       #000000 #DA70D6 #9932CC
+block01=karo_light_X     #000000 #DA70D6 #9932CC
+block02=pyramid          #000000 #6A5ACD #000000
+block03=pyramid_R        #000000 #8470FF #000000
+block04=extra            #000000 #FFD700 #FFFF00
+block05=extra_O          #000000 #FFD700 #FFFF00
+block06=bomb
+block07=range
+block08=trap
+block09=kick_bomb
+block10=score_floor      #4169E1 #4169E1 #4169E1
+
+[map]
+extraDistribution=all
+row00=BBBBBBBBBBBBBBB
+row01=B_____________B
+row02=B_B_B_____B_B_B
+row03=B__B_______B__B
+row04=B_B_B_____B_B_B
+row05=B_____B_B_____B
+row06=B______B______B
+row07=B_____B_B_____B
+row08=B_B_B_____B_B_B
+row09=B__B_______B__B
+row10=B_B_B_____B_B_B
+row11=B_____________B
+row12=BBBBBBBBBBBBBBB
+
