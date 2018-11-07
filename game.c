@@ -275,6 +275,7 @@ GameEvent (XBEventCode waitCode, XBEventData *data)
   int counter=0;
   static unsigned int target=0, init=0;
   char temp[40];
+  static int last_was_exit_request = 0;
 
   assert (data != NULL);
   /* wait for specific event */
@@ -286,8 +287,14 @@ GameEvent (XBEventCode waitCode, XBEventData *data)
   while (waitCode != (code = GUI_WaitEvent (data) ) ) {
     /* doesn't appear to be needed */
     if (code == XBE_XBLAST) {
-      return XBTrue;
+      if (last_was_exit_request)
+        return XBTrue;
+      else
+        last_was_exit_request = 1;
     }
+    else
+        last_was_exit_request = 0;
+
     /* a player has made an action */
     if (NULL != actionTable[code]) {
       /* loop through all local players */
