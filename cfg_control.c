@@ -53,7 +53,7 @@ static CFGKeyTable menuKeyTable[] = {
   { "Return", 	 XBE_MENU, XBMK_DEFAULT },
   { "Escape", 	 XBE_MENU, XBMK_ABORT },
   { "Insert", 	 XBE_MENU, XBMK_STARTCHAT },
-  { "End", 	 XBE_MENU, XBMK_SENDCHAT },
+  { "End", 	     XBE_MENU, XBMK_SENDCHAT },
   { "Delete", 	 XBE_MENU, XBMK_CANCELCHAT },
   { "Home", 	 XBE_MENU, XBMK_CHANGECHATMODE },
   /* end of data */
