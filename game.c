@@ -442,8 +442,9 @@ GameEvent (XBEventCode waitCode, XBEventData *data)
     if (code == XBE_CTRL){
       switch (data->value){
       case XBCK_ESCAPE:
-	data->value=XBXK_EXIT;
-	return XBTrue;
+    // ignore escape during gameplay
+	//data->value=XBXK_EXIT;
+	//return XBTrue;
 	break;
       case XBCK_BACKSPACE:
 	for (ps = player_stat,counter=0; ps < player_stat + numOfPlayers&&counter<localPlayer; ps ++,counter++) ;
