@@ -169,7 +169,8 @@ DoWait (int sec, XBBool countdown, PFV func)
       case XBMK_DEFAULT: /* return */
 	return XBTrue;
       case XBMK_ABORT:   /* escape */
-	return XBFalse;
+	    // ignore escape return XBFalse;
+	    return XBTrue;
       default: 
 	break;
       }
