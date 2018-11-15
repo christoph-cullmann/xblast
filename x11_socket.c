@@ -457,6 +457,11 @@ Socket_Open (XBSocket *pSocket, int type)
     Dbg_Socket("failed to open socket of type=%i", type);
     return XBFalse;
   }
+
+  // try to re-use existing port
+  int optval = 1;
+  setsockopt(pSocket->fd, SOL_SOCKET, SO_REUSEPORT, &optval, sizeof(optval));
+
   Dbg_Socket ("open socket fd=%u (type=%i)\n", pSocket->fd, type);
   return XBTrue;
 } /* Socket_Open */
