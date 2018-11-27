@@ -34,6 +34,7 @@
 #define SPM_MAPPED   (1<<1)
 #define SPM_MASKED   (1<<2)
 
+#define TargetIconVOffset 10
 #define MAX_COLOR_SPRITES 6
 
 typedef enum {
@@ -51,6 +52,7 @@ typedef enum {
   ISA_TeamRed,
   ISA_TeamGreen,
   ISA_TeamBlue,
+  ISA_Target,
   MAX_ICON_SPRITES
 } IconSpriteAnimation;
 

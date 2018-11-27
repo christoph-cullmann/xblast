@@ -438,6 +438,8 @@ LevelIntro (int numPlayers, const DBRoot *level, int timeOut)
   /* draw player positions */
   for (player=0, ps = player_stat; player < numPlayers; player++, ps++) {
     MoveSprite (ps->sprite, ps->x, ps->y);
+    if (ps->targetSprite)
+        MoveSprite(ps->targetSprite, ps->x, ps->y - TargetIconVOffset); 
     SetSpriteMode (ps->sprite, ps->in_active ? SPM_UNMAPPED : SPM_MAPPED);
     SetSpriteAnime (ps->sprite, SpriteStopDown);
   }

@@ -196,7 +196,9 @@ const char *imgFileIcon[MAX_ICON_SPRITES] = {
   /* other icons */
   "icon_led_on", "icon_led_off", "icon_abort", "icon_default", 
   /* team icons */
-  "icon_led_off", "icon_led_on", "icon_led_on", "icon_led_on", 
+  "icon_led_off", "icon_led_on", "icon_led_on", "icon_led_on",
+  /* target icon */
+  "icon_target"
 };
 const BMRectangle imgRectIcon[MAX_ICON_SPRITES] = {
   /* 6 color sprite */
@@ -211,6 +213,11 @@ const BMRectangle imgRectIcon[MAX_ICON_SPRITES] = {
   { 5*BASE_X/2, 3*BASE_Y, 3*BASE_X, 3*BASE_Y, },
   {   BASE_X,   2*BASE_Y, 6*BASE_X, 5*BASE_Y, },
   {   BASE_X,   2*BASE_Y, 6*BASE_X, 5*BASE_Y, },
+  {        0,          0,        0,        0, },
+  {        0,          0,        0,        0, },
+  {        0,          0,        0,        0, },
+  {        0,          0,        0,        0, },
+  { 5*BASE_X/2, 3*BASE_Y, 3*BASE_X, 3*BASE_Y, },
 };
 
 /*

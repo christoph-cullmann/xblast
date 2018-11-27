@@ -491,6 +491,7 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
     }
   }
   /* setup other player attributes */
+  int maxVictories = 0;
   for (i = 0; i < numPlayer; i ++) {
     ps = player_stat + i;
     /* Added by VVL (Chat) 12/11/99 : Begin */
@@ -567,7 +568,19 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
       ps->choice_bomb_type = NUM_BMT;
       /* fprintf(stderr," bomb typ1 %i\n", ps->choice_bomb_type); */
     }
+
+    if (ps->victories > maxVictories)
+        maxVictories = ps->victories;
   }
+
+  for (i = 0; i < numPlayer; i ++) {
+    ps = player_stat + i;
+    if (ps->victories == maxVictories && maxVictories > 0)
+        ps->targetSprite = CreateIconSprite(0, 0, ISA_Target, SPM_MAPPED);
+    else
+        ps->targetSprite = NULL;
+  }
+
   /* set text for info screen */
   switch (minBombs) {
   case 0:  AddPlayerInfo ("No bombs");           break;
@@ -774,6 +787,7 @@ InitPlayerStat (BMPlayer *ps, int player, int ctrl, XBPlayerTeam team, int PID, 
   ps->local = local;
   ps->bot=XBFalse;
   ps->sprite    = CreatePlayerSprite (ps->number, 0, 0, 0, SPM_UNMAPPED); 
+  ps->targetSprite = NULL;
 
   fprintf(stderr," sprite player %i %i",((ps->sprite)->player).player,ps->id);
   ((ps->sprite)->player).player=ps->id;
@@ -1430,6 +1444,8 @@ DoWalk (BMPlayer *ps, int gameTime)
 	}
       }
       MoveSprite (ps->sprite, ps->x, ps->y);
+      if (ps->targetSprite)
+        MoveSprite (ps->targetSprite, ps->x, ps->y - TargetIconVOffset);
 
       /* insert get _extra here */
       if ( (ps->x % BLOCK_WIDTH == 0) && (ps->y % BLOCK_HEIGHT == 0) ) {
@@ -1564,6 +1580,8 @@ DoWalk (BMPlayer *ps, int gameTime)
     spm_mode = SPM_UNMAPPED;
   }
   SetSpriteMode (ps->sprite, spm_mode);
+  if (ps->targetSprite)
+    SetSpriteMode(ps->targetSprite, spm_mode);
 
   /* is player still sick? */
   if (ps->illness != ps->health) {
@@ -2134,6 +2152,8 @@ DoFrog (BMPlayer *ps)
 
   if (CheckMaze(ps->x/BLOCK_WIDTH,ps->y/BLOCK_HEIGHT+1)) {
     MoveSprite (ps->sprite, ps->x, ps->y);
+    if (ps->targetSprite)
+      MoveSprite (ps->targetSprite, ps->x, ps->y - TargetIconVOffset);
     ps->lives = 1;
     ps->dying = DEAD_TIME;
   }
@@ -2160,6 +2180,10 @@ RevivePlayer (BMPlayer *ps, int *active_player)
   /* check if player has lost all lives? */
   if (ps->lives == 0) {
     SetSpriteMode (ps->sprite, SPM_UNMAPPED);
+    if (ps->targetSprite) {
+        DeleteSprite(ps->targetSprite);
+        ps->targetSprite = NULL;
+    }
     SND_Play (SND_DEAD, ps->x / (PIXW / MAX_SOUND_POSITION));
     team_alive = XBFalse;
     for (i = 0, ptr = player_stat; i<numPlayer; i++, ptr++) {

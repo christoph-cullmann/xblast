@@ -289,7 +289,7 @@ ReadCchPixmap (const char *path, const char *filename, XBColor fg, XBColor bg, X
 
   /* load ppm file */
   if (NULL == (ppm = ReadPpmFile (path, filename, &width, &height) ) ) {
-    fprintf (stderr, "failed to load pixmap %s\n", filename);
+    fprintf (stderr, "failed to load pixmap %s/%s\n", path, filename);
     return None;
   }
   /* alloc ppm and image data */
@@ -337,7 +337,7 @@ ReadEpmPixmap (const char *path, const char *filename, int n_colors, const XBCol
 
   /* load ppm file */
   if (NULL == (epm = ReadEpmFile (path, filename, &width, &height, &depth) ) ) {
-    fprintf (stderr, "failed to load pixmap %s\n", filename);
+    fprintf (stderr, "failed to load extended pixmap %s\n", filename);
     return None;
   }
   /* adjust number of colors */

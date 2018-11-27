@@ -791,6 +791,14 @@ LevelResult (int gameTime, int *lastTeam, int numPlayers, const DBRoot *level, X
     StoreLevelStat (DB_Atom (level), atomOutOfTime, outOfTime, 0.0);
     StoreLevelStat (DB_Atom (level), atomDrawGame,  drawGame,  0.0);
   }
+
+  for (i = 0; i < numPlayers; i ++) {
+    if (player_stat[i].targetSprite) {
+        DeleteSprite(player_stat[i].targetSprite);
+        player_stat[i].targetSprite = NULL;
+    }
+  }
+
   /* that's all */
   return msg;
 } /* LevelResult */
