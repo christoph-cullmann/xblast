@@ -22,6 +22,7 @@
  */
 
 #include "atom.h"
+#include "bad_words.h"
 #include "cfg_main.h"
 #include "demo.h"
 #include "game_client.h"
@@ -128,6 +129,8 @@ main (int argc, char *argv[])
     SND_Init (&soundSetup);
   }
 #endif
+
+  init_bad_words();
 
   /* Initialize graphics engine */
 #ifdef WMS

@@ -96,13 +96,11 @@ Chat_Create(unsigned fh, unsigned fp, unsigned th, unsigned tp, unsigned how, co
   dat->tp = tp;
   dat->how = how;
   dat->status = 0;
-  dat->len = strlen(chat);
+  dat->len = remove_bad_words((char *)chat);
   dat->next = NULL;
   if (dat->len > CHAT_LINE_SIZE-1) {
     dat->len = CHAT_LINE_SIZE-1;
   }
-
-  dat->len = remove_bad_words(chat);
   memcpy(dat->txt, chat, dat->len);
   dat->txt[dat->len]=(char)'\0';// memset(dat->txt + dat->len-1, 0, 1);
   if (listLast == NULL) {
