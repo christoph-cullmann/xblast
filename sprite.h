@@ -53,6 +53,7 @@ typedef enum {
   ISA_TeamGreen,
   ISA_TeamBlue,
   ISA_Target,
+  ISA_Loser,
   MAX_ICON_SPRITES
 } IconSpriteAnimation;
 

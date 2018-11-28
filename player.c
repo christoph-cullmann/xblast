@@ -492,6 +492,8 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
   }
   /* setup other player attributes */
   int maxVictories = 0;
+  int minVictories = 42;
+  int minVictoriesCount = 0;
   for (i = 0; i < numPlayer; i ++) {
     ps = player_stat + i;
     /* Added by VVL (Chat) 12/11/99 : Begin */
@@ -571,12 +573,23 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
 
     if (ps->victories > maxVictories)
         maxVictories = ps->victories;
+
+    if (ps->victories < minVictories) {
+        minVictories = ps->victories;
+        minVictoriesCount = 1;
+    }
+    else if (ps->victories == minVictories)
+        minVictoriesCount++;
   }
 
   for (i = 0; i < numPlayer; i ++) {
     ps = player_stat + i;
     if (ps->victories == maxVictories && maxVictories > 0)
         ps->targetSprite = CreateIconSprite(0, 0, ISA_Target, SPM_MAPPED);
+    else if (ps->victories == minVictories && minVictoriesCount == 1) {
+        ps->targetSprite = CreateIconSprite(0, 0, ISA_Loser, SPM_MAPPED);
+        ps->lives++;
+    }
     else
         ps->targetSprite = NULL;
   }
