@@ -26,11 +26,14 @@
 #include "x11_common.h"
 #include "x11_socket.h"
 
+#include "cfg_control.h"
 #include "com.h"
 #include "event.h"
+#include "game.h"
 #include "geom.h"
-#include "cfg_control.h"
+#include "mi_tool.h"
 #include "player.h"
+#include "timeval.h"
 
 /*
  * local constants
@@ -178,7 +181,10 @@ CreateGameKeyTable (const CFGKeyTable *init, int *nelem)
   /* now check for double entries */
   for (i = 1; i < *nelem; i ++) {
     if (table[i-1].key == table[i].key) {
-      GUI_ErrorMessage ("Multiple bindings for key \"%s\".", XKeysymToString (XKeycodeToKeysym (dpy, table[i].key, 0)));
+      int keysyms_per_keycode_return;
+      KeySym *keysym = XGetKeyboardMapping(dpy, table[i].key, 1, &keysyms_per_keycode_return);
+      GUI_ErrorMessage ("Multiple bindings for key \"%s\".", keysym[0]);
+      XFree(keysym);
       break;
     }
   }

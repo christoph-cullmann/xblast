@@ -1176,7 +1176,7 @@ AddStringToBuffer(char *buf, size_t len, const char *add)
     return XBTrue;
   }
   /* no, does not fit */
-  memset(buf+nul,(unsigned char) "x",len-nul-1);
+  memset(buf+nul,'x',len-nul-1);
   memset(buf+len-1,0,1);
   return XBFalse;
 } /* AddStringToBuffer */

@@ -38,6 +38,7 @@
 #include "menu_game.h" /* SetHostType */
 #include "game.h" /* GetNumOfPlayers */
 #include "status.h" /* SetChat */
+
 /*
  * local macros
  */

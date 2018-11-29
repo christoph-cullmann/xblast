@@ -36,6 +36,7 @@
 #include "game.h" /* GetNumOfPlayers */
 #include "status.h" /* SetChat */
 
+
 /*
  * local variables
  */

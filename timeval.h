@@ -82,6 +82,8 @@ extern __inline int gettimeofday(struct timeval *tv, struct timezone *tz);
 
 #endif /* _WIN32 */
 
+#include <sys/time.h>
+
 #endif // winsock2
 
 #endif // winsock

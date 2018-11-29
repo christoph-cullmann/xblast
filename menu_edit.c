@@ -68,7 +68,7 @@ static int bombHiddenComboValue;
 static int bombsNumBombs=0;
 static int bombsNumSpecials=0;
 static int bombsRange=0;
-static int block=0;
+static long long block=0;
 static XBBool bombsNastyWalls;
 static int bombsNastyGentle;
 static int bombsNastyRange;
@@ -877,13 +877,13 @@ XBBool SetOldBlock(){
  * This is called when the user presses a tool button in the map editor
  */
 XBBool MapToolClicked(void *par) {
-  if((int)par==1){
+  if((long long)par==1){
     blockSelected=-2;
   }
   else{
-    blockSelected=(int)par-2;
+    blockSelected=(long long)par-2;
   }
-  printf("Tool %d selected block %i\n", (int)par,blockSelected);
+  printf("Tool %lld selected block %i\n", (long long)par,blockSelected);
   return XBTrue;
 } /* ButtonMapTool */
 /*
@@ -955,7 +955,7 @@ XBBool ApplyGraphics(void *par){
  * This is called when the user presses a map square
  */
 XBBool MapSquareClicked(void *par) {
-  printf("Square %d clicked\n", (int)par);
+  printf("Square %lld clicked\n", (long long)par);
   return XBTrue;
 } /* ButtonMapSquare */
 
@@ -1447,7 +1447,7 @@ BuildColorsMenu(void *par){
  * Edit the map
  */
 XBBool CreateMapMenu(void *par) {
-  int i,j,p;
+  long long i,j,p;
   BMRectangle get_box = {
     2*STAT_WIDTH/12, 
 #ifdef SMPF
