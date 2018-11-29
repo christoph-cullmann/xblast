@@ -38,6 +38,8 @@ extern void AddExtraInfo (const char *fmt, ...);
 extern const char **GetPlayerInfo (int *pNum);
 extern const char **GetLevelInfo (int *pNum);
 extern const char **GetExtraInfo (int *pNum);
+extern void SetMaxVictories(int nvictories);
+extern unsigned GetMaxVictories();
 extern unsigned GetGameModeInfo();
 #endif
 /*

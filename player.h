@@ -136,7 +136,7 @@ typedef struct _bmplayer {
   int through;
   int phantom;
   /* */
-  Sprite *targetSprite;
+  Sprite *statusSprite;
 } BMPlayer;
 
 typedef struct {

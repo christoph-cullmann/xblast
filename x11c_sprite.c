@@ -112,10 +112,12 @@ InitSprites (void)
       return XBFalse;
     }
   }
-  /* load all icons soprites */
+  /* load all icons sprites */
   for (i = 0; i < MAX_ICON_SPRITES; i ++) {
     if (i == ISA_Target)
-        pixIconBits[i] = ReadCchPixmap (imgPathMisc, imgFileIcon[i], COLOR_LIGHT_GOLDENROD, COLOR_GOLD, COLOR_SADDLE_BROWN);
+        pixIconBits[i] = ReadCchPixmap (imgPathMisc, imgFileIcon[i], COLOR_BLACK, COLOR_GOLD, COLOR_SADDLE_BROWN);
+    else if (i == ISA_TargetAboutToWin)
+        pixIconBits[i] = ReadCchPixmap (imgPathMisc, imgFileIcon[i], COLOR_BLACK, COLOR_GOLD, COLOR_RED);
     else if (i == ISA_Loser)
         pixIconBits[i] = ReadCchPixmap (imgPathMisc, imgFileIcon[i], COLOR_BLACK, COLOR_SADDLE_BROWN, SET_COLOR(10, 4, 1));
     else

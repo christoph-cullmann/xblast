@@ -31,6 +31,7 @@
 #include "event.h"
 #include "func.h"
 #include "geom.h"
+#include "info.h"
 #include "intro.h"
 #include "level.h"
 #include "map.h"
@@ -793,9 +794,9 @@ LevelResult (int gameTime, int *lastTeam, int numPlayers, const DBRoot *level, X
   }
 
   for (i = 0; i < numPlayers; i ++) {
-    if (player_stat[i].targetSprite) {
-        DeleteSprite(player_stat[i].targetSprite);
-        player_stat[i].targetSprite = NULL;
+    if (player_stat[i].statusSprite) {
+        DeleteSprite(player_stat[i].statusSprite);
+        player_stat[i].statusSprite = NULL;
     }
   }
 
@@ -941,6 +942,8 @@ GetNumOfPlayers(){
 XBBool
 InitGame (XBPlayerHost hostType, CFGType cfgType, const CFGGame *cfgGame, PlayerAction *playerAction)
 {
+  SetMaxVictories(cfgGame->setup.numWins);
+
   int       i;
   CFGPlayer cfgPlayer[MAX_PLAYER];
   /* sanity check */

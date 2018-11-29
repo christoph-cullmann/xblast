@@ -585,13 +585,13 @@ ConfigLevelPlayers (const DBSection *section, XBBool allowRandomPos, unsigned ga
   for (i = 0; i < numPlayer; i ++) {
     ps = player_stat + i;
     if (ps->victories == maxVictories && maxVictories > 0)
-        ps->targetSprite = CreateIconSprite(0, 0, ISA_Target, SPM_MAPPED);
+        ps->statusSprite = CreateIconSprite(0, 0, maxVictories == GetMaxVictories() - 1 ? ISA_TargetAboutToWin : ISA_Target, SPM_MAPPED);
     else if (ps->victories == minVictories && minVictoriesCount == 1) {
-        ps->targetSprite = CreateIconSprite(0, 0, ISA_Loser, SPM_MAPPED);
+        ps->statusSprite = CreateIconSprite(0, 0, ISA_Loser, SPM_MAPPED);
         ps->lives++;
     }
     else
-        ps->targetSprite = NULL;
+        ps->statusSprite = NULL;
   }
 
   /* set text for info screen */
@@ -800,7 +800,7 @@ InitPlayerStat (BMPlayer *ps, int player, int ctrl, XBPlayerTeam team, int PID, 
   ps->local = local;
   ps->bot=XBFalse;
   ps->sprite    = CreatePlayerSprite (ps->number, 0, 0, 0, SPM_UNMAPPED); 
-  ps->targetSprite = NULL;
+  ps->statusSprite = NULL;
 
   fprintf(stderr," sprite player %i %i",((ps->sprite)->player).player,ps->id);
   ((ps->sprite)->player).player=ps->id;
@@ -1457,8 +1457,8 @@ DoWalk (BMPlayer *ps, int gameTime)
 	}
       }
       MoveSprite (ps->sprite, ps->x, ps->y);
-      if (ps->targetSprite)
-        MoveSprite (ps->targetSprite, ps->x, ps->y - TargetIconVOffset);
+      if (ps->statusSprite)
+        MoveSprite (ps->statusSprite, ps->x, ps->y - StatusIconVOffset);
 
       /* insert get _extra here */
       if ( (ps->x % BLOCK_WIDTH == 0) && (ps->y % BLOCK_HEIGHT == 0) ) {
@@ -1593,8 +1593,8 @@ DoWalk (BMPlayer *ps, int gameTime)
     spm_mode = SPM_UNMAPPED;
   }
   SetSpriteMode (ps->sprite, spm_mode);
-  if (ps->targetSprite)
-    SetSpriteMode(ps->targetSprite, spm_mode);
+  if (ps->statusSprite)
+    SetSpriteMode(ps->statusSprite, spm_mode);
 
   /* is player still sick? */
   if (ps->illness != ps->health) {
@@ -2165,8 +2165,8 @@ DoFrog (BMPlayer *ps)
 
   if (CheckMaze(ps->x/BLOCK_WIDTH,ps->y/BLOCK_HEIGHT+1)) {
     MoveSprite (ps->sprite, ps->x, ps->y);
-    if (ps->targetSprite)
-      MoveSprite (ps->targetSprite, ps->x, ps->y - TargetIconVOffset);
+    if (ps->statusSprite)
+      MoveSprite (ps->statusSprite, ps->x, ps->y - StatusIconVOffset);
     ps->lives = 1;
     ps->dying = DEAD_TIME;
   }
@@ -2193,9 +2193,9 @@ RevivePlayer (BMPlayer *ps, int *active_player)
   /* check if player has lost all lives? */
   if (ps->lives == 0) {
     SetSpriteMode (ps->sprite, SPM_UNMAPPED);
-    if (ps->targetSprite) {
-        DeleteSprite(ps->targetSprite);
-        ps->targetSprite = NULL;
+    if (ps->statusSprite) {
+        DeleteSprite(ps->statusSprite);
+        ps->statusSprite = NULL;
     }
     SND_Play (SND_DEAD, ps->x / (PIXW / MAX_SOUND_POSITION));
     team_alive = XBFalse;

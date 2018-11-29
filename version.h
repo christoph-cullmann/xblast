@@ -26,7 +26,7 @@
 /*
  * global macros
  */
-#define VERSION_STRING "2.10.0 (Central,epfl,Sky)"
+#define VERSION_STRING "2.10.0 (Central,epfl,Sky,AbsInt)"
 #define VERSION_MAJOR  2
 #define VERSION_MINOR  10
 #define VERSION_PATCH  0

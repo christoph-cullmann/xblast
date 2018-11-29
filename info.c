@@ -43,6 +43,7 @@ static char **levelInfo  = NULL;
 static char **extraInfo  = NULL;
 static char **playerInfo = NULL;
 static unsigned gameMode;
+static unsigned maxVictories = 3;
 
 /*
  * allocate space for info entries
@@ -259,6 +260,24 @@ GetExtraInfo (int *pNum)
   *pNum = extraCount;
   return (const char **) extraInfo;
 } /* GetExtraInfo */
+
+/*
+ * set number of needed victories
+ */
+void
+SetMaxVictories(int nvictories)
+{
+  maxVictories = nvictories;
+} /* SetMaxVictories */
+
+/*
+ * get number of needed victories
+ */
+unsigned
+GetMaxVictories()
+{
+  return maxVictories;
+} /* GetMaxVictories */
 
 /*
  * get current gamemode
