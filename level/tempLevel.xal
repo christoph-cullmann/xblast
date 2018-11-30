@@ -1,0 +1,51 @@
+[info]
+name=My new level
+author=My name
+hint=Write something clever here
+gameMode=R23456STDL
+
+[shrink]
+
+[func]
+extra=invincible
+
+[player]
+pos6=7 6
+pos5=7 6
+pos4=7 6
+pos3=7 6
+pos2=7 6
+pos1=7 6
+range=3
+bombs=3
+
+[bombs]
+
+[graphics]
+block10=score_floor      #4169E1 #4169E1 #4169E1
+block09=invincible
+block08=trap
+block07=range
+block06=bomb
+block05=sphere_light_O   #000000 #4682B4 #000000
+block04=sphere_light     #000000 #4682B4 #000000
+block03=sphere_light     #000000 #B0C4DE #000000
+block02=sphere_dark      #000000 #4682B4 #000000
+block01=sphere_half_X    #000000 #FF7F50 #4682B4
+block00=sphere_half      #000000 #FF7F50 #4682B4
+
+[map]
+row12=BBBBBBBBBBBBBBB
+row11=B_____________B
+row10=B_____________B
+row09=B_____________B
+row08=B_____________B
+row07=B_____________B
+row06=B_____________B
+row05=B_____________B
+row04=B_____________B
+row03=B_____________B
+row02=B_____________B
+row01=B_____________B
+row00=BBBBBBBBBBBBBBB
+

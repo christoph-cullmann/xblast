@@ -1,0 +1,76 @@
+; Level created by Storch 2.20
+; Written by Tobias Johansson (d97tj@efd.lth.se)
+; Co-writer Tor Andr? (d97tan@efd.lth.se)
+; http://storch.sourceforge.net/
+
+; XBlast TNT level
+
+[info]
+name=Zap !
+author=Simon
+hint=Concours de zappette
+gameMode=R23456STDL
+
+[shrink]
+
+
+[scrambleDel]
+time=0.02
+numBlocks=12
+pos000=2 9
+pos001=2 10
+pos002=4 9
+pos003=4 10
+pos004=6 9
+pos005=6 10
+pos006=8 9
+pos007=8 10
+pos008=10 9
+pos009=10 10
+pos010=12 9
+pos011=12 10
+
+[func]
+extra=holyGrail
+key=rc
+
+[player]
+bombs=1
+range=1
+pos1=4 11
+pos2=12 11
+pos3=8 11
+pos4=2 11
+pos5=10 11
+pos6=6 11
+initExtra=rc 
+
+[bombs]
+
+[graphics]
+block00=dark_way		#000000 #006400 #00FF00
+block01=dark_way_X		#000000 #006400 #00FF00
+block02=wall		#000000 #FF4500 #000000
+block03=wall_R		#000000 #FF4500 #000000
+block04=extra		#000000 #FFD700 #FF4500
+block05=extra_O		#000000 #FFD700 #FF4500
+block06=bomb
+block07=range
+block08=trap
+block09=holygrail
+block10=chess_floor		#000000 #FFFFFF #808080
+
+[map]
+row00=BBBBBBBBBBBBBBB
+row01=BqqqqqqqqqqqqqB
+row02=BBXBXBXBXBXBXBB
+row03=BBrBrBrBrBrBrBB
+row04=BBXBXBXBXBXBXBB
+row05=BBrBrBrBrBrBrBB
+row06=BBXBXBXBXBXBXBB
+row07=BBrBrBrBrBrBrBB
+row08=BBXBXBXBXBXBXBB
+row09=BBBBBBBBBBBBBBB
+row10=BBBBBBBBBBBBBBB
+row11=BB_B_B_B_B_B_BB
+row12=BBBBBBBBBBBBBBB
